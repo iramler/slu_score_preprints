@@ -1,0 +1,37 @@
+project:
+  type: website
+  resources:
+    - "data/*.csv"
+    - "data/*.txt"
+    - CNAME
+
+website:
+  title: "SLU SCORE Module Pre-print Repository"
+  page-footer: "Maintained by Ivan Ramler"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - by-statsds-topic.qmd
+      - href: https://data.scorenetwork.org/
+        text: Data Repository
+    right:
+      - icon: twitter
+        href: https://twitter.com/scorenetworkorg
+      - icon: linkedin
+        href: https://www.linkedin.com/company/scorenetworkorg/
+  sidebar:
+    contents: auto
+    collapse-level: 1
+  repo-url: https://github.com/iramler/slu_score_preprints
+  repo-actions: [edit, issue]
+
+format:
+  html:
+    theme:
+      - cosmo
+      - score.scss
+    toc: true
+
+execute:
+  freeze: auto

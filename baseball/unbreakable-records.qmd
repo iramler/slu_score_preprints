@@ -1,0 +1,17 @@
+---
+title: Unbreakable Records in Baseball
+author: Andrew Lee and Fr Gabriel Costa
+date: July 23, 2023
+categories:
+  - Bernoulli distribution
+  - Binomial distribution
+  - Chi-Square Test
+---
+
+## Motivation
+
+This lesson introduces students to the Bernoulli trial and Binomial Experiments to understand the probability of breaking one of the longest lasting records in baseball. We also explain how to execute a Chi-Square test using baseball data on handedness (right or left-handed) of batters versus pitchers.
+
+## Module
+
+[https://isle.stat.cmu.edu/SCORE/Unbreakable_Records_Baseball_Hits/](https://isle.stat.cmu.edu/SCORE/Unbreakable_Records_Baseball_Hits/)

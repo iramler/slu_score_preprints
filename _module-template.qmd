@@ -1,0 +1,28 @@
+---
+title: A descriptive module title
+author: Author names
+date: Today's Date (e.g., April 17, 2023)
+description: A one- or two-sentence description of the module. If possible, give a brief summary of the sports problem and statistical situation.
+categories:
+  - list the relevant
+  - statistical methods
+  - that are covered
+  - in this module
+  - one per line
+  - with two spaces and a hyphen in front
+---
+
+## Motivation
+
+In this first section, describe the module and what it's about.
+Give any necessary background about it and the sports research question of interest.
+
+This file is Markdown, so you *can* use formatting; [here is a guide to the
+basics](https://quarto.org/docs/authoring/markdown-basics.html).
+
+## Module
+
+Insert the link to the module, e.g.:
+
+[https://isle.stat.cmu.edu/SCORE/NHLShots/](https://isle.stat.cmu.edu/SCORE/NHLShots/)
+

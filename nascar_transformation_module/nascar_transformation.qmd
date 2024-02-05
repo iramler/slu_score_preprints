@@ -1,0 +1,70 @@
+---
+title: "NASCAR Transformation Module"
+date: February 5, 2024
+description: Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+categories:
+  - preprint
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+In NASCAR, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver's overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver's abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, you will have practiced: 
+*	Assessing simple linear regression model effectiveness
+*	Checking regression model assumptions
+*	Using log transformations to better fit a linear regression model
+*	Using polynomial regression to fit a curved relationship
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns. 
+:::
+
+### Data
+
+The data comes from the NASCAR website and shows the season statistics from 2007-2022. Each row displays the metrics of a racer for that specific year. The data frame contains 1111 rows of observations and 20 variables.
+
+Download data: [nascar_driver_statistics.csv](data/nascar_driver_statistics.csv)
+
+<details>
+<summary><b>Variable Descriptions</b></summary>
+| Variable             | Description                                                                                                                                                                                              |
+|-------------------|-----------------------------------------------------|
+| Wins                 | The sum of the driver's victories                                                                                                                                                                        |
+| AvgStart             | The sum of the driver's starting positions divided by the number of races                                                                                                                                |
+| AvgMidRace           | The sum of the driver's mid race positions divided by the number of races                                                                                                                                |
+| AvgFinish            | The sum of the driver's finishing positions divided by the number of races                                                                                                                               |
+| AvgPos               | The sum of the driver's position each lap divided by the number of laps                                                                                                                                  |
+| PassDiff             | The sum of green flag passes minus green times passed                                                                                                                                                    |
+| GreenFlagPasses      | Number of green flag passes performed by the driver                                                                                                                                                      |
+| GreenFlagPassed      | Number of times driver is passed during green flag                                                                                                                                                       |
+| QualityPasses        | Number of passes in the top 15 while under green flag conditions by driver                                                                                                                               |
+| PercentQualityPasses | The sum of quality passes divided by green flag passes                                                                                                                                                   |
+| NumFastestLaps       | Number of where the driver had the fastest speed on the lap                                                                                                                                              |
+| LapsInTop15          | Number of laps completed while running in a top 15 position                                                                                                                                              |
+| PercentLapsInTop15   | The sum of the laps run in the top 15 divided by total laps completed                                                                                                                                    |
+| LapsLed              | The sum of the laps led in a race                                                                                                                                                                        |
+| PercentLapsLed       | The sum of the laps led in the race                                                                                                                                                                      |
+| TotalLaps            | The sum of the laps completed by a driver that year                                                                                                                                                      |
+| DriverRating         | Formula combining wins, finish, top15-finish, average running position while on lead lap, average speed under green, fastest lap, led most laps, and lead lap finish with a maximum rating of 150 points |
+</details>
+
+### Materials
+
+[Class handout](materials/transformation_wksht_key.docx)
+
+[Class handout - with solutions](materials/transformation_tech_wksht.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver's performance. 
+:::
+
+### Authors
+
+Fill in later

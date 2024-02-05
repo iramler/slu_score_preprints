@@ -1,0 +1,14 @@
+---
+title: Predicting NHL Shooting Percentages
+author: Sam Ventura
+date: July 23, 2023
+description: An Introduction to Simple Linear Regression
+categories:
+  - linear regression
+---
+
+## Module
+
+[https://isle.stat.cmu.edu/SCORE/NHLShots/](https://isle.stat.cmu.edu/SCORE/NHLShots/)
+
+

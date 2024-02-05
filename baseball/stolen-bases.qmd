@@ -1,0 +1,15 @@
+---
+title: Stolen Bases
+author: Andrew Lee and Jacob Hurtubise
+date: July 23, 2023
+categories:
+  - Normality tests
+---
+
+## Motivation
+
+This lesson introduces students to the concept of normality tests (Shapiro-Wilks and Kolmogorov-Smirnov) and summation of normal distributions to investigate stolen base success rates. Featuring Jacob Hurtubise, a West Point's all-time leader in stolen bases and baseball player for the Cincinnati Reds' Double-A affiliate, the Chattanooga Lookouts.
+
+## Module
+
+[https://isle.stat.cmu.edu/SCORE/stolen-bases-module/](https://isle.stat.cmu.edu/SCORE/stolen-bases-module/)

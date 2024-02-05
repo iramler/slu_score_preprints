@@ -1,0 +1,13 @@
+---
+title: Marathon Record-Setting Over Time
+author: Nicholas Clark, Rodney Sturdivant, and Kate Sanborn
+description: Determining whether the setting of world records in the marathon is historically a Poisson process.
+date: July 23, 2023
+categories:
+  - Exponential distribution
+  - Poisson process
+---
+
+## Module
+
+[https://isle.stat.cmu.edu/SCORE/Marathons_SCORE_Template/](https://isle.stat.cmu.edu/SCORE/Marathons_SCORE_Template/)

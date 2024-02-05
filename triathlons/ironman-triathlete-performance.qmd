@@ -1,0 +1,18 @@
+---
+title: Ironman Triathlete Performance
+author: Michael Schuckers, Matt Abell, AJ Dykstra, Sarah Weaver, Ivan Ramler, and Robin Lock
+date: July 23, 2023
+description: Gaining insight into the performance patterns of triathletes by exploring the relationships between swimming, biking, and running times.
+categories:
+  - Scatterplots
+  - Correlation
+
+---
+
+## Motivation
+
+The motivation for this data analysis is to explore the relationships between swim times, bike times, and run times (in minutes) in order to gain insights into the performance patterns of the athletes. By analyzing these relationships, we can understand the interplay between different segments of the race and potentially identify areas of improvement for athletes. For this activity, we will specifically focus on times from finishers in the years 2018 and 2019.
+
+## Module
+
+[https://isle.stat.cmu.edu/SCORE/ironman_triathlon/](https://isle.stat.cmu.edu/SCORE/ironman_triathlon/)
