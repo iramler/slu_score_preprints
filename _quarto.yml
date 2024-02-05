@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
   resources:
     - "data/*.csv"
     - "data/*.txt"
@@ -15,16 +16,9 @@ website:
       - by-statsds-topic.qmd
       - href: https://data.scorenetwork.org/
         text: Data Repository
-    right:
-      - icon: twitter
-        href: https://twitter.com/scorenetworkorg
-      - icon: linkedin
-        href: https://www.linkedin.com/company/scorenetworkorg/
   sidebar:
     contents: auto
     collapse-level: 1
-  repo-url: https://github.com/iramler/slu_score_preprints
-  repo-actions: [edit, issue]
 
 format:
   html:
