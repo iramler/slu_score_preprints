@@ -2,9 +2,9 @@ project:
   type: website
   output-dir: docs
   resources:
-    - "data/*.csv"
-    - "data/*.txt"
-    - CNAME
+    - "data/"
+    - "materials/"
+
 
 website:
   title: "SLU SCORE Module Pre-print Repository"
@@ -13,7 +13,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - by-statsds-topic.qmd
       - href: https://data.scorenetwork.org/
         text: Data Repository
   sidebar:

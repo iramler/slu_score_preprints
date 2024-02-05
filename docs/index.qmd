@@ -1,0 +1,9 @@
+---
+title: "SLU SCORE Module Pre-print Repository"
+---
+
+The [SCORE Network](https://scorenetwork.org/index.html) Module Repository enables you to search for modules by either sport (along the left), or you can browse [by statistics and data science topic](by-statsds-topic.qmd).
+
+_The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705)._
+
+
