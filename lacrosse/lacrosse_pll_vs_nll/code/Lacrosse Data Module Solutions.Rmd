@@ -1,0 +1,118 @@
+---
+title: "Lacrosse Data Module"
+author: "Jack Cowan"
+output: pdf_document
+---
+
+1. Use the code to load in game by game statistics for the 2021 PLL season and the 2021-2022 NLL season.
+```{r}
+PLL_data = read.csv("./Data/PLL_data.csv")
+NLL_data = read.csv("./Data/NLL_data.csv")
+```
+
+2. Using the provided data, find the average goals per game and shots per game for both the NLL and PLL.
+
+```{r}
+NLL_data$Total_goals = NLL_data$Home_goals+NLL_data$Away_goals
+PLL_data$Total_score = PLL_data$Team1.Score+PLL_data$Team2.Score
+cat("NLL Goals: ", mean(NLL_data$Total_goals), "\n")
+cat("PLL Goals: ", mean(PLL_data$Total_score), "\n")
+
+NLL_data$Total_shots = NLL_data$Home_shots+NLL_data$Away_shots
+PLL_data$Total_shots = PLL_data$Team1.Shots+PLL_data$Team2.Shots
+cat("NLL Shots: ", mean(NLL_data$Total_shots), "\n")
+cat("PLL Shots: ", mean(PLL_data$Total_shots), "\n")
+```
+
+
+3. Find the standard deviation of goals per game and shots per game for both the NLL and PLL
+
+```{r}
+cat("NLL Goals: ", sd(NLL_data$Total_goals), "\n")
+cat("NLL Shots: ", sd(NLL_data$Total_shots), "\n")
+
+cat("PLL Goals: ", sd(PLL_data$Total_score), "\n")
+cat("PLL Shots: ", sd(PLL_data$Total_shots), "\n")
+```
+
+
+
+4. Perform a t-test to determine if the mean goals per game is the same for both leagues. Interpret this p-value in context.
+
+$H_0$: $\mu_{PLL} = \mu_{NLL}$
+
+$H_a$: $\mu_{PLL} \neq \mu_{NLL}$
+
+```{r}
+cat("p-value: ",t.test(NLL_data$Total_goals, PLL_data$Total_score)$p.value)
+```
+
+The p-value, while small, is not small enough to reject our null hypothesis, so we fail to reject our null hypothesis and have no evidence that the average goals per game are different between the two leagues.
+
+
+5. Perform a t-test to determine if the mean shots per game is the same for both leagues. Interpret this p-value in context.
+
+$H_0$: $\mu_{PLL} = \mu_{NLL}$
+
+$H_a$: $\mu_{PLL} \neq \mu_{NLL}$
+
+```{r}
+cat("p-value: ",t.test(NLL_data$Total_shots, PLL_data$Total_shots)$p.value)
+```
+
+The p-value is very small, so we can reject the null hypothesis, meaning there is evidence that there are different average shots per game between the two leagues.
+
+
+Consider the fact that PLL games are only 48 minutes long, while NLL games are 60 minutes long. What would happen if we scaled down NLL statistics to also be on per 48-minute rate.
+
+
+
+6. Find the average goals per 48 minutes and shots per 48 minutes for both the NLL and PLL.
+```{r}
+NLL_data$Goalsper48 = NLL_data$Total_goals*4/5
+NLL_data$Shotsper48 = 4/5*NLL_data$Total_shots
+#PLL stats are already in per 48
+cat("NLL Goals: ", mean(NLL_data$Goalsper48), "\n")
+cat("NLL Shots: ", mean(NLL_data$Shotsper48), "\n")
+cat("PLL Goals: ", mean(PLL_data$Total_score), "\n")
+cat("PLL Shots: ", mean(PLL_data$Total_shots), "\n")
+```
+
+
+7. Find the standard deviation of goals per 48 minutes and shots per 48 minutes for both the NLL and PLL.
+
+```{r}
+cat("NLL Goals: ", sd(NLL_data$Goalsper48), "\n")
+cat("NLL Shots: ", sd(NLL_data$Shotsper48), "\n")
+cat("PLL Goals: ", sd(PLL_data$Total_score), "\n")
+cat("PLL Shots: ", sd(PLL_data$Total_shots), "\n")
+```
+
+
+8. Perform a t-test to determine if the mean goals per 48 minutes is the same for both leagues, interpret the p-value in context.
+
+$H_0$: $\mu_{PLL} = \mu_{NLL/48}$
+
+$H_a$: $\mu_{PLL} \neq \mu_{NLL/48}$
+
+```{r}
+cat("p-value: ",t.test(NLL_data$Goalsper48, PLL_data$Total_score)$p.value)
+```
+The p-value is incredibly small so we can reject the null hypothesis, finding there is evidence that the average goals per 48 minutes is different between the two leagues.
+
+
+9. Perform a t-test to determine if the mean shots per 48 minutes is the same for both leagues, interpret the p-value in context.
+
+$H_0$: $\mu_{PLL} = \mu_{NLL/48}$
+
+$H_a$: $\mu_{PLL} \neq \mu_{NLL/48}$
+
+```{r}
+cat("p-value: ",t.test(NLL_data$Shotsper48, PLL_data$Total_shots)$p.value)
+```
+The p-value is incredibly small so we can reject the null hypothesis, finding there is evidence that the average shots per 48 minutes is different between the two leagues.
+
+10. Consider your answers to questions 4 and 5 and your answers to questions 8 and 9. Which pair of t-tests are the better choice for analyzing the difference between the leagues?
+
+Either could be better, it depends on whether we are more focused on comparing games or by minutes.
+
