@@ -1,0 +1,78 @@
+---
+title: "Lacrosse Faceoff Proportions"
+date: February 5, 2024
+description: Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+categories:
+  - hypothesis testing
+  - single proportion
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+In this engaging activity, we delve into the exciting world of NCAA Division I Lacrosse faceoff percentages. Our primary goal is to compare a specific team's performance with overall league statistics for the 2022-2023 season. Throughout this exploration, we will focus on the concept of one sample proportion hypothesis testing, a powerful statistical tool commonly used in sports analytics. By the end of this exercise, you will gain a fundamental understanding of hypothesis testing and its practical applications in evaluating team performance.
+
+::: {.callout-note collapse="true" title="Learning Objectives"}
+1.  Comprehend the concept of one sample proportion hypothesis testing and its relevance in sports statistics.
+2.  Analyze and interpret dataset variables related to faceoff percentages in NCAA Division I Lacrosse.
+3.  Evaluate a specific team's faceoff performance by comparing it with league-wide statistics using hypothesis testing.
+:::
+
+::: {.callout-note collapse="true" title="Methods"}
+1.  Basic probability and percentages.
+2.  Null and alternative hypotheses.
+3.  Sample size and sample proportion calculations.
+4.  Success-failure condition for hypothesis testing.
+5.  Calculation of test statistics (Z-score).
+6.  Understanding significance levels (⍺) and p-values.
+7.  Drawing conclusions and implications from hypothesis test results.
+:::
+
+### Data
+
+The data set contains 72 rows and 22 columns. Each row represents a lacrosse team at the NCAA Division 1 level from the 2022-2023 season.
+
+Download data: [lax_2022_2023.csv](lax_2022_2023.csv)
+
+::: {.callout-note collapse="true" title="Variable Descriptions"}
+| Variable              | Description                                                                                                     |
+|------------------|------------------------------------------------------|
+| Team                  | college of the team                                                                                             |
+| avg_assists           | average assists to goals per game                                                                               |
+| avg_caused_turnovers  | average turnovers forced by the team per game                                                                   |
+| clearing_pctg         | percentage of successful attempts to earn an offensive opportunity after gaining the ball in the teams own half |
+| total_faceoffs        | total faceoffs taken by a team for the season                                                                   |
+| faceoff_wins          | total faceoff wins by a team for the season                                                                     |
+| faceoff_win_pct       | proportion of total faceoff wins out of total faceoffs                                                          |
+| avg_goals             | average goals per game                                                                                          |
+| avg_goals_allowed     | average goals allowed by the team per game                                                                      |
+| avg_ground_balls      | average loose balls picked up by the team per game                                                              |
+| man_down_defense_pctg | proportion of times a team stops the opponent from scoring while man down due to a penalty                      |
+| man_up_offense_pctg   | proportion of times the offense scores out of total opportunities while man up                                  |
+| avg_scoring_margin    | average margin of goals per game                                                                                |
+| opp_clear_pctg        | opponents clearing percentage averaged by game                                                                  |
+| avg_points            | average team points per game                                                                                    |
+| avg_saves             | average saves per game                                                                                          |
+| shot_pctg             | proportion of shots that go in out of total shots                                                               |
+| avg_turnovers         | average turnovers that are directly the fault of a player per game                                              |
+| W                     | total wins by the team                                                                                          |
+| L                     | total losses by the team                                                                                        |
+| win_loss_pctg         | proportion of games won out of total games                                                                      |
+:::
+
+### Materials
+
+[Class handout](single_prop_wksht.docx)
+
+[Class handout - with solutions](single_prop_wksht_key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion"}
+In this insightful exploration of NCAA Division I Lacrosse faceoff percentages, we have embarked on a statistical journey to evaluate a specific team's performance in comparison to league-wide statistics. Through the application of one sample proportion hypothesis testing, we gained valuable insights into the team's faceoff win percentage, unveiling strong evidence that their performance exceeded what we would expect by random chance alone. As we consider the broader implications of faceoffs in Division I Lacrosse, it becomes evident that faceoff wins play a pivotal role in team rankings and outcomes. The fact that Duke, the second-best team in the country, exhibited a faceoff win percentage above the league average highlights the significance of excelling in this aspect of the game. Winning faceoffs likely translates to higher goal-scoring opportunities, ultimately leading to more successful game outcomes.
+:::
+
+### Authors
+
+Fill in later

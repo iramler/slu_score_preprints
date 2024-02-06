@@ -3,7 +3,8 @@ title: "NASCAR Transformation Module"
 date: February 5, 2024
 description: Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
 categories:
-  - preprint
+  - linear regression
+  - transformations
 ---
 
 ## Module
@@ -30,7 +31,7 @@ For this activity, students will need to use software to create scatterplots and
 
 The data comes from the NASCAR website and shows the season statistics from 2007-2022. Each row displays the metrics of a racer for that specific year. The data frame contains 1111 rows of observations and 20 variables.
 
-Download data: [nascar_driver_statistics.csv](data/nascar_driver_statistics.csv)
+Download data: [nascar_driver_statistics.csv](nascar_driver_statistics.csv)
 
 <details>
 <summary><b>Variable Descriptions</b></summary>
@@ -57,9 +58,9 @@ Download data: [nascar_driver_statistics.csv](data/nascar_driver_statistics.csv)
 
 ### Materials
 
-[Class handout](materials/transformation_wksht_key.docx)
+[Class handout](transformation_wksht_key.docx)
 
-[Class handout - with solutions](materials/transformation_tech_wksht.docx)
+[Class handout - with solutions](transformation_tech_wksht.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver's performance. 

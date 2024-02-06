@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-02-05">
+<meta name="description" content="Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.">
 
-<title>SLU SCORE Module Pre-print Repository</title>
+<title>SLU SCORE Module Pre-print Repository - Lacrosse Faceoff Proportions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SLU SCORE Module Pre-print Repository</span>
     </a>
   </div>
@@ -81,8 +83,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../by-statsds-topic.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Modules By Topic</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://data.scorenetwork.org/" rel="" target="">
@@ -99,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">SLU SCORE Module Pre-print Repository</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../lacrosse/college_lacrosse_faceoffs/index.html">Lacrosse</a></li><li class="breadcrumb-item"><a href="../../lacrosse/college_lacrosse_faceoffs/index.html">Lacrosse Faceoff Proportions</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -111,52 +117,41 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SLU SCORE Module Pre-print Repository</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/by-statsds-topic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Modules By Topic</span></a>
   </div>
 </li>
-          <li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Lacrosse</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
- <span class="menu-text">Nascar Transformation Module</span></a>
+ <span class="menu-text">Motor Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docs/nascar_transformation_module/nascar_transformation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NASCAR Transformation Module</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
- <span class="menu-text">Nascar Transformation Module</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nascar_transformation_module/nascar_transformation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -168,21 +163,48 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SLU SCORE Module Pre-print Repository</h1>
-</div>
+<h1 class="title">Lacrosse Faceoff Proportions</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">hypothesis testing</div>
+    <div class="quarto-category">single proportion</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -190,10 +212,203 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The <a href="https://scorenetwork.org/index.html">SCORE Network</a> Module Repository enables you to search for modules by either sport (along the left), or you can browse <a href="by-statsds-topic.qmd">by statistics and data science topic</a>.</p>
-<p><em>The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).</em></p>
+<section id="module" class="level2">
+<h2 class="anchored" data-anchor-id="module">Module</h2>
+<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>In this engaging activity, we delve into the exciting world of NCAA Division I Lacrosse faceoff percentages. Our primary goal is to compare a specific team’s performance with overall league statistics for the 2022-2023 season. Throughout this exploration, we will focus on the concept of one sample proportion hypothesis testing, a powerful statistical tool commonly used in sports analytics. By the end of this exercise, you will gain a fundamental understanding of hypothesis testing and its practical applications in evaluating team performance.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Comprehend the concept of one sample proportion hypothesis testing and its relevance in sports statistics.</li>
+<li>Analyze and interpret dataset variables related to faceoff percentages in NCAA Division I Lacrosse.</li>
+<li>Evaluate a specific team’s faceoff performance by comparing it with league-wide statistics using hypothesis testing.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Basic probability and percentages.</li>
+<li>Null and alternative hypotheses.</li>
+<li>Sample size and sample proportion calculations.</li>
+<li>Success-failure condition for hypothesis testing.</li>
+<li>Calculation of test statistics (Z-score).</li>
+<li>Understanding significance levels (⍺) and p-values.</li>
+<li>Drawing conclusions and implications from hypothesis test results.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The data set contains 72 rows and 22 columns. Each row represents a lacrosse team at the NCAA Division 1 level from the 2022-2023 season.</p>
+<p>Download data: <a href="lax_2022_2023.csv">lax_2022_2023.csv</a></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Variable Descriptions">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variable Descriptions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Team</td>
+<td>college of the team</td>
+</tr>
+<tr class="even">
+<td>avg_assists</td>
+<td>average assists to goals per game</td>
+</tr>
+<tr class="odd">
+<td>avg_caused_turnovers</td>
+<td>average turnovers forced by the team per game</td>
+</tr>
+<tr class="even">
+<td>clearing_pctg</td>
+<td>percentage of successful attempts to earn an offensive opportunity after gaining the ball in the teams own half</td>
+</tr>
+<tr class="odd">
+<td>total_faceoffs</td>
+<td>total faceoffs taken by a team for the season</td>
+</tr>
+<tr class="even">
+<td>faceoff_wins</td>
+<td>total faceoff wins by a team for the season</td>
+</tr>
+<tr class="odd">
+<td>faceoff_win_pct</td>
+<td>proportion of total faceoff wins out of total faceoffs</td>
+</tr>
+<tr class="even">
+<td>avg_goals</td>
+<td>average goals per game</td>
+</tr>
+<tr class="odd">
+<td>avg_goals_allowed</td>
+<td>average goals allowed by the team per game</td>
+</tr>
+<tr class="even">
+<td>avg_ground_balls</td>
+<td>average loose balls picked up by the team per game</td>
+</tr>
+<tr class="odd">
+<td>man_down_defense_pctg</td>
+<td>proportion of times a team stops the opponent from scoring while man down due to a penalty</td>
+</tr>
+<tr class="even">
+<td>man_up_offense_pctg</td>
+<td>proportion of times the offense scores out of total opportunities while man up</td>
+</tr>
+<tr class="odd">
+<td>avg_scoring_margin</td>
+<td>average margin of goals per game</td>
+</tr>
+<tr class="even">
+<td>opp_clear_pctg</td>
+<td>opponents clearing percentage averaged by game</td>
+</tr>
+<tr class="odd">
+<td>avg_points</td>
+<td>average team points per game</td>
+</tr>
+<tr class="even">
+<td>avg_saves</td>
+<td>average saves per game</td>
+</tr>
+<tr class="odd">
+<td>shot_pctg</td>
+<td>proportion of shots that go in out of total shots</td>
+</tr>
+<tr class="even">
+<td>avg_turnovers</td>
+<td>average turnovers that are directly the fault of a player per game</td>
+</tr>
+<tr class="odd">
+<td>W</td>
+<td>total wins by the team</td>
+</tr>
+<tr class="even">
+<td>L</td>
+<td>total losses by the team</td>
+</tr>
+<tr class="odd">
+<td>win_loss_pctg</td>
+<td>proportion of games won out of total games</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="materials" class="level3">
+<h3 class="anchored" data-anchor-id="materials">Materials</h3>
+<p><a href="single_prop_wksht.docx">Class handout</a></p>
+<p><a href="single_prop_wksht_key.docx">Class handout - with solutions</a></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conclusion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In this insightful exploration of NCAA Division I Lacrosse faceoff percentages, we have embarked on a statistical journey to evaluate a specific team’s performance in comparison to league-wide statistics. Through the application of one sample proportion hypothesis testing, we gained valuable insights into the team’s faceoff win percentage, unveiling strong evidence that their performance exceeded what we would expect by random chance alone. As we consider the broader implications of faceoffs in Division I Lacrosse, it becomes evident that faceoff wins play a pivotal role in team rankings and outcomes. The fact that Duke, the second-best team in the country, exhibited a faceoff win percentage above the league average highlights the significance of excelling in this aspect of the game. Winning faceoffs likely translates to higher goal-scoring opportunities, ultimately leading to more successful game outcomes.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="authors" class="level3">
+<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<p>Fill in later</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

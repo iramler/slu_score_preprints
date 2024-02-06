@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.">
 
-<title>SLU SCORE Module Pre-print Repository - NASCAR Transformation Module</title>
+<title>SLU SCORE Module Pre-print Repository - Modules By Topic</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,7 +61,38 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -72,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SLU SCORE Module Pre-print Repository</span>
     </a>
   </div>
@@ -83,8 +114,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./by-statsds-topic.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Modules By Topic</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="https://data.scorenetwork.org/" rel="" target="">
@@ -101,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../nascar_transformation_module/nascar_transformation.html">Nascar Transformation Module</a></li><li class="breadcrumb-item"><a href="../nascar_transformation_module/nascar_transformation.html">NASCAR Transformation Module</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./by-statsds-topic.html">Modules By Topic</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -113,10 +148,16 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./by-statsds-topic.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Modules By Topic</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../docs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SLU SCORE Module Pre-print Repository</span></a>
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">Lacrosse</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -124,41 +165,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../docs/by-statsds-topic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Modules By Topic</span></a>
+  <a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
   </div>
 </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
- <span class="menu-text">Nascar Transformation Module</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../docs/nascar_transformation_module/nascar_transformation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NASCAR Transformation Module</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Nascar Transformation Module</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Motor Sports</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../nascar_transformation_module/nascar_transformation.html" class="sidebar-item-text sidebar-link active">
+  <a href="./motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -170,47 +194,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="hypothesis testing">hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="linear regression">linear regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="single proportion">single proportion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="transformations">transformations <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">NASCAR Transformation Module</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">preprint</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
-  </div>
+<h1 class="title">Modules By Topic</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -218,167 +216,87 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>In NASCAR, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver’s overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver’s abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of the activity, you will have practiced: * Assessing simple linear regression model effectiveness * Checking regression model assumptions * Using log transformations to better fit a linear regression model * Using polynomial regression to fit a curved relationship</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data comes from the NASCAR website and shows the season statistics from 2007-2022. Each row displays the metrics of a racer for that specific year. The data frame contains 1111 rows of observations and 20 variables.</p>
-<p>Download data: <a href="data/nascar_driver_statistics.csv">nascar_driver_statistics.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Wins</td>
-<td>The sum of the driver’s victories</td>
-</tr>
-<tr class="even">
-<td>AvgStart</td>
-<td>The sum of the driver’s starting positions divided by the number of races</td>
-</tr>
-<tr class="odd">
-<td>AvgMidRace</td>
-<td>The sum of the driver’s mid race positions divided by the number of races</td>
-</tr>
-<tr class="even">
-<td>AvgFinish</td>
-<td>The sum of the driver’s finishing positions divided by the number of races</td>
-</tr>
-<tr class="odd">
-<td>AvgPos</td>
-<td>The sum of the driver’s position each lap divided by the number of laps</td>
-</tr>
-<tr class="even">
-<td>PassDiff</td>
-<td>The sum of green flag passes minus green times passed</td>
-</tr>
-<tr class="odd">
-<td>GreenFlagPasses</td>
-<td>Number of green flag passes performed by the driver</td>
-</tr>
-<tr class="even">
-<td>GreenFlagPassed</td>
-<td>Number of times driver is passed during green flag</td>
-</tr>
-<tr class="odd">
-<td>QualityPasses</td>
-<td>Number of passes in the top 15 while under green flag conditions by driver</td>
-</tr>
-<tr class="even">
-<td>PercentQualityPasses</td>
-<td>The sum of quality passes divided by green flag passes</td>
-</tr>
-<tr class="odd">
-<td>NumFastestLaps</td>
-<td>Number of where the driver had the fastest speed on the lap</td>
-</tr>
-<tr class="even">
-<td>LapsInTop15</td>
-<td>Number of laps completed while running in a top 15 position</td>
-</tr>
-<tr class="odd">
-<td>PercentLapsInTop15</td>
-<td>The sum of the laps run in the top 15 divided by total laps completed</td>
-</tr>
-<tr class="even">
-<td>LapsLed</td>
-<td>The sum of the laps led in a race</td>
-</tr>
-<tr class="odd">
-<td>PercentLapsLed</td>
-<td>The sum of the laps led in the race</td>
-</tr>
-<tr class="even">
-<td>TotalLaps</td>
-<td>The sum of the laps completed by a driver that year</td>
-</tr>
-<tr class="odd">
-<td>DriverRating</td>
-<td>Formula combining wins, finish, top15-finish, average running position while on lead lap, average speed under green, fastest lap, led most laps, and lead lap finish with a maximum rating of 150 points</td>
-</tr>
-</tbody>
-</table>
-</details>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="materials/transformation_wksht_key.docx">Class handout</a></p>
-<p><a href="materials/transformation_tech_wksht.docx">Class handout - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver’s performance.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Fill in later</p>
 
 
-</section>
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="hypothesis testing,single proportion" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707233439838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="thumbnail">
+<p><a href="./lacrosse/college_lacrosse_faceoffs/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
+<h3 class="no-anchor listing-title">
+Lacrosse Faceoff Proportions
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('hypothesis testing'); return false;">
+hypothesis testing
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('single proportion'); return false;">
+single proportion
+</div>
+</div>
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
+<div class="listing-description">
+<p>Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
+<div class="listing-date">
+Feb 5, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="linear regression,transformations" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707233100638" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17">
+<div class="thumbnail">
+<p><a href="./motor_sports/nascar_regression_transformation/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="./motor_sports/nascar_regression_transformation/index.html">
+<h3 class="no-anchor listing-title">
+NASCAR Transformation Module
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
+linear regression
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('transformations'); return false;">
+transformations
+</div>
+</div>
+<a href="./motor_sports/nascar_regression_transformation/index.html">
+<div class="listing-description">
+<p>Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./motor_sports/nascar_regression_transformation/index.html">
+<div class="listing-date">
+Feb 5, 2024
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
