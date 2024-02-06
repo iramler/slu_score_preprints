@@ -1,0 +1,108 @@
+---
+title: "Merging Multiple Seasons of NCAA Div 1 Softball Statistics"
+date: February 5, 2024
+description: Actvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.
+categories:
+  - joining
+  - sql
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Data for a particular sport is often stored across numerous locations. For example, in NCAA Division I Softball, batting statistics for each season are typically stored in separate tables. (See for example the statistics hosted by [https://d1softball.com/](https://d1softball.com/){target="_blank"}.)
+
+Suppose we are interested in tracking the statistics of players across multiple seasons. A common way to prep the data to do this is to use join statements to merge each seasons data into one table with one row per player (and columns associated with their different statistics for each season).
+
+This module looks at some simple batting stats over two seasons through the use of joining functions for a small subset of NCAA Division 1 Softball players' statistics for the 2021 and 2022 seasons. (This is only a small window of a much bigger dataset). 
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+Upon completion of this module students should improve upon
+* being able to join two data tables
+* being able to anticipate (by sketching) the resulting data table prior to running the code to do so
+* identify situations where more than one key is needed
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For `R` users, recall that six commonly used joining functions available through the [dplyr](https://dplyr.tidyverse.org/articles/two-table.html/){target="_blank"} package are, `left`, `right`, `full`, `inner`, `semi`, and `anti`. Additionally, other useful dplyr verbs for combining multiple tables of data include `intersect`, `union`, and `setdiff`. (These are called [set operators](https://dplyr.tidyverse.org/articles/two-table.html#set-operations){target="_blank"}. )
+
+Further details regarding joins can be found at [https://dplyr.tidyverse.org/articles/two-table.html](https://dplyr.tidyverse.org/articles/two-table.html){target="_blank"}.
+
+Technology requirement: The activity handout has optional components for students that can use technology to perform the joins. However, it is not a requirement to complete the main exercises. It is assumed that students will use `R` for the module, but a pair of databases (one in sqlite, the other in duckdb) are provided for students that prefer to use `SQL`.
+:::
+
+### Data
+
+There are four data tables associated with this module.
+
+Two of them, `batting2021` and `batting2022`, contain statistics for all Division 1 Softball player who played in the 2021 and/or 2022 season. 
+
+The other two, `batting2021_subset` and `batting2022_subset`, represent non-random samples taken the full data. These are displayed below. R is the number of runs scored by the player, H is the number of hits. 
+
+
+|batting2021_subset|batting2022_subset|
+|--|--|
+|<table> <tr><th>Player</th><th>Team</th><th>R</th><th>H</th></tr><tr><td>Aaliyah Swan</td><td>Cal State Northridge</td><td>8</td><td>20</td></tr><tr><td>Abbey Latham</td><td>Ole Miss</td><td>25</td><td>53</td></tr><tr><td>Bella Rocco</td><td>Boise State</td><td>16</td><td>42</td></tr><tr><td>Carson Fischer</td><td>Northern Colorado</td><td>11</td><td>15</td></tr><tr><td>Drew Dudley</td><td>Austin Peay</td><td>10</td><td>29</td></tr><tr><td>Emily Gant</td><td>Boston University</td><td>31</td><td>36</td></tr></table>| <table> <tr><th>Player</th><th>Team</th><th>R</th><th>H</th></tr><tr><td>Aaliyah Swan</td><td>Cal State Northridge</td><td>16</td><td>23</td></tr><tr><td>Abbey Latham</td><td>Ole Miss</td><td>36</td><td>45</td></tr><tr><td>Bella Rocco</td><td>Boise State</td><td>10</td><td>29</td></tr><tr><td>Emily Gant</td><td>Boston University</td><td>40</td><td>55</td></tr><tr><td>Lexi Osowski</td><td>Austin Peay</td><td>42</td><td>64</td></tr><tr><td>Mikayla Allee</td><td>Ole Miss</td><td>36</td><td>28</td></tr></table>|
+
+<details>
+<summary><b>Additional details for the full data (batting2021 and batting2022)</b></summary>
+
+The 2021 data set has 2131 rows with 22 columns. The 2022 data set has 2275 rows with the same 22 columns. Each row represents a Division 1 Softball player who played in the
+2021 and/or 2022 season. 
+
+| Variable | Description |
+|----|-------------|
+| Player | Name of the softball player |
+| Team | Name of the team (school) for each player |
+| BA           | Batting Average - The ratio of a player's total base hits to their total number of at-bats, indicating their ability to make successful hits. |
+| OBP          | On-Base Percentage - The percentage of times a player reaches base, either through a hit, walk, or hit-by-pitch, out of their total plate appearances. |
+| SLG          | Slugging Percentage - The measure of a player's power by calculating the total number of bases they accumulate per at-bat. |
+| OPS          | On-Base Plus Slugging - The sum of a player's on-base percentage and slugging percentage, providing a comprehensive measure of their offensive contribution. |
+| GP           | Games Played - The total number of games in which a player has participated. |
+| PA           | Plate Appearances - The total number of times a player has come up to bat, including at-bats, walks, and hit-by-pitches. |
+| AB           | At-Bats - The number of times a player has officially faced a pitcher and had an opportunity to hit. |
+| R            | Runs Scored - The number of times a player has crossed home plate and scored a run. |
+| H            | Hits - The total number of successful hits made by a player. |
+| 2B           | Doubles - The number of hits resulting in the batter reaching second base. |
+| 3B           | Triples - The number of hits resulting in the batter reaching third base. |
+| HR           | Home Runs - The number of hits resulting in the batter scoring a run by hitting the ball out of the park. |
+| RBI          | Runs Batted In - The number of runs a player has driven in with a hit or sacrifice. |
+| HBP          | Hit by Pitch - The number of times a player has been struck by a pitched ball and awarded first base. |
+| BB           | Walks - The number of times a player has received a base on balls (four balls) and been awarded first base. |
+| K            | Strikeouts - The number of times a player has been called out after accumulating three strikes. |
+| SB           | Stolen Bases - The number of times a player successfully advances to the next base without a hit, during a pitch while the ball is in play. |
+| CS           | Caught Stealing - The number of times a player is thrown out while attempting to steal a base. |
+
+
+</details>
+
+**CSV format data files**
+        * [batting2021_subset.csv](batting2021_subset.csv): Subset of full dataset containing the season total hits and runs for a non-random sample of six players from 2021
+        * [batting2022_subset.csv](batting2022_subset.csv): Subset of full dataset containing the season total hits and runs for a non-random sample of six players from 2022
+        * [batting2021.csv](batting2021.csv): Dataset with the 2021 batting statistics for all 2131 Division 1 softball players
+        * [batting2022.csv](batting2022.csv): Dataset with the 2022 batting statistics for all 2275 Division 1 softball players
+    
+**Database (SQL) style**
+        * [softball_batting.duckdb](softball_batting.duckdb): DuckDB database containing four table: the full set of players for each season (batting2021 and batting2022) and the two subsets (batting2021_subset and batting2022_subset).
+        * [softball_batting.sqlite](softball_batting.sqlite): SQLite database containing four table: the full set of players for each season (batting2021 and batting2022) and the two subsets (batting2021_subset and batting2022_subset).
+
+#### Data Source
+Statistics. D1Softball. (2019, October 24). <https://d1softball.com/statistics/> 
+
+### Materials
+
+[Class handout](softball_d1_worksheet.docx)
+[Class handout with sample solutions](softball_d1_worksheet_key.docx)
+
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+By working through the different scenarios, students will become aware of how the choice of join changes the meaning of the resulting table. Additionally, when working with large datasets, students should recognize that care must be taken when choosing their keys as duplicates may not be easy to see in a snippet of the data.
+:::
+
+### Authors
+
+Fill in later
