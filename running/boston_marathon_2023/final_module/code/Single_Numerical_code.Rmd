@@ -1,0 +1,70 @@
+---
+title: "Single Numerical Variable"
+output: html_document
+date: "2023-06-14"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+```{r}
+boston_marathon<- read_csv("data/boston_marathon_2023.csv")
+
+boston_marathon<- boston_marathon%>%
+  mutate(finish_net_minutes = finish_net_sec/60)
+
+boston <- boston_marathon%>%
+  arrange(finish_net_minutes)%>%
+  select(name, finish_net_minutes)%>%
+  head()
+
+  knitr::kable(boston, digits = 3, caption = "2023 Boston Marathon")
+```
+
+```{r}
+histogram_marathon<-ggplot(data = boston_marathon,
+       aes(x = finish_net_minutes))+
+  geom_histogram(bins = 20, color = "white")+
+  labs(x = "Result time (minutes)")
+
+ggsave(filename = "histogram_marathon2.jpg",
+       plot = histogram_marathon,
+       width = 7,
+       height = 4)
+
+
+summary(boston_marathon$finish_net_minutes)
+var(boston_marathon$finish_net_minutes)
+```
+
+```{r}
+boston_marathon%>%
+  filter(gender == "M")%>%
+  summarise(Mean = round(mean(finish_net_minutes),2),
+            Standard_Deviation = round(sd(finish_net_minutes),2))
+  
+  
+```
+
+```{r}
+boston_marathon%>%
+  filter(gender == "M")%>%
+  slice_min(finish_net_minutes)
+```
+```{r}
+boston_marathon%>%
+  filter(gender == "W")%>%
+  summarise(Mean = round(mean(finish_net_minutes),2),
+            Standard_Deviation = round(sd(finish_net_minutes),2))
+
+boston_marathon%>%
+  filter(gender == "W")%>%
+  slice_min(finish_net_minutes)
+```
+
+
+
+
+

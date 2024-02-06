@@ -1,0 +1,40 @@
+---
+title: League of Legends - Buffing and Nerfing
+author: George Charalambous
+date: May 23, 2023
+description: Game play statistics for League of Legends champions in two different patches 
+categories:
+  - outlier detection
+  - five-number summary
+  - z-scores
+---
+
+## Motivation
+
+League of Legends is a 5 v. 5 multiplayer online battle arena (MOBA) game developed by Riot Games. In the game, players assume the role of a "champion" with unique abilities and battle against a team of other players or computer-controlled champions. Riot Games continually collects data to evaluate the effect of every champion, adjusting and fine-tuning various aspects associated with each champion, to ensure fair and competitive gameplay. Through various updates (patches) of the game that occur every two weeks, characters might turn out to be either extremely efficient and strong, or they might need adjustments to increase their abilities, as they are on the weaker side. Therefore, in order for an overall game balance to be achieved, developers use two common strategies, known as "nerfing" and "buffing", within the world of video games. "Nerfing" is the act of reducing the power or effectiveness of a champion or item in a video game, while "buffing" is the act of increasing its power or effectiveness.
+
+## Data
+
+A data frame for 162 champions of the following variables, using data from either the 12.22 or 12.23 patches of League of Legends.
+
+| Variable | Description                                                     |
+|-----------------------|-------------------------------------------------|
+| Name     | Name of the champion                                            |
+| Role     | Role of the champion in a game                                  |
+| KDA      | Average kills, deaths and assists associated with each champion |
+| WRate    | Win rates of each champion                                      |
+| PickRate | Pick rates of each champion                                     |
+| RolePerc | Percent of time the champion is used in the expected role       |
+| BanPerc  | Ban percentages associated with each champion                   |
+
+: [LOL_patch_12.22.csv](../data/LOL_patch_12.22.csv), [LOL_patch_12.23.csv](../data/LOL_patch_12.23.csv)
+
+## Questions
+
+1.  Can we use data on game play in one patch to determine which champions might need to be "nerfed" or "buffed" for a subsequent patch?
+
+## References
+
+Lol champion stats, 12.22 master, win rates. METAsrc. (n.d.). <https://www.metasrc.com/5v5/12.22/stats?ranks=master>
+
+Lol champion stats, 12.23 master, win rates. METAsrc. (n.d.-b). <https://www.metasrc.com/5v5/12.23/stats?ranks=master>

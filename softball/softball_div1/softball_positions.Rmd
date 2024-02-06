@@ -1,0 +1,249 @@
+---
+title: "softball_position"
+output: html_document
+date: "2023-06-05"
+---
+
+```{r}
+library(tidyverse)
+library(rvest)
+library(tree)
+
+## provide the URL and name it something (in this case, url).
+url <- "https://d1softball.com/statistics/2023"
+
+## convert the html code into something R can read
+h <- read_html(url)
+
+## grabs the tables
+
+tab <- h |> html_nodes("table")
+```
+
+```{r}
+softball <- tab[[1]] |> html_table()
+softball <- softball|> filter(POS == "1B" | POS == "2B" | POS == "3B" | POS == "SS" | POS == "C" | POS == "P")
+head(softball)
+```
+
+```{r}
+library(readr)
+ironman_lake_placid_female <- read_csv("triathlon_womens_ironman/data/ironman_lake_placid_female.csv")
+View(ironman_lake_placid_female)
+```
+
+```{r}
+library(dplyr)
+ironman_finish <- ironman_lake_placid_female |> select(Finish.Status, everything()) |> 
+  filter(Finish.Status == "Finisher" | Finish.Status == "DNF")
+```
+
+
+
+
+## KNN MODEL
+```{r}
+# train is 80% and test is 20%
+set.seed(1713)
+train <- softball |> slice_sample(n = 1123)
+
+library(pander)
+train <- train |>
+  mutate(across(where(is.numeric), ~ (.x - min(.x)) /
+                                 (max(.x) - min(.x))))
+
+test <- anti_join(softball, train)
+```
+
+```{r}
+ggplot(data = train, aes(x = H, y = RBI, colour = POS, shape = POS)) +
+  geom_point(size = 4) +  
+  theme(axis.title.y=element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank()) +
+  facet_wrap(~POS)
+```
+
+```{r}
+library(class)
+set.seed(1713)
+train_small <- train |> select(BA, H, RBI, K, `2B`)
+test_small <- test |> select(BA, H, RBI, K, `2B`)
+
+train_cat <- train$POS
+test_cat <- test$POS
+```
+
+```{r}
+knn_mod <- knn(train = train_small, test = test_small,
+               cl = train_cat, k = 125)
+
+knn_mod
+```
+
+```{r}
+table(knn_mod, test_cat)
+```
+
+```{r}
+tab <- table(knn_mod, test_cat) 
+sum(diag(tab)) / sum(tab)
+
+## accuracy 20%
+```
+
+## Linear regression
+```{r}
+# Load the necessary library
+library(ggplot2)
+
+# Split the dataset into training and testing sets (80:20 split)
+set.seed(1713)
+train_index <- sample(1:nrow(softball), 0.8 * nrow(softball))
+train_data <- softball[train_index, ]
+test_data <- softball[-train_index, ]
+
+# Perform linear regression
+lm_model <- lm(POS ~ BA + OBP + SLG + OPS + GP + PA + AB + 
+                  R + H + `2B` + `3B` + HR + RBI + HBP + BB + K + 
+                  SB + CS, data = train_data)
+
+# Print the summary of the model
+summary(lm_model)
+
+# Make predictions on the test set
+test_predictions <- predict(lm_model, newdata = test_data)
+
+# Evaluate the model
+mse <- mean((test_predictions - test_data$target_variable)^2)
+rmse <- sqrt(mse)
+print(paste("Root Mean Squared Error (RMSE):", rmse))
+
+```
+
+## LDA
+```{r}
+library(MASS)
+lda.fit <- lda(POS ~ BA +OBP + SLG + OPS + GP + PA + AB + 
+                  R + H + `2B` + `3B` + HR + RBI + HBP + BB + K + 
+                  SB + CS, data = softball, subset = train)
+lda.fit
+plot(lda.fit)
+```
+
+```{r}
+lda.pred <- predict(lda.fit, softball)
+names(lda.pred)
+```
+
+```{r}
+lda.class <- lda.pred$class
+table(lda.class, softball$POS)
+
+## accuracy 36%
+mean(lda.class == softball$POS)
+```
+
+## QDA
+```{r}
+qda.fit <- qda(POS ~ BA +OBP + SLG + OPS + GP + PA + AB + 
+                  R + H + `2B` + `3B` + HR + RBI + HBP + BB + K + 
+                  SB + CS, data = softball, subset = train)
+qda.fit
+```
+
+```{r}
+qda.class <- predict(qda.fit, softball)$class
+table(qda.class, softball$POS)
+
+## accuracy 44%
+mean(qda.class == softball$POS)
+```
+
+## Decision tree
+```{r}
+library(dplyr)
+softball <- softball |> select(-Qual., -Player, -Team) |> 
+  rename(second = `2B`, third = `3B`)
+
+set.seed(1713)
+## 70/30 split in data
+train <- softball |> slice_sample(n = 1123)
+test <- anti_join(softball, train)
+softball$POS = factor(softball$POS)
+
+head(softball)
+```
+
+```{r}
+## training the tree
+tree.softball <- tree(POS ~ ., softball)
+summary(tree.softball)
+```
+
+```{r}
+plot(tree.softball)
+text(tree.softball, pretty = 0)
+```
+
+```{r}
+tree.pred <- predict(tree.softball, test, type = "class")
+accuracy <- sum(tree.pred == test$POS) / nrow(test)
+accuracy
+
+## accuracy 33%
+```
+
+
+
+## Best Subsets
+```{r}
+install.packages("leaps")
+library(leaps)
+```
+
+```{r}
+regfit.full <- regsubsets(POS ~ ., softball)
+summary(regfit.full)
+```
+
+## Ridge Regression
+```{r}
+install.packages("glmnet")
+library(glmnet)
+```
+
+```{r}
+head(softball)
+softball = softball[, -c(1, 2, 3)]
+names(softball)
+softball.x = as.matrix(softball[,1])
+softball.y = softball[,-1]
+summary(softball.y)
+```
+
+```{r}
+set.seed(1713)
+nrow(softball)*0.8
+```
+
+```{r}
+train <- sample(1:1404, 1123)
+```
+
+```{r}
+softball.cv.out <- cv.glmnet(softball.x[train, ], softball.y[train], alpha = 0)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+ Variable , Description                                                     
+ Name     , Name of the champion                                            
+ Role     , Role of the champion in a game                                  
+ KDA      ," Average kills, deaths and assists associated with each champion "
+ WRate    , Win rates of each champion                                      
+ PickRate , Pick rates of each champion                                     
+ RolePerc , Percent of time the champion is used in the expected role       
+ BanPerc  , Ban percentages associated with each champion                   

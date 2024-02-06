@@ -1,0 +1,37 @@
+---
+title: Triathlon Ironman Correlation
+author: Michael Schuckers, Matthew Abel, and A.J. Dykstra
+date: May 17, 2023
+description: The data set looks at female participatants in the triathlon Ironman.
+---
+
+## Data
+
+The data set has 64 rows with 17 columns. Each row represents a female who has 
+participated in the 2022 Lake Placid Ironman 
+
+| Variable | Description |
+|----|-------------|
+| Bib | registration number of each runner used for identification |
+| Name | The participant's name |
+| Country | What country the participant is from |
+| Gender | The participant's gender |
+| Division | The age range or membership a runner is |
+| Division.Rank | Within the divisions, the place each runner has obtained over all races |
+| Overall.Time | The total time it took to complete the Ironman in minutes |
+| Overall.Rank | The runner's finishing place for that particular triathlon |
+| Swim.Time | The time in minutes it took to complete the swimming portion |
+| Swim.Rank | The place the runner finished for the swim portion |
+| Bike.Time | The time in minutes it took to complete the biking portion |
+| Bike.Rank | The place the runner finished for the bike portion |
+| Run.Time | The time in minutes it took to complete the running portion |
+| Run.Rank | The place the runner finished for the running portion |
+| Finish.Status | States whether someone completed the Ironman successfully |
+| Location | Where the Ironman takes place |
+| Year | They year when the mentioned participant ran |
+
+
+## References
+
+Ironman Lake Placid Results and articles. CoachCox. (n.d.). 
+<https://www.coachcox.co.uk/imstats/series/13/>

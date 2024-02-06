@@ -1,0 +1,76 @@
+---
+title: "Difference of Means CI"
+output: html_document
+date: "2023-07-20"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(ggiraphExtra)
+
+boston <- read_csv("data/boston_marathon_2023.csv")
+
+# checking the sample sizes for each age group
+boston%>%
+  group_by(age_group, gender)%>%
+  summarise(number = n())
+
+# filtering and subsetting
+boston<- boston%>%
+  filter(age_group == "18-39" | age_group == "40-44" | age_group == "45-49")
+
+
+# Possibly: ADD ANOTHER AGE GROUP AND MAKE APPROPRIATE CHANGES TO QUESTIONS ?
+```
+
+# Module 
+
+## ANOVA for Men with 3 age groups 
+```{r}
+bostonMEN <- boston%>%
+  filter(gender == "M")
+menAOV <- aov(finish_net_minutes ~ age_group, bostonMEN)
+summary(menAOV)
+model.tables(menAOV, type = "means")
+model.tables(menAOV, type = "effects")
+```
+
+## What are the mean times (in minutes) of each age group?
+
+## Which age group is most abnormal in terms of effect?
+
+```{r}
+TukeyHSD(menAOV)
+```
+### Is the difference larger between age groups 18-39 and 40-44 or age groups 40-44 and 45-49?
+
+### Interpret a 95% confidence interval for the larger difference of means 
+
+-------------------------------------------------------------------------------------------------
+## ANOVA for Women with 3 age groups 
+```{r}
+bostonWOMEN <- boston%>%
+  filter(gender == "M")
+womenAOV <- aov(finish_net_minutes ~ age_group, bostonWOMEN)
+summary(womenAOV)
+model.tables(womenAOV, type = "means")
+model.tables(womenAOV, type = "effects")
+```
+
+## What are the mean times (in minutes) of each age group?
+
+## Which age group is most abnormal in terms of effect?
+
+
+```{r}
+TukeyHSD(womenAOV)
+```
+### Is the difference larger between age groups 18-39 and 40-44 or age groups 40-44 and 45-49?
+
+### Interpret a 95% confidence interval for the larger difference of means.
+
+### Is the larger difference of means among age groups the same for men and women? Support your answer with reasoning.
