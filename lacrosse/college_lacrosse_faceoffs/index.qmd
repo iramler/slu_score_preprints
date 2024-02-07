@@ -1,7 +1,7 @@
 ---
 title: "Lacrosse Faceoff Proportions"
 date: February 5, 2024
-description: Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+description: Using data from NCAA Div I lacrosse teams to explore the importance of winning faceoffs
 categories:
   - hypothesis testing
   - single proportion
@@ -63,7 +63,14 @@ Download data: [lax_2022_2023.csv](lax_2022_2023.csv)
 | avg_turnovers         | average turnovers that are directly the fault of a player per game                                              |
 | W                     | total wins by the team                                                                                          |
 | L                     | total losses by the team                                                                                        |
-| win_loss_pctg         | proportion of games won out of total games        
+| win_loss_pctg         | proportion of games won out of total games  |
+
+**Data Source**
+
+Data collected from the NCAA Website for Men's Lacrosse Division I
+
+<http://stats.ncaa.org/rankings/change_sport_year_div>
+
 </details>
 
 ### Materials
