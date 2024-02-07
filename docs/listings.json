@@ -2,8 +2,14 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
+      "/running/boston_marathon_2023/index.html",
+      "/triathlon/multiple_linear_regression/index.html",
+      "/triathlon/simple_linear_regression/index.html",
       "/lacrosse/college_lacrosse_faceoffs/index.html",
-      "/motor_sports/nascar_regression_transformation/index.html"
+      "/lacrosse/lacrosse_pll_vs_nll/index.html",
+      "/softball/softball_div1/index.html",
+      "/motor_sports/nascar_regression_transformation/index.html",
+      "/golf/pga_drive_putt/index.html"
     ]
   }
 ]

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.">
+<meta name="description" content="Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.">
 
-<title>SLU SCORE Module Pre-print Repository - NASCAR Transformation Module</title>
+<title>SLU SCORE Module Pre-print Repository - Ironman Triathlon (Canadian Females) - Simple Linear Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../motor_sports/nascar_regression_transformation/index.html">Motor Sports</a></li><li class="breadcrumb-item"><a href="../../motor_sports/nascar_regression_transformation/index.html">NASCAR Transformation Module</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/simple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Simple Linear Regression</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -165,16 +165,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Motor Sports</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -216,13 +216,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
  <span class="menu-text">Triathlon</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -262,16 +262,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">NASCAR Transformation Module</h1>
+<h1 class="title">Ironman Triathlon (Canadian Females) - Simple Linear Regression</h1>
   <div class="quarto-categories">
     <div class="quarto-category">linear regression</div>
-    <div class="quarto-category">transformations</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+    Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.
   </div>
 </div>
 
@@ -297,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>In NASCAR, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver’s overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver’s abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.</p>
+<p>Welcome to this activity focused on simple linear regression analysis. In this worksheet, you will explore a dataset containing information about the female Canadian finishers of the Lake Placid Ironman 2022. Specifically, you will analyze bike times to predict run times for the participants. Through this activity, you will gain practical experience in performing linear regression analysis, interpreting the results, and making predictions based on the model.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -310,7 +309,7 @@ Learning Objectives
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of the activity, you will have practiced: * Assessing simple linear regression model effectiveness * Checking regression model assumptions * Using log transformations to better fit a linear regression model * Using polynomial regression to fit a curved relationship</p>
+<p>By the end of this activity, you will be able to: 1. Understand the concept of simple linear regression and its application in statistical analysis. 2. Identify the predictor (independent) and response (dependent) variables in a regression analysis. 3. Interpret the regression output, including the coefficient estimates, residuals, and R-squared value. 4. Make predictions based on the regression model and evaluate the accuracy of the predictions.</p>
 </div>
 </div>
 </div>
@@ -326,23 +325,29 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns.</p>
+<p>Before diving into this worksheet, it is important to have a foundational understanding of certain statistical concepts and techniques. The following prior knowledge will be helpful in completing this activity successfully:</p>
+<ol type="1">
+<li><p>Variables: Understanding the difference between predictor (independent) and response (dependent) variables is essential in the context of regression analysis. In this dataset, the predictor variable would be bike times, while the response variable would be run times.</p></li>
+<li><p>Scatter Plots: Familiarity with scatter plots, which depict the relationship between two continuous variables, is crucial. Scatter plots visually represent the data points and can help identify the nature and strength of the relationship between the predictor and response variables.</p></li>
+<li><p>Simple Linear Regression: Knowledge of simple linear regression as a statistical technique for modeling the relationship between two continuous variables is essential. You should understand the concept of a regression line, how it is estimated, and how it can be used to make predictions.</p></li>
+<li><p>Prediction and Evaluation: Knowledge of how to make predictions based on the regression model and evaluate their accuracy.</p></li>
+</ol>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data comes from the NASCAR website and shows the season statistics from 2007-2022. Each row displays the metrics of a racer for that specific year. The data frame contains 1111 rows of observations and 20 variables.</p>
-<p>Download data: <a href="nascar_driver_statistics.csv">nascar_driver_statistics.csv</a></p>
+<p>The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman</p>
+<p>Download data: <a href="ironman_lake_placid_female_2022_canadian.csv">ironman_lake_placid_female_2022_canadian.csv</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
+<col style="width: 23%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -352,72 +357,72 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>Wins</td>
-<td>The sum of the driver’s victories</td>
+<td>Bib</td>
+<td>registration number of each runner used for identification</td>
 </tr>
 <tr class="even">
-<td>AvgStart</td>
-<td>The sum of the driver’s starting positions divided by the number of races</td>
+<td>Name</td>
+<td>The participant’s name</td>
 </tr>
 <tr class="odd">
-<td>AvgMidRace</td>
-<td>The sum of the driver’s mid race positions divided by the number of races</td>
+<td>Country</td>
+<td>What country the participant is from</td>
 </tr>
 <tr class="even">
-<td>AvgFinish</td>
-<td>The sum of the driver’s finishing positions divided by the number of races</td>
+<td>Gender</td>
+<td>The participant’s gender</td>
 </tr>
 <tr class="odd">
-<td>AvgPos</td>
-<td>The sum of the driver’s position each lap divided by the number of laps</td>
+<td>Division</td>
+<td>The age range or membership a runner is</td>
 </tr>
 <tr class="even">
-<td>PassDiff</td>
-<td>The sum of green flag passes minus green times passed</td>
+<td>Division.Rank</td>
+<td>Within the divisions, the place each runner has obtained over all races</td>
 </tr>
 <tr class="odd">
-<td>GreenFlagPasses</td>
-<td>Number of green flag passes performed by the driver</td>
+<td>Overall.Time</td>
+<td>The total time it took to complete the Ironman in minutes</td>
 </tr>
 <tr class="even">
-<td>GreenFlagPassed</td>
-<td>Number of times driver is passed during green flag</td>
+<td>Overall.Rank</td>
+<td>The runner’s finishing place for that particular triathlon</td>
 </tr>
 <tr class="odd">
-<td>QualityPasses</td>
-<td>Number of passes in the top 15 while under green flag conditions by driver</td>
+<td>Swim.Time</td>
+<td>The time in minutes it took to complete the swimming portion</td>
 </tr>
 <tr class="even">
-<td>PercentQualityPasses</td>
-<td>The sum of quality passes divided by green flag passes</td>
+<td>Swim.Rank</td>
+<td>The place the runner finished for the swim portion</td>
 </tr>
 <tr class="odd">
-<td>NumFastestLaps</td>
-<td>Number of where the driver had the fastest speed on the lap</td>
+<td>Bike.Time</td>
+<td>The time in minutes it took to complete the biking portion</td>
 </tr>
 <tr class="even">
-<td>LapsInTop15</td>
-<td>Number of laps completed while running in a top 15 position</td>
+<td>Bike.Rank</td>
+<td>The place the runner finished for the bike portion</td>
 </tr>
 <tr class="odd">
-<td>PercentLapsInTop15</td>
-<td>The sum of the laps run in the top 15 divided by total laps completed</td>
+<td>Run.Time</td>
+<td>The time in minutes it took to complete the running portion</td>
 </tr>
 <tr class="even">
-<td>LapsLed</td>
-<td>The sum of the laps led in a race</td>
+<td>Run.Rank</td>
+<td>The place the runner finished for the running portion</td>
 </tr>
 <tr class="odd">
-<td>PercentLapsLed</td>
-<td>The sum of the laps led in the race</td>
+<td>Finish.Status</td>
+<td>States whether someone completed the Ironman successfully</td>
 </tr>
 <tr class="even">
-<td>TotalLaps</td>
-<td>The sum of the laps completed by a driver that year</td>
+<td>Location</td>
+<td>Where the Ironman takes place</td>
 </tr>
 <tr class="odd">
-<td>DriverRating</td>
-<td>Formula combining wins, finish, top15-finish, average running position while on lead lap, average speed under green, fastest lap, led most laps, and lead lap finish with a maximum rating of 150 points</td>
+<td>Year</td>
+<td>They year when the mentioned participant ran</td>
 </tr>
 </tbody>
 </table>
@@ -425,8 +430,8 @@ Methods
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="transformation_tech_wksht.docx">Class handout</a></p>
-<p><a href="transformation_wksht_key.docx">Class handout - with solutions</a></p>
+<p><a href="Regression_Simple.docx">Class handout</a></p>
+<p><a href="Regression_Simple_Key.docx">Class handout - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -439,7 +444,7 @@ Conclusion
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver’s performance.</p>
+<p>In conclusion, the Simple Linear Regression worksheet has yielded important findings. The analysis revealed a significant slope interpretation. However, there is an absence of a meaningful intercept interpretation. Impressively, the model accurately predicted the winner, Sarah True, within a 12-minute range of her actual time, demonstrating its effectiveness in estimating performance. Furthermore, the exploration of using speed as an alternative variable showcased its potential usefulness and highlighted the value it can add to predicting and understanding performance outcomes. Overall, this worksheet has enhanced our understanding of the relationship between variables and the predictive capabilities of simple linear regression.</p>
 </div>
 </div>
 </div>

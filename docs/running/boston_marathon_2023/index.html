@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.">
+<meta name="description" content="Describing finish time for runners in the 2023 Boston Marathon">
 
-<title>SLU SCORE Module Pre-print Repository - NASCAR Transformation Module</title>
+<title>SLU SCORE Module Pre-print Repository - 2023 Boston Marathon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../motor_sports/nascar_regression_transformation/index.html">Motor Sports</a></li><li class="breadcrumb-item"><a href="../../motor_sports/nascar_regression_transformation/index.html">NASCAR Transformation Module</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">2023 Boston Marathon</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -165,16 +165,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Motor Sports</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -182,16 +182,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Running</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">2023 Boston Marathon</span></a>
   </div>
 </li>
@@ -262,16 +262,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">NASCAR Transformation Module</h1>
+<h1 class="title">2023 Boston Marathon</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">linear regression</div>
-    <div class="quarto-category">transformations</div>
+    <div class="quarto-category">histogram</div>
+    <div class="quarto-category">summary statistics</div>
+    <div class="quarto-category">z-scores</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+    Describing finish time for runners in the 2023 Boston Marathon
   </div>
 </div>
 
@@ -297,11 +298,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>In NASCAR, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver’s overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver’s abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>For this activity, you will be exploring data from the 2023 Boston Marathon by analyzing the result times of the finishing runners. Focusing on the single quantitative variable of result times in minutes, you will examine both visualizations and summary statistics to make key conclusions. The incorporation of z-scores will allow for comparisons to be made between two subsets of the data by determining performances of top finishers.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Learning Objectives
@@ -310,14 +311,14 @@ Learning Objectives
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of the activity, you will have practiced: * Assessing simple linear regression model effectiveness * Checking regression model assumptions * Using log transformations to better fit a linear regression model * Using polynomial regression to fit a curved relationship</p>
+<p>By the end of the activity, you will be able to: 1. Analyze structures and distributions of histograms 2. Use basic summary statistics to assess center and spread 3. Calculate further relevant metrics for quantitative data 4. Calculate and compare z-scores for individual cases</p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout callout-style-default callout-note callout-titled" title="Methods">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Methods
@@ -326,120 +327,70 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns.</p>
+<p>For this activity, students will primarily use basic concepts of histograms and boxplots to analyze distributions. Students will also require formulas for deviation, IQR, standard deviation, fences, and z-score.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data comes from the NASCAR website and shows the season statistics from 2007-2022. Each row displays the metrics of a racer for that specific year. The data frame contains 1111 rows of observations and 20 variables.</p>
-<p>Download data: <a href="nascar_driver_statistics.csv">nascar_driver_statistics.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Wins</td>
-<td>The sum of the driver’s victories</td>
-</tr>
-<tr class="even">
-<td>AvgStart</td>
-<td>The sum of the driver’s starting positions divided by the number of races</td>
-</tr>
-<tr class="odd">
-<td>AvgMidRace</td>
-<td>The sum of the driver’s mid race positions divided by the number of races</td>
-</tr>
-<tr class="even">
-<td>AvgFinish</td>
-<td>The sum of the driver’s finishing positions divided by the number of races</td>
-</tr>
-<tr class="odd">
-<td>AvgPos</td>
-<td>The sum of the driver’s position each lap divided by the number of laps</td>
-</tr>
-<tr class="even">
-<td>PassDiff</td>
-<td>The sum of green flag passes minus green times passed</td>
-</tr>
-<tr class="odd">
-<td>GreenFlagPasses</td>
-<td>Number of green flag passes performed by the driver</td>
-</tr>
-<tr class="even">
-<td>GreenFlagPassed</td>
-<td>Number of times driver is passed during green flag</td>
-</tr>
-<tr class="odd">
-<td>QualityPasses</td>
-<td>Number of passes in the top 15 while under green flag conditions by driver</td>
-</tr>
-<tr class="even">
-<td>PercentQualityPasses</td>
-<td>The sum of quality passes divided by green flag passes</td>
-</tr>
-<tr class="odd">
-<td>NumFastestLaps</td>
-<td>Number of where the driver had the fastest speed on the lap</td>
-</tr>
-<tr class="even">
-<td>LapsInTop15</td>
-<td>Number of laps completed while running in a top 15 position</td>
-</tr>
-<tr class="odd">
-<td>PercentLapsInTop15</td>
-<td>The sum of the laps run in the top 15 divided by total laps completed</td>
-</tr>
-<tr class="even">
-<td>LapsLed</td>
-<td>The sum of the laps led in a race</td>
-</tr>
-<tr class="odd">
-<td>PercentLapsLed</td>
-<td>The sum of the laps led in the race</td>
-</tr>
-<tr class="even">
-<td>TotalLaps</td>
-<td>The sum of the laps completed by a driver that year</td>
-</tr>
-<tr class="odd">
-<td>DriverRating</td>
-<td>Formula combining wins, finish, top15-finish, average running position while on lead lap, average speed under green, fastest lap, led most laps, and lead lap finish with a maximum rating of 150 points</td>
-</tr>
-</tbody>
-</table>
-</details>
+<p>The data set contains 26598 rows and 15 columns. Each row represents a runner who completed the Boston Marathon in 2023</p>
+<p>Download data: <a href="boston_marathon_2023.csv">boston_marathon_2023.csv</a></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Variable Descriptions">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variable Descriptions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>| Variable | Description | |----|---------------|</p>
+<p>| age_group | age group of the runner |</p>
+<p>| place_overall | finishing place of the runner out of all runners |</p>
+<p>| place_gender | finishing place of runner among the same gender |</p>
+<p>| place_division | finishing place of runner among runners of the same gender and age group |</p>
+<p>| name | name of runner |</p>
+<p>| gender | gender of runner |</p>
+<p>| team | team the runner is affiliated with |</p>
+<p>| bib_number | bib number of runner |</p>
+<p>| half_time | half marathon time of runner |</p>
+<p>| finish_net | finishing time timed from when they cross the starting gate |</p>
+<p>| finish_gun | finishing time of runner timed from when the starter gun is fired |</p>
+<p>| age_group | age group of the runner |</p>
+<p>| half_time_sec | half marathon time in seconds |</p>
+<p>| finish_net_sec | net finish in seconds |</p>
+<p>| finish_gun_sec | gun finish in seconds |</p>
+<p>| finish_net_minutes | net finish in minutes |</p>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
+<p>Boston Athletic Association</p>
+<p>&lt;https://www.baa.org&gt;</p>
+</section>
+</div>
+</div>
+</div>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="transformation_tech_wksht.docx">Class handout</a></p>
-<p><a href="transformation_wksht_key.docx">Class handout - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<p><a href="boston_marathon_2023_wksht.docx">Class handout</a></p>
+<p><a href="boston_marathon_2023_wksht_key.docx">Class handout - with solutions</a></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver’s performance.</p>
+<p>In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. Firstly, it introduces them to the calculation of essential summary statistics, allowing them to gain a deeper understanding of the distribution of result times. Secondly, by identifying outliers above or below the upper fences, students can recognize and analyze exceptional performances in the marathon. Lastly, the calculation of z-scores enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.</p>
 </div>
 </div>
 </div>
