@@ -19,7 +19,7 @@ website:
 format:
   html:
     theme:
-      - cosmo
+      - simplex
       - score.scss
     toc: true
 
