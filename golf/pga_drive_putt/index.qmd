@@ -61,6 +61,10 @@ Download data: [PGA2022.csv](PGA2022.csv)
 | `Points`           | FedexCup Regular Season Points are awarded points by finished position for performance in each tournament                                                             |
 | `Tournament`       | The tournament where the PGA Tour is taking place                                                                                                                     |
 
+**Data Source**
+
+The data were obtained from the [PGA Statistics website](https://www.pgatour.com/stats)
+
 </details>
 
 ### Materials
