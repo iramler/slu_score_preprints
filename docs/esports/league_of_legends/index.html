@@ -331,8 +331,8 @@ Learning Objectives
 <p>By the end of this activity, you will be able to:</p>
 <ol type="1">
 <li><p>Understand the concept of histograms and their relevance in statistical analysis.</p></li>
-<li><p>Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends.</p></li>
-<li><p>Identify potential outliers among champions based on their Win Rates.</p></li>
+<li><p>Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends. In particular, being able to describe the center, shape, and spread of a distribution based on the displayed graph.</p></li>
+<li><p>Identify potential outliers in a numerical variable using numerical methods such as the “1.5 IQR Rule” or z-scores.</p></li>
 <li><p>Interpret the implications of outliers in terms of champion balance and performance.</p></li>
 </ol>
 </div>
@@ -350,11 +350,12 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset.</p>
+<p>Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.</p>
 <ol type="1">
-<li><p>Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape of distributions.</p></li>
-<li><p>Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important. (1.5*IQR Rule or Z-Score Method)</p></li>
+<li><p>Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape, center, and spread of distributions.</p></li>
+<li><p>Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important.</p></li>
 <li><p>Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.</p></li>
+<li><p>Knowledge of outlier detection methods (such as the 1.5 IQR Rule and/or z-scores) is fundamental to the activity.</p></li>
 </ol>
 </div>
 </div>
@@ -362,15 +363,17 @@ Methods
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>A data frame for 162 champions of the following variables. Each row represents a Champion that you can choose when playing League of Legends. Download data: <a href="LOL_patch_12.22.csv">LOL_patch_12.22.csv</a> Download data: <a href="LOL_patch_12.23.csv">LOL_patch_12.23.csv</a></p>
+<p>A data frame for 162 champions of the following 7 variables. Each row represents a Champion that you can choose when playing League of Legends during patches 12.22 and 12.23. Note that the activity provided in this module does not use all of the variables provided. Instead they are provided for further analyses at the discretion of the user.</p>
+<p>Download data: <a href="LOL_patch_12.22.csv">LOL_patch_12.22.csv</a></p>
+<p>Download data: <a href="LOL_patch_12.23.csv">LOL_patch_12.23.csv</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 76%">
+<col style="width: 26%">
+<col style="width: 73%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -432,7 +435,8 @@ Conclusion
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Scion’s Win Rate improved, and no outliers were detected. This suggests that Sion may have undergone a buff in patch 12.23, resulting in an enhanced performance and a more balanced Win Rate. The presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.</p>
+<p>In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Sion’s Win Rate improved, and was no longer an outlier. Sion was given a Buff in <a href="https://www.leagueoflegends.com/en-gb/news/game-updates/patch-12-23-notes/" target="_blank">patch 12.23</a>, resulting in an enhanced performance and a more balanced Win Rate. However, patch 12.23 resulted in two new outliers with low win rates.</p>
+<p>The continued presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.</p>
 </div>
 </div>
 </div>

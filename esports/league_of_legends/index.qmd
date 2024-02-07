@@ -2,6 +2,8 @@
 title: "League of Legends - Buffing and Nerfing"
 date: February 5, 2024
 description: Investigating game play statistics for League of Legends champions in two different patches.
+editor: 
+  canonical: true
 categories:
   - outliers
   - summary statistics
@@ -15,52 +17,54 @@ Please note that these material have not yet completed the required pedagogical 
 
 League of Legends (LoL) is a 5 v. 5 multiplayer online battle arena (MOBA) game developed by Riot Games. In this game, players assume the role of a "champion" with unique abilities and engage in intense battles against a team of other players or computer-controlled champions. Riot Games continually collects data to evaluate the impact of each champion, adjusting and fine-tuning various aspects to ensure fair and competitive gameplay. With regular updates (patches) occurring every two weeks, champions can become either extremely efficient and strong or in need of adjustments to enhance their abilities. Maintaining overall game balance is crucial, and developers employ strategies known as "nerfing" and "buffing" to achieve this balance. "Nerfing" refers to reducing the power or effectiveness of a champion or item, while "buffing" involves increasing its power or effectiveness.
 
-
 In this worksheet, we will analyze and describe histograms of Win Rates for different champions in LoL. The Win Rate, a key metric in the game, represents the percentage of games won by a champion out of the total games played. Understanding the distribution of Win Rates and identifying potential outliers can provide valuable insights into champion balance and performance, informing strategic decision-making in LoL gameplay.
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 
-1. Understand the concept of histograms and their relevance in statistical analysis.
+1.  Understand the concept of histograms and their relevance in statistical analysis. 
 
-2. Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends.
+2.  Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends. In particular, being able to describe the center, shape, and spread of a distribution based on the displayed graph.
 
-3. Identify potential outliers among champions based on their Win Rates.
+3.  Identify potential outliers in a numerical variable using numerical methods such as the "1.5 IQR Rule" or z-scores. 
 
-4. Interpret the implications of outliers in terms of champion balance and performance.
+4.  Interpret the implications of outliers in terms of champion balance and performance.
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required.  However, the activity could be modified to ask students to produce that information from the raw dataset.
+Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.
 
-1. Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape of distributions.
+1.  Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape, center, and spread of distributions.
 
-2. Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important. (1.5*IQR Rule or Z-Score Method)
+2.  Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important. 
 
-3. Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.
+3.  Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.
+
+4. Knowledge of outlier detection methods (such as the 1.5 IQR Rule and/or z-scores) is fundamental to the activity.
 :::
 
 ### Data
 
+A data frame for 162 champions of the following 7 variables. Each row represents a Champion that you can choose when playing League of Legends during patches 12.22 and 12.23. Note that the activity provided in this module does not use all of the variables provided. Instead they are provided for further analyses at the discretion of the user.
 
-
-A data frame for 162 champions of the following variables. Each row represents a
-Champion that you can choose when playing League of Legends. 
 Download data: [LOL_patch_12.22.csv](LOL_patch_12.22.csv)
+
 Download data: [LOL_patch_12.23.csv](LOL_patch_12.23.csv)
 
 <details>
+
 <summary><b>Variable Descriptions</b></summary>
 
-| Variable | Description | 
-|----|-------------|
-| Name | name of the champion |
-| Role | role of the champion in a game |
-| KDA | Average kills, deaths and assists associated with each champion |
-| WRate | win rates of each champion |
-| PickRate | pick rates of each champion |
-| RolePerc | percentage of time playing as a role |
-| BanPerc | ban percentages associated with each champion |
+| Variable | Description                                                     |
+|-------------------|-----------------------------------------------------|
+| Name     | name of the champion                                            |
+| Role     | role of the champion in a game                                  |
+| KDA      | Average kills, deaths and assists associated with each champion |
+| WRate    | win rates of each champion                                      |
+| PickRate | pick rates of each champion                                     |
+| RolePerc | percentage of time playing as a role                            |
+| BanPerc  | ban percentages associated with each champion                   |
+
 </details>
 
 #### Data Source
@@ -76,7 +80,9 @@ Lol champion stats, 12.23 master, win rates. METAsrc. (n.d.-b). <https://www.met
 [Class handout - with solutions](LoL_Worksheet_Key.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Scion's Win Rate improved, and no outliers were detected. This suggests that Sion may have undergone a buff in patch 12.23, resulting in an enhanced performance and a more balanced Win Rate. The presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay. 
+In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Sion's Win Rate improved, and was no longer an outlier. Sion was given a Buff in [patch 12.23](https://www.leagueoflegends.com/en-gb/news/game-updates/patch-12-23-notes/){target="_blank"}, resulting in an enhanced performance and a more balanced Win Rate. However, patch 12.23 resulted in two new outliers with low win rates.
+
+The continued presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.
 :::
 
 ### Authors
