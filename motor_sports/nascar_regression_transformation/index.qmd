@@ -35,7 +35,7 @@ Download data: [nascar_driver_statistics.csv](nascar_driver_statistics.csv)
 
 <details>
 <summary><b>Variable Descriptions</b></summary>
-| Variable             | Description                                                                                                                                                                                              |
+| Variable             | Description |
 |-------------------|-----------------------------------------------------|
 | Wins                 | The sum of the driver's victories                                                                                                                                                                        |
 | AvgStart             | The sum of the driver's starting positions divided by the number of races                                                                                                                                |

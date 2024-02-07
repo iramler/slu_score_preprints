@@ -37,7 +37,10 @@ The data set contains 72 rows and 22 columns. Each row represents a lacrosse tea
 
 Download data: [lax_2022_2023.csv](lax_2022_2023.csv)
 
-::: {.callout-note collapse="true" title="Variable Descriptions"}
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
 | Variable              | Description                                                                                                     |
 |------------------|------------------------------------------------------|
 | Team                  | college of the team                                                                                             |
@@ -60,8 +63,8 @@ Download data: [lax_2022_2023.csv](lax_2022_2023.csv)
 | avg_turnovers         | average turnovers that are directly the fault of a player per game                                              |
 | W                     | total wins by the team                                                                                          |
 | L                     | total losses by the team                                                                                        |
-| win_loss_pctg         | proportion of games won out of total games                                                                      |
-:::
+| win_loss_pctg         | proportion of games won out of total games        
+</details>
 
 ### Materials
 

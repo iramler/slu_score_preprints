@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">PGA - Drive for Show, Putt for Dough?</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">correlations</div>
+    <div class="quarto-category">correlation</div>
   </div>
   </div>
 
@@ -296,7 +296,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>A common expression among golfers is “Drive for show, putt for dough.” This implies that the long initial tee shots (drives) on each hole are impressive, but the real key to success is the final strokes rolling the ball along the green into the hole (putts). Do data support this adage? The dataset for this activity was obtained from the PGA statistics website <a href="https://www.pgatour.com/stats">PGA Statistics Website</a>. Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The “driving” variables include average driving distance (<em>avgDriveDist</em>), driving accuracy percentage (<em>drivePct</em>), and strokes gained off the tee (<em>driveSG</em>). The “putting” variables are average putts per round (avgPuttsPerRound), one putt percentage (<em>onePuttPct</em>), and strokes gained putting (<em>puttsSG</em>). The variables to measure “success” are scoring average (<em>avgScore</em>), official money won (<em>Money</em>), and Fedex Cup points (<em>Points</em>).</p>
+<p>A common expression among golfers is “Drive for show, putt for dough.” This implies that the long initial tee shots (drives) on each hole are impressive, but the real key to success is the final strokes rolling the ball along the green into the hole (putts). Do data support this adage?</p>
+<p>The dataset for this activity was obtained from the PGA statistics website <a href="https://www.pgatour.com/stats">PGA Statistics Website</a>. Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The “driving” variables include average driving distance (<em>avgDriveDist</em>), driving accuracy percentage (<em>drivePct</em>), and strokes gained off the tee (<em>driveSG</em>). The “putting” variables are average putts per round (avgPuttsPerRound), one putt percentage (<em>onePuttPct</em>), and strokes gained putting (<em>puttsSG</em>). The variables to measure “success” are scoring average (<em>avgScore</em>), official money won (<em>Money</em>), and Fedex Cup points (<em>Points</em>).</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -309,7 +310,11 @@ Learning Objectives
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The learning objectives associated with this module are: * Students will be able to use correlation to measure the strength association between quantitative variables. * Checking regression model assumptions * Students will be able to compare correlations to assess which variables may be more strongly related.</p>
+<p>The learning objectives associated with this module are:</p>
+<ul>
+<li><p>Students will be able to use correlation to measure the strength association between quantitative variables. * Checking regression model assumptions</p></li>
+<li><p>Students will be able to compare correlations to assess which variables may be more strongly related.</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -339,13 +344,79 @@ Methods
 <summary>
 <b>Variable Descriptions</b>
 </summary>
-<p>|————–|———————————————————-| | <code>playerName</code> | Name of the player | | <code>country</code> | The country where the player is from | | <code>avgDriveDist</code> | Average driving distance (in yards) | | <code>drivePct</code> | Percentage of times a tee shot comes to rest in the fairway | | <code>driveSG</code> | Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player’s drive is than the PGA Tour average | | <code>avgPuttsPerRound</code> | Average number of total putts per round | | <code>onePuttPct</code> | Percentage of times it took one putt to get the ball into the hole | | <code>puttsSG</code> | Strokes gained putting measures how many strokes a player gains or loses on the greens compared to the PGA Tour average | | <code>avgScore</code> | The scoring average is the total strokes divided by the total rounds | | <code>Money</code> | The official money is the prize money award to the Professional members | | <code>Points</code> | FedexCup Regular Season Points are awarded points by finished position for performance in each tournament | | <code>Tournament</code> | The tournament where the PGA Tour is taking place |</p>
+<table class="table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>playerName</code></td>
+<td>Name of the player</td>
+</tr>
+<tr class="even">
+<td><code>country</code></td>
+<td>The country where the player is from</td>
+</tr>
+<tr class="odd">
+<td><code>avgDriveDist</code></td>
+<td>Average driving distance (in yards)</td>
+</tr>
+<tr class="even">
+<td><code>drivePct</code></td>
+<td>Percentage of times a tee shot comes to rest in the fairway</td>
+</tr>
+<tr class="odd">
+<td><code>driveSG</code></td>
+<td>Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player’s drive is than the PGA Tour average</td>
+</tr>
+<tr class="even">
+<td><code>avgPuttsPerRound</code></td>
+<td>Average number of total putts per round</td>
+</tr>
+<tr class="odd">
+<td><code>onePuttPct</code></td>
+<td>Percentage of times it took one putt to get the ball into the hole</td>
+</tr>
+<tr class="even">
+<td><code>puttsSG</code></td>
+<td>Strokes gained putting measures how many strokes a player gains or loses on the greens compared to the PGA Tour average</td>
+</tr>
+<tr class="odd">
+<td><code>avgScore</code></td>
+<td>The scoring average is the total strokes divided by the total rounds</td>
+</tr>
+<tr class="even">
+<td><code>Money</code></td>
+<td>The official money is the prize money award to the Professional members</td>
+</tr>
+<tr class="odd">
+<td><code>Points</code></td>
+<td>FedexCup Regular Season Points are awarded points by finished position for performance in each tournament</td>
+</tr>
+<tr class="even">
+<td><code>Tournament</code></td>
+<td>The tournament where the PGA Tour is taking place</td>
+</tr>
+</tbody>
+</table>
 </details>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p>The data and worksheet associated with this module are available for download through the following links. <a href="PGA2022.csv">PGA2022.csv</a> - Dataset with driving, putting, and success measures for indivudal golfer in 19 PGA tournaments in 2022. <a href="PGACorrelationsNoTech.docx">PGACorrelationsNoTech.docx</a>- “No Tech” version of the activity worksheet provides a correlation matrix for students to use in answering the questions. <a href="PGACorrelationsWithTech.docx">PGACorrelationsWithTech.docx</a> - “With Tech” version of the activity worksheet assumes students have technology to compute any needed correlations from the provided dataset.</p>
-<p>Sample solutions to the worksheets <a href="PGACorrelationsNoTech-Ans.docx">PGACorrelationsNoTech-Ans.docx</a>- Sample solutions to the “No Tech” version of the activity worksheet. p <a href="PGACorrelationsWithTech-Ans.docx">PGACorrelationsWithTech-Ans.docx</a> - Sample solutins to the “With Tech” version of the activity worksheet.</p>
+<p>The data and worksheet associated with this module are available for download through the following links.</p>
+<p><a href="PGA2022.csv">PGA2022.csv</a> - Dataset with driving, putting, and success measures for indivudal golfer in 19 PGA tournaments in 2022.</p>
+<p><a href="PGACorrelationsNoTech.docx">PGACorrelationsNoTech.docx</a>- “No Tech” version of the activity worksheet provides a correlation matrix for students to use in answering the questions.</p>
+<p><a href="PGACorrelationsWithTech.docx">PGACorrelationsWithTech.docx</a> - “With Tech” version of the activity worksheet assumes students have technology to compute any needed correlations from the provided dataset.</p>
+<p>Sample solutions to the worksheets</p>
+<p><a href="PGACorrelationsNoTech-Ans.docx">PGACorrelationsNoTech-Ans.docx</a>- Sample solutions to the “No Tech” version of the activity worksheet.</p>
+<p><a href="PGACorrelationsWithTech-Ans.docx">PGACorrelationsWithTech-Ans.docx</a> - Sample solutions to the “With Tech” version of the activity worksheet.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

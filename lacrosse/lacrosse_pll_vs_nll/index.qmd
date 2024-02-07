@@ -24,8 +24,8 @@ indoor and outdoor play
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 The learning goals associated with this module are:
 
-\*    Students will be able to test for a difference in means between two groups.
-\*    Students will be able to find a confidence interval for a difference in means between two groups.
+*    Students will be able to test for a difference in means between two groups.
+*    Students will be able to find a confidence interval for a difference in means between two groups.
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 This module requires students use a two-sample test and confidence interval (e.g., t-test or randomization) to compare the means of two groups.
@@ -55,14 +55,15 @@ Download data: [lacrosse_pll_nll_201202022.csv](lacrosse_pll_nll_201202022.csv)
 | goals_per_game | The total amount of goals scored each game                     |
 | goals_per_48   | The average amount of goals for the first 48 minutes of a game |
 
-### Data Sources
+</details>
+
+
+#### Data Sources
 Premier Lacrosse League stats. Premier Lacrosse League Stats. (n.d.). [https://stats.premierlacrosseleague.com/](https://stats.premierlacrosseleague.com/)
 
 Player stats. NLL. (2023, January 26). [https://www.nll.com/stats/all-player-stats/](https://www.nll.com/stats/all-player-stats/)
 
 
-
-</details>
 
 ### Materials
 
@@ -70,7 +71,7 @@ The data and worksheet associated with this module are available for download th
 
 * [lacrosse_pll_nll_201202022.csv](lacrosse_pll_nll_201202022.csv) - Dataset with game-by-game shots and goals scored for both leagues in the 2021-2022 season.. 
 
-* [lacrosse_pll_nll_worksheet.docx](lacrosse_pll_nll_worksheet.docx)- Actvity worksheet to compare scoring and shots between indoor and outdoor leagues. 
+* [lacrosse_pll_nll_worksheet.docx](lacrosse_pll_nll_worksheet.docx)- Activity worksheet to compare scoring and shots between indoor and outdoor leagues. 
 
 
 Sample solutions to the worksheets 
@@ -79,7 +80,7 @@ Sample solutions to the worksheets
 
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Students should that while no discernable difference between average goals per game was discovered, after adjusting for the length of the game, PLL (i.e., the 48-minute outdoor league) has the higher rate per 48-minutes.
+Students should that while no discernible difference between average goals per game was discovered, after adjusting for the length of the game, PLL (i.e., the 48-minute outdoor league) has the higher rate per 48-minutes.
 :::
 
 ### Authors
