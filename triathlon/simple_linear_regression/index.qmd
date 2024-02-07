@@ -1,0 +1,79 @@
+---
+title: "Ironman Triathlon (Canadian Females) - Simple Linear Regression"
+date: February 5, 2024
+description: Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants  based on bike times.
+categories:
+  - linear regression
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Welcome to this activity focused on simple linear regression analysis. In this worksheet, you will explore a dataset containing information about the female Canadian finishers of the Lake Placid Ironman 2022. Specifically, you will analyze bike times to predict run times for the participants. Through this activity, you will gain practical experience in performing linear regression analysis, interpreting the results, and making predictions based on the model.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+1. Understand the concept of simple linear regression and its application in statistical analysis.
+2. Identify the predictor (independent) and response (dependent) variables in a regression analysis.
+3. Interpret the regression output, including the coefficient estimates, residuals, and R-squared value.
+4. Make predictions based on the regression model and evaluate the accuracy of the predictions.
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Before diving into this worksheet, it is important to have a foundational understanding of certain statistical concepts and techniques. The following prior knowledge will be helpful in completing this activity successfully:
+
+1. Variables: Understanding the difference between predictor (independent) and response (dependent) variables is essential in the context of regression analysis. In this dataset, the predictor variable would be bike times, while the response variable would be run times.
+
+2. Scatter Plots: Familiarity with scatter plots, which depict the relationship between two continuous variables, is crucial. Scatter plots visually represent the data points and can help identify the nature and strength of the relationship between the predictor and response variables.
+
+3. Simple Linear Regression: Knowledge of simple linear regression as a statistical technique for modeling the relationship between two continuous variables is essential. You should understand the concept of a regression line, how it is estimated, and how it can be used to make predictions.
+
+4. Prediction and Evaluation: Knowledge of how to make predictions based on the regression model and evaluate their accuracy.
+:::
+
+### Data
+
+The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman 
+
+Download data: [ironman_lake_placid_female_2022_canadian.csv](ironman_lake_placid_female_2022_canadian.csv)
+
+<details>
+<summary><b>Variable Descriptions</b></summary>
+| Variable | Description |
+|----|-------------|
+| Bib | registration number of each runner used for identification |
+| Name | The participant's name |
+| Country | What country the participant is from |
+| Gender | The participant's gender |
+| Division | The age range or membership a runner is |
+| Division.Rank | Within the divisions, the place each runner has obtained over all races |
+| Overall.Time | The total time it took to complete the Ironman in minutes |
+| Overall.Rank | The runner's finishing place for that particular triathlon |
+| Swim.Time | The time in minutes it took to complete the swimming portion |
+| Swim.Rank | The place the runner finished for the swim portion |
+| Bike.Time | The time in minutes it took to complete the biking portion |
+| Bike.Rank | The place the runner finished for the bike portion |
+| Run.Time | The time in minutes it took to complete the running portion |
+| Run.Rank | The place the runner finished for the running portion |
+| Finish.Status | States whether someone completed the Ironman successfully |
+| Location | Where the Ironman takes place |
+| Year | They year when the mentioned participant ran |
+</details>
+
+### Materials
+
+[Class handout](Regression_Simple.docx)
+
+[Class handout - with solutions](Regression_Simple_Key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the Simple Linear Regression worksheet has yielded important findings. The analysis revealed a significant slope interpretation. However, there is an absence of a meaningful intercept interpretation. Impressively, the model accurately predicted the winner, Sarah True, within a 12-minute range of her actual time, demonstrating its effectiveness in estimating performance. Furthermore, the exploration of using speed as an alternative variable showcased its potential usefulness and highlighted the value it can add to predicting and understanding performance outcomes. Overall, this worksheet has enhanced our understanding of the relationship between variables and the predictive capabilities of simple linear regression.
+:::
+
+### Authors
+
+Fill in later
