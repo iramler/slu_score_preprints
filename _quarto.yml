@@ -1,10 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources:
-    - "data/"
-    - "materials/"
-
 
 website:
   title: "SLU SCORE Module Pre-print Repository"

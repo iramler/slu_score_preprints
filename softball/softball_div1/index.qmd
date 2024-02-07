@@ -22,6 +22,7 @@ This module looks at some simple batting stats over two seasons through the use 
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 Upon completion of this module students should improve upon
+
 * being able to join two data tables
 * being able to anticipate (by sketching) the resulting data table prior to running the code to do so
 * identify situations where more than one key is needed
@@ -81,14 +82,16 @@ The 2021 data set has 2131 rows with 22 columns. The 2022 data set has 2275 rows
 </details>
 
 **CSV format data files**
-        * [batting2021_subset.csv](batting2021_subset.csv): Subset of full dataset containing the season total hits and runs for a non-random sample of six players from 2021
-        * [batting2022_subset.csv](batting2022_subset.csv): Subset of full dataset containing the season total hits and runs for a non-random sample of six players from 2022
-        * [batting2021.csv](batting2021.csv): Dataset with the 2021 batting statistics for all 2131 Division 1 softball players
-        * [batting2022.csv](batting2022.csv): Dataset with the 2022 batting statistics for all 2275 Division 1 softball players
+
+* [batting2021_subset.csv](batting2021_subset.csv): Subset of full dataset containing the season total hits and runs for a non-random sample of six players from 2021
+* [batting2022_subset.csv](batting2022_subset.csv): Subset of full dataset containing the season total hits and runs for a non-random sample of six players from 2022
+* [batting2021.csv](batting2021.csv): Dataset with the 2021 batting statistics for all 2131 Division 1 softball players
+* [batting2022.csv](batting2022.csv): Dataset with the 2022 batting statistics for all 2275 Division 1 softball players
     
 **Database (SQL) style**
-        * [softball_batting.duckdb](softball_batting.duckdb): DuckDB database containing four table: the full set of players for each season (batting2021 and batting2022) and the two subsets (batting2021_subset and batting2022_subset).
-        * [softball_batting.sqlite](softball_batting.sqlite): SQLite database containing four table: the full set of players for each season (batting2021 and batting2022) and the two subsets (batting2021_subset and batting2022_subset).
+
+* [softball_batting.duckdb](softball_batting.duckdb): DuckDB database containing four table: the full set of players for each season (batting2021 and batting2022) and the two subsets (batting2021_subset and batting2022_subset).
+* [softball_batting.sqlite](softball_batting.sqlite): SQLite database containing four table: the full set of players for each season (batting2021 and batting2022) and the two subsets (batting2021_subset and batting2022_subset).
 
 #### Data Source
 Statistics. D1Softball. (2019, October 24). <https://d1softball.com/statistics/> 

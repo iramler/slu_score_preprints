@@ -2,6 +2,8 @@
 title: "PGA - Drive for Show, Putt for Dough?"
 date: February 5, 2024
 description: Using tournament data for professional golfers to see if driving or putting are more strongly related to success.
+editor: 
+  canonical: true
 categories:
   - correlation
 ---
@@ -19,8 +21,8 @@ The dataset for this activity was obtained from the PGA statistics website [PGA 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 The learning objectives associated with this module are: 
 
-* Students will be able to use correlation to measure the strength association between quantitative variables. * Checking regression model assumptions 
-
+* Students will be able to use correlation to measure the strength association between quantitative variables.
+* Checking regression model assumptions 
 * Students will be able to compare correlations to assess which variables may be more strongly related.
 :::
 

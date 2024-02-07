@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-02-05">
+<meta name="description" content="Investigating game play statistics for League of Legends champions in two different patches.">
 
-<title>SLU SCORE Module Pre-print Repository - Modules By Topic</title>
+<title>SLU SCORE Module Pre-print Repository - League of Legends - Buffing and Nerfing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,38 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -103,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SLU SCORE Module Pre-print Repository</span>
     </a>
   </div>
@@ -114,11 +83,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./by-statsds-topic.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="../../by-statsds-topic.html" rel="" target="" aria-current="page">
  <span class="menu-text">Modules By Topic</span></a>
   </li>  
   <li class="nav-item">
@@ -136,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./by-statsds-topic.html">Modules By Topic</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../esports/league_of_legends/index.html">Esports</a></li><li class="breadcrumb-item"><a href="../../esports/league_of_legends/index.html">League of Legends - Buffing and Nerfing</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -150,22 +119,22 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./by-statsds-topic.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Modules By Topic</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Esports</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">League of Legends - Buffing and Nerfing</span></a>
   </div>
 </li>
@@ -182,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PGA - Drive for Show, Putt for Dough?</span></a>
   </div>
 </li>
@@ -199,13 +168,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL</span></a>
   </div>
 </li>
@@ -222,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -239,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon</span></a>
   </div>
 </li>
@@ -256,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</span></a>
   </div>
 </li>
@@ -273,13 +242,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -291,21 +260,48 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="correlation">correlation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="difference in two means">difference in two means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histogram">histogram <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hypothesis testing">hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="joining">joining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="linear regression">linear regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="outliers">outliers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="single proportion">single proportion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="sql">sql <span class="quarto-category-count">(1)</span></div><div class="category" data-category="summary statistics">summary statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="transformations">transformations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="z-scores">z-scores <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modules By Topic</h1>
-</div>
+<h1 class="title">League of Legends - Buffing and Nerfing</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">outliers</div>
+    <div class="quarto-category">summary statistics</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Investigating game play statistics for League of Legends champions in two different patches.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -313,323 +309,143 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="module" class="level2">
+<h2 class="anchored" data-anchor-id="module">Module</h2>
+<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>League of Legends (LoL) is a 5 v. 5 multiplayer online battle arena (MOBA) game developed by Riot Games. In this game, players assume the role of a “champion” with unique abilities and engage in intense battles against a team of other players or computer-controlled champions. Riot Games continually collects data to evaluate the impact of each champion, adjusting and fine-tuning various aspects to ensure fair and competitive gameplay. With regular updates (patches) occurring every two weeks, champions can become either extremely efficient and strong or in need of adjustments to enhance their abilities. Maintaining overall game balance is crucial, and developers employ strategies known as “nerfing” and “buffing” to achieve this balance. “Nerfing” refers to reducing the power or effectiveness of a champion or item, while “buffing” involves increasing its power or effectiveness.</p>
+<p>In this worksheet, we will analyze and describe histograms of Win Rates for different champions in LoL. The Win Rate, a key metric in the game, represents the percentage of games won by a champion out of the total games played. Understanding the distribution of Win Rates and identifying potential outliers can provide valuable insights into champion balance and performance, informing strategic decision-making in LoL gameplay.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By the end of this activity, you will be able to:</p>
+<ol type="1">
+<li><p>Understand the concept of histograms and their relevance in statistical analysis.</p></li>
+<li><p>Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends.</p></li>
+<li><p>Identify potential outliers among champions based on their Win Rates.</p></li>
+<li><p>Interpret the implications of outliers in terms of champion balance and performance.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset.</p>
+<ol type="1">
+<li><p>Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape of distributions.</p></li>
+<li><p>Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important. (1.5*IQR Rule or Z-Score Method)</p></li>
+<li><p>Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>A data frame for 162 champions of the following variables. Each row represents a Champion that you can choose when playing League of Legends. Download data: <a href="LOL_patch_12.22.csv">LOL_patch_12.22.csv</a> Download data: <a href="LOL_patch_12.23.csv">LOL_patch_12.23.csv</a></p>
+<details>
+<summary>
+<b>Variable Descriptions</b>
+</summary>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Name</td>
+<td>name of the champion</td>
+</tr>
+<tr class="even">
+<td>Role</td>
+<td>role of the champion in a game</td>
+</tr>
+<tr class="odd">
+<td>KDA</td>
+<td>Average kills, deaths and assists associated with each champion</td>
+</tr>
+<tr class="even">
+<td>WRate</td>
+<td>win rates of each champion</td>
+</tr>
+<tr class="odd">
+<td>PickRate</td>
+<td>pick rates of each champion</td>
+</tr>
+<tr class="even">
+<td>RolePerc</td>
+<td>percentage of time playing as a role</td>
+</tr>
+<tr class="odd">
+<td>BanPerc</td>
+<td>ban percentages associated with each champion</td>
+</tr>
+</tbody>
+</table>
+</details>
+<section id="data-source" class="level4">
+<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
+<p>Lol champion stats, 12.22 master, win rates. METAsrc. (n.d.). <a href="https://www.metasrc.com/5v5/12.22/stats?ranks=master" class="uri">https://www.metasrc.com/5v5/12.22/stats?ranks=master</a></p>
+<p>Lol champion stats, 12.23 master, win rates. METAsrc. (n.d.-b). <a href="https://www.metasrc.com/5v5/12.23/stats?ranks=master" class="uri">https://www.metasrc.com/5v5/12.23/stats?ranks=master</a></p>
+</section>
+</section>
+<section id="materials" class="level3">
+<h3 class="anchored" data-anchor-id="materials">Materials</h3>
+<p><a href="LoL_Worksheet.docx">Class handout</a></p>
+<p><a href="LoL_Worksheet_Key.docx">Class handout - with solutions</a></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conclusion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Scion’s Win Rate improved, and no outliers were detected. This suggests that Sion may have undergone a buff in patch 12.23, resulting in an enhanced performance and a more balanced Win Rate. The presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="authors" class="level3">
+<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<p>Created by George Charalambous (St.&nbsp;Lawrence University), <a href="mailto:iramler@stlawu.edu">Ivan Ramler (St.&nbsp;Lawrence University)</a>, A.J. Dykstra (St.&nbsp;Lawrence University)</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="histogram,summary statistics,z-scores" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312755736" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./running/boston_marathon_2023/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./running/boston_marathon_2023/index.html">
-<h3 class="no-anchor listing-title">
-2023 Boston Marathon
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('histogram'); return false;">
-histogram
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('summary statistics'); return false;">
-summary statistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('z-scores'); return false;">
-z-scores
-</div>
-</div>
-<a href="./running/boston_marathon_2023/index.html">
-<div class="listing-description">
-<p>Describing finish time for runners in the 2023 Boston Marathon</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./running/boston_marathon_2023/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707311868004" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./triathlon/multiple_linear_regression/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./triathlon/multiple_linear_regression/index.html">
-<h3 class="no-anchor listing-title">
-Ironman Triathlon (Canadian Females) - Multiple Linear Regression
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
-linear regression
-</div>
-</div>
-<a href="./triathlon/multiple_linear_regression/index.html">
-<div class="listing-description">
-<p>Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./triathlon/multiple_linear_regression/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707311868007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./triathlon/simple_linear_regression/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./triathlon/simple_linear_regression/index.html">
-<h3 class="no-anchor listing-title">
-Ironman Triathlon (Canadian Females) - Simple Linear Regression
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
-linear regression
-</div>
-</div>
-<a href="./triathlon/simple_linear_regression/index.html">
-<div class="listing-description">
-<p>Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./triathlon/simple_linear_regression/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="hypothesis testing,single proportion" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707311867942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
-<div class="thumbnail">
-<p><a href="./lacrosse/college_lacrosse_faceoffs/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
-<h3 class="no-anchor listing-title">
-Lacrosse Faceoff Proportions
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('hypothesis testing'); return false;">
-hypothesis testing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('single proportion'); return false;">
-single proportion
-</div>
-</div>
-<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
-<div class="listing-description">
-<p>Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="difference in two means" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312327402" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./lacrosse/lacrosse_pll_vs_nll/index.html">
-<h3 class="no-anchor listing-title">
-Lacrosse PLL vs.&nbsp;NLL
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('difference in two means'); return false;">
-difference in two means
-</div>
-</div>
-<a href="./lacrosse/lacrosse_pll_vs_nll/index.html">
-<div class="listing-description">
-<p>Using tournament data for professional golfers to see if driving or putting are more strongly related to success.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./lacrosse/lacrosse_pll_vs_nll/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="outliers,summary statistics" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707311957584" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./esports/league_of_legends/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./esports/league_of_legends/index.html">
-<h3 class="no-anchor listing-title">
-League of Legends - Buffing and Nerfing
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('outliers'); return false;">
-outliers
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('summary statistics'); return false;">
-summary statistics
-</div>
-</div>
-<a href="./esports/league_of_legends/index.html">
-<div class="listing-description">
-<p>Investigating game play statistics for League of Legends champions in two different patches.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./esports/league_of_legends/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="joining,sql" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312619272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
-<div class="thumbnail">
-<p><a href="./softball/softball_div1/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./softball/softball_div1/index.html">
-<h3 class="no-anchor listing-title">
-Merging Multiple Seasons of NCAA Div 1 Softball Statistics
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('joining'); return false;">
-joining
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('sql'); return false;">
-sql
-</div>
-</div>
-<a href="./softball/softball_div1/index.html">
-<div class="listing-description">
-<p>Actvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./softball/softball_div1/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="linear regression,transformations" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312365352" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16">
-<div class="thumbnail">
-<p><a href="./motor_sports/nascar_regression_transformation/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./motor_sports/nascar_regression_transformation/index.html">
-<h3 class="no-anchor listing-title">
-NASCAR Transformation Module
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
-linear regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('transformations'); return false;">
-transformations
-</div>
-</div>
-<a href="./motor_sports/nascar_regression_transformation/index.html">
-<div class="listing-description">
-<p>Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./motor_sports/nascar_regression_transformation/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="correlation" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312175297" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./golf/pga_drive_putt/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./golf/pga_drive_putt/index.html">
-<h3 class="no-anchor listing-title">
-PGA - Drive for Show, Putt for Dough?
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('correlation'); return false;">
-correlation
-</div>
-</div>
-<a href="./golf/pga_drive_putt/index.html">
-<div class="listing-description">
-<p>Using tournament data for professional golfers to see if driving or putting are more strongly related to success.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./golf/pga_drive_putt/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

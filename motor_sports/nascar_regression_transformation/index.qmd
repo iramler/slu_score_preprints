@@ -17,6 +17,7 @@ In NASCAR, driver rating is a metric used to evaluate the performance of drivers
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of the activity, you will have practiced: 
+
 *	Assessing simple linear regression model effectiveness
 *	Checking regression model assumptions
 *	Using log transformations to better fit a linear regression model

@@ -26,6 +26,7 @@ The learning goals associated with this module are:
 
 *    Students will be able to test for a difference in means between two groups.
 *    Students will be able to find a confidence interval for a difference in means between two groups.
+:::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 This module requires students use a two-sample test and confidence interval (e.g., t-test or randomization) to compare the means of two groups.
