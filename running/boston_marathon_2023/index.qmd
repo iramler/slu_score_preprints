@@ -57,17 +57,19 @@ Download data: [boston_marathon_2023.csv](boston_marathon_2023.csv)
 | finish_gun_sec | gun finish in seconds |
 | finish_net_minutes | net finish in minutes |
 
-</details>
 
-### Data Source
+
+**Data Source**
 
 [Boston Athletic Association](https://www.baa.org){target="_blank"}
 
+</details>
+
 ### Materials
 
-[Class handout](boston_marathon_2023_wksht.docx)
+[Class handout](boston_marathon_wksht.docx)
 
-[Class handout - with solutions](boston_marathon_2023_wksht_key.docx)
+[Class handout - with solutions](boston_marathon_wksht_key.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion"}
 In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. Firstly, it introduces them to the calculation of essential summary statistics, allowing them to gain a deeper understanding of the distribution of result times. Secondly, by identifying outliers above or below the upper fences, students can recognize and analyze exceptional performances in the marathon. Lastly, the calculation of z-scores enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.
