@@ -16,7 +16,7 @@ Please note that these material have not yet completed the required pedagogical 
 
 For this activity, you will be exploring data from the 2023 Boston Marathon by analyzing the result times of the finishing runners. Focusing on the single quantitative variable of result times in minutes, you will examine both visualizations and summary statistics to make key conclusions. The incorporation of z-scores will allow for comparisons to be made between two subsets of the data by determining performances of top finishers.
 
-::: {.callout-note collapse="true" title="Learning Objectives"}
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of the activity, you will be able to:
 
 1.  Analyze structures and distributions of histograms
@@ -25,7 +25,7 @@ By the end of the activity, you will be able to:
 4.  Calculate and compare z-scores for individual cases
 :::
 
-::: {.callout-note collapse="true" title="Methods"}
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 For this activity, students will primarily use basic concepts of histograms and boxplots to analyze distributions. Students will also require formulas for deviation, IQR, standard deviation, fences, and z-score.
 :::
 
@@ -71,7 +71,7 @@ Download data: [boston_marathon_2023.csv](boston_marathon_2023.csv)
 
 [Class handout - with solutions](boston_marathon_wksht_key.docx)
 
-::: {.callout-note collapse="true" title="Conclusion"}
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. Firstly, it introduces them to the calculation of essential summary statistics, allowing them to gain a deeper understanding of the distribution of result times. Secondly, by identifying outliers above or below the upper fences, students can recognize and analyze exceptional performances in the marathon. Lastly, the calculation of z-scores enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.
 :::
 

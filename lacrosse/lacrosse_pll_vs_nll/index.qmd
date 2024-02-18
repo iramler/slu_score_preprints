@@ -1,7 +1,7 @@
 ---
 title: "Lacrosse PLL vs. NLL"
 date: February 5, 2024
-description: Using tournament data for professional golfers to see if driving or putting are more strongly related to success.
+description: Comparing scoring rates between indoor and outdoor profesional lacrosse leagues.
 categories:
   - difference in two means
 ---
