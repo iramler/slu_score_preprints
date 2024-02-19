@@ -6,7 +6,7 @@ This page contains education materials for the [SCORE Network](https://scorenetw
 
 The [SCORE Network](https://scorenetwork.org/index.html) Module Repository enables you to search for modules by either sport (along the left), or you can browse [by statistics and data science topic](by-statsds-topic.qmd).
 
-Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
 _The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705)._
 

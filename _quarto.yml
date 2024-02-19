@@ -3,7 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "SLU SCORE Module Pre-print Repository"
+  cookie-consent: true
+  title: "SLU SCORE Module Preprint Repository"
   page-footer: "Maintained by Ivan Ramler"
   navbar:
     left:
