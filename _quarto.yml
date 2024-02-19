@@ -3,9 +3,19 @@ project:
   output-dir: docs
 
 website:
-  cookie-consent: true
+  cookie-consent:
+    type: implied
+    prefs-text: "Manage cookies"
   title: "SLU SCORE Module Preprint Repository"
-  page-footer: "Maintained by Ivan Ramler"
+  page-footer: 
+    center:
+      Maintained by Ivan Ramler <br>
+    
+      We use cookies to track usage statistics 
+      to help measure impact of the materials
+      for authors. Please consider allowing 
+      tracking cookies.
+    
   navbar:
     left:
       - href: index.qmd
