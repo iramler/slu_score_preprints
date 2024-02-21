@@ -1,6 +1,6 @@
 ---
 title: "League of Legends - Buffing and Nerfing"
-date: February 5, 2024
+date: February 21 2024
 description: Investigating game play statistics for League of Legends champions in two different patches.
 editor: 
   canonical: true
