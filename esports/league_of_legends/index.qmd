@@ -13,6 +13,10 @@ categories:
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
+### Welcome video
+
+{{< video https://youtu.be/5ZeK3RCg-_A title="Esports Analytics" >}}
+
 ### Introduction
 
 League of Legends (LoL) is a 5 v. 5 multiplayer online battle arena (MOBA) game developed by Riot Games. In this game, players assume the role of a "champion" with unique abilities and engage in intense battles against a team of other players or computer-controlled champions. Riot Games continually collects data to evaluate the impact of each champion, adjusting and fine-tuning various aspects to ensure fair and competitive gameplay. With regular updates (patches) occurring every two weeks, champions can become either extremely efficient and strong or in need of adjustments to enhance their abilities. Maintaining overall game balance is crucial, and developers employ strategies known as "nerfing" and "buffing" to achieve this balance. "Nerfing" refers to reducing the power or effectiveness of a champion or item, while "buffing" involves increasing its power or effectiveness.
@@ -22,11 +26,11 @@ In this worksheet, we will analyze and describe histograms of Win Rates for diff
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 
-1.  Understand the concept of histograms and their relevance in statistical analysis. 
+1.  Understand the concept of histograms and their relevance in statistical analysis.
 
 2.  Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends. In particular, being able to describe the center, shape, and spread of a distribution based on the displayed graph.
 
-3.  Identify potential outliers in a numerical variable using numerical methods such as the "1.5 IQR Rule" or z-scores. 
+3.  Identify potential outliers in a numerical variable using numerical methods such as the "1.5 IQR Rule" or z-scores.
 
 4.  Interpret the implications of outliers in terms of champion balance and performance.
 :::
@@ -36,11 +40,11 @@ Technology requirement: The activity handout provides histograms and summary sta
 
 1.  Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape, center, and spread of distributions.
 
-2.  Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important. 
+2.  Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important.
 
 3.  Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.
 
-4. Knowledge of outlier detection methods (such as the 1.5 IQR Rule and/or z-scores) is fundamental to the activity.
+4.  Knowledge of outlier detection methods (such as the 1.5 IQR Rule and/or z-scores) is fundamental to the activity.
 :::
 
 ### Data
@@ -56,7 +60,7 @@ Download data: [LOL_patch_12.23.csv](LOL_patch_12.23.csv)
 <summary><b>Variable Descriptions</b></summary>
 
 | Variable | Description                                                     |
-|-------------------|-----------------------------------------------------|
+|----------|-----------------------------------------------------------------|
 | Name     | name of the champion                                            |
 | Role     | role of the champion in a game                                  |
 | KDA      | Average kills, deaths and assists associated with each champion |
