@@ -23,20 +23,20 @@ Investigating these trends is useful for several reasons. Firstly, exploring the
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of the activity, you will be able to:
 
-1.  Analyze structures and distributions of histograms
-2.  Use basic summary statistics to assess center and spread
-3.  Calculate further relevant metrics for quantitative data
+1.  Analyze distributions using histograms
+2.  Identify potential confounding variables to explain bimodal data
+3.  Compare and contrast distributions for a pair of groups
 4.  Calculate and compare z-scores for individual cases
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-For this activity, students will primarily use basic concepts of histograms and boxplots to analyze distributions. Students will also require formulas for deviation, IQR, standard deviation, fences, and z-score.
+For this activity, students will primarily use basic concepts of histograms and summary statistics to analyze distributions. Students will also likely require knowledge of z-scores.
 :::
 
 ::: {.callout-note collapse="true" title="Technology Requiremens" appearance="minimal"}
-The provided worksheets to not require any specific statistical software. (Although they do require access to a calculator.) 
+The provided worksheets to not require any specific statistical software. (Although they will likely require access to a calculator.) 
 
-Since the data is provided, instructors are encouraged to modify the worksheets to have student construct visualizations and calculate summary statistics using whichever software they choose.
+Since the data are provided, instructors are encouraged to modify the worksheets to have student construct visualizations and calculate summary statistics using whichever software they choose.
 :::
 
 ### Data
