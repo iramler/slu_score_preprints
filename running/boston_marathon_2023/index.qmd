@@ -1,5 +1,5 @@
 ---
-title: "2023 Boston Marathon"
+title: "2023 Boston Marathon - Variability in Finish Times"
 date: March 5, 2024
 description: Describing finish time for runners in the 2023 Boston Marathon
 categories:
@@ -14,11 +14,17 @@ Please note that these material have not yet completed the required pedagogical 
 
 ### Introduction
 
-For this activity, you will be exploring the result times from female and male runners that finished the 2023 Boston Marathon. 
+For this activity, you will be exploring the result times from female and male runners that finished the 2023 [Boston Marathon](https://www.baa.org/races/boston-marathon){target="_blank"}. 
 
 In particular, you will examine both visualizations and summary statistics of result times to explore the variation in finish times as well as use comparative techniques, such as z-scores, to compare and contrast male and female participants.
 
 Investigating these trends is useful for several reasons. Firstly, exploring these trends can help to deepen our understanding of how different factors, such as gender, impact marathon performances. Secondly, analyzing the distribution of finish times and the performance of top finishers against the masses provides insights into the competitive landscape of the marathon. It can identify outliers or exceptional performances and understand how elite athletes compare to average participants. Although not directly connected to this data, analyses like these can inform training strategies, highlight the effectiveness of different preparation methods, and inspire both new and experienced runners by showcasing the range of achievable performances.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an in-class example or quiz.
+:::
+
+
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of the activity, you will be able to:
