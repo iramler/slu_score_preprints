@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.">
+<meta name="dcterms.date" content="2024-03-05">
+<meta name="description" content="Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon">
 
-<title>SLU SCORE Module Preprint Repository - Ironman Triathlon (Canadian Females) - Simple Linear Regression</title>
+<title>SLU SCORE Module Preprint Repository - 2023 Boston Marathon - Understanding variability using ANOVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,7 +132,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/simple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Simple Linear Regression</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/index.html">2023 Boston Marathon - Understanding variability using ANOVA</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -226,13 +226,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Running</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
@@ -241,13 +241,13 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html" class="sidebar-item-text sidebar-link">
@@ -277,13 +277,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">Triathlon</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +292,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -323,15 +323,17 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ironman Triathlon (Canadian Females) - Simple Linear Regression</h1>
+<h1 class="title">2023 Boston Marathon - Understanding variability using ANOVA</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">linear regression</div>
+    <div class="quarto-category">ANOVA</div>
+    <div class="quarto-category">interactions</div>
+    <div class="quarto-category">multiple comparisons</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.
+    Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon
   </div>
 </div>
 
@@ -342,7 +344,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2024</p>
+      <p class="date">March 5, 2024</p>
     </div>
   </div>
   
@@ -357,9 +359,27 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Welcome to this activity focused on simple linear regression analysis. In this worksheet, you will explore a dataset containing information about the female Canadian finishers of the Lake Placid Ironman 2022. Specifically, you will analyze bike times to predict run times for the participants. Through this activity, you will gain practical experience in performing linear regression analysis, interpreting the results, and making predictions based on the model.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>For this activity, you will be exploring the result times from female and male runners that finished the 2023 <a href="https://www.baa.org/races/boston-marathon" target="_blank">Boston Marathon</a>.</p>
+<p>In particular, you will examine both visualizations and Analysis of Variance (ANOVA) modules of result times to help understand the variation in finish times of participants.</p>
+<p>Investigating these trends is useful for several reasons. Mainly, exploring these trends can help to deepen our understanding of how different factors, such as gender and age, impact marathon performances. Analyzing the distribution of finish times can also provide insights into the competitive landscape of the marathon.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This activity would be suitable for an in-class example or broken in several examples.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -368,20 +388,20 @@ Learning Objectives
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
+<p>By the end of the activity, you will be able to:</p>
 <ol type="1">
-<li><p>Understand the concept of simple linear regression and its application in statistical analysis.</p></li>
-<li><p>Identify the predictor (independent) and response (dependent) variables in a regression analysis.</p></li>
-<li><p>Interpret the regression output, including the coefficient estimates, residuals, and R-squared value.</p></li>
-<li><p>Make predictions based on the regression model and evaluate the accuracy of the predictions.</p></li>
+<li>Analyze distributions using histograms and boxplots</li>
+<li>Understand how different factors in an ANOVA model can be used to explain variability in a response variable.</li>
+<li>Determine when it is appropriate to include interaction terms in a two-way ANOVA model.</li>
+<li>Use multi-comparison procedures (such as Tukey’s Honest Significant Differences) to determine statistically discernible differences in group means.</li>
 </ol>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -390,31 +410,41 @@ Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Before diving into this worksheet, it is important to have a foundational understanding of certain statistical concepts and techniques. The following prior knowledge will be helpful in completing this activity successfully:</p>
-<ol type="1">
-<li><p>Variables: Understanding the difference between predictor (independent) and response (dependent) variables is essential in the context of regression analysis. In this dataset, the predictor variable would be bike times, while the response variable would be run times.</p></li>
-<li><p>Scatter Plots: Familiarity with scatter plots, which depict the relationship between two continuous variables, is crucial. Scatter plots visually represent the data points and can help identify the nature and strength of the relationship between the predictor and response variables.</p></li>
-<li><p>Simple Linear Regression: Knowledge of simple linear regression as a statistical technique for modeling the relationship between two continuous variables is essential. You should understand the concept of a regression line, how it is estimated, and how it can be used to make predictions.</p></li>
-<li><p>Prediction and Evaluation: Knowledge of how to make predictions based on the regression model and evaluate their accuracy.</p></li>
-</ol>
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requiremens">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology Requiremens
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The provided worksheet and sample solutions assume students have access to, and familiarity with, R and the <code>tidyverse</code> suite of packages. However, these can be easily modified to use any statistical software that allows them to fit a two-way ANOVA model with interactions as well as perform Tukey’s HSD.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman</p>
-<p>Download data: <a href="ironman_lake_placid_female_2022_canadian.csv">ironman_lake_placid_female_2022_canadian.csv</a></p>
+<p>The data set contains 26598 rows and 15 columns. Each row represents a runner who completed the Boston Marathon in 2023</p>
+<p>Download data: <a href="boston_marathon_2023.csv">boston_marathon_2023.csv</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
+<col style="width: 12%">
+<col style="width: 87%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -424,83 +454,81 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>Bib</td>
-<td>registration number of each runner used for identification</td>
+<td>age_group</td>
+<td>age group of the runner</td>
 </tr>
 <tr class="even">
-<td>Name</td>
-<td>The participant’s name</td>
+<td>place_overall</td>
+<td>finishing place of the runner out of all runners</td>
 </tr>
 <tr class="odd">
-<td>Country</td>
-<td>What country the participant is from</td>
+<td>place_gender</td>
+<td>finishing place of runner among the same gender</td>
 </tr>
 <tr class="even">
-<td>Gender</td>
-<td>The participant’s gender</td>
+<td>place_division</td>
+<td>finishing place of runner among runners of the same gender and age group</td>
 </tr>
 <tr class="odd">
-<td>Division</td>
-<td>The age range or membership a runner is</td>
+<td>name</td>
+<td>name of runner</td>
 </tr>
 <tr class="even">
-<td>Division.Rank</td>
-<td>Within the divisions, the place each runner has obtained over all races</td>
+<td>gender</td>
+<td>gender of runner</td>
 </tr>
 <tr class="odd">
-<td>Overall.Time</td>
-<td>The total time it took to complete the Ironman in minutes</td>
+<td>team</td>
+<td>team the runner is affiliated with</td>
 </tr>
 <tr class="even">
-<td>Overall.Rank</td>
-<td>The runner’s finishing place for that particular triathlon</td>
+<td>bib_number</td>
+<td>bib number of runner</td>
 </tr>
 <tr class="odd">
-<td>Swim.Time</td>
-<td>The time in minutes it took to complete the swimming portion</td>
+<td>half_time</td>
+<td>half marathon time of runner</td>
 </tr>
 <tr class="even">
-<td>Swim.Rank</td>
-<td>The place the runner finished for the swim portion</td>
+<td>finish_net</td>
+<td>finishing time timed from when they cross the starting gate</td>
 </tr>
 <tr class="odd">
-<td>Bike.Time</td>
-<td>The time in minutes it took to complete the biking portion</td>
+<td>finish_gun</td>
+<td>finishing time of runner timed from when the starter gun is fired</td>
 </tr>
 <tr class="even">
-<td>Bike.Rank</td>
-<td>The place the runner finished for the bike portion</td>
+<td>age_group</td>
+<td>age group of the runner</td>
 </tr>
 <tr class="odd">
-<td>Run.Time</td>
-<td>The time in minutes it took to complete the running portion</td>
+<td>half_time_sec</td>
+<td>half marathon time in seconds</td>
 </tr>
 <tr class="even">
-<td>Run.Rank</td>
-<td>The place the runner finished for the running portion</td>
+<td>finish_net_sec</td>
+<td>net finish in seconds</td>
 </tr>
 <tr class="odd">
-<td>Finish.Status</td>
-<td>States whether someone completed the Ironman successfully</td>
+<td>finish_gun_sec</td>
+<td>gun finish in seconds</td>
 </tr>
 <tr class="even">
-<td>Location</td>
-<td>Where the Ironman takes place</td>
-</tr>
-<tr class="odd">
-<td>Year</td>
-<td>They year when the mentioned participant ran</td>
+<td>finish_net_minutes</td>
+<td>net finish in minutes</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Data Source</strong></p>
+<p><a href="https://www.baa.org" target="_blank">Boston Athletic Association</a></p>
 </details>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Regression_Simple.docx">Class handout</a></p>
-<p><a href="Regression_Simple_Key.docx">Class handout - with solutions</a></p>
+<p><a href="boston_marathon_anova_worksheet.docx">Class handout</a></p>
+<p><a href="boston_marathon_anova_worksheet-key.docx">Class handout - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -509,9 +537,9 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In conclusion, the Simple Linear Regression worksheet has yielded important findings. The analysis revealed a significant slope interpretation. However, there is an absence of a meaningful intercept interpretation. Impressively, the model accurately predicted the winner, Sarah True, within a 12-minute range of her actual time, demonstrating its effectiveness in estimating performance. Furthermore, the exploration of using speed as an alternative variable showcased its potential usefulness and highlighted the value it can add to predicting and understanding performance outcomes. Overall, this worksheet has enhanced our understanding of the relationship between variables and the predictive capabilities of simple linear regression.</p>
+<p>In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. It allows them to understand reasons by variability might exist and to discover multimodal distributions can occur simply due to excluding an important explanatory variable that otherwise confounds the analysis. The calculation of z-scores or other similar measurement of relative location enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.</p>
 </div>
 </div>
 </div>

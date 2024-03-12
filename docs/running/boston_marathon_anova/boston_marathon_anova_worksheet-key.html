@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.">
 
-<title>SLU SCORE Module Preprint Repository - Ironman Triathlon (Canadian Females) - Simple Linear Regression</title>
+<title>SLU SCORE Module Preprint Repository - Boston Marathons - ANOVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -132,7 +164,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/simple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Simple Linear Regression</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/index.html">2023 Boston Marathon - Understanding variability using ANOVA</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html">Boston Marathons - ANOVA</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -226,13 +258,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Running</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
@@ -243,14 +275,14 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html" class="sidebar-item-text sidebar-link">
+  <a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Boston Marathons - ANOVA</span></a>
   </div>
 </li>
@@ -277,13 +309,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">Triathlon</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +324,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -304,47 +336,21 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ironman Triathlon (Canadian Females) - Simple Linear Regression</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">linear regression</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.
-  </div>
+<h1 class="title">Boston Marathons - ANOVA</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -352,177 +358,118 @@ cookieconsent.run({
 
 </header>
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Welcome to this activity focused on simple linear regression analysis. In this worksheet, you will explore a dataset containing information about the female Canadian finishers of the Lake Placid Ironman 2022. Specifically, you will analyze bike times to predict run times for the participants. Through this activity, you will gain practical experience in performing linear regression analysis, interpreting the results, and making predictions based on the model.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ol type="1">
-<li><p>Understand the concept of simple linear regression and its application in statistical analysis.</p></li>
-<li><p>Identify the predictor (independent) and response (dependent) variables in a regression analysis.</p></li>
-<li><p>Interpret the regression output, including the coefficient estimates, residuals, and R-squared value.</p></li>
-<li><p>Make predictions based on the regression model and evaluate the accuracy of the predictions.</p></li>
+<p>The Boston Marathon is an annual marathon traditionally held on Patriots’ Day, the third Monday of April. Begun in 1897, the event is one of the world’s oldest annual marathons and ranks as one of the world’s most prestigious road racing events. The Boston Marathon attracts runners from all over the world, featuring thousands of participants and extensive spectator support, embodying the spirit of community and endurance.</p>
+<p>We will be investigating the results from the 2023 Boston Marathon - which consists of 26,598 runners that completed the race. In addition to the <code>name</code>, <code>gender</code>, and <code>age_group</code> of the runner, the <code>finish_net_minutes</code> variable shows the race result time of the runner that is timed from when they cross the starting gate at the beginning of the race to the finish line. The full data (boston_marathon_2023.csv) is available at <a href="https://data.scorenetwork.org/running/boston_marathon_2023.html" target="_blank">SCORE Data Repo</a> and contains many more variables associated with the runner information and times.</p>
+<ol start="0" type="1">
+<li>Load the following packages: <code>tidyverse</code>, <code>multcomp</code></li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="sc">|&gt;</span> <span class="fu">suppressPackageStartupMessages</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)<span class="sc">|&gt;</span> <span class="fu">suppressPackageStartupMessages</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Before diving into this worksheet, it is important to have a foundational understanding of certain statistical concepts and techniques. The following prior knowledge will be helpful in completing this activity successfully:</p>
 <ol type="1">
-<li><p>Variables: Understanding the difference between predictor (independent) and response (dependent) variables is essential in the context of regression analysis. In this dataset, the predictor variable would be bike times, while the response variable would be run times.</p></li>
-<li><p>Scatter Plots: Familiarity with scatter plots, which depict the relationship between two continuous variables, is crucial. Scatter plots visually represent the data points and can help identify the nature and strength of the relationship between the predictor and response variables.</p></li>
-<li><p>Simple Linear Regression: Knowledge of simple linear regression as a statistical technique for modeling the relationship between two continuous variables is essential. You should understand the concept of a regression line, how it is estimated, and how it can be used to make predictions.</p></li>
-<li><p>Prediction and Evaluation: Knowledge of how to make predictions based on the regression model and evaluate their accuracy.</p></li>
+<li>Load the data into R. Store it as an object names <code>bos_marathon</code>.</li>
 </ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bos_marathon <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://data.scorenetwork.org/data/boston_marathon_2023.csv"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age_group =</span> <span class="fu">str_replace_all</span>(age_group, <span class="st">"-"</span>,<span class="st">".."</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Construct a histogram of the distribution of finish times for all participants. If using <code>ggplots</code>, use <code>bins=200</code> in the options. If using base R’s <code>hist</code> function, use <code>breaks=200</code>. (Note that setting the bins/breaks to be a large number is only feasible because the sample size is so large.)</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bos_marathon, <span class="fu">aes</span>(<span class="at">x =</span> finish_net_minutes)) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="boston_marathon_anova_worksheet-key_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(bos_marathon<span class="sc">$</span>finish_net_minutes, <span class="at">breaks =</span> <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="boston_marathon_anova_worksheet-key_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<ol start="3" type="1">
+<li>Notice that, while predominately right skewed with a major mode around 220 minutes, there seems to be a clear spike at approximately 175 minutes. Comment on some reasons why that might occur.</li>
+</ol>
+<p><em>Answers will vary - but the main reason this seems to happen is due to displaying both Men and Women participants. Essentially we have a mixture of the two distributions displayed here.</em></p>
+<ol start="4" type="1">
+<li>boxplot min ~ gender</li>
+<li>Fit finish_net_minutes ~ gender</li>
+<li>Calculate and interpret R-Squared for this model</li>
+<li>boxplot min ~ age</li>
+<li>model min ~ age</li>
+<li>R^2</li>
+<li>Interactions?</li>
+</ol>
+<ul>
+<li>interaction plots</li>
+<li>model</li>
+</ul>
+<ol start="11" type="1">
+<li>Final model</li>
+</ol>
+<ul>
+<li>significance testing</li>
+<li>Tukey HSD</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bmar_2way_int_mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(finish_net_minutes <span class="sc">~</span> gender <span class="sc">+</span> age_group <span class="sc">+</span> gender<span class="sc">:</span>age_group, <span class="at">data =</span> bos_marathon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman</p>
-<p>Download data: <a href="ironman_lake_placid_female_2022_canadian.csv">ironman_lake_placid_female_2022_canadian.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bib</td>
-<td>registration number of each runner used for identification</td>
-</tr>
-<tr class="even">
-<td>Name</td>
-<td>The participant’s name</td>
-</tr>
-<tr class="odd">
-<td>Country</td>
-<td>What country the participant is from</td>
-</tr>
-<tr class="even">
-<td>Gender</td>
-<td>The participant’s gender</td>
-</tr>
-<tr class="odd">
-<td>Division</td>
-<td>The age range or membership a runner is</td>
-</tr>
-<tr class="even">
-<td>Division.Rank</td>
-<td>Within the divisions, the place each runner has obtained over all races</td>
-</tr>
-<tr class="odd">
-<td>Overall.Time</td>
-<td>The total time it took to complete the Ironman in minutes</td>
-</tr>
-<tr class="even">
-<td>Overall.Rank</td>
-<td>The runner’s finishing place for that particular triathlon</td>
-</tr>
-<tr class="odd">
-<td>Swim.Time</td>
-<td>The time in minutes it took to complete the swimming portion</td>
-</tr>
-<tr class="even">
-<td>Swim.Rank</td>
-<td>The place the runner finished for the swim portion</td>
-</tr>
-<tr class="odd">
-<td>Bike.Time</td>
-<td>The time in minutes it took to complete the biking portion</td>
-</tr>
-<tr class="even">
-<td>Bike.Rank</td>
-<td>The place the runner finished for the bike portion</td>
-</tr>
-<tr class="odd">
-<td>Run.Time</td>
-<td>The time in minutes it took to complete the running portion</td>
-</tr>
-<tr class="even">
-<td>Run.Rank</td>
-<td>The place the runner finished for the running portion</td>
-</tr>
-<tr class="odd">
-<td>Finish.Status</td>
-<td>States whether someone completed the Ironman successfully</td>
-</tr>
-<tr class="even">
-<td>Location</td>
-<td>Where the Ironman takes place</td>
-</tr>
-<tr class="odd">
-<td>Year</td>
-<td>They year when the mentioned participant ran</td>
-</tr>
-</tbody>
-</table>
-</details>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Regression_Simple.docx">Class handout</a></p>
-<p><a href="Regression_Simple_Key.docx">Class handout - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcompView)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'multcompView' was built under R version 4.3.3</code></pre>
 </div>
-<div class="callout-title-container flex-fill">
-Conclusion
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Letters <span class="ot">&lt;-</span> <span class="fu">multcompLetters4</span>(bmar_2way_int_mod, <span class="fu">TukeyHSD</span>(<span class="fu">aov</span>(bmar_2way_int_mod)), </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">reversed =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>marathon_mns <span class="ot">&lt;-</span>   </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  bos_marathon <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(gender,age_group) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">mean=</span><span class="fu">mean</span>(finish_net_minutes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'gender'. You can override using the
+`.groups` argument.</code></pre>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In conclusion, the Simple Linear Regression worksheet has yielded important findings. The analysis revealed a significant slope interpretation. However, there is an absence of a meaningful intercept interpretation. Impressively, the model accurately predicted the winner, Sarah True, within a 12-minute range of her actual time, demonstrating its effectiveness in estimating performance. Furthermore, the exploration of using speed as an alternative variable showcased its potential usefulness and highlighted the value it can add to predicting and understanding performance outcomes. Overall, this worksheet has enhanced our understanding of the relationship between variables and the predictive capabilities of simple linear regression.</p>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tukey.cld <span class="ot">&lt;-</span> <span class="fu">as.data.frame.list</span>(Letters<span class="sc">$</span><span class="st">`</span><span class="at">gender:age_group</span><span class="st">`</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>tukey.cld<span class="sc">$</span>Levels <span class="ot">&lt;-</span> <span class="fu">rownames</span>(tukey.cld) ; <span class="fu">rownames</span>(tukey.cld) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>tukey.cld <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(tukey.cld,Levels,Letters)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>tukey.cld <span class="ot">&lt;-</span> <span class="fu">separate</span>(tukey.cld, <span class="at">col =</span> <span class="st">"Levels"</span>, <span class="at">into =</span> </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"gender"</span>,<span class="st">"age_group"</span>), <span class="at">sep =</span> <span class="st">":"</span>,<span class="at">remove =</span> T)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>tukey.cld</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   gender age_group   Letters
+1       W       80+ cdefghijk
+2       M       80+  defghijk
+3       W    75..79      hijk
+4       M    75..79         k
+5       W    70..74         k
+6       W    65..69         j
+7       M    70..74        ij
+8       W    60..64        hi
+9       W    55..59         h
+10      M    65..69         h
+11      W    50..54         g
+12      M    60..64        fg
+13      W    45..49         f
+14      W    40..44         e
+15      M    55..59         e
+16      W    18..39         e
+17      M    50..54         d
+18      M    45..49         c
+19      M    40..44         b
+20      M    18..39         a</code></pre>
 </div>
 </div>
-</div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Fill in later</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
