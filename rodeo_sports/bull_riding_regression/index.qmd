@@ -1,0 +1,124 @@
+---
+title: "Professional Bull Riding Analysis"
+date: "2024-04-13"
+description: Investigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.
+editor: 
+  canonical: true
+categories:
+  - Linear Regression
+  - Logistic Regression
+  - Summary Statistics
+  - Influential Points
+  - Hypothesis Testing
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Professional Bull Riding (PBR) is a sport that requires a unique combination of skill, strength, and courage. Riders must stay on a bucking bull as long as they can, using only one hand to hold on while the bull tries to throw them off. The rider is scored based on their performance, and the bull is also scored based on how well it bucks. In this dataset, we will explore the data from the 2023 season of the PBR league, Touring Pro Division, to understand the factors that contribute to a rider's success and the performance, and the same for the bulls.
+
+In these worksheets, we will exploring models that predict the points earned by riders and bulls in the 2023 season of the Professional Bull Riding (PBR) league, Touring Pro Division. We will fit multiple linear regression models to predict rider points and logistic regression models to predict bull points. We will interpret the model summary outputs, analyze patterns and trends, identify potential outliers, and test model efficiency.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Understand how to fit and interpret multiple linear models along with logistic regression models.
+
+2.  Analyze and describe model summary outputs, as well as explaining patterns or trends, and effects of multicollinearity
+
+3.  Identify potential outliers from residual plots, and using variable transformation to improve model.
+
+4.  Ability to test model efficiency, as well as performing nested-hypothesis test to find best model.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout will require R-studio to complete the questions. This will need to be able to have access to both CSV files.
+
+1.  Model Fitting: Know how to fit multiple linear regression and logistic regression model in R, along with interpreting the model summary output. This will require familiarity with the `lm()` and `glm()` functions.
+
+2.  Model Summary: Understand how to analyze and describe the patterns or trends in the data, along with how to identify the presence multicollinearity and how to fix it in the model.
+
+3.  Outliers: Know how to properly deal with outliers, data points that impact the overall trend/pattern of data, along with the rules of cooks distance. This will will involve the analysis of the residual plots of the models using `plot()` function.
+
+4.  Hypothesis Testing: Understand how to perform nested-hypothesis test to find the best model, along with the rules testing. This will require the use of the `anova()` function, or can be completed by hand with use of summary outputs, along with anova tables of individual models.
+:::
+
+### Data
+
+A data frame for 38 riders from the 2023 season of the Professional Bull Riding (PBR) league, for the Touring Pro Division. These data frames hold the stats for the riders and the bulls they ride. The data was scraped from the PBR website. For the rider data set, there are 357 riders with 16 variables, however, not all of the riders points meaning they would not hold a lot of significance in data and may skew the results. The bull data set has 50 bulls with 11 variables on their scoring statistics.
+
+<details>
+
+<summary><b>Riders Data: Variable Descriptions</b></summary>
+
+| **Variable**        | **Description**                                                |
+|---------------------|----------------------------------------------------------------|
+| `Rider`             | Name of the pro bull rider                                     |
+| `Points`            | Total points earned by the bull rider                          |
+| `Points Back`       | Difference in points between the rider and the leader          |
+| `Events`            | Number of events participated in by the rider                  |
+| `Outs`              | Number of times the rider went through gate (Rides + Buckoffs) |
+| `Rides`             | Number of successful rides by the rider                        |
+| `Buckoffs`          | Number of unsuccessful rides by the rider                      |
+| `prop.Ridden`       | Percent of successful rides                                    |
+| `Avg Ride Score`    | Average score for successful rides by the rider                |
+| `Highest RideScore` | Highest score achieved by the rider in a single ride           |
+| `Avg Buckoff Time`  | Average time spent on bulls that the rider failed to ride      |
+| `Round Wins`        | Number of round wins achieved by the rider                     |
+| `Event Wins`        | Number of event wins achieved by the rider                     |
+| `ReRides Taken`     | Number of re-rides taken by the rider                          |
+| `Earnings`          | Total earnings of the rider from bull riding events            |
+| `90Pt Rides`        | Number of rides scoring 90 points or above                     |
+
+</details>
+
+Download data: [BullRiders.csv](BullRiders.csv)
+
+<details>
+
+<summary><b>Bull's Data: Variable Descriptions</b></summary>
+
+| **Variable**            | **Description**                                            |
+|-------------------------|------------------------------------------------------------|
+| `Bull`                  | Name of the bull                                           |
+| `World Champ Avg Score` | Average score of the bull at world championship events     |
+| `Events`                | Number of events the bull participated in                  |
+| `Ridden`                | Number of times the bull was successfully ridden           |
+| `Outs`                  | Number of times the bull was scheduled to be ridden        |
+| `Rides`                 | Number of successful rides on the bull                     |
+| `Buckoffs`              | Number of unsuccessful rides on the bull                   |
+| `Avg BullScore`         | Average score for successful rides on the bull             |
+| `Highest BullScore`     | Highest score achieved by a rider on this bull             |
+| `Avg Buckoff Time`      | Average time a rider spends on the bull before bucking off |
+| `45Pt Rides`            | Number of rides scoring 45 points or above on this bull    |
+
+</details>
+
+Download data: [Bulls.csv](Bulls.csv)
+
+#### Data Source
+
+<a href="https://azcms.pbr.com/statistics/rider/?season=2023&tour=TPD-US" target="_blank">Bull Rider's Data</a>
+
+<a href="https://azcms.pbr.com/statistics/bull/" target="_blank">Bull's Data</a>
+
+### Materials
+
+[Class handout: Rider's](pbr-rider.docx)
+
+[Class handout: Rider's - with solutions](AnswerKey_pbr-rider.docx)
+
+[Class handout: Bull's](pbr-bulls.docx)
+
+[Class handout: Bull's - with solutions](AnswerKey_pbr-bulls.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the investigation explores the 2023 season of the Professional Bull Riding (PBR) league's Touring Pro Division, aiming to uncover the factors influencing rider and bull performance, more specifically on how they are scored. By fitting multiple linear regression models to predict rider points and logistic regression models to predict bull points, statistic learners gain insights into interpreting model summaries, identifying patterns and trends, and evaluating model efficiency. Learning objectives encompass understanding and interpreting linear and logistic regression models, analyzing model summaries, detecting multicollinearity, identifying outliers, knowing when and how to use variable transformation, and testing model efficiency through nested-hypothesis tests. Through these worksheets, statistic learners gain practical experience in leveraging these techniques to help performance evaluation and decision-making in professional bull riding competitions.
+:::
+
+### Authors
+
+Created by Matthew Maslow (St. Lawrence University), [Ivan Ramler (St. Lawrence University)](mailto:iramler@stlawu.edu)

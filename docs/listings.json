@@ -5,6 +5,7 @@
       "/running/boston_marathon_anova/index.html",
       "/running/boston_marathon_2023/index.html",
       "/running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html",
+      "/motor_sports/dakar_rally_regression/index.html",
       "/triathlon/multiple_linear_regression/index.html",
       "/triathlon/simple_linear_regression/index.html",
       "/lacrosse/college_lacrosse_faceoffs/index.html",
@@ -12,7 +13,8 @@
       "/esports/league_of_legends/index.html",
       "/softball/softball_div1/index.html",
       "/motor_sports/nascar_regression_transformation/index.html",
-      "/golf/pga_drive_putt/index.html"
+      "/golf/pga_drive_putt/index.html",
+      "/rodeo_sports/bull_riding_regression/index.html"
     ]
   }
 ]

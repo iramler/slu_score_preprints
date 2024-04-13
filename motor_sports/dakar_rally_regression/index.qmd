@@ -1,0 +1,97 @@
+---
+title: "Dakar Rally Analysis"
+date: "2024-04-13"
+author: "Matt Maslow"
+description: Investigating The 2024 Dakar Rally biker rankings and times, throughout all 12 stages.
+editor: 
+  canonical: true
+categories:
+  - Multiple Linear Regression
+  - Model Diagnostics
+  - Testing
+  - Summary Statistics
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+The Dakar Rally is an annual off-road endurance event that typically spans over two weeks and covers thousands of kilometers across challenging terrain, and the most recent rally took place in Saudi Arabia. Participants, including motorcyclists, drivers, and truckers, compete in various categories, facing extreme conditions like deserts, mountains, and dunes, making it one of the toughest motor-sport events in the world. For this investigation, we will be looking at the motorist statistics for all 12 stages of race. In this race, riders can drop out or be eliminated after each stage due to various reasons such as mechanical failures, accidents, injuries, or if an rules are violated penalties are applied to riders overall time, affecting their final ranking.
+
+In this worksheet, we will be exploring the data from the 2024 Dakar Rally, focusing on the biker rankings and times throughout all 12 stages. We will fit multiple linear regression models to predict the rankings of drivers with rider times, and analyze the model summary outputs, patterns and trends, and potential outliers. We will also test the model efficiency and perform a nested-hypothesis test to find the best model.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Understand how to fit and interpret multiple linear models given specific information and ability to identify significant predictors.
+
+2.  Ability to use given information to predict the probabilities.
+
+3.  Identify potential outliers from residual plots, and knowing how to deal with them.
+
+4.  Ability to test model efficiency, as well as performing nested-hypothesis test to find best model.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout will have some code outputs to help with a few questions, then will require R-studio to complete rest of the questions.
+
+1.  Model Fitting: We will fit multiple linear regression models using `lm()` and `glm()` for logistic regression, along with the `filter()` function that helps us the retrieve the data we need to match the specific information given in the question. Using `glm()`, know how to predict the probabilities of outcomes based off given data.
+
+2.  Model Diagnostics: We will use the `summary()` function to interpret the model summary outputs, and the `plot()` function to analyze patterns and trends in the data. Also need to know how to calculate R-squared value by hand using anova output.
+
+3.  Outliers: We will use the `plot()` function to identify potential outliers from residual plots, and knowing how to deal with them.
+
+4.  Testing: We will use the `anova()` function to test model efficiency, as well as performing nested-hypothesis test to find best model.
+:::
+
+### Data
+
+A data frame for the 2024 Dakar Rally, is an annual off-road endurance event that typically spans over two weeks and covers thousands of kilometers across challenging terrain in Saudi Arabia. Participants, including motorcyclists, drivers, and truckers, compete in various categories, facing extreme conditions like deserts, mountains, and dunes, making it one of the toughest motor-sport events in the world. But in this investigation we will be looking at the motorist statistics for all 12 stages of the race. The data frame has a total of 1584 observations with 16 variables. However, the way the race is set up so after each stage, drivers can drop out or be eliminated after each stage due to various reasons such as mechanical failures, accidents, injuries, or exceeding time limits. Therefore, the race started with 142 drivers, and by the time the 12th stage came around only 103 drivers remained.
+
+<details>
+
+<summary><b> Data: Variable Descriptions</b></summary>
+
+| **Variable**      | **Description**                                                                           |
+|-------------------|-------------------------------------------------------------------------------------------|
+| Rank              | The ranking of the driver in the competition                                              |
+| Driver_Number     | The number assigned to the driver in the competition                                      |
+| Team              | The team to which the driver belongs                                                      |
+| Country           | The country of origin of the driver                                                       |
+| Driver            | The name of the driver                                                                    |
+| Hours             | The hours component of the time                                                           |
+| Minutes           | The minutes component of the time                                                         |
+| Seconds           | The seconds component of the time                                                         |
+| *Variation*       | *The variation in time is the difference in time between drivers in their specific ranks* |
+| Variation_Hours   | The hours component of the variation in time                                              |
+| Variation_Minutes | The minutes component of the variation in time                                            |
+| Variation_Seconds | The seconds component of the variation in time                                            |
+| Penalty_Hours     | The hours component of the penalty time                                                   |
+| Penalty_Minutes   | The minutes component of the penalty time                                                 |
+| Penalty_Seconds   | The seconds component of the penalty time                                                 |
+| Stage             | The stage number of the competition (0-12 stages)                                         |
+| Image_URL         | The URL of the image associated with the player/driver/Experience Level                   |
+
+</details>
+
+Download data: [dakarRally_bikes_data.csv](dakarRally_bikes_data.csv)
+
+#### Data Source
+
+<a href="https://www.dakar.com/en/rankings/stage-0/bike" target="_blank">Dakar Rally - Biker Rankings Data</a>
+
+### Materials
+
+[Class handout](DakarRally_worksheet.docx)
+
+[Class handout - with solutions](DakarRally_worksheet_Answer_Key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the investigation into the 2024 Dakar Rally's motorist statistics across all 12 stages aims to deepen statistic learners' understanding of predictive modeling and statistical analysis in the context of competitive motor-sport event. By fitting multiple linear regression models to predict driver rankings based on their accumulative time placing after each stage. Readers will gain insight into interpreting model summaries, identifying patterns and trends, and addressing potential outliers. Through hands-on exercises, skills can be developed in model diagnostics, outlier identification, and testing model efficiency using nested-hypothesis tests. Ultimately, this exploration provides a practical framework for utilization statistical techniques in sports applications.
+:::
+
+### Authors
+
+Created by Matthew Maslow (St. Lawrence University), [Ivan Ramler (St. Lawrence University)](mailto:iramler@stlawu.edu)
