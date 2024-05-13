@@ -1,6 +1,6 @@
 ---
 title: "2023 Boston Marathon - Variability in Finish Times"
-date: March 5, 2024
+date: May 13, 2024
 description: Describing finish time for runners in the 2023 Boston Marathon
 categories:
   - histograms
@@ -11,6 +11,10 @@ categories:
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Welcome video
+
+{{< video https://youtu.be/5-aLUUAz6Hk?si=qK-sOO9fC2ziTpD_ title="SCORE: Boston Marathon Finish Times" >}}
 
 ### Introduction
 
@@ -92,4 +96,4 @@ In conclusion, the Boston Marathon Times worksheet provides valuable learning op
 
 ### Authors
 
-Fill in later
+[Ivan Ramler (St. Lawrence University)](mailto:iramler@stlawu.edu), Jack Fay (St. Lawrence University)
