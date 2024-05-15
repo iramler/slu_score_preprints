@@ -1,0 +1,133 @@
+---
+title: "Beijing 2022 Olympics - Cleaning and Summarizing Data"
+date: March 8, 2024
+author:
+  - name: Eric Seltzer
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+description: Demonstrating how to clean data with different packages and summarise the data using dplyr.
+editor: 
+  canonical: true
+categories:
+  - data cleaning
+  - summarization
+  - merging
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+The Winter Olympics is an event hosted every 4 years last hosted in Beijing in 2022. In the 2022 Olympics, there were a total of 109 events across 15 [disciplines](https://en.wikipedia.org/wiki/2022_Winter_Olympics#:~:text=.%5B62%5D-,Sports,-%5Bedit%5D){target="_blank"}. It also has any more information on the Beijing 2022 Olympics you might be looking for. As the whole goal of the Olympics is to win as many medals as you can, everything is tracked. From the athlete, where they were born, if they won, their height, how many medals they won. This provides large data sets that are very interesting to look at.
+
+In this worksheet, we will look at some of these data sets and learn how to clean them into tidy formats and use these cleaned data to investigate questions such as which country won the most medals. Cleaning and manipulating data sets is a key component to your Data Science journey and opens many doors for what you can learn in the future.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Understand how to deal with columns that have incorrect variable types.
+
+2.  Describe what is considered a tidy data set.
+
+3.  Manipulate variables into either new variables, or changed versions of themselves.
+
+4.  Summarize key points and provide interpretations for these points.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.
+
+1.  RStudio Packages: Familiarity with packages within RStudio. The most used one being dplyr, as well as some other packages that need to be used in order to manipulate variables. You should understand how to use functions within dplyr at a basic level
+
+2.  Tidy Data: You should understand what it means for a data set to be tidy, there is a general definition of requirements for what this means.
+
+3.  Knowledge of joining and summarizing data, this can be done using dplyr functions. The outcomes of what these different functions do should be understood.
+:::
+
+### Data
+
+There are two data sets here, athletes and medals.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.
+
+Download non tidy data: [athletes.csv](data/athletes.csv)
+
+**Athletes**
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+
+
+| Variable          | Description                      |
+|-------------------|----------------------------------|
+| name              | Athlete Name                     |
+| short_name        | Athlete Name(short)              |
+| gender            | Athlete Gender                   |
+| birth_date        | Athlete Date of Birthday         |
+| birth_place       | Athlete Place of Birthday        |
+| birth_country     | Athlete Country of Birthday      |
+| country           | Athlete Country                  |
+| country_code      | Athlete Country Code             |
+| discipline        | Discipline                       |
+| discipline_code   | Discipline Code                  |
+| residence_place   | Athlete Residence Place          |
+| residence_country | Athlete Residence Country        |
+| height_m/ft       | Athlete Height (meters and feet) |
+| url               | Athlete Profile Link             |
+
+</details>
+
+The second medals contains information on medal winners. Each row in this data set represents a medal won in the Beijing 2022 Olympic Winter Games. This can mean Gold, Bronze, or Silver medals. This data set has 694 rows and 12 columns.
+
+Download non tidy data: [medals.csv](medals.csv)
+
+Download tidy data: [medalsTidy.csv](medalsTidy.csv)
+
+
+
+**Medals**
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable           | Description                       |
+|--------------------|-----------------------------------|
+| medal_type         | Medal Type (Gold, Bronze, Silver) |
+| medal_code         | Medal Number (1, 2, 3)            |
+| medal_date         | Date Medal Won                    |
+| athlete_short_name | Athlete Name (Short)              |
+| athlete_name       | Athlete Name                      |
+| athlete_sex        | Athlete Gender                    |
+| athlete_link       | Athlete Profile Link              |
+| event              | Event Competed In                 |
+| country            | Country                           |
+| country_code       | Country Code                      |
+| discipline         | Discipline                        |
+| discipline_code    | Discipline Code                   |
+
+</details>
+
+#### Data Source
+
+[Beijing 2022 Winter Olympic Games](https://www.kaggle.com/datasets/piterfm/beijing-2022-olympics?resource=download){target="_blank"}
+
+### Materials
+
+[Class Handout](Class-Handout.qmd)
+
+[Class Handout - Solutions](Class-Handout-Solutions.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+
+Forthcoming
+
+:::
+

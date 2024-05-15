@@ -1,0 +1,119 @@
+---
+title: "WNBA Data Module"
+date: "2024-05-15"
+author:
+  - name: Kristen Varin
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+description: This data set contains team game statistics for 16 WNBA teams and for 20 seasons.
+editor: 
+  canonical: true
+categories:
+  - Data cleaning
+  - Missing Data
+  - Tables
+  - Logistic Regression
+---
+
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+
+### Introduction
+
+The WNBA worksheet will introduce the idea of predicting playoff teams from their record earlier in the season. Most of the time, it is expected that teams with better records halfway through the season will have a higher chance of making it to the playoffs, but is this always the case? How do you know that the data you are using is a valid way of predicting this? By completing this worksheet, you will be guided through various data cleaning steps and will be able to answer these questions. 
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+-	Use various `dplyr` package functions to clean a data set for further use. 
+
+-	Learn the process of cleaning data, recognizing any problems within the data, and determining whether the data can be used for the given analysis problem. 
+
+-	Understand why missing data presents a problem for analysis and brainstorm ways to troubleshoot this problem. 
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout requires knowledge of Quarto and, presumably, R Studio.
+
+-	Use the `distinct()` and `tally()` functions to determine if there are clear differences between groups. 
+
+-	Use `select()` and `filter()` functions to clean data. 
+
+-	Create new datasets using subsets of larger datasets. 
+
+-	Using the internet to determine any inconsistencies between the given data and real team statistics. 
+
+:::
+
+
+### Data
+
+The `wnba_data` data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows: 
+
+<details>
+
+<summary><b> Data: Variable Descriptions</b></summary>
+
+
+| **Variable**          | **Description**                                                   |
+|-------------------|-----------------------------------------------------|
+| game_id           | game id number                                                |
+| season            | season number                                                 |
+| season_type       | binary predictor; 2 if regular season game; 3 if playoff game |
+| game_date         | date of the game                                              |
+| team_id           | team id number                                                |
+| team_display_name | full team name (name and city)                                |
+| team_winner       | Boolean; True if the team won the game                        |
+| opponent_team_id  | id number of the opponent                                     |
+| team_home_away    | Where the game was played; either "home" or "away"            |
+
+</details>
+
+Download data: [wnba_data.csv](wnba_data.csv)
+
+
+#### Data Source
+
+Gilani S, Hutchinson G (2022). *wehoop: Access Women's Basketball Play by Play Data*. R package version 1.5.0, <https://CRAN.R-project.org/package=wehoop>.
+
+
+### Materials
+
+[Class handout](Worksheet.docx)
+
+[Class handout - with solutions](Worksheet_Key.docx)
+
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Exploration of the WNBA data revealed that there are missing values for games throughout the 2003-2022 seasons. We found this by tallying the number of games played by each team within each season and noticing that the number of games played was inconsistent between teams. We then used the internet to find an example of a missing game within the dataset. 
+
+Reflecting on the challenges that missing values presented us, we came up with a few solutions to continue our analysis. Some of these include: filtering the data for seasons that have no missing data or using the internet to manually fill in data. While neither of these methods are perfect and present other challenges, they are valid ways to deal with missing values. 
+
+Once we removed the seasons with imperfect data, we continued our analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs. 
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
