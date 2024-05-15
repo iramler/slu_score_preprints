@@ -1,0 +1,73 @@
+---
+title: "Women's Alpine Skiing World Giant Slalom - Data Cleaning"
+date: May 15, 2024
+description: Statistics from two runs at a Women's World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant
+editor: 
+  canonical: true
+categories:
+  - Tidying data
+  - Data Scraping
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+In World Cup Giant Slalom (GS), there are two runs. Only the thirty fastest racers from the first run take a second run. If a racer is disqualified (DSQ) or did not finish (DNF) their first run, they do not take a second run. The order for the first run is determined by taking all racers and ordering them by their World Cup points, from highest to lowest. From that, the top 30 racers are put into three groups. The best seven racers are randomly assigning them a bib 1-7. The next eight best competitors are randomly assigned a bib 8-15. The next best 15 racers are randomly assigned a bib 16-30. The remaining racers go in descending order of points. For the second run, competitors race in reverse order of their results on the first run, so the 30th fastest racer on the first run goes 1st on the second run and so on. This data set includes data from only the top thirty finishers as any racers who placed higher than 30th do not take a second run.
+
+In this worksheet, we will focus on cleaning up untidy data. To do this, we will scrape the data, then write functions and use them along with dplyr functions to tidy the data.
+
+[Preliminary script for video](Tremblant_Cleaning_Module_Script.docx)
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1. Practice writing functions
+
+2. Tidy data
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+1. Familiarity with dplyr
+2. Understand how to write a function
+:::
+
+### Data
+
+Each of the 30 rows in this data set represents a racer, and there are 9 variables. There are a few missing values in  for racers that did not finish (DNF) a run. The RUN 1 and RUN 2 variables give the time (and rank that run) for the first racer and secondsdifferent form that time (and rank) for the rest of the racers. 
+
+Download data: [Tremblant_Data.csv](Tremblant_Data.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+
+| Variable   | Description                                  |
+|------------|----------------------------------------------|
+| RANK       | Final rank (missing if did not finish)       |
+| N          | Order for second run                         |
+| BIB        | Bib number (determines order on first run)   |
+| NAME       | Name of the racer                            |
+| NAT        | Country the racer represents                 |
+| TOTAL      | Time for both runs (min:sec)                 |
+| DIFF       | Time behind the leader  (seconds)            |
+| RUN 1      | Time and rank for first run                  |
+| RUN 2      | Time and rank for second run                 |
+
+### Data Source
+
+The data was scraped from the following link: [FIS World Cup Women's GS at Tremblant](https://live.fis-ski.com/lv-al5009.htm#/follow "FIS World Cup Women's GS at Tremblant")
+
+### Materials
+
+[Class Worksheet](Tremblant_Cleaning_Worksheet.docx) (Word)
+
+[Class Worksheet Key](_Tremblant_Cleaning_Worksheet_Key.qmd) (Quarto file)
+
+### Authors
+
+Fill in later

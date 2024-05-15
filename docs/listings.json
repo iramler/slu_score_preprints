@@ -4,7 +4,7 @@
     "items": [
       "/running/boston_marathon_anova/index.html",
       "/running/boston_marathon_2023/index.html",
-      "/running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html",
+      "/motor_sports/formula1_laps/index.html",
       "/motor_sports/dakar_rally_regression/index.html",
       "/triathlon/multiple_linear_regression/index.html",
       "/triathlon/simple_linear_regression/index.html",
@@ -15,7 +15,8 @@
       "/motor_sports/nascar_regression_transformation/index.html",
       "/multisport/d1_expenditures/index.html",
       "/golf/pga_drive_putt/index.html",
-      "/rodeo_sports/bull_riding_regression/index.html"
+      "/rodeo_sports/bull_riding_regression/index.html",
+      "/skiing/giant-slalom_cleaning/index.html"
     ]
   }
 ]

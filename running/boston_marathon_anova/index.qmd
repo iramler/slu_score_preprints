@@ -82,9 +82,11 @@ Download data: [boston_marathon_2023.csv](boston_marathon_2023.csv)
 
 ### Materials
 
+<!--
 [Class handout](boston_marathon_anova_worksheet.docx)
 
 [Class handout - with solutions](boston_marathon_anova_worksheet-key.docx)
+-->
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 

@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-05-15">
+<meta name="description" content="Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix">
 
-<title>SLU SCORE Module Preprint Repository - Boston Marathons - ANOVA</title>
+<title>SLU SCORE Module Preprint Repository - Analyzing Lap Times for the 2023 F1 Miami Grand Prix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -173,7 +141,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/index.html">2023 Boston Marathon - Understanding variability using ANOVA</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html">Boston Marathons - ANOVA</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../motor_sports/dakar_rally_regression/index.html">Motor Sports</a></li><li class="breadcrumb-item"><a href="../../motor_sports/formula1_laps/index.html">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -250,17 +218,23 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Motor Sports</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dakar Rally Analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -307,36 +281,42 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Running</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
   </div>
 </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Boston Marathons - ANOVA</span></a>
+  <a href="../../running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+ <span class="menu-text">Skiing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -385,21 +365,49 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/index.html">2023 Boston Marathon - Understanding variability using ANOVA</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_anova/boston_marathon_anova_worksheet-key.html">Boston Marathons - ANOVA</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../motor_sports/dakar_rally_regression/index.html">Motor Sports</a></li><li class="breadcrumb-item"><a href="../../motor_sports/formula1_laps/index.html">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Boston Marathons - ANOVA</h1>
-</div>
+<h1 class="title">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">summary statistics</div>
+    <div class="quarto-category">histgram interpretation</div>
+    <div class="quarto-category">outliers</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 15, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -409,123 +417,138 @@ cookieconsent.run({
 </header>
 
 
-<p>The Boston Marathon is an annual marathon traditionally held on Patriots’ Day, the third Monday of April. Begun in 1897, the event is one of the world’s oldest annual marathons and ranks as one of the world’s most prestigious road racing events. The Boston Marathon attracts runners from all over the world, featuring thousands of participants and extensive spectator support, embodying the spirit of community and endurance.</p>
-<p>We will be investigating the results from the 2023 Boston Marathon - which consists of 26,598 runners that completed the race. In addition to the <code>name</code>, <code>gender</code>, and <code>age_group</code> of the runner, the <code>finish_net_minutes</code> variable shows the race result time of the runner that is timed from when they cross the starting gate at the beginning of the race to the finish line. The full data (boston_marathon_2023.csv) is available at <a href="https://data.scorenetwork.org/running/boston_marathon_2023.html" target="_blank">SCORE Data Repo</a> and contains many more variables associated with the runner information and times.</p>
-<ol start="0" type="1">
-<li>Load the following packages: <code>tidyverse</code>, <code>multcomp</code></li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="sc">|&gt;</span> <span class="fu">suppressPackageStartupMessages</span>()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)<span class="sc">|&gt;</span> <span class="fu">suppressPackageStartupMessages</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="module" class="level2">
+<h2 class="anchored" data-anchor-id="module">Module</h2>
+<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Formula 1 (F1) Racing is the highest class of single-seater auto racing sanctioned by the Fédération Internationale de l’Automobile (FIA). Each year, an F1 season features a series of races, known as Grand Prix, which are held in a variety of countries and circuit types. Each of these circuits have their own characteristic’s that make the race unique, ranging from overall track layout and location, to specific corners and race-day weather conditions. Each season, teams and drivers compete for the World Constructors’ Championship and the World Drivers’ Championship, respectively. For the full history and more information about the sport, visit F1’s Wikipedia page <a href="https://en.wikipedia.org/wiki/Formula_One" target="_blank">here</a> or their website <a href="https://www.formula1.com/" target="&quot;_blank">here</a>.</p>
+<p>At the time of racing, the <a href="https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix" target="&quot;_blank">2023 Miami Grand Prix</a> was only the 11th time in F1’s history where all cars that started the race crossed the finish line. This meant that there were no crashes, mechanical failures, or race-ending driver mistakes. In addition, there were also no yellow or red flags issued to indicate an incident on or off the track ahead. In addition, there were no safety cars deployed that could slow or bring the field together.</p>
+<p>In this worksheet, we will analyze and describe histograms of lap times for Max Verstappen for the 2023 F1 Miami Grand Prix. Lap times over the course of a race are determined by a multitude of factors, including tire softness (usually a change in tenths of a second) or pit stops (a change in time by upwards of 15 seconds). Understanding the distribution of lap times over the course of a race and identifying potential outliers can provide valuable insights into the consistency and performance of a driver.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By the end of this activity, you will be able to:</p>
 <ol type="1">
-<li>Load the data into R. Store it as an object names <code>bos_marathon</code>.</li>
+<li><p>Understand the concept of histograms and their relevance in statistical analysis.</p></li>
+<li><p>Identify potential outliers in a numerical variable using numerical methods such as the “1.5 IQR Rule”.</p></li>
+<li><p>Understand outliers and their effect on the data/summary statistics.</p></li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bos_marathon <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://data.scorenetwork.org/data/boston_marathon_2023.csv"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age_group =</span> <span class="fu">str_replace_all</span>(age_group, <span class="st">"-"</span>,<span class="st">".."</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="2" type="1">
-<li>Construct a histogram of the distribution of finish times for all participants. If using <code>ggplots</code>, use <code>bins=200</code> in the options. If using base R’s <code>hist</code> function, use <code>breaks=200</code>. (Note that setting the bins/breaks to be a large number is only feasible because the sample size is so large.)</li>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.</p>
+<ol type="1">
+<li><p>Histograms: Familiarity with histograms as a graphical representation of a numerical variable (like lap times) is crucial. Students should understand how to interpret histograms, using shape, center, and spread of distributions.</p></li>
+<li><p>Outliers: Knowledge of outliers is important.</p></li>
+<li><p>Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms.</p></li>
+<li><p>Knowledge of outlier detection methods (such as the 1.5 IQR Rule) is needed.</p></li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bos_marathon, <span class="fu">aes</span>(<span class="at">x =</span> finish_net_minutes)) <span class="sc">+</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="boston_marathon_anova_worksheet-key_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(bos_marathon<span class="sc">$</span>finish_net_minutes, <span class="at">breaks =</span> <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="boston_marathon_anova_worksheet-key_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
 </div>
 </div>
 </div>
-<ol start="3" type="1">
-<li>Notice that, while predominately right skewed with a major mode around 220 minutes, there seems to be a clear spike at approximately 175 minutes. Comment on some reasons why that might occur.</li>
-</ol>
-<p><em>Answers will vary - but the main reason this seems to happen is due to displaying both Men and Women participants. Essentially we have a mixture of the two distributions displayed here.</em></p>
-<ol start="4" type="1">
-<li>boxplot min ~ gender</li>
-<li>Fit finish_net_minutes ~ gender</li>
-<li>Calculate and interpret R-Squared for this model</li>
-<li>boxplot min ~ age</li>
-<li>model min ~ age</li>
-<li>R^2</li>
-<li>Interactions?</li>
-</ol>
-<ul>
-<li>interaction plots</li>
-<li>model</li>
-</ul>
-<ol start="11" type="1">
-<li>Final model</li>
-</ol>
-<ul>
-<li>significance testing</li>
-<li>Tukey HSD</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bmar_2way_int_mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(finish_net_minutes <span class="sc">~</span> gender <span class="sc">+</span> age_group <span class="sc">+</span> gender<span class="sc">:</span>age_group, <span class="at">data =</span> bos_marathon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The data set contains 1138 rows and 7 columns. Each row represents a single lap by a driver who competed in the 2023 F1 Miami Grand Prix. It is important to note that Oscar Piastri and Logan Sargeant were each lapped once, meaning that they each have 56 rows of lap data, rather than the 57 of the other 18 drivers.</p>
+<p>Download data used: <a href="miami2023_data.csv">miami2023_data.csv</a></p>
+<details>
+<summary>
+<b>Variable Descriptions</b>
+</summary>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>driverId</td>
+<td>Unique identifier for each driver</td>
+</tr>
+<tr class="even">
+<td>driverName</td>
+<td>The full name of the driver</td>
+</tr>
+<tr class="odd">
+<td>constructorId</td>
+<td>Unique identifier for each constructor</td>
+</tr>
+<tr class="even">
+<td>constructorName</td>
+<td>Commonly used name of each constructor</td>
+</tr>
+<tr class="odd">
+<td>lap</td>
+<td>The lap number</td>
+</tr>
+<tr class="even">
+<td>lapTime</td>
+<td>The time taken to complete the lap, in seconds</td>
+</tr>
+<tr class="odd">
+<td>lapPosition</td>
+<td>The position of the driver at the end of the lap</td>
+</tr>
+</tbody>
+</table>
+</details>
+<section id="data-source" class="level4">
+<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
+<p><a href="https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020" target="_blank">Formula 1 World Championship (1950 - 2023)</a></p>
+</section>
+</section>
+<section id="materials" class="level3">
+<h3 class="anchored" data-anchor-id="materials">Materials</h3>
+<p><a href="Miami2023Worksheet.docx">Class handout</a></p>
+<p><a href="Miami2023WorksheetKey.docx">Class handout with sample solutions</a></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcompView)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Letters <span class="ot">&lt;-</span> <span class="fu">multcompLetters4</span>(bmar_2way_int_mod, <span class="fu">TukeyHSD</span>(<span class="fu">aov</span>(bmar_2way_int_mod)), </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">reversed =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+Conclusion
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>marathon_mns <span class="ot">&lt;-</span>   </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  bos_marathon <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(gender,age_group) <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">mean=</span><span class="fu">mean</span>(finish_net_minutes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'gender'. You can override using the
-`.groups` argument.</code></pre>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tukey.cld <span class="ot">&lt;-</span> <span class="fu">as.data.frame.list</span>(Letters<span class="sc">$</span><span class="st">`</span><span class="at">gender:age_group</span><span class="st">`</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>tukey.cld<span class="sc">$</span>Levels <span class="ot">&lt;-</span> <span class="fu">rownames</span>(tukey.cld) ; <span class="fu">rownames</span>(tukey.cld) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>tukey.cld <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(tukey.cld,Levels,Letters)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>tukey.cld <span class="ot">&lt;-</span> <span class="fu">separate</span>(tukey.cld, <span class="at">col =</span> <span class="st">"Levels"</span>, <span class="at">into =</span> </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"gender"</span>,<span class="st">"age_group"</span>), <span class="at">sep =</span> <span class="st">":"</span>,<span class="at">remove =</span> T)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>tukey.cld</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   gender age_group   Letters
-1       W       80+ cdefghijk
-2       M       80+  defghijk
-3       W    75..79      hijk
-4       M    75..79         k
-5       W    70..74         k
-6       W    65..69         j
-7       M    70..74        ij
-8       W    60..64        hi
-9       W    55..59         h
-10      M    65..69         h
-11      W    50..54         g
-12      M    60..64        fg
-13      W    45..49         f
-14      W    40..44         e
-15      M    55..59         e
-16      W    18..39         e
-17      M    50..54         d
-18      M    45..49         c
-19      M    40..44         b
-20      M    18..39         a</code></pre>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In conclusion, the analysis of lap time histograms in F1 races have provided valuable insights into the variation of lap times across a single Grand Prix. One notable finding from this worksheet is the highlighting the effect of outliers (like laps with pit stops) has on the overall spread of the data. The sheet finds that by removing outliers, students are able to better see the consistency of lap times on a histogram, and predict how descriptive statistics (like mean and median), would be affected by the removal.</p>
 </div>
 </div>
+</div>
+</section>
+<section id="authors" class="level3">
+<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<p>Fill in later</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

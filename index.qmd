@@ -4,10 +4,69 @@ title: "SLU SCORE Module Pre-print Repository"
 
 This page contains education materials for the [SCORE Network](https://scorenetwork.org/index.html) that were created by faculty and students from the [Department of Mathematics, Computer Science, and Statistics at St. Lawrence University](https://www.stlawu.edu/offices/math-computer-science-and-statistics){target="_blank"}.
 
-The [SCORE Network](https://scorenetwork.org/index.html) Module Repository enables you to search for modules by either sport (along the left), or you can browse [by statistics and data science topic](by-statsds-topic.qmd).
+The [SCORE Network](https://scorenetwork.org/index.html){target="_blank"} Module Repository enables you to search for modules by either sport (along the left), or you can browse [by statistics and data science topic](by-statsds-topic.qmd).
 
 Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
 _The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705)._
 
+
+**Contributing and/or Joining the SCORE Network**
+
+- If you are interested in contributing to and/or joining the SCORE Network, please check out [https://scorenetwork.org/index.html](https://scorenetwork.org/index.html){target="_blank"}.
+
+- If you are interested in creating a page similar to this to host your own "in development modules", please feel free to copy the associated Github repository: [https://github.com/iramler/slu_score_preprints](https://github.com/iramler/slu_score_preprints){target="_blank"}.
+
+    + The basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. For example, see the interactive diagram below (and compare it to the associated files/direcotries in the repository linked above).
+
+```{css echo=FALSE}
+.bordered{
+  border-style: solid;
+}
+```
+
+<div class="bordered">
+```{r, echo=FALSE}
+library(collapsibleTree) |> suppressPackageStartupMessages()
+
+main <- data.frame(
+    Sport = rep( rep( c( "running", "lacrosse", "skiing"), times = c(1,2,1) ), times = c(5, 4, 4, 5) ),
+    Module = 
+      rep(
+      c(
+        "boston_marathon_2023", # running modules
+        "college_lacrosse_faceoffs", "lacrosse_pll_vs_nll", # lacrosse modules
+        "giant-slalom_cleaning" # skiing modules
+    ), times = c(5,4,4,5)      
+      ),
+    
+    
+    files = c(
+
+      # boston marathon files
+      c("index.qmd", "boston_marathon_2023.csv", "boston_marathon_script.docx", "boston_marathon_worksheet-key.docx", "boston_marathon_worksheet.docx"),
+
+# lacrosse single prop files
+c("index.qmd", "lax_2022_2023.csv", "single_prop_wksht.docx", "single_prop_wksht_key.docx"),
+
+# lacrosse pll vs nll files
+c("index.qmd", "lacrosse_pll_nll_2021-2022.csv", "lacrosse_pll_vs_nll_worksheet.docx", "lacrosse_pll_vs_nll_worksheet_key.docx"),
+
+# slalom cleaning files
+c( "index.qmd", "_Tremblant_Cleaning_Worksheet_Key.qmd", "Tremblant_Cleaning_Module_Script.docx", 
+"Tremblant_Cleaning_Worksheet.docx", "Tremblant_Data.csv")
+    )
+)
+
+collapsibleTree(main, c("Sport", "Module", "files"), collapsed = TRUE, fillByLevel = FALSE)
+```
+
+This diagram was made using the [collapsibleTree](https://CRAN.R-project.org/package=collapsibleTree){target="_blank"} package.
+</div>
+    
+Tips:
+
+* Be sure to modify the _quarto.yml file to match your institution's information
+
+* Notice the underscore at the beginning of the filename in the Quarto (.qmd) file in the skiing module ("_Tremblant_Cleaning_Worksheet_Key.qmd"). This is done to ensure that it isn't rendered into an html page and is instead just provided as a raw file. (Individuals willing to invest more time into customizing their _quarto.yml file can likely avoid this step.)
 

@@ -1,5 +1,18 @@
 ---
 title: "League of Legends - Buffing and Nerfing"
+author:
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: George Charalambous
+    affiliation:
+      - ref: slu
+  - name: A.J. Dykstra
+    affiliation:
+      - ref: slu
+      
 date: February 21 2024
 description: Investigating game play statistics for League of Legends champions in two different patches.
 editor: 
@@ -8,6 +21,7 @@ categories:
   - outliers
   - summary statistics
 ---
+
 
 ## Module
 
@@ -89,6 +103,3 @@ In conclusion, the analysis of Win Rates histograms in League of Legends has pro
 The continued presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.
 :::
 
-### Authors
-
-Created by George Charalambous (St. Lawrence University), [Ivan Ramler (St. Lawrence University)](mailto:iramler@stlawu.edu), A.J. Dykstra (St. Lawrence University)

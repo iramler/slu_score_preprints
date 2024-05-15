@@ -1,0 +1,85 @@
+---
+title: "Analyzing Lap Times for the 2023 F1 Miami Grand Prix"
+date: May 15, 2024
+description: Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix
+editor: 
+  canonical: true
+categories:
+  - summary statistics
+  - histgram interpretation
+  - outliers
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Formula 1 (F1) Racing is the highest class of single-seater auto racing sanctioned by the Fédération Internationale de l'Automobile (FIA). Each year, an F1 season features a series of races, known as Grand Prix, which are held in a variety of countries and circuit types. Each of these circuits have their own characteristic's that make the race unique, ranging from overall track layout and location, to specific corners and race-day weather conditions. Each season, teams and drivers compete for the World Constructors' Championship and the World Drivers' Championship, respectively. For the full history and more information about the sport, visit F1's Wikipedia page [here](https://en.wikipedia.org/wiki/Formula_One){target="_blank"} or their website [here](https://www.formula1.com/){target="\"_blank"}.
+
+At the time of racing, the [2023 Miami Grand Prix](https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix){target="\"_blank"} was only the 11th time in F1's history where all cars that started the race crossed the finish line. This meant that there were no crashes, mechanical failures, or race-ending driver mistakes. In addition, there were also no yellow or red flags issued to indicate an incident on or off the track ahead. In addition, there were no safety cars deployed that could slow or bring the field together.
+
+In this worksheet, we will analyze and describe histograms of lap times for Max Verstappen for the 2023 F1 Miami Grand Prix. Lap times over the course of a race are determined by a multitude of factors, including tire softness (usually a change in tenths of a second) or pit stops (a change in time by upwards of 15 seconds). Understanding the distribution of lap times over the course of a race and identifying potential outliers can provide valuable insights into the consistency and performance of a driver.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Understand the concept of histograms and their relevance in statistical analysis.
+
+2.  Identify potential outliers in a numerical variable using numerical methods such as the "1.5 IQR Rule".
+
+3.  Understand outliers and their effect on the data/summary statistics.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.
+
+1.  Histograms: Familiarity with histograms as a graphical representation of a numerical variable (like lap times) is crucial. Students should understand how to interpret histograms, using shape, center, and spread of distributions.
+
+2.  Outliers: Knowledge of outliers is important.
+
+3.  Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms.
+
+4.  Knowledge of outlier detection methods (such as the 1.5 IQR Rule) is needed.
+:::
+
+### Data
+
+The data set contains 1138 rows and 7 columns. Each row represents a single lap by a driver who competed in the 2023 F1 Miami Grand Prix. It is important to note that Oscar Piastri and Logan Sargeant were each lapped once, meaning that they each have 56 rows of lap data, rather than the 57 of the other 18 drivers.
+
+Download data used: [miami2023_data.csv](miami2023_data.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable        | Description                                      |
+|-----------------|--------------------------------------------------|
+| driverId        | Unique identifier for each driver                |
+| driverName      | The full name of the driver                      |
+| constructorId   | Unique identifier for each constructor           |
+| constructorName | Commonly used name of each constructor           |
+| lap             | The lap number                                   |
+| lapTime         | The time taken to complete the lap, in seconds   |
+| lapPosition     | The position of the driver at the end of the lap |
+
+</details>
+
+#### Data Source
+
+[Formula 1 World Championship (1950 - 2023)](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020){target="_blank"}
+
+### Materials
+
+[Class handout](Miami2023Worksheet.docx)
+
+[Class handout with sample solutions](Miami2023WorksheetKey.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the analysis of lap time histograms in F1 races have provided valuable insights into the variation of lap times across a single Grand Prix. One notable finding from this worksheet is the highlighting the effect of outliers (like laps with pit stops) has on the overall spread of the data. The sheet finds that by removing outliers, students are able to better see the consistency of lap times on a histogram, and predict how descriptive statistics (like mean and median), would be affected by the removal.
+:::
+
+### Authors
+
+Fill in later

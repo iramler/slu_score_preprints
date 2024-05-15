@@ -1,0 +1,13 @@
+Talking Points for F1 Module
+
+Part 1: Introducing F1
+  - Explain what F1 is and how its become more popular over recent years
+  - Highlight what a typical race consists of and how lap times work
+  - Talk specifically about the 2023 Miami GP (can look at data description/index to highlight all finishers, no red flags, etc.)
+  - Explain briefly what a pitstop is and how while necessary, they affect laptimes  
+  
+Part 2: Module Goals
+  - Talk about the use of histograms for representing data and why they're important (shape, spread, etc.)
+  - Highlight summary statistics (Min, Max, Median, IQR)
+  - Talk about outliers and what they mean in relation to summary statsitics (how they affect data like mean, IQR, etc.)
+  - Mention methods of calculating outliers, either 1.5 IQR rule or z-scores

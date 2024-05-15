@@ -1,5 +1,14 @@
 ---
 title: "2023 Boston Marathon - Variability in Finish Times"
+author:
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Jack Fay
+    affiliation:
+      - ref: slu
 date: May 13, 2024
 description: Describing finish time for runners in the 2023 Boston Marathon
 categories:
@@ -7,10 +16,6 @@ categories:
   - summary statistics
   - bimodal data
 ---
-
-## Module
-
-Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
 ### Welcome video
 
@@ -53,7 +58,9 @@ Since the data are provided, instructors are encouraged to modify the worksheets
 
 The data set contains 26598 rows and 15 columns. Each row represents a runner who completed the Boston Marathon in 2023
 
-Download data: [boston_marathon_2023.csv](boston_marathon_2023.csv)
+Download data: 
+
+Available on the [SCORE Data Repository](https://data.scorenetwork.org/): [boston_marathon_2023.csv](https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/boston_marathon_2023.csv)
 
 <details>
 <summary><b>Variable Descriptions</b></summary>
@@ -86,6 +93,8 @@ Download data: [boston_marathon_2023.csv](boston_marathon_2023.csv)
 
 ### Materials
 
+We provide editable MS Word handouts along with their solutions.
+
 [Class handout](boston_marathon_worksheet.docx)
 
 [Class handout - with solutions](boston_marathon_worksheet-key.docx)
@@ -93,7 +102,3 @@ Download data: [boston_marathon_2023.csv](boston_marathon_2023.csv)
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. It allows them to understand reasons by variability might exist and to discover multimodal distributions can occur simply due to excluding an important explanatory variable that otherwise confounds the analysis. The calculation of z-scores or other similar measurement of relative location enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.
 :::
-
-### Authors
-
-[Ivan Ramler (St. Lawrence University)](mailto:iramler@stlawu.edu), Jack Fay (St. Lawrence University)
