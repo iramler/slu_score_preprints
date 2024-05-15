@@ -81,7 +81,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -220,12 +221,29 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
- <span class="menu-text">Esports</span></a>
+ <span class="menu-text">Diving</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Esports</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
@@ -236,13 +254,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Golf</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
@@ -253,13 +271,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Lacrosse</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
@@ -276,13 +294,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Motor Sports</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -305,13 +323,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
  <span class="menu-text">Multisport</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./multisport/d1_expenditures/index.html" class="sidebar-item-text sidebar-link">
@@ -328,13 +346,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Rodeo Sports</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -345,13 +363,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">Running</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
@@ -368,13 +386,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
  <span class="menu-text">Skiing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
@@ -391,13 +409,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
  <span class="menu-text">Softball</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
@@ -408,13 +426,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
  <span class="menu-text">Triathlon</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -431,13 +449,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
  <span class="menu-text">Volleyball</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
@@ -453,7 +471,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(25)</span></div><div class="category" data-category="ANOVA">ANOVA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Confidence intervals">Confidence intervals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Scraping">Data Scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Difference in Means">Difference in Means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hypothesis Testing">Hypothesis Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Influential Points">Influential Points <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Linear/Logistic Regression">Linear/Logistic Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Model Diagnostics">Model Diagnostics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Multiple Linear Regression">Multiple Linear Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="One sample proportions">One sample proportions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Paired Data">Paired Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Summary Statistics">Summary Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Testing">Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidying data">Tidying data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bimodal data">bimodal data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="correlation">correlation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="difference in two means">difference in two means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histgram interpretation">histgram interpretation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histograms">histograms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hypothesis testing">hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="interactions">interactions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="joining">joining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="linear regression">linear regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="multiple comparisons">multiple comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="outliers">outliers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="single proportion">single proportion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="sql">sql <span class="quarto-category-count">(1)</span></div><div class="category" data-category="summary statistics">summary statistics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="transformations">transformations <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="ANOVA">ANOVA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ANOVA for difference in means">ANOVA for difference in means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Confidence intervals">Confidence intervals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Scraping">Data Scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Difference in Means">Difference in Means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Fisher’s LSD">Fisher’s LSD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hypothesis Testing">Hypothesis Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Influential Points">Influential Points <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Linear/Logistic Regression">Linear/Logistic Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Model Diagnostics">Model Diagnostics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Multiple Linear Regression">Multiple Linear Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="One sample proportions">One sample proportions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Paired Data">Paired Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Pairwise Comparisons">Pairwise Comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Summary Statistics">Summary Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Testing">Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidying data">Tidying data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tukey’s HSD">Tukey’s HSD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bimodal data">bimodal data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="correlation">correlation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="difference in two means">difference in two means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histgram interpretation">histgram interpretation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histograms">histograms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hypothesis testing">hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="interactions">interactions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="joining">joining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="linear regression">linear regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="multiple comparisons">multiple comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="outliers">outliers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="single proportion">single proportion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="sql">sql <span class="quarto-category-count">(1)</span></div><div class="category" data-category="summary statistics">summary statistics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="transformations">transformations <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -671,7 +689,46 @@ Sierra Hess, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1204">
+<div class="quarto-post image-right" data-index="5" data-categories="ANOVA for difference in means,Pairwise Comparisons,Fisher’s LSD,Tukey’s HSD" data-listing-date-sort="1713153600000" data-listing-file-modified-sort="1715802362614" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1165">
+<div class="thumbnail">
+<p><a href="./diving/world_junior_diving/index.html" class="no-external"></a></p><a href="./diving/world_junior_diving/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./diving/world_junior_diving/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./diving/world_junior_diving/index.html" class="no-external">FINA World Junior Championships 2022 Diving Data</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./diving/world_junior_diving/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('ANOVA for difference in means'); return false;">
+ANOVA for difference in means
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Pairwise Comparisons'); return false;">
+Pairwise Comparisons
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Fisher’s LSD'); return false;">
+Fisher’s LSD
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tukey’s HSD'); return false;">
+Tukey’s HSD
+</div>
+</div>
+<div class="listing-description">
+<a href="./diving/world_junior_diving/index.html" class="no-external">Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./diving/world_junior_diving/index.html" class="no-external">
+<div class="listing-date">
+Apr 15, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1204">
 <div class="thumbnail">
 <p><a href="./triathlon/multiple_linear_regression/index.html" class="no-external"></a></p><a href="./triathlon/multiple_linear_regression/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -701,7 +758,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208">
+<div class="quarto-post image-right" data-index="7" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208">
 <div class="thumbnail">
 <p><a href="./triathlon/simple_linear_regression/index.html" class="no-external"></a></p><a href="./triathlon/simple_linear_regression/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -731,7 +788,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="hypothesis testing,single proportion" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2245">
+<div class="quarto-post image-right" data-index="8" data-categories="hypothesis testing,single proportion" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2245">
 <div class="thumbnail">
 <p><a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external"></a></p><a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -764,7 +821,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="difference in two means" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="757">
+<div class="quarto-post image-right" data-index="9" data-categories="difference in two means" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="757">
 <div class="thumbnail">
 <p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external"></a></p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -794,7 +851,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="outliers,summary statistics" data-listing-date-sort="1708491600000" data-listing-file-modified-sort="1715786085811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1050">
+<div class="quarto-post image-right" data-index="10" data-categories="outliers,summary statistics" data-listing-date-sort="1708491600000" data-listing-file-modified-sort="1715786085811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1050">
 <div class="thumbnail">
 <p><a href="./esports/league_of_legends/index.html" class="no-external"></a></p><a href="./esports/league_of_legends/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -830,7 +887,7 @@ Ivan Ramler, George Charalambous, A.J. Dykstra
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="joining,sql" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2831">
+<div class="quarto-post image-right" data-index="11" data-categories="joining,sql" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708350016223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2831">
 <div class="thumbnail">
 <p><a href="./softball/softball_div1/index.html" class="no-external"></a></p><a href="./softball/softball_div1/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -863,7 +920,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="linear regression,transformations" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312365352" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3137">
+<div class="quarto-post image-right" data-index="12" data-categories="linear regression,transformations" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707312365352" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3137">
 <div class="thumbnail">
 <p><a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external"></a></p><a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -896,7 +953,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-listing-file-modified-sort="1715694117308" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
+<div class="quarto-post image-right" data-index="13" data-listing-file-modified-sort="1715694117308" data-listing-reading-time-sort="2" data-listing-word-count-sort="245">
 <div class="thumbnail">
 <p><a href="./multisport/d1_expenditures/index.html" class="no-external"></a></p><a href="./multisport/d1_expenditures/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -921,7 +978,7 @@ Ivan Ramler, Denali Stevens
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="correlation" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707324944546" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2116">
+<div class="quarto-post image-right" data-index="14" data-categories="correlation" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1707324944546" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2116">
 <div class="thumbnail">
 <p><a href="./golf/pga_drive_putt/index.html" class="no-external"></a></p><a href="./golf/pga_drive_putt/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -951,7 +1008,7 @@ Feb 5, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Linear/Logistic Regression,Summary Statistics,Influential Points,Hypothesis Testing" data-listing-date-sort="1709701200000" data-listing-file-modified-sort="1715796440139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2007">
+<div class="quarto-post image-right" data-index="15" data-categories="Linear/Logistic Regression,Summary Statistics,Influential Points,Hypothesis Testing" data-listing-date-sort="1709701200000" data-listing-file-modified-sort="1715796440139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2007">
 <div class="thumbnail">
 <p><a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external"></a></p><a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -993,7 +1050,7 @@ Matt Maslow, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="correlation" data-listing-date-sort="1715140800000" data-listing-file-modified-sort="1715788614721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1064">
+<div class="quarto-post image-right" data-index="16" data-categories="correlation" data-listing-date-sort="1715140800000" data-listing-file-modified-sort="1715788614721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1064">
 <div class="thumbnail">
 <p><a href="./multisport/ski_to_sea_correlations/index.html" class="no-external"></a></p><a href="./multisport/ski_to_sea_correlations/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -1026,7 +1083,7 @@ Sam Peacock, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="Paired Data,Difference in Means" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715788667663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="821">
+<div class="quarto-post image-right" data-index="17" data-categories="Paired Data,Difference in Means" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715788667663" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="821">
 <div class="thumbnail">
 <p><a href="./skiing/giant_slalom_paired/index.html" class="no-external"></a></p><a href="./skiing/giant_slalom_paired/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -1059,7 +1116,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="Tidying data,Data Scraping" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715788179072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="696">
+<div class="quarto-post image-right" data-index="18" data-categories="Tidying data,Data Scraping" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715788179072" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="696">
 <div class="thumbnail">
 <p><a href="./skiing/giant-slalom_cleaning/index.html" class="no-external"></a></p><a href="./skiing/giant-slalom_cleaning/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -1092,7 +1149,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-listing-file-modified-sort="1715276808479">
+<div class="quarto-post image-right" data-index="19" data-listing-file-modified-sort="1715276808479">
 <div class="thumbnail">
 <p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
 </a><p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
@@ -1113,7 +1170,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-listing-file-modified-sort="1715276808480">
+<div class="quarto-post image-right" data-index="20" data-listing-file-modified-sort="1715276808480">
 <div class="thumbnail">
 <p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
 </a><p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
@@ -1134,7 +1191,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-listing-file-modified-sort="1715173953841">
+<div class="quarto-post image-right" data-index="21" data-listing-file-modified-sort="1715173953841">
 <div class="thumbnail">
 <p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
 </a><p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
@@ -1155,7 +1212,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-listing-file-modified-sort="1715173953849">
+<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1715173953849">
 <div class="thumbnail">
 <p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
 </a><p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
@@ -1176,7 +1233,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1715173953852">
+<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1715173953852">
 <div class="thumbnail">
 <p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
 </a><p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
@@ -1197,7 +1254,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1715173953853">
+<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1715173953853">
 <div class="thumbnail">
 <p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
 </a><p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
@@ -1218,7 +1275,7 @@ May 15, 2024
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1715786621573">
+<div class="quarto-post image-right" data-index="25" data-listing-file-modified-sort="1715786621573">
 <div class="thumbnail">
 <p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
 </a><p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
@@ -1243,6 +1300,9 @@ May 15, 2024
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
