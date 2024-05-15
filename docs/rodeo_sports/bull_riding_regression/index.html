@@ -6,7 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-13">
+<meta name="author" content="Matt Maslow">
+<meta name="author" content="Ivan Ramler">
+<meta name="dcterms.date" content="2024-03-06">
 <meta name="description" content="Investigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.">
 
 <title>SLU SCORE Module Preprint Repository - Professional Bull Riding Analysis</title>
@@ -260,6 +262,12 @@ cookieconsent.run({
  <span class="menu-text">NCAA D1 Expenditures</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ski to Sea</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -317,6 +325,12 @@ cookieconsent.run({
  <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -359,6 +373,23 @@ cookieconsent.run({
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+ <span class="menu-text">Volleyball</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Division Three Volleyball Timeouts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -386,8 +417,7 @@ cookieconsent.run({
 <div class="quarto-title">
 <h1 class="title">Professional Bull Riding Analysis</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Linear Regression</div>
-    <div class="quarto-category">Logistic Regression</div>
+    <div class="quarto-category">Linear/Logistic Regression</div>
     <div class="quarto-category">Summary Statistics</div>
     <div class="quarto-category">Influential Points</div>
     <div class="quarto-category">Hypothesis Testing</div>
@@ -400,14 +430,35 @@ cookieconsent.run({
   </div>
 </div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Matt Maslow </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 13, 2024</p>
+      <p class="date">March 6, 2024</p>
     </div>
   </div>
   
@@ -425,7 +476,12 @@ cookieconsent.run({
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>Professional Bull Riding (PBR) is a sport that requires a unique combination of skill, strength, and courage. Riders must stay on a bucking bull as long as they can, using only one hand to hold on while the bull tries to throw them off. The rider is scored based on their performance, and the bull is also scored based on how well it bucks. In this dataset, we will explore the data from the 2023 season of the PBR league, Touring Pro Division, to understand the factors that contribute to a rider’s success and the performance, and the same for the bulls.</p>
-<p>In these worksheets, we will exploring models that predict the points earned by riders and bulls in the 2023 season of the Professional Bull Riding (PBR) league, Touring Pro Division. We will fit multiple linear regression models to predict rider points and logistic regression models to predict bull points. We will interpret the model summary outputs, analyze patterns and trends, identify potential outliers, and test model efficiency.</p>
+<dl>
+<dt>In these worksheets, we will exploring models that predict the points earned by riders and bulls in the 2023 season of the Professional Bull Riding (PBR) league, Touring Pro Division. We will fit multiple linear regression models to predict rider points and logistic regression models to predict bull points. We will interpret the model summary outputs, analyze patterns and trends, identify potential outliers, and test model efficiency.</dt>
+<dd>
+<p><a href="VideoScript.docx">Preliminary script for video</a></p>
+</dd>
+</dl>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -480,8 +536,8 @@ Methods
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 75%">
+<col style="width: 22%">
+<col style="width: 77%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -564,8 +620,8 @@ Methods
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 70%">
+<col style="width: 28%">
+<col style="width: 71%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -630,10 +686,10 @@ Methods
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="pbr-rider.docx">Class handout: Rider’s</a></p>
-<p><a href="AnswerKey_pbr-rider.docx">Class handout: Rider’s - with solutions</a></p>
-<p><a href="pbr-bulls.docx">Class handout: Bull’s</a></p>
-<p><a href="AnswerKey_pbr-bulls.docx">Class handout: Bull’s - with solutions</a></p>
+<p><a href="PBR-riders-handout.qmd">Class handout: Rider’s</a></p>
+<p><a href="Answerkey_pbr_riders.qmd">Class handout: Rider’s - with solutions</a></p>
+<p><a href="PBR-bulls-handout.qmd">Class handout: Bull’s</a></p>
+<p><a href="Answerkey_pbr_bulls.qmd">Class handout: Bull’s - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Matt Maslow">
-<meta name="dcterms.date" content="2024-04-13">
+<meta name="author" content="Ivan Ramler">
+<meta name="dcterms.date" content="2024-03-28">
 <meta name="description" content="Investigating The 2024 Dakar Rally biker rankings and times, throughout all 12 stages.">
 
 <title>SLU SCORE Module Preprint Repository - Dakar Rally Analysis</title>
@@ -261,6 +262,12 @@ cookieconsent.run({
  <span class="menu-text">NCAA D1 Expenditures</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ski to Sea</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -318,6 +325,12 @@ cookieconsent.run({
  <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -360,6 +373,23 @@ cookieconsent.run({
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
+ <span class="menu-text">Volleyball</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Division Three Volleyball Timeouts</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -375,7 +405,6 @@ cookieconsent.run({
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -400,20 +429,35 @@ cookieconsent.run({
   </div>
 </div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Matt Maslow </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Matt Maslow </p>
-          </div>
-  </div>
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 13, 2024</p>
+      <p class="date">March 28, 2024</p>
     </div>
   </div>
   
@@ -431,7 +475,12 @@ cookieconsent.run({
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>The Dakar Rally is an annual off-road endurance event that typically spans over two weeks and covers thousands of kilometers across challenging terrain, and the most recent rally took place in Saudi Arabia. Participants, including motorcyclists, drivers, and truckers, compete in various categories, facing extreme conditions like deserts, mountains, and dunes, making it one of the toughest motor-sport events in the world. For this investigation, we will be looking at the motorist statistics for all 12 stages of race. In this race, riders can drop out or be eliminated after each stage due to various reasons such as mechanical failures, accidents, injuries, or if an rules are violated penalties are applied to riders overall time, affecting their final ranking.</p>
-<p>In this worksheet, we will be exploring the data from the 2024 Dakar Rally, focusing on the biker rankings and times throughout all 12 stages. We will fit multiple linear regression models to predict the rankings of drivers with rider times, and analyze the model summary outputs, patterns and trends, and potential outliers. We will also test the model efficiency and perform a nested-hypothesis test to find the best model.</p>
+<dl>
+<dt>In this worksheet, we will be exploring the data from the 2024 Dakar Rally, focusing on the biker rankings and times throughout all 12 stages. We will fit multiple linear regression models to predict the rankings of drivers with rider times, and analyze the model summary outputs, patterns and trends, and potential outliers. We will also test the model efficiency and perform a nested-hypothesis test to find the best model.</dt>
+<dd>
+<p><a href="VideoScript.docx">Preliminary script for video</a></p>
+</dd>
+</dl>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -486,8 +535,8 @@ Methods
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 17%">
-<col style="width: 82%">
+<col style="width: 18%">
+<col style="width: 81%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -497,35 +546,35 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>Rank</td>
+<td><code>Rank</code></td>
 <td>The ranking of the driver in the competition</td>
 </tr>
 <tr class="even">
-<td>Driver_Number</td>
+<td><code>Driver_Number</code></td>
 <td>The number assigned to the driver in the competition</td>
 </tr>
 <tr class="odd">
-<td>Team</td>
+<td><code>Team</code></td>
 <td>The team to which the driver belongs</td>
 </tr>
 <tr class="even">
-<td>Country</td>
+<td><code>Country</code></td>
 <td>The country of origin of the driver</td>
 </tr>
 <tr class="odd">
-<td>Driver</td>
+<td><code>Driver</code></td>
 <td>The name of the driver</td>
 </tr>
 <tr class="even">
-<td>Hours</td>
+<td><code>Hours</code></td>
 <td>The hours component of the time</td>
 </tr>
 <tr class="odd">
-<td>Minutes</td>
+<td><code>Minutes</code></td>
 <td>The minutes component of the time</td>
 </tr>
 <tr class="even">
-<td>Seconds</td>
+<td><code>Seconds</code></td>
 <td>The seconds component of the time</td>
 </tr>
 <tr class="odd">
@@ -533,35 +582,35 @@ Methods
 <td><em>The variation in time is the difference in time between drivers in their specific ranks</em></td>
 </tr>
 <tr class="even">
-<td>Variation_Hours</td>
+<td><code>Variation_Hours</code></td>
 <td>The hours component of the variation in time</td>
 </tr>
 <tr class="odd">
-<td>Variation_Minutes</td>
+<td><code>Variation_Minutes</code></td>
 <td>The minutes component of the variation in time</td>
 </tr>
 <tr class="even">
-<td>Variation_Seconds</td>
+<td><code>Variation_Seconds</code></td>
 <td>The seconds component of the variation in time</td>
 </tr>
 <tr class="odd">
-<td>Penalty_Hours</td>
+<td><code>Penalty_Hours</code></td>
 <td>The hours component of the penalty time</td>
 </tr>
 <tr class="even">
-<td>Penalty_Minutes</td>
+<td><code>Penalty_Minutes</code></td>
 <td>The minutes component of the penalty time</td>
 </tr>
 <tr class="odd">
-<td>Penalty_Seconds</td>
+<td><code>Penalty_Seconds</code></td>
 <td>The seconds component of the penalty time</td>
 </tr>
 <tr class="even">
-<td>Stage</td>
+<td><code>Stage</code></td>
 <td>The stage number of the competition (0-12 stages)</td>
 </tr>
 <tr class="odd">
-<td>Image_URL</td>
+<td><code>Image_URL</code></td>
 <td>The URL of the image associated with the player/driver/Experience Level</td>
 </tr>
 </tbody>
@@ -575,8 +624,8 @@ Methods
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="DakarRally_worksheet.docx">Class handout</a></p>
-<p><a href="DakarRally_worksheet_Answer_Key.docx">Class handout - with solutions</a></p>
+<p><a href="DakarRally_handout.qmd">Class handout</a></p>
+<p><a href="AnswerKey_DakarRally.qmd">Class handout - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -593,10 +642,6 @@ Conclusion
 </div>
 </div>
 </div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Created by Matthew Maslow (St.&nbsp;Lawrence University), <a href="mailto:iramler@stlawu.edu">Ivan Ramler (St.&nbsp;Lawrence University)</a></p>
 
 
 </section>

@@ -1,0 +1,99 @@
+---
+title: "Ski to Sea"
+date: May 8, 2024
+author:
+  - name: Sam Peacock
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+description: Using Ski to Sea results data to see which leg (sport) is more strongly related to a team's overall finish time. 
+editor: 
+  canonical: true
+categories:
+  - correlation
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+The Ski to Sea race is a multi-sport relay race held annually in Whatcom County, Washington. The race consists of seven legs: cross-country skiing, downhill skiing or snowboarding, running, road biking, canoeing, mountain biking, and kayaking, with each leg representing a different outdoor sport. A team will consist of one person for each leg of the race, except for the canoe leg which has two paddlers per canoe. Racers are allowed to compete in multiple legs of the race. A team must have a minimum of three racers and a maximum of eight, with a maximum of three legs per individual. The canoe leg must have two participants regardless of the number or racers per team. The Ski to Sea Race does not allow individuals to complete all legs of the race.
+
+This module focuses on analyzing which leg of the race is most important to a team's success for the Ski to Sea Race. Focusing on the correlation of time in minutes taken to complete each leg, this module examines the relative importance of each leg in contributing to the overall time in the Ski to Sea race.
+
+The dataset for this activity was obtained from the [Ski to Sea Website](https://skitosea.pacificmultisports.com/results)
+
+Each row of data provides the leg race times in minutes for a team in a given year. Each row is distinguished by a team name (*Team Name*) for a given year (*Year*). The time variables include (*canoe_minutes*), (*xcski_minutes*), (*downhill_minutes*), (*kayak_minutes*), (*run_minutes*), (*xcbike_minutes*), and (*roadbike_minutes*). These time variables make up the (*overall_minutes*) variable. The dataset covers 11 Ski to Sea Races from 2009-2019 with 5197 cases in all. Each race consists of seven legs: canoe, cross country ski, downhill ski, kayak, road bike, run, and cross country bike. It is important to note that rows that contained NAs were omitted.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+The learning objectives associated with this module are:
+
+-   Students will be able to use correlation to measure the strength association between quantitative variables.
+-   Checking regression model assumptions
+-   Students will be able to compare correlations to assess which variables may be more strongly related.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+This module requires students compare correlations between pairs of variables.
+
+Technology requirement: Two handout activities accommodate different levels of available technology.
+
+-   The "No Tech version" provides a correlation matrix for students to use to find the required correlations to compare.
+
+-   The "With Tech" version provides the dataset and asks students to use technology to compute the needed correlations.
+:::
+
+### Data
+
+Each row of data provides the leg race times in minutes for one team in a given year. The dataset covers 11 Ski to Sea Races from 2009-2019 with 5197 cases in all. Each race consists of seven legs: canoe, cross country ski, downhill ski, kayak, road bike, run, and cross country bike. It is important to note that rows that contained NAs were omitted.
+
+Download data:[Ski_to_Sea_Data.csv](Ski_to_Sea_Data.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable           | Description                                                        |
+|------------------|------------------------------------------------------|
+| `Year`             | The year the race took place (2009-2019)                           |
+| `Team Name`        | The team's name                                                    |
+| `canoe_minutes`    | The amount of minutes taken to complete the canoe leg              |
+| `xcski_minutes`    | The amount of minutes taken to complete the cross country ski leg  |
+| `downhill_minutes` | The amount of minutes taken to complete the downhill ski leg       |
+| `kayak_minutes`    | The amount of minutes taken to complete the kayak leg              |
+| `roadbike_minutes` | The amount of minutes taken to complete the road bike leg          |
+| `run_minutes`      | The amount of minutes taken to complete the run leg                |
+| `xcbike_minutes`   | The amount of minutes taken to complete the cross country bike leg |
+| `overall_minutes`  | The amount of minutes taken to complete the entire race            |
+
+**Data Source**
+
+The data were obtained from the [Ski to Sea Website](https://skitosea.pacificmultisports.com/results)
+
+</details>
+
+### Materials
+
+The data and worksheet associated with this module are available for download through the following links.
+
+[Ski_to_Sea_Data.csv](Ski_to_Sea_Data.csv) - Dataset with team name, year, and time measures for each leg of the Ski to Sea Race from 2009-2019.
+
+[SkiToSeaCorrelationsNoTech.docx](SkiToSeaCorrelationsNoTech.docx)- "No Tech" version of the activity worksheet provides a correlation matrix for students to use in answering the questions.
+
+[SkiToSeaCorrelationsWithTech.docx](SkiToSeaCorrelationsWithTech.docx) - "With Tech" version of the activity worksheet assumes students have technology to compute any needed correlations from the provided dataset.
+
+Sample solutions to the worksheets
+
+[SkiToSeaCorrelationsNoTech-Ans.docx](SkiToSeaCorrelationsNoTech-Ans.docx)- Sample solutions to the "No Tech" version of the activity worksheet.
+
+[SkiToSeaCorrelationsWithTech-Ans.docx](SkiToSeaCorrelationsWithTech-Ans.docx) - Sample solutions to the "With Tech" version of the activity worksheet.
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Students should find evidence to support the claim that, overall, the kayak leg is the best predictor of overall finish time than other legs. Based on this strong, positive correlation, teams should prioritize their efforts in the kayak leg as this is most closely associated with the overall finish time.
+:::
