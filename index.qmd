@@ -53,7 +53,7 @@ c("index.qmd", "lax_2022_2023.csv", "single_prop_wksht.docx", "single_prop_wksht
 c("index.qmd", "lacrosse_pll_nll_2021-2022.csv", "lacrosse_pll_vs_nll_worksheet.docx", "lacrosse_pll_vs_nll_worksheet_key.docx"),
 
 # slalom cleaning files
-c( "index.qmd", "_Tremblant_Cleaning_Worksheet_Key.qmd", "Tremblant_Cleaning_Module_Script.docx", 
+c( "index.qmd", "Tremblant_Cleaning_Worksheet_Key.qmd", "Tremblant_Cleaning_Module_Script.docx", 
 "Tremblant_Cleaning_Worksheet.docx", "Tremblant_Data.csv")
     )
 )
@@ -64,9 +64,13 @@ collapsibleTree(main, c("Sport", "Module", "files"), collapsed = TRUE, fillByLev
 This diagram was made using the [collapsibleTree](https://CRAN.R-project.org/package=collapsibleTree){target="_blank"} package.
 </div>
     
-Tips:
+
+
+<!--
+Tip:
 
 * Be sure to modify the _quarto.yml file to match your institution's information
 
-* Notice the underscore at the beginning of the filename in the Quarto (.qmd) file in the skiing module ("_Tremblant_Cleaning_Worksheet_Key.qmd"). This is done to ensure that it isn't rendered into an html page and is instead just provided as a raw file. (Individuals willing to invest more time into customizing their _quarto.yml file can likely avoid this step.)
 
+* Notice the underscore at the beginning of the filename in the Quarto (.qmd) file in the skiing module ("_Tremblant_Cleaning_Worksheet_Key.qmd"). This is done to ensure that it isn't rendered into an html page and is instead just provided as a raw file. (Individuals willing to invest more time into customizing their _quarto.yml file can likely avoid this step.)
+-->

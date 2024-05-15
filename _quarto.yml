@@ -1,7 +1,11 @@
 project:
   type: website
   output-dir: docs
-
+  render: 
+    - "index.qmd"
+    - "*/*/index.qmd"
+    - "by-statsds-topic.qmd"
+    
 website:
   google-analytics: "G-JVDQHPRYT1"
   cookie-consent:

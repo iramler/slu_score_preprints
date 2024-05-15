@@ -66,7 +66,7 @@ The data was scraped from the following link: [FIS World Cup Women's GS at Tremb
 
 [Class Worksheet](Tremblant_Cleaning_Worksheet.docx) (Word)
 
-[Class Worksheet Key](_Tremblant_Cleaning_Worksheet_Key.qmd) (Quarto file)
+[Class Worksheet Key](Tremblant_Cleaning_Worksheet_Key.qmd) (Quarto file)
 
 ### Authors
 
