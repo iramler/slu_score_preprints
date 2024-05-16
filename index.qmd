@@ -8,16 +8,15 @@ The [SCORE Network](https://scorenetwork.org/index.html){target="_blank"} Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
-_The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705)._
-
+*The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).*
 
 **Contributing and/or Joining the SCORE Network**
 
-- If you are interested in contributing to and/or joining the SCORE Network, please check out [https://scorenetwork.org/index.html](https://scorenetwork.org/index.html){target="_blank"}.
+-   If you are interested in contributing to and/or joining the SCORE Network, please check out [https://scorenetwork.org/index.html](https://scorenetwork.org/index.html){target="_blank"}.
 
-- If you are interested in creating a page similar to this to host your own "in development modules", please feel free to copy the associated Github repository: [https://github.com/iramler/slu_score_preprints](https://github.com/iramler/slu_score_preprints){target="_blank"}.
+-   If you are interested in creating a page similar to this to host your own "in development modules", please feel free to copy the associated Github repository: [https://github.com/iramler/slu_score_preprints](https://github.com/iramler/slu_score_preprints){target="_blank"}.
 
-    + The basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. For example, see the interactive diagram below (and compare it to the associated files/direcotries in the repository linked above).
+    -   The basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. For example, see the interactive diagram below (and compare it to the associated files/direcotries in the repository linked above).
 
 ```{css echo=FALSE}
 .bordered{
@@ -25,8 +24,8 @@ _The development of the SCORE with Data network is funded by the National Scienc
 }
 ```
 
-<div class="bordered">
-```{r, echo=FALSE}
+::: bordered
+```{r, echo=FALSE, warning=FALSE}
 library(collapsibleTree) |> suppressPackageStartupMessages()
 
 main <- data.frame(
@@ -62,10 +61,9 @@ collapsibleTree(main, c("Sport", "Module", "files"), collapsed = TRUE, fillByLev
 ```
 
 This diagram was made using the [collapsibleTree](https://CRAN.R-project.org/package=collapsibleTree){target="_blank"} package.
-</div>
-    
+:::
 
-
+```{=html}
 <!--
 Tip:
 
@@ -74,3 +72,4 @@ Tip:
 
 * Notice the underscore at the beginning of the filename in the Quarto (.qmd) file in the skiing module ("_Tremblant_Cleaning_Worksheet_Key.qmd"). This is done to ensure that it isn't rendered into an html page and is instead just provided as a raw file. (Individuals willing to invest more time into customizing their _quarto.yml file can likely avoid this step.)
 -->
+```

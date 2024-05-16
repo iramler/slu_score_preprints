@@ -6,12 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Eric Seltzer">
-<meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2024-03-08">
-<meta name="description" content="Demonstrating how to clean data with different packages and summarise the data using dplyr.">
+<meta name="author" content="Abigail Smith">
+<meta name="author" content="Robin Lock">
+<meta name="dcterms.date" content="2024-05-16">
+<meta name="description" content="Times and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.">
 
-<title>SLU SCORE Module Preprint Repository - Beijing 2022 Olympics - Cleaning and Summarizing Data</title>
+<title>SLU SCORE Module Preprint Repository - World Cup Women’s 10k Classic Nordic Ski Race - Splits</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,7 +134,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../multisport/d1_expenditures/index.html">Multisport</a></li><li class="breadcrumb-item"><a href="../../multisport/olympics_beijing_medals/index.html">Beijing 2022 Olympics - Cleaning and Summarizing Data</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../skiing/giant-slalom_cleaning/index.html">Skiing</a></li><li class="breadcrumb-item"><a href="../../skiing/nordic_ski_10k_splits/index.html">World Cup Women’s 10k Classic Nordic Ski Race - Splits</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -274,13 +274,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Multisport</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../multisport/d1_expenditures/index.html" class="sidebar-item-text sidebar-link">
@@ -289,7 +289,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beijing 2022 Olympics - Cleaning and Summarizing Data</span></a>
   </div>
 </li>
@@ -343,13 +343,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true">
  <span class="menu-text">Skiing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
@@ -364,7 +364,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">World Cup Women’s 10k Classic Nordic Ski Race - Splits</span></a>
   </div>
 </li>
@@ -451,17 +451,17 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Beijing 2022 Olympics - Cleaning and Summarizing Data</h1>
+<h1 class="title">World Cup Women’s 10k Classic Nordic Ski Race - Splits</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">data cleaning</div>
-    <div class="quarto-category">summarization</div>
-    <div class="quarto-category">merging</div>
+    <div class="quarto-category">Simple linear regression</div>
+    <div class="quarto-category">Correlation</div>
+    <div class="quarto-category">Randomized block ANOVA</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Demonstrating how to clean data with different packages and summarise the data using dplyr.
+    Times and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.
   </div>
 </div>
 
@@ -470,7 +470,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Eric Seltzer </p>
+    <p class="author">Abigail Smith </p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -478,7 +478,7 @@ cookieconsent.run({
           </p>
       </div>
       <div class="quarto-title-meta-contents">
-    <p class="author">Ivan Ramler </p>
+    <p class="author">Robin Lock </p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -493,7 +493,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 8, 2024</p>
+      <p class="date">May 16, 2024</p>
     </div>
   </div>
   
@@ -508,8 +508,8 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The Winter Olympics is an event hosted every 4 years last hosted in Beijing in 2022. In the 2022 Olympics, there were a total of 109 events across 15 <a href="https://en.wikipedia.org/wiki/2022_Winter_Olympics#:~:text=.%5B62%5D-,Sports,-%5Bedit%5D" target="_blank">disciplines</a>. It also has any more information on the Beijing 2022 Olympics you might be looking for. As the whole goal of the Olympics is to win as many medals as you can, everything is tracked. From the athlete, where they were born, if they won, their height, how many medals they won. This provides large data sets that are very interesting to look at.</p>
-<p>In this worksheet, we will look at some of these data sets and learn how to clean them into tidy formats and use these cleaned data to investigate questions such as which country won the most medals. Cleaning and manipulating data sets is a key component to your Data Science journey and opens many doors for what you can learn in the future.</p>
+<p>The International Ski and Snowboard Federation (FIS), organizes and records a series of events such as the World Cup which exists for all disciplines of FIS such as Nordic Skiing. World Cup races occur every weekend between January and March, with events hosted in different countries. These events consist of multiple different races, held in different disciplines and distances. Nordic skiing is split up into two different techniques, classic and skate, all race weekends have a mixture of skate and classic technique races. The race in this dataset is a womens’ 10k classic race set in Trondheim, Norway. In long distance pieces like 10ks there is often a lot of discussion about pacing. Racers’ times are recorded at different distance intervals throughout the course. It is interesting to look at how well racers’ times at different distances predict their rank at the end of the race. For example, do the racers who have top times at an early distance have good ranks at the end of the race?</p>
+<p><a href="script.docx">Preliminary video ideas</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -524,10 +524,9 @@ Learning Objectives
 <div class="callout-body-container callout-body">
 <p>By the end of this activity, you will be able to:</p>
 <ol type="1">
-<li><p>Understand how to deal with columns that have incorrect variable types.</p></li>
-<li><p>Describe what is considered a tidy data set.</p></li>
-<li><p>Manipulate variables into either new variables, or changed versions of themselves.</p></li>
-<li><p>Summarize key points and provide interpretations for these points.</p></li>
+<li><p>Fit a linear regression model.</p></li>
+<li><p>Assess a correlation.</p></li>
+<li><p>Look at and ANOVA model for a randomized block design</p></li>
 </ol>
 </div>
 </div>
@@ -544,26 +543,24 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.</p>
-<ol type="1">
-<li><p>RStudio Packages: Familiarity with packages within RStudio. The most used one being dplyr, as well as some other packages that need to be used in order to manipulate variables. You should understand how to use functions within dplyr at a basic level</p></li>
-<li><p>Tidy Data: You should understand what it means for a data set to be tidy, there is a general definition of requirements for what this means.</p></li>
-<li><p>Knowledge of joining and summarizing data, this can be done using dplyr functions. The outcomes of what these different functions do should be understood.</p></li>
-</ol>
+<p>To be written</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>There are two data sets here, athletes and medals.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.</p>
-<p>Download non tidy data: <a href="data/athletes.csv">athletes.csv</a></p>
-<p><strong>Athletes</strong></p>
+<p>Each row of the dataset represents a skier in the womens’ 10k classic ski race in Trondheim. There are 61 racers in the dataset and 24 variables. The “splits” record rank, time, and sped at four points in the race 1=1.3 km, 2=4.3 km, 3=7.5 km, and 4=10 km (finish).</p>
+<p>Download data: <a href="Nordic10K_ski_speeds.csv">Nordic10K_ski_speeds.csv</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
 </summary>
 <table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
@@ -572,73 +569,115 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>name</td>
-<td>Athlete Name</td>
+<td>Bib</td>
+<td>The bib number of the skier, which also represents the order they started in.</td>
 </tr>
 <tr class="even">
-<td>short_name</td>
-<td>Athlete Name(short)</td>
+<td>Name</td>
+<td>The name of the skier.</td>
 </tr>
 <tr class="odd">
-<td>gender</td>
-<td>Athlete Gender</td>
+<td>NSA</td>
+<td>The nation a skier is representing.</td>
 </tr>
 <tr class="even">
-<td>birth_date</td>
-<td>Athlete Date of Birthday</td>
+<td>Rank1</td>
+<td>The rank or placement of skiers at the first distance interval.</td>
 </tr>
 <tr class="odd">
-<td>birth_place</td>
-<td>Athlete Place of Birthday</td>
+<td>Time1</td>
+<td>The skier’s time at the first distance interval, measured in minutes.</td>
 </tr>
 <tr class="even">
-<td>birth_country</td>
-<td>Athlete Country of Birthday</td>
+<td>Diff1</td>
+<td>The difference of time between each skier and the first place racer, at the first distance interval, measured in seconds.</td>
 </tr>
 <tr class="odd">
-<td>country</td>
-<td>Athlete Country</td>
+<td>Dist1</td>
+<td>The distance of the first interval, measured in kilometers.</td>
 </tr>
 <tr class="even">
-<td>country_code</td>
-<td>Athlete Country Code</td>
+<td>Rank2</td>
+<td>The rank or placement of skiers at the first distance interval.</td>
 </tr>
 <tr class="odd">
-<td>discipline</td>
-<td>Discipline</td>
+<td>Time2</td>
+<td>The skier’s time at the first distance interval, measured in minutes.</td>
 </tr>
 <tr class="even">
-<td>discipline_code</td>
-<td>Discipline Code</td>
+<td>Diff2</td>
+<td>The difference of time between each skier and the first place racer, at the second distance interval, measured in seconds.</td>
 </tr>
 <tr class="odd">
-<td>residence_place</td>
-<td>Athlete Residence Place</td>
+<td>Dist2</td>
+<td>The distance of the second interval, measured in kilometers.</td>
 </tr>
 <tr class="even">
-<td>residence_country</td>
-<td>Athlete Residence Country</td>
+<td>Rank3</td>
+<td>The rank or placement of skiers at the third distance interval.</td>
 </tr>
 <tr class="odd">
-<td>height_m/ft</td>
-<td>Athlete Height (meters and feet)</td>
+<td>Time3</td>
+<td>The skier’s time at the third distance interval, measured in minutes.</td>
 </tr>
 <tr class="even">
-<td>url</td>
-<td>Athlete Profile Link</td>
+<td>Diff3</td>
+<td>The difference of time between each skier and the first place racer, at the third distance interval, measured in seconds.</td>
+</tr>
+<tr class="odd">
+<td>Dist3</td>
+<td>The distance of the third interval, measured in kilometers.</td>
+</tr>
+<tr class="even">
+<td>Rank4</td>
+<td>The rank or placement of skiers at the fourth distance interval.</td>
+</tr>
+<tr class="odd">
+<td>Time4</td>
+<td>The skier’s time at the fourth distance interval, measured in minutes.</td>
+</tr>
+<tr class="even">
+<td>Diff4</td>
+<td>The difference of time between each skier and the first place racer, at the fourth distance interval, measured in seconds.</td>
+</tr>
+<tr class="odd">
+<td>Dist4</td>
+<td>The distance of the fourth interval, measured in kilometers.</td>
+</tr>
+<tr class="even">
+<td>Event</td>
+<td>The FIS code assigned to the event.</td>
+</tr>
+<tr class="odd">
+<td>Speed1</td>
+<td>Speed (km/min) over the first split (1.3K)</td>
+</tr>
+<tr class="even">
+<td>Speed1</td>
+<td>Speed (km/min) over the second split (1.3K-4.3K)</td>
+</tr>
+<tr class="odd">
+<td>Speed1</td>
+<td>Speed (km/min) over the third split (4.3K-7.5K)</td>
+</tr>
+<tr class="even">
+<td>Speed1</td>
+<td>Speed (km/min) over the fourth split (7.5K-10K)</td>
 </tr>
 </tbody>
 </table>
 </details>
-<p>The second medals contains information on medal winners. Each row in this data set represents a medal won in the Beijing 2022 Olympic Winter Games. This can mean Gold, Bronze, or Silver medals. This data set has 694 rows and 12 columns.</p>
-<p>Download non tidy data: <a href="medals.csv">medals.csv</a></p>
-<p>Download tidy data: <a href="medalsTidy.csv">medalsTidy.csv</a></p>
-<p><strong>Medals</strong></p>
+<p>A revised version of the data set stacks the speeds into a single column with another variable identifying the split and a third with the skier’s name. This version has 236 rows for the three variables.</p>
+<p>Download data: <a href="Stacked_Nordic10K_ski_speeds.csv">Stacked_Nordic10K_ski_speeds.csv</a></p>
 <details>
 <summary>
-<b>Variable Descriptions</b>
+<b>Variable Descriptions - stacked version</b>
 </summary>
 <table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
@@ -647,65 +686,29 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>medal_type</td>
-<td>Medal Type (Gold, Bronze, Silver)</td>
+<td>Speed</td>
+<td>Speed over the split (km/minute)</td>
 </tr>
 <tr class="even">
-<td>medal_code</td>
-<td>Medal Number (1, 2, 3)</td>
+<td>SpeedInterval</td>
+<td>Spped1, Spped2, Spped3, or Speed4</td>
 </tr>
 <tr class="odd">
-<td>medal_date</td>
-<td>Date Medal Won</td>
-</tr>
-<tr class="even">
-<td>athlete_short_name</td>
-<td>Athlete Name (Short)</td>
-</tr>
-<tr class="odd">
-<td>athlete_name</td>
-<td>Athlete Name</td>
-</tr>
-<tr class="even">
-<td>athlete_sex</td>
-<td>Athlete Gender</td>
-</tr>
-<tr class="odd">
-<td>athlete_link</td>
-<td>Athlete Profile Link</td>
-</tr>
-<tr class="even">
-<td>event</td>
-<td>Event Competed In</td>
-</tr>
-<tr class="odd">
-<td>country</td>
-<td>Country</td>
-</tr>
-<tr class="even">
-<td>country_code</td>
-<td>Country Code</td>
-</tr>
-<tr class="odd">
-<td>discipline</td>
-<td>Discipline</td>
-</tr>
-<tr class="even">
-<td>discipline_code</td>
-<td>Discipline Code</td>
+<td>Name</td>
+<td>The name of the skier</td>
 </tr>
 </tbody>
 </table>
 </details>
 <section id="data-source" class="level4">
 <h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p><a href="https://www.kaggle.com/datasets/piterfm/beijing-2022-olympics?resource=download" target="_blank">Beijing 2022 Winter Olympic Games</a></p>
+<p>Trondheim 4th World Cup Stage - Women’s Interval Start 10.0 km Classic results via the FIS website at <a href="https://live.fis-ski.com/cc-2257/results-pda.htm" class="uri">https://live.fis-ski.com/cc-2257/results-pda.htm</a></p>
 </section>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Class-Handout.qmd">Class Handout</a></p>
-<p><a href="Class-Handout-Solutions.qmd">Class Handout - Solutions</a></p>
+<p><a href="Nordic10kWorksheet.docx">Class handout</a></p>
+<p><a href="Nordic10kWorksheetKey.docx">Class handout - Key</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -718,7 +721,7 @@ Conclusion
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Forthcoming</p>
+<p>To Be Written …</p>
 </div>
 </div>
 </div>

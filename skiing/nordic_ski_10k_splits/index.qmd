@@ -1,0 +1,118 @@
+---
+title: "World Cup Women's 10k Classic Nordic Ski Race - Splits"
+date: May 16, 2024
+author:
+  - name: Abigail Smith
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
+description: Times and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.
+editor: 
+  canonical: true
+categories:
+  - Simple linear regression
+  - Correlation
+  - Randomized block ANOVA
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+The International Ski and Snowboard Federation (FIS), organizes and records a series of events such as the World Cup which exists for all disciplines of FIS such as Nordic Skiing. World Cup races occur every weekend between January and March, with events hosted in different countries. These events consist of multiple different races, held in different disciplines and distances. Nordic skiing is split up into two different techniques, classic and skate, all race weekends have a mixture of skate and classic technique races. The race in this dataset is a womens' 10k classic race set in Trondheim, Norway. In long distance pieces like 10ks there is often a lot of discussion about pacing. Racers' times are recorded at different distance intervals throughout the course. It is interesting to look at how well racers' times at different distances predict their rank at the end of the race. For example, do the racers who have top times at an early distance have good ranks at the end of the race? 
+
+[Preliminary video ideas](script.docx)
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Fit a linear regression model.
+
+2.  Assess a correlation.
+
+3.  Look at and ANOVA model for a randomized block design
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+To be written
+:::
+
+### Data
+
+Each row of the dataset represents a skier in the womens' 10k classic
+ski race in Trondheim. There are 61 racers in the dataset and 24 variables.
+The "splits" record rank, time, and sped at four points in the race 1=1.3 km, 2=4.3 km, 3=7.5 km, and 4=10 km (finish). 
+
+Download data: [Nordic10K_ski_speeds.csv](Nordic10K_ski_speeds.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description                      |
+|-------------------|-----------------------------------------------------|
+| Bib      | The bib number of the skier, which also represents the order they started in.                                              |
+| Name     | The name of the skier.                                                                                                     |
+| NSA      | The nation a skier is representing.                                                                                        |
+| Rank1    | The rank or placement of skiers at the first distance interval.                                                            |
+| Time1    | The skier's time at the first distance interval, measured in minutes.                                                      |
+| Diff1    | The difference of time between each skier and the first place racer, at the first distance interval, measured in seconds.  |
+| Dist1    | The distance of the first interval, measured in kilometers.                                                                |
+| Rank2    | The rank or placement of skiers at the first distance interval.                                                            |
+| Time2    | The skier's time at the first distance interval, measured in minutes.                                                      |
+| Diff2    | The difference of time between each skier and the first place racer, at the second distance interval, measured in seconds. |
+| Dist2    | The distance of the second interval, measured in kilometers.                                                               |
+| Rank3    | The rank or placement of skiers at the third distance interval.                                                            |
+| Time3    | The skier's time at the third distance interval, measured in minutes.                                                      |
+| Diff3    | The difference of time between each skier and the first place racer, at the third distance interval, measured in seconds.  |
+| Dist3    | The distance of the third interval, measured in kilometers.                                                                |
+| Rank4    | The rank or placement of skiers at the fourth distance interval.                                                           |
+| Time4    | The skier's time at the fourth distance interval, measured in minutes.                                                     |
+| Diff4    | The difference of time between each skier and the first place racer, at the fourth distance interval, measured in seconds. |
+| Dist4    | The distance of the fourth interval, measured in kilometers.                                                               |
+| Event    | The FIS code assigned to the event.                                                                                        |
+| Speed1   | Speed (km/min) over the first split (1.3K)       |
+| Speed1   | Speed (km/min) over the second split (1.3K-4.3K)       |
+| Speed1   | Speed (km/min) over the third split (4.3K-7.5K)       |
+| Speed1   | Speed (km/min) over the fourth split (7.5K-10K)       |
+
+</details>
+
+A revised version of the data set stacks the speeds into a single column with another variable identifying the split and a third with the skier's name.  This version has 236 rows for the three variables. 
+
+Download data: [Stacked_Nordic10K_ski_speeds.csv](Stacked_Nordic10K_ski_speeds.csv)
+
+<details>
+<summary><b>Variable Descriptions - stacked version</b></summary>
+
+| Variable          | Description                      |
+|-------------------|-----------------------------------------------------|
+| Speed      | Speed over the split (km/minute)            |
+| SpeedInterval |  Spped1, Spped2, Spped3, or Speed4   |
+| Name |  The name of the skier            |                                           
+</details>
+
+#### Data Source
+
+Trondheim 4th World Cup Stage - Women's Interval Start 10.0 km Classic results via the FIS website at  <https://live.fis-ski.com/cc-2257/results-pda.htm>
+
+### Materials
+
+[Class handout](Nordic10kWorksheet.docx)
+
+[Class handout - Key](Nordic10kWorksheetKey.docx)
+
+
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+
+To Be Written ...
+:::
+
+
