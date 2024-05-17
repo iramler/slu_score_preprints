@@ -2,6 +2,15 @@
 title: "FINA World Junior Championships 2022 Diving Data"
 date: April 15, 2024
 description: Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.
+author:
+  - name: Emma Deering
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
 editor: 
   canonical: true
 categories:
@@ -93,6 +102,3 @@ World Aquatics. (2022). FINA World Junior Diving Championships 2022. <https://ww
 To Be Written ...
 :::
 
-### Authors
-
-Fill in later
