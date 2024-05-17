@@ -14,9 +14,9 @@ description: Demonstrating how to clean data with different packages and summari
 editor: 
   canonical: true
 categories:
-  - data cleaning
-  - summarization
-  - merging
+  - Data cleaning
+  - Summarization
+  - Merging
 ---
 
 ## Module

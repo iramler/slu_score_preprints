@@ -2,9 +2,23 @@
 title: "Lacrosse Faceoff Proportions"
 date: February 5, 2024
 description: Using data from NCAA Div I lacrosse teams to explore the importance of winning faceoffs
+author:
+  - name: Jack Fay
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+  - name: A.J. Dykstra
+    affiliation:
+    - ref: slu
+editor: 
+  canonical: true      
 categories:
-  - hypothesis testing
-  - single proportion
+  - Hypothesis testing
+  - Single proportion
 ---
 
 ## Module
@@ -83,6 +97,3 @@ Data collected from the NCAA Website for Men's Lacrosse Division I
 In this insightful exploration of NCAA Division I Lacrosse faceoff percentages, we have embarked on a statistical journey to evaluate a specific team's performance in comparison to league-wide statistics. Through the application of one sample proportion hypothesis testing, we gained valuable insights into the team's faceoff win percentage, unveiling strong evidence that their performance exceeded what we would expect by random chance alone. As we consider the broader implications of faceoffs in Division I Lacrosse, it becomes evident that faceoff wins play a pivotal role in team rankings and outcomes. The fact that Duke, the second-best team in the country, exhibited a faceoff win percentage above the league average highlights the significance of excelling in this aspect of the game. Winning faceoffs likely translates to higher goal-scoring opportunities, ultimately leading to more successful game outcomes.
 :::
 
-### Authors
-
-Fill in later

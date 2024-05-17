@@ -2,12 +2,21 @@
 title: "Analyzing Lap Times for the 2023 F1 Miami Grand Prix"
 date: May 15, 2024
 description: Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix
+author:
+  - name: Norah Kuduk
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
 editor: 
   canonical: true
 categories:
-  - summary statistics
-  - histgram interpretation
-  - outliers
+  - Summary statistics
+  - Histgram interpretation
+  - Outliers
 ---
 
 ## Module

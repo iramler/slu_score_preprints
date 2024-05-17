@@ -2,9 +2,22 @@
 title: "NASCAR Transformation Module"
 date: February 5, 2024
 description: Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.
+author:
+  - name: Alyssa Bigness
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+  - name: Jack Fay
+    affiliation:
+    - ref: slu
 categories:
-  - linear regression
-  - transformations
+  - Linear regression
+  - Transformations
+  - Polynomial regression
 ---
 
 ## Module
@@ -68,6 +81,3 @@ Download data: [nascar_driver_statistics.csv](nascar_driver_statistics.csv)
 In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver's performance. 
 :::
 
-### Authors
-
-Fill in later

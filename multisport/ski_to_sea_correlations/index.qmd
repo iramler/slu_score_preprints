@@ -14,7 +14,7 @@ description: Using Ski to Sea results data to see which leg (sport) is more stro
 editor: 
   canonical: true
 categories:
-  - correlation
+  - Correlation
 ---
 
 ## Module

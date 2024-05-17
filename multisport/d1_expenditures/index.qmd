@@ -1,13 +1,26 @@
 ---
 title: "NCAA D1 Expenditures"
-author: Ivan Ramler, Denali Stevens
-standalone: true
+date: May 17, 2024
+description: Something with expenditures by sport.
+author:
+  - name: Denali Stevens
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+editor: 
+  canonical: true
+categories:
+  - Side-by-side boxplots
 ---
 
 We have data on the reported revenues and expenditures of NCAA D1 schools by sport (for 2019). 
 
 
-```{r, echo = FALSE}
+```{r, messages=FALSE, warnings=FALSE, echo = FALSE}
 library(tidyverse) |> suppressPackageStartupMessages()
 library(crosstalk) |> suppressPackageStartupMessages()
 library(plotly) |> suppressPackageStartupMessages()
