@@ -2,6 +2,15 @@
 title: "PGA - Drive for Show, Putt for Dough?"
 date: February 5, 2024
 description: Using tournament data for professional golfers to see if driving or putting are more strongly related to success.
+author:
+  - name: Alyssa Bigness
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
 editor: 
   canonical: true
 categories:

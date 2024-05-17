@@ -2,8 +2,22 @@
 title: "Lacrosse PLL vs. NLL"
 date: February 5, 2024
 description: Comparing scoring rates between indoor and outdoor profesional lacrosse leagues.
+author:
+  - name: Jack Cowan
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+  - name: A.J. Dykstra
+    affiliation:
+    - ref: slu
+editor: 
+  canonical: true
 categories:
-  - difference in two means
+  - Difference in two means
 ---
 
 ## Module
@@ -84,6 +98,4 @@ Sample solutions to the worksheets
 Students should that while no discernible difference between average goals per game was discovered, after adjusting for the length of the game, PLL (i.e., the 48-minute outdoor league) has the higher rate per 48-minutes.
 :::
 
-### Authors
 
-Fill in later
