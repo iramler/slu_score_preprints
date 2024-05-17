@@ -1,5 +1,5 @@
 ---
-title: "WNBA Data Module"
+title: "WNBA Data Cleaning Module"
 date: "2024-05-15"
 author:
   - name: Kristen Varin
