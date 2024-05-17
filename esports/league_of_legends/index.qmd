@@ -18,8 +18,8 @@ description: Investigating game play statistics for League of Legends champions 
 editor: 
   canonical: true
 categories:
-  - outliers
-  - summary statistics
+  - Outliers
+  - Summary statistics
 ---
 
 

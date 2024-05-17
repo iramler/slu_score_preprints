@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -114,6 +121,8 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"en"
   });
 });
 </script> 
@@ -122,15 +131,42 @@ cookieconsent.run({
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SLU SCORE Module Preprint Repository</span>
     </a>
@@ -142,38 +178,38 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./by-statsds-topic.html" rel="" target="" aria-current="page">
- <span class="menu-text">Modules By Topic</span></a>
+    <a class="nav-link active" href="./by-statsds-topic.html" aria-current="page"> 
+<span class="menu-text">Modules By Topic</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://data.scorenetwork.org/" rel="" target="">
- <span class="menu-text">Data Repository</span></a>
+    <a class="nav-link" href="https://data.scorenetwork.org/"> 
+<span class="menu-text">Data Repository</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./by-statsds-topic.html">Modules By Topic</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./by-statsds-topic.html">Modules By Topic</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -194,7 +230,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">WNBA Data Module</span></a>
+ <span class="menu-text">WNBA Data Cleaning Module</span></a>
   </div>
 </li>
       </ul>
@@ -460,11 +496,11 @@ cookieconsent.run({
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(31)</span></div><div class="category" data-category="ANOVA">ANOVA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ANOVA for difference in means">ANOVA for difference in means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Confidence intervals">Confidence intervals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Correlation">Correlation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Scraping">Data Scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data cleaning">Data cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Difference in Means">Difference in Means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Fisher’s LSD">Fisher’s LSD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hypothesis Testing">Hypothesis Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Influential Points">Influential Points <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Linear/Logistic Regression">Linear/Logistic Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Logistic Regression">Logistic Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Missing Data">Missing Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Model Diagnostics">Model Diagnostics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Multiple Linear Regression">Multiple Linear Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="One sample proportions">One sample proportions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Paired Data">Paired Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Pairwise Comparisons">Pairwise Comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Randomized block ANOVA">Randomized block ANOVA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Simple linear regression">Simple linear regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Summary Statistics">Summary Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Tables">Tables <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Testing">Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidying data">Tidying data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tukey’s HSD">Tukey’s HSD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bimodal data">bimodal data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="correlation">correlation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data cleaning">data cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="difference in two means">difference in two means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histgram interpretation">histgram interpretation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="histograms">histograms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hypothesis testing">hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="interactions">interactions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="joining">joining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="linear regression">linear regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="merging">merging <span class="quarto-category-count">(1)</span></div><div class="category" data-category="multiple comparisons">multiple comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="outliers">outliers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="single proportion">single proportion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="sql">sql <span class="quarto-category-count">(1)</span></div><div class="category" data-category="summarization">summarization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="summary statistics">summary statistics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="transformations">transformations <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(94)</span></div><div class="category" data-category="ANOVA">ANOVA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ANOVA for difference in means">ANOVA for difference in means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Bimodal data">Bimodal data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Confidence intervals">Confidence intervals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Correlation">Correlation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Data Scraping">Data Scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data cleaning">Data cleaning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Difference in Means">Difference in Means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Difference in two means">Difference in two means <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Fisher’s LSD">Fisher’s LSD <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Histgram interpretation">Histgram interpretation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Histograms">Histograms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hypothesis Testing">Hypothesis Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hypothesis testing">Hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Influential Points">Influential Points <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Interactions">Interactions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Joining">Joining <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Linear regression">Linear regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Linear/Logistic Regression">Linear/Logistic Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Logistic Regression">Logistic Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Merging">Merging <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Missing Data">Missing Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Model Diagnostics">Model Diagnostics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Multiple Linear Regression">Multiple Linear Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Multiple comparisons">Multiple comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="One sample proportions">One sample proportions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Outliers">Outliers <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Paired Data">Paired Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Pairwise Comparisons">Pairwise Comparisons <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Polynomial regression">Polynomial regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Randomized block ANOVA">Randomized block ANOVA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SQL">SQL <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Side-by-side boxplots">Side-by-side boxplots <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Simple linear regression">Simple linear regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Single proportion">Single proportion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Summarization">Summarization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Summary Statistics">Summary Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Summary statistics">Summary statistics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Tables">Tables <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Testing">Testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tidying data">Tidying data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Transformations">Transformations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tukey’s HSD">Tukey’s HSD <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -483,7 +519,9 @@ cookieconsent.run({
   </div>
   
 
+
 </header>
+
 
 
 
@@ -491,76 +529,75 @@ cookieconsent.run({
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ANOVA,interactions,multiple comparisons" data-listing-date-sort="1709614800000" data-listing-file-modified-sort="1715882238962" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="0" data-categories="ANOVA,Interactions,Multiple comparisons" data-listing-date-sort="1709614800000" data-listing-file-modified-sort="1715968344167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="573">
 <div class="thumbnail">
-<p><a href="./running/boston_marathon_anova/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./running/boston_marathon_anova/index.html" class="no-external"></a></p><a href="./running/boston_marathon_anova/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./running/boston_marathon_anova/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./running/boston_marathon_anova/index.html">
 <h3 class="no-anchor listing-title">
-2023 Boston Marathon - Understanding variability using ANOVA
+<a href="./running/boston_marathon_anova/index.html" class="no-external">2023 Boston Marathon - Understanding variability using ANOVA</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./running/boston_marathon_anova/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('ANOVA'); return false;">
 ANOVA
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('interactions'); return false;">
-interactions
+<div class="listing-category" onclick="window.quartoListingCategory('Interactions'); return false;">
+Interactions
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('multiple comparisons'); return false;">
-multiple comparisons
+<div class="listing-category" onclick="window.quartoListingCategory('Multiple comparisons'); return false;">
+Multiple comparisons
 </div>
 </div>
-<a href="./running/boston_marathon_anova/index.html">
 <div class="listing-description">
-<p>Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon</p>
+<a href="./running/boston_marathon_anova/index.html" class="no-external">Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./running/boston_marathon_anova/index.html">
+<a href="./running/boston_marathon_anova/index.html" class="no-external">
 <div class="listing-date">
 Mar 5, 2024
 </div>
+<div class="listing-author">
+Ivan Ramler
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="histograms,summary statistics,bimodal data" data-listing-date-sort="1715572800000" data-listing-file-modified-sort="1715882238961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="1" data-categories="Histograms,Summary statistics,Bimodal data" data-listing-date-sort="1715572800000" data-listing-file-modified-sort="1715969184710" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="613">
 <div class="thumbnail">
-<p><a href="./running/boston_marathon_2023/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./running/boston_marathon_2023/index.html" class="no-external"></a></p><a href="./running/boston_marathon_2023/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./running/boston_marathon_2023/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./running/boston_marathon_2023/index.html">
 <h3 class="no-anchor listing-title">
-2023 Boston Marathon - Variability in Finish Times
+<a href="./running/boston_marathon_2023/index.html" class="no-external">2023 Boston Marathon - Variability in Finish Times</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./running/boston_marathon_2023/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('histograms'); return false;">
-histograms
+<div class="listing-category" onclick="window.quartoListingCategory('Histograms'); return false;">
+Histograms
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('summary statistics'); return false;">
-summary statistics
+<div class="listing-category" onclick="window.quartoListingCategory('Summary statistics'); return false;">
+Summary statistics
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('bimodal data'); return false;">
-bimodal data
+<div class="listing-category" onclick="window.quartoListingCategory('Bimodal data'); return false;">
+Bimodal data
 </div>
 </div>
-<a href="./running/boston_marathon_2023/index.html">
 <div class="listing-description">
-<p>Describing finish time for runners in the 2023 Boston Marathon</p>
+<a href="./running/boston_marathon_2023/index.html" class="no-external">Describing finish time for runners in the 2023 Boston Marathon</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./running/boston_marathon_2023/index.html">
+<a href="./running/boston_marathon_2023/index.html" class="no-external">
 <div class="listing-date">
 May 13, 2024
 </div>
@@ -570,76 +607,75 @@ Ivan Ramler, Jack Fay
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="summary statistics,histgram interpretation,outliers" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715882238923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="2" data-categories="Summary statistics,Histgram interpretation,Outliers" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715967106203" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="914">
 <div class="thumbnail">
-<p><a href="./motor_sports/formula1_laps/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./motor_sports/formula1_laps/index.html" class="no-external"></a></p><a href="./motor_sports/formula1_laps/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./motor_sports/formula1_laps/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./motor_sports/formula1_laps/index.html">
 <h3 class="no-anchor listing-title">
-Analyzing Lap Times for the 2023 F1 Miami Grand Prix
+<a href="./motor_sports/formula1_laps/index.html" class="no-external">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./motor_sports/formula1_laps/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('summary statistics'); return false;">
-summary statistics
+<div class="listing-category" onclick="window.quartoListingCategory('Summary statistics'); return false;">
+Summary statistics
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('histgram interpretation'); return false;">
-histgram interpretation
+<div class="listing-category" onclick="window.quartoListingCategory('Histgram interpretation'); return false;">
+Histgram interpretation
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('outliers'); return false;">
-outliers
+<div class="listing-category" onclick="window.quartoListingCategory('Outliers'); return false;">
+Outliers
 </div>
 </div>
-<a href="./motor_sports/formula1_laps/index.html">
 <div class="listing-description">
-<p>Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix</p>
+<a href="./motor_sports/formula1_laps/index.html" class="no-external">Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./motor_sports/formula1_laps/index.html">
+<a href="./motor_sports/formula1_laps/index.html" class="no-external">
 <div class="listing-date">
 May 15, 2024
 </div>
+<div class="listing-author">
+Norah Kuduk, Ivan Ramler
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="data cleaning,summarization,merging" data-listing-date-sort="1709874000000" data-listing-file-modified-sort="1715882238942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="3" data-categories="Data cleaning,Summarization,Merging" data-listing-date-sort="1709874000000" data-listing-file-modified-sort="1715967445042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1288">
 <div class="thumbnail">
-<p><a href="./multisport/olympics_beijing_medals/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./multisport/olympics_beijing_medals/index.html" class="no-external"></a></p><a href="./multisport/olympics_beijing_medals/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./multisport/olympics_beijing_medals/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./multisport/olympics_beijing_medals/index.html">
 <h3 class="no-anchor listing-title">
-Beijing 2022 Olympics - Cleaning and Summarizing Data
+<a href="./multisport/olympics_beijing_medals/index.html" class="no-external">Beijing 2022 Olympics - Cleaning and Summarizing Data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./multisport/olympics_beijing_medals/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('data cleaning'); return false;">
-data cleaning
+<div class="listing-category" onclick="window.quartoListingCategory('Data cleaning'); return false;">
+Data cleaning
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('summarization'); return false;">
-summarization
+<div class="listing-category" onclick="window.quartoListingCategory('Summarization'); return false;">
+Summarization
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('merging'); return false;">
-merging
+<div class="listing-category" onclick="window.quartoListingCategory('Merging'); return false;">
+Merging
 </div>
 </div>
-<a href="./multisport/olympics_beijing_medals/index.html">
 <div class="listing-description">
-<p>Demonstrating how to clean data with different packages and summarise the data using dplyr.</p>
+<a href="./multisport/olympics_beijing_medals/index.html" class="no-external">Demonstrating how to clean data with different packages and summarise the data using dplyr.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./multisport/olympics_beijing_medals/index.html">
+<a href="./multisport/olympics_beijing_medals/index.html" class="no-external">
 <div class="listing-date">
 Mar 8, 2024
 </div>
@@ -649,19 +685,19 @@ Eric Seltzer, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Multiple Linear Regression,Model Diagnostics,Testing,Summary Statistics" data-listing-date-sort="1711598400000" data-listing-file-modified-sort="1715882238923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="4" data-categories="Multiple Linear Regression,Model Diagnostics,Testing,Summary Statistics" data-listing-date-sort="1711598400000" data-listing-file-modified-sort="1715957500782" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1880">
 <div class="thumbnail">
-<p><a href="./motor_sports/dakar_rally_regression/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./motor_sports/dakar_rally_regression/index.html" class="no-external"></a></p><a href="./motor_sports/dakar_rally_regression/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./motor_sports/dakar_rally_regression/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./motor_sports/dakar_rally_regression/index.html">
 <h3 class="no-anchor listing-title">
-Dakar Rally Analysis
+<a href="./motor_sports/dakar_rally_regression/index.html" class="no-external">Dakar Rally Analysis</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./motor_sports/dakar_rally_regression/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Multiple Linear Regression'); return false;">
 Multiple Linear Regression
@@ -676,14 +712,12 @@ Testing
 Summary Statistics
 </div>
 </div>
-<a href="./motor_sports/dakar_rally_regression/index.html">
 <div class="listing-description">
-<p>Investigating The 2024 Dakar Rally biker rankings and times, throughout all 12 stages.</p>
+<a href="./motor_sports/dakar_rally_regression/index.html" class="no-external">Investigating The 2024 Dakar Rally biker rankings and times, throughout all 12 stages.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./motor_sports/dakar_rally_regression/index.html">
+<a href="./motor_sports/dakar_rally_regression/index.html" class="no-external">
 <div class="listing-date">
 Mar 28, 2024
 </div>
@@ -693,19 +727,19 @@ Matt Maslow, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="One sample proportions,Confidence intervals" data-listing-date-sort="1713412800000" data-listing-file-modified-sort="1715882238985" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="5" data-categories="One sample proportions,Confidence intervals" data-listing-date-sort="1713412800000" data-listing-file-modified-sort="1715957500869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1150">
 <div class="thumbnail">
-<p><a href="./volleyball/volleyball_timeouts_single_prop/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external"></a></p><a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./volleyball/volleyball_timeouts_single_prop/index.html">
 <h3 class="no-anchor listing-title">
-Division Three Volleyball Timeouts
+<a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external">Division Three Volleyball Timeouts</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('One sample proportions'); return false;">
 One sample proportions
@@ -714,14 +748,12 @@ One sample proportions
 Confidence intervals
 </div>
 </div>
-<a href="./volleyball/volleyball_timeouts_single_prop/index.html">
 <div class="listing-description">
-<p>Investigating the effect of timeouts on the outcome of a set.</p>
+<a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external">Investigating the effect of timeouts on the outcome of a set.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./volleyball/volleyball_timeouts_single_prop/index.html">
+<a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="no-external">
 <div class="listing-date">
 Apr 18, 2024
 </div>
@@ -731,19 +763,19 @@ Sierra Hess, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="ANOVA for difference in means,Pairwise Comparisons,Fisher’s LSD,Tukey’s HSD" data-listing-date-sort="1713153600000" data-listing-file-modified-sort="1715882238760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="6" data-categories="ANOVA for difference in means,Pairwise Comparisons,Fisher’s LSD,Tukey’s HSD" data-listing-date-sort="1713153600000" data-listing-file-modified-sort="1715958516776" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1162">
 <div class="thumbnail">
-<p><a href="./diving/world_junior_diving/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./diving/world_junior_diving/index.html" class="no-external"></a></p><a href="./diving/world_junior_diving/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./diving/world_junior_diving/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./diving/world_junior_diving/index.html">
 <h3 class="no-anchor listing-title">
-FINA World Junior Championships 2022 Diving Data
+<a href="./diving/world_junior_diving/index.html" class="no-external">FINA World Junior Championships 2022 Diving Data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./diving/world_junior_diving/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('ANOVA for difference in means'); return false;">
 ANOVA for difference in means
@@ -758,180 +790,183 @@ Fisher’s LSD
 Tukey’s HSD
 </div>
 </div>
-<a href="./diving/world_junior_diving/index.html">
 <div class="listing-description">
-<p>Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.</p>
+<a href="./diving/world_junior_diving/index.html" class="no-external">Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./diving/world_junior_diving/index.html">
+<a href="./diving/world_junior_diving/index.html" class="no-external">
 <div class="listing-date">
 Apr 15, 2024
 </div>
+<div class="listing-author">
+Emma Deering, Robin Lock
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708257392488" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="7" data-categories="Linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715968886906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1201">
 <div class="thumbnail">
-<p><a href="./triathlon/multiple_linear_regression/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./triathlon/multiple_linear_regression/index.html" class="no-external"></a></p><a href="./triathlon/multiple_linear_regression/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./triathlon/multiple_linear_regression/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./triathlon/multiple_linear_regression/index.html">
 <h3 class="no-anchor listing-title">
-Ironman Triathlon (Canadian Females) - Multiple Linear Regression
+<a href="./triathlon/multiple_linear_regression/index.html" class="no-external">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./triathlon/multiple_linear_regression/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
-linear regression
+<div class="listing-category" onclick="window.quartoListingCategory('Linear regression'); return false;">
+Linear regression
 </div>
 </div>
-<a href="./triathlon/multiple_linear_regression/index.html">
 <div class="listing-description">
-<p>Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.</p>
+<a href="./triathlon/multiple_linear_regression/index.html" class="no-external">Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./triathlon/multiple_linear_regression/index.html">
+<a href="./triathlon/multiple_linear_regression/index.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
+<div class="listing-author">
+A.J. Dykstra
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708257579357" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="8" data-categories="Linear regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715968957344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1208">
 <div class="thumbnail">
-<p><a href="./triathlon/simple_linear_regression/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./triathlon/simple_linear_regression/index.html" class="no-external"></a></p><a href="./triathlon/simple_linear_regression/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./triathlon/simple_linear_regression/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./triathlon/simple_linear_regression/index.html">
 <h3 class="no-anchor listing-title">
-Ironman Triathlon (Canadian Females) - Simple Linear Regression
+<a href="./triathlon/simple_linear_regression/index.html" class="no-external">Ironman Triathlon (Canadian Females) - Simple Linear Regression</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./triathlon/simple_linear_regression/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
-linear regression
+<div class="listing-category" onclick="window.quartoListingCategory('Linear regression'); return false;">
+Linear regression
 </div>
 </div>
-<a href="./triathlon/simple_linear_regression/index.html">
 <div class="listing-description">
-<p>Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.</p>
+<a href="./triathlon/simple_linear_regression/index.html" class="no-external">Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./triathlon/simple_linear_regression/index.html">
+<a href="./triathlon/simple_linear_regression/index.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
+<div class="listing-author">
+A.J. Dykstra
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="hypothesis testing,single proportion" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708256916172" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="9" data-categories="Hypothesis testing,Single proportion" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715965719767" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2242">
 <div class="thumbnail">
-<p><a href="./lacrosse/college_lacrosse_faceoffs/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external"></a></p><a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
 <h3 class="no-anchor listing-title">
-Lacrosse Faceoff Proportions
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external">Lacrosse Faceoff Proportions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('hypothesis testing'); return false;">
-hypothesis testing
+<div class="listing-category" onclick="window.quartoListingCategory('Hypothesis testing'); return false;">
+Hypothesis testing
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('single proportion'); return false;">
-single proportion
+<div class="listing-category" onclick="window.quartoListingCategory('Single proportion'); return false;">
+Single proportion
 </div>
 </div>
-<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
 <div class="listing-description">
-<p>Using data from NCAA Div I lacrosse teams to explore the importance of winning faceoffs</p>
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external">Using data from NCAA Div I lacrosse teams to explore the importance of winning faceoffs</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./lacrosse/college_lacrosse_faceoffs/index.html">
+<a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
+<div class="listing-author">
+Jack Fay, Ivan Ramler, A.J. Dykstra
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="difference in two means" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708256767794" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="10" data-categories="Difference in two means" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715965062199" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="754">
 <div class="thumbnail">
-<p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external"></a></p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./lacrosse/lacrosse_pll_vs_nll/index.html">
 <h3 class="no-anchor listing-title">
-Lacrosse PLL vs.&nbsp;NLL
+<a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external">Lacrosse PLL vs.&nbsp;NLL</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('difference in two means'); return false;">
-difference in two means
+<div class="listing-category" onclick="window.quartoListingCategory('Difference in two means'); return false;">
+Difference in two means
 </div>
 </div>
-<a href="./lacrosse/lacrosse_pll_vs_nll/index.html">
 <div class="listing-description">
-<p>Comparing scoring rates between indoor and outdoor profesional lacrosse leagues.</p>
+<a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external">Comparing scoring rates between indoor and outdoor profesional lacrosse leagues.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./lacrosse/lacrosse_pll_vs_nll/index.html">
+<a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
+<div class="listing-author">
+Jack Cowan, Ivan Ramler, A.J. Dykstra
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="outliers,summary statistics" data-listing-date-sort="1708491600000" data-listing-file-modified-sort="1715882238904" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="11" data-categories="Outliers,Summary statistics" data-listing-date-sort="1708491600000" data-listing-file-modified-sort="1715969287744" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1050">
 <div class="thumbnail">
-<p><a href="./esports/league_of_legends/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./esports/league_of_legends/index.html" class="no-external"></a></p><a href="./esports/league_of_legends/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./esports/league_of_legends/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./esports/league_of_legends/index.html">
 <h3 class="no-anchor listing-title">
-League of Legends - Buffing and Nerfing
+<a href="./esports/league_of_legends/index.html" class="no-external">League of Legends - Buffing and Nerfing</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./esports/league_of_legends/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('outliers'); return false;">
-outliers
+<div class="listing-category" onclick="window.quartoListingCategory('Outliers'); return false;">
+Outliers
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('summary statistics'); return false;">
-summary statistics
+<div class="listing-category" onclick="window.quartoListingCategory('Summary statistics'); return false;">
+Summary statistics
 </div>
 </div>
-<a href="./esports/league_of_legends/index.html">
 <div class="listing-description">
-<p>Investigating game play statistics for League of Legends champions in two different patches.</p>
+<a href="./esports/league_of_legends/index.html" class="no-external">Investigating game play statistics for League of Legends champions in two different patches.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./esports/league_of_legends/index.html">
+<a href="./esports/league_of_legends/index.html" class="no-external">
 <div class="listing-date">
 Feb 21, 2024
 </div>
@@ -941,146 +976,160 @@ Ivan Ramler, George Charalambous, A.J. Dykstra
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="joining,sql" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708257894123" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15">
+<div class="quarto-post image-right" data-index="12" data-categories="Joining,SQL" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715968648423" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2831">
 <div class="thumbnail">
-<p><a href="./softball/softball_div1/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./softball/softball_div1/index.html" class="no-external"></a></p><a href="./softball/softball_div1/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./softball/softball_div1/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./softball/softball_div1/index.html">
 <h3 class="no-anchor listing-title">
-Merging Multiple Seasons of NCAA Div 1 Softball Statistics
+<a href="./softball/softball_div1/index.html" class="no-external">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./softball/softball_div1/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('joining'); return false;">
-joining
+<div class="listing-category" onclick="window.quartoListingCategory('Joining'); return false;">
+Joining
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('sql'); return false;">
-sql
+<div class="listing-category" onclick="window.quartoListingCategory('SQL'); return false;">
+SQL
 </div>
 </div>
-<a href="./softball/softball_div1/index.html">
 <div class="listing-description">
-<p>Actvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.</p>
+<a href="./softball/softball_div1/index.html" class="no-external">Actvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./softball/softball_div1/index.html">
+<a href="./softball/softball_div1/index.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="13" data-categories="linear regression,transformations" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708256698491" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16">
-<div class="thumbnail">
-<p><a href="./motor_sports/nascar_regression_transformation/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./motor_sports/nascar_regression_transformation/index.html">
-<h3 class="no-anchor listing-title">
-NASCAR Transformation Module
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('linear regression'); return false;">
-linear regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('transformations'); return false;">
-transformations
-</div>
-</div>
-<a href="./motor_sports/nascar_regression_transformation/index.html">
-<div class="listing-description">
-<p>Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./motor_sports/nascar_regression_transformation/index.html">
-<div class="listing-date">
-Feb 5, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="14" data-listing-file-modified-sort="1715724023242" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./multisport/d1_expenditures/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./multisport/d1_expenditures/index.html">
-<h3 class="no-anchor listing-title">
-NCAA D1 Expenditures
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-We have data on the reported revenues and expenditures of NCAA D1 schools by sport (for 2019).
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./multisport/d1_expenditures/index.html">
 <div class="listing-author">
-Ivan Ramler, Denali Stevens
+Sarah Weaver, Ivan Ramler
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="correlation" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1708256698487" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="13" data-categories="Linear regression,Transformations,Polynomial regression" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715967290779" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3134">
 <div class="thumbnail">
-<p><a href="./golf/pga_drive_putt/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external"></a></p><a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./golf/pga_drive_putt/index.html">
 <h3 class="no-anchor listing-title">
-PGA - Drive for Show, Putt for Dough?
+<a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external">NASCAR Transformation Module</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('correlation'); return false;">
-correlation
+<div class="listing-category" onclick="window.quartoListingCategory('Linear regression'); return false;">
+Linear regression
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Transformations'); return false;">
+Transformations
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Polynomial regression'); return false;">
+Polynomial regression
 </div>
 </div>
-<a href="./golf/pga_drive_putt/index.html">
 <div class="listing-description">
-<p>Using tournament data for professional golfers to see if driving or putting are more strongly related to success.</p>
+<a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external">Using NASCAR driver rating data to explore a series of transformations to improve linearity in regression.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./golf/pga_drive_putt/index.html">
+<a href="./motor_sports/nascar_regression_transformation/index.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
+<div class="listing-author">
+Alyssa Bigness, Ivan Ramler, Jack Fay
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="Linear/Logistic Regression,Summary Statistics,Influential Points,Hypothesis Testing" data-listing-date-sort="1709701200000" data-listing-file-modified-sort="1715882238960" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<div class="quarto-post image-right" data-index="14" data-categories="Side-by-side boxplots" data-listing-date-sort="1715918400000" data-listing-file-modified-sort="1715967820455" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
 <div class="thumbnail">
-<p><a href="./rodeo_sports/bull_riding_regression/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./multisport/d1_expenditures/index.html" class="no-external"></a></p><a href="./multisport/d1_expenditures/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./multisport/d1_expenditures/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./rodeo_sports/bull_riding_regression/index.html">
 <h3 class="no-anchor listing-title">
-Professional Bull Riding Analysis
+<a href="./multisport/d1_expenditures/index.html" class="no-external">NCAA D1 Expenditures</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./multisport/d1_expenditures/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Side-by-side boxplots'); return false;">
+Side-by-side boxplots
+</div>
+</div>
+<div class="listing-description">
+<a href="./multisport/d1_expenditures/index.html" class="no-external">Something with expenditures by sport.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./multisport/d1_expenditures/index.html" class="no-external">
+<div class="listing-date">
+May 17, 2024
+</div>
+<div class="listing-author">
+Denali Stevens, Ivan Ramler
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="15" data-categories="Correlation" data-listing-date-sort="1707109200000" data-listing-file-modified-sort="1715969232104" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2116">
+<div class="thumbnail">
+<p><a href="./golf/pga_drive_putt/index.html" class="no-external"></a></p><a href="./golf/pga_drive_putt/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./golf/pga_drive_putt/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./golf/pga_drive_putt/index.html" class="no-external">PGA - Drive for Show, Putt for Dough?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./golf/pga_drive_putt/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Correlation'); return false;">
+Correlation
+</div>
+</div>
+<div class="listing-description">
+<a href="./golf/pga_drive_putt/index.html" class="no-external">Using tournament data for professional golfers to see if driving or putting are more strongly related to success.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./golf/pga_drive_putt/index.html" class="no-external">
+<div class="listing-date">
+Feb 5, 2024
+</div>
+<div class="listing-author">
+Alyssa Bigness, Robin Lock
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="16" data-categories="Linear/Logistic Regression,Summary Statistics,Influential Points,Hypothesis Testing" data-listing-date-sort="1709701200000" data-listing-file-modified-sort="1715957500819" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2007">
+<div class="thumbnail">
+<p><a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external"></a></p><a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external">Professional Bull Riding Analysis</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Linear/Logistic Regression'); return false;">
 Linear/Logistic Regression
@@ -1095,14 +1144,12 @@ Influential Points
 Hypothesis Testing
 </div>
 </div>
-<a href="./rodeo_sports/bull_riding_regression/index.html">
 <div class="listing-description">
-<p>Investigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.</p>
+<a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external">Investigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./rodeo_sports/bull_riding_regression/index.html">
+<a href="./rodeo_sports/bull_riding_regression/index.html" class="no-external">
 <div class="listing-date">
 Mar 6, 2024
 </div>
@@ -1112,32 +1159,30 @@ Matt Maslow, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="correlation" data-listing-date-sort="1715140800000" data-listing-file-modified-sort="1715882238956" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="17" data-categories="Correlation" data-listing-date-sort="1715140800000" data-listing-file-modified-sort="1715967404141" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1064">
 <div class="thumbnail">
-<p><a href="./multisport/ski_to_sea_correlations/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./multisport/ski_to_sea_correlations/index.html" class="no-external"></a></p><a href="./multisport/ski_to_sea_correlations/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./multisport/ski_to_sea_correlations/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./multisport/ski_to_sea_correlations/index.html">
 <h3 class="no-anchor listing-title">
-Ski to Sea
+<a href="./multisport/ski_to_sea_correlations/index.html" class="no-external">Ski to Sea</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./multisport/ski_to_sea_correlations/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('correlation'); return false;">
-correlation
+<div class="listing-category" onclick="window.quartoListingCategory('Correlation'); return false;">
+Correlation
 </div>
 </div>
-<a href="./multisport/ski_to_sea_correlations/index.html">
 <div class="listing-description">
-<p>Using Ski to Sea results data to see which leg (sport) is more strongly related to a team’s overall finish time.</p>
+<a href="./multisport/ski_to_sea_correlations/index.html" class="no-external">Using Ski to Sea results data to see which leg (sport) is more strongly related to a team’s overall finish time.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./multisport/ski_to_sea_correlations/index.html">
+<a href="./multisport/ski_to_sea_correlations/index.html" class="no-external">
 <div class="listing-date">
 May 8, 2024
 </div>
@@ -1147,19 +1192,19 @@ Sam Peacock, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="Data cleaning,Missing Data,Tables,Logistic Regression" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715882238704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="18" data-categories="Data cleaning,Missing Data,Tables,Logistic Regression" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715968237686" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="980">
 <div class="thumbnail">
-<p><a href="./basketball/wnba_data_quality/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./basketball/wnba_data_quality/index.html" class="no-external"></a></p><a href="./basketball/wnba_data_quality/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./basketball/wnba_data_quality/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./basketball/wnba_data_quality/index.html">
 <h3 class="no-anchor listing-title">
-WNBA Data Module
+<a href="./basketball/wnba_data_quality/index.html" class="no-external">WNBA Data Cleaning Module</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./basketball/wnba_data_quality/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Data cleaning'); return false;">
 Data cleaning
@@ -1174,14 +1219,12 @@ Tables
 Logistic Regression
 </div>
 </div>
-<a href="./basketball/wnba_data_quality/index.html">
 <div class="listing-description">
-<p>This data set contains team game statistics for 16 WNBA teams and for 20 seasons.</p>
+<a href="./basketball/wnba_data_quality/index.html" class="no-external">This data set contains team game statistics for 16 WNBA teams and for 20 seasons.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./basketball/wnba_data_quality/index.html">
+<a href="./basketball/wnba_data_quality/index.html" class="no-external">
 <div class="listing-date">
 May 15, 2024
 </div>
@@ -1191,19 +1234,19 @@ Kristen Varin, Ivan Ramler
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="Paired Data,Difference in Means" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715882238970" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="19" data-categories="Paired Data,Difference in Means" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715968456230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="821">
 <div class="thumbnail">
-<p><a href="./skiing/giant_slalom_paired/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./skiing/giant_slalom_paired/index.html" class="no-external"></a></p><a href="./skiing/giant_slalom_paired/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./skiing/giant_slalom_paired/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./skiing/giant_slalom_paired/index.html">
 <h3 class="no-anchor listing-title">
-Women’s Alpine Skiing Giant Slalom - Paired Data
+<a href="./skiing/giant_slalom_paired/index.html" class="no-external">Women’s Alpine Skiing Giant Slalom - Paired Data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./skiing/giant_slalom_paired/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Paired Data'); return false;">
 Paired Data
@@ -1212,33 +1255,34 @@ Paired Data
 Difference in Means
 </div>
 </div>
-<a href="./skiing/giant_slalom_paired/index.html">
 <div class="listing-description">
-<p>Statistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant</p>
+<a href="./skiing/giant_slalom_paired/index.html" class="no-external">Statistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./skiing/giant_slalom_paired/index.html">
+<a href="./skiing/giant_slalom_paired/index.html" class="no-external">
 <div class="listing-date">
 May 15, 2024
 </div>
+<div class="listing-author">
+Emelia Agostinelli, Robin Lock
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="Tidying data,Data Scraping" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715882238966" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="20" data-categories="Tidying data,Data Scraping" data-listing-date-sort="1715745600000" data-listing-file-modified-sort="1715968493705" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="696">
 <div class="thumbnail">
-<p><a href="./skiing/giant-slalom_cleaning/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./skiing/giant-slalom_cleaning/index.html" class="no-external"></a></p><a href="./skiing/giant-slalom_cleaning/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./skiing/giant-slalom_cleaning/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./skiing/giant-slalom_cleaning/index.html">
 <h3 class="no-anchor listing-title">
-Women’s Alpine Skiing World Giant Slalom - Data Cleaning
+<a href="./skiing/giant-slalom_cleaning/index.html" class="no-external">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./skiing/giant-slalom_cleaning/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Tidying data'); return false;">
 Tidying data
@@ -1247,33 +1291,34 @@ Tidying data
 Data Scraping
 </div>
 </div>
-<a href="./skiing/giant-slalom_cleaning/index.html">
 <div class="listing-description">
-<p>Statistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant</p>
+<a href="./skiing/giant-slalom_cleaning/index.html" class="no-external">Statistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./skiing/giant-slalom_cleaning/index.html">
+<a href="./skiing/giant-slalom_cleaning/index.html" class="no-external">
 <div class="listing-date">
 May 15, 2024
 </div>
+<div class="listing-author">
+Emelia Agostinelli, Robin Lock
+</div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="Simple linear regression,Correlation,Randomized block ANOVA" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1715882259607" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="21" data-categories="Simple linear regression,Correlation,Randomized block ANOVA" data-listing-date-sort="1715832000000" data-listing-file-modified-sort="1715957500854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1995">
 <div class="thumbnail">
-<p><a href="./skiing/nordic_ski_10k_splits/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external"></a></p><a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./skiing/nordic_ski_10k_splits/index.html">
 <h3 class="no-anchor listing-title">
-World Cup Women’s 10k Classic Nordic Ski Race - Splits
+<a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external">World Cup Women’s 10k Classic Nordic Ski Race - Splits</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Simple linear regression'); return false;">
 Simple linear regression
@@ -1285,14 +1330,12 @@ Correlation
 Randomized block ANOVA
 </div>
 </div>
-<a href="./skiing/nordic_ski_10k_splits/index.html">
 <div class="listing-description">
-<p>Times and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.</p>
+<a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external">Times and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./skiing/nordic_ski_10k_splits/index.html">
+<a href="./skiing/nordic_ski_10k_splits/index.html" class="no-external">
 <div class="listing-date">
 May 16, 2024
 </div>
@@ -1302,184 +1345,1516 @@ Abigail Smith, Robin Lock
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1715882238904">
+<div class="quarto-post image-right" data-index="22" data-listing-file-modified-sort="1715957500780">
 <div class="thumbnail">
-<p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1715882238904">
+<div class="quarto-post image-right" data-index="23" data-listing-file-modified-sort="1715957500780">
 <div class="thumbnail">
-<p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1715882238923">
+<div class="quarto-post image-right" data-index="24" data-listing-file-modified-sort="1715957500797">
 <div class="thumbnail">
-<p><a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-listing-file-modified-sort="1715882238923">
+<div class="quarto-post image-right" data-index="25" data-listing-file-modified-sort="1715957500797">
 <div class="thumbnail">
-<p><a href="./multisport\olympics_beijing_medals\Class-Handout.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./multisport\olympics_beijing_medals\Class-Handout.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./multisport\olympics_beijing_medals\Class-Handout.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-listing-file-modified-sort="1715882238956">
+<div class="quarto-post image-right" data-index="26" data-listing-file-modified-sort="1715957500816">
 <div class="thumbnail">
-<p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-listing-file-modified-sort="1715882238957">
+<div class="quarto-post image-right" data-index="27" data-listing-file-modified-sort="1715957500816">
 <div class="thumbnail">
-<p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-listing-file-modified-sort="1715882238958">
+<div class="quarto-post image-right" data-index="28" data-listing-file-modified-sort="1715957500817">
 <div class="thumbnail">
-<p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-listing-file-modified-sort="1715882238958">
+<div class="quarto-post image-right" data-index="29" data-listing-file-modified-sort="1715957500818">
 <div class="thumbnail">
-<p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-listing-file-modified-sort="1715882238965">
+<div class="quarto-post image-right" data-index="30" data-listing-file-modified-sort="1715957500848">
 <div class="thumbnail">
-<p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd"> </a></p>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd">
 <h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
 </div>
 <div class="listing-description">
-
+<a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd"> </a>
+<p><a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="31" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="32" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="33" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="34" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="35" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="36" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="37" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="38" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="39" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="40" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="41" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="42" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="43" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="44" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="45" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="46" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="47" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="48" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="49" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="50" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="51" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="52" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="53" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="54" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="55" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="56" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="57" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="58" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="59" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="60" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="61" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="62" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="63" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="64" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="65" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="66" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="67" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="68" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="69" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="70" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="71" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="72" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="73" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="74" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="75" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="76" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./docs\motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="77" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./docs\motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="78" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="79" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./docs\multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="80" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="81" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="82" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="83" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./docs\rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="84" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./docs\skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="85" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a><p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external"></a></p><a href="./motor_sports\dakar_rally_regression\AnswerKey_DakarRally.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="86" data-listing-file-modified-sort="1715957500780">
+<div class="thumbnail">
+<p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a><p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external"></a></p><a href="./motor_sports\dakar_rally_regression\DakarRally_handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="87" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a><p><a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external"></a></p><a href="./multisport\olympics_beijing_medals\Class-Handout-Solutions.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="88" data-listing-file-modified-sort="1715957500797">
+<div class="thumbnail">
+<p><a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a><p><a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external"></a></p><a href="./multisport\olympics_beijing_medals\Class-Handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="89" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a><p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_bulls.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="90" data-listing-file-modified-sort="1715957500816">
+<div class="thumbnail">
+<p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a><p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\Answerkey_pbr_riders.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="91" data-listing-file-modified-sort="1715957500817">
+<div class="thumbnail">
+<p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a><p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\PBR-bulls-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="92" data-listing-file-modified-sort="1715957500818">
+<div class="thumbnail">
+<p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a><p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external"></a></p><a href="./rodeo_sports\bull_riding_regression\PBR-riders-handout.qmd" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="93" data-listing-file-modified-sort="1715957500848">
+<div class="thumbnail">
+<p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a><p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</h3>
+<div class="listing-subtitle">
+<a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external"></a></p><a href="./skiing\giant-slalom_cleaning\Tremblant_Cleaning_Worksheet_Key.qmd" class="no-external">
+</a>
 </div>
 </div>
 </div>
@@ -1569,10 +2944,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1582,8 +2974,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1595,7 +2996,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1639,6 +3163,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1664,6 +3189,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1729,12 +3280,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">Maintained by Ivan Ramler <br> We use cookies to track usage statistics to help measure impact of the materials for authors. Please consider allowing tracking cookies.<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Manage cookies</a></div></div>
+    <div class="nav-footer-center">
+<p>Maintained by Ivan Ramler <br> We use cookies to track usage statistics to help measure impact of the materials for authors. Please consider allowing tracking cookies.</p>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Manage cookies</a></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
+
 
 
 

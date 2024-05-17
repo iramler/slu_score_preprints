@@ -14,7 +14,7 @@ author:
 editor: 
   canonical: true
 categories:
-  - correlation
+  - Correlation
 ---
 
 ## Module

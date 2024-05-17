@@ -12,9 +12,9 @@ author:
 date: May 13, 2024
 description: Describing finish time for runners in the 2023 Boston Marathon
 categories:
-  - histograms
-  - summary statistics
-  - bimodal data
+  - Histograms
+  - Summary statistics
+  - Bimodal data
 ---
 
 ### Welcome video
