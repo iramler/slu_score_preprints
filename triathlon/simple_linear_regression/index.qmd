@@ -2,11 +2,16 @@
 title: "Ironman Triathlon (Canadian Females) - Simple Linear Regression"
 date: February 5, 2024
 description: Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants  based on bike times.
+author:
+  - name: A.J. Dykstra
+    email: adykstra@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
 editor: 
-  markdown: 
     canonical: true
 categories:
-  - linear regression
+  - Linear regression
 ---
 
 ## Module

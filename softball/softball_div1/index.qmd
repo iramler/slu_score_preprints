@@ -2,9 +2,20 @@
 title: "Merging Multiple Seasons of NCAA Div 1 Softball Statistics"
 date: February 5, 2024
 description: Actvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.
+author:
+  - name: Sarah Weaver
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+editor: 
+  canonical: true
 categories:
-  - joining
-  - sql
+  - Joining
+  - SQL
 ---
 
 ## Module

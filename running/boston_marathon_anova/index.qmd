@@ -2,10 +2,18 @@
 title: "2023 Boston Marathon - Understanding variability using ANOVA"
 date: March 5, 2024
 description: Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon
+author:
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+editor: 
+  canonical: true
 categories:
   - ANOVA
-  - interactions
-  - multiple comparisons
+  - Interactions
+  - Multiple comparisons
 
 ---
 
@@ -96,6 +104,3 @@ In conclusion, the Boston Marathon Times worksheet provides valuable learning op
 
 :::
 
-### Authors
-
-Fill in later

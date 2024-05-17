@@ -2,11 +2,16 @@
 title: "Ironman Triathlon (Canadian Females) - Multiple Linear Regression"
 date: February 5, 2024
 description: Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.
+author:
+  - name: A.J. Dykstra
+    email: adykstra@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
 editor: 
-  markdown: 
     canonical: true
 categories:
-  - linear regression
+  - Linear regression
 ---
 
 ## Module
@@ -78,6 +83,3 @@ In conclusion, the Triathlon Multiple Linear Regression worksheet has provided v
 However, when both Swim Times and Bike Times were included as predictors in the multiple linear regression model, we observed a change in significance. Swim Times were no longer a significant predictor. This finding suggests that when considering both predictors simultaneously, the predictive power of Swim Times in estimating run times diminishes. These findings emphasize the importance of evaluating multiple predictors in regression analysis and understanding how their inclusion can impact the significance and interpretation of individual predictors.
 :::
 
-### Authors
-
-Fill in later

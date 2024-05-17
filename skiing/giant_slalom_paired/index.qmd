@@ -2,6 +2,15 @@
 title: "Women's Alpine Skiing Giant Slalom - Paired Data"
 date: May 15, 2024
 description: Statistics from two runs at a Women's World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant
+author:
+  - name: Emelia Agostinelli
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
 editor: 
   canonical: true
 categories:
