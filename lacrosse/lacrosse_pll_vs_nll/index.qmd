@@ -34,6 +34,11 @@ In contrast, the NLL follows the [box lacrosse](https://en.wikipedia.org/wiki/Bo
 
 These data allow for an analysis of goal-scoring within these leagues to identify differences between indoor (NLL) and outdoor (PLL) play. By examining goals and shots, we aim to understand how the environment and format of the game influence offensive strategies and overall scoring trends in professional lacrosse. It's important to recognize that outdoor field lacrosse and indoor box lacrosse are distinct sports, each with its own unique dynamics, rules, and playing styles. By acknowledging these nuances, we can may gain a deeper understanding of how various playing conditions and league structures impact statistical outcomes.
 
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an in-class example or can be modified to be a quiz or part of an exam.
+:::
+
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 The learning goals associated with this module are:
 
@@ -42,9 +47,16 @@ The learning goals associated with this module are:
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-This module requires students use a two-sample test and confidence interval (e.g., t-test or randomization) to compare the means of two groups.
+This module requires students use a two-sample test and confidence interval (e.g., t-test or randomization) to compare the means of two groups. 
 
-Technology requirement: The activity handout assume that students can use technology to perform a two-sample test and find a confidence interval for a difference in means between two groups, using raw data from the datafile.
+Students are expected to have access any equations and/or lecture notes to complete the activity.
+
+Technology requirement: 
+
+- The provided handout assumes that students can use technology such as calculators to perform a two-sample t-test and  interval for a difference in means between two groups.
+
+- The raw data is provided to allow instructors to customize the handout to incorporate other forms of technology. e.g., Students can use software such as Minitab to calculate test statistics and p-values for a t-test or [StatKey](https://www.lock5stat.com/StatKey/){target="_blank"} for simulation based inference.
+
 :::
 
 ### Data
