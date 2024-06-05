@@ -25,9 +25,13 @@ Please note that these material have not yet completed the required pedagogical 
 
 ### Introduction
 
-The Winter Olympics is an event hosted every 4 years last hosted in Beijing in 2022. In the 2022 Olympics, there were a total of 109 events across 15 [disciplines](https://en.wikipedia.org/wiki/2022_Winter_Olympics#:~:text=.%5B62%5D-,Sports,-%5Bedit%5D){target="_blank"}. It also has any more information on the Beijing 2022 Olympics you might be looking for. As the whole goal of the Olympics is to win as many medals as you can, everything is tracked. From the athlete, where they were born, if they won, their height, how many medals they won. This provides large data sets that are very interesting to look at.
+The Winter Olympics is an event hosted every 4 years, with the most recent one held in Beijing in 2022. In the 2022 Olympics, there were a total of 109 events across 15 [disciplines](https://en.wikipedia.org/wiki/2022_Winter_Olympics#:~:text=.%5B62%5D-,Sports,-%5Bedit%5D){target="_blank"}. 
 
-In this worksheet, we will look at some of these data sets and learn how to clean them into tidy formats and use these cleaned data to investigate questions such as which country won the most medals. Cleaning and manipulating data sets is a key component to your Data Science journey and opens many doors for what you can learn in the future.
+For the Beijing 2022 Winter Olympics detailed information on athletes, events, and medal counts was collected. For example, attributes such as the athlete's name, nationality, event specifics, and medal results are publicly available. 
+
+Analyzing data such as this can provide valuable insights into performance trends, country-wise achievements, and athlete statistics. Such analyses can help in identifying patterns, understanding factors contributing to success, and making informed predictions for future events.
+
+In this module, we will explore some of these data sets and learn how to clean them into tidy formats. We will use these cleaned data sets to investigate questions such as which country won the most medals. Cleaning and manipulating data sets is a foundation skills in developing as a Data Scientist and opens many doors for what you can learn in the future.
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
@@ -42,18 +46,18 @@ By the end of this activity, you will be able to:
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.
+Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data. The activity could also easily be adapted to use other popular programming languages such as Python.
 
-1.  RStudio Packages: Familiarity with packages within RStudio. The most used one being dplyr, as well as some other packages that need to be used in order to manipulate variables. You should understand how to use functions within dplyr at a basic level
+1.  R Packages: Familiarity with the `tidyverse` suite of packages. In addition to the basic verbs in `dplyr`, students should be familiar with the separate command (`tidyr`) and joining commands (`dplyr`).
 
-2.  Tidy Data: You should understand what it means for a data set to be tidy, there is a general definition of requirements for what this means.
+2.  Tidy Data: You should understand what it means for a data set to be [tidy](https://tidyr.tidyverse.org/articles/tidy-data.html){target="_blank"}, there is a general definition of requirements for what this means.
 
-3.  Knowledge of joining and summarizing data, this can be done using dplyr functions. The outcomes of what these different functions do should be understood.
+3.  Knowledge of summarizing data, this can be done using `dplyr` functions. The outcomes of what these different functions do should be understood. For example, knowing how to calculate means, sample sizes, proportions and other summary statistics using the `summarize` function in `dplyr`.
 :::
 
 ### Data
 
-There are two data sets here, athletes and medals.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.
+There are two data sets here, `athletes` and `medals`.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.
 
 Download non tidy data: [athletes.csv](data/athletes.csv)
 
