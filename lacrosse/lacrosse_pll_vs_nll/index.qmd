@@ -95,14 +95,14 @@ Player stats. NLL. (2023, January 26). [https://www.nll.com/stats/all-player-sta
 
 The data and worksheet associated with this module are available for download through the following links. 
 
-* [lacrosse_pll_nll_201202022.csv](lacrosse_pll_nll_201202022.csv) - Dataset with game-by-game shots and goals scored for both leagues in the 2021-2022 season.. 
+* [lacrosse_pll_nll_2012-2022.csv](lacrosse_pll_nll_2021-2022.csv) - Dataset with game-by-game shots and goals scored for both leagues in the 2021-2022 season.. 
 
-* [lacrosse_pll_nll_worksheet.docx](lacrosse_pll_nll_worksheet.docx)- Activity worksheet to compare scoring and shots between indoor and outdoor leagues. 
+* [lacrosse_pll_vs_nll_worksheet.docx](lacrosse_pll_vs_nll_worksheet.docx)- Activity worksheet to compare scoring and shots between indoor and outdoor leagues. 
 
 
 Sample solutions to the worksheets 
 
-* [lacrosse_pll_nll_worksheet_key.docx](lacrosse_pll_nll_worksheet_key.docx) - Activity worksheet with sample solutions. 
+* [lacrosse_pll_vs_nll_worksheet_key.docx](lacrosse_pll_vs_nll_worksheet_key.docx) - Activity worksheet with sample solutions. 
 
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
