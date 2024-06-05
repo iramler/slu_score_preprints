@@ -106,7 +106,9 @@ Sample solutions to the worksheets
 
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Students should that while no discernible difference between average goals per game was discovered, after adjusting for the length of the game, PLL (i.e., the 48-minute outdoor league) has the higher rate per 48-minutes.
+Students should notice that while no discernible difference between average goals per game was discovered, after adjusting for the length of the game, PLL (i.e., the 48-minute outdoor league) has the higher rate per 48-minutes.
+
+Further, students will ideally see how a confidence interval can be used to supplement the conclusion of a hypothesis test by bringing effect sizes into the interpretation in addition to statistical significance.
 :::
 
 
