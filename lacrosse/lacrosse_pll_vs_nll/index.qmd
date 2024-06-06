@@ -63,7 +63,7 @@ Technology requirement:
 
 The data set has 162 rows with 9 columns. Each row represents a single lacrosse match either in the Premier Lacrosse League or the National Lacrosse League.
 
-Download data: [lacrosse_pll_nll_201202022.csv](lacrosse_pll_nll_201202022.csv)
+Download data: [lacrosse_pll_nll_2021-2022.csv](lacrosse_pll_nll_2021-2022.csv)
 
 <details>
 
@@ -97,12 +97,15 @@ The data and worksheet associated with this module are available for download th
 
 * [lacrosse_pll_nll_2012-2022.csv](lacrosse_pll_nll_2021-2022.csv) - Dataset with game-by-game shots and goals scored for both leagues in the 2021-2022 season.. 
 
-* [lacrosse_pll_vs_nll_worksheet.docx](lacrosse_pll_vs_nll_worksheet.docx)- Activity worksheet to compare scoring and shots between indoor and outdoor leagues. 
+* [lacrosse_pll_vs_nll_t-test_worksheet.docx](lacrosse_pll_vs_nll_t-test_worksheet.docx)- Activity worksheet to compare scoring and shots between indoor and outdoor leagues using t-distributions.
+
+* [lacrosse_pll_vs_nll_statkey_worksheet.docx](lacrosse_pll_vs_nll_statkey_worksheet.docx)- Activity worksheet to compare scoring and shots between indoor and outdoor leagues using randomization tests implements via [StatKey](https://www.lock5stat.com/StatKey/){target="_blank"}.
+
 
 
 Sample solutions to the worksheets 
 
-* [lacrosse_pll_vs_nll_worksheet_key.docx](lacrosse_pll_vs_nll_worksheet_key.docx) - Activity worksheet with sample solutions. 
+* [lacrosse_pll_vs_nll_t-test_worksheet_key.docx](lacrosse_pll_vs_nll_t-test_worksheet_key.docx) - Activity worksheet using t-distributions with sample solutions. 
 
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
