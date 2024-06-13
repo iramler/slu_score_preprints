@@ -14,7 +14,7 @@ author:
   - name: A.J. Dykstra
     affiliation:
     - ref: slu
- - name: Robin Lock
+  - name: Robin Lock
     affiliation:
     - ref: slu   
 editor: 

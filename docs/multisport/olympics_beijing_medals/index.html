@@ -525,8 +525,10 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The Winter Olympics is an event hosted every 4 years last hosted in Beijing in 2022. In the 2022 Olympics, there were a total of 109 events across 15 <a href="https://en.wikipedia.org/wiki/2022_Winter_Olympics#:~:text=.%5B62%5D-,Sports,-%5Bedit%5D" target="_blank">disciplines</a>. It also has any more information on the Beijing 2022 Olympics you might be looking for. As the whole goal of the Olympics is to win as many medals as you can, everything is tracked. From the athlete, where they were born, if they won, their height, how many medals they won. This provides large data sets that are very interesting to look at.</p>
-<p>In this worksheet, we will look at some of these data sets and learn how to clean them into tidy formats and use these cleaned data to investigate questions such as which country won the most medals. Cleaning and manipulating data sets is a key component to your Data Science journey and opens many doors for what you can learn in the future.</p>
+<p>The Winter Olympics is an event hosted every 4 years, with the most recent one held in Beijing in 2022. In the 2022 Olympics, there were a total of 109 events across 15 <a href="https://en.wikipedia.org/wiki/2022_Winter_Olympics#:~:text=.%5B62%5D-,Sports,-%5Bedit%5D" target="_blank">disciplines</a>.</p>
+<p>For the Beijing 2022 Winter Olympics detailed information on athletes, events, and medal counts was collected. For example, attributes such as the athlete’s name, nationality, event specifics, and medal results are publicly available.</p>
+<p>Analyzing data such as this can provide valuable insights into performance trends, country-wise achievements, and athlete statistics. Such analyses can help in identifying patterns, understanding factors contributing to success, and making informed predictions for future events.</p>
+<p>In this module, we will explore some of these data sets and learn how to clean them into tidy formats. We will use these cleaned data sets to investigate questions such as which country won the most medals. Cleaning and manipulating data sets is a foundation skills in developing as a Data Scientist and opens many doors for what you can learn in the future.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -561,11 +563,11 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.</p>
+<p>Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data. The activity could also easily be adapted to use other popular programming languages such as Python.</p>
 <ol type="1">
-<li><p>RStudio Packages: Familiarity with packages within RStudio. The most used one being dplyr, as well as some other packages that need to be used in order to manipulate variables. You should understand how to use functions within dplyr at a basic level</p></li>
-<li><p>Tidy Data: You should understand what it means for a data set to be tidy, there is a general definition of requirements for what this means.</p></li>
-<li><p>Knowledge of joining and summarizing data, this can be done using dplyr functions. The outcomes of what these different functions do should be understood.</p></li>
+<li><p>R Packages: Familiarity with the <code>tidyverse</code> suite of packages. In addition to the basic verbs in <code>dplyr</code>, students should be familiar with the separate command (<code>tidyr</code>) and joining commands (<code>dplyr</code>).</p></li>
+<li><p>Tidy Data: You should understand what it means for a data set to be <a href="https://tidyr.tidyverse.org/articles/tidy-data.html" target="_blank">tidy</a>, there is a general definition of requirements for what this means.</p></li>
+<li><p>Knowledge of summarizing data, this can be done using <code>dplyr</code> functions. The outcomes of what these different functions do should be understood. For example, knowing how to calculate means, sample sizes, proportions and other summary statistics using the <code>summarize</code> function in <code>dplyr</code>.</p></li>
 </ol>
 </div>
 </div>
@@ -573,7 +575,7 @@ Methods
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>There are two data sets here, athletes and medals.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.</p>
+<p>There are two data sets here, <code>athletes</code> and <code>medals</code>.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.</p>
 <p>Download non tidy data: <a href="data/athletes.csv">athletes.csv</a></p>
 <p><strong>Athletes</strong></p>
 <details>

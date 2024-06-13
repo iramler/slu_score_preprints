@@ -9,6 +9,7 @@
 <meta name="author" content="Jack Cowan">
 <meta name="author" content="Ivan Ramler">
 <meta name="author" content="A.J. Dykstra">
+<meta name="author" content="Robin Lock">
 <meta name="dcterms.date" content="2024-02-05">
 <meta name="description" content="Comparing scoring rates between indoor and outdoor profesional lacrosse leagues.">
 
@@ -507,6 +508,14 @@ cookieconsent.run({
             St.&nbsp;Lawrence University
           </p>
       </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Robin Lock </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
   </div>
 
 <div class="quarto-title-meta">
@@ -535,7 +544,7 @@ cookieconsent.run({
 <p>This module examines the goals and shots in two prominent lacrosse leagues: the <a href="https://premierlacrosseleague.com/" target="_blank">Premier Lacrosse League (PLL)</a> and the <a href="https://www.nll.com/" target="_blank">National Lacrosse League (NLL)</a>. The PLL and NLL are highly regarded professional lacrosse leagues that feature top-tier athletes from around the world.</p>
 <p>The PLL is played in an outdoor setting, following the <a href="https://en.wikipedia.org/wiki/Field_lacrosse" target="_blank">field lacrosse</a> format. This style of lacrosse is characterized by its larger field size, typically 110 yards by 60 yards. Field lacrosse involves 10 players per team and promotes a style of play that emphasizes long passes, intricate plays, and individual skills. Founded in 2019, the PLL operates with a touring model where teams travel to different cities each weekend, bringing the sport to a wide audience and fostering a festival-like atmosphere at each event. The league’s modernized approach includes a strong emphasis on media presence and player engagement. The PLL features approximately 200 athletes across its teams.</p>
 <p>In contrast, the NLL follows the <a href="https://en.wikipedia.org/wiki/Box_lacrosse" target="_blank">box lacrosse</a> format, which is played indoors on a smaller, enclosed field, generally 200 feet by 85 feet. Box lacrosse involves 6 players per team, and the gameplay is marked by frequent physical interactions, quick ball movements, and high-intensity transitions. Established in 1986, the NLL has a traditional franchise model with teams based in specific cities across the United States and Canada. This structure has cultivated strong local fan bases and deep community ties, contributing to the league’s longevity. The NLL features approximately 500 athletes, many of which also play in the PLL.</p>
-<p>These data allow for an analysis of goal-scoring within these leagues to identify differences between indoor (NLL) and outdoor (PLL) play. By examining goals and shots, we aim to understand how the environment and format of the game influence offensive strategies and overall scoring trends in professional lacrosse. It’s important to recognize that outdoor field lacrosse and indoor box lacrosse are distinct sports, each with its own unique dynamics, rules, and playing styles. By acknowledging these nuances, we can may gain a deeper understanding of how various playing conditions and league structures impact statistical outcomes.</p>
+<p>These data, from the 2021-2022 seasons, allow for an analysis of goal-scoring within these leagues to identify differences between indoor (NLL) and outdoor (PLL) play. By examining goals and shots, we aim to understand how the environment and format of the game influence offensive strategies and overall scoring trends in professional lacrosse. It’s important to recognize that outdoor field lacrosse and indoor box lacrosse are distinct sports, each with its own unique dynamics, rules, and playing styles. By acknowledging these nuances, we can may gain a deeper understanding of how various playing conditions and league structures impact statistical outcomes.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -597,8 +606,8 @@ Methods
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set has 162 rows with 9 columns. Each row represents a single lacrosse match either in the Premier Lacrosse League or the National Lacrosse League.</p>
-<p>Download data: <a href="lacrosse_pll_nll_201202022.csv">lacrosse_pll_nll_201202022.csv</a></p>
+<p>The data set has 162 rows with 9 columns. Each row represents a single lacrosse match either in the Premier Lacrosse League or the National Lacrosse League during the 2021-2022 season.</p>
+<p>Download data: <a href="lacrosse_pll_nll_2021-2022.csv">lacrosse_pll_nll_2021-2022.csv</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
@@ -644,11 +653,11 @@ Methods
 <td>How many goals the <code>Home_team</code> had on net</td>
 </tr>
 <tr class="even">
-<td>goals_per_game</td>
+<td>Goals</td>
 <td>The total amount of goals scored each game</td>
 </tr>
 <tr class="odd">
-<td>goals_per_48</td>
+<td>Goals_per_48</td>
 <td>The average amount of goals for the first 48 minutes of a game</td>
 </tr>
 </tbody>
@@ -665,11 +674,13 @@ Methods
 <p>The data and worksheet associated with this module are available for download through the following links.</p>
 <ul>
 <li><p><a href="lacrosse_pll_nll_2021-2022.csv">lacrosse_pll_nll_2012-2022.csv</a> - Dataset with game-by-game shots and goals scored for both leagues in the 2021-2022 season..</p></li>
-<li><p><a href="lacrosse_pll_vs_nll_worksheet.docx">lacrosse_pll_vs_nll_worksheet.docx</a>- Activity worksheet to compare scoring and shots between indoor and outdoor leagues.</p></li>
+<li><p><a href="lacrosse_pll_vs_nll_t-test_worksheet.docx">lacrosse_pll_vs_nll_t-test_worksheet.docx</a>- Activity worksheet to compare scoring and shots between indoor and outdoor leagues using t-distributions.</p></li>
+<li><p><a href="lacrosse_pll_vs_nll_randomization_worksheet.docx">lacrosse_pll_vs_nll_randomization_worksheet.docx</a>- Activity worksheet to compare scoring and shots between indoor and outdoor leagues using randomization tests implements via <a href="https://www.lock5stat.com/StatKey/" target="_blank">StatKey</a>.</p></li>
 </ul>
 <p>Sample solutions to the worksheets</p>
 <ul>
-<li><a href="lacrosse_pll_vs_nll_worksheet_key.docx">lacrosse_pll_vs_nll_worksheet_key.docx</a> - Activity worksheet with sample solutions.</li>
+<li><p><a href="lacrosse_pll_vs_nll_t-test_worksheet_key.docx">lacrosse_pll_vs_nll_t-test_worksheet_key.docx</a> - Activity worksheet using t-distributions with sample solutions.</p></li>
+<li><p><a href="lacrosse_pll_vs_nll_randomization_worksheet_key.docx">lacrosse_pll_vs_nll_randomization_worksheet_key.docx</a> - Activity worksheet using randomization tests with sample solutions.</p></li>
 </ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
