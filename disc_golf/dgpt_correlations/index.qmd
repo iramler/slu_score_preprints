@@ -1,5 +1,6 @@
 ---
-  title: "Disc Golf Pro Tour - Driving or Putting?"
+title: "Disc Golf Pro Tour - Driving or Putting?"
+description: What is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?
 author:
   - name: Gavin Cassidy
     affiliation:
@@ -10,7 +11,6 @@ author:
     affiliation:
       - ref: slu
 date: June 13, 2024
-description: What is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?
 categories:
   - Correlation
 ---
@@ -32,14 +32,21 @@ The learning objectives associated with this module are:
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
--   The handout provides a correlation table using stats from the 2024 DGPT season
+-   Students are expected to have been introduced to the concept of correlation.
+:::
 
--   Up to date statistics can be obtained using the code available from the [SCORE Data Repository](https://data.scorenetwork.org/disc_sports/DGPT24.html){target="_blank"}
+
+::: {.callout-note collapse="true" title="Technology requirement" appearance="minimal"}
+- The no tech version can be completed without any additional technology.
+
+- The tech version will require students to produce graphics and correlation matrices using statistical software.
 :::
 
 ### Data
 
-This data set has 97 rows with each rows containing the season statistics for a player. These rows have 25 columns with season statistics.
+This data set has 97 rows with each rows containing the (approximately) first half of the 2024 season statistics for a player. These rows have 25 columns with season statistics.
+
+Up to date statistics can be obtained using the code available from the [SCORE Data Repository](https://data.scorenetwork.org/disc_sports/DGPT24.html){target="_blank"}
 
 <details>
 

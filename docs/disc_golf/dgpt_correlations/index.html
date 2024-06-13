@@ -6,12 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Norah Kuduk">
+<meta name="author" content="Gavin Cassidy">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2024-05-15">
-<meta name="description" content="Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix">
+<meta name="dcterms.date" content="2024-06-13">
+<meta name="description" content="What is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?">
 
-<title>SLU SCORE Module Preprint Repository - Analyzing Lap Times for the 2023 F1 Miami Grand Prix</title>
+<title>SLU SCORE Module Preprint Repository - Disc Golf Pro Tour - Driving or Putting?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../motor_sports/dakar_rally_regression/index.html">Motor Sports</a></li><li class="breadcrumb-item"><a href="../../motor_sports/formula1_laps/index.html">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../disc_golf/dgpt_correlations/index.html">Disc Golf</a></li><li class="breadcrumb-item"><a href="../../disc_golf/dgpt_correlations/index.html">Disc Golf Pro Tour - Driving or Putting?</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -180,16 +180,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Disc Golf</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Disc Golf Pro Tour - Driving or Putting?</span></a>
   </div>
 </li>
@@ -277,13 +277,13 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Motor Sports</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
@@ -292,7 +292,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
   </div>
 </li>
@@ -474,7 +474,6 @@ cookieconsent.run({
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -482,19 +481,17 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../motor_sports/dakar_rally_regression/index.html">Motor Sports</a></li><li class="breadcrumb-item"><a href="../../motor_sports/formula1_laps/index.html">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../disc_golf/dgpt_correlations/index.html">Disc Golf</a></li><li class="breadcrumb-item"><a href="../../disc_golf/dgpt_correlations/index.html">Disc Golf Pro Tour - Driving or Putting?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</h1>
+<h1 class="title">Disc Golf Pro Tour - Driving or Putting?</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Summary statistics</div>
-    <div class="quarto-category">Histgram interpretation</div>
-    <div class="quarto-category">Outliers</div>
+    <div class="quarto-category">Correlation</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix
+    What is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?
   </div>
 </div>
 
@@ -503,7 +500,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Norah Kuduk </p>
+    <p class="author">Gavin Cassidy </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -526,7 +523,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 15, 2024</p>
+      <p class="date">June 13, 2024</p>
     </div>
   </div>
   
@@ -540,12 +537,10 @@ cookieconsent.run({
 
 <section id="module" class="level2">
 <h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Formula 1 (F1) Racing is the highest class of single-seater auto racing sanctioned by the Fédération Internationale de l’Automobile (FIA). Each year, an F1 season features a series of races, known as Grand Prix, which are held in a variety of countries and circuit types. Each of these circuits have their own characteristic’s that make the race unique, ranging from overall track layout and location, to specific corners and race-day weather conditions. Each season, teams and drivers compete for the World Constructors’ Championship and the World Drivers’ Championship, respectively. For the full history and more information about the sport, visit F1’s Wikipedia page <a href="https://en.wikipedia.org/wiki/Formula_One" target="_blank">here</a> or their website <a href="https://www.formula1.com/" target="&quot;_blank">here</a>.</p>
-<p>At the time of racing, the <a href="https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix" target="&quot;_blank">2023 Miami Grand Prix</a> was only the 11th time in F1’s history where all cars that started the race crossed the finish line. This meant that there were no crashes, mechanical failures, or race-ending driver mistakes. In addition, there were also no yellow or red flags issued to indicate an incident on or off the track ahead. In addition, there were no safety cars deployed that could slow or bring the field together.</p>
-<p>In this worksheet, we will analyze and describe histograms of lap times for Max Verstappen for the 2023 F1 Miami Grand Prix. Lap times over the course of a race are determined by a multitude of factors, including tire softness (usually a change in tenths of a second) or pit stops (a change in time by upwards of 15 seconds). Understanding the distribution of lap times over the course of a race and identifying potential outliers can provide valuable insights into the consistency and performance of a driver.</p>
+<p>Disc Golf is a rapidly growing sport with a full fledged professional circuit and tournaments all over the world. The Disc Golf Pro Tour (<a href="https://www.dgpt.com/" target="_blank">DGPT</a>) allows top level players to compete week after week across the United States, Canada, and Europe. With top level tournaments offering over $100,000 of prize money at many tournaments, players need a vast skill set to compete at the highest level. Similarly to ball golf, the two main types of shots in disc golf are driving and putting. Driving happens from the teeing area and putting happens on the ‘green’ where players try to throw their disc into the basket.</p>
+<p>The data set for this activity was taken from DGPT and Major tournament statistics found on the Professional Disc Golf Association’s official statistics website, <a href="https://statmando.com/" target="_blank">StatMando</a>. Each row contains a player who has played at least 40% of rounds during the DGPT season and has finished the tournament above the cash line at least once. Each row has the name of the player along with a collection of statistics covering a variety of different skills including driving, putting, and performance.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -558,12 +553,11 @@ Learning Objectives
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ol type="1">
-<li><p>Understand the concept of histograms and their relevance in statistical analysis.</p></li>
-<li><p>Identify potential outliers in a numerical variable using numerical methods such as the “1.5 IQR Rule”.</p></li>
-<li><p>Understand outliers and their effect on the data/summary statistics.</p></li>
-</ol>
+<p>The learning objectives associated with this module are:</p>
+<ul>
+<li><p>Being able to use correlation coefficients to compare the connection between quantitative variables.</p></li>
+<li><p>Reading a correlation table</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -579,26 +573,45 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.</p>
-<ol type="1">
-<li><p>Histograms: Familiarity with histograms as a graphical representation of a numerical variable (like lap times) is crucial. Students should understand how to interpret histograms, using shape, center, and spread of distributions.</p></li>
-<li><p>Outliers: Knowledge of outliers is important.</p></li>
-<li><p>Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms.</p></li>
-<li><p>Knowledge of outlier detection methods (such as the 1.5 IQR Rule) is needed.</p></li>
-</ol>
+<ul>
+<li>Students are expected to have been introduced to the concept of correlation.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology requirement">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology requirement
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>The no tech version can be completed without any additional technology.</p></li>
+<li><p>The tech version will require students to produce graphics and correlation matrices using statistical software.</p></li>
+</ul>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set contains 1138 rows and 7 columns. Each row represents a single lap by a driver who competed in the 2023 F1 Miami Grand Prix. It is important to note that Oscar Piastri and Logan Sargeant were each lapped once, meaning that they each have 56 rows of lap data, rather than the 57 of the other 18 drivers.</p>
-<p>Download data used: <a href="miami2023_data.csv">miami2023_data.csv</a></p>
+<p>This data set has 97 rows with each rows containing the (approximately) first half of the 2024 season statistics for a player. These rows have 25 columns with season statistics.</p>
+<p>Up to date statistics can be obtained using the code available from the <a href="https://data.scorenetwork.org/disc_sports/DGPT24.html" target="_blank">SCORE Data Repository</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
 </summary>
 <table class="table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
@@ -607,47 +620,141 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>driverId</td>
-<td>Unique identifier for each driver</td>
+<td>player</td>
+<td>player name</td>
 </tr>
 <tr class="even">
-<td>driverName</td>
-<td>The full name of the driver</td>
+<td>birdie_avg</td>
+<td>the average number of birdies from an 18 hole round</td>
 </tr>
 <tr class="odd">
-<td>constructorId</td>
-<td>Unique identifier for each constructor</td>
+<td>bogey_avg</td>
+<td>the average number of bogeys from an 18 hole round</td>
 </tr>
 <tr class="even">
-<td>constructorName</td>
-<td>Commonly used name of each constructor</td>
+<td>PKD</td>
+<td>the percentage of shots a player has ‘parked’ (within 10 ft of the basket)</td>
 </tr>
 <tr class="odd">
-<td>lap</td>
-<td>The lap number</td>
+<td>C1R</td>
+<td>the percent of shots throw within ‘Circle 1’(0-33ft) in regulation</td>
 </tr>
 <tr class="even">
-<td>lapTime</td>
-<td>The time taken to complete the lap, in seconds</td>
+<td>C2R</td>
+<td>the percent of shots throw within ‘Circle 2’(33-66ft) in regulation</td>
 </tr>
 <tr class="odd">
-<td>lapPosition</td>
-<td>The position of the driver at the end of the lap</td>
+<td>FWY</td>
+<td>the percent fairways hit with drives</td>
+</tr>
+<tr class="even">
+<td>SCR</td>
+<td>the percent of successful ‘scrambles’ the player achieves</td>
+</tr>
+<tr class="odd">
+<td>OB/18</td>
+<td>the average total out of bounds shots for 18 holes</td>
+</tr>
+<tr class="even">
+<td>C1X</td>
+<td>the percent of putts made from C1 excluding tap in putts(0-10ft)</td>
+</tr>
+<tr class="odd">
+<td>C2P</td>
+<td>the percent of putts made from C2 (33-66ft)</td>
+</tr>
+<tr class="even">
+<td>tot_SG:TG</td>
+<td>the total ‘Strokes Gained’ on the rest of the field from the tee to the green</td>
+</tr>
+<tr class="odd">
+<td>tot_SG:P</td>
+<td>the total ‘Strokes Gained’ on the rest of the field putting</td>
+</tr>
+<tr class="even">
+<td>events</td>
+<td>total events played for the 2024 DGPT season</td>
+</tr>
+<tr class="odd">
+<td>rounds</td>
+<td>total rounds played for the 2024 DGPT season</td>
+</tr>
+<tr class="even">
+<td>wins</td>
+<td>wins from the 2024 DGPT season</td>
+</tr>
+<tr class="odd">
+<td>podiums</td>
+<td>total podium placements from the 2024 DGPT season</td>
+</tr>
+<tr class="even">
+<td>top_10s</td>
+<td>total top 10 placements from the 2024 DGPT season</td>
+</tr>
+<tr class="odd">
+<td>top_20s</td>
+<td>total top 20 placements from the 2024 DGPT season</td>
+</tr>
+<tr class="even">
+<td>avg_place</td>
+<td>average event placement from the 2024 DGPT season</td>
+</tr>
+<tr class="odd">
+<td>top_10%</td>
+<td>percent of events where the player placed in the top 10</td>
+</tr>
+<tr class="even">
+<td>top_20%</td>
+<td>percent of events where the player placed in the top 20</td>
+</tr>
+<tr class="odd">
+<td>total_earnings</td>
+<td>the players total earnings from the 2024 DGPT season</td>
+</tr>
+<tr class="even">
+<td>total_strokes</td>
+<td>the total number of shots the player has taken during the DGPT season</td>
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Important Disc Golf Terms">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important Disc Golf Terms
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Parked(PKD):</strong> When a player throws their disc within 10 feet of the basket with a tee shot on par 3s or an approach shot on par 4s and 5s. A score of eagle or better also counts as a shot being parked.</p>
+<p><strong>Circle 1 in Regulation(C1R):</strong> When a player’s disc comes to rest within 10m(33ft) of the basket in the expected amount of shots. This is their tee shot on a par 3, 2nd shot on a par 4, and third shot on a par 5. C1 is defined by a 10m circle around the basket.</p>
+<p><strong>Circle 2 in Regulation(C2R):</strong> This has the same definition as Circle 1 in Regulation, but Circle 2 extends to within 20m(66ft) of the basket.</p>
+<p><strong>Fairways Hit(FWY):</strong> This is the percent of holes where the player lands on the fairway with their drive. This includes being inside Circle 1 or 2 on a drive.</p>
+<p><strong>Scramble(SCR):</strong> A scramble is when a player scores par or better on a hole after missing the fairway or being out-of-bounds. Scramble percentage is the percentage of holes where a player scored par or better after an errant drive.</p>
+<p><strong>Circle 1X putting(C1X):</strong> The putting percentage of the player from within Circle 1 (10m/66ft), excluding tap in putts within 10ft of the basket.</p>
+<p><strong>Circle 2 putting(C2P):</strong> The putting percentage of the player from Circle 2 (10m-20m/33ft-66ft).</p>
+<p><strong>Strokes Gained Tee to Green(SG:TG):</strong> This is the number of strokes by which the player has exceeded the average throwing performance of the field on drives and approaches.</p>
+<p><strong>Strokes Gained Putting(SG:P):</strong> This is the number of strokes by which the player has exceeded the average putting performance of the field in circle 1 and 2.</p>
+</div>
+</div>
+</div>
+<p><strong>Data Source</strong></p>
+<p>The data is obtained from the PDGA’s official statistics provider <a href="https://statmando.com/" target="_blank">StatMando</a>.</p>
 </details>
-<section id="data-source" class="level4">
-<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p><a href="https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020" target="_blank">Formula 1 World Championship (1950 - 2023)</a></p>
-</section>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Miami2023Worksheet.docx">Class handout</a></p>
-<p><a href="Miami2023WorksheetKey.docx">Class handout with sample solutions</a></p>
+<p><a href="DGPT24.csv">DGPT24.csv</a> - data set containing statistics from the 2024 DGPT season found on the <a href="https://data.scorenetwork.org/" target="_blank">SCORE Network Data Repository</a></p>
+<p><a href="DGPT24_questions.docx">DGPT24_questions.docx</a> - questions about correlation between total earnings and putting and driving</p>
+<p><a href="DGPT24_questions_tech.docx">DGPT24_questions_tech.docx</a> - questions about correlation where students use the data to build their own solutions</p>
+<p>Solutions for questions:</p>
+<p><a href="DGPT24_questions_ans.docx">DGPT24_questions_ans.docx</a></p>
+<p><a href="DGPT24_questions_tech_ans.docx">DGPT24_questions_tech_ans.docx</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -656,16 +763,12 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In conclusion, the analysis of lap time histograms in F1 races have provided valuable insights into the variation of lap times across a single Grand Prix. One notable finding from this worksheet is the highlighting the effect of outliers (like laps with pit stops) has on the overall spread of the data. The sheet finds that by removing outliers, students are able to better see the consistency of lap times on a histogram, and predict how descriptive statistics (like mean and median), would be affected by the removal.</p>
+<p>Students should find that there is a stronger correlation between driving and performance statistics than putting and performance statistics.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Fill in later</p>
 
 
 </section>
