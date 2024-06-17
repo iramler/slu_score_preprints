@@ -599,9 +599,10 @@ Methods
 <div class="callout-body-container callout-body">
 <p>Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data. The activity could also easily be adapted to use other popular programming languages such as Python.</p>
 <ol type="1">
-<li><p>R Packages: Familiarity with the <code>tidyverse</code> suite of packages. In addition to the basic verbs in <code>dplyr</code>, students should be familiar with the separate command (<code>tidyr</code>) and joining commands (<code>dplyr</code>).</p></li>
+<li><p>R Packages: Familiarity with the <code>tidyverse</code> suite of packages. In addition to the basic verbs in <code>dplyr</code>, students should be familiar with the separate command (<code>tidyr</code>) and joining commands (<code>dplyr</code>). Students will also need a small amount of <code>lubridate</code> and can benefit from some basic regular expressions (to be used with the <code>separate</code> function).</p></li>
 <li><p>Tidy Data: You should understand what it means for a data set to be <a href="https://tidyr.tidyverse.org/articles/tidy-data.html" target="_blank">tidy</a>, there is a general definition of requirements for what this means.</p></li>
 <li><p>Knowledge of summarizing data, this can be done using <code>dplyr</code> functions. The outcomes of what these different functions do should be understood. For example, knowing how to calculate means, sample sizes, proportions and other summary statistics using the <code>summarize</code> function in <code>dplyr</code>.</p></li>
+<li><p>Students should have some basic understanding of the <code>join</code> functions in R.</p></li>
 </ol>
 </div>
 </div>
@@ -610,7 +611,7 @@ Methods
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <p>There are two data sets here, <code>athletes</code> and <code>medals</code>.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.</p>
-<p>Download non tidy data: <a href="data/athletes.csv">athletes.csv</a></p>
+<p>Download non tidy data: <a href="athletes.csv">athletes.csv</a></p>
 <p><strong>Athletes</strong></p>
 <details>
 <summary>
@@ -771,7 +772,7 @@ Conclusion
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Forthcoming</p>
+<p>By working through the different exercises, students will become aware of how data cleaning and preparation are a key component to analysis.</p>
 </div>
 </div>
 </div>

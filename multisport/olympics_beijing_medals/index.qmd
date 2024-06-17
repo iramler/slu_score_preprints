@@ -133,7 +133,7 @@ Download tidy data: [medalsTidy.csv](medalsTidy.csv)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 
-Forthcoming
+By working through the different exercises, students will become aware of how data cleaning and preparation are a key component to analysis.
 
 :::
 
