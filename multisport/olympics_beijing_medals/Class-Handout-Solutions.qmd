@@ -1,9 +1,11 @@
 ---
 title: "Class Handout"
-author: "Eric Seltzer"
 format: html
 ---
 # Data Cleaning and Summarization Module
+
+In this document, you will be lead through cleaning one of the two data sets associated with the medal counts at the Beijing Olympics. Then, for the other data set, you will be asked to clean it using similar functions. Finally, you will investigate how to combine the two data sets together.
+
 ## 1. Loading in a dataset
 ```{r}
 #| output: false
@@ -15,23 +17,29 @@ library(here)
 How to load in csv files into a data frame.
 ```{r}
 #| output: false
-athletes <- read_csv(here('athletes.csv'))
-medals <- read_csv(here('medals.csv'))
+athletes <- read_csv("https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/beijing_athletes.csv")
+medals <- read_csv("https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/beijing_medals.csv")
 ```
 
 ## 2. Data Cleaning
 Firstly, lets look at an example of what the data looks like starting with the medals data set.
 ```{r}
-knitr::kable(head(medals))
+View(medals)
 ```
 
-The first thing that has to be adjusted is the medal_code data and the athelete_sex data. Currently, the data type is a double and character respectively, but it should really be a factored datatype with 3 levels. To do this, we can take advantage of the forcats and dplyr packages in tidyverse.
+The first thing that has to be adjusted is the medal_code data and the athlete_sex data. Currently, the data type is a double and character respectively, but it should really be a factored datatype with 3 levels. To do this, we can take advantage of the forcats and dplyr packages in tidyverse.
 ```{r}
 medalsTidy <- 
   medals |>
   mutate(medal_code = as_factor(medal_code),
-         athlete_sex = as_factor(ifelse(athlete_sex == 'M', 'M',
-                                      ifelse(athlete_sex == 'W', 'W', 'O'))))
+         athlete_sex = as_factor(
+           case_when(
+             athlete_sex == 'M' ~ 'M',
+             athlete_sex == 'W' ~ 'W',
+             .default = 'O'
+             )
+           )
+         )
 # mutate allows you to adjust variables in the data set
 ```
 
@@ -69,7 +77,7 @@ medalsTidy <-
 
 Here is what our cleaned data set now looks like.
 ```{r}
-knitr::kable(head(medalsTidy))
+View(medalsTidy)
 ```
 
 ### Exercise 1
@@ -125,7 +133,7 @@ athletesTidy |>
   summarise(propNA = mean(is.na(meters)))
 ```
 
-1f. Calculate the proportion of missing values for Ice Hockey and discuss the difference from the previous result.
+1f. Calculate the proportion of missing height values for Ice Hockey and discuss the difference from the previous result.
 
 ```{r}
 athletesTidy |>
@@ -133,7 +141,7 @@ athletesTidy |>
   summarise(propNA = mean(is.na(meters)))
 ```
 
-1g. Calculate the proportion of missing values for each sport, and sort them by descending order.
+1g. Calculate the proportion of missing height values for each sport, and sort them by descending order.
 
 ```{r}
 athletesTidy |>
@@ -174,7 +182,7 @@ medalsTidy |>
 ```
 
 ### Exercise 4
-Finally, figure out what discipline the United States of America received the most medals in.
+Finally, figure out in which discipline the United States of America has received the most medals.
 
 ```{r}
 medalsTidy |>
@@ -186,5 +194,16 @@ medalsTidy |>
 
 ## 4. Joining
 ### Exercise 5
-As one last additional exercise, think about how you would go about combining both the athletes and medals data sets and what the differences between different join functions would do.
+As one last additional exercise, think about how you would go about combining both the athletes and medals data sets. In particular, what would the `left_join` function represent? (Hint: It depends on which data set is assigned to which role.)
 
+
+
+```{r}
+ljn1 <- left_join(x = medals, y = athletes, by = c('athlete_name' = 'name'))
+
+ljn2 <- left_join(x = athletes, y = medals, by = c('name' = 'athlete_name'))
+```
+
+In ljn1, we are constructing a dataset of medal winners and adding the athlete information to them. (i.e., we only have medal winners)
+
+In ljn2, we will have a dataset of all the athletes (including non-medalists) and adding the medal information to each. This will result in a large amount of missing values as most of the athletes did not win a medal.

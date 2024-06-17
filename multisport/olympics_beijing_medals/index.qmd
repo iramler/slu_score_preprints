@@ -48,18 +48,20 @@ By the end of this activity, you will be able to:
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 Technology requirement: The activity handout provides examples of how to clean and summarize data. For this, the use of R Studio is required and we will be using a quarto document. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data. The activity could also easily be adapted to use other popular programming languages such as Python.
 
-1.  R Packages: Familiarity with the `tidyverse` suite of packages. In addition to the basic verbs in `dplyr`, students should be familiar with the separate command (`tidyr`) and joining commands (`dplyr`).
+1.  R Packages: Familiarity with the `tidyverse` suite of packages. In addition to the basic verbs in `dplyr`, students should be familiar with the separate command (`tidyr`) and joining commands (`dplyr`). Students will also need a small amount of `lubridate` and can benefit from some basic regular expressions (to be used with the `separate` function).
 
 2.  Tidy Data: You should understand what it means for a data set to be [tidy](https://tidyr.tidyverse.org/articles/tidy-data.html){target="_blank"}, there is a general definition of requirements for what this means.
 
 3.  Knowledge of summarizing data, this can be done using `dplyr` functions. The outcomes of what these different functions do should be understood. For example, knowing how to calculate means, sample sizes, proportions and other summary statistics using the `summarize` function in `dplyr`.
+
+4. Students should have some basic understanding of the `join` functions in R.
 :::
 
 ### Data
 
 There are two data sets here, `athletes` and `medals`.The first athletes contains information on individual athletes. Each row in this data set represents a different athlete that competed at the Beijing 2022 Olympic Winter Games. This data set has 2897 rows and 14 columns.
 
-Download non tidy data: [athletes.csv](data/athletes.csv)
+Download non tidy data: [athletes.csv](athletes.csv)
 
 **Athletes**
 
