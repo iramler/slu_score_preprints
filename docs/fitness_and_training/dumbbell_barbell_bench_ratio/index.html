@@ -6,12 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Matt Maslow">
+<meta name="author" content="Vivian Johnson">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2024-03-06">
-<meta name="description" content="Investigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.">
+<meta name="dcterms.date" content="2024-06-13">
+<meta name="description" content="Critically exploring self reported strength ratios.">
 
-<title>SLU SCORE Module Preprint Repository - Professional Bull Riding Analysis</title>
+<title>SLU SCORE Module Preprint Repository - Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../rodeo_sports/bull_riding_regression/index.html">Rodeo Sports</a></li><li class="breadcrumb-item"><a href="../../rodeo_sports/bull_riding_regression/index.html">Professional Bull Riding Analysis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html">Fitness and Training</a></li><li class="breadcrumb-item"><a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -231,16 +231,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Fitness and Training</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</span></a>
   </div>
 </li>
@@ -352,16 +352,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
  <span class="menu-text">Rodeo Sports</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Professional Bull Riding Analysis</span></a>
   </div>
 </li>
@@ -491,7 +491,6 @@ cookieconsent.run({
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -499,20 +498,18 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../rodeo_sports/bull_riding_regression/index.html">Rodeo Sports</a></li><li class="breadcrumb-item"><a href="../../rodeo_sports/bull_riding_regression/index.html">Professional Bull Riding Analysis</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html">Fitness and Training</a></li><li class="breadcrumb-item"><a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Professional Bull Riding Analysis</h1>
+<h1 class="title">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Linear/Logistic Regression</div>
-    <div class="quarto-category">Summary Statistics</div>
-    <div class="quarto-category">Influential Points</div>
-    <div class="quarto-category">Hypothesis Testing</div>
+    <div class="quarto-category">Data collection methods</div>
+    <div class="quarto-category">One sample means-interval</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Investigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.
+    Critically exploring self reported strength ratios.
   </div>
 </div>
 
@@ -521,7 +518,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Matt Maslow </p>
+    <p class="author">Vivian Johnson </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -544,7 +541,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 6, 2024</p>
+      <p class="date">June 13, 2024</p>
     </div>
   </div>
   
@@ -561,13 +558,18 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Professional Bull Riding (PBR) is a sport that requires a unique combination of skill, strength, and courage. Riders must stay on a bucking bull as long as they can, using only one hand to hold on while the bull tries to throw them off. The rider is scored based on their performance, and the bull is also scored based on how well it bucks. In this dataset, we will explore the data from the 2023 season of the PBR league, Touring Pro Division, to understand the factors that contribute to a rider’s success and the performance, and the same for the bulls.</p>
-<dl>
-<dt>In these worksheets, we will exploring models that predict the points earned by riders and bulls in the 2023 season of the Professional Bull Riding (PBR) league, Touring Pro Division. We will fit multiple linear regression models to predict rider points and logistic regression models to predict bull points. We will interpret the model summary outputs, analyze patterns and trends, identify potential outliers, and test model efficiency.</dt>
-<dd>
-<p><a href="VideoScript.docx">Preliminary script for video</a></p>
-</dd>
-</dl>
+<p>Weightlifters may be inclined to track the specific ratio between flat dumbbell press and barbell bench press.</p>
+<p>A <strong>dumbbell</strong> is a short bar with equal weight on both sides designed to be held in the lifter’s hands. <a href="https://www.youtube.com/watch?v=XMc1N3o-Qyw" target="_blank">Flat dumbbell press</a> is when the lifter lies on a flat bench with their arms positioned at roughly 45 degree angles, lifts two equal sized dumbbells, brings them back to the chest, and then keeps going.</p>
+<p>A <strong>barbell</strong> is similar in shape to a dumbbell, but is a longer, much heavier bar where multiple weighted plates can be placed on either side. <a href="https://www.youtube.com/watch?v=SCVCLChPQFY" target="_blank">Barbell bench press</a> is when the lifter lies on a bench with the barbell positioned at their chest, lifts the barbell, and then brings it back down.</p>
+<p>The ratio of flat dumbbell press to barbell bench press works to track how much someone is lifting two dumbbells compared to how much they are able to lift the weighted barbell. When calculating the ratio, it was multiplied by two in order to account for the total weight lifted when doing a flat dumbbell press, as there are two dumbbells that would have to be held by the lifter.</p>
+<p><strong>An example of this is as follows:</strong></p>
+<p><em>Say Melissa is able to flat dumbbell press two 30 lbs dumbbells. The total amount she can flat dumbbell press is 60 lbs (one dumbbell for each arm). On barbell bench press, she can lift 75 lbs. Her ratio would be calculated by dividing flat dumbbell press by barbell bench press (60/75) which equals 0.8, meaning that Melissa can lift two dumbbells up to 80% as heavy as she can bench press the barbell.</em></p>
+<p>While both exercises predominately target the chest muscles, each can focus on different secondary muscle groups. Many weightlifters like to track this ratio to work towards specific strength goals and target any weakness in certain muscle groups<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>For example, if someone’s ratio is low (i.e.&nbsp;they can barbell bench press much more than they can flat dumbbell press), it highlights that they might want to work on targeting the secondary muscles used in flat dumbbell press. In this case, these muscles are usually referred to as the <a href="https://steelsupplements.com/blogs/steel-blog/stabilizer-muscles-101-what-they-are-why-theyre-important" target="_blank"><em>stabilizer muscles</em></a>. This could mean they rely more on the barbell for their pressing strength and might benefit from incorporating more dumbbell exercises to improve muscle balance and stability.</p>
+<p>On the flip side, if someone’s ratio is high, it might indicate strong stabilizer muscles and good overall balance. This could mean they have well-developed coordination and muscular control, potentially reducing the risk of injury and enhancing overall athletic performance. However, it might also suggest that their barbell press strength is relatively underdeveloped, implying a need to focus more on barbell training to ensure balanced muscle development or to increase their overall strength.</p>
+<p>Finally, a lifter might be interested in being close to the average ratio of dumbbell to barbell press because it indicates a balanced strength development. In particular, this can be useful if they are able to compare themselves to the average from a group of peers. Being close to the average suggests that their training regimen is effective in developing both primary pressing muscles and stabilizer muscles evenly. This balance can contribute to better overall performance, reduced injury risk, and a more well-rounded physique.</p>
+<p>The data on the ratio between dumbbell and barbell weightlifting comes from responses in a Reddit thread on the <a href="https://www.reddit.com/r/Fitness/comments/35q4i3/how_much_do_you_dumbbell_flat_bench_compared_to/" target="_blank">r/fitness</a> subreddit. People who tend to use the fitness subreddit are likely fitness enthusiasts - including beginners, intermediate, and advanced lifters. This community is diverse, with members ranging from casual gym-goers to serious athletes. As with most social media, typical ages of users on the fitness subreddit tend to be in the younger demographic, often ranging from late teens to early 30s. However, there are still users of all ages, including older individuals who are interested in maintaining their fitness and connecting with the community.</p>
+<p>This module involves using the strength ratio to look at dot plots, construct and use confidence intervals, and discuss the effect that data collection methods have on the reliability of the data.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -580,12 +582,11 @@ Learning Objectives
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
+<p>By the end of this activity, you will:</p>
 <ol type="1">
-<li><p>Understand how to fit and interpret multiple linear models along with logistic regression models.</p></li>
-<li><p>Analyze and describe model summary outputs, as well as explaining patterns or trends, and effects of multicollinearity</p></li>
-<li><p>Identify potential outliers from residual plots, and using variable transformation to improve model.</p></li>
-<li><p>Ability to test model efficiency, as well as performing nested-hypothesis test to find best model.</p></li>
+<li><p>Enhance proficiency in constructing and interpreting confidence intervals.</p></li>
+<li><p>Understand the limitations of using smaller datasets of self-selected individuals.</p></li>
+<li><p>Explain the importance of obtaining a sample that reaches across multiple audiences.</p></li>
 </ol>
 </div>
 </div>
@@ -602,182 +603,63 @@ Methods
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout will require R-studio to complete the questions. This will need to be able to have access to both CSV files.</p>
-<ol type="1">
-<li><p>Model Fitting: Know how to fit multiple linear regression and logistic regression model in R, along with interpreting the model summary output. This will require familiarity with the <code>lm()</code> and <code>glm()</code> functions.</p></li>
-<li><p>Model Summary: Understand how to analyze and describe the patterns or trends in the data, along with how to identify the presence multicollinearity and how to fix it in the model.</p></li>
-<li><p>Outliers: Know how to properly deal with outliers, data points that impact the overall trend/pattern of data, along with the rules of cooks distance. This will will involve the analysis of the residual plots of the models using <code>plot()</code> function.</p></li>
-<li><p>Hypothesis Testing: Understand how to perform nested-hypothesis test to find the best model, along with the rules testing. This will require the use of the <code>anova()</code> function, or can be completed by hand with use of summary outputs, along with anova tables of individual models.</p></li>
-</ol>
+<p>Students are expected to have been exposed to one-sample inference for means (most likely t-intervals). Students will also need to have been exposed to general sampling practices - including common biases or problematics sampling schemes such as convenience samples and self-reported data.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology Requirements
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>No explicit technology is required, although a calculator is recommended. Additionally, the module worksheets can easily be adapted to be used with statistical software.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>A data frame for 38 riders from the 2023 season of the Professional Bull Riding (PBR) league, for the Touring Pro Division. These data frames hold the stats for the riders and the bulls they ride. The data was scraped from the PBR website. For the rider data set, there are 357 riders with 16 variables, however, not all of the riders points meaning they would not hold a lot of significance in data and may skew the results. The bull data set has 50 bulls with 11 variables on their scoring statistics.</p>
+<p>The <code>dumbbell_barbell_weight_ratio</code> data set contains observed strength ratios from 18 different weightlifters. Each row represents a different weightlifter.</p>
+<p>Data is available on the <a href="https://data.scorenetwork.org" target="_blank">SCORE Data Repository Website</a></p>
+<p>Download data: <a href="https://data.scorenetwork.org/data/dumbbell_barbell_weight_ratio.csv" target="_blank">dumbbell_barbell_weight_ratio.csv</a></p>
 <details>
 <summary>
-<b>Riders Data: Variable Descriptions</b>
+<b>Variable Descriptions</b>
 </summary>
 <table class="table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Variable</strong></th>
-<th><strong>Description</strong></th>
+<th>Variable</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>Rider</code></td>
-<td>Name of the pro bull rider</td>
-</tr>
-<tr class="even">
-<td><code>Points</code></td>
-<td>Total points earned by the bull rider</td>
-</tr>
-<tr class="odd">
-<td><code>Points Back</code></td>
-<td>Difference in points between the rider and the leader</td>
-</tr>
-<tr class="even">
-<td><code>Events</code></td>
-<td>Number of events participated in by the rider</td>
-</tr>
-<tr class="odd">
-<td><code>Outs</code></td>
-<td>Number of times the rider went through gate (Rides + Buckoffs)</td>
-</tr>
-<tr class="even">
-<td><code>Rides</code></td>
-<td>Number of successful rides by the rider</td>
-</tr>
-<tr class="odd">
-<td><code>Buckoffs</code></td>
-<td>Number of unsuccessful rides by the rider</td>
-</tr>
-<tr class="even">
-<td><code>prop.Ridden</code></td>
-<td>Percent of successful rides</td>
-</tr>
-<tr class="odd">
-<td><code>Avg Ride Score</code></td>
-<td>Average score for successful rides by the rider</td>
-</tr>
-<tr class="even">
-<td><code>Highest RideScore</code></td>
-<td>Highest score achieved by the rider in a single ride</td>
-</tr>
-<tr class="odd">
-<td><code>Avg Buckoff Time</code></td>
-<td>Average time spent on bulls that the rider failed to ride</td>
-</tr>
-<tr class="even">
-<td><code>Round Wins</code></td>
-<td>Number of round wins achieved by the rider</td>
-</tr>
-<tr class="odd">
-<td><code>Event Wins</code></td>
-<td>Number of event wins achieved by the rider</td>
-</tr>
-<tr class="even">
-<td><code>ReRides Taken</code></td>
-<td>Number of re-rides taken by the rider</td>
-</tr>
-<tr class="odd">
-<td><code>Earnings</code></td>
-<td>Total earnings of the rider from bull riding events</td>
-</tr>
-<tr class="even">
-<td><code>90Pt Rides</code></td>
-<td>Number of rides scoring 90 points or above</td>
+<td>Ratio</td>
+<td>Flat dumbbell press to barbell bench press weight ratio</td>
 </tr>
 </tbody>
 </table>
 </details>
-<p>Download data: <a href="BullRiders.csv">BullRiders.csv</a></p>
-<details>
-<summary>
-<b>Bull’s Data: Variable Descriptions</b>
-</summary>
-<table class="table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 71%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Variable</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>Bull</code></td>
-<td>Name of the bull</td>
-</tr>
-<tr class="even">
-<td><code>World Champ Avg Score</code></td>
-<td>Average score of the bull at world championship events</td>
-</tr>
-<tr class="odd">
-<td><code>Events</code></td>
-<td>Number of events the bull participated in</td>
-</tr>
-<tr class="even">
-<td><code>Ridden</code></td>
-<td>Number of times the bull was successfully ridden</td>
-</tr>
-<tr class="odd">
-<td><code>Outs</code></td>
-<td>Number of times the bull was scheduled to be ridden</td>
-</tr>
-<tr class="even">
-<td><code>Rides</code></td>
-<td>Number of successful rides on the bull</td>
-</tr>
-<tr class="odd">
-<td><code>Buckoffs</code></td>
-<td>Number of unsuccessful rides on the bull</td>
-</tr>
-<tr class="even">
-<td><code>Avg BullScore</code></td>
-<td>Average score for successful rides on the bull</td>
-</tr>
-<tr class="odd">
-<td><code>Highest BullScore</code></td>
-<td>Highest score achieved by a rider on this bull</td>
-</tr>
-<tr class="even">
-<td><code>Avg Buckoff Time</code></td>
-<td>Average time a rider spends on the bull before bucking off</td>
-</tr>
-<tr class="odd">
-<td><code>45Pt Rides</code></td>
-<td>Number of rides scoring 45 points or above on this bull</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>Download data: <a href="Bulls.csv">Bulls.csv</a></p>
 <section id="data-source" class="level4">
 <h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p><a href="https://azcms.pbr.com/statistics/rider/?season=2023&amp;tour=TPD-US" target="_blank">Bull Rider’s Data</a></p>
-<p><a href="https://azcms.pbr.com/statistics/bull/" target="_blank">Bull’s Data</a></p>
+<p><a href="https://www.reddit.com/r/Fitness/comments/35q4i3/how_much_do_you_dumbbell_flat_bench_compared_to/" target="_blank">Weight Ratio</a></p>
+<p>The data is sourced from a self-reported Reddit open forum. Users provided their weight for both a flat dumbbell press and a barbell bench press, and it was compiled by another user into the corresponding weight ratio. It is important to note that as this is a self-reported open forum, biases may be introduced that wouldn’t otherwise be present.</p>
 </section>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="PBR-riders-handout.qmd">Class handout: Rider’s</a></p>
-<p><a href="Answerkey_pbr_riders.qmd">Class handout: Rider’s - with solutions</a></p>
-<p><a href="PBR-bulls-handout.qmd">Class handout: Bull’s</a></p>
-<p><a href="Answerkey_pbr_bulls.qmd">Class handout: Bull’s - with solutions</a></p>
+<p><a href="weight_ratio_worksheet.docx">Class handout</a></p>
+<p><a href="weight_ratio_worksheet_SOLUTIONS.docx">Class handout - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -786,22 +668,25 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In conclusion, the investigation explores the 2023 season of the Professional Bull Riding (PBR) league’s Touring Pro Division, aiming to uncover the factors influencing rider and bull performance, more specifically on how they are scored. By fitting multiple linear regression models to predict rider points and logistic regression models to predict bull points, statistic learners gain insights into interpreting model summaries, identifying patterns and trends, and evaluating model efficiency. Learning objectives encompass understanding and interpreting linear and logistic regression models, analyzing model summaries, detecting multicollinearity, identifying outliers, knowing when and how to use variable transformation, and testing model efficiency through nested-hypothesis tests. Through these worksheets, statistic learners gain practical experience in leveraging these techniques to help performance evaluation and decision-making in professional bull riding competitions.</p>
+<p>Upon conclusion, students should recognize that the data collected likely strictly limits which population the resulting confidence interval can be applied to. Additionally, students should recognize that, even with the limitations of these data, they can still provide value.</p>
+<p>This learning module offers valuable insight into the process of data collection and the role it has in making concrete conclusions. There are some obvious biases in the way the data was collected, those who report their ratios belong to similar audiences, and we can’t assume that the sample is representative of a broad population. Nevertheless, it presents a valuable opportunity for thought and good practice at constructing one sample t tests and recognizing the extent to which they can be used.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Created by Matthew Maslow (St.&nbsp;Lawrence University), <a href="mailto:iramler@stlawu.edu">Ivan Ramler (St.&nbsp;Lawrence University)</a></p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Although many weightlifters may use this ratio for tracking progress and examining muscle balance, it isn’t an official statistic used in competitions, only a personal one.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
