@@ -1,0 +1,108 @@
+---
+title: "2023-24 PWHL - Visualizing the Regular Season"
+author:
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Brendan Karadenes
+    affiliation:
+      - ref: slu
+date: June 6, 2024
+description: Visualizing scoring data for players during the 2023-24 PWHL season
+categories:
+  - data visualization
+  - data wrangling
+  - exploratory data Analysis
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Welcome Video
+
+### Introduction
+
+For this activity, you will be exploring the goals scored by the different positions and age groups in the Professional Woman's Hockey League [PWHL](https://www.quanthockey.com/pwhl/en/seasons/pwhl-players-stats.html){target="_blank"} during the 2023-24 regular season.
+
+Specifically, you will examine visualizations provided, create your own visualizations, and create new variables in the data set.
+
+Visualizing these statistics is useful for several reasons. Displaying graphics provides the reader with an easy-to-understand idea of how scoring can differ among different age groups and positions. Also, allowing the student to work with the data and create new variables allows them to deepen their understanding of the newly formed league. It can identify which age groups and positions are most likely to score the most goals in a given season. Although not the main goal of the data set, analyses like these can inform strategies to either prevent or score goals, highlight an ideal age range, and inspire teams to maximize the number of goals from each position.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an in-class example or quiz.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, you will be able to:
+
+1.  Construct visualizations using ggplot
+
+2.  Analyze data using boxplots and density plots.
+
+3.  Modify a data set to help with your analysis
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will primarily use functions from the tidyverse package and basic graph analysis skills. Students will require previous knowledge of R.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requiremens" appearance="minimal"}
+The provided worksheets are designed to be done using R.
+
+Since the data are provided, instructors are encouraged to modify the worksheets to have students practice other statistical concepts in their preferred software.
+:::
+
+### Data
+
+The data set contains 147 rows and 16 columns. Each row represents a player who competed during the 2023-24 PWHL regular season.
+
+Download Data
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable   | Description                                                           |
+|---------------------|---------------------------------------------------|
+| Rk         | League ranking for number of total points                             |
+| Name       | First and last name of the player                                     |
+| Age        | Age in years of the player                                            |
+| Pos        | Position of the player, either Goalie (G), Defense (D) or Forward (F) |
+| GP         | Number of games played by the player                                  |
+| G          | Number of goals by the player                                         |
+| A          | Number of assists by the player                                       |
+| P          | Number of points by the player (Goals + Assists)                      |
+| PIM        | Penalty minutes accumulated by the player                             |
+| Plus_Minus | Plus/Minus rating for the player                                      |
+| PPG        | Points per game for the player                                        |
+| SHG        | Number of short-handed goals for the player                           |
+| GWG        | Number of game winning goals for the player                           |
+| G_Per_GP   | Number of goals per games played                                      |
+| A_Per_GP   | Number of assists per games played                                    |
+| P_Per_GP   | Number of points per games played                                     |
+
+**Data Source**
+
+[Quant Hockey](https://www.quanthockey.com/){target="_blank"}
+
+</details>
+
+### Materials
+
+We provide an both an editable Microsoft Word handout and Posit Quarto (.qmd) file along with their keys. The Quarto file is designed for instructors that have students use R directly in the classroom. The Word document is for instructors whose students will not be directly interacting with in R/R-Studio (e.g., in a by-hand assessment).
+
+**Word version:**
+[Class handout: Word](PWHL_WS.docx)
+[Class handout - with key: Word](PWHL_WS_KEY.docx)
+
+
+**Quarto version:**
+[Class handout: Quarto](PWHL_Worksheet.qmd)
+[Class handout - with key: Quarto](PWHL_Worksheet_Key.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the Professional Woman's Hockey League worksheet provides excellent learning opportunities for mid-level statistics students in several ways. It allows them to understand and practice using key functions in the tidyverse r package. Also, student's can properly analyze visualizations they make and ones given to them. Furthermore, student's have the opportunity to use their creativity by using the data to create new variables that can help them analyze different parts of the data set. This gives the students unique exposure to a newly formed league and gives them the opportunity to make findings on how goals are scored in the league. Overall, this handout allows student's to investigate the inaugural season of the PWHL and draw meaningful conclusions about player performances across different age groups and positions.
+:::
