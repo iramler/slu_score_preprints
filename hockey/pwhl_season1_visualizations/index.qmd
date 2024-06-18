@@ -59,7 +59,7 @@ Since the data are provided, instructors are encouraged to modify the worksheets
 
 The data set contains 147 rows and 16 columns. Each row represents a player who competed during the 2023-24 PWHL regular season.
 
-Download Data
+[Download Data](PWHL_Final.csv)
 
 <details>
 
