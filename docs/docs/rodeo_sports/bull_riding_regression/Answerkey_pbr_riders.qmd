@@ -1,0 +1,157 @@
+---
+title: "Answer-Key: PBR Riders"
+format: 
+  html:
+    embed-resources: true
+---
+
+In the heart of the roaring arenas and under the watchful eyes of thousands, the world of professional bull riding (PBR) unfolds, where grit, skill, and a dash of luck intertwine. We will be building models to investigate how points are achieved by riders, we will dive into the data from the 2023 season of the Touring Pro Division. 
+
+```{r,message=FALSE, warning=FALSE}
+library(tidyverse)
+riders <- read_csv(here::here("Bull Riding/data/BullRiders.csv"))
+```
+
+
+# 1. 
+
+**Fit a model predicting riders Points, what can we notice about the output? Why is this happening? Hint: check data set documentation**
+
+```{r}
+riders %>%
+  select(-Rider) %>%
+  lm(Points ~ ., data = .) %>%
+  summary()
+```
+
+**Check correlation matrix to help interpret this**
+
+```{r}
+riders %>%
+  select(-Rider) %>%
+  cor() %>%
+  round(2)
+```
+
+*Rides + buckoff + Outs very collinear, showing evidence of multicollinearity, since two of those variables are used to determine the third, or vice versa. Therefore, when using all three of those in a model 1/3 of those variables will not be included in the final model output due to their strong correlation.*
+
+
+# Question 2
+
+**Using the riders data set, predict the points of a rider using avg. time for rider to fall off (Avg Buckoff Time), number of rides (Rides), and percent rides ridden (prop. Ridden) as predictors.**
+
+## a
+
+**Fit the Model. Assess models residual plots. What do we see?**
+
+```{r}
+riders %>%
+lm(Points ~  `Avg Buckoff Time` + Rides + prop.Ridden, data = .) %>%
+  plot(pch=16)
+```
+
+*Linearity looks relatively okay. Looking normal Q-Q plot the points are fraying off a at the ends showing potential for issues. The constant variance seems to be a bit all over the place and not linear about zero. Furthermore, looking at cooks distance plot there is significant evidence of an influential point.*
+
+## b
+
+**Does model prove to be significance? Are there any insignificant predictors?**
+
+```{r}
+riders %>%
+lm(Points ~  `Avg Buckoff Time` + Rides + prop.Ridden, data = .) %>%
+  summary()
+```
+
+*Yes, p-value is approximately zero with F = 573.3 and DF = 353. Yes, when running t-test for the predictors, Avg Buckoff Time has a p-value =  0.3104, which is most insignificant predictor in model*
+
+
+## c
+
+**Now add an interaction between Avg Buckoff Time and Rides. Record R-code formula here.**
+
+```{r}
+(mod <- lm(Points ~  `Avg Buckoff Time` + Rides + `Avg Buckoff Time`:Rides  + prop.Ridden, data = riders))
+```
+
+## d
+
+**Test whether having the interaction in the model is significant or not.**
+
+```{r}
+modRed <- lm(Points ~ `Avg Buckoff Time` + Rides + prop.Ridden, data = riders)
+modFull <- lm(Points ~ `Avg Buckoff Time` + Rides + `Avg Buckoff Time`:Rides  + prop.Ridden, data = riders)
+anova(modRed, modFull, test = "Chisq") 
+```
+
+*Yes, does prove to be significant with p-value approximately equal to zero with F-stat equal to 352 and degrees of freedom equal to 1*
+
+
+
+# Question 3
+
+**Using ggplot we will be constructing plots to assess the predictors**
+
+## a
+
+**Make a plot so Points ~ Avg Buckoff Time and Rides ~ prop.Ridden. What do we 	notice?**
+
+```{r}
+riders %>%
+  ggplot(aes(x = `Avg Buckoff Time`, y = Points)) +
+  geom_point() +
+  geom_smooth() +
+  labs(title = "Avg Buckoff Time vs Points") +
+  theme_minimal()
+
+riders %>%
+  ggplot(aes(x = prop.Ridden, y = Rides)) +
+  geom_point() +
+  geom_smooth() +
+  labs(title = "prop.Ridden vs Rides") +
+  theme_minimal()
+```
+*Can notice there is a definitely some curvature in the trends of the data points in each of the plots.*
+
+## b
+
+**Based off the outcomes and trends of the plots, what might we consider add to or 	model from the previous question?**
+
+*Notice the quadratic trends in the plots from the prior part, this means using a quadratic term in our model could be useful.*
+
+
+## c 
+
+**Now, using the model from question 2, add a quadratic term for Avg Buckoff Time. Record the R-code formula here.**
+
+```{r}
+(mod2 <- lm(Points ~  `Avg Buckoff Time` + I(`Avg Buckoff Time`^2) + Rides + `Avg Buckoff Time`:Rides  + prop.Ridden, data = riders))
+```
+
+## d
+
+**Test which model, original or transformed, is more effective for the data?**
+
+```{r}
+# mod <- model without quadratic term
+# mod2 <- model with quadratic term
+anova(mod, mod2)
+```
+
+*Transformed model is the more effective model for the data with an F-stat of 352, DF=1, and p-value = 0.0001273.*
+
+
+# Question 4
+ 
+ **Based off the questions above, what kind of model would be best to represent the data?**
+ 
+ *A quadratic model would be best to represent the data, as it is the most effective model for the data.*
+ 
+ 
+ 
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+---
+title: "Investigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis"
+date: June 24, 2024
+author:
+  - name: Eric Seltzer
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+description: Describing distribution shapes and interpreting visualizations or Men's Professional Tennis data.
+editor: 
+  canonical: true
+categories:
+  - Visualizations
+  - Distribution
+  - Interpretation
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+In professional tennis, there are four tiers of events, Grand Slams, Masters 1000, ATP 500 and ATP 250. Players receive the most points in their Association of Tennis Professionals [ATP rankings](https://en.wikipedia.org/wiki/ATP_rankings) for winning a Grand Slam, and the least from winning an ATP 250 tournament. There are four Grand Slams throughout the year, the Australian Open (Hard surface), Roland Garros (Clay surface), Wimbledon (Grass surface), and the U.S. Open (Hard surface). This leads to more competitive players wanting to play in the Grand Slams. In the ATP, Grand Slam tournaments are played in a best of five format, and non-Grand Slam tournaments in a best of three.
+
+In Tennis, there are three different types of surfaces that are played on. The options are Grass, Hard, and Clay. The surfaces are important to keep track of as the speed of tennis changes, e.g., clay generally slows the ball down whereas grass speeds it up. Individual players perform better on certain surfaces and may favor playing on their preferred surface.
+
+This dataset contains information for each player on each surface. To be included in the data set, players must have played a minimum of 10 matches overall or 5 matches on a particular surface. This data was filtered so only players who have recorded data on all three surfaces are present. This data is available in the file `atp_2023.csv` located in Data section below.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Understand the shapes of distribution as well as terms used to describe distribution.
+
+2.  Be able to discuss open ended questions regarding why distributions might differ
+
+3.  Compare differences between two populations through visualizations.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout will require nothing more than the handout and a writing utensil to complete.
+
+1.  Knowledge of distribution types and terms that come along with it.
+
+2.  Knowledge of interpreting visualizations and what they represent.
+:::
+
+### Data
+
+There is one data set for this exercise. The data is made up of 5194 rows and 20 columns and is provided by Jeff Sackman on GitHub. Each row represents a match played between two players.
+
+Download non tidy data: [atp_2023](atp_2023.csv)
+
+**Tennis**
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable           | Description                                           |
+|--------------------|-------------------------------------------------------|
+| tourney_name       | The name of the tournament                            |
+| GS                 | Whether this tournament was a grand slam or not       |
+| surface            | The type of surface that was played on for this match |
+| result             | Whether this player was a winner or not               |
+| player             | The name of the player                                |
+| rank               | The ATP ranking of the player                         |
+| hand               | The handedness of the player                          |
+| height             | The height of the player (cm)                         |
+| country            | The country the player is representing                |
+| age                | The age of the player                                 |
+| minutes            | How long the match was in minutes                     |
+| numAces            | The number of aces                                    |
+| numDF              | The number of double faults                           |
+| servePoints        | The number of serve points                            |
+| first_serve_won    | The number of serve points won                        |
+| second_serve_won   | The number of second serve points won                 |
+| serve_games_won    | The number of serve games won                         |
+| first_serve_in     | The number of first serves in                         |
+| break_points_saved | The number of break points saved                      |
+| break_points_faced | The number of break points faced                      |
+
+</details>
+
+The two summarized datasets used in the handout can be downloaded here.
+
+**Grand Slam**
+
+Download Grand Slam vs Non-Grand Slam data: [grand_slam_summarized.csv](grand_slam_summarized.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                          |
+|----------|------------------------------------------------------|
+| player   | The name of the player                               |
+| best_of  | Non-Grand Slam (best of 3) or Grand Slam (best of 5) |
+| winPct   | win percentage (recorded as a proportion)            |
+| matches  | number of matches played (used to calculate winPct)  |
+
+</details>
+
+**Surface Type**
+
+Download Surface Type Win Percentage data: [court_surface_summarized.csv](court_surface_summarized.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                           |
+|----------|-------------------------------------------------------|
+| player   | The name of the player                                |
+| surface  | The type of surface that was played on for this match |
+| winPct   | win percentage (recorded as a proportion)             |
+| matches  | number of matches played (used to calculate winPct)   |
+
+</details>
+
+#### Data Source
+
+[Jeff Sackman](https://github.com/JeffSackmann/tennis_atp){target="_blank"}
+
+### Materials
+
+[Class Handout](tennis_handout_intro_stat.docx)
+
+[Class Handout - Solutions](tennis_handout_intro_stat_key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+By the end of the activity students should be able to see how longer format tournaments increase the variability in win percentages - implying that the best-of-five used in Men's Grand Slams favors the better player.
+
+Further, they can see how looking at just the top players (or, more specifically, just the players that actively play in many matches) can give interesting displays of distributions for win percentages. (By excluding the lesser talented professionals that have low win rates, but aren't included in the given data.)
+:::
