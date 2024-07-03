@@ -1,0 +1,98 @@
+---
+title: "Olympic Rowing Medals Between 1896 and 2022"
+author:
+  - name: Abigail Smith
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+  - name: Robin Lock
+    affiliation:
+      - ref: slu
+
+date: June 6, 2024
+description: The total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022. 
+categories:
+  - distribution and skewness
+  - outlier detection
+  - summary statistics
+  - confounding variable
+---
+
+### Welcome video
+
+{{< video title="Olympic Rowing Medals Between 1900 and 2022" >}}
+
+### Introduction
+
+This activity looks at the total number of medals and points for nations in [Olympic rowing between 1900 and 2022](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download){target="_blank"}.
+
+The Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 and has been in every Summer Olympics since. Rowing races in the Olympic context are typically regatta style, meaning that there are multiple boats racing head-to-head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze. Over the course of its time as an Olympic sport there have been 25 different event entries.
+
+In this dataset, the medals are counted as one medal towards each boat as opposed to each athlete in the boat. In looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lob-sided medaling can be in rowing at the Olympic level.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity could be used as an example or a short take home assessment.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, students will be able to:
+
+1.  Assess and interpret data distribution using histograms
+2.  Obtain summary statistics with with statistical software
+3.  Identify outliers with IQR
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students will use an understanding of histograms and summary statistics to assess data distribution. Students will also use the IQR method to identify outliers.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The non tech version of the worksheet will only require a calculator, but the tech version will require the use of basic statistical software.
+:::
+
+### Data
+
+In the data set there are 41 medalling nations that competed in 25 different events. Each row represents a nation and their `medals` and `points` which are cumulative from all rowing Olympics between 1900 and 2022. In total, there are 41 rows with 3 variables. In the original dataset, there were 101 nations in rowing, but the data has been adjusted to include only nations that medalled.
+
+Download data:
+
+:   [rowing_medals.csv](rowing_medals.csv){target="_blank"}
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                                                                                                                                   |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `NOC`    | National Olympic Committee or the nation competing.                                                                                                           |
+| `medals` | The total number of medals for that country in that event.                                                                                                    |
+| `points` | The total number of points for that country in that event. The points are scaled with a gold medal counting for 3 points, a silver for 2, and a bronze for 1. |
+| `gold`   | The total number of gold medals for that country.                                                                                                             |
+| `silver` | The total number of silver medals for that country.                                                                                                           |
+| `bronze` | The total number of bronze medals for that country.                                                                                                           |
+
+**Data Source**
+
+[Original Kaggle Dataset](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download){target="_blank"}
+
+</details>
+
+### Materials
+
+We provide editable MS Word handouts along with their solutions.
+
+[Worksheet](medals_worksheet.docx)
+
+[Worksheet Answers](medals_worksheet_answers.docx)
+
+[Tech Worksheet](medals_worksheet_tech.docx)
+
+[Tech Worksheet Answers](medals_worksheet_answers_tech.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+This Olympic rowing medals worksheet builds students' understanding of data distribution through histograms, summary statistics, and outliers. It also strengthens students' ability to critically evaluate confounding variables and devising relationships amongst variables through looking at barplots. Additionally, it provides an interesting opportunity for students to look at patterns in medals for Olympic rowing.
+:::
