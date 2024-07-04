@@ -1,0 +1,55 @@
+---
+title: "Rowing Data Prep Questions"
+format: html
+---
+
+## Data description
+
+The Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 but was cancelled due to weather. It has been in every Summer Olympics since 1900. Rowing races in the Olympic context are regatta style, meaning that there are multiple boats racing head to head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m, but before then there had been a range in distances. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze.
+
+The original data set ([athlete_events.csv](athlete_events.csv){target="_blank"}) is not just about rowing but for every Olympic sport since 1896. It will be important to adjust the data so that the `Sport` variable is just rowing. Moreover, in the dataset medals are given to each athlete in the boat. In Olympic scoring however, the medals should be counted as one towards the entire boat. It is important to make sure this is the case when adjusting the `Medal` variable.
+
+In looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lob-sided medaling can be in rowing at the Olympic level. This effect could likely be attributed towards how much funding nations are placing towards their rowing teams.
+
+## Load in the libraries and data
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(readr)
+```
+
+Find the dataset on [this link](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download){target="_blank"} (https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download)and download it.
+
+```{r message=FALSE, warning=FALSE}
+athletes_df <- read_csv("athlete_events.csv")
+```
+
+### Task 1
+
+Adjust the data so that it contains rowing as the only `Sport` and remove any NA values for `Medal`, meaning the dataset will only have medaling countries.
+
+```{r}
+
+```
+
+### Task 2
+
+Organize the data so that there is only one athlete representing each team in each event in each year.
+
+```{r}
+
+```
+
+### Task 3
+
+There is a lot of debate about how to best weigh the points for the different types of medals. Read [this page](https://www.topendsports.com/events/summer/medal-tally/rankings-weighted.htm){target="_blank"} (https://www.topendsports.com/events/summer/medal-tally/rankings-weighted.htm) for more information about different medal point scales.
+
+Create a variable for the total number of points each country won using any weighting scale you want. Create another variable for the total number of medals each country won.
+
+```{r}
+
+```
+
+### Task 4
+
+Create a histogram of points for all countries. Describe the distribution of points.

@@ -1,0 +1,97 @@
+---
+title: "Olympic Swimming - Changes in the 100m Event"
+author:
+  - name: "Brendan Karadenes"
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: "Robin Lock"
+    affiliation:
+      - ref: slu
+  - name: "Ivan Ramler"
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: June 14, 2024
+description: Describing 100m event times for Olympic Swimmers from 1924 to 2020
+categories: 
+  - Boxplots
+  - Confidence Intervals
+  - Difference in Means
+  - Summary Statistics
+---
+
+## Introduction
+
+For this activity, you will be exploring the event times for female swimmers that competed in the 100m event from 1924 to 2020 in the [Olympics](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}.
+
+In particular, you will examine visualizations and conduct confidence intervals to explore the changes in finish times between different types of strokes and earlier vs. recent years.
+
+Investigating this data is useful for several reasons. Exploring this data can deepen our understanding of how swimming techniques and training have improved over the years and which strokes will be the fastest in this event. Also, analyzing how times have improved over the years gives insights into how competitive the event has gotten in recent years. It can show the subtle time differentials between the top and average athletes. Analysis like this can help inform the impact of modern training strategies, inspire athletes to practice different strokes, and help aspiring Olympic swimmers understand what times they need to be competitive.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an in-class example or quiz.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, you will be able to:
+
+1.  Analyze distributions using boxplots.
+2.  Compare and contrast distributions in the same or different groups.
+3.  Assess differences between two samples using confidence intervals.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will primarily use basic concepts of boxplots and confidence intervals to analyze data.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requiremens" appearance="minimal"}
+The provided worksheets require StatKey or similar software to get the z-score. They will also require access to a calculator.
+
+Since the data are provided, instructors are encouraged to modify the worksheets to have student's to make calculations and models on their preferred software.
+:::
+
+## Data
+
+The data set contains 606 rows and 10 columns. Each row represents a swimmer who competed in the 100m Olympic event during the period 1924 to 2020. The data includes top 8 finishers from men and woman racers however, due to lack of records, some of the data is excluded.
+
+Download data:
+
+Available on the [SCORE Data Repository](https://data.scorenetwork.org/){target="_blank"}: [olympic_swimming.csv](https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/olympic_swimming.csv){target="_blank"}
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable    | Description                                                                           |
+|-------------|---------------------------------------------------------------------------------------|
+| Location    | hosting city of the Olympics that the swimmer competed in                             |
+| Year        | year that the swimmer competed                                                        |
+| dist_m      | distance in meters of the race                                                        |
+| Stroke      | Backstroke, Breaststroke, Butterfly, or Freestyle                                     |
+| Gender      | gender of swimmer (Male or Female)                                                    |
+| Team        | 3 letter country code the swimmer is affiliated with                                  |
+| Athlete     | first and last name of the swimmer                                                    |
+| Results     | time, in seconds, that the swimmer completed the race                                 |
+| Rank        | place of the swimmer in the event out of four                                         |
+| time_period | time period that olympian swam in, either "early" (1924-1972) or "recent" (1976-2020) |
+
+**Data Source**
+
+[Kaggle Olympic Swimming 1912 to 2020](https://www.kaggle.com/datasets/datasciencedonut/olympic-swimming-1912-to-2020){target="_blank"}
+
+</details>
+
+## Materials
+
+We provide an editable Microsoft Word handout along with its solutions.
+
+The handouts should only require a calculator and can be modified to fit the instructors needs.
+
+[Class handout](olympic_swimming_ws.docx)
+
+[Class handout - with solutions](olympic_swimming_ws_key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the Olympic swimming module provides valuable opportunities for students in several important areas. It allows them to understand how to interpret visuals and confidence intervals to conclude statistical significance. The calculation of confidence intervals enables student's to understand the remarkable progress that's been made in swimming training. In general, this worksheet allows students to critically analyze Olympic swimming results from 1924 to 2020 and draw important conclusions regarding the different styles of swimming over the years.
+:::

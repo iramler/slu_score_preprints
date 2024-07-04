@@ -1,0 +1,117 @@
+---
+title: "Exploring the NBA Draft via ANOVA and Tukey's HSD"
+author:
+  - name: Vivian Johnson
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "July 1, 2024"
+description: "Preparing a dataset to complete ANOVA and an analysis of results."
+editor: 
+  canonical: true
+categories:
+  - One-Way Analysis of Variance 
+  - Difference in Means 
+  - Tukey's HSD 
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+#### The NBA Draft
+
+Each year, the National Basketball Association (NBA) holds a [draft](https://www.bbc.co.uk/newsround/65997816){target="_blank"}, where prospective basketball players are able to be chosen to join one of the 30 professional teams across the United States and Canada.
+
+In order to be eligible for the draft, a player must be at least 19 years old and out of high school for at least one year. Prior to 2006, this rule was not in effect, and players could be drafted during/right out of high school.
+
+Each year, the draft is comprised of 60 players and takes place over two rounds of 30 selections. Teams pick players in an order based on performance from the previous season, with teams that performed poorly getting earlier picks in order to create a seemingly more level playing field. It's important to note that there weren't always 30 players selected in each round, the number made its way up to 30 as more teams were added into the NBA.
+
+#### Playing Basketball
+
+The goal in basketball is to score as many points as possible by throwing the ball through the other team's hoop.
+
+In the middle of [the court](https://en.wikipedia.org/wiki/Basketball_court){target="_blank"} there is a half-court line that divides the two sides. On both sides, surrounding the hoops, there is an arch called the three-point line. Within the three-point line stands the free-throw line, where a player would shoot from should there be a foul called.
+
+**Scoring**
+
+Players can shoot towards the hoop from any point on the court. A different number of points is awarded based on where the player is standing when they release the ball. The three shots are explained below.
+
+-   Field Goal: Worth 2 points, scored by shooting within the three point line
+-   Three Pointer: Worth 3 points, scored by shooting outside the three point line.
+-   Free Throw: Worth one point, taken from the free throw line after a foul.
+
+A rebound is when a player from the team that is on defense obtains the ball after the other team takes a shot attempt at the hoop. At the end of the game, which is played in four twelve-minute quarters, the team with the most points wins.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will:
+
+1.  Increase ability to clean and manipulate data in R using multiple packages
+
+2.  Understand the components to an ANOVA test and how they contribute to the overall F-statistic and p-value
+
+3.  Be comfortable running post-hoc tests to determine specific relationships
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students should have prior knowledge of conducting one-way analysis of variance tests and the implications. Students should be able to explain the different components of an ANOVA table as well as familiarity with the idea of post-hoc tests to ANOVA, specifically Tukey's HSD. Students should also be comfortable with the statistical software, R, such as know how to make basic data visualizations and statistical tests.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The statistical software R is required to complete the learning materials in this module.
+:::
+
+### Data
+
+The `nba_draft` data set includes data from players that were selected in the NBA drafts between the years 1990-2021. Each row represents a different player and statistics from their respective careers in the NBA, some of which are still ongoing.
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description                                                                                                          |
+|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| draft_pick        | The pick number a player was selected in the NBA draft                                                               |
+| team              | The NBA team that drafted the player                                                                                 |
+| player_name       | The name of the player selected                                                                                      |
+| college           | The college the player attended (NA for those drafted out of high school, G-League team for international prospects) |
+| years_played      | Number of years spent in the NBA                                                                                     |
+| games_played      | Games played in the NBA                                                                                              |
+| total_mins_played | Total minutes played in the NBA                                                                                      |
+| total_pts         | Total points scored in the NBA                                                                                       |
+| total_rebounds    | Total rebounds grabbed in the NBA                                                                                    |
+| total_assists     | Total assists recorded in the NBA                                                                                    |
+| fg_percent        | The percent of field goal shots made by the player in the NBA                                                        |
+| three_pt_percent  | The percent of three-point shots made by the player in the NBA                                                       |
+| ft_percent        | The percent of free throws made by the player in the NBA                                                             |
+| draft_year        | Year the player was drafted                                                                                          |
+| mins_per_game     | Average number of minutes played per game for career in the NBA                                                      |
+| pts_per_game      | Average number of points scored per game for career in the NBA                                                       |
+| rebounds_per_game | Average number of rebounds per game for career in the NBA                                                            |
+| assists_per_game  | Average number of assists per game for career in the NBA                                                             |
+| round_picked      | Indicates the round the player was selected (either round 1 or round 2)                                              |
+| pick_in_round     | Indicates the order in which players were selected in that round                                                     |
+
+</details>
+
+Download [nba_draft.csv](nba_draft.csv){target="_blank"}
+
+#### Data Source
+
+This data is sourced from [Kaggle](https://www.kaggle.com/datasets/benwieland/nba-draft-data){target="_blank"}, and contains statistics from players selected in the NBA draft, as well as further on in their careers.
+
+### Materials
+
+[Class handout](nba_draft_worksheet.qmd){target="_blank"}
+
+[Class handout - with solutions](nba_draft_worksheet_SOLUTIONS.qmd){target="_blank"}
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Upon conclusion of this module, students will discover that there does seem to be a significant difference between the average number of minutes played based on which group a player was selected in the NBA draft. They also practice their skills in data cleaning and manipulation on statistical software and delve deeper into which groups have significant differences. This learning module offers a valuable opportunity to start from the beginning with a data set and complete the necessary steps to run an ANOVA test and see the real world applications.
+:::
