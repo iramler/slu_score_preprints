@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -608,7 +608,6 @@ cookieconsent.run({
     <div class="quarto-category">Data cleaning</div>
     <div class="quarto-category">Missing Data</div>
     <div class="quarto-category">Tables</div>
-    <div class="quarto-category">Logistic Regression</div>
   </div>
   </div>
 
@@ -664,8 +663,94 @@ cookieconsent.run({
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>The WNBA worksheet will introduce the idea of predicting playoff teams from their record earlier in the season. Most of the time, it is expected that teams with better records halfway through the season will have a higher chance of making it to the playoffs, but is this always the case? How do you know that the data you are using is a valid way of predicting this? By completing this worksheet, you will be guided through various data cleaning steps and will be able to answer these questions.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Background on the WNBA">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Background on the WNBA
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The Women’s National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women’s basketball at the professional level. The league’s inaugural season began in 1997 with eight teams.</p>
+<p>Throughout its history, the WNBA has been a pioneering force in women’s sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, as of 2024, consists of 12 teams.</p>
+<details>
+<summary>
+<b> WNBA expansion and contraction</b>
+</summary>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Season(s)</th>
+<th>No.&nbsp;of teams</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1997</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>1998</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>1999</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>2000–2002</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>2003</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>2004–2005</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>2006</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>2007</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>2008</td>
+<td>14</td>
+</tr>
+<tr class="even">
+<td>2009</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>2010–2024</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>2025</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>2026–future</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>The WNBA’s playoff structure typically features the top eight teams from the regular season standings advancing to the postseason. The playoffs are organized into single-elimination rounds, culminating in the WNBA Finals, where the last two teams standing compete in a best-of-five series to determine the league champion.</p>
+<p>Beyond its competitive play, the WNBA has been a leader in promoting social justice initiatives and advocating for equality both on and off the court. It continues to grow in popularity and influence, contributing significantly to the growth of women’s basketball worldwide.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -674,11 +759,11 @@ Learning Objectives
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>By the end of this activity, you will be able to:</p>
 <ul>
-<li><p>Use various <code>dplyr</code> package functions to clean a data set for further use.</p></li>
+<li><p>Use various <code>dplyr</code>, <code>tidyr</code>, and <code>lubridate</code> package functions to clean a data set for further use.</p></li>
 <li><p>Learn the process of cleaning data, recognizing any problems within the data, and determining whether the data can be used for the given analysis problem.</p></li>
 <li><p>Understand why missing data presents a problem for analysis and brainstorm ways to troubleshoot this problem.</p></li>
 </ul>
@@ -686,7 +771,7 @@ Learning Objectives
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -695,15 +780,9 @@ Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout requires knowledge of Quarto and, presumably, R Studio.</p>
-<ul>
-<li><p>Use the <code>distinct()</code> and <code>tally()</code> functions to determine if there are clear differences between groups.</p></li>
-<li><p>Use <code>select()</code> and <code>filter()</code> functions to clean data.</p></li>
-<li><p>Create new datasets using subsets of larger datasets.</p></li>
-<li><p>Using the internet to determine any inconsistencies between the given data and real team statistics.</p></li>
-</ul>
+<p>Technology requirement: The activity handout requires knowledge of Quarto and the following tidyverse packages: <code>dplyr</code>, <code>tidyr</code>, <code>lubridate</code>. The activity will allow students to use these packages together to complete a more complex task.</p>
 </div>
 </div>
 </div>
@@ -715,7 +794,7 @@ Methods
 <summary>
 <b> Data: Variable Descriptions</b>
 </summary>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 26%">
 <col style="width: 73%">
@@ -774,10 +853,11 @@ Methods
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Worksheet.docx">Class handout</a></p>
-<p><a href="Worksheet_Key.docx">Class handout - with solutions</a></p>
+<p>We offer worksheets (and their solutions) in Quarto (using R) format.</p>
+<p><a href="wnba_boxscore_worksheet.qmd">Class handout - Quarto</a></p>
+<p><a href="wnba_boxscore_worksheet_key.qmd">Class handout - Quarto - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -786,11 +866,11 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Exploration of the WNBA data revealed that there are missing values for games throughout the 2003-2022 seasons. We found this by tallying the number of games played by each team within each season and noticing that the number of games played was inconsistent between teams. We then used the internet to find an example of a missing game within the dataset.</p>
 <p>Reflecting on the challenges that missing values presented us, we came up with a few solutions to continue our analysis. Some of these include: filtering the data for seasons that have no missing data or using the internet to manually fill in data. While neither of these methods are perfect and present other challenges, they are valid ways to deal with missing values.</p>
-<p>Once we removed the seasons with imperfect data, we continued our analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs.</p>
+<p>Once dealing with the seasons with imperfect data, students can continue the analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs.</p>
 </div>
 </div>
 </div>
