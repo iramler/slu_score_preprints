@@ -14,6 +14,10 @@ author:
   - name: Sierra Hess
     affiliation:
       - ref: slu
+  - name: Vivian Johnson
+    affiliation:
+      - ref: slu
+
 description: Investigating the effect of timeouts on the outcome of a set. 
 editor: 
   canonical: true
@@ -31,7 +35,7 @@ Please note that these material have not yet completed the required pedagogical 
 
 In volleyball, timeouts are typically called by the team at a disadvantage (e.g., losing) to stop the opponent's momentum, address tactical issues, or give players a break. They are also used at critical moments to discuss strategy and prepare for decisive points. In NCAA Division III volleyball, teams can call up to three timeouts per set and there are three sets per game. 
 
-The [Liberty League](https://libertyleagueathletics.com/sports/wvball) is made up of 12 New York state colleges including St. Lawrence, Clarkson University, Hobart and William Smith Colleges, the University of Rochester, Rensselaer Polytechnic Institute, Skidmore College, Union College, Vassar College, Bard College, Rochester Institute of Technology, and Ithaca College. When looking at the data for the Liberty League division for women's volleyball, we can see exactly when a timeout was called. 
+The [Liberty League](https://libertyleagueathletics.com/sports/wvball){target="_blank"} is made up of 12 New York state colleges including St. Lawrence, Clarkson University, Hobart and William Smith Colleges, the University of Rochester, Rensselaer Polytechnic Institute, Skidmore College, Union College, Vassar College, Bard College, Rochester Institute of Technology, and Ithaca College. When looking at the data for the Liberty League division for women's volleyball, we can see exactly when a timeout was called. 
 
 In this module, we will analyze the effects of calling a timeout on wining a set. By looking only at the first or last timeout of a set, we will be able to determine how likely a  team is to win that set after calling the first or final timeout. Understanding the effects that a timeout has on a set can inform strategic decision-making for coaches and allow them to understand how much calling a timeout may help their game.
 
