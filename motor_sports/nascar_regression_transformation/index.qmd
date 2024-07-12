@@ -26,19 +26,28 @@ Please note that these material have not yet completed the required pedagogical 
 
 ### Introduction
 
-In NASCAR, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver's overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver's abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.
+In [NASCAR](https://www.nascar.com/){target="_blank"}, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver's overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver's abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.
+
+
+::: {.callout-note collapse="true" title="More about NASCAR" appearance="minimal"}
+NASCAR, the National Association for Stock Car Auto Racing, is a preeminent motorsports organization in the United States, distinguished by its [high-speed competitions](https://youtu.be/Ql20qF0zbGI?si=QywxJFaaJgP2URui&t=791){target="_blank"} and fervent fanbase. Established in 1948 by Bill France Sr., NASCAR has evolved into a leading racing series that encompasses three national divisions: the NASCAR Cup Series, the Xfinity Series, and the Truck Series. The Cup Series is the most prestigious, showcasing the elite drivers and teams as they compete in events that span a variety of track types, from short tracks to expansive superspeedways.
+
+The races take place on diverse tracks across the nation, including renowned venues such as Daytona International Speedway and Talladega Superspeedway, where vehicles frequently exceed speeds of 200 miles per hour. NASCAR races serve as a complex interplay of driver skill, team strategy, and vehicle performance. Key metrics such as lap times, pit stop efficiency, and vehicle dynamics offer insights into the determinants of success in the sport. This not only enhances the understanding of race outcomes but also contributes to the development of strategies that optimize performance.
+:::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
-By the end of the activity, you will have practiced: 
+By the end of this activity, students will have reinforced the following skills:
 
-*	Assessing simple linear regression model effectiveness
-*	Checking regression model assumptions
-*	Using log transformations to better fit a linear regression model
-*	Using polynomial regression to fit a curved relationship
+* Assessing the effectiveness of simple linear regression models
+* Checking regression model assumptions
+* Using log transformations to improve linear regression model fit
+* Applying polynomial regression to model curved relationships
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns. 
+
+It is assumed that students are already exposed to these concepts as the activity is intended to reinforce the skills instead of introduce them.
 :::
 
 ### Data
