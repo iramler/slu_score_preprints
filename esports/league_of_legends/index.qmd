@@ -22,6 +22,12 @@ categories:
   - Summary statistics
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html](https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html){target="_blank"}
+
+```{=html}
+<!--
 
 ## Module
 
@@ -103,3 +109,5 @@ In conclusion, the analysis of Win Rates histograms in League of Legends has pro
 The continued presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.
 :::
 
+-->
+```

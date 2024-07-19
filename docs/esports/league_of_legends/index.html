@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -586,19 +586,7 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#welcome-video" id="toc-welcome-video" class="nav-link" data-scroll-target="#welcome-video">Welcome video</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -666,145 +654,93 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<section id="welcome-video" class="level3">
-<h3 class="anchored" data-anchor-id="welcome-video">Welcome video</h3>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/5ZeK3RCg-_A" title="Esports Analytics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>League of Legends (LoL) is a 5 v. 5 multiplayer online battle arena (MOBA) game developed by Riot Games. In this game, players assume the role of a “champion” with unique abilities and engage in intense battles against a team of other players or computer-controlled champions. Riot Games continually collects data to evaluate the impact of each champion, adjusting and fine-tuning various aspects to ensure fair and competitive gameplay. With regular updates (patches) occurring every two weeks, champions can become either extremely efficient and strong or in need of adjustments to enhance their abilities. Maintaining overall game balance is crucial, and developers employ strategies known as “nerfing” and “buffing” to achieve this balance. “Nerfing” refers to reducing the power or effectiveness of a champion or item, while “buffing” involves increasing its power or effectiveness.</p>
-<p>In this worksheet, we will analyze and describe histograms of Win Rates for different champions in LoL. The Win Rate, a key metric in the game, represents the percentage of games won by a champion out of the total games played. Understanding the distribution of Win Rates and identifying potential outliers can provide valuable insights into champion balance and performance, informing strategic decision-making in LoL gameplay.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ol type="1">
-<li><p>Understand the concept of histograms and their relevance in statistical analysis.</p></li>
-<li><p>Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends. In particular, being able to describe the center, shape, and spread of a distribution based on the displayed graph.</p></li>
-<li><p>Identify potential outliers in a numerical variable using numerical methods such as the “1.5 IQR Rule” or z-scores.</p></li>
-<li><p>Interpret the implications of outliers in terms of champion balance and performance.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.</p>
-<ol type="1">
-<li><p>Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape, center, and spread of distributions.</p></li>
-<li><p>Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important.</p></li>
-<li><p>Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.</p></li>
-<li><p>Knowledge of outlier detection methods (such as the 1.5 IQR Rule and/or z-scores) is fundamental to the activity.</p></li>
-</ol>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>A data frame for 162 champions of the following 7 variables. Each row represents a Champion that you can choose when playing League of Legends during patches 12.22 and 12.23. Note that the activity provided in this module does not use all of the variables provided. Instead they are provided for further analyses at the discretion of the user.</p>
-<p>Download data: <a href="LOL_patch_12.22.csv">LOL_patch_12.22.csv</a></p>
-<p>Download data: <a href="LOL_patch_12.23.csv">LOL_patch_12.23.csv</a></p>
+<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
+<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html" target="_blank">https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html</a></p>
+<!--
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Welcome video
+
+
+
+### Introduction
+
+League of Legends (LoL) is a 5 v. 5 multiplayer online battle arena (MOBA) game developed by Riot Games. In this game, players assume the role of a "champion" with unique abilities and engage in intense battles against a team of other players or computer-controlled champions. Riot Games continually collects data to evaluate the impact of each champion, adjusting and fine-tuning various aspects to ensure fair and competitive gameplay. With regular updates (patches) occurring every two weeks, champions can become either extremely efficient and strong or in need of adjustments to enhance their abilities. Maintaining overall game balance is crucial, and developers employ strategies known as "nerfing" and "buffing" to achieve this balance. "Nerfing" refers to reducing the power or effectiveness of a champion or item, while "buffing" involves increasing its power or effectiveness.
+
+In this worksheet, we will analyze and describe histograms of Win Rates for different champions in LoL. The Win Rate, a key metric in the game, represents the percentage of games won by a champion out of the total games played. Understanding the distribution of Win Rates and identifying potential outliers can provide valuable insights into champion balance and performance, informing strategic decision-making in LoL gameplay.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Understand the concept of histograms and their relevance in statistical analysis.
+
+2.  Analyze and describe histograms to gain insights into the distribution of Win Rates in League of Legends. In particular, being able to describe the center, shape, and spread of a distribution based on the displayed graph.
+
+3.  Identify potential outliers in a numerical variable using numerical methods such as the "1.5 IQR Rule" or z-scores.
+
+4.  Interpret the implications of outliers in terms of champion balance and performance.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout provides histograms and summary statistics so that no statistical software is required. However, the activity could be modified to ask students to produce that information from the raw dataset and/or extend the activity to investigate other variables available in the data.
+
+1.  Histograms: Familiarity with histograms as a graphical representation of the distribution of a continuous variable, such as Win Rates, is crucial. You should understand how to interpret histograms, including the concepts of bins, frequencies, and the shape, center, and spread of distributions.
+
+2.  Outliers: Knowledge of outliers, which are data points that deviate significantly from the overall pattern, is important.
+
+3.  Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean, median) and measures of dispersion (standard deviation, range), will aid in interpreting and analyzing the histograms. These techniques can provide insights into the overall characteristics and variability of the Win Rates.
+
+4.  Knowledge of outlier detection methods (such as the 1.5 IQR Rule and/or z-scores) is fundamental to the activity.
+:::
+
+### Data
+
+A data frame for 162 champions of the following 7 variables. Each row represents a Champion that you can choose when playing League of Legends during patches 12.22 and 12.23. Note that the activity provided in this module does not use all of the variables provided. Instead they are provided for further analyses at the discretion of the user.
+
+Download data: [LOL_patch_12.22.csv](LOL_patch_12.22.csv)
+
+Download data: [LOL_patch_12.23.csv](LOL_patch_12.23.csv)
+
 <details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 86%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Name</td>
-<td>name of the champion</td>
-</tr>
-<tr class="even">
-<td>Role</td>
-<td>role of the champion in a game</td>
-</tr>
-<tr class="odd">
-<td>KDA</td>
-<td>Average kills, deaths and assists associated with each champion</td>
-</tr>
-<tr class="even">
-<td>WRate</td>
-<td>win rates of each champion</td>
-</tr>
-<tr class="odd">
-<td>PickRate</td>
-<td>pick rates of each champion</td>
-</tr>
-<tr class="even">
-<td>RolePerc</td>
-<td>percentage of time playing as a role</td>
-</tr>
-<tr class="odd">
-<td>BanPerc</td>
-<td>ban percentages associated with each champion</td>
-</tr>
-</tbody>
-</table>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                                     |
+|----------|-----------------------------------------------------------------|
+| Name     | name of the champion                                            |
+| Role     | role of the champion in a game                                  |
+| KDA      | Average kills, deaths and assists associated with each champion |
+| WRate    | win rates of each champion                                      |
+| PickRate | pick rates of each champion                                     |
+| RolePerc | percentage of time playing as a role                            |
+| BanPerc  | ban percentages associated with each champion                   |
+
 </details>
-<section id="data-source" class="level4">
-<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p>Lol champion stats, 12.22 master, win rates. METAsrc. (n.d.). <a href="https://www.metasrc.com/5v5/12.22/stats?ranks=master" class="uri">https://www.metasrc.com/5v5/12.22/stats?ranks=master</a></p>
-<p>Lol champion stats, 12.23 master, win rates. METAsrc. (n.d.-b). <a href="https://www.metasrc.com/5v5/12.23/stats?ranks=master" class="uri">https://www.metasrc.com/5v5/12.23/stats?ranks=master</a></p>
-</section>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="LoL_Worksheet.docx">Class handout</a></p>
-<p><a href="LoL_Worksheet_Key.docx">Class handout - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Sion’s Win Rate improved, and was no longer an outlier. Sion was given a Buff in <a href="https://www.leagueoflegends.com/en-gb/news/game-updates/patch-12-23-notes/" target="_blank">patch 12.23</a>, resulting in an enhanced performance and a more balanced Win Rate. However, patch 12.23 resulted in two new outliers with low win rates.</p>
-<p>The continued presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.</p>
-</div>
-</div>
-</div>
+
+#### Data Source
+
+Lol champion stats, 12.22 master, win rates. METAsrc. (n.d.). <https://www.metasrc.com/5v5/12.22/stats?ranks=master>
+
+Lol champion stats, 12.23 master, win rates. METAsrc. (n.d.-b). <https://www.metasrc.com/5v5/12.23/stats?ranks=master>
+
+### Materials
+
+[Class handout](LoL_Worksheet.docx)
+
+[Class handout - with solutions](LoL_Worksheet_Key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the analysis of Win Rates histograms in League of Legends has provided valuable insights into champion balance and performance. One notable finding from this worksheet is the identification of Sion as a low outlier in the Win Rates for the 12.22 patch. However, in the subsequent 12.23 patch, Sion's Win Rate improved, and was no longer an outlier. Sion was given a Buff in [patch 12.23](https://www.leagueoflegends.com/en-gb/news/game-updates/patch-12-23-notes/){target="_blank"}, resulting in an enhanced performance and a more balanced Win Rate. However, patch 12.23 resulted in two new outliers with low win rates.
+
+The continued presence of outliers highlights the importance of continuous monitoring and adjustments by game developers to ensure fair and competitive gameplay.
+:::
+
+-->
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

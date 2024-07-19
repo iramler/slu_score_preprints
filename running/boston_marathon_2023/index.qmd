@@ -17,6 +17,13 @@ categories:
   - Bimodal data
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/marathons/boston-marathon-finish_times-2023.html](https://modules.scorenetwork.org/marathons/boston-marathon-finish_times-2023.html){target="_blank"}
+
+```{=html}
+<!--
+
 ### Welcome video
 
 {{< video https://youtu.be/5-aLUUAz6Hk?si=qK-sOO9fC2ziTpD_ title="SCORE: Boston Marathon Finish Times" >}}
@@ -102,3 +109,6 @@ We provide editable MS Word handouts along with their solutions.
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. It allows them to understand reasons by variability might exist and to discover multimodal distributions can occur simply due to excluding an important explanatory variable that otherwise confounds the analysis. The calculation of z-scores or other similar measurement of relative location enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.
 :::
+
+-->
+```
