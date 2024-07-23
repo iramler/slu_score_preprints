@@ -1,0 +1,132 @@
+---
+title: "Football Recruiting and Impact in the NFL"
+author:
+  - name: "Brendan Karadenes"
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: "Robin Lock"
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
+date: July 17, 2024
+description: Cleaning and analyzing football data for top high school wide receivers who played in the NFL in 2023.
+categories: 
+  - data wrangling
+---
+
+### Introduction
+
+For this activity, you will be exploring football wide receivers that graduated high school from 2013 to 2019 and committed to Division 1 universities. Also, the data includes NFL players who were targeted for receptions during the 2023 season.
+
+In particular, you will modify datasets and analyze the data using visualizations to compare and contrast receivers in the NFL. 
+
+Investigating this data is useful for several reasons. First, exploring the data can help us understand the accuracy of high school recruiting data and how it relates to performance in the NFL. Also, cleaning and working with the data provides opportunities to gain impactful insights into both productivity in the NFL and what places players are recruited from. Analyses like these can help scouts find and recruit the players that will have the most impact on their team and help win games.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an in-class example or quiz.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, you will be able to:
+
+1.  Clean and merge data
+2.  Find summary statistics in R or similar software
+3.  Analyze and create simple visualizations
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will primarily use R or similar software in order to clean and modify data. Students should also have basic knowledge of means and visualizations.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requiremens" appearance="minimal"}
+The provided worksheets require R or similar software. 
+
+Since the data are provided, instructors are encouraged to modify the worksheets to have student construct visualizations and clean data using whichever software they choose.
+:::
+
+### Data
+
+The data contains 3965 rows and 37 columns. Each row represents a football player who either was targeted for receptions in the NFL in 2023 and/or was recruited to play Division 1 football from the years 2013-2019.
+
+Download data: 
+
+Available on the [SCORE Data Repository](https://data.scorenetwork.org/)
+
+Data: [College_NFL_WR.csv](https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/College_NFL_WR.csv)
+
+Variables from `Rk` to `Id` contains data from the 2023 NFL season for all players that were targeted for a reception that season (not just wide receivers). Variables from `AthleteId` to `FipsCode` contains high school recruiting data for wide receivers from 2013-2019. 
+
+<details>
+<summary><b>Variable Descriptions</b></summary>
+
+
+| Variable               | Description                                                                                                                                                                           |
+|-------------------|-----------------------------------------------------|
+| Rk                     | rank based on number of receptions                                                                                                                                                    |
+| Player                 | first and last name of the player                                                                                                                                                     |
+| Tm                     | NFL team                                                                                                                                                                              |
+| Age                    | age in years of player                                                                                                                                                                |
+| NFL_Position                    | player position in the NFL |
+| G                      | number of games played                                                                                                                                                                |
+| GS                     | number of games started                                                                                                                                                               |
+| Tgt                    | total times targeted for a pass                                                                                                                                                       |
+| Rec                    | total number of receptions                                                                                                                                                            |
+| Catch_Pct                  | percentage of passes caught                                                                                                                                                           |
+| Yds                    | total number of receiving yards                                                                                                                                                       |
+| Yd_per_Reception                    | average number of yards per reception                                                                                                                                                 |
+| TD                     | number of receiving touchdowns                                                                                                                                                        |
+| First_Downs                     | number of first downs                                                                                                                                                                 |
+| Success_Rate                  | player gains 40% of yards to go on first down, 60% on second down, or 100% on third or fourth down                                                                                    |
+| Lng                    | longest reception in yards                                                                                                                                                            |
+| Yd_per_Target                  | number of receiving yards per target                                                                                                                                                  |
+| Rec_per_Game                    | number of receptions per game                                                                                                                                                         |
+| Yd_per_Game                    | number of yards per game                                                                                                                                                              |
+| Fmb                    | number of fumbles                                                                                                                                                                     |
+| Id                     | identification number of the player in the dataset                                                                                                                                    |
+| AthleteId              | unique id number for each recruit                                                                                                                                                     |
+| RecruitType            | type of school the player got recruited from (i.e. high school)                                                                                                                        |
+| Year                   | player's high school graduation year                                                                                                                                                   |
+| Ranking                | prospect ranking (1 = best)                                                                                                                                                                      |
+| School                 | name of school being recruited out of                                                                                                                                                 |
+| CommittedTo            | college player is committed to play at                                                                                                                                                |
+| Height                 | player's height in inches when recruited                                                                                                                                                             |
+| Weight                 | player's weight in pounds when recruited                                                                                                                                                            |
+| Stars                  | ranking based on chance in play in college or NFL from 0-5 (5 = best chance)                                                                                                                            |
+| Rating                 | rating of prospect from 0 to 1 (1 = best)                                                                                                                                                        |
+| City                   | home city of the prospect                                                                                                                                                             |
+| State          | home US state/Canadian province of the player (including Washington DC)                                                                                                               |
+| Country                | home country of the prospect (either US or Canada)                                                                                                                                    |
+| Latitude  | latitude of the player's hometown                                                                                                                                                     |
+| Longitude | longitude of the player's hometown                                                                                                                                                    |
+| FipsCode  | FIPS code of the player's hometown                                                                                                                                                    |
+
+**Data Sources**
+
+NFL receptions data from the 2023 season:
+
+[Pro Football Reference](https://www.pro-football-reference.com/years/2023/receiving.htm){target="_blank"}
+
+High school recruiting data from 2013-2019:
+
+[College Football Data](https://collegefootballdata.com/exporter/recruiting/players){target="_blank"}
+
+
+
+</details>
+
+### Materials
+
+We provide editable MS Word and Quarto handouts along with their solutions. The Word handouts are designed for in-class quizzes when students do not have access to R. The Quarto documents are designed for students with access to R.
+
+[Word handout](football_ws_doc.docx)
+
+[Word handout - with solutions](football_ws_doc_key.docx)
+
+[Quarto handout](football_ws.qmd)
+
+[Quarto handout - with solutions](football_ws_key.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the football analyzing and cleaning data worksheet provides valuable learning experiences in several key areas. First, it allows students to understand the importance of tidy data and how clean data is easier to analyze. Also, creating and analyzing visualizations gives students an opportunity to be creative while also making important discoveries. All in all, this worksheet allows students to analyze the relationship between high school football recruitment and performances in the NFL such as how a better recruiting ranking in high school was correlated to more receiving yards in the 2023 NFL season.
+:::

@@ -1,0 +1,136 @@
+---
+title: "Cleaning, Merging, and Analyzing Football Data Key"
+author: "Brendan Karadenes"
+format: html
+---
+
+# Introduction
+
+College football has a widely followed and popular recruiting cycle. The top high school players are often being looked at years before they graduate. One of the top recruited positions is wide receiver. Wide receivers are responsible for catching passes from the quarterback and running down the field to gain as many yards as possible. 
+
+We will be investigating recruiting data from 2013 to 2019 for high school wide receivers and information on wide receivers from the 2023 NFL season. We are interested in cleaning the data and analyzing the impact high school recruits had in the NFL in 2023.
+
+# Data Description
+
+Tm - NFL team the player played for in 2023
+
+Ranking - Recruiting ranking of the player coming out of high school. The lower rankings mean that a player is a top prospect (i.e. a player ranked 1 would be the top prospect in their class)
+
+Year - Year that recruit graduated high school
+
+Yds - Number of receiving yards player had in 2023
+
+NFL_Position – Position the player played in the NFL
+
+# Exercises
+
+To begin, load in any necessary packages and the **College_NFL_WR.csv** file. The data contains recruiting information for Division 1 college football recruits and statistics for players who played in the NFL in 2023. Note that some of the high school recruits did not play in the NFL in 2023 and some of the NFL receivers weren't identified in the high school recruiting data.
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse, quietly = TRUE)
+football <- read.csv("College_NFL_WR.csv")
+```
+
+1. Create two sets of data, one containing players that competed in the NFL in 2023 and another that contains players who didn't compete in the NFL in 2023. Report the number of players in each dataset. Hint: Players who did not play in the NFL in 2023 will have Tm = NA.  
+
+```{r}
+# data set with the NFL players
+nfl_2023 <- football %>%
+  filter(!is.na(Tm))
+
+nfl_2023 %>%
+  summarise(n())
+```
+
+
+
+```{r}
+# data set without the NFL players
+non_nfl2023 <- football %>%
+  filter(is.na(Tm))
+
+non_nfl2023 %>%
+  summarise(n())
+```
+
+There are 483 players in the dataset that played in the NFL in 2023 and 3482 that did not.
+
+2. Notice that the data set that contains players that competed in the NFL in 2023 has players not in the recruiting class from 2013 to 2019. Filter out the non-recruited players using the `Ranking` variable and the non wide receivers using the NFL_Position variable. Report the number of players.
+
+```{r}
+nfl_recruits_2023 <- nfl_2023 %>%
+  filter(NFL_Position == "WR"
+         ,!is.na(Ranking))
+
+nfl_recruits_2023 %>%
+  summarise(n())
+```
+
+There were 103 wide receivers in the NFL in 2023 who were recruited as wide receivers to Division 1 Universities from 2013-2019.
+
+3. How many wide receivers in 2023 were ranked in the top 100 in their high school recruiting class? What are some possible reasons why worse ranked players were playing in 2023 over better ranked players?
+
+```{r}
+nfl_recruits_2023 %>%
+  filter(Ranking < 100) %>%
+  summarise(n())
+```
+
+In the 2023 NFL there were 17 wide receivers who were a part of the top 100 in their high school recruiting class. Some possibilities that explain why worse ranked players were playing over better ranked players include injury, poor high school recruiting rankings, and larger improvements in college.
+
+4. Let's practice splitting tables using the data with NFL players who had a recruiting rank. Make three different new data frames: one being from recruiting years 2013-14, another from 2015-16, and the last from 2017-19.
+
+```{r}
+nfl_13_14 <- nfl_recruits_2023 %>%
+  filter(Year >= 2013 & Year <= 2014)
+```
+
+```{r}
+nfl_15_16 <- nfl_recruits_2023 %>%
+  filter(Year >= 2015 & Year <= 2016)
+```
+
+```{r}
+nfl_17_19 <- nfl_recruits_2023 %>%
+  filter(Year >= 2017 & Year <= 2019)
+```
+
+5. Find the mean number of receiving yards for 2023 in each recruiting year group. Which group had the lowest and which had the highest?
+
+```{r}
+nfl_13_14 %>%
+  summarise(mean(Yds))
+nfl_15_16 %>%
+  summarise(mean(Yds))
+nfl_17_19 %>%
+  summarise(mean(Yds))
+```
+
+The recruits from 2017-2019 had the highest mean number of receiving yards in the NFL in 2023, while recruits from 2015-2016 had the lowest mean number of receiving yards.
+
+6. Find the mean rankings for each group of years. Do the best mean ranking years have the highest mean receiving yards? Explain.
+
+```{r}
+nfl_13_14 %>%
+  summarise(mean(Ranking))
+nfl_15_16 %>%
+  summarise(mean(Ranking))
+nfl_17_19 %>%
+  summarise(mean(Ranking))
+```
+
+No, the group with the best mean ranking (2015-16) actually had the fewest number of mean yards. Years 2017-2019 had the second best mean ranking and the most number of mean receiving yards and years 2013-2014 had by far the worst mean ranking and the second highest number of receiving yards.
+
+
+7. Using the original "football" dataset make a simple scatterplot of recruiting ranking vs. receiving yards in the NFL. What is the general trend?
+
+```{r}
+ggplot(data = football,mapping = aes(x = Ranking, y = Yds)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Trend of Ranking vs. Receiving Yards") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+The general trend is that as player's rank number increases their receiving yards in the NFL decreases.

@@ -1,0 +1,131 @@
+---
+title: "Ultimate Worksheet"
+format: html
+---
+
+Ultimate, also known as Ultimate Frisbee is a sport played with 2 teams of 7 players where players pass a Frisbee to each other and try to score in the opposing team's end zone. Each point starts with a pull where the defensive team throws the disc from their end zone towards the offensive team's end zone. The offensive team starts the point with possession and tries to score without dropping the Frisbee. If they drop the Frisbee, the defensive team can pick it up and try to score. The point ends when either team scores and the team that scored becomes the defensive team and pulls to the other team to start the next point. Games are played to 15 points, or to a time cutoff where the new target score is 1 point above the leading team.
+
+The College Ultimate Championships consist of 2 weekends of competition, one for Division 3 and one for Division 1. 16 teams competed in both the Men's and Women's tournaments to be Division 3 Champion, while 20 teams competed for the two Division 1 titles. Statistics were measured from each game at both events and can be found on the [USA Ultimate](https://play.usaultimate.org/) Website.
+
+## Import Packages
+
+```{r}
+#| warning: false
+library(tidyverse)
+library(readr)
+```
+
+## Data Import
+
+Load in both datasets with data from the 2024 College Ultimate Championships.
+```{r}
+#| warning: false
+ultimate_statistics <- read_csv('ultimate_total.csv', show_col_types = FALSE) 
+ultimate_games <- read_csv('ultimate_games.csv', show_col_types = FALSE) 
+```
+
+
+## Tidy and Clean Data
+
+The ultimate statistics dataset has 5 rows with statistics for each player, combine these into a single row for each player using a pivot function.
+
+Use a join to combine the 2 datasets by Player, make sure to remove any columns that are repeated or that have the same information.
+
+If columns are named inappropriately, use a rename function to rename them.
+
+Check if the type of each column is appropriate for the data. If not change the type.
+
+Now that the current data is in a tidy form, create new variables that have statistics for each player in a per_game format using a mutate function and the team games column.
+
+
+## Data Visualization
+
+1. The data set has 1,665 total players that participated in the College Ultimate Championships, figure out how many actually contributed in any statistical category. (Don't include team games as a category)
+
+```{r}
+
+```
+
+
+2. Make a table that lists the top 15 players in assist totals from any division. Only include, player name, assists, and assists per game in your final table.
+
+```{r}
+
+```
+
+3. Which player had the most points and assists combined in each of the 4 divisions?
+
+```{r}
+
+```
+
+
+4. Make a plot comparing assists by division and comment on any interesting features that are visible
+
+```{r}
+
+```
+
+
+5. Assists per game and Turns per game
+
+a. Make a plot that compares turns per game and assists per game. Then label the names of players in the top 10 for assists using geom_text().
+
+```{r}
+
+```
+
+
+b. Based on this plot, should any of the players in the top 10 for assists throw the disc less because of their turnover frequency? 
+
+
+6. Comparing Turns by Division
+
+a. Make a plot comparing turns by division. Are there any differences between the divisions?
+
+```{r}
+
+```
+
+b. Label the names of players that are top 10 in assists. What does a high assist total indicate about your turnover rate?
+
+
+
+7. Plot turns vs. plus minus and describe the relationship.
+
+```{r}
+
+```
+
+
+8. Points and Ds across divisions
+
+a. Make a bar plot with the top 15 point scorers in order using reorder if necessary. Group by division and note how the players are distributed across divisions.
+
+```{r}
+
+```
+
+b. Make the same bar plot with the top 15 players in Ds and compare the distribution of divisions.
+
+```{r}
+
+```
+
+
+9. Offensive Dominance
+
+a. Make a table with the sum of plus_minus for each division. 
+
+```{r}
+
+```
+
+
+b. Plus Minus is only counted for points where a player starts on offense. If the offensive team scores they get +1, if the defensive team scores, the offensive players get -1. Based on how they are calculated, what do the total plus minus numbers say about the dominance of offense in each division?
+
+
+
+
+
+

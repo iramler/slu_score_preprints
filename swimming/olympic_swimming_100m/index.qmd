@@ -1,5 +1,5 @@
 ---
-title: "Olympic Swimming - Changes in the 100m Event"
+title: "Olympic Swimming - Changes in the 100m Women's Event"
 author:
   - name: "Brendan Karadenes"
     affiliation:
@@ -13,7 +13,7 @@ author:
     affiliation:
       - ref: slu
 date: June 14, 2024
-description: Describing 100m event times for Olympic Swimmers from 1924 to 2020
+description: Describing 100m event times for Women Olympic Swimmers from 1924 to 2020
 categories: 
   - Boxplots
   - Confidence Intervals
@@ -23,7 +23,7 @@ categories:
 
 ## Introduction
 
-For this activity, you will be exploring the event times for female swimmers that competed in the 100m event from 1924 to 2020 in the [Olympics](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}.
+For this activity, you will be exploring the event times for female swimmers that competed in the 100m event from 1968 to 2020 in the [Olympics](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}.
 
 In particular, you will examine visualizations and conduct confidence intervals to explore the changes in finish times between different types of strokes and earlier vs. recent years.
 
@@ -53,11 +53,9 @@ Since the data are provided, instructors are encouraged to modify the worksheets
 
 ## Data
 
-The data set contains 606 rows and 10 columns. Each row represents a swimmer who competed in the 100m Olympic event during the period 1924 to 2020. The data includes top 8 finishers from men and woman racers however, due to lack of records, some of the data is excluded.
+The data set contains 194 rows and 10 columns. Each row represents a female swimmer who competed in the 100m Olympic event during the period 1968 to 2020. The data includes top 8 finishers from woman racers however, due to lack of records, some of the data is missing.
 
-Download data:
-
-Available on the [SCORE Data Repository](https://data.scorenetwork.org/){target="_blank"}: [olympic_swimming.csv](https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/olympic_swimming.csv){target="_blank"}
+Download data: [olympic_swimming_women.csv](olympic_swimming_women.csv)
 
 <details>
 
@@ -68,8 +66,8 @@ Available on the [SCORE Data Repository](https://data.scorenetwork.org/){target=
 | Location    | hosting city of the Olympics that the swimmer competed in                             |
 | Year        | year that the swimmer competed                                                        |
 | dist_m      | distance in meters of the race                                                        |
-| Stroke      | Backstroke, Breaststroke, Butterfly, or Freestyle                                     |
-| Gender      | gender of swimmer (Male or Female)                                                    |
+| Stroke      | Backstroke, Butterfly, or Freestyle                                                   |
+| Gender      | gender of swimmer (Female only - see below)                                           |
 | Team        | 3 letter country code the swimmer is affiliated with                                  |
 | Athlete     | first and last name of the swimmer                                                    |
 | Results     | time, in seconds, that the swimmer completed the race                                 |
@@ -82,6 +80,12 @@ Available on the [SCORE Data Repository](https://data.scorenetwork.org/){target=
 
 </details>
 
+::: {.callout-note collapse="true" title="Related Dataset" appearance="minimal"}
+A larger version of this data is available on the SCORE Data Repository: [olympic_swimming](https://data.scorenetwork.org/swimming/olympic_swimming.html){target="_blank"}
+
+The data set contains 606 rows and 10 columns. Each row represents a swimmer who competed in the 100m Olympic event during the period 1924 to 2020. The data includes top 8 finishers from men and woman racers however, due to lack of records, some of the data is excluded.
+:::
+
 ## Materials
 
 We provide an editable Microsoft Word handout along with its solutions.
@@ -93,5 +97,5 @@ The handouts should only require a calculator and can be modified to fit the ins
 [Class handout - with solutions](olympic_swimming_ws_key.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In conclusion, the Olympic swimming module provides valuable opportunities for students in several important areas. It allows them to understand how to interpret visuals and confidence intervals to conclude statistical significance. The calculation of confidence intervals enables student's to understand the remarkable progress that's been made in swimming training. In general, this worksheet allows students to critically analyze Olympic swimming results from 1924 to 2020 and draw important conclusions regarding the different styles of swimming over the years.
+In conclusion, the Olympic swimming module provides valuable opportunities for students in several important areas. It allows them to understand how to interpret visuals and confidence intervals to conclude statistical significance. The calculation of confidence intervals enables student's to understand the remarkable progress that's been made in swimming training. In general, this worksheet allows students to critically analyze Olympic swimming results from 1968 to 2020 and draw important conclusions regarding the different styles of swimming over the years.
 :::
