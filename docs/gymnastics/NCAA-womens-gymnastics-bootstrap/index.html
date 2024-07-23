@@ -6,12 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kristen Varin">
-<meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2024-05-15">
-<meta name="description" content="This data set contains team game statistics for 16 WNBA teams and for 20 seasons.">
+<meta name="author" content="Vivian Johnson">
+<meta name="author" content="Robin Lock">
+<meta name="dcterms.date" content="2024-07-22">
+<meta name="description" content="Making bootsrap distributions and constructing confidence intervals">
 
-<title>SLU SCORE Module Preprint Repository - WNBA Data Cleaning Module</title>
+<title>SLU SCORE Module Preprint Repository - NCAA Women’s Gymnastics and Bootstrap Distributions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basketball/nba_draft_anova_intermediate/index.html">Basketball</a></li><li class="breadcrumb-item"><a href="../../basketball/wnba_data_quality/index.html">WNBA Data Cleaning Module</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html">Gymnastics</a></li><li class="breadcrumb-item"><a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html">NCAA Women’s Gymnastics and Bootstrap Distributions</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -163,13 +163,13 @@ cookieconsent.run({
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Basketball</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
@@ -184,7 +184,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WNBA Data Cleaning Module</span></a>
   </div>
 </li>
@@ -294,16 +294,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
  <span class="menu-text">Gymnastics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">NCAA Women’s Gymnastics and Bootstrap Distributions</span></a>
   </div>
 </li>
@@ -635,19 +635,19 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basketball/nba_draft_anova_intermediate/index.html">Basketball</a></li><li class="breadcrumb-item"><a href="../../basketball/wnba_data_quality/index.html">WNBA Data Cleaning Module</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html">Gymnastics</a></li><li class="breadcrumb-item"><a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html">NCAA Women’s Gymnastics and Bootstrap Distributions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">WNBA Data Cleaning Module</h1>
+<h1 class="title">NCAA Women’s Gymnastics and Bootstrap Distributions</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Data cleaning</div>
-    <div class="quarto-category">Missing Data</div>
-    <div class="quarto-category">Tables</div>
+    <div class="quarto-category">Bootstrap Distribution</div>
+    <div class="quarto-category">Confidence Intervals</div>
+    <div class="quarto-category">Paired Data</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    This data set contains team game statistics for 16 WNBA teams and for 20 seasons.
+    Making bootsrap distributions and constructing confidence intervals
   </div>
 </div>
 
@@ -656,7 +656,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Kristen Varin </p>
+    <p class="author">Vivian Johnson </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -664,7 +664,7 @@ cookieconsent.run({
           </p>
       </div>
     <div class="quarto-title-meta-contents">
-    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+    <p class="author">Robin Lock <a href="mailto:rlock@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -679,7 +679,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 15, 2024</p>
+      <p class="date">July 22, 2024</p>
     </div>
   </div>
   
@@ -696,90 +696,30 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The WNBA worksheet will introduce the idea of predicting playoff teams from their record earlier in the season. Most of the time, it is expected that teams with better records halfway through the season will have a higher chance of making it to the playoffs, but is this always the case? How do you know that the data you are using is a valid way of predicting this? By completing this worksheet, you will be guided through various data cleaning steps and will be able to answer these questions.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Background on the WNBA">
+<p>Each year, the National Collegiate Athletics Association (NCAA) holds the championship tournament for women’s gymnastics to crown the national champion. There are two semi-final meets that consist of four teams, and the top two teams from each semi-final meet square off in the championship finals.</p>
+<p>The competition consists of four events:</p>
+<ol type="1">
+<li><p><a href="https://www.youtube.com/watch?v=vmFMXk3WQow" target="_blank">Vault</a>: A high-energy, quick event where the gymnast gains momentum by running down a padded runway, jumps onto a spring board, and propels themselves over a slightly inclined vaulting table while performing an aerial combination of flips and twists.</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=j8N_xzlczQI" target="_blank">Uneven Bars</a>: This is a routine in which the gymnast does a variety of flips and rotations on two horizontal bars that are set at different heights. The gymnast mounts onto a bar and the routine consists of transitioning from one bar to the other while swinging and flipping. The routine ends with a dismount off of the bar and onto the floor.</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=bzi565Ioo3o" target="_blank">Balance Beam</a>: Gymnasts mount onto an elevated balance beam, which is a long, firm, padded plank about four inches (10 cm) wide. As the name suggests, this event highlights the gymnast’s balance, acrobatic skills, and leaps while they attempt multiple turns, jumps, and flips on the beam before an aerial dismount.</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=_FBdDwpfH4I" target="_blank">Floor</a>: The floor routine takes place on a square mat, and the gymnast performs a carefully choreographed routine that shows off dance skills as well as acrobats and tumbling.</p></li>
+</ol>
+<p>Each team is allowed to have up to six people compete on each event, with the top five scores contributing to the combined score of that event for the team. After the entire rotation for each event, the combined scores for the four events are added together for a total score, and the team with the highest overall score is the champion.</p>
+<p>Women’s college gymnastics uses Perfect 10 scoring, with each routine being judged out of ten points. Gymnasts are evaluated on execution, difficulty, as well as the composition of the routine, and must meet certain requirements for each.</p>
+<p>In this activity, we’ll be using different scores on the beam event at the NCAA Women’s Gymnastics National Championship to create and analyze bootstrap distributions, as well as look at confidence intervals and the difference in means between different finishers in the championship.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Background on the WNBA
+Activity Length
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The Women’s National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women’s basketball at the professional level. The league’s inaugural season began in 1997 with eight teams.</p>
-<p>Throughout its history, the WNBA has been a pioneering force in women’s sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, as of 2024, consists of 12 teams.</p>
-<details>
-<summary>
-<b> WNBA expansion and contraction</b>
-</summary>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Season(s)</th>
-<th>No.&nbsp;of teams</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1997</td>
-<td>8</td>
-</tr>
-<tr class="even">
-<td>1998</td>
-<td>10</td>
-</tr>
-<tr class="odd">
-<td>1999</td>
-<td>12</td>
-</tr>
-<tr class="even">
-<td>2000–2002</td>
-<td>16</td>
-</tr>
-<tr class="odd">
-<td>2003</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>2004–2005</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2006</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2008</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>2009</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2010–2024</td>
-<td>12</td>
-</tr>
-<tr class="even">
-<td>2025</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2026–future</td>
-<td>14</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>The WNBA’s playoff structure typically features the top eight teams from the regular season standings advancing to the postseason. The playoffs are organized into single-elimination rounds, culminating in the WNBA Finals, where the last two teams standing compete in a best-of-five series to determine the league champion.</p>
-<p>Beyond its competitive play, the WNBA has been a leader in promoting social justice initiatives and advocating for equality both on and off the court. It continues to grow in popularity and influence, contributing significantly to the growth of women’s basketball worldwide.</p>
+<p>This could serve as an in class activity and should take roughly a half an hour to complete.</p>
 </div>
 </div>
 </div>
@@ -795,12 +735,12 @@ Learning Objectives
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ul>
-<li><p>Use various <code>dplyr</code>, <code>tidyr</code>, and <code>lubridate</code> package functions to clean a data set for further use.</p></li>
-<li><p>Learn the process of cleaning data, recognizing any problems within the data, and determining whether the data can be used for the given analysis problem.</p></li>
-<li><p>Understand why missing data presents a problem for analysis and brainstorm ways to troubleshoot this problem.</p></li>
-</ul>
+<p>By the end of this activity, you will:</p>
+<ol type="1">
+<li><p>Increase ability to create a bootstrap sample, statistic, and distribution.</p></li>
+<li><p>Be able to construct confidence intervals from a bootstrap distribution and comment on their implications.</p></li>
+<li><p>Use paired data to calculate differences and interpret the results in the context of the NCAA Women’s Gymnastics Championship.</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -816,82 +756,134 @@ Methods
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout requires knowledge of Quarto and the following tidyverse packages: <code>dplyr</code>, <code>tidyr</code>, <code>lubridate</code>. The activity will allow students to use these packages together to complete a more complex task.</p>
+<p>Students should have knowledge of how to collect bootstrap samples and with the idea of sampling with replacement. Students should also be able to use the Standard Error of the distribution to construct confidence intervals.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology Requirements
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Statistical software such as StatKey is necessary in order to construct bootstrap distributions with a large enough sample size, as well as find a standard error and sample statistic for the distribution.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The <code>wnba_data</code> data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows:</p>
+<p>The <code>ncaa_gymnastics.csv</code> data set includes data from the women’s NCAA Gymnastics Championships from the years 2008-2024 (excluding 2020 as no championship was held due to the COVID-19 pandemic). Each row contains details from a specific university’s performance at that year’s tournament championship.</p>
 <details>
 <summary>
-<b> Data: Variable Descriptions</b>
+<b>Variable Descriptions</b>
 </summary>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Variable</strong></th>
-<th><strong>Description</strong></th>
+<th>Variable</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>game_id</td>
-<td>game id number</td>
+<td>Year</td>
+<td>Year of NCAA women’s gymnastics championship</td>
 </tr>
 <tr class="even">
-<td>season</td>
-<td>season number</td>
+<td>Rank</td>
+<td>Final results of the championship</td>
 </tr>
 <tr class="odd">
-<td>season_type</td>
-<td>binary predictor; 2 if regular season game; 3 if playoff game</td>
+<td>Team</td>
+<td>University participating</td>
 </tr>
 <tr class="even">
-<td>game_date</td>
-<td>date of the game</td>
+<td>Vault</td>
+<td>Combined team score on vault</td>
 </tr>
 <tr class="odd">
-<td>team_id</td>
-<td>team id number</td>
+<td>Bar</td>
+<td>Combined team score on bars</td>
 </tr>
 <tr class="even">
-<td>team_display_name</td>
-<td>full team name (name and city)</td>
+<td>Beam</td>
+<td>Combined team score on balance beam</td>
 </tr>
 <tr class="odd">
-<td>team_winner</td>
-<td>Boolean; True if the team won the game</td>
+<td>Floor</td>
+<td>Combined team score on floor routine</td>
 </tr>
 <tr class="even">
-<td>opponent_team_id</td>
-<td>id number of the opponent</td>
-</tr>
-<tr class="odd">
-<td>team_home_away</td>
-<td>Where the game was played; either “home” or “away”</td>
+<td>Total</td>
+<td>Combined team score for all events</td>
 </tr>
 </tbody>
 </table>
 </details>
-<p>Download data: <a href="wnba_data.csv">wnba_data.csv</a></p>
+<p>Download <a href="ncaa_gymnastics.csv" target="_blank">ncaa_gymnastics.csv</a></p>
 <section id="data-source" class="level4">
 <h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p>Gilani S, Hutchinson G (2022). <em>wehoop: Access Women’s Basketball Play by Play Data</em>. R package version 1.5.0, <a href="https://CRAN.R-project.org/package=wehoop" class="uri">https://CRAN.R-project.org/package=wehoop</a>.</p>
+<p>The data are compiled from the <a href="https://usagym.org/results/2024/" target="_blank">USA Gymnastics Results Website</a>, which holds data from the NCAA Women’s Gymnastics Championship for the relevant years.</p>
 </section>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p>We offer worksheets (and their solutions) in Quarto (using R) format.</p>
-<p><a href="wnba_boxscore_worksheet.qmd">Class handout - Quarto</a></p>
-<p><a href="wnba_boxscore_worksheet_key.qmd">Class handout - Quarto - with solutions</a></p>
+<p>More specifically, this activity uses the data set: <a href="beam_by_year.csv" target="_blank">beam_by_year.csv</a></p>
+<p>The <code>beam_by_year.csv</code> is made from the original <code>ncaa_gymnastics.csv</code> data set. The data set includes information on the beam scores from each year of the national championship, as well as the difference in beam score for the first place teams and the fourth place teams for each year. The original data set can be modified like this for every event, and difference in means can be calculated for any specific combinations of places.</p>
+<details>
+<summary>
+<b>Variable Descriptions</b>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Year</td>
+<td>Year of NCAA women’s gymnastics championship</td>
+</tr>
+<tr class="even">
+<td>Beam1</td>
+<td>Beam score of team that placed 1st that year</td>
+</tr>
+<tr class="odd">
+<td>Beam2</td>
+<td>Beam score of team that placed 2nd that year</td>
+</tr>
+<tr class="even">
+<td>Beam3</td>
+<td>Beam score of team that placed 3rd that year</td>
+</tr>
+<tr class="odd">
+<td>Beam4</td>
+<td>Beam score of team that placed 4th that year</td>
+</tr>
+<tr class="even">
+<td>Diff_1st_4th</td>
+<td>Difference between 1st place score and 4th place score (Beam1-Beam4)</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><a href="gymnastics_worksheet.docx">Class handout</a></p>
+<p><a href="gymnastics_worksheet_SOLUTIONS.docx">Class handout - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -900,11 +892,9 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Exploration of the WNBA data revealed that there are missing values for games throughout the 2003-2022 seasons. We found this by tallying the number of games played by each team within each season and noticing that the number of games played was inconsistent between teams. We then used the internet to find an example of a missing game within the dataset.</p>
-<p>Reflecting on the challenges that missing values presented us, we came up with a few solutions to continue our analysis. Some of these include: filtering the data for seasons that have no missing data or using the internet to manually fill in data. While neither of these methods are perfect and present other challenges, they are valid ways to deal with missing values.</p>
-<p>Once dealing with the seasons with imperfect data, students can continue the analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs.</p>
+<p>Upon conclusion of this module, students will gain practice in analyzing bootstrap distributions and using them to create samples and construct confidence intervals in the context of NCAA Women’s Gymnastics. Students will use this module to calculate the difference in beam scores between first place teams and fourth place teams, which offers valuable insight into the dynamics of NCAA Women’s Gymnastics. All in all, this module offers a valuable learning opportunity to gain familiarity with bootstrap distributions, confidence intervals, and paired data.</p>
 </div>
 </div>
 </div>

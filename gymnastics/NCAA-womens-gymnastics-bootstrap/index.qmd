@@ -1,0 +1,129 @@
+---
+title: "NCAA Women's Gymnastics and Bootstrap Distributions"
+author:
+  - name: Vivian Johnson
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    email: rlock@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "July 22, 2024"
+description: "Making bootsrap distributions and constructing confidence intervals"
+editor: 
+  canonical: true
+categories:
+  - Bootstrap Distribution
+  - Confidence Intervals
+  - Paired Data
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Each year, the National Collegiate Athletics Association (NCAA) holds the championship tournament for women's gymnastics to crown the national champion. There are two semi-final meets that consist of four teams, and the top two teams from each semi-final meet square off in the championship finals. 
+
+The competition consists of four events:
+
+1. [Vault](https://www.youtube.com/watch?v=vmFMXk3WQow){target="_blank"}: A high-energy, quick event where the gymnast gains momentum by running down a padded runway, jumps onto a spring board, and propels themselves over a slightly inclined vaulting table while performing an aerial combination of flips and twists. 
+
+2. [Uneven Bars](https://www.youtube.com/watch?v=j8N_xzlczQI){target="_blank"}: This is a routine in which the gymnast does a variety of flips and rotations on two horizontal bars that are set at different heights. The gymnast mounts onto a bar and the routine consists of transitioning from one bar to the other while swinging and flipping. The routine ends with a dismount off of the bar and onto the floor. 
+
+3. [Balance Beam](https://www.youtube.com/watch?v=bzi565Ioo3o){target="_blank"}: Gymnasts mount onto an elevated balance beam, which is a long, firm, padded plank about four inches (10 cm) wide. As the name suggests, this event highlights the gymnast's balance, acrobatic skills, and leaps while they attempt multiple turns, jumps, and flips on the beam before an aerial dismount. 
+
+4. [Floor](https://www.youtube.com/watch?v=_FBdDwpfH4I){target="_blank"}: The floor routine takes place on a square mat, and the gymnast performs a carefully choreographed routine that shows off dance skills as well as acrobats and tumbling. 
+
+Each team is allowed to have up to six people compete on each event, with the top five scores contributing to the combined score of that event for the team. After the entire rotation for each event, the combined scores for the four events are added together for a total score, and the team with the highest overall score is the champion. 
+
+Women's college gymnastics uses Perfect 10 scoring, with each routine being judged out of ten points. Gymnasts are evaluated on execution, difficulty, as well as the composition of the routine, and must meet certain requirements for each. 
+
+In this activity, we'll be using different scores on the beam event at the NCAA Women's Gymnastics National Championship to create and analyze bootstrap distributions, as well as look at confidence intervals and the difference in means between different finishers in the championship. 
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete. 
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will:
+
+1. Increase ability to create a bootstrap sample, statistic, and distribution.  
+
+2. Be able to construct confidence intervals from a bootstrap distribution and comment on their implications.
+
+3. Use paired data to calculate differences and interpret the results in the context of the NCAA Women's Gymnastics Championship.  
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+
+Students should have knowledge of how to collect bootstrap samples and with the idea of sampling with replacement. Students should also be able to use the Standard Error of the distribution to construct confidence intervals. 
+
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+
+Statistical software such as StatKey is necessary in order to construct bootstrap distributions with a large enough sample size, as well as find a standard error and sample statistic for the distribution. 
+
+:::
+
+### Data
+
+The `ncaa_gymnastics.csv` data set includes data from the women's NCAA Gymnastics Championships from the years 2008-2024 (excluding 2020 as no championship was held due to the COVID-19 pandemic). Each row contains details from a specific university's performance at that year's tournament championship. 
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable      | Description                                     |
+|---------------|-------------------------------------------------|
+| Year          | Year of NCAA women's gymnastics championship    |
+| Rank          | Final results of the championship               |
+| Team          | University participating                        |
+| Vault         | Combined team score on vault                    |
+| Bar           | Combined team score on bars                     |
+| Beam          | Combined team score on balance beam             |
+| Floor         | Combined team score on floor routine            |
+| Total         | Combined team score for all events              |
+
+
+</details>
+
+Download [ncaa_gymnastics.csv](ncaa_gymnastics.csv){target="_blank"}
+
+#### Data Source
+
+The data are compiled from the [USA Gymnastics Results Website](https://usagym.org/results/2024/){target="_blank"}, which holds data from the NCAA Women's Gymnastics Championship for the relevant years. 
+
+### Materials
+
+More specifically, this activity uses the data set: [beam_by_year.csv](beam_by_year.csv){target="_blank"}
+
+The `beam_by_year.csv` is made from the original `ncaa_gymnastics.csv` data set. The data set includes information on the beam scores from each year of the national championship, as well as the difference in beam score for the first place teams and the fourth place teams for each year. The original data set can be modified like this for every event, and difference in means can be calculated for any specific combinations of places. 
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable        | Description                                                             |
+|-----------------|-------------------------------------------------------------------------|
+| Year            | Year of NCAA women's gymnastics championship                            |
+| Beam1           | Beam score of team that placed 1st that year                            |
+| Beam2           | Beam score of team that placed 2nd that year                            |
+| Beam3           | Beam score of team that placed 3rd that year                            |
+| Beam4           | Beam score of team that placed 4th that year                            |
+| Diff_1st_4th    | Difference between 1st place score and 4th place score (Beam1-Beam4)    |
+
+
+</details>
+
+[Class handout](gymnastics_worksheet.docx)
+
+[Class handout - with solutions](gymnastics_worksheet_SOLUTIONS.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Upon conclusion of this module, students will gain practice in analyzing bootstrap distributions and using them to create samples and construct confidence intervals in the context of NCAA Women's Gymnastics. Students will use this module to calculate the difference in beam scores between first place teams and fourth place teams, which offers valuable insight into the dynamics of NCAA Women's Gymnastics. All in all, this module offers a valuable learning opportunity to gain familiarity with bootstrap distributions, confidence intervals, and paired data. 
+:::
