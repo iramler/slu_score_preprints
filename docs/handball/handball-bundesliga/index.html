@@ -6,12 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Emelia Agostinelli">
+<meta name="author" content="Abigail Smith">
 <meta name="author" content="Robin Lock">
-<meta name="dcterms.date" content="2024-05-15">
-<meta name="description" content="Statistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant">
+<meta name="author" content="Ivan Ramler">
+<meta name="dcterms.date" content="2024-06-12">
+<meta name="description" content="Comparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.">
 
-<title>SLU SCORE Module Preprint Repository - Women’s Alpine Skiing World Giant Slalom - Data Cleaning</title>
+<title>SLU SCORE Module Preprint Repository - Handball Individual Player Statistics for the 2022-2023 Season</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,6 +46,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -143,7 +146,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../skiing/giant-slalom_cleaning/index.html">Skiing</a></li><li class="breadcrumb-item"><a href="../../skiing/giant-slalom_cleaning/index.html">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../handball/handball-bundesliga/index.html">Handball</a></li><li class="breadcrumb-item"><a href="../../handball/handball-bundesliga/index.html">Handball Individual Player Statistics for the 2022-2023 Season</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -294,16 +297,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
  <span class="menu-text">Handball</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Handball Individual Player Statistics for the 2022-2023 Season</span></a>
   </div>
 </li>
@@ -478,16 +481,16 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
  <span class="menu-text">Skiing</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
@@ -606,32 +609,31 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
+  <li><a href="#welcome-video" id="toc-welcome-video" class="nav-link active" data-scroll-target="#welcome-video">Welcome video</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../skiing/giant-slalom_cleaning/index.html">Skiing</a></li><li class="breadcrumb-item"><a href="../../skiing/giant-slalom_cleaning/index.html">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../handball/handball-bundesliga/index.html">Handball</a></li><li class="breadcrumb-item"><a href="../../handball/handball-bundesliga/index.html">Handball Individual Player Statistics for the 2022-2023 Season</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</h1>
+<h1 class="title">Handball Individual Player Statistics for the 2022-2023 Season</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Tidying data</div>
-    <div class="quarto-category">Data Scraping</div>
+    <div class="quarto-category">confidence intervals</div>
+    <div class="quarto-category">prediction intervals</div>
+    <div class="quarto-category">multiple linear regression</div>
+    <div class="quarto-category">anova for overall fit</div>
+    <div class="quarto-category">t.test for correlation</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Statistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant
+    Comparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.
   </div>
 </div>
 
@@ -640,7 +642,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Emelia Agostinelli </p>
+    <p class="author">Abigail Smith </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -648,7 +650,15 @@ cookieconsent.run({
           </p>
       </div>
     <div class="quarto-title-meta-contents">
-    <p class="author">Robin Lock <a href="mailto:rlock@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+    <p class="author">Robin Lock </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -663,7 +673,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 15, 2024</p>
+      <p class="date">June 12, 2024</p>
     </div>
   </div>
   
@@ -675,16 +685,34 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+<section id="welcome-video" class="level3">
+<h3 class="anchored" data-anchor-id="welcome-video">Welcome video</h3>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Handball Individual Player Statistics for the 2022-2023 Season"><source src="Handball Individual Player Statistics for the 2022-2023 Season"></video></div>
+</section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>In World Cup Giant Slalom (GS), there are two runs. Only the thirty fastest racers from the first run take a second run. If a racer is disqualified (DSQ) or did not finish (DNF) their first run, they do not take a second run. The order for the first run is determined by taking all racers and ordering them by their World Cup points, from highest to lowest. From that, the top 30 racers are put into three groups. The best seven racers are randomly assigning them a bib 1-7. The next eight best competitors are randomly assigned a bib 8-15. The next best 15 racers are randomly assigned a bib 16-30. The remaining racers go in descending order of points. For the second run, competitors race in reverse order of their results on the first run, so the 30th fastest racer on the first run goes 1st on the second run and so on. This data set includes data from only the top thirty finishers as any racers who placed higher than 30th do not take a second run.</p>
-<p>In this worksheet, we will focus on cleaning up untidy data. To do this, we will scrape the data, then write functions and use them along with dplyr functions to tidy the data.</p>
-<p><a href="Tremblant_Cleaning_Module_Script.docx">Preliminary script for video</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>This activity looks at individual player statistics for handball’s <a href="https://www.kaggle.com/datasets/nemanjagojkovic/handball-bundesliga-stats-202223" target="_blank">Bundesliga 2022-2023 season</a>.</p>
+<p>Handball is a popular sport in many European countries such as Germany where it is said to have originated. The Bundesliga, for example, is a German men’s professional handball league. Handball is typically played indoors on a rectangular court (20m x 40m). There are two goals (3m x 2m) on opposite sides of the court, the goal for each team is to score a goal by getting the ball in the other team’s goal. The challenge to this is that there is a semicircle with a radius of 6m surrounding the goal which players other than the goal keeper are not allowed in, making it challenging to score. Players run back and forth down the court passing the ball to each other and trying to score.</p>
+<p>There are seven positions total in handball: the goalkeeper who defends the team’s goal, left and rights backs are positioned on the left and right side of their half of the court to provide further defense, the center can move up and down the court and is usually the one trying to score, left and right wings can also move up and down the court, serving as offense when the team pushes for attack and defense when the opposing team tries to score, lastly, the pivot is considered strictly an offensive player as they are usually position in the opposing side of the court, they often work closely with the center. The Bundesliga regular season length is 34 games, with playoffs the maximum number of games a team could play is 41. Players do not play every game in the season and subbing is common, generally speaking playing time goes to players with experience. This can create a bit of a disparity in which players with less playing time will not necessarily have statistics that accurately display their skills due to the smaller sample size.</p>
+<p>Handball is considered a contact sport which means aggressive strategies are often used in games. Aggressiveness can be measured in the penalty statistics as players who tend to get more penalties are usually more considered more aggressive players overall. Their success can be measured with the <a href="https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/" target="_blank">handball performance index (HPI)</a>, a calculated statistic which essentially ranks how good a player is. This data set could provide insight on if players or teams that are more aggressive as measured by penalties are more successful than those who are more passive.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This activity could be used as a quiz or a take home-assessment.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -693,18 +721,21 @@ Learning Objectives
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
+<p>By the end of the activity, students will be able to:</p>
 <ol type="1">
-<li><p>Practice writing functions</p></li>
-<li><p>Tidy data</p></li>
+<li>Evaluate and test the correlation between two variables</li>
+<li>Discern the difference between prediction and confidence intervals in regression</li>
+<li>Find and interpret prediction and confidence intervals using statistical software</li>
+<li>Assess the overall fit of a multiple linear regression model using ANOVA</li>
+<li>Interpret multiple linear regression coefficients</li>
 </ol>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -713,20 +744,38 @@ Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li>Familiarity with dplyr</li>
-<li>Understand how to write a function</li>
-</ol>
+<p>Students will utilize an understanding of confidence intervals for a mean response variable and prediction intervals for an individual response variable. Students will also interpret coefficients in addition to assessing the overall fit of multiple linear regression models. Students will use scatterplots and tests to evaluate the significance of correlations.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology Requirements
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The tech worksheet will require the use of statistical software for most of the questions. The no-tech worksheet will not require any technology other than a calculator.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>Each of the 30 rows in this data set represents a racer, and there are 9 variables. There are a few missing values in for racers that did not finish (DNF) a run. The RUN 1 and RUN 2 variables give the time (and rank that run) for the first racer and secondsdifferent form that time (and rank) for the rest of the racers.</p>
-<p>Download data: <a href="Tremblant_Data.csv">Tremblant_Data.csv</a></p>
+<p>The dataset has 309 players from 18 different clubs, with 7 variables, 4 of which are playing statistics. Each row in the data set is a player in the Handball-Bundesliga during the 2022-23 season. The statistics are cumulative for the entirety of the season. The dataset only contains players who played in 10 games or more.</p>
+<dl>
+<dt>Download data:</dt>
+<dd>
+<p><a href="handball_bundesliga_23.csv" target="_blank">handball_bundesliga_23.csv</a></p>
+</dd>
+</dl>
 <details>
 <summary>
 <b>Variable Descriptions</b>
@@ -740,59 +789,68 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td>RANK</td>
-<td>Final rank (missing if did not finish)</td>
+<td><code>NAME</code></td>
+<td>The name of the player.</td>
 </tr>
 <tr class="even">
-<td>N</td>
-<td>Order for second run</td>
+<td><code>CLUB</code></td>
+<td>The club the player is on. There are 18 in the Bundesliga.</td>
 </tr>
 <tr class="odd">
-<td>BIB</td>
-<td>Bib number (determines order on first run)</td>
+<td><code>POSITION</code></td>
+<td>The position of the player. There are 7 positions in handball: goalkeeper, fullbacks (left and right), center backcourt, wingers (left and right), and pivot.</td>
 </tr>
 <tr class="even">
-<td>NAME</td>
-<td>Name of the racer</td>
+<td><code>GP</code></td>
+<td>The number of games played in the 2022-23 season.</td>
 </tr>
 <tr class="odd">
-<td>NAT</td>
-<td>Country the racer represents</td>
+<td><code>total_offense</code></td>
+<td>The total offensive plays made by the player in the season. Calculated by adding the 6 offensive focused statistics from the original dataset.</td>
 </tr>
 <tr class="even">
-<td>TOTAL</td>
-<td>Time for both runs (min:sec)</td>
+<td><code>total_penalties</code></td>
+<td>The total penalties the player had in the season. Calculated by adding the 5 penalty related statistics from the original dataset.</td>
 </tr>
 <tr class="odd">
-<td>DIFF</td>
-<td>Time behind the leader (seconds)</td>
-</tr>
-<tr class="even">
-<td>RUN 1</td>
-<td>Time and rank for first run</td>
-</tr>
-<tr class="odd">
-<td>RUN 2</td>
-<td>Time and rank for second run</td>
+<td><code>HPI</code></td>
+<td>Handball performance index, complex formulaic calculation equivalent to how well the player performed in the season. Players with HPIs in the 70s are considered good, while players in the 60s are considered not as strong. <a href="https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/" target="_blank">https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index–data-based–transparent–fair/</a></td>
 </tr>
 </tbody>
 </table>
-</details></section>
-<section id="data-source" class="level3">
-<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
-<p>The data was scraped from the following link: <a href="https://live.fis-ski.com/lv-al5009.htm#/follow" title="FIS World Cup Women's GS at Tremblant">FIS World Cup Women’s GS at Tremblant</a></p>
+<p><strong>Data Source</strong></p>
+<p><a href="https://www.kaggle.com/datasets/nemanjagojkovic/handball-bundesliga-stats-202223" target="_blank">Kaggle Bundesliga 2022-23 Stats Dataset</a></p>
+<p><strong>More information on the rules</strong></p>
+<p><a href="https://olympics.com/en/news/handball-game-rules-regulations-how-to-play" target="_blank">Olympic Handball Rules</a></p>
+<p><a href="https://www.theukrules.co.uk/rules/sport/handball/player-positions/#google_vignette" target="_blank">Handball Positions</a></p>
+<p><a href="https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/" target="_blank">Handball Performance Index (HPI)</a></p>
+</details>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Tremblant_Cleaning_Worksheet.docx">Class Worksheet</a> (Word)</p>
-<p><a href="Tremblant_Cleaning_Worksheet_Key.qmd">Class Worksheet Key</a> (Quarto file)</p>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Fill in later</p>
+<p>We provide editable MS Word handouts along with their solutions. The tech worksheets will require the use of statistical software whereas the no tech worksheets will not.</p>
+<p><a href="handball_worksheet_tech.docx">Tech Worksheet</a></p>
+<p><a href="handball_worksheet_tech_answers.docx">Tech Worksheet Answers</a></p>
+<p><a href="handball_worksheet_no_tech.docx">No Tech Worksheet</a></p>
+<p><a href="handball_worksheet_answers_no_tech.docx">No Tech Worksheet Answers</a></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conclusion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>After completing this activity, students should be able to draw a conclusion about if an aggressive strategy in handball really garners more success. Students should come to this conclusion through statistical analysis of the use of <code>total_penalties</code> and <code>total_offense</code> to predict <code>HPI</code>. Students will also be able to assess the relationship between <code>total_penalties</code> and <code>total_offense</code> which can provide further insight on the relationship between aggressive play and offensive strength.</p>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1219,6 +1277,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 

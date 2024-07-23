@@ -1,0 +1,112 @@
+---
+title: "Handball Individual Player Statistics for the 2022-2023 Season"
+author:
+  - name: Abigail Smith
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Robin Lock
+    affiliation:
+      - ref: slu
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+
+date: June 12, 2024
+description: Comparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.
+categories:
+  - confidence intervals
+  - prediction intervals
+  - multiple linear regression
+  - anova for overall fit
+  - t.test for correlation
+---
+
+### Welcome video
+
+{{< video title="Handball Individual Player Statistics for the 2022-2023 Season" >}}
+
+### Introduction
+
+This activity looks at individual player statistics for handball's [Bundesliga 2022-2023 season](https://www.kaggle.com/datasets/nemanjagojkovic/handball-bundesliga-stats-202223){target="_blank"}.
+
+Handball is a popular sport in many European countries such as Germany where it is said to have originated. The Bundesliga, for example, is a German men's professional handball league. Handball is typically played indoors on a rectangular court (20m x 40m). There are two goals (3m x 2m) on opposite sides of the court, the goal for each team is to score a goal by getting the ball in the other team's goal. The challenge to this is that there is a semicircle with a radius of 6m surrounding the goal which players other than the goal keeper are not allowed in, making it challenging to score. Players run back and forth down the court passing the ball to each other and trying to score.
+
+There are seven positions total in handball: the goalkeeper who defends the team's goal, left and rights backs are positioned on the left and right side of their half of the court to provide further defense, the center can move up and down the court and is usually the one trying to score, left and right wings can also move up and down the court, serving as offense when the team pushes for attack and defense when the opposing team tries to score, lastly, the pivot is considered strictly an offensive player as they are usually position in the opposing side of the court, they often work closely with the center. The Bundesliga regular season length is 34 games, with playoffs the maximum number of games a team could play is 41. Players do not play every game in the season and subbing is common, generally speaking playing time goes to players with experience. This can create a bit of a disparity in which players with less playing time will not necessarily have statistics that accurately display their skills due to the smaller sample size.
+
+Handball is considered a contact sport which means aggressive strategies are often used in games. Aggressiveness can be measured in the penalty statistics as players who tend to get more penalties are usually more considered more aggressive players overall. Their success can be measured with the [handball performance index (HPI)](https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/){target="_blank"}, a calculated statistic which essentially ranks how good a player is. This data set could provide insight on if players or teams that are more aggressive as measured by penalties are more successful than those who are more passive.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity could be used as a quiz or a take home-assessment.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, students will be able to:
+
+1.  Evaluate and test the correlation between two variables
+2.  Discern the difference between prediction and confidence intervals in regression
+3.  Find and interpret prediction and confidence intervals using statistical software
+4.  Assess the overall fit of a multiple linear regression model using ANOVA
+5.  Interpret multiple linear regression coefficients
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students will utilize an understanding of confidence intervals for a mean response variable and prediction intervals for an individual response variable. Students will also interpret coefficients in addition to assessing the overall fit of multiple linear regression models. Students will use scatterplots and tests to evaluate the significance of correlations.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The tech worksheet will require the use of statistical software for most of the questions. The no-tech worksheet will not require any technology other than a calculator.
+:::
+
+### Data
+
+The dataset has 309 players from 18 different clubs, with 7 variables, 4 of which are playing statistics. Each row in the data set is a player in the Handball-Bundesliga during the 2022-23 season. The statistics are cumulative for the entirety of the season. The dataset only contains players who played in 10 games or more.
+
+Download data:
+
+:   [handball_bundesliga_23.csv](handball_bundesliga_23.csv){target="_blank"}
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `NAME`            | The name of the player.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `CLUB`            | The club the player is on. There are 18 in the Bundesliga.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `POSITION`        | The position of the player. There are 7 positions in handball: goalkeeper, fullbacks (left and right), center backcourt, wingers (left and right), and pivot.                                                                                                                                                                                                                                                                                                                                                     |
+| `GP`              | The number of games played in the 2022-23 season.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `total_offense`   | The total offensive plays made by the player in the season. Calculated by adding the 6 offensive focused statistics from the original dataset.                                                                                                                                                                                                                                                                                                                                                                    |
+| `total_penalties` | The total penalties the player had in the season. Calculated by adding the 5 penalty related statistics from the original dataset.                                                                                                                                                                                                                                                                                                                                                                                |
+| `HPI`             | Handball performance index, complex formulaic calculation equivalent to how well the player performed in the season. Players with HPIs in the 70s are considered good, while players in the 60s are considered not as strong. [https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/](https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/){target="_blank"} |
+
+**Data Source**
+
+[Kaggle Bundesliga 2022-23 Stats Dataset](https://www.kaggle.com/datasets/nemanjagojkovic/handball-bundesliga-stats-202223){target="_blank"}
+
+**More information on the rules**
+
+[Olympic Handball Rules](https://olympics.com/en/news/handball-game-rules-regulations-how-to-play){target="_blank"}
+
+[Handball Positions](https://www.theukrules.co.uk/rules/sport/handball/player-positions/#google_vignette){target="_blank"}
+
+[Handball Performance Index (HPI)](https://www.liquimoly-hbl.de/en/s/handball-performance-index/2021-22/handball-performance-index--data-based--transparent--fair/){target="_blank"}
+
+</details>
+
+### Materials
+
+We provide editable MS Word handouts along with their solutions. The tech worksheets will require the use of statistical software whereas the no tech worksheets will not.
+
+[Tech Worksheet](handball_worksheet_tech.docx)
+
+[Tech Worksheet Answers](handball_worksheet_tech_answers.docx)
+
+[No Tech Worksheet](handball_worksheet_no_tech.docx)
+
+[No Tech Worksheet Answers](handball_worksheet_answers_no_tech.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+After completing this activity, students should be able to draw a conclusion about if an aggressive strategy in handball really garners more success. Students should come to this conclusion through statistical analysis of the use of `total_penalties` and `total_offense` to predict `HPI`. Students will also be able to assess the relationship between `total_penalties` and `total_offense` which can provide further insight on the relationship between aggressive play and offensive strength.
+:::
