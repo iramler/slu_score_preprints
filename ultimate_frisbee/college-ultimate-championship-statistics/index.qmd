@@ -95,3 +95,7 @@ The data is obtained from a [USA Ultimate 2024 Nationals Stats Dashboard](https:
 [ultimate_worksheet.qmd](ultimate_worksheet.qmd) - Worksheet with data tidying and visualization questions. Should take a student around 45-60 minutes to complete.
 
 [ultimate_worksheet_ans.qmd](ultimate_worksheet_ans.qmd) - Answer key/guide for the worksheet
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Students should find that D1 Men's division has very dominant offenses and the D3 Women's division has less dominant offenses with defenses scoring more. 
+:::
