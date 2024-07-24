@@ -6,12 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sam Peacock">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2024-05-08">
-<meta name="description" content="Using Ski to Sea results data to see which leg (sport) is more strongly related to a team’s overall finish time.">
+<meta name="dcterms.date" content="2024-03-05">
+<meta name="description" content="Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon">
 
-<title>SLU SCORE Module Preprint Repository - Ski to Sea</title>
+<title>SLU SCORE Module Preprint Repository - 2023 Boston Marathon - Understanding variability using ANOVA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -27,24 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,7 +109,7 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">SLU SCORE Module Preprint Repository</span>
     </a>
   </div>
@@ -121,11 +120,11 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../by-statsds-topic.html" aria-current="page"> 
+    <a class="nav-link active" href="../../../by-statsds-topic.html" aria-current="page"> 
 <span class="menu-text">Modules By Topic</span></a>
   </li>  
   <li class="nav-item">
@@ -143,7 +142,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../multisport/d1_expenditures/index.html">Multisport</a></li><li class="breadcrumb-item"><a href="../../multisport/ski_to_sea_correlations/index.html">Ski to Sea</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Early Drafts</li><li class="breadcrumb-item"><a href="../../../early_drafts/running/boston_marathon_anova/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/running/boston_marathon_anova/index.html">2023 Boston Marathon - Understanding variability using ANOVA</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -157,7 +156,7 @@ cookieconsent.run({
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Modules By Topic</span></a>
   </div>
 </li>
@@ -172,19 +171,19 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exploring the NBA Draft via ANOVA and Tukey’s HSD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introducing ANOVA Through the NBA Draft</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WNBA Data Cleaning Module</span></a>
   </div>
 </li>
@@ -201,7 +200,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">UFC: Striking Accuracy Percentages and the Normal Distribution</span></a>
   </div>
 </li>
@@ -218,7 +217,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Disc Golf Pro Tour - Driving or Putting?</span></a>
   </div>
 </li>
@@ -226,127 +225,133 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
- <span class="menu-text">Diving</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Early Drafts</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">Diving</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
- <span class="menu-text">Esports</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">League of Legends - Buffing and Nerfing</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
- <span class="menu-text">Fitness and Training</span></a>
+ <span class="menu-text">Motor Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</span></a>
+  <a href="../../../early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dakar Rally Analysis</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
- <span class="menu-text">Football American</span></a>
+ <span class="menu-text">Multisport</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Football Recruiting and Impact in the NFL</span></a>
+  <a href="../../../early_drafts/multisport/d1_expenditures/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NCAA D1 Expenditures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ski to Sea</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
- <span class="menu-text">Golf</span></a>
+ <span class="menu-text">Rodeo Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">PGA - Drive for Show, Putt for Dough?</span></a>
+  <a href="../../../early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Professional Bull Riding Analysis</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
- <span class="menu-text">Gymnastics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+ <span class="menu-text">Running</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NCAA Women’s Gymnastics and Bootstrap Distributions</span></a>
+  <a href="../../../early_drafts/running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false">
- <span class="menu-text">Handball</span></a>
+ <span class="menu-text">Skiing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Handball Individual Player Statistics for the 2022-2023 Season</span></a>
+  <a href="../../../early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
- <span class="menu-text">Hockey</span></a>
+ <span class="menu-text">Esports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -354,8 +359,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2023-24 PWHL - Visualizing the Regular Season</span></a>
+  <a href="../../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">League of Legends - Buffing and Nerfing</span></a>
   </div>
 </li>
       </ul>
@@ -363,7 +368,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false">
- <span class="menu-text">Lacrosse</span></a>
+ <span class="menu-text">Fitness and Training</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -371,20 +376,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../lacrosse/lacrosse_pll_vs_nll_first_draft/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL - First Draft</span></a>
+  <a href="../../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</span></a>
   </div>
 </li>
       </ul>
@@ -392,7 +385,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false">
- <span class="menu-text">Motor Sports</span></a>
+ <span class="menu-text">Football American</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -400,49 +393,25 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dakar Rally Analysis</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NASCAR Transformation Module</span></a>
+  <a href="../../../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Football Recruiting and Impact in the NFL</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="true">
- <span class="menu-text">Multisport</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false">
+ <span class="menu-text">Golf</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../multisport/d1_expenditures/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NCAA D1 Expenditures</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Beijing 2022 Olympics - Cleaning and Summarizing Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Ski to Sea</span></a>
+  <a href="../../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PGA - Drive for Show, Putt for Dough?</span></a>
   </div>
 </li>
       </ul>
@@ -450,7 +419,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false">
- <span class="menu-text">Rodeo Sports</span></a>
+ <span class="menu-text">Gymnastics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -458,8 +427,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Professional Bull Riding Analysis</span></a>
+  <a href="../../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NCAA Women’s Gymnastics and Bootstrap Distributions</span></a>
   </div>
 </li>
       </ul>
@@ -467,7 +436,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false">
- <span class="menu-text">Rowing</span></a>
+ <span class="menu-text">Handball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -475,14 +444,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Data Wrangling</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Summary Statistics</span></a>
+  <a href="../../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Handball Individual Player Statistics for the 2022-2023 Season</span></a>
   </div>
 </li>
       </ul>
@@ -490,7 +453,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false">
- <span class="menu-text">Running</span></a>
+ <span class="menu-text">Hockey</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -498,14 +461,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
+  <a href="../../../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2023-24 PWHL - Visualizing the Regular Season</span></a>
   </div>
 </li>
       </ul>
@@ -513,7 +470,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false">
- <span class="menu-text">Skiing</span></a>
+ <span class="menu-text">Lacrosse</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -521,20 +478,20 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
+  <a href="../../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
+  <a href="../../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">World Cup Women’s 10k Classic Nordic Ski Race - Splits</span></a>
+  <a href="../../../lacrosse/lacrosse_pll_vs_nll_first_draft/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL - First Draft</span></a>
   </div>
 </li>
       </ul>
@@ -542,7 +499,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false">
- <span class="menu-text">Softball</span></a>
+ <span class="menu-text">Motor Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -550,8 +507,14 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</span></a>
+  <a href="../../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
       </ul>
@@ -559,7 +522,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false">
- <span class="menu-text">Swimming</span></a>
+ <span class="menu-text">Multisport</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -567,8 +530,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Olympic Swimming - Changes in the 100m Women’s Event</span></a>
+  <a href="../../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beijing 2022 Olympics - Cleaning and Summarizing Data</span></a>
   </div>
 </li>
       </ul>
@@ -576,7 +539,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false">
- <span class="menu-text">Tennis</span></a>
+ <span class="menu-text">Rowing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -584,8 +547,14 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tennis/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Investigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis</span></a>
+  <a href="../../../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Data Wrangling</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Summary Statistics</span></a>
   </div>
 </li>
       </ul>
@@ -593,7 +562,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false">
- <span class="menu-text">Triathlon</span></a>
+ <span class="menu-text">Running</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -601,14 +570,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
+  <a href="../../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
   </div>
 </li>
       </ul>
@@ -616,7 +579,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false">
- <span class="menu-text">Ultimate Frisbee</span></a>
+ <span class="menu-text">Skiing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -624,8 +587,8 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">2024 College Ultimate Championship Statistics</span></a>
+  <a href="../../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">World Cup Women’s 10k Classic Nordic Ski Race - Splits</span></a>
   </div>
 </li>
       </ul>
@@ -633,7 +596,7 @@ cookieconsent.run({
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false">
- <span class="menu-text">Volleyball</span></a>
+ <span class="menu-text">Softball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -641,7 +604,98 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false">
+ <span class="menu-text">Swimming</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Olympic Swimming - Changes in the 100m Women’s Event</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false">
+ <span class="menu-text">Tennis</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../tennis/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Investigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false">
+ <span class="menu-text">Triathlon</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
+ <span class="menu-text">Ultimate Frisbee</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2024 College Ultimate Championship Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false">
+ <span class="menu-text">Volleyball</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Division Three Volleyball Timeouts</span></a>
   </div>
 </li>
@@ -669,32 +723,26 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../multisport/d1_expenditures/index.html">Multisport</a></li><li class="breadcrumb-item"><a href="../../multisport/ski_to_sea_correlations/index.html">Ski to Sea</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Early Drafts</li><li class="breadcrumb-item"><a href="../../../early_drafts/running/boston_marathon_anova/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/running/boston_marathon_anova/index.html">2023 Boston Marathon - Understanding variability using ANOVA</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Ski to Sea</h1>
+<h1 class="title">2023 Boston Marathon - Understanding variability using ANOVA</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Correlation</div>
+    <div class="quarto-category">ANOVA</div>
+    <div class="quarto-category">Interactions</div>
+    <div class="quarto-category">Multiple comparisons</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Using Ski to Sea results data to see which leg (sport) is more strongly related to a team’s overall finish time.
+    Using ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon
   </div>
 </div>
 
 <div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Author</div>
   <div class="quarto-title-meta-heading">Affiliation</div>
   
-    <div class="quarto-title-meta-contents">
-    <p class="author">Sam Peacock </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            St.&nbsp;Lawrence University
-          </p>
-      </div>
     <div class="quarto-title-meta-contents">
     <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
@@ -711,7 +759,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 8, 2024</p>
+      <p class="date">March 5, 2024</p>
     </div>
   </div>
   
@@ -728,12 +776,27 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The Ski to Sea race is a multi-sport relay race held annually in Whatcom County, Washington. The race consists of seven legs: cross-country skiing, downhill skiing or snowboarding, running, road biking, canoeing, mountain biking, and kayaking, with each leg representing a different outdoor sport. A team will consist of one person for each leg of the race, except for the canoe leg which has two paddlers per canoe. Racers are allowed to compete in multiple legs of the race. A team must have a minimum of three racers and a maximum of eight, with a maximum of three legs per individual. The canoe leg must have two participants regardless of the number or racers per team. The Ski to Sea Race does not allow individuals to complete all legs of the race.</p>
-<p>This module focuses on analyzing which leg of the race is most important to a team’s success for the Ski to Sea Race. Focusing on the correlation of time in minutes taken to complete each leg, this module examines the relative importance of each leg in contributing to the overall time in the Ski to Sea race.</p>
-<p>The dataset for this activity was obtained from the <a href="https://skitosea.pacificmultisports.com/results">Ski to Sea Website</a></p>
-<p>Each row of data provides the leg race times in minutes for a team in a given year. Each row is distinguished by a team name (<em>Team Name</em>) for a given year (<em>Year</em>). The time variables include (<em>canoe_minutes</em>), (<em>xcski_minutes</em>), (<em>downhill_minutes</em>), (<em>kayak_minutes</em>), (<em>run_minutes</em>), (<em>xcbike_minutes</em>), and (<em>roadbike_minutes</em>). These time variables make up the (<em>overall_minutes</em>) variable. The dataset covers 11 Ski to Sea Races from 2009-2019 with 5197 cases in all. Each race consists of seven legs: canoe, cross country ski, downhill ski, kayak, road bike, run, and cross country bike. It is important to note that rows that contained NAs were omitted.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>For this activity, you will be exploring the result times from female and male runners that finished the 2023 <a href="https://www.baa.org/races/boston-marathon" target="_blank">Boston Marathon</a>.</p>
+<p>In particular, you will examine both visualizations and Analysis of Variance (ANOVA) modules of result times to help understand the variation in finish times of participants.</p>
+<p>Investigating these trends is useful for several reasons. Mainly, exploring these trends can help to deepen our understanding of how different factors, such as gender and age, impact marathon performances. Analyzing the distribution of finish times can also provide insights into the competitive landscape of the marathon.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This activity would be suitable for an in-class example or broken in several examples.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -742,19 +805,20 @@ Learning Objectives
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The learning objectives associated with this module are:</p>
-<ul>
-<li>Students will be able to use correlation to measure the strength association between quantitative variables.</li>
-<li>Checking regression model assumptions</li>
-<li>Students will be able to compare correlations to assess which variables may be more strongly related.</li>
-</ul>
+<p>By the end of the activity, you will be able to:</p>
+<ol type="1">
+<li>Analyze distributions using histograms and boxplots</li>
+<li>Understand how different factors in an ANOVA model can be used to explain variability in a response variable.</li>
+<li>Determine when it is appropriate to include interaction terms in a two-way ANOVA model.</li>
+<li>Use multi-comparison procedures (such as Tukey’s Honest Significant Differences) to determine statistically discernible differences in group means.</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -763,30 +827,41 @@ Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This module requires students compare correlations between pairs of variables.</p>
-<p>Technology requirement: Two handout activities accommodate different levels of available technology.</p>
-<ul>
-<li><p>The “No Tech version” provides a correlation matrix for students to use to find the required correlations to compare.</p></li>
-<li><p>The “With Tech” version provides the dataset and asks students to use technology to compute the needed correlations.</p></li>
-</ul>
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requiremens">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology Requiremens
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The provided worksheet and sample solutions assume students have access to, and familiarity with, R and the <code>tidyverse</code> suite of packages. However, these can be easily modified to use any statistical software that allows them to fit a two-way ANOVA model with interactions as well as perform Tukey’s HSD.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>Each row of data provides the leg race times in minutes for one team in a given year. The dataset covers 11 Ski to Sea Races from 2009-2019 with 5197 cases in all. Each race consists of seven legs: canoe, cross country ski, downhill ski, kayak, road bike, run, and cross country bike. It is important to note that rows that contained NAs were omitted.</p>
-<p>Download data:<a href="Ski_to_Sea_Data.csv">Ski_to_Sea_Data.csv</a></p>
+<p>The data set contains 26598 rows and 15 columns. Each row represents a runner who completed the Boston Marathon in 2023</p>
+<p>Download data: <a href="boston_marathon_2023.csv">boston_marathon_2023.csv</a></p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
 </summary>
 <table class="table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 12%">
+<col style="width: 87%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -796,62 +871,84 @@ Methods
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>Year</code></td>
-<td>The year the race took place (2009-2019)</td>
+<td>age_group</td>
+<td>age group of the runner</td>
 </tr>
 <tr class="even">
-<td><code>Team Name</code></td>
-<td>The team’s name</td>
+<td>place_overall</td>
+<td>finishing place of the runner out of all runners</td>
 </tr>
 <tr class="odd">
-<td><code>canoe_minutes</code></td>
-<td>The amount of minutes taken to complete the canoe leg</td>
+<td>place_gender</td>
+<td>finishing place of runner among the same gender</td>
 </tr>
 <tr class="even">
-<td><code>xcski_minutes</code></td>
-<td>The amount of minutes taken to complete the cross country ski leg</td>
+<td>place_division</td>
+<td>finishing place of runner among runners of the same gender and age group</td>
 </tr>
 <tr class="odd">
-<td><code>downhill_minutes</code></td>
-<td>The amount of minutes taken to complete the downhill ski leg</td>
+<td>name</td>
+<td>name of runner</td>
 </tr>
 <tr class="even">
-<td><code>kayak_minutes</code></td>
-<td>The amount of minutes taken to complete the kayak leg</td>
+<td>gender</td>
+<td>gender of runner</td>
 </tr>
 <tr class="odd">
-<td><code>roadbike_minutes</code></td>
-<td>The amount of minutes taken to complete the road bike leg</td>
+<td>team</td>
+<td>team the runner is affiliated with</td>
 </tr>
 <tr class="even">
-<td><code>run_minutes</code></td>
-<td>The amount of minutes taken to complete the run leg</td>
+<td>bib_number</td>
+<td>bib number of runner</td>
 </tr>
 <tr class="odd">
-<td><code>xcbike_minutes</code></td>
-<td>The amount of minutes taken to complete the cross country bike leg</td>
+<td>half_time</td>
+<td>half marathon time of runner</td>
 </tr>
 <tr class="even">
-<td><code>overall_minutes</code></td>
-<td>The amount of minutes taken to complete the entire race</td>
+<td>finish_net</td>
+<td>finishing time timed from when they cross the starting gate</td>
+</tr>
+<tr class="odd">
+<td>finish_gun</td>
+<td>finishing time of runner timed from when the starter gun is fired</td>
+</tr>
+<tr class="even">
+<td>age_group</td>
+<td>age group of the runner</td>
+</tr>
+<tr class="odd">
+<td>half_time_sec</td>
+<td>half marathon time in seconds</td>
+</tr>
+<tr class="even">
+<td>finish_net_sec</td>
+<td>net finish in seconds</td>
+</tr>
+<tr class="odd">
+<td>finish_gun_sec</td>
+<td>gun finish in seconds</td>
+</tr>
+<tr class="even">
+<td>finish_net_minutes</td>
+<td>net finish in minutes</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Data Source</strong></p>
-<p>The data were obtained from the <a href="https://skitosea.pacificmultisports.com/results">Ski to Sea Website</a></p>
+<p><a href="https://www.baa.org" target="_blank">Boston Athletic Association</a></p>
 </details>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p>The data and worksheet associated with this module are available for download through the following links.</p>
-<p><a href="Ski_to_Sea_Data.csv">Ski_to_Sea_Data.csv</a> - Dataset with team name, year, and time measures for each leg of the Ski to Sea Race from 2009-2019.</p>
-<p><a href="SkiToSeaCorrelationsNoTech.docx">SkiToSeaCorrelationsNoTech.docx</a>- “No Tech” version of the activity worksheet provides a correlation matrix for students to use in answering the questions.</p>
-<p><a href="SkiToSeaCorrelationsWithTech.docx">SkiToSeaCorrelationsWithTech.docx</a> - “With Tech” version of the activity worksheet assumes students have technology to compute any needed correlations from the provided dataset.</p>
-<p>Sample solutions to the worksheets</p>
-<p><a href="SkiToSeaCorrelationsNoTech-Ans.docx">SkiToSeaCorrelationsNoTech-Ans.docx</a>- Sample solutions to the “No Tech” version of the activity worksheet.</p>
-<p><a href="SkiToSeaCorrelationsWithTech-Ans.docx">SkiToSeaCorrelationsWithTech-Ans.docx</a> - Sample solutions to the “With Tech” version of the activity worksheet.</p>
+<!--
+[Class handout](boston_marathon_anova_worksheet.docx)
+
+[Class handout - with solutions](boston_marathon_anova_worksheet-key.docx)
+-->
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -860,9 +957,9 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Students should find evidence to support the claim that, overall, the kayak leg is the best predictor of overall finish time than other legs. Based on this strong, positive correlation, teams should prioritize their efforts in the kayak leg as this is most closely associated with the overall finish time.</p>
+<p>In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. It allows them to understand reasons by variability might exist and to discover multimodal distributions can occur simply due to excluding an important explanatory variable that otherwise confounds the analysis. The calculation of z-scores or other similar measurement of relative location enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.</p>
 </div>
 </div>
 </div>
