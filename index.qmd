@@ -6,7 +6,17 @@ This page contains education materials for the [SCORE Network](https://scorenetw
 
 The [SCORE Network](https://scorenetwork.org/index.html){target="_blank"} Module Repository enables you to search for modules by either sport (along the left), or you can browse [by statistics and data science topic](by-statsds-topic.qmd).
 
-Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+
+
+::: {.callout-note collapse="false" title="Disclaimer" appearance="minimal"}
+Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network. 
+
+However, all modules listed under their respective sports have been reviewed by a St. Lawrence University statistics instructor and are able for others to use.
+
+Modules posted in the "Early Drafts" tab have not yet been fully vetted by an statistics/data science instructor. Instructors are welcome to use them, but should expect to make modifications to the materials.
+:::
+
 
 *The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).*
 
