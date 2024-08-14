@@ -20,7 +20,7 @@ categories:
   - Polynomial regression
 ---
 
-[![Stock Cars used in NASCAR](https://www.nascar.com/wp-content/uploads/sites/7/2021/06/14/9-crossover-18.gif){target="_blank" fig-align="center" width="50%"}](https://www.nascar.com/gallery/best-gifs-from-2021-all-star-race-weekend/)
+[![](https://www.nascar.com/wp-content/uploads/sites/7/2021/06/14/9-crossover-18.gif){target="_blank" fig-alt="Stock cars used in NASCAR" fig-align="center" width="50%"}](https://www.nascar.com/gallery/best-gifs-from-2021-all-star-race-weekend/)
 
 ### Introduction
 
@@ -30,6 +30,17 @@ In [NASCAR](https://www.nascar.com/){target="_blank"}, driver rating is a metric
 NASCAR, the National Association for Stock Car Auto Racing, is a preeminent motorsports organization in the United States, distinguished by its [high-speed competitions](https://youtu.be/Ql20qF0zbGI?si=QywxJFaaJgP2URui&t=791){target="_blank"} and fervent fanbase. Established in 1948 by Bill France Sr., NASCAR has evolved into a leading racing series that encompasses three national divisions: the NASCAR Cup Series, the Xfinity Series, and the Truck Series. The Cup Series is the most prestigious, showcasing the elite drivers and teams as they compete in events that span a variety of track types, typically oval in shape, and [ranging from short tracks (0.24 miles) to expansive superspeedways (over 3 miles)](https://en.wikipedia.org/wiki/List_of_NASCAR_tracks){target="_blank"}.
 
 The races take place on diverse tracks across the nation, including renowned venues such as Daytona International Speedway and Talladega Superspeedway, where vehicles frequently exceed speeds of 200 miles per hour. NASCAR races serve as a complex interplay of driver skill, team strategy, and vehicle performance. Key metrics such as lap times, pit stop efficiency, and vehicle dynamics offer insights into the determinants of success in the sport. This not only enhances the understanding of race outcomes but also contributes to the development of strategies that optimize performance.
+:::
+
+::: {.callout-note collapse="true" title="How NASCAR uses data" appearance="minimal"}
+The video linked below is a panel discussion from the [2023 Sloan Sports Analytics Conference](https://www.sloansportsconference.com/conference/2023-conference){target="_blank"} entitled [Start Your Engines: How Data is Fueling NASCAR's Strategy to Engage an Evolving Customer Base](https://www.sloansportsconference.com/event/start-your-engines-how-data-is-fueling-nascars-strategy-to-engage-an-evolving-customer-base){target="_blank"}.
+
+Although the panel discussion is not directly related to this module, [Justin Marks](https://www.sloansportsconference.com/people/justin-marks){target="_blank"} discusses how data is used in NASCAR during the 26:53 to 30:44 minute interval.
+
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Mmwp6t6eBQ?si=vpZ3a6sW7EtXZadj&amp;start=1613" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+```
 :::
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
