@@ -20,32 +20,33 @@ categories:
   - Polynomial regression
 ---
 
-## Module
-
-Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+[![Stock Cars used in NASCAR](https://www.nascar.com/wp-content/uploads/sites/7/2021/06/14/9-crossover-18.gif){target="_blank" fig-align="center" width="50%"}](https://www.nascar.com/gallery/best-gifs-from-2021-all-star-race-weekend/)
 
 ### Introduction
 
 In [NASCAR](https://www.nascar.com/){target="_blank"}, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver's overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver's abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.
 
-
 ::: {.callout-note collapse="true" title="More about NASCAR" appearance="minimal"}
-NASCAR, the National Association for Stock Car Auto Racing, is a preeminent motorsports organization in the United States, distinguished by its [high-speed competitions](https://youtu.be/Ql20qF0zbGI?si=QywxJFaaJgP2URui&t=791){target="_blank"} and fervent fanbase. Established in 1948 by Bill France Sr., NASCAR has evolved into a leading racing series that encompasses three national divisions: the NASCAR Cup Series, the Xfinity Series, and the Truck Series. The Cup Series is the most prestigious, showcasing the elite drivers and teams as they compete in events that span a variety of track types, from short tracks to expansive superspeedways.
+NASCAR, the National Association for Stock Car Auto Racing, is a preeminent motorsports organization in the United States, distinguished by its [high-speed competitions](https://youtu.be/Ql20qF0zbGI?si=QywxJFaaJgP2URui&t=791){target="_blank"} and fervent fanbase. Established in 1948 by Bill France Sr., NASCAR has evolved into a leading racing series that encompasses three national divisions: the NASCAR Cup Series, the Xfinity Series, and the Truck Series. The Cup Series is the most prestigious, showcasing the elite drivers and teams as they compete in events that span a variety of track types, typically oval in shape, and [ranging from short tracks (0.24 miles) to expansive superspeedways (over 3 miles)](https://en.wikipedia.org/wiki/List_of_NASCAR_tracks){target="_blank"}.
 
 The races take place on diverse tracks across the nation, including renowned venues such as Daytona International Speedway and Talladega Superspeedway, where vehicles frequently exceed speeds of 200 miles per hour. NASCAR races serve as a complex interplay of driver skill, team strategy, and vehicle performance. Key metrics such as lap times, pit stop efficiency, and vehicle dynamics offer insights into the determinants of success in the sport. This not only enhances the understanding of race outcomes but also contributes to the development of strategies that optimize performance.
+:::
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an in-class activity lasting approximately one class period or as an out-of-class assignment.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, students will have reinforced the following skills:
 
-* Assessing the effectiveness of simple linear regression models
-* Checking regression model assumptions
-* Using log transformations to improve linear regression model fit
-* Applying polynomial regression to model curved relationships
+-   Assessing the effectiveness of simple linear regression models
+-   Checking regression model assumptions
+-   Using log transformations to improve linear regression model fit
+-   Applying polynomial regression to model curved relationships
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns. 
+For this activity, students will need to use software to create scatterplots and plots of residual vs fitted values of models they will create. They will also need to create polynomial models and mutate the data by applying mathematic functions to columns.
 
 It is assumed that students are already exposed to these concepts as the activity is intended to reinforce the skills instead of introduce them.
 :::
@@ -57,9 +58,11 @@ The data comes from the NASCAR website and shows the season statistics from 2007
 Download data: [nascar_driver_statistics.csv](nascar_driver_statistics.csv)
 
 <details>
+
 <summary><b>Variable Descriptions</b></summary>
-| Variable             | Description |
-|-------------------|-----------------------------------------------------|
+
+| Variable             | Description                                                                                                                                                                                              |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Wins                 | The sum of the driver's victories                                                                                                                                                                        |
 | AvgStart             | The sum of the driver's starting positions divided by the number of races                                                                                                                                |
 | AvgMidRace           | The sum of the driver's mid race positions divided by the number of races                                                                                                                                |
@@ -77,16 +80,17 @@ Download data: [nascar_driver_statistics.csv](nascar_driver_statistics.csv)
 | PercentLapsLed       | The sum of the laps led in the race                                                                                                                                                                      |
 | TotalLaps            | The sum of the laps completed by a driver that year                                                                                                                                                      |
 | DriverRating         | Formula combining wins, finish, top15-finish, average running position while on lead lap, average speed under green, fastest lap, led most laps, and lead lap finish with a maximum rating of 150 points |
+
 </details>
 
 ### Materials
 
 [Class handout](transformation_tech_wksht.docx)
 
-[Class handout - with solutions](transformation_wksht_key.docx)
+[Class handout - with solutions: MS Word](transformation_wksht_key.docx)
 
+[Class handout - with solutions: Quarto](transformation_wksht_key.qmd)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver's performance. 
+In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver's performance.
 :::
-

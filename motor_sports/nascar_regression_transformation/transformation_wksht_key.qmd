@@ -1,0 +1,152 @@
+---
+title: "transformations_wksht_key"
+---
+
+In NASCAR, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver's overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver's abilities.
+
+The driver rating is calculated using a formula that combines these aspects such as wins, finish position, average running position, and multiple other components into a single numerical value. Although the exact formula for calculating driver rating has been tweaked over the years, and explanation and example using the 2006 structure is available at <https://www.driveraverages.com/drvavg/nascar-driverratings.php>.
+
+Suppose that, given the complexity of the driver rating formula, you wish to build an approximation to this metric using a statistical model. To do so, you have access to data from the NASCAR website (<https://www.nascar.com/stats/>). This data shows the season statistics from 2007-2022 with variables such as wins, average start, average mid race, average finish, average position, pass difference, green flag passes, green flag passed, quality passes, percent of quality passes, number of fastest laps, laps in top 15, percent of laps in top 15, laps led, percent of laps led, total laps, driver rating, and points.
+
+For this exercise, you will be examining the relationship between a driver’s average running position across all races they competed in (AvgPos), and their average driver rating (DriverRating) for a season. (Note that a separate driver’s rating is calculated for each race. The DriverRating variable represents the average of these values.)
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+nascar <- read.csv("nascar_driver_statistics.csv")
+```
+
+1.  Create a scatterplot with a smoother displaying the relationship between driver rating and AvgPos. Discuss the trends you see in the relationship between the two variables.
+
+```{r}
+ggplot(data = nascar, aes(x = AvgPos, y = DriverRating)) +
+  geom_point() +
+  geom_smooth()
+```
+
+*There appears to be a strong negative correlation that displays curvature. As AvgPos increases, DriverRating decreases.*
+
+2.  Regardless of what you observed in the scatterplot, fit a simple linear model, using AvgPos to predict DriverRating. Report the least squares regression equation of the linear model.
+
+```{r}
+nascar_slr <- lm(DriverRating ~ AvgPos, data = nascar)
+summary(nascar_slr)
+```
+
+$DriverRating = 121.86906 – 2.50019(AvgPos)$
+
+3.  Plot the residuals vs. fitted values of the model. Use the plot to check the linearity assumption for the linear model. Does it seem reasonably met? If not, explain why.
+
+```{r}
+par(mfrow=c(2,2))
+plot(nascar_slr)
+```
+
+*The linearity assumption does not seem reasonably met due to the concave up curvature in the residuals vs. fitted values plot.*
+
+4.  One way to fix the lack of linearity is by applying a transformation to at least one of the variables used in the model.
+
+<!-- -->
+
+a.  Use natural logs of driver rating and/or average position to find a combination of variables that display a relationship that should satisfy the linearity assumption.
+
+```{r}
+nascar_logtransform <- lm(DriverRating ~ log(AvgPos), data = nascar)
+summary(nascar_logtransform)
+```
+
+b.  Using proper notation, record the estimated equation for the model that you think best models the relationship between the variables (from those you investigated in the previous question).
+
+$DriverRating = 235.3411 – 56.1008*\log(AvgPos)$
+
+c.  Create a new residual vs. fitted values plot for the model you chose. Does the linearity assumption seem to be met now? How has the transformation altered the model? Are there any new issues?
+
+```{r}
+plot(nascar_logtransform)
+```
+
+*Linearity assumption seems to be met now by taking the natural log of AvgPos. The intercept and slope are significantly higher than in the original model. There is still slight curvature and slight inconsistency in variance.*
+
+5.  Another method of transforming the data is by taking the square root of our variable(s).
+
+<!-- -->
+
+a.  Use square roots of driver rating and/or average position to find a combination of variables that display a relationship that should satisfy the linearity assumption.
+
+```{r}
+nascar_sqrttransform <- lm(DriverRating ~ sqrt(AvgPos), data = nascar)
+summary(nascar_sqrttransform)
+```
+
+b.  Using proper notation, record the estimated equation for the model (using square roots) that you think best models the relationship between the variables.
+
+$DriverRating = 178.2119 – 24.2353 * \sqrt{AvgPos}$
+
+c.  Create a new residual vs. fitted values plot for the model you chose. Does the linearity assumption seem to be met now? How has the transformation altered the model? Are there any new issues?
+
+```{r}
+plot(nascar_sqrttransform)
+```
+
+*The linearity assumption does seem to be met now. The intercept and slope are higher than in the original model but lower than in the model using the natural log. There does not appear to be any new issues aside from some unusual observations seen in the Q-Q plot.*
+
+6.  Another way to deal with curvature in a relationship is to use polynomial regression.
+
+```{=html}
+<!-- -->
+```
+a.  Investigate models such as quadratic and cubic regression to see if a polynomial can adequately model the relationship between driver rating and average position.
+
+```{r}
+nascar_polyreg <- lm(DriverRating ~ AvgPos + I(AvgPos**2), data = nascar)
+
+# Note: we leave to the instructor's discretion as to whether or not 
+# the terms should be centered. If so, use the following command
+
+# nascar_polyreg <- lm(DriverRating ~ poly(AvgPos, degree = 2), data = nascar)
+```
+
+b.  Using proper notation, record the estimated equation for the polynomial regression model that you think best models the relationship between the variables.
+
+$DriverRating = 145.724 – 4.718398(AvgPos) + 0.044362(AvgPos^2)$
+
+c.  Create a new residual vs. fitted values plot for the polynomial model you chose. Does the linearity assumption seem to be met now? How has the transformation altered the model? Are there any new issues?
+
+```{r}
+plot(nascar_polyreg)
+```
+
+*Linearity assumption is now met. The intercept and slope are more similar to the original model. There are no new issues besides some inconsistency with variance.*
+
+7.  In 2022, Ross Chastain’s AvgPos was 12.4. Using all three model equations, provide a prediction for Chastain’s driver rating for the season.
+
+DriverRating = 235.3411 – 56.1008*log(12.4) = 94.096 DriverRating = 178.2119 – 24.2353*sqrt(12.4) = 92.871 DriverRating = 145.724 – 4.718398(12.4) + 0.044362(12.4\^2) = 94.037
+
+```{r}
+ross <- data.frame(AvgPos = 12.4)
+predict(nascar_logtransform, newdata = ross)
+predict(nascar_sqrttransform, newdata = ross)
+predict(nascar_polyreg, newdata = ross)
+```
+
+8.  In reality, Ross Chastain ended the 2022 season with a driver rating of 92.8. Calculate the residual for each of your estimates.
+
+e_1= 92.8 - 94.096 = -1.296 e_2= 92.8 - 92.871= -0.071 e_3= 92.8 - 94.037 = -1.237
+
+```{r}
+92.8 - predict(nascar_logtransform, newdata = ross)
+92.8 - predict(nascar_sqrttransform, newdata = ross)
+92.8 - predict(nascar_polyreg, newdata = ross)
+```
+
+9.  Which of the three models, log-transformation, square root-transformation, or polynomial regression, do you think is the best model? You should justify your answer using statistically sound methods. (e.g., by assessing model assumptions, strength of fit, ease of use)
+
+*All three models are fairly comparable. The polynomial model has the highest Adjusted R-squared value with a very flat residual vs fitted plot line. The square root model also has little curvature in the residual vs. fitted plot and the second highest Adjusted r-squared*
+
+Log Model: Adjusted R-squared: 0.9611
+
+Sqrt Model: Adjusted R-squared: 0.9618
+
+Polynomial model: Adjusted R-squared: 0.9653
