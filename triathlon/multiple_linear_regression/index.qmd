@@ -8,19 +8,29 @@ author:
     affiliation:
       - id: slu
         name: St. Lawrence University
+  - name: Ivan Ramler
+    affiliation:
+      - ref: slu
 editor: 
     canonical: true
 categories:
   - Linear regression
 ---
 
-## Module
+### Welcome video
 
-Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
-
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zYG2qdJRolM?si=xXNOvqT4BNY9hw1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
 ### Introduction
 
-The Triathlon Multiple Linear Regression worksheet focuses on analyzing the relationships and predictive capabilities of multiple variables in the context of triathlon performance. Specifically, we will explore the prediction of run times using swim times and bike times as predictors. By employing simple regression models, checking conditions with Residuals vs. Fits plots, and conducting hypothesis tests and confidence intervals, we aim to identify significant predictors and understand their contextual implications. The dataset used for this analysis comprises the 2022 Canadian finishers of the Lake Placid Ironman.
+An [Ironman triathlon](https://www.ironman.com/){target="_blank"} is one of the most grueling endurance events in the world, consisting of three sequential races: a 2.4-mile (3.86 km) swim, a 112-mile (180.25 km) bike ride, and a marathon 26.2-mile (42.20 km) run. The event tests the physical and mental limits of athletes, requiring months or even years of dedicated training. Originating in 1978 in Hawaii, the Ironman triathlon has become a global phenomenon, symbolizing the ultimate challenge in long-distance triathlon competitions.
+
+The Triathlon Multiple Linear Regression module focuses on analyzing the relationships and predictive capabilities of multiple variables in the context of triathlon performance. Specifically, we will explore the prediction of run times (the last stage) using swim times and bike times as predictors. By employing simple regression models, checking conditions with residuals plots, and conducting hypothesis tests and confidence intervals, we aim to identify significant predictors and understand their contextual implications. The dataset used for this analysis comprises the 2022 Canadian finishers of the Lake Placid Ironman.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an long in-class example (of approximately 30 - 60 minutes) or out-of-class assignment.
+:::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 1.  Understand the concept of multiple linear regression and its application in analyzing sports data.
@@ -39,11 +49,17 @@ To successfully complete this worksheet, students should have prior knowledge of
 3.  Knowledge of residual analysis, including the interpretation of residual plots.
 
 4.  Basic understanding of the triathlon sport and its components (swimming, biking, and running) to better grasp the contextual implications of the statistical analyses.
+
+**Technology requirement:**
+
+-   The "no tech" version of the activity uses Minitab to display the output and requires only simple hand calculations (for predictions and residuals).
+
+-   The provided "tech required" handout assumes that students can use technology (such as Minitab) to perform a multiple linear regression analysis.
 :::
 
 ### Data
 
-The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman
+The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman. Note that this data set includes more variables than what are needed to complete the activity. Students are welcome to further explore the data using these additional variables.
 
 Download data: [ironman_lake_placid_female_2022_canadian.csv](ironman_lake_placid_female_2022_canadian.csv)
 
@@ -75,11 +91,14 @@ Download data: [ironman_lake_placid_female_2022_canadian.csv](ironman_lake_placi
 
 ### Materials
 
-[Class handout - requires technology](Regression_Inference_MLR_Tech.docx) [Class handout - no technology required](Regression_Inference_MLR_NoTech.docx) [Class handout - with solutions](Regression_Inference_MLR_Key.docx)
+[Class handout - requires technology](Regression_Inference_MLR_Tech.docx)
+
+[Class handout - no technology required](Regression_Inference_MLR_NoTech.docx)
+
+[Class handout - with solutions](Regression_Inference_MLR_Key.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the Triathlon Multiple Linear Regression worksheet has provided valuable insights into the predictors of run times in the Lake Placid 2022 Ironman Canadian Finishers dataset. Initially, both Swim Time and Bike Time demonstrated significance as individual predictors, supported by hypothesis tests and confidence intervals. The hypothesis test for the slope term of Bike Time yielded a p-value of 0, indicating its significance. Additionally, the 95% confidence interval for the slope term of Swim Time excluded 0, further affirming its significance.
 
 However, when both Swim Times and Bike Times were included as predictors in the multiple linear regression model, we observed a change in significance. Swim Times were no longer a significant predictor. This finding suggests that when considering both predictors simultaneously, the predictive power of Swim Times in estimating run times diminishes. These findings emphasize the importance of evaluating multiple predictors in regression analysis and understanding how their inclusion can impact the significance and interpretation of individual predictors.
 :::
-
