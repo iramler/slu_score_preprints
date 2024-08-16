@@ -25,6 +25,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -724,12 +758,9 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -799,14 +830,44 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>In this engaging activity, we delve into the exciting world of NCAA Division I Lacrosse faceoff percentages. Our primary goal is to compare a specific team’s performance with overall league statistics for the 2022-2023 season. Throughout this exploration, we will focus on the concept of one sample proportion hypothesis testing, a powerful statistical tool commonly used in sports analytics. By the end of this exercise, you will gain a fundamental understanding of hypothesis testing and its practical applications in evaluating team performance.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>In this engaging activity, we explore the exciting sport of NCAA Division I Lacrosse, with a special focus on faceoff percentages—a critical aspect of the game. A faceoff occurs at the start of each quarter and after every goal, where two players compete to gain possession of the ball, setting the stage for their team’s offensive play. Winning a high percentage of faceoffs is often key to controlling the game and can significantly impact a team’s overall performance.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Video Demonstrating a Faceoff">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video Demonstrating a Faceoff
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yL1z6a96Y1w?si=ysfTXdXWc6ozJu6R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</div>
+</div>
+</div>
+<p>Our primary goal is to compare a specific team’s faceoff performance with overall league statistics for the 2022-2023 season. Through this exploration, we’ll introduce you to the concept of one-sample proportion hypothesis testing, a powerful statistical tool widely used in sports analytics. By the end of this exercise, you’ll gain a fundamental understanding of hypothesis testing and how it can be practically applied to evaluate team performance in lacrosse and beyond.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This activity would be suitable for an in-class example (of approximately 10 - 20 minutes) or can be modified to be a quiz or part of an exam.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -815,7 +876,7 @@ Learning Objectives
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Comprehend the concept of one sample proportion hypothesis testing and its relevance in sports statistics.</li>
@@ -826,7 +887,7 @@ Learning Objectives
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -835,8 +896,9 @@ Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Students are expected to have been exposed to the following concepts and use the activity to reinforce their understanding of these methods.</p>
 <ol type="1">
 <li>Basic probability and percentages.</li>
 <li>Null and alternative hypotheses.</li>
@@ -852,7 +914,8 @@ Methods
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set contains 72 rows and 22 columns. Each row represents a lacrosse team at the NCAA Division 1 level from the 2022-2023 season.</p>
+<p>Note that because the activity only uses results from one team, students do not necessarily need to directly access this data. However, the activity can easily be adapted to use other teams. Instructors are encouraged to personalize the activity if they so choose.</p>
+<p>The data set where the activities statistics come from contains 72 rows and 22 columns. Each row represents the season results for a lacrosse team at the NCAA Division 1 level from the 2022-2023 season.</p>
 <p>Download data: <a href="lax_2022_2023.csv">lax_2022_2023.csv</a></p>
 <details>
 <summary>
@@ -860,8 +923,8 @@ Methods
 </summary>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 16%">
+<col style="width: 83%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -957,8 +1020,77 @@ Methods
 </tbody>
 </table>
 <p><strong>Data Source</strong></p>
-<p>Data collected from the NCAA Website for Men’s Lacrosse Division I</p>
+<p>The data were collected from the NCAA Website for Men’s Lacrosse Division I</p>
 <p><a href="http://stats.ncaa.org/rankings/change_sport_year_div" class="uri">http://stats.ncaa.org/rankings/change_sport_year_div</a></p>
+<p>Instructors interested in updating the data to a newer season can do so via the following</p>
+<ol type="1">
+<li>Go to <a href="http://stats.ncaa.org/rankings/change_sport_year_div" class="uri">http://stats.ncaa.org/rankings/change_sport_year_div</a></li>
+<li>Select Men’s Lacrosse, <em>season of choice</em>, Division I, Final Statistics</li>
+<li>In the “Teams”, download each of the data tables.</li>
+<li>Read in each file, join the tables, and do some light cleaning. The code below shows an example used for the 2022-2023 season.</li>
+</ol>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># reading</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the files listed here are what</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you will download from the site</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>assists<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"assists_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>caused_turnovers<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"caused_turnovers_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>clearing<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"clearing_pctg_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>fo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"fo_win_pctg.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>goals_against<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"goals_against.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>goals<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"goals_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>groundballs<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"ground_balls_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>man_down <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"man_down_defense_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>man_up <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"man_up__offense_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>margin <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"margin_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>opp_clear <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"opp_clear_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"points_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>saves <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"saves_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>shot <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"shot_pctg_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>turnovers<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"turnovers_l.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>shots_per_game <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"shots_per_game.csv"</span>, <span class="at">col_select =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>win_loss <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"win_loss_l.csv"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># joining</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># students familiar with the purrr package could</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># use the reduce function to reduce the amount of code</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>lax_2022_2023 <span class="ot">&lt;-</span> </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(assists, caused_turnovers, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(clearing, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(fo, <span class="at">by =</span> <span class="st">"Team"</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(goals, <span class="at">by =</span> <span class="st">"Team"</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(goals_against, <span class="at">by =</span> <span class="st">"Team"</span>)  <span class="sc">%&gt;%</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(groundballs, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(man_down, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(man_up, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(margin, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(opp_clear, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(points, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(saves, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(shot, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(turnovers, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(shots_per_game, <span class="at">by =</span> <span class="st">"Team"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(win_loss, <span class="at">by =</span> <span class="st">"Team"</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># cleaning</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>lax_2022_2023 <span class="ot">&lt;-</span> lax_2022_2023 <span class="sc">%&gt;%</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Team, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Team"</span>,<span class="st">"Conference"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">("</span>, <span class="at">extra =</span> <span class="st">"merge"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Conference =</span> <span class="fu">str_remove_all</span>(Conference,<span class="st">"</span><span class="sc">\\</span><span class="st">)"</span>),</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>         <span class="at">Team =</span> <span class="fu">str_trim</span>(Team))<span class="sc">%&gt;%</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">shots_per_game =</span> Shots<span class="sc">/</span>Games)<span class="sc">%&gt;%</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="sc">-</span><span class="dv">21</span>)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="co"># saving</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(<span class="at">x =</span> lax_2022_2023, <span class="at">file =</span> <span class="st">"lax_2022_2023.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </details>
 </section>
 <section id="materials" class="level3">
@@ -966,7 +1098,7 @@ Methods
 <p><a href="single_prop_wksht.docx">Class handout</a></p>
 <p><a href="single_prop_wksht_key.docx">Class handout - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -975,7 +1107,7 @@ Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In this insightful exploration of NCAA Division I Lacrosse faceoff percentages, we have embarked on a statistical journey to evaluate a specific team’s performance in comparison to league-wide statistics. Through the application of one sample proportion hypothesis testing, we gained valuable insights into the team’s faceoff win percentage, unveiling strong evidence that their performance exceeded what we would expect by random chance alone. As we consider the broader implications of faceoffs in Division I Lacrosse, it becomes evident that faceoff wins play a pivotal role in team rankings and outcomes. The fact that Duke, the second-best team in the country, exhibited a faceoff win percentage above the league average highlights the significance of excelling in this aspect of the game. Winning faceoffs likely translates to higher goal-scoring opportunities, ultimately leading to more successful game outcomes.</p>
 </div>
@@ -983,7 +1115,6 @@ Conclusion
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
