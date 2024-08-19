@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -727,16 +727,7 @@ cookieconsent.run({
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome-video" id="toc-welcome-video" class="nav-link active" data-scroll-target="#welcome-video">Welcome video</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -795,196 +786,99 @@ cookieconsent.run({
 </header>
 
 
-<section id="welcome-video" class="level3">
-<h3 class="anchored" data-anchor-id="welcome-video">Welcome video</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zYG2qdJRolM?si=xXNOvqT4BNY9hw1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-</section>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>An <a href="https://www.ironman.com/" target="_blank">Ironman triathlon</a> is one of the most grueling endurance events in the world, consisting of three sequential races: a 2.4-mile (3.86 km) swim, a 112-mile (180.25 km) bike ride, and a marathon 26.2-mile (42.20 km) run. The event tests the physical and mental limits of athletes, requiring months or even years of dedicated training. Originating in 1978 in Hawaii, the Ironman triathlon has become a global phenomenon, symbolizing the ultimate challenge in long-distance triathlon competitions.</p>
-<p>The Triathlon Multiple Linear Regression module focuses on analyzing the relationships and predictive capabilities of multiple variables in the context of triathlon performance. Specifically, we will explore the prediction of run times (the last stage) using swim times and bike times as predictors. By employing simple regression models, checking conditions with residuals plots, and conducting hypothesis tests and confidence intervals, we aim to identify significant predictors and understand their contextual implications. The dataset used for this analysis comprises the 2022 Canadian finishers of the Lake Placid Ironman.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Activity Length
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This activity would be suitable for an long in-class example (of approximately 30 - 60 minutes) or out-of-class assignment.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>Understand the concept of multiple linear regression and its application in analyzing sports data.</li>
-<li>Recognize the importance of checking assumptions, such as assessing residuals vs.&nbsp;fits plots, for validating the regression models.</li>
-<li>Gain insights into the significance of predictors through hypothesis tests and confidence intervals.</li>
-<li>Comprehend the interpretation and contextual implications of the findings from multiple linear regression analyses in the triathlon setting.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>To successfully complete this worksheet, students should have prior knowledge of the following statistical concepts:</p>
-<ol type="1">
-<li><p>Familiarity with simple linear regression, including interpretation of slopes, intercepts, and residuals.</p></li>
-<li><p>Understanding of hypothesis testing and confidence intervals, particularly in the context of regression analysis.</p></li>
-<li><p>Knowledge of residual analysis, including the interpretation of residual plots.</p></li>
-<li><p>Basic understanding of the triathlon sport and its components (swimming, biking, and running) to better grasp the contextual implications of the statistical analyses.</p></li>
-</ol>
-<p><strong>Technology requirement:</strong></p>
-<ul>
-<li><p>The “no tech” version of the activity uses Minitab to display the output and requires only simple hand calculations (for predictions and residuals).</p></li>
-<li><p>The provided “tech required” handout assumes that students can use technology (such as Minitab) to perform a multiple linear regression analysis.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman. Note that this data set includes more variables than what are needed to complete the activity. Students are welcome to further explore the data using these additional variables.</p>
-<p>Download data: <a href="ironman_lake_placid_female_2022_canadian.csv">ironman_lake_placid_female_2022_canadian.csv</a></p>
+<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
+<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/triathlons/ironman-lakeplacid-mlr.html" target="_blank">https://modules.scorenetwork.org/triathlons/ironman-lakeplacid-mlr.html</a></p>
+<!--
+
+### Welcome video
+
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zYG2qdJRolM?si=xXNOvqT4BNY9hw1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```
+### Introduction
+
+An [Ironman triathlon](https://www.ironman.com/){target="_blank"} is one of the most grueling endurance events in the world, consisting of three sequential races: a 2.4-mile (3.86 km) swim, a 112-mile (180.25 km) bike ride, and a marathon 26.2-mile (42.20 km) run. The event tests the physical and mental limits of athletes, requiring months or even years of dedicated training. Originating in 1978 in Hawaii, the Ironman triathlon has become a global phenomenon, symbolizing the ultimate challenge in long-distance triathlon competitions.
+
+The Triathlon Multiple Linear Regression module focuses on analyzing the relationships and predictive capabilities of multiple variables in the context of triathlon performance. Specifically, we will explore the prediction of run times (the last stage) using swim times and bike times as predictors. By employing simple regression models, checking conditions with residuals plots, and conducting hypothesis tests and confidence intervals, we aim to identify significant predictors and understand their contextual implications. The dataset used for this analysis comprises the 2022 Canadian finishers of the Lake Placid Ironman.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would be suitable for an long in-class example (of approximately 30 - 60 minutes) or out-of-class assignment.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+1.  Understand the concept of multiple linear regression and its application in analyzing sports data.
+2.  Recognize the importance of checking assumptions, such as assessing residuals vs. fits plots, for validating the regression models.
+3.  Gain insights into the significance of predictors through hypothesis tests and confidence intervals.
+4.  Comprehend the interpretation and contextual implications of the findings from multiple linear regression analyses in the triathlon setting.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+To successfully complete this worksheet, students should have prior knowledge of the following statistical concepts:
+
+1.  Familiarity with simple linear regression, including interpretation of slopes, intercepts, and residuals.
+
+2.  Understanding of hypothesis testing and confidence intervals, particularly in the context of regression analysis.
+
+3.  Knowledge of residual analysis, including the interpretation of residual plots.
+
+4.  Basic understanding of the triathlon sport and its components (swimming, biking, and running) to better grasp the contextual implications of the statistical analyses.
+
+**Technology requirement:**
+
+-   The "no tech" version of the activity uses Minitab to display the output and requires only simple hand calculations (for predictions and residuals).
+
+-   The provided "tech required" handout assumes that students can use technology (such as Minitab) to perform a multiple linear regression analysis.
+:::
+
+### Data
+
+The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman. Note that this data set includes more variables than what are needed to complete the activity. Students are welcome to further explore the data using these additional variables.
+
+Download data: [ironman_lake_placid_female_2022_canadian.csv](ironman_lake_placid_female_2022_canadian.csv)
+
 <details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="table">
-<colgroup>
-<col style="width: 17%">
-<col style="width: 82%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bib</td>
-<td>registration number of each runner used for identification</td>
-</tr>
-<tr class="even">
-<td>Name</td>
-<td>The participant’s name</td>
-</tr>
-<tr class="odd">
-<td>Country</td>
-<td>What country the participant is from</td>
-</tr>
-<tr class="even">
-<td>Gender</td>
-<td>The participant’s gender</td>
-</tr>
-<tr class="odd">
-<td>Division</td>
-<td>The age range or membership a runner is</td>
-</tr>
-<tr class="even">
-<td>Division.Rank</td>
-<td>Within the divisions, the place each runner has obtained over all races</td>
-</tr>
-<tr class="odd">
-<td>Overall.Time</td>
-<td>The total time it took to complete the Ironman in minutes</td>
-</tr>
-<tr class="even">
-<td>Overall.Rank</td>
-<td>The runner’s finishing place for that particular triathlon</td>
-</tr>
-<tr class="odd">
-<td>Swim.Time</td>
-<td>The time in minutes it took to complete the swimming portion</td>
-</tr>
-<tr class="even">
-<td>Swim.Rank</td>
-<td>The place the runner finished for the swim portion</td>
-</tr>
-<tr class="odd">
-<td>Bike.Time</td>
-<td>The time in minutes it took to complete the biking portion</td>
-</tr>
-<tr class="even">
-<td>Bike.Rank</td>
-<td>The place the runner finished for the bike portion</td>
-</tr>
-<tr class="odd">
-<td>Run.Time</td>
-<td>The time in minutes it took to complete the running portion</td>
-</tr>
-<tr class="even">
-<td>Run.Rank</td>
-<td>The place the runner finished for the running portion</td>
-</tr>
-<tr class="odd">
-<td>Finish.Status</td>
-<td>States whether someone completed the Ironman successfully</td>
-</tr>
-<tr class="even">
-<td>Location</td>
-<td>Where the Ironman takes place</td>
-</tr>
-<tr class="odd">
-<td>Year</td>
-<td>They year when the mentioned participant ran</td>
-</tr>
-</tbody>
-</table>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable      | Description                                                             |
+|---------------|-------------------------------------------------------------------------|
+| Bib           | registration number of each runner used for identification              |
+| Name          | The participant's name                                                  |
+| Country       | What country the participant is from                                    |
+| Gender        | The participant's gender                                                |
+| Division      | The age range or membership a runner is                                 |
+| Division.Rank | Within the divisions, the place each runner has obtained over all races |
+| Overall.Time  | The total time it took to complete the Ironman in minutes               |
+| Overall.Rank  | The runner's finishing place for that particular triathlon              |
+| Swim.Time     | The time in minutes it took to complete the swimming portion            |
+| Swim.Rank     | The place the runner finished for the swim portion                      |
+| Bike.Time     | The time in minutes it took to complete the biking portion              |
+| Bike.Rank     | The place the runner finished for the bike portion                      |
+| Run.Time      | The time in minutes it took to complete the running portion             |
+| Run.Rank      | The place the runner finished for the running portion                   |
+| Finish.Status | States whether someone completed the Ironman successfully               |
+| Location      | Where the Ironman takes place                                           |
+| Year          | They year when the mentioned participant ran                            |
+
 </details>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Regression_Inference_MLR_Tech.docx">Class handout - requires technology</a></p>
-<p><a href="Regression_Inference_MLR_NoTech.docx">Class handout - no technology required</a></p>
-<p><a href="Regression_Inference_MLR_Key.docx">Class handout - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In conclusion, the Triathlon Multiple Linear Regression worksheet has provided valuable insights into the predictors of run times in the Lake Placid 2022 Ironman Canadian Finishers dataset. Initially, both Swim Time and Bike Time demonstrated significance as individual predictors, supported by hypothesis tests and confidence intervals. The hypothesis test for the slope term of Bike Time yielded a p-value of 0, indicating its significance. Additionally, the 95% confidence interval for the slope term of Swim Time excluded 0, further affirming its significance.</p>
-<p>However, when both Swim Times and Bike Times were included as predictors in the multiple linear regression model, we observed a change in significance. Swim Times were no longer a significant predictor. This finding suggests that when considering both predictors simultaneously, the predictive power of Swim Times in estimating run times diminishes. These findings emphasize the importance of evaluating multiple predictors in regression analysis and understanding how their inclusion can impact the significance and interpretation of individual predictors.</p>
-</div>
-</div>
-</div>
+
+### Materials
+
+[Class handout - requires technology](Regression_Inference_MLR_Tech.docx)
+
+[Class handout - no technology required](Regression_Inference_MLR_NoTech.docx)
+
+[Class handout - with solutions](Regression_Inference_MLR_Key.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the Triathlon Multiple Linear Regression worksheet has provided valuable insights into the predictors of run times in the Lake Placid 2022 Ironman Canadian Finishers dataset. Initially, both Swim Time and Bike Time demonstrated significance as individual predictors, supported by hypothesis tests and confidence intervals. The hypothesis test for the slope term of Bike Time yielded a p-value of 0, indicating its significance. Additionally, the 95% confidence interval for the slope term of Swim Time excluded 0, further affirming its significance.
+
+However, when both Swim Times and Bike Times were included as predictors in the multiple linear regression model, we observed a change in significance. Swim Times were no longer a significant predictor. This finding suggests that when considering both predictors simultaneously, the predictive power of Swim Times in estimating run times diminishes. These findings emphasize the importance of evaluating multiple predictors in regression analysis and understanding how their inclusion can impact the significance and interpretation of individual predictors.
+:::
+
+-->
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

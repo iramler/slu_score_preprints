@@ -22,6 +22,13 @@ categories:
 
 [![](https://www.nascar.com/wp-content/uploads/sites/7/2021/06/14/9-crossover-18.gif){target="_blank" fig-alt="Stock cars used in NASCAR" fig-align="center" width="50%"}](https://www.nascar.com/gallery/best-gifs-from-2021-all-star-race-weekend/)
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/motor_sports/nascar_regression_transformation.html](https://modules.scorenetwork.org/motor_sports/nascar_regression_transformation.html){target="_blank"}
+
+````{=html}
+<!--
+
 ### Introduction
 
 In [NASCAR](https://www.nascar.com/){target="_blank"}, driver rating is a metric used to evaluate the performance of drivers in races. It provides a comprehensive assessment of a driver's overall competitiveness, efficiency, and consistency during a race. The driver rating is based on several key performance factors and is designed to offer a more objective view of a driver's abilities. For this activity, you will be exploring the relationship between average position a driver finishes per lap over a season and their corresponding driver rating. Using data transformations techniques and polynomial regression to create different variations of linear models, you will enhance the capabilities of your models to make them more effective and accurate.
@@ -105,3 +112,6 @@ Download data: [nascar_driver_statistics.csv](nascar_driver_statistics.csv)
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the Transforming NASCAR Driver Data worksheet offers valuable insights into the relationship between average position and driver rating in NASCAR. Through the transformation of the average position variable, the worksheet enables students to enhance linearity in their models, thereby improving the accuracy of their predictions and analysis. The identification of curvature in the variable relationship also allows for the model using quadratic regression to be highly effective. The model can be conceptually compared to the model using a square root transformation to capture the same curve. Assessing the effectiveness of each model, students can critically evaluate the different approaches and determine the most suitable model for the data. This exercise equips students with essential data transformation and modeling skills, empowering them to make informed decisions and gain a deeper understanding of the factors influencing a driver's performance.
 :::
+
+-->
+````

@@ -23,6 +23,13 @@ categories:
   - Difference in two means
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/lacrosse/lacrosse_pll_vs_nll.html](https://modules.scorenetwork.org/lacrosse/lacrosse_pll_vs_nll.html){target="_blank"}
+
+```{=html}
+<!--
+
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
@@ -119,4 +126,5 @@ Students should notice that while no discernible difference between average goal
 Further, students will ideally see how a confidence interval can be used to supplement the conclusion of a hypothesis test by bringing effect sizes into the interpretation in addition to statistical significance.
 :::
 
-
+-->
+```

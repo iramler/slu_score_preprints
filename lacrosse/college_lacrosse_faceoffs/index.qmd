@@ -21,6 +21,13 @@ categories:
   - Single proportion
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/lacrosse/college_lacrosse_faceoffs.html](https://modules.scorenetwork.org/lacrosse/college_lacrosse_faceoffs.html){target="_blank"}
+
+````{=html}
+<!--
+
 ### Introduction
 
 In this engaging activity, we explore the exciting sport of NCAA Division I Lacrosse, with a special focus on faceoff percentages—a critical aspect of the game. A faceoff occurs at the start of each quarter and after every goal, where two players compete to gain possession of the ball, setting the stage for their team’s offensive play. Winning a high percentage of faceoffs is often key to controlling the game and can significantly impact a team’s overall performance.
@@ -179,3 +186,5 @@ write_csv(x = lax_2022_2023, file = "lax_2022_2023.csv")
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In this insightful exploration of NCAA Division I Lacrosse faceoff percentages, we have embarked on a statistical journey to evaluate a specific team's performance in comparison to league-wide statistics. Through the application of one sample proportion hypothesis testing, we gained valuable insights into the team's faceoff win percentage, unveiling strong evidence that their performance exceeded what we would expect by random chance alone. As we consider the broader implications of faceoffs in Division I Lacrosse, it becomes evident that faceoff wins play a pivotal role in team rankings and outcomes. The fact that Duke, the second-best team in the country, exhibited a faceoff win percentage above the league average highlights the significance of excelling in this aspect of the game. Winning faceoffs likely translates to higher goal-scoring opportunities, ultimately leading to more successful game outcomes.
 :::
+-->
+````
