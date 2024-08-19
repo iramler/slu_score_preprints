@@ -20,7 +20,8 @@ Modules posted in the "Early Drafts" tab have not yet been fully vetted by an st
 
 *The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).*
 
-**Contributing and/or Joining the SCORE Network**
+
+::: {.callout-note collapse="true" title="**Contributing and/or Joining the SCORE Network**" appearance="minimal"}
 
 -   If you are interested in contributing to and/or joining the SCORE Network, please check out [https://scorenetwork.org/index.html](https://scorenetwork.org/index.html){target="_blank"}.
 
@@ -34,7 +35,7 @@ Modules posted in the "Early Drafts" tab have not yet been fully vetted by an st
 }
 ```
 
-::: bordered
+
 ```{r, echo=FALSE, warning=FALSE}
 library(collapsibleTree) |> suppressPackageStartupMessages()
 
@@ -71,6 +72,8 @@ collapsibleTree(main, c("Sport", "Module", "files"), collapsed = TRUE, fillByLev
 ```
 
 This diagram was made using the [collapsibleTree](https://CRAN.R-project.org/package=collapsibleTree){target="_blank"} package.
+
+
 :::
 
 ```{=html}
