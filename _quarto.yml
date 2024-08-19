@@ -26,6 +26,10 @@ website:
       - href: index.qmd
         text: Home
       - by-statsds-topic.qmd
+      - href: https://scorenetwork.org/index.html
+        text: SCORE Network
+      - href: https://modules.scorenetwork.org/
+        text: SCORE Module Repository
       - href: https://data.scorenetwork.org/
         text: Data Repository
   sidebar:
