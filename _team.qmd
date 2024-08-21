@@ -1,0 +1,69 @@
+# The Team
+
+## Faculty
+
+::: {.callout-note icon=false title="Ivan Ramler"  collapse=true appearance="minimal"}
+[Ivan Ramler](https://iramler.github.io/){target="_blank"} is the Jack and Sylvia Burry Associate Professor of Statistics and Data Science. He has a wide array of interests in applying statistics to sports - including, but not limited to esports, volleyball, football, and most olympic events.
+:::
+
+::: {.callout-note icon=false title="Robin Lock"  collapse=true appearance="minimal"}
+Robin Lock is a Professor of Statistics and, along with many other achievements, the recipient of the 2024 George Cobb Lifetime Achievement Award in Statistics Education. He is an avid Disc Golf player and for decades served as the goalie for St. Lawrence's Fac/Staff Pick-up Ice Hockey team.
+:::
+
+::: {.callout-note icon=false title="A.J. Dykstra"  collapse=true appearance="minimal"}
+A.J. Dykstra is the Director of the Peterson Quantitative Resource Center and a Mathematics & Statistics Lecturer. He is a 2022 Graduate from St. Lawrence and was an active member of the Ultimate Frisbee Club. Currently, A.J. coaches baseball for the local high school and enjoys working with students to develop SCORE modules across a wide variety of sports.
+:::
+
+## Students
+We've had numerous students assist in developing both SCORE modules and preparing submissions for the data repository. They are listed by year below.
+
+::: {.callout-note icon=false title="2024" collapse=true appearance="minimal"}
+Summer 2024 NSF SCORE Summer Research Fellows:
+
+- Gavin Cassidy
+- Vivian Johnson
+- Brendan Karadenes
+- Eric Seltzer
+- Abigail Smith
+
+The following students also assisted in developing SCORE materials during the 2023-2024 academic year.
+
+- Emilia Agostinelli
+- Alyssa Bigness
+- George Charalambous
+- Emma Deering
+- Hope Donoghue
+- Sierra Hess
+- Abby Hustler
+- Norah Kuduk
+- Taylor Lum
+- Matt Maslow
+- Sam Peacock
+- Kristen Varin
+
+:::
+
+::: {.callout-note icon=false title="2023"  collapse=true appearance="minimal"}
+Summer 2023 NSF SCORE Summer Research Fellows:
+
+- Jay Fay
+- Sarah Weaver (Also supported by the St. Lawrence University Fellows Program)
+
+The following students also assisted in developing SCORE materials during the 2022-2023 academic year.
+
+- Alyssa Bigness
+- Abby Celander
+- George Charalambous
+- Jack Cowan
+- Emily Guerin
+- Shane Hauck
+- Abby Hustler
+- Trent Meyer
+- Rodrick Mpofu
+:::
+
+::: {.callout-note icon=false title="2022"  collapse=true appearance="minimal"}
+Summer 2022 NSF SCORE Summer Research Fellows:
+
+- Matt Abel
+:::
