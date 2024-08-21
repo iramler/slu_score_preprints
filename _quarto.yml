@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render: 
     - "index.qmd"
+    - "team.qmd"
     - "*/*/index.qmd"
     - "by-statsds-topic.qmd"
     
@@ -26,8 +27,8 @@ website:
       - href: index.qmd
         text: Home
       - by-statsds-topic.qmd
-      - href: https://scorenetwork.org/index.html
-        text: SCORE Network
+      - href: team.qmd
+        text: SLU SCORE TEAM
       - href: https://modules.scorenetwork.org/
         text: SCORE Module Repository
       - href: https://data.scorenetwork.org/

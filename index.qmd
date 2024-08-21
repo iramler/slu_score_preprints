@@ -6,35 +6,32 @@ This page contains education materials for the [SCORE Network](https://scorenetw
 
 The [SCORE Network](https://scorenetwork.org/index.html){target="_blank"} Module Repository enables you to search for modules by either sport (along the left), or you can browse [by statistics and data science topic](by-statsds-topic.qmd).
 
-
-
-
-::: {.callout-note collapse="false" title="Disclaimer" appearance="minimal"}
-Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network. 
+::: {.callout-note collapse="true" title="Disclaimer" appearance="minimal"}
+Please note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network.
 
 However, all modules listed under their respective sports have been reviewed by a St. Lawrence University statistics instructor and are able for others to use.
 
 Modules posted in the "Early Drafts" tab have not yet been fully vetted by an statistics/data science instructor. Instructors are welcome to use them, but should expect to make modifications to the materials.
 :::
 
-
 *The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).*
 
-
 ::: {.callout-note collapse="true" title="**Contributing and/or Joining the SCORE Network**" appearance="minimal"}
-
 -   If you are interested in contributing to and/or joining the SCORE Network, please check out [https://scorenetwork.org/index.html](https://scorenetwork.org/index.html){target="_blank"}.
 
 -   If you are interested in creating a page similar to this to host your own "in development modules", please feel free to copy the associated Github repository: [https://github.com/iramler/slu_score_preprints](https://github.com/iramler/slu_score_preprints){target="_blank"}.
 
-    -   The basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. For example, see the interactive diagram below (and compare it to the associated files/direcotries in the repository linked above).
+-   The basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. We have found that this allows us to easily submit a module in this repository to the SCORE Network and requires only minimal work for preparing it for the SCORE module repository after it is accepted.
+
+````{=html}
+<!--
+![Example Directory Structure](directory_structure.jpeg){width="8in" fig-align="left"}
 
 ```{css echo=FALSE}
 .bordered{
   border-style: solid;
 }
 ```
-
 
 ```{r, echo=FALSE, warning=FALSE}
 library(collapsibleTree) |> suppressPackageStartupMessages()
@@ -72,8 +69,8 @@ collapsibleTree(main, c("Sport", "Module", "files"), collapsed = TRUE, fillByLev
 ```
 
 This diagram was made using the [collapsibleTree](https://CRAN.R-project.org/package=collapsibleTree){target="_blank"} package.
-
-
+-->
+````
 :::
 
 ```{=html}

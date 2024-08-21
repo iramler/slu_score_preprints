@@ -441,11 +441,44 @@
     ]
   },
   {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "The Team",
+    "section": "",
+    "text": "Ivan Ramler is…\n\n\nRobin Lock is…\n\n\nA.J. Dykstra is…",
+    "crumbs": [
+      "Home",
+      "The Team"
+    ]
+  },
+  {
+    "objectID": "team.html#faculty",
+    "href": "team.html#faculty",
+    "title": "The Team",
+    "section": "",
+    "text": "Ivan Ramler is…\n\n\nRobin Lock is…\n\n\nA.J. Dykstra is…",
+    "crumbs": [
+      "Home",
+      "The Team"
+    ]
+  },
+  {
+    "objectID": "team.html#students",
+    "href": "team.html#students",
+    "title": "The Team",
+    "section": "Students",
+    "text": "Students",
+    "crumbs": [
+      "Home",
+      "The Team"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SLU SCORE Module Pre-print Repository",
     "section": "",
-    "text": "This page contains education materials for the SCORE Network that were created by faculty and students from the Department of Mathematics, Computer Science, and Statistics at St. Lawrence University.\nThe SCORE Network Module Repository enables you to search for modules by either sport (along the left), or you can browse by statistics and data science topic.\n\n\n\n\n\n\nDisclaimer\n\n\n\n\n\nPlease note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network.\nHowever, all modules listed under their respective sports have been reviewed by a St. Lawrence University statistics instructor and are able for others to use.\nModules posted in the “Early Drafts” tab have not yet been fully vetted by an statistics/data science instructor. Instructors are welcome to use them, but should expect to make modifications to the materials.\n\n\n\nThe development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).\n\n\n\n\n\n\nContributing and/or Joining the SCORE Network\n\n\n\n\n\n\nIf you are interested in contributing to and/or joining the SCORE Network, please check out https://scorenetwork.org/index.html.\nIf you are interested in creating a page similar to this to host your own “in development modules”, please feel free to copy the associated Github repository: https://github.com/iramler/slu_score_preprints.\n\nThe basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. For example, see the interactive diagram below (and compare it to the associated files/direcotries in the repository linked above).\n\n\n\n\n\n\n\n\n\n\n\nThis diagram was made using the collapsibleTree package."
+    "text": "This page contains education materials for the SCORE Network that were created by faculty and students from the Department of Mathematics, Computer Science, and Statistics at St. Lawrence University.\nThe SCORE Network Module Repository enables you to search for modules by either sport (along the left), or you can browse by statistics and data science topic.\n\n\n\n\n\n\nDisclaimer\n\n\n\n\n\nPlease note that these material have not yet completed the required pedagogical and industry peer reviews to become a published module on the SCORE Network.\nHowever, all modules listed under their respective sports have been reviewed by a St. Lawrence University statistics instructor and are able for others to use.\nModules posted in the “Early Drafts” tab have not yet been fully vetted by an statistics/data science instructor. Instructors are welcome to use them, but should expect to make modifications to the materials.\n\n\n\nThe development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).\n\n\n\n\n\n\nContributing and/or Joining the SCORE Network\n\n\n\n\n\n\nIf you are interested in contributing to and/or joining the SCORE Network, please check out https://scorenetwork.org/index.html.\nIf you are interested in creating a page similar to this to host your own “in development modules”, please feel free to copy the associated Github repository: https://github.com/iramler/slu_score_preprints.\nThe basic structure of the this repository is to have a directory for each sport, then within the sport, each module will have a folder containing its files. We have found that this allows us to easily submit a module in this repository to the SCORE Network and requires only minimal work for preparing it for the SCORE module repository after it is accepted."
   },
   {
     "objectID": "basketball/nba_draft_anova_intermediate/index.html",

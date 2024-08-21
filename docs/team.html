@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="A.J. Dykstra">
-<meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.">
 
-<title>SLU SCORE Module Preprint Repository - Ironman Triathlon (Canadian Females) - Simple Linear Regression</title>
+<title>SLU SCORE Module Preprint Repository - The Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +106,7 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SLU SCORE Module Preprint Repository</span>
     </a>
   </div>
@@ -120,15 +117,15 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../by-statsds-topic.html" aria-current="page"> 
+    <a class="nav-link active" href="./by-statsds-topic.html" aria-current="page"> 
 <span class="menu-text">Modules By Topic</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../team.html"> 
+    <a class="nav-link" href="./team.html"> 
 <span class="menu-text">SLU SCORE TEAM</span></a>
   </li>  
   <li class="nav-item">
@@ -150,7 +147,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/simple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Simple Linear Regression</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./team.html">The Team</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -164,13 +161,13 @@ cookieconsent.run({
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
+  <a href="./by-statsds-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Modules By Topic</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../team.html" class="sidebar-item-text sidebar-link">
+  <a href="./team.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">The Team</span></a>
   </div>
 </li>
@@ -185,19 +182,19 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exploring the NBA Draft via ANOVA and Tukey’s HSD</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introducing ANOVA Through the NBA Draft</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WNBA Data Cleaning Module</span></a>
   </div>
 </li>
@@ -214,7 +211,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">UFC: Striking Accuracy Percentages and the Normal Distribution</span></a>
   </div>
 </li>
@@ -231,7 +228,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Disc Golf Pro Tour - Driving or Putting?</span></a>
   </div>
 </li>
@@ -257,7 +254,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
   </div>
 </li>
@@ -274,7 +271,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/lacrosse/lacrosse_pll_vs_nll_first_draft/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/lacrosse/lacrosse_pll_vs_nll_first_draft/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL - First Draft</span></a>
   </div>
 </li>
@@ -291,7 +288,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dakar Rally Analysis</span></a>
   </div>
 </li>
@@ -308,13 +305,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/multisport/d1_expenditures/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/multisport/d1_expenditures/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NCAA D1 Expenditures</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ski to Sea</span></a>
   </div>
 </li>
@@ -331,7 +328,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Professional Bull Riding Analysis</span></a>
   </div>
 </li>
@@ -348,7 +345,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/running/boston_marathon_anova/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Understanding variability using ANOVA</span></a>
   </div>
 </li>
@@ -365,13 +362,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
   </div>
 </li>
@@ -390,7 +387,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">League of Legends - Buffing and Nerfing</span></a>
   </div>
 </li>
@@ -407,7 +404,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</span></a>
   </div>
 </li>
@@ -424,7 +421,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football Recruiting and Impact in the NFL</span></a>
   </div>
 </li>
@@ -441,7 +438,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PGA - Drive for Show, Putt for Dough?</span></a>
   </div>
 </li>
@@ -458,7 +455,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NCAA Women’s Gymnastics and Bootstrap Distributions</span></a>
   </div>
 </li>
@@ -475,7 +472,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handball Individual Player Statistics for the 2022-2023 Season</span></a>
   </div>
 </li>
@@ -492,7 +489,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023-24 PWHL - Visualizing the Regular Season</span></a>
   </div>
 </li>
@@ -509,13 +506,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL</span></a>
   </div>
 </li>
@@ -532,13 +529,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -555,7 +552,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beijing 2022 Olympics - Cleaning and Summarizing Data</span></a>
   </div>
 </li>
@@ -572,13 +569,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Data Wrangling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Summary Statistics</span></a>
   </div>
 </li>
@@ -595,7 +592,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
   </div>
 </li>
@@ -612,7 +609,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">World Cup Women’s 10k Classic Nordic Ski Race - Splits</span></a>
   </div>
 </li>
@@ -629,7 +626,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</span></a>
   </div>
 </li>
@@ -646,7 +643,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Swimming - Changes in the 100m Women’s Event</span></a>
   </div>
 </li>
@@ -663,7 +660,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tennis/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./tennis/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Investigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis</span></a>
   </div>
 </li>
@@ -671,22 +668,22 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false">
  <span class="menu-text">Triathlon</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -703,7 +700,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2024 College Ultimate Championship Statistics</span></a>
   </div>
 </li>
@@ -720,7 +717,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Division Three Volleyball Timeouts</span></a>
   </div>
 </li>
@@ -736,56 +733,24 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
-  </ul></li>
+  <li><a href="#faculty" id="toc-faculty" class="nav-link active" data-scroll-target="#faculty">Faculty</a></li>
+  <li><a href="#students" id="toc-students" class="nav-link" data-scroll-target="#students">Students</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/simple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Simple Linear Regression</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ironman Triathlon (Canadian Females) - Simple Linear Regression</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Linear regression</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.
-  </div>
+<h1 class="title">The Team</h1>
 </div>
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">A.J. Dykstra <a href="mailto:adykstra@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            St.&nbsp;Lawrence University
-          </p>
-      </div>
-  </div>
+
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2024</p>
-    </div>
-  </div>
+    
   
     
   </div>
@@ -795,176 +760,22 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Welcome to this activity focused on simple linear regression analysis. In this worksheet, you will explore a dataset containing information about the female Canadian finishers of the Lake Placid Ironman 2022. Specifically, you will analyze bike times to predict run times for the participants. Through this activity, you will gain practical experience in performing linear regression analysis, interpreting the results, and making predictions based on the model.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<section id="faculty" class="level2">
+<h2 class="anchored" data-anchor-id="faculty">Faculty</h2>
+<div class="card" title="Ivan Ramler" data-padding="3px">
+<p>Ivan Ramler is…</p>
 </div>
-<div class="callout-title-container flex-fill">
-Learning Objectives
+<div class="card" title="Robin Lock" data-padding="3px">
+<p>Robin Lock is…</p>
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ol type="1">
-<li><p>Understand the concept of simple linear regression and its application in statistical analysis.</p></li>
-<li><p>Identify the predictor (independent) and response (dependent) variables in a regression analysis.</p></li>
-<li><p>Interpret the regression output, including the coefficient estimates, residuals, and R-squared value.</p></li>
-<li><p>Make predictions based on the regression model and evaluate the accuracy of the predictions.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Before diving into this worksheet, it is important to have a foundational understanding of certain statistical concepts and techniques. The following prior knowledge will be helpful in completing this activity successfully:</p>
-<ol type="1">
-<li><p>Variables: Understanding the difference between predictor (independent) and response (dependent) variables is essential in the context of regression analysis. In this dataset, the predictor variable would be bike times, while the response variable would be run times.</p></li>
-<li><p>Scatter Plots: Familiarity with scatter plots, which depict the relationship between two continuous variables, is crucial. Scatter plots visually represent the data points and can help identify the nature and strength of the relationship between the predictor and response variables.</p></li>
-<li><p>Simple Linear Regression: Knowledge of simple linear regression as a statistical technique for modeling the relationship between two continuous variables is essential. You should understand the concept of a regression line, how it is estimated, and how it can be used to make predictions.</p></li>
-<li><p>Prediction and Evaluation: Knowledge of how to make predictions based on the regression model and evaluate their accuracy.</p></li>
-</ol>
-</div>
-</div>
+<div class="card" title="A.J. Dykstra" data-padding="3px">
+<p>A.J. Dykstra is…</p>
 </div>
 </section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman</p>
-<p>Download data: <a href="ironman_lake_placid_female_2022_canadian.csv">ironman_lake_placid_female_2022_canadian.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bib</td>
-<td>registration number of each runner used for identification</td>
-</tr>
-<tr class="even">
-<td>Name</td>
-<td>The participant’s name</td>
-</tr>
-<tr class="odd">
-<td>Country</td>
-<td>What country the participant is from</td>
-</tr>
-<tr class="even">
-<td>Gender</td>
-<td>The participant’s gender</td>
-</tr>
-<tr class="odd">
-<td>Division</td>
-<td>The age range or membership a runner is</td>
-</tr>
-<tr class="even">
-<td>Division.Rank</td>
-<td>Within the divisions, the place each runner has obtained over all races</td>
-</tr>
-<tr class="odd">
-<td>Overall.Time</td>
-<td>The total time it took to complete the Ironman in minutes</td>
-</tr>
-<tr class="even">
-<td>Overall.Rank</td>
-<td>The runner’s finishing place for that particular triathlon</td>
-</tr>
-<tr class="odd">
-<td>Swim.Time</td>
-<td>The time in minutes it took to complete the swimming portion</td>
-</tr>
-<tr class="even">
-<td>Swim.Rank</td>
-<td>The place the runner finished for the swim portion</td>
-</tr>
-<tr class="odd">
-<td>Bike.Time</td>
-<td>The time in minutes it took to complete the biking portion</td>
-</tr>
-<tr class="even">
-<td>Bike.Rank</td>
-<td>The place the runner finished for the bike portion</td>
-</tr>
-<tr class="odd">
-<td>Run.Time</td>
-<td>The time in minutes it took to complete the running portion</td>
-</tr>
-<tr class="even">
-<td>Run.Rank</td>
-<td>The place the runner finished for the running portion</td>
-</tr>
-<tr class="odd">
-<td>Finish.Status</td>
-<td>States whether someone completed the Ironman successfully</td>
-</tr>
-<tr class="even">
-<td>Location</td>
-<td>Where the Ironman takes place</td>
-</tr>
-<tr class="odd">
-<td>Year</td>
-<td>They year when the mentioned participant ran</td>
-</tr>
-</tbody>
-</table>
-</details>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="Regression_Simple.docx">Class handout</a></p>
-<p><a href="Regression_Simple_Key.docx">Class handout - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>In conclusion, the Simple Linear Regression worksheet has yielded important findings. The analysis revealed a significant slope interpretation. However, there is an absence of a meaningful intercept interpretation. Impressively, the model accurately predicted the winner, Sarah True, within a 12-minute range of her actual time, demonstrating its effectiveness in estimating performance. Furthermore, the exploration of using speed as an alternative variable showcased its potential usefulness and highlighted the value it can add to predicting and understanding performance outcomes. Overall, this worksheet has enhanced our understanding of the relationship between variables and the predictive capabilities of simple linear regression.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Fill in later</p>
+<section id="students" class="level2">
+<h2 class="anchored" data-anchor-id="students">Students</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
