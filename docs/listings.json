@@ -6,8 +6,10 @@
       "/running/boston_marathon_2023/index.html",
       "/hockey/pwhl_season1_visualizations/index.html",
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
+      "/early_drafts/basketball/all_nba_prediction/index.html",
       "/motor_sports/formula1_laps/index.html",
       "/multisport/olympics_beijing_medals/index.html",
+      "/early_drafts/lacrosse/ncaa_lacrosse_indicator_regression/index.html",
       "/early_drafts/motor_sports/dakar_rally_regression/index.html",
       "/disc_golf/dgpt_correlations/index.html",
       "/volleyball/volleyball_timeouts_single_prop/index.html",
@@ -32,12 +34,14 @@
       "/swimming/olympic_swimming_100m/index.html",
       "/golf/pga_drive_putt/index.html",
       "/early_drafts/rodeo_sports/bull_riding_regression/index.html",
+      "/early_drafts/rugby/rugby_historical_comparisons/index.html",
       "/early_drafts/multisport/ski_to_sea_correlations/index.html",
       "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
       "/combat_sports/ufc_striking_accuracy/index.html",
       "/basketball/wnba_data_quality/index.html",
       "/early_drafts/skiing/giant_slalom_paired/index.html",
       "/early_drafts/skiing/giant-slalom_cleaning/index.html",
+      "/early_drafts/basketball/women_ncaa_shiny/index.html",
       "/skiing/nordic_ski_10k_splits/index.html"
     ]
   }

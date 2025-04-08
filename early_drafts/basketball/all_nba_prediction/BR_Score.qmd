@@ -1,0 +1,267 @@
+---
+title: "Basketball Reference Score Module"
+author: "Jeffrey Merselis"
+format: html
+editor: visual
+---
+
+This qmd file explores using statistical modeling techniques to predict which NBA players are most likely to be selected to the all-NBA first Team in a given season. Using player statistics from 1980 to 2024, we will apply two models --- logistic regression and random forest classification --- to estimate the likelihood of each player's selection. Logistic regression learns for binary outcomes and the models are more simple. Random forests on the other hand, are powerful ensemble models that improve prediction accuracy by combining the results of many decision trees. We'll walk through each step of the modeling process, from data preparation and model training to evaluation and interpretation.
+
+### Loading Packages
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(randomForest) # Used to build random forest models
+```
+
+### Loading Data
+
+```{r message=FALSE, warning=FALSE}
+BR_data <- read.csv("BR_data.csv")
+```
+
+### Dataset Column Descriptions
+
+-   **Rk**: Player's rank that season (specific to basketball-reference.com)
+-   **Player**: Player's full name
+-   **Age**: Player's age during the season
+-   **Team**: Final team the player was on during the season
+-   **Pos**: Player's listed position (e.g., PG, SF)
+-   **G**: Games played in the season
+-   **GS**: Games started in the season
+-   **MP**: Minutes played per game
+-   **FG**: Field goals made per game
+-   **FGA**: Field goals attempted per game
+-   **FG.**: Field goal percentage
+-   **X3P**: Three-pointers made per game
+-   **X3PA**: Three-pointers attempted per game
+-   **X3P.**: Three-point percentage
+-   **X2P**: Two-pointers made per game
+-   **X2PA**: Two-pointers attempted per game
+-   **X2P.**: Two-point percentage
+-   **eFG.**: Effective field goal percentage (accounts for 3-point value)
+-   **FT**: Free throws made per game
+-   **FTA**: Free throws attempted per game
+-   **FT.**: Free throw percentage
+-   **ORB**: Offensive rebounds per game
+-   **DRB**: Defensive rebounds per game
+-   **TRB**: Total rebounds per game
+-   **AST**: Assists per game
+-   **STL**: Steals per game
+-   **BLK**: Blocks per game
+-   **TOV**: Turnovers per game
+-   **PF**: Personal fouls per game
+-   **PTS**: Points per game
+-   **Awards**: List of awards (e.g., MVP, NBA1, DPOTY), blank if none
+-   **Season**: Year of the season
+
+## 2024 All-NBA Teams:
+
+Here's the a list of the players who made the first, second, and third teams in 2024 (which we'll use as test data) for easy reference later:
+
+```         
+                   Player Pos Team                      Awards
+                    
+              Luka Dončić  PG  DAL         MVP-3,CPOY-6,AS,NBA1
+    Giannis Antetokounmpo  PF  MIL MVP-4,DPOY-9,CPOY-12,AS,NBA1
+  Shai Gilgeous-Alexander  PG  OKC  MVP-2,DPOY-7,CPOY-3,AS,NBA1
+             Jayson Tatum  PF  BOS         MVP-6,CPOY-9,AS,NBA1
+             Nikola Jokić   C  DEN         MVP-1,CPOY-4,AS,NBA1
+
+            Jalen Brunson  PG  NYK         MVP-5,CPOY-5,AS,NBA2
+             Kevin Durant  PF  PHO                MVP-9,AS,NBA2
+          Anthony Edwards  SG  MIN         MVP-7,CPOY-8,AS,NBA2
+            Anthony Davis   C  LAL               DPOY-4,AS,NBA2
+            Kawhi Leonard  SF  LAC                      AS,NBA2
+
+             Devin Booker  PG  PHO                      AS,NBA3
+            Stephen Curry  PG  GSW               CPOY-1,AS,NBA3
+             LeBron James  PF  LAL              CPOY-10,AS,NBA3
+        Tyrese Haliburton  PG  IND                      AS,NBA3
+         Domantas Sabonis   C  SAC           MVP-8,DPOY-10,NBA3
+```
+
+Something to note if you were to use an older season is that 2024 is the first year players were selected without regard to position. Before only one player at each position could make each team. A rule was also added requiring 65 regular season games to have been played to be considered for a all-NBA team.
+
+## Preparing Data:
+
+Before building our models, we need to re-structure the dataset so that the model can understand it.
+
+***Why is this important to do before creating the model?***
+
+We'll create a new variable called `all_nba_1st` that is 1 if the "Awards" column includes "NBA1" (they made the team), and 0 otherwise (they didn't make the team). This becomes our response variable. We then remove the "Awards" column for simplicity since it's not needed.
+
+```{r message=FALSE, warning=FALSE}
+all_nba_team_df <- BR_data |>
+  mutate(all_nba_1st = ifelse(str_detect(Awards, "NBA1"), 1, 0)) |>
+  select(-Awards)
+```
+
+To evaluate our models, we split the dataset into a training set and a testing set. The training data includes all seasons before 2024, and the test data includes only the 2024 season. The training set is used to fit (teach) the models. The test set is used to see how the model would perform on new data.
+
+```{r message=FALSE, warning=FALSE}
+train_data <- all_nba_team_df |> filter(Season < 2024)
+test_data <- all_nba_team_df |> filter(Season == 2024)
+```
+
+## Logistic Regression Model
+
+We now fit a logistic regression model. We use the `glm()` function with the argument `family = binomial` to specify that we're fitting a logistic regression model. This is different from the `lm()` function, which fits a linear regression model. The model is trained on train_data dataset we made to estimate the probability of being selected to the all-NBA first team. We remove variables like as name, team, and position, since they don't have predictive information.
+
+```{r message=FALSE, warning=FALSE}
+mod_nba <- glm(all_nba_1st ~ ., data = train_data |> select(-Season, -Rk, -Player, -Team, -Pos),
+            family = binomial)
+```
+
+This model uses a lot of predictors, several of which are likely not helpful and over-complicate the model. We'll get a summary of the model's output and use it to improve the model by looking for unusually high standard errors or high p-values (\> 0.1). These predictors might do more damaging to the model then helpful.
+
+```{r}
+summary(mod_nba)
+```
+
+To understand how different stats relate to each other, we compute a correlation matrix. A correlation matrix shows how strongly each variable is linearly related to the others. Correlations range from -1 to 1, with 0 meaning no relationship. This plot helps identify which stats are highly correlated (like FG and PTS), and redundancy between variables (multicollinearity). If a pair of predictors has a high correlaition we might want to remove one of them to improve the model.
+
+```{r}
+numeric_data <- all_nba_team_df |> select(-Rk, -Player, -Team, -Pos, -Season)
+cor_matrix <- cor(numeric_data, use = "complete.obs") 
+
+cor_long <- cor_matrix |> 
+  as.data.frame() |> 
+  rownames_to_column("Var1") |> 
+  pivot_longer(-Var1, names_to = "Var2", values_to = "Correlation")
+
+ggplot(cor_long, aes(x = Var1, y = Var2, fill = Correlation)) +
+  geom_tile() +
+  scale_fill_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+We can use the model summary and the correlation matrix to see what predictors should be removed from the model. For example, if the correlation matrix shows two stats have a correlation of more then 0.8, and the mod summary shows one of the two has a very small coefficient and a high p-value, that suggests we should remove it from the model.
+
+***What are some predictors that should be removed?***
+
+#### See if you can find a way to improve the model.
+
+The chunk below will show the 15 players most likely to make all-NBA first team in 2024 as predicted by the model, and the confidence of that prediction. Make any changes you want to the model and see if you get closer or farther from the actual all-NBA first team in the table above.
+
+```{r}
+#####     #####     #####     #####     #####     #####     #####     #####     
+
+# The "." represents "all columns" remove it and specify the ones you want, 
+# or add columns to the select with a "-" to remove them.
+
+mod_nba <- glm(all_nba_1st ~ ., data = train_data |> select(-Season, -Rk, -Player, -Team, -Pos),
+            family = binomial)
+
+#####     #####     #####     #####     #####     #####     #####     #####     
+
+test_data <- test_data |> 
+  mutate(predictions = predict(mod_nba, newdata = test_data, type = "response"))
+
+best_players <- test_data |> arrange(desc(predictions)) |> head(15)
+best_players |> select(Player, Pos, predictions)
+```
+
+## Random Forest Model
+
+We now try a random forest model, which is another way to make predictions, but is more flexible and often more accurate when data gets complicated with lots of predictors with complicated interactions. A random forest builds decision trees, each one trained on slightly different versions of the data. Each tree basically makes its own guess, then the random forest takes all of the guesses and combines them to make a final prediction. We build the model using the `randomForest()` function. We give the model our response variable (`all_nba_1st`), specify 500 trees (`ntree = 500`), and ask it to keep track of which variables are most helpful (`importance = TRUE`).
+
+```{r}
+# rf_model_v1 <- randomForest(
+#   all_nba_1st ~ .,
+#   data = train_data |> select(-Season, -Rk, -Player, -Team, -Pos) |> na.omit(),  
+#   ntree = 500,
+#   importance = TRUE
+# )
+```
+
+***Which model do you think will work better (before trying the RF model), and why?***
+
+In the following two code chunks, we build a slightly different version of the random forest model. We handle missing data, and use a different syntax to separate the predictors and response variable. The key difference from the earlier (commented-out) model is that here, we: 1. Fill in missing values with the median of each column. This avoids errors caused by missing data. 2. Split the data into `x_train` (predictors) and `y_train` (response), instead of using a formula like `all_nba_1st ~ .`. 3. Convert the response variable (`y_train`) into a factor which tells the model to perform classification instead of regression.
+
+```{r message=FALSE, warning=FALSE}
+train_med <- train_data |>
+  mutate(across(everything(), ~ ifelse(is.na(.), median(., na.rm = TRUE), .)))
+
+test_med <- test_data |>
+  mutate(across(everything(), ~ ifelse(is.na(.), median(., na.rm = TRUE), .)))
+
+x_train <- train_med |> select(-Season, -Rk, -Player, -Team, -Pos, -all_nba_1st)
+y_train <- as.factor(train_med$all_nba_1st)  # This makes it classification
+```
+
+The new model:
+
+```{r message=FALSE, warning=FALSE}
+rf_model_v2 <- randomForest(
+  x = x_train,
+  y = y_train,
+  ntree = 500,
+  importance = TRUE
+)
+```
+
+Now that we've trained the random forest model, the next chunk uses it to make predictions with the 2024 season test data. Calculating the chance that each player makes the all-NBA first team.
+
+```{r}
+test_med <- test_med |>
+  mutate(predictions = predict(rf_model_v2, newdata = test_med, type = "prob")[,2])
+
+top_5_rf <- test_med |> arrange(desc(predictions)) |> head(15)
+top_5_rf |> select(Player, predictions)
+```
+
+#### How does it compare the the logistic regression model?
+
+## Comparing the models
+
+Here we evaluate how well our two models performed at predicting all-NBA first team selections (for the 2024 season). To do that, we create a confusion matrix for each model. The confusion matrix shows how many predictions were right or wrong by comparing predicted answers to the actual outcome. We have:
+
+-   True Positives: Players correctly predicted to make the team
+
+-   True Negatives: Players correctly predicted to not make the team
+
+-   False Positives: Players incorrectly predicted to make the team
+
+-   False Negatives: Players incorrectly predicted to not make the team
+
+```{r}
+# Logistic Regression
+log_pred_class <- ifelse(test_data$predictions > 0.5, 1, 0)
+table(Logistic_Predicted = log_pred_class, Actual = test_data$all_nba_1st)
+
+# Random Forest
+rf_pred_class <- ifelse(test_med$predictions > 0.5, 1, 0)
+table(RF_Predicted = rf_pred_class, Actual = test_med$all_nba_1st)
+```
+
+(Assuming nothing has been changed for either model)
+
+Logistic Regression:
+
+-   **True Negatives (635)**: Correctly predicted 635 players who were not selected.
+
+-   **True Positives (4)**: Correctly identified 4 all-NBA first team players.
+
+-   **False Positives (4)**: Incorrectly predicted 4 players would make the team.
+
+-   **False Negatives (1)**: Missed 1 player who actually did made the team.
+
+***How would you say the Logistic Regression model performed?***
+
+Random Forest:
+
+-   **True Negatives (730)**: Very accurate at predicting players who were not selected.
+
+-   **True Positives (4)**: Correctly identified 4 players again.
+
+-   **False Positives (1)**: Mis-classified one player as selected who was not.
+
+-   **False Negatives (1)**: Missed one player again.
+
+***How would you say the Random Forest model performed?***
+
+**NOTE**: Any missing values in the logistic regression model would have been automatically removed, so that's why there's a big difference in the number of true negatives.
+
+***What model would you prefer to use and why?***

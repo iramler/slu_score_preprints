@@ -1,0 +1,93 @@
+---
+title: "All-NBA-First Team Prediction Models"
+author:
+  - name: Jeffrey Merselis
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: April 3, 2025
+description: Learn about and compare two models (Logistic Regression and Random Forest), that will predict NBA players to make the all-NBA first team in a given season. 
+---
+
+## Module
+
+### Introduction
+
+This qmd file explores using statistical modeling techniques to predict which NBA players are most likely to be selected to the all-NBA first Team in a given season. Using player statistics from 1980 to 2024, we will apply two models --- logistic regression and random forest classification --- to estimate the likelihood of each player's selection. Logistic regression learns for binary outcomes and the models are more simple. Random forests on the other hand, are powerful ensemble models that improve prediction accuracy by combining the results of many decision trees. We'll walk through each step of the modeling process, from data preparation and model training to evaluation and interpretation.
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+The learning objectives associated with this module are:
+
+-   Understand the difference between logistic regression and random forest models.
+
+-   Fit and interpret a logistic regression model 
+
+-   Train and evaluate a random forest model
+
+-   Interpret a correlation matrix
+
+-   Evaluate model performance
+
+-   Compare model accuracy and prediction behavior
+:::
+
+### Data
+
+The dataset used in this project contains individual player statistics from every NBA season between 1980 and 2024, scraped from basketball-reference.com. Each row represents one player’s season
+
+<summary><b>Variable Descriptions</b></summary>
+
+| **Column** | **Description** |
+|------------|-----------------|
+| **Rk** | Player's rank that season (specific to basketball-reference.com) |
+| **Player** | Player's full name |
+| **Age** | Player's age during the season |
+| **Team** | Final team the player was on during the season |
+| **Pos** | Player's listed position (e.g., PG, SF) |
+| **G** | Games played in the season |
+| **GS** | Games started in the season |
+| **MP** | Minutes played per game |
+| **FG** | Field goals made per game |
+| **FGA** | Field goals attempted per game |
+| **FG%** | Field goal percentage |
+| **3P** | Three-pointers made per game |
+| **3PA** | Three-pointers attempted per game |
+| **3P%** | Three-point percentage |
+| **2P** | Two-pointers made per game |
+| **2PA** | Two-pointers attempted per game |
+| **2P%** | Two-point percentage |
+| **eFG%** | Effective field goal percentage (accounts for 3-point value) |
+| **FT** | Free throws made per game |
+| **FTA** | Free throws attempted per game |
+| **FT%** | Free throw percentage |
+| **ORB** | Offensive rebounds per game |
+| **DRB** | Defensive rebounds per game |
+| **TRB** | Total rebounds per game |
+| **AST** | Assists per game |
+| **STL** | Steals per game |
+| **BLK** | Blocks per game |
+| **TOV** | Turnovers per game |
+| **PF** | Personal fouls per game |
+| **PTS** | Points per game |
+| **Awards** | List of awards (e.g., MVP, NBA1, DPOTY), blank if none |
+| **Season** | Year of the season |
+
+**Data Source**
+
+The data is obtained from the Basketball-Reference.com, a website that has in-depth statistics on the NBA, WNBA, NCAA basketball, and international basketball. [Basketball Reference](basketball-reference.com/){target="_blank"}.
+
+</details>
+
+### Materials
+
+[BR_data.csv](BR_data.csv) - Dataset
+
+[BR_score.qmd](BR_score.qmd) - Worksheet
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Students should find that random forest works better.
+:::
