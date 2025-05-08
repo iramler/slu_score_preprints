@@ -1,0 +1,114 @@
+---
+title: "Modeling the Impact of Age on Powerlifting "
+author:
+  - name: Sarah Sheldon
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "May 8, 2025"
+description: "Exploring the impact of age on powerlifting"
+editor: 
+  canonical: true
+categories:
+  - High order modeling 
+  - Indicator variables 
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Powerlifting is a strength sport where participants compete to lift the heaviest weight. Competitors compete within weight classes, so their opponents are around the same weight as them. The sport consists of three different lifts: Squat, Bench, and Deadlift. Squat lifts require lifters to squat so that their hips are below their knees and lift the weight to a specific depth. Bench lifts are done while the lifter is lying on a bench. Bench lifters start with the bar weight being held in the air and must lower the bar down to their body. Once the bar touches their body, lifters wait for the command to lift the bar back into the air with their elbows fully extended. Deadlifting, like squats, start with the lifter standing up. The lifter must lift the bar off the ground and get into the position where their shoulders are back and knees are locked. Competitors are overseen by three judges who determine whether the lift follows the rules of the events. If a judge believes the lifter followed the rules, they will turn on a white light. In order for a lift to count, competitors must receive at least two white lights. 
+
+
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+
+1. How to use smoothers in exploratory plots to help determine what model type to use
+
+2. The relationship between indicator variables and best fit models
+
+3. Determining usefulness of models
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+
+Students are expected to have been exposed to introductory polynomrial regression models and p-values. There's also an expectation that they are able to make basic graphs in R using ggplot.
+:::
+
+
+
+### Data
+
+The powerlifting data contains records of competitors from the openpowerlifting.org data set. 
+
+Download data: [powerlift_sample_data_updated.csv](powerlift_sample_data_updated.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                             |
+|----------|---------------------------------------------------------|
+|Name   | Name of the competitor. |
+|Sex | Sex of the competitor. |
+|Event | Type of lifting event. S = Squat, B = Bench, D = Deadlift |
+|Equipment | Equipment used during the competition. Raw means that nothing was worn except knee sleeves. Single-ply is a one layer suit and multi-ply is 2 or more layers.|
+|Age | Age of the lifter.|
+|AgeClass | Age-based category. Competitors are grouped based on their age.|
+|BirthYearClass | Birth year based category. Competitors are grouped based on the year that they were born.|
+|Division | Groups of competitors who compete against each other based on skill level or age.|
+|BodyweightKg | The weight of a competitor in kilograms.|
+|WeightClassKg | Weight based category. Competitors are grouped based on weight in kilograms.|
+|Squat1Kg | Weight lifted during the first attempt at the squat lift.|
+|Squat2Kg | Weight lifted during the second attempt at the squat lift. |
+|Squat3Kg | Weight lifted during the third attempt at the squat lift. |
+|Squat4Kg | Weight lifted during the fourth attempt at the squat lift. Does not count towards Totalkg.|
+|Best3SquatKg | The heaviest amount lifted out of the first 3 successful squat lifts. |
+|Bench1Kg | Weight lifted during the first attempt at the bench lift. |
+|Bench2Kg | Weight lifted during the second attempt at the bench lift. |
+|Bench3Kg | Weight lifted during the third attempt at the bench lift. |
+|Bench4Kg | Weight lifted during the fourth attempt at the bench lift. Does not count toward the TotalKg.|
+|Best3BenchKg | The heaviest amount lifted out of the first 3 successful bench lifts. |
+|Deadlift1Kg | Weight lifted during the first attempt at the deadlift. |
+|Deadlift2Kg | Weight lifted during the second attempt at the deadlift. |
+|Deadlift3Kg | Weight lifted during the third attempt at the deadlift. |
+|Deadlift4Kg | Weight lifted during the fourth attempt at the deadlift. Does not count toward TotalKg |
+|Best3DeadliftKg | The heaviest amount lifted out of the first 3 successful deadlifts. |
+|TotalKg | Sum of Best3DeadliftKg, Best3BenchKg, and Best3SquatKg. |
+|Place | How the lifter placed. G = guest lifter, DQ = disqualified, DD: disqualification due to failed drug test, NS: no show |
+|Dots | The ratio between bodyweight and the weight lifted. |
+|Wilks | Measurement of the relative strength of weightlifters despite different weight classes. The most common formulat for determining the best lifter in a competition. |
+|Glossbrenner | Evaluation of strength relative to bodyweight. An update to the Wilks formula. |
+|Goodlift | The point system used. |
+|Tested | Whether the category that the competitor entered is drug tested. |
+|Country | The competitor's home country |
+|State | The home state, province, etc of the competitor. |
+|Federation | The federation that hosted the meet. |
+|ParentFederation | The highest federation that sanctioned the meet. |
+|Date | The start date of the meet. |
+|MeetCountry | The country where the competition occured. |
+|MeetState | The state, province, or region the meet occured. |
+|MeetName | The name of the meet. |
+|Sanctioned | Whether the meet is officially sanctioned by a recognized federation. |
+
+</details>
+
+
+### Materials
+
+[Class handout](score_powerlifting_worksheet.qmd)
+
+[Class handout - with solutions](powerlifting_worksheet_solutions.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Students should be able to determine the best fit models using exploratory plots and p-values. They should gain an understanding of higher-order models when dealing with indicator variables. They should be come to the conclusion that the higher-order out of the two qualitative variables is the model of best fit.
+:::

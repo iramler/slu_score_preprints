@@ -1,0 +1,196 @@
+---
+title: "Score Worksheet Solutions"
+author: "Sarah Sheldon"
+format: 
+  html:
+    embed-resources: true
+format: html
+---
+
+Powerlifting is a strength sport where participants compete to lift the heaviest weight. Competitors compete within weight classes, so their opponents are around the same weight as them. The sport consists of three different lifts: Squat, Bench, and Deadlift. Squat lifts require lifters to squat so that their hips are below their knees and lift the weight to a specific depth. Bench lifts are done while the lifter is lying on a bench. Bench lifters start with the bar weight being held in the air and must lower the bar down to their body. Once the bar touches their body, lifters wait for the command to lift the bar back into the air with their elbows fully extended. Deadlifting, like squats, start with the lifter standing up. The lifter must lift the bar off the ground and get into the position where their shoulders are back and knees are locked. Competitors are overseen by three judges who determine whether the lift follows the rules of the events. If a judge believes the lifter followed the rules, they will turn on a white light. In order for a lift to count, competitors must receive at least two white lights. 
+
+The Powerlifting dataset features data from individual lifters during their most recent competitions. Variables include characteristics such as sex, age, birth year and age classes, and division. Other variables include 3 types of weightlifting: squats, benches, and deadlifts.The relevant variables for this specific module are Sex, Age, and Best3DeadliftKg. 
+
+For the sake of this module, the data set was tidied so that it only included the event "SBD" (Squat, Bench, Deadlift) and two types of equipment use: Raw, meaning no equipment except knee sleeves, and Single-ply, which is a single layer suit. The data was also tided to exclude any lifter that did not finish the competition or had missing information for key variables like Age and Sex.
+
+For this worksheet, we want to use Sex and Age as predictors for Best3DeadliftKg.
+
+```{r}
+library(tidyverse)
+library(readr)
+library(broom)
+powerlift <- read_csv("powerlift_sample_data_updated.csv")
+
+powerlift_new <- powerlift |>
+  filter(Event == "SBD") |>
+  filter(Equipment %in% c("Raw", "Single-ply")) |>
+  filter(Place != "DQ") |>
+  filter(Place != "NS") |>
+  drop_na(Place) |>
+  filter(Place != "G") |>
+  filter(Place != "DD") |>
+  drop_na(Age) |>
+  drop_na(AgeClass)
+
+powerlift_new$SexIND = ifelse(powerlift_new$Sex == "M", 1, 0)
+```
+
+
+
+
+1. 
+a) To start, we will use data that only incorporates females. Create a new data set that filters females.
+```{r}
+powerlift_f <- powerlift_new |>
+  filter(Sex == "F")
+```
+
+
+b) Create a scatterplot comparing Age and Best3DeadliftKg. Add a smoother. What do you notice about the curve? 
+```{r}
+powerlift_f <- powerlift_new |>
+  filter(Sex == "F")
+
+ggplot(data = powerlift_f, aes(x = Age, y = Best3DeadliftKg)) +
+  geom_point() +
+  geom_smooth(color = "blue", se = FALSE) #+
+  #geom_smooth(color = "red", method = "lm", formula = y ~ poly(x, 5), se = FALSE)
+```
+
+There's a curve in the data, so not linear.
+
+
+
+
+b) By just looking at the graph, what type of model should be used?
+
+Students should suggest quadratic.
+
+
+
+c) Now, add another smoother using `formula =  y ~ poly(x, 2)` in your `geom_smooth` to compare to current smoother. This adds a quadratic curve (i.e., an order 2 polynomial). Does it fit? Try editing the power to find the curve that best matches. Be sure to make the two curves different colors.
+
+```{r}
+ggplot(data = powerlift_f, aes(x = Age, y = Best3DeadliftKg)) +
+  geom_point() +
+  geom_smooth(color = "blue", se = FALSE) +
+  geom_smooth(formula = y ~ poly(x, 4), color = "red")
+```
+
+Students should find that 4th order is best for the female curve.
+
+
+d) Create a model based off of the curve that best fits. What do you notice?
+
+```{r}
+DL <- lm(data = powerlift_f, Best3DeadliftKg ~ poly(Age, 4))
+summary(DL)
+```
+
+4th order power significant, have to keep lower orders even if not a good "fit".
+
+e) Estimate the peak by looking at the graph.
+ 
+Should be 27ish.
+
+f) Find the peak.
+Solution: sample code used to find the peak. 30.5 is the peak.
+```{r}
+female <- lm(data = powerlift_f, Best3DeadliftKg ~ poly(Age, 4))
+predict_f <- predict(object = female, newdata = tibble(Age = powerlift_f$Age))
+female_peak <- powerlift_f$Age[which.max(predict_f)]
+female_peak
+```
+
+
+
+
+2. Repeat the analysis for male sex. Then, compare and contrast with the female curve.
+Add a smoother that shows the Male sex and use y ~ poly(x, 2) to see which curve best fits.
+```{r}
+powerlift_m <-  powerlift_new |>
+
+  filter(Sex == "M")
+
+ggplot(data = powerlift_m, aes(x = Age, y = Best3DeadliftKg)) +
+  geom_point() +
+  geom_smooth(color = "blue", se = FALSE) +
+  geom_smooth(formula = y ~ poly(x, 5), color = "red")
+
+```
+
+Students should notice that the ends of the curve don't end up together until they reach a 5th order polynomial, unlike with the female curve where it lines up with the 4th order. 
+
+
+a. Notice that the female curve best fits a quadratic model based on the graph. However, a quadratic model is incorrect for this situation. Why is that?
+
+The male curve fits a higher exponent, so we need to account for it to make sure that males are included in the model.
+
+
+b. Create a model to predict Best3DeadliftKg for males.
+
+```{r}
+DL_m <- lm(data = powerlift_m, Best3DeadliftKg ~ poly(Age, 5))
+summary(DL_m)
+```
+
+Students should note that every variable produced is significant, meaning that the 5th order polynomial is correct.
+
+c. Find the peak.
+```{r}
+male <- lm(data = powerlift_m, Best3DeadliftKg ~ poly(Age, 5))
+predict_m <- predict(object = male, newdata = tibble(Age = powerlift_m$Age))
+male_peak <- powerlift_m$Age[which.max(predict_m)]
+male_peak
+```
+
+Visually: Looks to be around 28-30.
+Code: 30
+
+The female curve has a slight higher peak than the male curve.
+
+3. Build a model using both sexes that provides separate polynomial curves for each sex.
+
+a) Make the graph, analyze.
+
+i. With facet(~Sex)
+```{r}
+ggplot(data = powerlift_new, aes(x = Age, y = Best3DeadliftKg)) +
+  geom_point() +
+  geom_smooth(color = "blue", se = FALSE) +
+  geom_smooth(formula = y ~ poly(x, 5), color = "red") +
+  facet_grid(~Sex)
+```
+
+ii. No faceting
+```{r}
+ggplot(data = powerlift_new, aes(x = Age, y = Best3DeadliftKg)) +
+  geom_point() +
+  geom_smooth(color = "blue", se = FALSE) +
+  geom_smooth(formula = y ~ poly(x, 5), color = "red")
+```
+
+You can't even see the female curve, while the male curve has some parts that don't overlap with the poly smoother.
+
+b) Build the model.
+```{r}
+powerlift_new$SexIND = ifelse(powerlift_new$Sex == "M", 1, 0)
+
+dl_finish <- lm(data = powerlift_new, Best3DeadliftKg ~ poly(Age, 5)*SexIND)
+summary(dl_finish)
+```
+
+Most of the variables are significant, except for the fifth order curve that is not multiplied by the SexIND variable. This is because that variable represents the female curve, and the female curve fit a quartic smoother better. We are using the fifth order for the male sex, which is indicated by the SexIND variable (where M = 1).
+
+
+c) Find the peak.
+```{r}
+overall <- lm(data = powerlift_new, Best3DeadliftKg ~ poly(Age, 5))
+predict_o <- predict(object = overall, newdata = tibble(Age = powerlift_new$Age))
+overall_peak <- powerlift_new$Age[which.max(predict_o)]
+overall_peak
+```
+
+The code should give you 28.5.
+
+
