@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repo
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up R
@@ -18,24 +18,17 @@ jobs:
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Install R packages (renv if present)
+      - name: Install R packages (if using renv)
         run: |
           Rscript -e 'if (file.exists("renv.lock")) install.packages("renv"); if (file.exists("renv.lock")) renv::restore()'
-
-      - name: Install missing R packages for sidebar update
-        run: |
-          Rscript -e 'if (!requireNamespace("yaml", quietly = TRUE)) install.packages("yaml")'
-
-      - name: Update _quarto.yml sidebar (auto-detect modules)
-        run: Rscript update_quarto_sidebar.R
 
       - name: Render Quarto site
         run: quarto render
 
-      - name: Commit and push changes
+      - name: Commit and push rendered site
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add _quarto.yml docs/
-          git commit -m "Automated render [skip ci]" || echo "No changes to commit"
+          git add docs/
+          git commit -m "Automated render and deploy [skip ci]" || echo "No changes to commit"
           git push origin main
