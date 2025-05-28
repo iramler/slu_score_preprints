@@ -26,17 +26,18 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - by-statsds-topic.qmd
-      - href: _team.qmd
-        text: SLU SCORE TEAM
+#      - href: by-statsds-topic.qmd
+#        text: Module by Stat Topic
+#      - href: _team.qmd
+#        text: SLU SCORE TEAM
       - href: https://modules.scorenetwork.org/
         text: SCORE Module Repository
       - href: https://data.scorenetwork.org/
         text: Data Repository
+
   sidebar:
     contents: auto
     collapse-level: 1
-
 
 format:
   html:

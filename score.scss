@@ -1,3 +1,134 @@
 /*-- scss:defaults --*/
-/* SCORE colors */
+/* General theme color (used for buttons, etc.) */
 $primary: #6D6E71;
+
+/*-- Custom overrides --*/
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #7c2529 !important;  /* SLU Garnet */
+}
+
+/* Navbar brand and link text */
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+/* Navbar link hover */
+.navbar-nav .nav-link:hover {
+  color: #ffcccb !important;  /* Light blush */
+}
+
+/* Active navbar tab */
+/* Soft brown */
+/*
+.navbar-nav .nav-link.active {
+  background-color: #e8ddd9 !important;
+  color: #7c2529 !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+*/
+
+/* Active navbar tab */
+.navbar-nav .nav-link.active {
+  background-color: #f0e7e3 !important;  /* Soft neutral blush, richer than sidebar */
+  color: #7c2529 !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: inset 0 -2px 0 #7c2529;
+}
+
+
+/* ==== SIDEBAR ==== */
+.sidebar {
+  background-color: #f9f6f6;  /* Very light blush */
+  border-right: 1px solid #ccc;
+}
+
+/* Sidebar links */
+.sidebar nav a {
+  color: #7c2529;
+}
+
+/* Sidebar link hover */
+.sidebar nav a:hover {
+  color: #5c1e21;  /* Darker garnet */
+  text-decoration: underline;
+}
+
+/* Active sidebar link */
+.sidebar nav a.active {
+  font-weight: bold;
+  color: #7c2529;
+  text-decoration: underline;
+}
+
+
+
+
+/* ******************** */
+
+/* Buttons */
+.btn-primary {
+  background-color: #7c2529 !important;   // SLU Garnet
+  border-color: #7c2529 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #5c1e21 !important;   // Darker garnet
+  border-color: #5c1e21 !important;
+}
+
+/* General links */
+a {
+  color: #7c2529;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5c1e21;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* ==== CALLOUT BLOCKS ==== */
+
+.callout {
+  border-left: 5px solid #7c2529;  /* SLU Garnet */
+  background-color: #f9f6f6;       /* Soft blush background */
+  box-shadow: none;
+}
+
+/* Optional: Customize header text color */
+.callout-title {
+  color: #7c2529;
+  font-weight: bold;
+}
+
+/* Optional: Specific styling for 'note', 'tip', etc. */
+.callout-note {
+  border-left-color: #7c2529;
+  background-color: #f9f6f6;
+}
+
+.callout-warning {
+  border-left-color: #b04d4d;
+  background-color: #fdf2f2;
+}
+
+.callout-tip {
+  border-left-color: #8a5d3b;
+  background-color: #f7f1ea;
+}
+

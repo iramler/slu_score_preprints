@@ -1,8 +1,10 @@
 ---
-title: Modules By Topic
+title: "📊 Modules by Statistics Topic"
 listing:
   categories: true
   contents:
     - "*/*.qmd"
     - "!_team.qmd"
 ---
+
+

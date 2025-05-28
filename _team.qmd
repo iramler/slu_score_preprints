@@ -1,4 +1,4 @@
-# The Team
+# 🏅 The SLU SCORE Team
 
 ## Faculty
 
@@ -14,8 +14,35 @@ Robin Lock is a Professor of Statistics and, along with many other achievements,
 A.J. Dykstra is the Director of the Peterson Quantitative Resource Center and a Mathematics & Statistics Lecturer. He is a 2022 Graduate from St. Lawrence and was an active member of the Ultimate Frisbee Club. Currently, A.J. coaches baseball for the local high school and enjoys working with students to develop SCORE modules across a wide variety of sports.
 :::
 
+::: {.callout-note icon=false title="Michael Schuckers"  collapse=true appearance="minimal"}
+In 2024, Michael Schuckers retired from the faculty at St. Lawrence University. However, he is still actively involved in the SCORE Network serving as an Editor for the module repository.  He is a recipient of the ASA’s Section on Statistics in Sports Significant Contributor award and he's consulted with major MLB and NHL teams.
+:::
+
+
 ## Students
 We've had numerous students assist in developing both SCORE modules and preparing submissions for the data repository. They are listed by year below.
+
+::: {.callout-note icon=false title="2025"  collapse=true appearance="minimal"}
+Summer 2025 NSF SCORE Summer Research Fellows:
+
+- Phoebe Jones
+- Cooper Olney
+- Faith Rhinehart (Also supported by the St. Lawrence University Fellows Program)
+
+The following students also assisted in developing SCORE materials during the 2024-2025 academic year.
+
+- Brendan Karadenes
+<!--
+- Alix du Plessis
+- Jill Tyrell
+- Charlie Gartner
+- Abigail Sikora
+- Sarah Sheldon
+- Josh Larson
+-->
+:::
+
+
 
 ::: {.callout-note icon=false title="2024" collapse=true appearance="minimal"}
 Summer 2024 NSF SCORE Summer Research Fellows:

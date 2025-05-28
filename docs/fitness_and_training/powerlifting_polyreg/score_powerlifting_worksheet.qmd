@@ -1,0 +1,139 @@
+---
+title: "Score Powerlifting Worksheet"
+format: 
+  html:
+    embed-resources: true
+format: html
+---
+
+Powerlifting is a strength sport where participants compete to lift the heaviest weight. Competitors compete within weight classes, so their opponents are around the same weight as them. The sport consists of three different lifts: Squat, Bench, and Deadlift. Squat lifts require lifters to squat so that their hips are below their knees and lift the weight to a specific depth. Bench lifts are done while the lifter is lying on a bench. Bench lifters start with the bar weight being held in the air and must lower the bar down to their body. Once the bar touches their body, lifters wait for the command to lift the bar back into the air with their elbows fully extended. Deadlifting, like squats, start with the lifter standing up. The lifter must lift the bar off the ground and get into the position where their shoulders are back and knees are locked. Competitors are overseen by three judges who determine whether the lift follows the rules of the events. If a judge believes the lifter followed the rules, they will turn on a white light. In order for a lift to count, competitors must receive at least two white lights. 
+
+The Powerlifting dataset features data from individual lifters during their most recent competitions. Variables include characteristics such as sex, age, birth year and age classes, and division. Other variables include 3 types of weightlifting: squats, benches, and deadlifts.The relevant variables for this specific module are Sex, Age, and Best3DeadliftKg. 
+
+For the sake of this module, the data set was tidied so that it only included the event "SBD" (Squat, Bench, Deadlift) and two types of equipment use: Raw, meaning no equipment except knee sleeves, and Single-ply, which is a single layer suit. The data was also tided to exclude any lifter that did not finish the competition or had missing information for key variables like Age and Sex.
+
+For this worksheet, we want to use Sex and Age as predictors for Best3DeadliftKg.
+
+```{r}
+library(tidyverse)
+library(readr)
+library(broom)
+powerlift <- read_csv("smshel21/powerlifting/module/powerlift_sample_data_updated.csv")
+#powerlift_n <- read_csv("powerlift_data_new.csv")
+powerlift_new <- powerlift |>
+  filter(Event == "SBD") |>
+  filter(Equipment %in% c("Raw", "Single-ply")) |>
+  filter(Place != "DQ") |>
+  filter(Place != "NS") |>
+  drop_na(Place) |>
+  filter(Place != "G") |>
+  filter(Place != "DD") |>
+  drop_na(Age) |>
+  drop_na(AgeClass)
+
+powerlift_new$SexIND = ifelse(powerlift_new$Sex == "M", 1, 0)
+```
+
+
+
+1. 
+a) To start, we will use data that only incorporates females. Create a new data set that filters females.
+
+
+
+b) Create a scatterplot comparing Age and Best3DeadliftKg. Add a smoother. What do you notice about the curve? 
+
+
+
+
+
+
+b) By just looking at the graph, what type of model should be used?
+
+
+
+
+
+c) Now, add another smoother using formula =  y ~ poly(x, 2) to compare to the female line. This adds a quadratic curve. Does it fit? Try editing the number to find the curve that best matches.
+
+
+
+
+
+d) Create a model based off of the curve that best fits. What do you notice?
+
+
+
+
+
+e) Estimate the peak by looking at the graph.
+ 
+
+
+
+f) Find the peak.
+```{r}
+female <- lm(data = powerlift_f, Best3DeadliftKg ~ poly(Age, 4))
+predict_f <- predict(object = female, newdata = tibble(Age = powerlift_f$Age))
+female_peak <- powerlift_f$Age[which.max(predict_f)]
+female_peak
+```
+
+
+
+
+2. Repeat the analysis for male sex. Then, compare and contrast with the female curve.
+Add a smoother that shows the Male sex and use y ~ poly(x, 2) to see which curve best fits.
+
+
+
+a. Notice that the female curve best fits a quadratic model based on the graph. However, a quadratic model is incorrect for this situation. Why is that?
+
+
+
+
+
+b. Create a model to predict Best3DeadliftKg for males.
+
+
+
+
+c. Find the peak.
+```{r}
+male <- lm(data = powerlift_m, Best3DeadliftKg ~ poly(Age, 5))
+predict_m <- predict(object = male, newdata = tibble(Age = powerlift_m$Age))
+male_peak <- powerlift_m$Age[which.max(predict_m)]
+male_peak
+```
+
+
+
+
+3. Build a model using both sexes that provides separate polynomial curves for each sex.
+
+a) Make the graph, analyze.
+
+i. With facet(~Sex)
+
+
+ii. No faceting
+
+
+
+
+b) Build the model.
+
+
+
+
+
+c) Find the peak.
+```{r}
+overall <- lm(data = powerlift_new, Best3DeadliftKg ~ poly(Age, 5))
+predict_o <- predict(object = overall, newdata = tibble(Age = powerlift_new$Age))
+overall_peak <- powerlift_new$Age[which.max(predict_o)]
+overall_peak
+```
+
+
+
