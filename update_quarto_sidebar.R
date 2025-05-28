@@ -24,5 +24,9 @@ q$website$sidebar <- list(
 )
 
 # Write updated YAML
-writeLines(as.yaml(q, handlers = list(logical = function(x) if (x) "true" else "false")), qfile)
+# Write YAML with correct booleans (true/false without quotes)
+yaml_text <- as.yaml(q)
+yaml_text <- gsub("toc: 'true'", "toc: true", yaml_text)
+yaml_text <- gsub("toc: 'false'", "toc: false", yaml_text)
+writeLines(yaml_text, qfile)
 
