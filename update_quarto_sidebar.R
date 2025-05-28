@@ -24,4 +24,5 @@ q$website$sidebar <- list(
 )
 
 # Write updated YAML
-writeLines(as.yaml(q), qfile)
+writeLines(as.yaml(q, handlers = list(logical = function(x) if (x) "true" else "false")), qfile)
+
