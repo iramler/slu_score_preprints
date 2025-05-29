@@ -42,7 +42,7 @@ website:
 format:
   html:
     theme:
-      - simplex
+      - flatly
       - score.scss
     toc: true
 
