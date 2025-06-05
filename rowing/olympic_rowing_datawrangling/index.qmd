@@ -27,7 +27,6 @@ categories:
 If you are unfamiliar with the sport of rowing, we encourage you to watch the following video from [World Rowing](https://worldrowing.com/about/){target="_blank"}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/64N-QvIDyqI?si=d3xLOJ1EbWfL_vde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
 </iframe>
 
 ### Introduction to Module
@@ -64,7 +63,7 @@ All the questions will require the use of R or a similar programming language.
 
 ### Data
 
-In the data set there are 271,106 athletes from 230 countries competing in 66 sports at 35 different Olympics. Each row represents an individual athlete competing in an event at an Olympics. There are 15 variables in the dataset.
+In the data set there are 271,106 athletes from 230 countries competing in 66 sports at 35 different Olympics. Each row represents an individual athlete competing in an event at an Olympics. There are 15 variables in the dataset. 
 
 Download data:
 
