@@ -22,15 +22,15 @@ categories:
   - confounding variable
 ---
 
-### Welcome video
+### Introduction to Rowing
 
-If you are unfamiliar with the sport of rowing, we encouresge you to watch the following video from [World Rowing](https://worldrowing.com/about/){target="_blank"}
+If you are unfamiliar with the sport of rowing, we encourage you to watch the following video from [World Rowing](https://worldrowing.com/about/){target="_blank"}
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/64N-QvIDyqI?si=d3xLOJ1EbWfL_vde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
 </iframe>
 
-### Introduction
+### Introduction to Module
 
 This activity looks at the total number of medals and points for nations in [Olympic rowing between 1900 and 2022](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download){target="_blank"}.
 
