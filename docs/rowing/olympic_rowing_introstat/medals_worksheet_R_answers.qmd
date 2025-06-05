@@ -1,0 +1,117 @@
+---
+title: "Analyzing the Distribution of Olympic Medals in Rowing"
+format: html
+---
+
+```{r}
+library(tidyverse)
+```
+
+# Introduction
+
+The Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 and has been in every Summer Olympics since. Rowing races in the Olympic context are typically regatta style, meaning that there are multiple boats racing head-to-head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze. Over the course of its time as an Olympic sport there have been 25 different event entries.
+
+In this dataset ([rowing_metals.csv](rowing_medals.csv)), the medals are counted as one medal towards each boat as opposed to each athlete in the boat. In looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lopsided medaling can be in rowing at the Olympic level.
+
+Here is a description of the variables included in the dataset.
+
+| Variable | Description                                                      |
+|----------|------------------------------------------------------------------|
+| NOC      | The nation competing.                                            |
+| medals   | The total number of medals for that country in that event.       |
+| points   | `points = (3 × Gold) + (2 × Silver) + (1 × Bronze)`              |
+| gold     | The total number of gold medals for that country.                |
+| silver   | The total number of silver medals for that country.              |
+| bronze   | The total number of bronze medals for that country.              |
+
+
+```{r}
+rowing <- read_csv("rowing_medals.csv")
+```
+
+
+1. Create a histogram of `points` for all countries. Describe the distribution of `points`.
+
+```{r}
+# 1. Histogram of points
+ggplot(data = rowing,
+       mapping = aes(x = points)
+       ) +
+  geom_histogram(binwidth = 5, 
+                 fill = "steelblue", 
+                 color = "black") +
+  labs(title = "Distribution of Points by Country", 
+       x = "Points",
+       y = "Frequency")
+```
+
+_The data is right-skewed meaning that the values are clustered around the smaller values for points, so it is more common for nations to get fewer medals in Olympic rowing._
+
+
+2. Obtain the five number summary and mean & standard deviation statistics for `points`.
+
+```{r}
+summary(rowing$points)
+mean(rowing$points)
+sd(rowing$points)
+```
+
+3. Use these summarizes to numerically check if there are any other outliers for `points`.
+
+```{r}
+# 3. Check for outliers using 1.5 IQR method
+Q1 <- quantile(rowing$points, 0.25)
+Q3 <- quantile(rowing$points, 0.75)
+IQR <- Q3 - Q1
+lower_bound <- Q1 - 1.5 * IQR
+upper_bound <- Q3 + 1.5 * IQR
+rowing |> 
+  filter(!between(points,lower_bound,upper_bound))
+```
+
+4. Create a bar plot of `NOC` ranked by `medals` to showcase the distribution of `medals` per nation. Describe any noticeable patterns in the plot.
+
+```{r}
+# Bar plot of medals by NOC
+rowing |>
+  arrange(desc(medals)) |>
+  mutate(NOC = fct_inorder(NOC)) |>
+  ggplot(mapping = aes(x = fct_reorder(NOC, medals, .desc = FALSE), 
+                       y = medals)) +
+  geom_col(fill = "cornflowerblue") +
+  labs(title = "Medals by Country", 
+       x = "Country (NOC)", 
+       y = "Number of Medals") +
+  coord_flip() +
+  theme_minimal()
+```
+
+
+5. What could be a reason for some nations winning more than others?
+
+_Economics could certainly be a factor in medaling as rowing programs are expensive to fund due to the price of boats. Additionally, countries’ access to rowable water bodies could come into play. Also the population size of countries could certainly matter as rowing programs need a lot of people._
+
+6. There is a lot of debate about how to best weigh the `points` for the different types of medals. Read <https://www.topendsports.com/events/summer/medal-tally/rankings-weighted.htm> about different medal point weighing and decide on a method you think would be best or make up your own weighting system. How would the new method alter the data?
+
+_Open ended, no right or wrong answer, credit for answering._
+
+7. Using the gold, silver, and bronze variables, create a new `points` variable with a different name based on your idea for medal scaling. Create a histogram of the points with this new variable and comment on the skew.
+
+_Open ended, no right or wrong answer, credit for answering, so long as the data makes sense and there are no errors._
+
+_Here is sample code using the "New York Times weighted point system (4:2:1)" of gold = 4 points, silver = 2 points, and bronze = 1 point._
+
+```{r}
+rowing |>
+  mutate(nyt_points = 4 * gold + 2 * silver + 1 * bronze) |>
+    arrange(desc(nyt_points)) |>
+  mutate(NOC = fct_inorder(NOC)) |>
+  ggplot(mapping = aes(x = fct_reorder(NOC, nyt_points, .desc = FALSE), 
+                       y = nyt_points)) +
+  geom_col(fill = "coral") +
+  labs(title = "Points (using NY Times Weighting) by Country", 
+       x = "Country (NOC)", 
+       y = "NY Times Points") +
+  coord_flip() +
+  theme_minimal()
+```

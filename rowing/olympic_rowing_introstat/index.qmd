@@ -87,17 +87,22 @@ Download data:
 
 We provide editable MS Word handouts that don't require additional technology. We also provide editable worksheets that require the use of R (MS Word and Quarto format). Solutions are provided for all versions.
 
-[Worksheet](medals_worksheet.docx)
+**No Tech Required**
 
-[Worksheet Answers](medals_worksheet_answers.docx)
+  - [Worksheet](medals_worksheet.docx)
+  - [Worksheet Answers](medals_worksheet_answers.docx)
 
-[Tech Worksheet - MS Word](medals_worksheet_tech.docx)
+**Tech  Required**
 
-[Tech Worksheet Answers  - MS Word](medals_worksheet_answers_tech.docx)
+_MS Word Documents - solutions written in R, but any software will suffice._
 
-[Tech Worksheet - R Quarto](medals_worksheet_R.qmd)
+  - [Tech Worksheet - MS Word](medals_worksheet_tech.docx)
+  - [Tech Worksheet Answers  - MS Word](medals_worksheet_answers_tech.docx)
 
-[Tech Worksheet Answers  - R Quarto](medals_worksheet_R_answers.qmd)
+_Quarto Documents - assumes students will use R_
+
+  - [Tech Worksheet - R Quarto](medals_worksheet_R.qmd)
+  - [Tech Worksheet Answers  - R Quarto](medals_worksheet_R_answers.qmd)
 
 
 
