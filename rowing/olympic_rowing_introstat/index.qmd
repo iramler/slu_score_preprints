@@ -13,7 +13,7 @@ author:
     affiliation:
       - ref: slu
 
-date: June 6, 2024
+date: June 5, 2025
 description: The total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022. 
 categories:
   - distribution and skewness
@@ -24,7 +24,9 @@ categories:
 
 ### Welcome video
 
-{{< video title="Olympic Rowing Medals Between 1900 and 2022" >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/64N-QvIDyqI?si=d3xLOJ1EbWfL_vde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
 
 ### Introduction
 
@@ -66,14 +68,14 @@ Download data:
 
 <summary><b>Variable Descriptions</b></summary>
 
-| Variable | Description                                                                                                                                                   |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `NOC`    | National Olympic Committee or the nation competing.                                                                                                           |
-| `medals` | The total number of medals for that country in that event.                                                                                                    |
+| Variable | Description |
+|------------|------------------------------------------------------------|
+| `NOC` | National Olympic Committee or the nation competing. |
+| `medals` | The total number of medals for that country in that event. |
 | `points` | The total number of points for that country in that event. The points are scaled with a gold medal counting for 3 points, a silver for 2, and a bronze for 1. |
-| `gold`   | The total number of gold medals for that country.                                                                                                             |
-| `silver` | The total number of silver medals for that country.                                                                                                           |
-| `bronze` | The total number of bronze medals for that country.                                                                                                           |
+| `gold` | The total number of gold medals for that country. |
+| `silver` | The total number of silver medals for that country. |
+| `bronze` | The total number of bronze medals for that country. |
 
 **Data Source**
 
@@ -83,15 +85,21 @@ Download data:
 
 ### Materials
 
-We provide editable MS Word handouts along with their solutions.
+We provide editable MS Word handouts that don't require additional technology. We also provide editable worksheets that require the use of R (MS Word and Quarto format). Solutions are provided for all versions.
 
 [Worksheet](medals_worksheet.docx)
 
 [Worksheet Answers](medals_worksheet_answers.docx)
 
-[Tech Worksheet](medals_worksheet_tech.docx)
+[Tech Worksheet - MS Word](medals_worksheet_tech.docx)
 
-[Tech Worksheet Answers](medals_worksheet_answers_tech.docx)
+[Tech Worksheet Answers  - MS Word](medals_worksheet_answers_tech.docx)
+
+[Tech Worksheet - R Quarto](medals_worksheet_R.qmd)
+
+[Tech Worksheet Answers  - R Quarto](medals_worksheet_R_answers.qmd)
+
+
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 This Olympic rowing medals worksheet builds students' understanding of data distribution through histograms, summary statistics, and outliers. It also strengthens students' ability to critically evaluate confounding variables and devising relationships amongst variables through looking at barplots. Additionally, it provides an interesting opportunity for students to look at patterns in medals for Olympic rowing.
