@@ -271,7 +271,7 @@ j_summary <- judges %>%
 
 ### An interview with Nate Latshaw of LiteralFightNerd.com
 
-{{< video https://youtu.be/Fc5xTFmEZOM width="500" height="300">}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fc5xTFmEZOM?si=b47SDg7PIOeCgOzJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Introduction
 
