@@ -1,0 +1,1265 @@
+---
+title: Inter-Rater Reliability with MMA
+author: Caleb Skinner
+description:
+keywords:
+date: 07/31/2023
+require:
+    data_dictionary: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/data_dictionary.json"
+    decisions_display: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/decisions_display.json"
+    Dam_Lee: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/Dam_Lee.csv"
+    Dam_Cle: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/Dam_Cle.csv"
+    j_summary: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/j_summary.json"
+    pairings: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/pairings.json"
+    random: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/random.csv"
+    Fleiss: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/Fleiss.csv"
+    tri_pairings: "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/tri_pairings.csv"
+language: en-US
+server: https://isle.stat.cmu.edu
+license: CC BY 4.0 [https://creativecommons.org/licenses/by/4.0]
+---
+
+# Overview
+
+This is the path that our module will follow:
+
+* Data
+* Percent Agreement
+* Chance
+* Cohen's Kappa
+* Weighted Kappa
+* Fleiss' Kappa
+
+What do mixed martial arts, figure skating, lab experiments, medical diagnoses, and essay grading all have in common? Not much on the surface; except they all use human judges to evaluate or measure an event. Each of these fields- and many more- rely heavily on human judgment for their results. Sometimes, a different judge could lead to an entirely new conclusion. How do we know when to trust our human measurement systems? How much can we trust them?
+
+**Inter-rater reliability** measures the consistency of two or more individuals rating an event. Simply put, it measures the extent that these judges agree in their diagnosis of an event. Imagine several teachers grading a single essay. In a perfect world, all of the teachers will award the essay the same score. Inter-rater-reliability measures the consistency of these “raters”.
+
+This leads to a concept termed **reproducibility**. If the judges’ scores are similar, then the measurements are reproducible. Several different judges can rate the same event and we would expect similar results. If the judges’ scores are not similar, then the system may be flawed. Ideally, the particular judge(s) of an event do not have a significant impact on the result. If a survey, study, or piece of academic research is not reproducible, then it is difficult to trust the results. A different set of judges could yield an entirely different conclusion.
+
+This process also gives us information on the judges themselves. If there is a high consistency between the judges- then we can say the judges are **interchangeable**. In other words, substituting one judge for another would lead to little change in the results. On the other hand, some individuals are more reliable than others. Inter-rater reliability can also help us to understand which raters are the most likely to differ in their assessments.
+
+Still, inter-rater-reliability can help us to test the reliability of a measurement system or interchangeability of judges, but it cannot speak to its **validity** or accuracy. While unlikely, it is conceivable that results from a group of judges could be consistent and reproducible, yet inaccurate. Testing the accuracy of the data is beyond the scope of inter-rater reliability.
+
+*Inter*-rater reliability should not be confused with *intra*-rater reliability. *Inter*-rater reliability measures the variation between multiple judges evaluating one event. *Intra*-rater reliability measures the variation of one judge evaluating multiple trials of one event. They are both important, and they often use similar methods, but we will be focusing on *inter*-rater reliability today.
+
+### MMA Overview
+
+As aforementioned, inter-rater reliability can be implemented in judge-based sports. One of the most well-known of these sports is Mixed Martial Arts or MMA. In this module, we'll walk you through some inter-rater reliability methods using results from MMA competitions. The MMA encompasses all sorts of fighting methods between two fighters. Some popular forms are boxing, kickboxing, muay thai, jiu-jitsu, and wrestling. These forms have different fighting styles and rules, but they generally have the same outcome structure.
+
+In simple terms, the fights always end in one of two ways: first, one fighter is unable to continue, or second, the time runs out. It is easy to determine a winner in the first scenario. The second is more difficult. Most fights are three rounds, but championship fights and some main event fights are five rounds. After the final bell, the outcome rests in the hands of three judges to score the match and determine a winner. The MMA terms this act a "decision".
+
+Organizations like the UFC employ these judges, but they cannot select them. This responsibility resides with Athletic Commissions - like the Nevada State Athletic Commission or New York State Athletic Commission - to delegate judges to the events. To prevent corruption, judges are separate from the organization that holds the events. Judges are also kept independent from each other. They sit in different booths in the arena and score the fights without consulting one another.
+
+## Data
+
+Our data includes 5000 fights that end in a decision. All 5000 of these fights reached the final bell without a natural victor. The three judges scored the fight and determined a winner.
+
+The data spans from 2001 to 2021, including fights from all over the world and many organizations like UFC, Bellator, Invicta, Strikeforce, and World Extreme Cagefighting. Here is a list of the variables in our data set, and a data dictionary to help you understand them. Fighter 1 and fighter 2 were randomly assigned these labels. There is no meaning behind this classification.
+
+<DataTable
+    data={data_dictionary}
+/>
+
+Here is a table of the data we will use.
+
+<DataTable
+    data={decisions_display}
+/>
+
+In our data, there are three or five rounds of competition. Each of the three judges score both fighters on each round. A typical victory in a round gives 10 points for the victor and 9 points for his opponent. A large victory awards 10 points and 8 points, and an overwhelming victory awards 10 points and 7 points, respectively.
+
+After totaling up the points, each judge arrives at his or her outcome. A victory for the first fighter, victory for the second fighter, or a draw. However, as you can guess, they often disagree.
+
+# Percent Agreement
+
+We'll begin by evaluating the inter-rater-reliability between two judges. One simple way is to calculate the percentage of fights in which they agree on the outcome. This is appropriately termed **percent agreement**. This reduces each fight into a simple outcome: agree or disagree, so we lose any information on the scores or margin of the fight. Percent agreement has been criticized for its simplicity, because it ignores the possibility of judges arriving at agreement through chance. Still, it provides a foundation for the widely used **Cohen's kappa**. There will be more on this later, but for now, let's calculate the percent agreement for some judges.
+
+Below, we see a table of the most frequently-appearing judges. The table includes the number of fights that they judged. D'Amato, Lee, and Cleary are the most experienced judges in our data set.
+
+<DataTable
+    data={j_summary}
+/>
+
+### D'Amato and Lee
+
+Let’s take the top two judges: D’Amato and Lee, and compare their rulings on fights where they both judged the same fight. We’ll look specifically at the outcome categorical variable: judge_out.
+
+Here is a **contingency table** that summarizes all the fights that D'Amato and Lee judged together. Contingency tables are used to assess the association between two paired categorical variables. They tabulate the distribution of each variable and compare their results.
+
+<ContingencyTable
+    data = {Dam_Lee}
+    rowVar = "damato_out"
+    colVar= "lee_out"
+/>
+
+This table helps us to organize and compare D'Amato's and Lee's ratings. Each row consists of D'Amato's votes and each column consists of Lee's corresponding votes. Thus, the table forms a downward sloping diagonal where the judges agree. These are called **concordant responses**.
+
+They both selected a draw twice, fighter 1 as the victor 62 times, and fighter 2 as victor 52 times. However, they selected opposing fighters 22 times (10 + 12), and D'Amato voted for a draw four times where Lee disagreed.
+
+Our total concordant values is 62 + 2 + 52 = 116. We can calculate the simple percent agreement by adding up all the concordant values, and dividing it by the total number of results. Another word for this is the **proportion of observed agreement** ($p_{o}$). This term will be important later.
+
+<FrequencyTable
+    data= {Dam_Lee} 
+    variable= "agreement"
+    calculateRelative
+/>
+
+Surprisingly, D'Amato and Lee's simple agreement (proportion of observed agreement) is only 81.69%. This means they disagreed on almost 1/5 of their rulings.
+
+Simple agreement only gives us a descriptive statistic about the relationship between D'Amato and Lee. We cannot draw any statistically viable conclusions about their agreement or interchangeability.
+
+### D'Amato and Cleary
+
+Let's compare D'Amato and Lee's consistency with that of D'Amato and Cleary. Below is the contingency table of D'Amato and Cleary.
+
+<ContingencyTable
+    data = {Dam_Cle}
+    rowVar = "damato_out"
+    colVar= "cleary_out"
+/>
+
+Can you identify D'Amato and Cleary's concordant responses?
+
+Use the concordant responses to calculate D'Amato and Cleary's percent agreement yourself. Remember, the formula for percent agreement $(p_{o})$ = concordant values/total.
+
+We've left the table empty for you. Fill it in with the appropriate values.
+
+<QuestionForm>
+    <NumberQuestion
+        question="Agree"
+        solution={139}
+        hints = {["Sum up the concordant responses.", "Concordant responses form a diagonal on the contingency table.", "3 + 65 + 71"]}
+    />
+    <NumberQuestion
+        question="Disagree"
+        solution={13}
+        hints = {["Sum up the non-concordant values.", "1 + 1 + 4 + 7"]}
+    />
+    <NumberQuestion
+        question="Percent Agreement (at least four digits)"
+        solution={.9145}
+        hints = {["Divide the concordant responses over the total number of responses.", "139/152"]}
+    />
+</QuestionForm>
+
+<FreeTextQuestion 
+    question="How do the results compare with D'Amato and Lee?" 
+    rows={3}
+    solution = "As before, D'Amato is more inclined to vote for a draw, but generally, Cleary and D'Amato agree more than D'Amato and Lee."
+/>
+
+D'Amato and Cleary's simple agreement is almost 10 percentage points higher than D'Amato and Lee's. This means this pairing is much more consistent and reliable, right? Percent agreement leaves us without a strong way to evaluate the numbers. Any level of comparison is arbitrary.
+
+### Other Judges
+
+If you'd like to compare and analyze more examples, you can select any two judges to compare below. If you're looking for some interesting examples, we'd suggest you look at this table and select a judge pairing with a large sample size.
+
+<DataTable
+    data={pairings}
+/>
+
+Select your own judge pairing by entering it into the vector below.
+
+<RShell
+    code={`stu_picks <- c("Bell", "Mccarthy");
+    `} lines={2}
+    />
+
+Press 'Evaluate' below to see a contingency table of your selected judge pairing.
+
+<RShell 
+    libraries={[ 'dplyr', 'tidyr', 'stringr', ]}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns a contingency table
+judge01 <- stu_picks[1];
+judge02 <- stu_picks[2];
+Jud_Jud<- judges %>% filter(judge == judge01)%>% pivot_longer(c(judge2, judge3), values_to = "judge_pair", names_to = "type")%>% filter(judge_pair == judge02) %>% mutate(
+      judge02_score1 = if_else(type == "judge2", judge2_score1, judge3_score1),
+      judge02_score2 = if_else(type == "judge2", judge2_score2, judge3_score2),
+      judge02_margin = if_else(type == "judge2", judge2_margin, judge3_margin),
+      judge02_perc = if_else(type == "judge2", judge2_perc, judge3_perc),
+      judge02_dev = if_else(type == "judge2", judge2_dev, judge3_dev),
+      judge02_out = if_else(type == "judge2", judge2_out, judge3_out),
+      judge01_score1 = judge_score1,
+      judge01_score2 = judge_score2,
+      judge01_margin = judge_margin,
+      judge01_perc = judge_perc,
+      judge01_dev = judge_dev,
+      judge01_out = judge_out,
+      agreement = if_else(judge01_out == judge02_out, "Agree", "Disagree"),
+      judge01_out = recode(judge01_out,
+                           'Winner' = 'fighter1',
+                           'Loser' = 'fighter2'),
+      judge02_out = recode(judge02_out,
+                           'Winner' = 'fighter1',
+                           'Loser' = 'fighter2'),
+      judge01_out = factor(judge01_out, levels = c("fighter1", "draw", "fighter2")),
+      judge02_out = factor(judge02_out, levels = c("fighter1", "draw", "fighter2")))%>% select(date, event, arena, city, fighter1, fighter2, result_type, agreement, winner, winner2, rounds, judge01_score1, judge01_score2, judge01_margin, judge01_perc, judge01_dev, judge01_out, judge02_score1, judge02_score2, judge02_margin, judge02_perc, judge02_dev, judge02_out);
+judge01 <- gsub("'", '', judge01);
+judge02 <- gsub("'", '', judge02);
+
+colnames(Jud_Jud) <- colnames(Jud_Jud) %>% str_replace("judge01", str_to_lower(judge01)) %>% str_replace("judge02", str_to_lower(judge02));
+Jud_Jud;
+
+name2 <- str_c(str_to_lower(stu_picks[2]),"_out");
+names <- c(Jud_Jud[17], Jud_Jud[23]);
+
+jj_table <- with(Jud_Jud, table(names)) %>% as_tibble() %>% pivot_wider(names_from = name2, values_from = n) %>% bind_rows(summarise(., across(where(is.numeric), sum),
+                         across(where(is.character), ~'total'))) %>% mutate(total = rowSums(.[, c(2:4)])) %>% rename_with(~ paste0(str_c(stu_picks[1], " | ", stu_picks[2])), ends_with("out"));
+jj_table;
+    `} lines={1}
+    addPreceding
+/>
+
+Assess the table. How well do the judges tend to agree?
+
+Once again, we've left an empty percent agreement table for you. Fill in the cells with the appropriate values and calculate the percent agreement.
+
+<QuestionForm>
+    <NumberQuestion
+        question="Agree"
+        hints = {["Sum up the concordant responses.", "Concordant responses form a diagonal on the contingency table."]}
+    />
+    <NumberQuestion
+        question="Disagree"
+        hints = {["Sum up the non-concordant values.", "1 + 1 + 4 + 7"]}
+    />
+    <NumberQuestion
+        question="Percent Agreement (at least four digits)"
+        hints = {["Divide the concordant responses over the total number of responses."]}
+    />
+</QuestionForm>
+
+<FreeTextQuestion 
+    question="How do the judges you selected compare to the other judges we assessed?" 
+    rows={3}
+    hints={["Which judge pairing has a larger percent agreement?"]}
+/>
+
+Percent agreement is helpful, because it gives us a general understanding of the judges' reliability, but it is limited. It has been thoroughly rejected as an adequate estimate for inter-rater reliability in many academic journals. It cannot account for the judges' arriving at similar conclusions via chance.
+
+# Chance
+
+But how likely is it for judges to arrive at similar conclusions via chance?
+
+Let's look at a simple simulation to prove our point. Here, we have two hypothetical judges - we'll call them Jimmy and Mateo - rating 1000 fights. Except, instead of watching and analyzing the fights before carefully determining a winner, both Jimmy and Mateo slept through all 1000 fights. Luckily for them, they remembered the historical voting trends of MMA judges. Both of them, independently, decided to randomly select a winner for each of the 1000 fights in a way that was consistent with the likelihoods of the historical rulings.
+
+The historical rulings are below. In the 1000 fights, they selected fighter 1 and fighter 2 about 49% of the time and a draw about 2% of the time.
+
+<RPlot
+    libraries={[ 'ggplot2', 'dplyr' ]}
+    prependCode={'historical_plot <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/historical_plot.csv", header=TRUE, sep=",")'}
+    code={`historical_plot %>% mutate(judge_out = factor(judge_out, levels = c("fighter1", "draw", "fighter2"))) %>% ggplot(aes(judge_out, perc)) + geom_histogram(stat = "identity", fill = "indianred3") + labs(title = "Judges Historical Votes", x = "", y = "");
+    `}/>
+
+They made these ratings without consulting each other or watching the fights. Below is the data set we created.
+    
+<DataTable
+    data={random}
+/>
+
+And here is their contingency table.
+
+<ContingencyTable
+    data={random} 
+    rowVar="Jimmy"
+    colVar="Mateo"
+/>
+
+Their simple agreement numbers come out like this:
+
+<FrequencyTable
+    data= {random} 
+    variable= "agreement"
+    calculateRelative
+/>
+
+Woah! Jimmy and Mateo agreed *48.80%* of the time. This certainly is not a good rate of agreement, but it definitely casts some doubt on the agreement rates of our real judges D'Amato, Lee, and Cleary. Their percent agreements fell in the 80-90% range, but we can get over half that agreement with just random chance.
+
+# Cohen's Kappa
+
+**Cohen's kappa** is a second, more rigorous method, that assesses the agreement between two judges. Like percent agreement, it measures the reproducibility of repeated assessments of the same event. It was developed by Jacob Cohen in the 1960s as an alternative agreement method that accounts for the possibility of chance agreement.
+
+Cohen's kappa makes a few assumptions about the data:
+
+1. The same two individuals must rate each event. There can't be any discontinuity.
+2. The principle of **independence**. The judges rate the same events without consultation or communication. This means the judges' results are **paired**.
+3. The judgments are made between the same defined categories.
+
+All three of these assumptions are met by our data. We will filter our data to ensure the same two judges score each event. Judges in MMA fights are kept in separate areas around the fight. All our judges vote for fighter 1, fighter 2, or a draw.
+
+Like percent agreement, Cohen's kappa works with any categorical variable. However, it typically works with **nominal** variables. Nominal variables are a type of categorical variable that has no ordering within the categories. Nominal variables cannot be converted into numeric values. Think categories of colors instead of categories of age.
+
+Cohen's kappa isolates the judges' real agreement from their chance agreement. It produces a correlation coefficient kappa ($\kappa$) that assesses the agreement between the two judges and ranges from -1 to 1.
+
+* At $\kappa$ = -1, the two judges produced exactly opposite assessments of the event.
+* At $\kappa$ = 0, the agreement between the two judges is tantamount to an agreement entirely produced by chance.
+* At $\kappa$ = 1, the two judges have perfect agreement. Their assessments of the events are identical.
+
+As we walk through the methodology of Cohen's kappa, let's look again at our example of Lee and D'Amato.
+
+Again, we begin with a contingency table.
+
+<ContingencyTable
+    data={Dam_Lee} 
+    rowVar="damato_out"
+    colVar="lee_out"
+/>
+
+Earlier, we found the proportion of observed agreement for this table is 81.69%. If we're going to account for chance, we need to estimate what the agreement rate would be if the results were completely randomized.
+
+We can estimate these random results by producing theoretical estimates. This is called the **expected value**. We calculate the expected value of each cell by multiplying together three values. The first judge's odds of producing a result, the second judge's odds of producing the corresponding result independent of the first judge, and the total number of fights.
+
+For example, to find the expected value in the draw-draw concordant cell. We can multiply D'Amato's draw rate of $\frac{6}{142}$ by Lee's draw rate of $\frac{2}{142}$ and by the total number of fights: 142. We end up with 0.085.
+
+In other words, If D'Amato and Lee were to judge a new set of 142 fights and randomly pick their results from a hat containing their historical results together, we'd expect them to both pick a draw 0.085 times.
+
+We created a table full of the expected values.
+
+<ROutput
+    libraries={[ 'dplyr']}
+    prependCode={'DL_exp <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DL_exp.csv", header=TRUE, sep=",")'}
+  code={`DL_exp %>% rename("D'Amato | Lee" = D.Amato) %>% print(row.names = FALSE)
+  `}/>
+
+With the table, we sum up the three concordant cells: 67.63, and divide by the total number of fights: 142. This gives us the **proportion of expected agreement** ($p_{e}$). A value of 47.63%.
+
+Now, with both the proportion of observed agreement and the proportion of expected agreement, we can calculate kappa using the formula:
+
+* $kappa(\kappa) = \displaystyle \frac{p_{o} - p_{e}}{1 - p_{e}}$
+
+When we plug in those values and solve for kappa, we find that the kappa between D'Amato and Lee is 0.65.
+
+We're past all the calculations and math, but what does our kappa mean?
+
+## Interpreting Kappa
+
+The kappa value represents the percentage of the two judges' results that agree with one another. Conversely, the complement of kappa represents the percentage of the two judge's results that result from chance or straight-up disagreement. The complement, then, represents potentially faulty data.
+
+Thus, the magnitude of the agreement is important. A higher kappa is always better, because it suggests a higher reproducibility in the measurement system. Unlike some statistical tests, the kappa statistic is not evaluated by passing a threshold. Instead, the exact assessment of a kappa often depends on a myriad of factors.
+
+This contextual nature of kappa makes interpretation difficult. There is a lot of disagreement over the interpretations for different kappa values, and the guidelines typically vary with the field of study. For example, health related studies demand a stronger reliability than fields that have less widespread influence over the population's well-being like, say, judging MMA fights.
+
+Below is one evaluation method, that has been generally agreed upon by several prominent statisticians:
+
+* $\kappa > 0.75$             Excellent reproducibility
+* $0.4 \le \kappa \le 0.75$   Good reproducibility
+* $0 \le \kappa < 0.4$        Marginal reproducibility
+
+Applying this method to our judges, D'Amato and Lee's kappa of 0.65 indidcates the judges have "good" reproducibility in their ratings. They have decent consistency and interchangeability. We should be careful, because an estimated 35% of their relationship is comprised of chance agreement or disagreement. However, we cannot speak to D'Amato and Lee's accuracy or validity in their ratings. We cannot assess if their judgments were correct.
+
+It's not standard practice for evaluation, but we can still produce a confidence interval and hypothesis test for our kappa.
+
+With a large enough sample size, kappa is normally distributed with a standard error (se):
+
+* $se(\kappa) = \sqrt{\displaystyle \frac{1}{n(1 - p_{e})^{n}} * [p_{e} + p_{e}^{2} - \sum_{i=1}^{c}{(a_{i}b_{i}(a_{i} + b_{i}))}]}$
+
+Using this standard error, we can calculate the 95% confidence interval by:
+
+* $\kappa = \pm 1.96 * se(\kappa)$
+
+A 95% confidence interval produces an estimated range for the true value of kappa. We can say with 95% confidence that the interval includes the true kappa. Like all confidence intervals, a larger sample size reduces this interval.
+
+The confidence interval is important, because it helps us to see how much we can trust our kappa. A high kappa statistic that has a large confidence interval is far from ideal.
+
+Our 95% confidence interval for the kappa of D'Amato and Lee is 0.529 to 0.772. Thus, we can say with 95% confidence that the interval (0.529, 0.772) includes the true value of kappa. In other words, we would not be surprised if the true kappa is as low as 0.529.
+
+We can also create a hypothesis test for our kappa. We're looking to test that there is at least some non-random association between the judges.
+
+Our kappa test has a null and alternative hypothesis of:
+
+* $H_{o}: \kappa = 0$
+* $H_{a}: \kappa > 0$
+
+We will hold to our null hypothesis unless we have significant evidence to reject it. This evidence is held in a p-value. If our p-value is less than our $\alpha$ of .05, then we have sufficient evidence to reject our null hypothesis and agree with our alternative. Moreover, if our confidence interval does not include 0 within its range, then we can reject the null hypothesis without checking for the p-value.
+
+The hypothesis test can be misleading, however, because a small kappa value can reject the null hypothesis despite indicating only poor agreement. For this reason, confidence intervals are preferable.
+
+Our p-value for D'Amato and Lee is 2.22 x $10^{-16}$. We can thoroughly reject the null hypothesis that there is no association in the decisions of D'Amato and Lee.
+
+### D'Amato and Cleary
+
+Now that we've analyzed D'Amato and Lee. We'd like to give you the opportunity to describe the agreement between D'Amato and Cleary. We'll produce the results and you produce the analysis.
+
+<ContingencyTable
+    data={Dam_Cle} 
+    rowVar="damato_out"
+    colVar="cleary_out"
+/>
+
+<ROutput
+    libraries={[ 'dplyr']}
+    prependCode={'DC_exp <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DC_exp.csv", header=TRUE, sep=",")'}
+  code={`DC_exp %>% rename("D'Amato | Cleary" = D.Amato) %>% print(row.names = FALSE)
+  `}/>
+  
+Recall our percent agreement assessment from earlier. Do D'Amato and Cleary tend to agree?
+
+Compare the two tables. Do the expected values for the cells surprise you?
+
+The proportion of observed agreement for D'Amato and Cleary is 91.45% and the proportion of expected agreement for D'Amato and Cleary is 47.53%.
+
+After solving for kappa, our value is 0.84. Using the guidelines demonstrated in the previous example, interpret the value.
+
+<FreeTextQuestion 
+    question="After some calculations, we find that D'Amato and Cleary's kappa is 0.84. Using the guidelines demonstrated in the previous example, interpret the value." 
+    rows={3}
+    hints={[`k > .75 -  Excellent Reproducibility;
+    .4 > k < .75 -  Good Reproducibility;
+    0 > k < .4 -  Marginal Reproducibility;
+    `]}
+/>
+
+We can run the confidence interval and hypothesis test through our program:
+
+<ROutput 
+    libraries={[ 'dplyr', 'fmsb', 'magittr']}
+    prependCode={'DC_table <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DC_table.csv", header=TRUE, sep=",")'}
+
+code={`DC_table %>% select(- total) %>% column_to_rownames("D'Amato") %>% slice(1:3) %>% Kappa.test() %>% extract2("Result")
+`} />
+
+*Not really sure what to do here, because ISLE doesn't support these packages*
+
+<FreeTextQuestion 
+    question="Analyze the results. Produce explanations of the confidence interval and hypothesis test, and provide your own assessment of the association between D'Amato and Cleary. Try to use the wording and phrases that we explained earlier." 
+    rows={3}
+/>
+
+### Other Judges
+
+Select any two judges to compare. If you're looking for some interesting examples, we'd suggest you look at this table and select a judge pairing with a large sample size. You can even select the same judge pairing as you did with the simple agreement exercise.
+
+<DataTable
+    data={pairings}
+/>
+
+Select your own judge pairing by entering it into the vector below.
+
+<RShell
+    code={`stu_picks <- c("Cartlidge", "Lethaby");
+    `} lines={2}
+    />
+
+Press 'Evaluate' below to see a contingency table of your selected judge pairing.
+
+<RShell 
+    libraries={[ 'dplyr', 'tidyr', 'stringr', ]}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns a contingency table
+    
+judge01 <- stu_picks[1];
+judge02 <- stu_picks[2];
+Jud_Jud<- judges %>% filter(judge == judge01)%>% pivot_longer(c(judge2, judge3), values_to = "judge_pair", names_to = "type")%>% filter(judge_pair == judge02) %>% mutate(
+      judge02_score1 = if_else(type == "judge2", judge2_score1, judge3_score1),
+      judge02_score2 = if_else(type == "judge2", judge2_score2, judge3_score2),
+      judge02_margin = if_else(type == "judge2", judge2_margin, judge3_margin),
+      judge02_perc = if_else(type == "judge2", judge2_perc, judge3_perc),
+      judge02_dev = if_else(type == "judge2", judge2_dev, judge3_dev),
+      judge02_out = if_else(type == "judge2", judge2_out, judge3_out),
+      judge01_score1 = judge_score1,
+      judge01_score2 = judge_score2,
+      judge01_margin = judge_margin,
+      judge01_perc = judge_perc,
+      judge01_dev = judge_dev,
+      judge01_out = judge_out,
+      agreement = if_else(judge01_out == judge02_out, "Agree", "Disagree"),
+      judge01_out = recode(judge01_out,
+                           'Winner' = 'fighter1',
+                           'Loser' = 'fighter2'),
+      judge02_out = recode(judge02_out,
+                           'Winner' = 'fighter1',
+                           'Loser' = 'fighter2'),
+      judge01_out = factor(judge01_out, levels = c("fighter1", "draw", "fighter2")),
+      judge02_out = factor(judge02_out, levels = c("fighter1", "draw", "fighter2")))%>% select(date, event, arena, city, fighter1, fighter2, result_type, agreement, winner, winner2, rounds, judge01_score1, judge01_score2, judge01_margin, judge01_perc, judge01_dev, judge01_out, judge02_score1, judge02_score2, judge02_margin, judge02_perc, judge02_dev, judge02_out);
+judge01 <- gsub("'", '', judge01);
+judge02 <- gsub("'", '', judge02);
+
+colnames(Jud_Jud) <- colnames(Jud_Jud) %>% str_replace("judge01", str_to_lower(judge01)) %>% str_replace("judge02", str_to_lower(judge02));
+
+name2 <- str_c(str_to_lower(stu_picks[2]),"_out");
+names <- c(Jud_Jud[17], Jud_Jud[23]);
+
+jj_table <- with(Jud_Jud, table(names)) %>% as_tibble() %>% pivot_wider(names_from = name2, values_from = n) %>% bind_rows(summarise(., across(where(is.numeric), sum),
+                         across(where(is.character), ~'total'))) %>% mutate(total = rowSums(.[, c(2:4)])) %>% rename_with(~ paste0(stu_picks[1], " | ", stu_picks[2]), ends_with("out"));
+jj_table;
+    `} lines={2}
+    addPreceding
+/>
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble'
+     ]}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+  code={`#code below returns the expected values
+  
+jj_exp0 <- jj_table %>% column_to_rownames(var = str_c(stu_picks[1], " | ", stu_picks[2])) %>% chisq.test();
+jj_exp <- jj_exp0$expected %>% as_tibble() %>% mutate(nam = jj_table[[1]], across(where(is.numeric), round, digits = 2)) %>% rename_with(~ paste0(stu_picks[1], " | ", stu_picks[2]), starts_with("nam")) %>% relocate(last_col(), .before = fighter1);
+jj_exp;
+  `}lines={2}
+    addPreceding
+    />
+    
+Assess the two tables. Do the judges appear to agree? What do their expected values look like? Now, compare the two tables. Do the expected values for the cells surprise you? How similar are they to the observed values?
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble'
+     ]}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+  code={`#code below evaluates the proportion of observed agreement.
+  
+prop_obs_agree <- round((jj_table$fighter1[1] + jj_table$draw[2]+ jj_table$fighter2[3])/jj_table$total[4], digits = 4);
+poa <- str_c("The proportion of observed agreement is ", prop_obs_agree);
+poa;
+  `}lines={2}
+    addPreceding
+    />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble'
+     ]}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+  code={`#code below evaluates the proportion of expected agreement.
+  
+prop_exp_agree <- round((jj_exp$fighter1[1] + jj_exp$draw[2]+ jj_exp$fighter2[3])/jj_exp$total[4], digits = 4)
+poe <- str_c("The proportion of expected agreement is ", prop_exp_agree);
+poe;
+  `}lines={2}
+    addPreceding
+    />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble'
+     ]}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+  code={`#code below evaluates the kappa.
+  
+kappa <- str_c("After solving for kappa, our value is ", round((prop_obs_agree - prop_exp_agree)/(1 - prop_exp_agree), digits = 2));
+kappa;
+
+  `}lines={2}
+    addPreceding
+    />
+
+<FreeTextQuestion 
+    question="Using the guidelines demonstrated previously, interpret the value. Does it surprise you? How does it compare to previous judge-pairings kappas?" 
+    rows={3}
+/>
+
+<FreeTextQuestion 
+    question="Analyze the results. Produce explanations of the confidence interval and hypothesis test, and provide your own assessment of the association between D'Amato and Cleary. Try to use the wording and phrases that we explained earlier." 
+    rows={3}
+/>
+
+# Weighted Kappa
+
+Great. We've analyzed our data and produced a kappa value that assesses the true agreement between judges while accounting for random chance.
+
+Still, we are losing some information. Our judges supply score cards with point values for each fighter. They don't just assign a winner. When we reduce each judge's ruling to win, lose, or draw, we miss out on the degree of these victories. Instead of looking at the outcome variable, let's analyze the margin variable.
+
+In this case, the margin variable is an **ordinal** variable. Ordinal variables are a type of categorical variable that has a similar function to nominal variables, except that there is a clear ordering in the results. Height, for example, can be divided into ordinal categories like "very tall", "tall", "normal", "short", and "very short".
+
+This clear ordering of the categories allows for **partial agreement**. Partial agreement affords some credit to close responses. The judge's responses may not be identical, but they could be close. Short is a lot closer to very short than very tall. Partial agreement takes this into account.
+
+**Weighted kappa** is a variant of Cohen's kappa (also created by Jacob Cohen) that permits this partial agreement between responses. Like Cohen's kappa, it removes any chance agreement, but it also takes into account the proximity of the judges' results. A large disparity in the two judge's margin will lower the agreement much more than smaller disparities. The unweighted Cohen's kappa, however, treats all disparities equally.
+
+The weighted kappa makes assumptions that are similar to Cohen's kappa about the data:
+
+1. The same two individuals must rate each event. There can't be any discontinuity among the raters.
+2. The principle of **independence**. The judges rate the same events without consultation or communication. This means the judges' results are **paired**.
+3. The judgments are made between the same ordinal categories.
+
+Weighted kappa begins like the Cohen's kappa with a contingency table. To avoid any inflation in the margins, we only kept the fights that went three rounds.
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'DLw_table <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DLw_table.csv", header=TRUE, sep=",")'}
+code={`
+DLw_table %>% rename_with(~paste0("-", str_sub(.x, -1, -1)), starts_with("X.")) %>% rename_with(~str_sub(.x, -1, -1), starts_with("X")) %>% rename_with(~ paste0("D'Amato | Lee"), starts_with("D.Amato")) %>% print(row.names = FALSE);
+`} />
+
+Take a second to look through the contingency table. Trace your eyes along the diagonal of concordant values.
+
+<FreeTextQuestion 
+    question="How often do the judges completely agree? How often do they agree in their verdict (win/lose/draw), but disagree in the margin? What are the most common frequencies? Does this make sense contextually?" 
+    rows={3}
+/>
+
+Now look at the expected values.
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'DLw_exp <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DLw_exp.csv", header=TRUE, sep=",")'}
+code={`
+DLw_exp %>% rename_with(~paste0("-", str_sub(.x, -1, -1)), starts_with("X.")) %>% rename_with(~str_sub(.x, -1, -1), starts_with("X")) %>% rename_with(~ paste0("D'Amato | Lee"), starts_with("D.Amato")) %>% print(row.names = FALSE);
+`} />
+
+<FreeTextQuestion 
+    question="What values are the largest? Is this surprising? Does the observed agreement surpass the expected agreement? By how much?" 
+    rows={3}
+/>
+
+Like Cohen's kappa, the weighted kappa calculates the proportion of observed agreement and the proportion of expected agreement by using the concordant values along the diagonal of our contingency tables. However, the calculation of these two agreements becomes more complex, because we can allow for partial agreement for close matches. The formulas are the same as Cohen's kappa, except for the addition of the weights:
+
+* $p_{o} = \sum_{i}\sum_{j} W_{ij} P_{ij}$
+* $p_{e} = \sum_{i}\sum_{j} W_{i+} P_{+j}$
+
+where W is the weight for each cell and P is the proportion of each cells frequency.
+
+## Weights
+
+The weights W are proportions between 0 and 1 that reflect the level of agreement. All concordant values have complete agreement, so their weight is 1. Values to the left and right of the diagonal have proprtions slightly less than 1 and so on. In the standard unweighted Cohen's kappa, all the diagonal values have weights of 1 and the non-diagonal values have weights of 0.
+
+There are many different ways to calculate the weights and selecting them generally depends on the size of the table and the distribution of the variables. Two common methods are linear and quadratic weighting.
+
+**Linear weights**, formally known as Cicchetti-Allison weights, create equal distance between the weights. A cell's weight is directly proportional to its distance from the concordant value.
+
+The formula for the linear weights are:
+
+* $W_{ij} = 1 - (|i - j|)/(R - 1)$
+
+R is the total number of categories and |i - j| is the distance between the two cells.
+
+Let's calculate the weights of the first few cells using the the formula. We'll begin with the (-5, -5) cell and move right on the table.
+
+* $W_{-5,-5} = 1 - (|0|/(11-1))$ = 1
+* $W_{-5,-4} = 1 - (|1|/(11-1))$ = .9
+* $W_{-5,-3} = 1 - (|2|/(11-1))$ = .8
+* $W_{-5,-2} = 1 - (|3|/(11-1))$ = .7
+* $W_{-5,-1} = 1 - (|4|/(11-1))$ = .6
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'linear_weights <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/linear_weights.csv", header=TRUE, sep=",")'}
+code={`
+linear_weights %>% rename_with(~paste0("-", str_sub(.x, -1, -1)), starts_with("X.")) %>% rename_with(~str_sub(.x, -1, -1), starts_with("X")) %>% rename_with(~ paste0("Judge1 | Judge2"), starts_with("Judge1")) %>% print(row.names = FALSE);
+`} />
+
+Notice that each concordant value is 1 and all values next to it are 0.9. This creates a cascade effect for the weights.
+
+**Quadratic weights**, formally known as Fleiss-Cohen weights, use quadratic distancing between the weights. A cell's weight is quadratically related to its distance from the concordant value.
+
+The formula for the quadratic weights are:
+
+* $W_{ij} = 1 - (|i - j|)^{2}/(R - 1)^{2}$
+
+Again, let's calculate the weights of the first few cells using the the formula. We'll begin with the (-5, -5) cell and move right on the table.
+
+* $W_{-5,-5} = 1 - (|0|^{2}/(11-1)^{2})$ = 1
+* $W_{-5,-4} = 1 - (|1|^{2}/(11-1)^{2})$ = .99
+* $W_{-5,-3} = 1 - (|2|^{2}/(11-1)^{2})$ = .96
+* $W_{-5,-2} = 1 - (|3|^{2}/(11-1)^{2})$ = .91
+* $W_{-5,-1} = 1 - (|4|^{2}/(11-1)^{2})$ = .84
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'quadratic_weights <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/quadratic_weights.csv", header=TRUE, sep=",")'}
+code={`
+quadratic_weights %>% rename_with(~paste0("-", str_sub(.x, -1, -1)), starts_with("X.")) %>% rename_with(~str_sub(.x, -1, -1), starts_with("X")) %>% rename_with(~ paste0("Judge1 | Judge2"), starts_with("Judge1")) %>% print(row.names = FALSE);
+`} />
+
+Again, notice how each concordant value is 1 and all values next to it are .99. This creates a steeper cascade than the linear weighting.
+
+Assess the two weighting methods for yourself. What are the advantages and disadvantages of each? Can you imagine any problems arising for either? Which would you choose for our MMA data and why?
+
+Linear weighting values the distance between the fourth and fifth category the same as the distance between the first and second category. If this constant effect fits the data, then it's best to choose linear weighting.
+
+Quadratic weighting determines that the distance between the first and second category is much less than the distance between the fourth and fifth category. As the categories get furthered removed from the concordant value, the difference becomes more egregious.
+
+For the MMA data, we tend to think the quadratic weighting method works best. Generally, egregious misses are the errors that cast doubt on the judging system. The difference in a 3 point and 2 point win is basically none. Still, we need to be careful. Under the quadratic weighting method, a 1 point win for fighter 1 and a 1 point win for fighter 2 are essentially in agreement (w = .96).
+
+## Interpreting Kappa
+
+The calculation and interpretation of the weighted kappa $\kappa$ are the same as Cohen's kappa. If you need a refresher, read through our explanation in the previous tab.
+
+Our weighted kappa $(\kappa)$ is calculated once again by $kappa(\kappa) = \displaystyle \frac{p_{o} - p_{e}}{1 - p_{e}}$.
+
+Using quadratic weights, the observed proportion of agreement is 0.982. This is extremely high, because we have so many partial agreements. If you're curious, look again through our contingency table.
+
+However, the expected proportion of agreement is also very high at 0.900. The weights may inflate our observed agreement levels by adding in partial agreement, but they also inflate our expected agreement.
+
+After solving for D'Amato and Lee's weighted kappa, we find it at 0.82. This is higher than the unweighted kappa (for the outcome variable) of 0.65, likely because a lot of judges disagree marginally.
+
+Our interpretation for the weighted kappa is identical to that of Cohen's kappa. Below is a reminder:
+
+* $\kappa > 0.75$               Excellent reproducibility
+* $0.4 \le \kappa \le 0.75$     Good reproducibility
+* $0 \le \kappa < 0.4$          Marginal reproducibility
+
+Using quadratic weights, we can say there is excellent reproducibility in the scoring margins between D'Amato and Lee. This means the judges are generally consistent in their scores and it is possible to replace one with the other and expect similar results. Remember, this kappa does not mean that the judges are accurate in their assessments.
+
+We calculate the confidence interval the same way as before, and our confidence interval is from 0.581 to 1.059. Thus, with 95% confidence, the interval includes the true kappa value for these judges.
+
+This should give us pause. The lower end of our confidence interval is 0.581. This means the true kappa could be this low. This would drop our verdict to "good reproducibility" and change our overall assessment of the relationship.
+
+Like Cohen's kappa, our kappa test has a null and alternative hypothesis of:
+
+* $H_{o}: \kappa = 0$
+* $H_{a}: \kappa > 0$
+
+The confidence interval doesn't include 0, so we have sufficient evidence to reject the null hypothesis that there is no association between the judges' scores. Still, an estimated 18% of the relationship is comprised either of chance agreement or disagreement.
+
+Let's compare our results with the linear weights. The observed proportion of agreement is 0.919 and the expected proportion of agreement is 0.747. The linear-weighted kappa is 0.68.
+
+This drops our interpretation to only "good reproducibility". We can be reasonably confident in the judges' reproducibility, but it's also feasible that swapping D'Amato for Lee could lead to a different result. An estimated 32% of the data is composed of chance agreement or disagreement. Once again, this would not indicate that D'Amato or Lee are somehow less accurate than before, it only speaks to their consistency and reproducibility.
+
+We can say with 95% confidence that the true weighted kappa is within 0.486 and 0.874. Once again, the interval does not include 0, so we have sufficient evidence to reject our null hypothesis that there is no association between the judges' rulings. The lower end of the interval is 0.486. This would indicate "good reproducibility". As with the quadratic weighting, this should lower our assessment of the relationship between the two judges.
+
+### D'Amato and Cleary
+
+Now that we've walked through an example of weighted kappa on the consistency of D'Amato's and Lee's scoring margins, let's look at the scoring margins of D'Amato and Cleary. We'll present the data and the findings to you, and you can reproduce the analysis. Feel free to look at our earlier phrasings and points.
+
+Once again, we filtered the data to only include three rounds. We displayed all of the scoring margins by the judges in a contingency table below.
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'DCw_table <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DCw_table.csv", header=TRUE, sep=",")'}
+code={`
+DCw_table %>% rename_with(~paste0("-", str_sub(.x, -1, -1)), starts_with("X.")) %>% rename_with(~str_sub(.x, -1, -1), starts_with("X")) %>% rename_with(~ paste0("D'Amato | Cleary"), starts_with("D.Amato")) %>% print(row.names = FALSE);
+`} />
+
+<FreeTextQuestion 
+    question="What do you notice about D'Amato and Cleary? Compare them to D'Amato and Lee. How often do the judges completely agree? How often do they agree in their verdict (win/lose/draw), but disagree in the margin? What are the most common scoring margins? Does this make sense contextually?" 
+    rows={3}
+/>
+
+And the expected values table:
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'DCw_exp <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/DCw_exp.csv", header=TRUE, sep=",")'}
+code={`
+DCw_exp %>% rename_with(~paste0("-", str_sub(.x, -1, -1)), starts_with("X.")) %>% rename_with(~str_sub(.x, -1, -1), starts_with("X")) %>% rename_with(~ paste0("D'Amato | Cleary"), starts_with("D.Amato")) %>% print(row.names = FALSE);
+`} />
+
+<FreeTextQuestion 
+    question="Which values are highly expected? Did they occur frequently in the observed table? Based on the two tables, would you expect there to be a large association?" 
+    rows={3}
+/>
+
+#### Quadratic Weights:
+
+* Proportion of Observed Agreement: 0.990
+* Proportion of Expected Agreement: 0.878
+* Weighted kappa with Quadratic Weights: 0.92
+* 95% Confidence Interval for kappa: 0.772 and 1.068
+
+Use the above information to assess the consistency of D'Amato and Cleary.
+
+<FreeTextQuestion 
+    question="What is their reproducibility? How confident are you in the interchangeability of D'Amato and Cleary? How much of the data is represented by chance and disagreement?" 
+    rows={3}
+/>
+
+Assess the confidence interval.
+
+<FreeTextQuestion 
+    question="Can you reject our null hypothesis?" 
+    rows={3}
+/>
+
+#### Linear Weights:
+
+* Proportion of Observed Agreement: 0.948
+* Proportion of Expected Agreement: 0.722
+* Weighted kappa with Linear Weights: 0.81
+* 95% Confidence Interval for kappa: 0.665 and 0.955
+
+Use the above information to assess the consistency of D'Amato and Cleary.
+
+<FreeTextQuestion 
+    question="What is the reproducibility? How confident are you in the interchangeability of D'Amato and Cleary? How much of the data is represented by chance and disagreement?" 
+    rows={3}
+/>
+
+Assess the confidence interval.
+
+<FreeTextQuestion 
+    question="Can you reject our null hypothesis?" 
+    rows={3}
+/>
+
+<FreeTextQuestion 
+    question="How large is the difference between the quadratic and linear weights? Which do you feel is more accurate? Pick one and argue for it." 
+    rows={3}
+/>
+
+### Other Judges
+
+If you'd like more examples, or are just curious to find some interesting cases. You're free to explore here. Select any two judges and we'll give you their contingency tables and outputs. We'll ask you some general questions to help guide your analysis. If you're looking for interesting cases, we suggest looking below.
+
+<DataTable
+  data={pairings}
+/>
+
+If you're looking for a challenge, look for some judge combinations that have a very low or very high kappa statistic, or find some judge combinations that have a higher kappa with linear weights than with quadratic weights. These unique combinations can stretch your understanding of inter-rater reliability.
+
+Select your own judge pairing by entering it into the vector below.
+
+<RShell
+    code={`stu_picks <- c("D'Amato", "Kamijo");
+    `} lines={2}
+    />
+
+Press 'Evaluate' below to see a contingency table of your selected judge pairing.
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns a contingency table
+    
+judge01 <- stu_picks[1];
+judge02 <- stu_picks[2];
+Jud_Jud<- judges %>% filter(judge == judge01)%>% pivot_longer(c(judge2, judge3), values_to = "judge_pair", names_to = "type")%>% filter(judge_pair == judge02) %>% mutate(
+      judge02_score1 = if_else(type == "judge2", judge2_score1, judge3_score1),
+      judge02_score2 = if_else(type == "judge2", judge2_score2, judge3_score2),
+      judge02_margin = if_else(type == "judge2", judge2_margin, judge3_margin),
+      judge02_perc = if_else(type == "judge2", judge2_perc, judge3_perc),
+      judge02_dev = if_else(type == "judge2", judge2_dev, judge3_dev),
+      judge02_out = if_else(type == "judge2", judge2_out, judge3_out),
+      judge01_score1 = judge_score1,
+      judge01_score2 = judge_score2,
+      judge01_margin = judge_margin,
+      judge01_perc = judge_perc,
+      judge01_dev = judge_dev,
+      judge01_out = judge_out,
+      agreement = if_else(judge01_out == judge02_out, "Agree", "Disagree"),
+      judge01_out = recode(judge01_out,
+                           'Winner' = 'fighter1',
+                           'Loser' = 'fighter2'),
+      judge02_out = recode(judge02_out,
+                           'Winner' = 'fighter1',
+                           'Loser' = 'fighter2'),
+      judge01_out = factor(judge01_out, levels = c("fighter1", "draw", "fighter2")),
+      judge02_out = factor(judge02_out, levels = c("fighter1", "draw", "fighter2")))%>% select(date, event, arena, city, fighter1, fighter2, result_type, agreement, winner, winner2, rounds, judge01_score1, judge01_score2, judge01_margin, judge01_perc, judge01_dev, judge01_out, judge02_score1, judge02_score2, judge02_margin, judge02_perc, judge02_dev, judge02_out);
+judge01 <- gsub("'", '', judge01);
+judge02 <- gsub("'", '', judge02);
+
+colnames(Jud_Jud) <- colnames(Jud_Jud) %>% str_replace("judge01", str_to_lower(judge01)) %>% str_replace("judge02", str_to_lower(judge02));
+
+name2 <- str_c(str_to_lower(stu_picks[2]),"_margin");
+names <- c(Jud_Jud[14], Jud_Jud[20]);
+
+empty <- tibble("Judge" = -5:5, "-5" = 0, "-4" = 0, "-3" = 0, "-2" = 0, "-1" = 0, "0" = 0, "1" = 0, "2" = 0, "3" = 0, "4" = 0, "5" = 0) %>% mutate(Judge = as.character(Judge));
+
+JJw_table0 <- Jud_Jud %>% filter(rounds == 3) %>% with(table(names)) %>% as_tibble() %>% pivot_wider(names_from = any_of(name2), values_from = n) %>% rename_with(~ "Judge", ends_with("margin")) %>% mutate(Good = rowSums(across(where(is.numeric))), "5" = rowSums(select(., one_of("5", "6", "7", "8"))), "-5" = rowSums(select(., one_of("-5", "-6", "-7", "-8"))), Moved = rowSums(across(where(is.numeric))) - (Good * 2)) %>% filter(Moved != Good) %>% mutate("-2" = rowSums(select(., one_of("-2"))), "2" = rowSums(select(., one_of("2")))) %>% relocate("-2", .before = "-1") %>% relocate("2", .before = "3") %>% select(-Good, -Moved, -one_of("-6","-7", "-8", "6", "7", "8")) %>% bind_rows(empty) %>% group_by(Judge) %>% summarise(Count = n(), across(where(is.numeric), mean)*Count) %>% select(-Count);
+
+Neg <- filter(JJw_table0, Judge == "-5" | Judge == "-6" | Judge == "-7" | Judge == "-8") %>% summarise(across(where(is.numeric), mean)*n()) %>% mutate(Judge = "-5");
+
+Pos <- filter(JJw_table0, Judge == "5" | Judge == "6" | Judge == "7" | Judge == "8") %>% summarise(across(where(is.numeric), mean)*n()) %>% mutate(Judge = "5");
+
+margin_levels <- c("-5", "-4", "-3", "-2", "-1", "0", "1", "2", "3", "4", "5");
+
+JJw_table <- JJw_table0 %>% filter(Judge != "5" & Judge != "-5") %>% bind_rows(Neg) %>% bind_rows(Pos) %>% mutate(RowCheck = str_detect(Judge, "[012345]")) %>% filter(RowCheck) %>% select(-RowCheck) %>% mutate(Judge = factor(Judge, levels = margin_levels)) %>% arrange(Judge) %>% bind_rows(summarise(., across(where(is.numeric), sum)) %>% mutate(Judge = "total") %>% relocate(Judge, .before = "-5")) %>% mutate(total = rowSums(.[, c(2:12)]));
+
+options(dplyr.width = Inf);
+
+JJw_table %>% rename_with(~paste0(stu_picks[1], " | ", stu_picks[2]), ends_with("Judge"));
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+*not sure how to make this sad table one line :(*
+*If you take out the title in upper left corner, you can make it work*
+
+<FreeTextQuestion 
+    question="What do you notice about the two judges? Compare them to some of the other pairs you've looked at. How often do the judges completely agree? How often do they agree in their verdict (win/lose/draw), but disagree in the margin? What are the most common scoring margins? Does this make sense contextually?" 
+    rows={3}
+/>
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the table of expected values
+    
+JJw_exp0 <- JJw_table %>% column_to_rownames(var = "Judge") %>% chisq.test();
+
+JJw_exp <- JJw_exp0$expected %>% as_tibble() %>% mutate(nam = JJw_table[[1]], across(where(is.numeric), round, digits = 1)) %>% rename_with(~paste0(stu_picks[1], " | ", stu_picks[2]), ends_with("nam")) %>% relocate(last_col(), .before = "-5");
+
+JJw_exp;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<FreeTextQuestion 
+    question="Which values are highly expected? Did they occur frequently in the observed table? Based on the two tables, would you expect there to be a large association?" 
+    rows={3}
+/>
+
+Below are the results. Evaluate the code to see each value.
+
+#### Quadratic Weights:
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the proportion of observed agreement
+
+quadratic_weights <- tibble("-5" = c(1, .99, .96, .91, .84, .75, .64, .51, .36, .19, 0), "-4" = c(.99, 1, .99, .96, .91, .84, .75, .64, .51, .36, .19), "-3" = c(.96, .99, 1, .99, .96, .91, .84, .75, .64, .51, .36), "-2" = c(.91, .96, .99, 1, .99, .96, .91, .84, .75, .64, .51), "-1" = c(.84, .91, .96, .99, 1, .99, .96, .91, .84, .75, .64), "0" = c(.75, .84, .91, .96, .99, 1, .99, .96, .91, .84, .75), "1" = c(.64, .75, .84, .91, .96, .99, 1, .99, .96, .91, .84), "2" = c(.51, .64, .75, .84, .91, .96, .99, 1, .99, .96, .91), "3" = c(.36, .51, .64, .75, .84, .91, .96, .99, 1, .99, .96), "4" = c(.19, .36, .51, .64, .75, .84, .91, .96, .99, 1, .99), "5" = c(0, .19, .36, .51, .64, .75, .84, .91, .96, .99, 1));
+
+linear_weights <- tibble("-5" = c(1, .9, .8, .7, .6, .5, .4, .3, .2, .1, 0), "-4" = c(.9, 1, .9, .8, .7, .6, .5, .4, .3, .2, .1), "-3" = c(.8, .9, 1, .9, .8, .7, .6, .5, .4, .3, .2), "-2" = c(.7, .8, .9, 1, .9, .8, .7, .6, .5, .4, .3), "-1" = c(.6, .7, .8, .9, 1, .9, .8, .7, .6, .5, .4), "0" = c(.5, .6, .7, .8, .9, 1, .9, .8, .7, .6, .5), "1" = c(.4, .5, .6, .7, .8, .9, 1, .9, .8, .7, .6), "2" = c(.3, .4, .5, .6, .7, .8, .9, 1, .9, .8, .7), "3" = c(.2, .3, .4, .5, .6, .7, .8, .9, 1, .9, .8), "4" = c(.1, .2, .3, .4, .5, .6, .7, .8, .9, 1, .9), "5" = c(0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1));
+
+multiply <- function(a, b, x){as.numeric(as.vector(a %>% slice(x) * b[[x]]))};
+
+Total <- JJw_table$total[12];
+a <- JJw_table %>% select("-5":"5");
+c <- tibble(multiply(a, quadratic_weights, 1), multiply(a, quadratic_weights, 2), multiply(a, quadratic_weights, 3), multiply(a, quadratic_weights, 4), multiply(a, quadratic_weights, 5), multiply(a, quadratic_weights, 6), multiply(a, quadratic_weights, 7), multiply(a, quadratic_weights, 8), multiply(a, quadratic_weights, 9), multiply(a, quadratic_weights, 10), multiply(a, quadratic_weights, 11)) %>% bind_rows(summarise(., across(where(is.numeric), sum))) %>% mutate(total = rowSums(.[, c(1:11)]));
+Po <- round(c$total[12]/Total, 3);
+Po;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the proportion of expected agreement
+
+Total <- JJw_exp$total[12];
+a <- JJw_exp %>% select("-5":"5");
+c <- tibble(multiply(a, quadratic_weights, 1), multiply(a, quadratic_weights, 2), multiply(a, quadratic_weights, 3), multiply(a, quadratic_weights, 4), multiply(a, quadratic_weights, 5), multiply(a, quadratic_weights, 6), multiply(a, quadratic_weights, 7), multiply(a, quadratic_weights, 8), multiply(a, quadratic_weights, 9), multiply(a, quadratic_weights, 10), multiply(a, quadratic_weights, 11)) %>% bind_rows(summarise(., across(where(is.numeric), sum))) %>% mutate(total = rowSums(.[, c(1:11)]));
+Pe <- round(c$total[12]/Total, 3);
+Pe;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the weighted kappa
+
+kappa <- round((Po - Pe) / (1 - Pe), 2);
+kappa;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns kappa's confidence interval
+
+st_err <- sqrt((Po*(1 - Po))/(Total*(1 - Pe)^2));
+lower <- round(kappa - 1.96 * st_err, 3);
+upper <- round(kappa + 1.96 * st_err, 3);
+c(lower, upper) %>% as.vector();
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<FreeTextQuestion 
+    question="How confident are you in the interchangeability of the two judges? How much of the data is represented by chance and disagreement?" 
+    rows={3}
+/>
+
+<FreeTextQuestion 
+    question="Assess the confidence interval. Can you reject the null hypothesis?" 
+    rows={3}
+/>
+
+#### Linear Weights:
+
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the proportion of observed agreement
+
+Total <- JJw_table$total[12];
+a <- JJw_table %>% select("-5":"5");
+c <- tibble(multiply(a, linear_weights, 1), multiply(a, linear_weights, 2), multiply(a, linear_weights, 3), multiply(a, linear_weights, 4), multiply(a, linear_weights, 5), multiply(a, linear_weights, 6), multiply(a, linear_weights, 7), multiply(a, linear_weights, 8), multiply(a, linear_weights, 9), multiply(a, linear_weights, 10), multiply(a, linear_weights, 11)) %>% bind_rows(summarise(., across(where(is.numeric), sum))) %>% mutate(total = rowSums(.[, c(1:11)]));
+Po <- round(c$total[12]/Total, 3);
+Po;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the proportion of expected agreement
+
+Total <- JJw_exp$total[12];
+a <- JJw_exp %>% select("-5":"5");
+c <- tibble(multiply(a, linear_weights, 1), multiply(a, linear_weights, 2), multiply(a, linear_weights, 3), multiply(a, linear_weights, 4), multiply(a, linear_weights, 5), multiply(a, linear_weights, 6), multiply(a, linear_weights, 7), multiply(a, linear_weights, 8), multiply(a, linear_weights, 9), multiply(a, linear_weights, 10), multiply(a, linear_weights, 11)) %>% bind_rows(summarise(., across(where(is.numeric), sum))) %>% mutate(total = rowSums(.[, c(1:11)]));
+Pe <- round(c$total[12]/Total, 3);
+Pe;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the weighted kappa
+
+kappa <- round((Po - Pe) / (1 - Pe), 2);
+kappa;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns kappa's confidence interval
+
+st_err <- sqrt((Po*(1 - Po))/(Total*(1 - Pe)^2));
+lower <- round(kappa - 1.96 * st_err, 3);
+upper <- round(kappa + 1.96 * st_err, 3);
+c(lower, upper) %>% as.vector();
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<FreeTextQuestion 
+    question="How confident are you in the interchangeability of the two judges? How much of the data is represented by chance and disagreement?" 
+    rows={3}
+/>
+
+<FreeTextQuestion 
+    question="Assess the confidence interval. Can you reject the null hypothesis?" 
+    rows={3}
+/>
+
+<FreeTextQuestion 
+    question="How large is the difference between the quadratic and linear weights? Which do you feel is more accurate? Pick one and argue for it." 
+    rows={3}
+/>
+
+Feel free to continue to assess other judge-pairings.
+
+# Fleiss' Kappa
+
+Thus far, we've assessed the inter-rater reliability within data sets of two judges, but what about three or more judges? MMA fights are evaluated by three judges, and in both the weighted and unweighted variations of Cohen's kappa, we completely ignore the third judge. This ignorance becomes even more egregious if we have larger quantities of judges.
+
+Several different methodologies have been created to account for this. **Light's kappa**, for example, takes the average of every combination of Cohen's kappa within the pool of raters. We'll turn to a slightly more complex version. **Fleiss' kappa** is a variation of Cohen's kappa that allows for three or more judges. It measures the level of agreement or consistency within the group of judges. A high Fleiss' kappa would indicate a high rate of reliability between the group of judges.
+
+Fleiss' kappa works with nominal variables. It does not give weight to partial agreement like weighted kappa. There are methods that work with ordinal variables and partial agreement with three or more judges, but they extend beyond the scope of this module. Search for **Kendall's Coefficient of Concordance** if you are interested.
+
+Like all other kappa values, Fleiss' kappa removes chance agreement. Because the method is unweighted and gives out no partial agreement, we'll use the outcome variable for our analysis.
+
+Fleiss's kappa makes a few assumptions about the data. They are similar to the assumptions made by weighted kappa and Cohen's kappa, but not exactly the same.
+
+1. Each of the raters are **independent**.
+2. The raters are selecting from the same defined categories of a categorical variable.
+
+We've selected a new set of three judges from our data set that judged lots of fights together. Cartlidge, Collett, and Lethaby judged 96 fights that went to a decision together.
+
+With three or more judges, it becomes difficult to observe the data using a contingency table.
+
+Below is a table of each judge's verdict for the 96 fights. We've created three columns on the right to help summarize the judge's votes. They sum up the total number of verdicts of that type for each fight.
+
+<DataTable
+  data={Fleiss}
+/>
+
+Take a look at the table. How often do the judges agree? Are the disagreements frequently for two different fighters? Or does one judge vote for a draw? Do you notice one judge disagreeing more than the others?
+
+## Calculating and Interpreting Fleiss' Kappa
+
+As with the other kappas, we begin by calculating the the proportion of observed agreement $(p_{o})$ and proportion of expected agreement $(p_{e})$. However, for Fleiss' kappa, they are calculated in more complex ways.
+
+This makes sense. As we add more judges, we have so many more levels of agreement. For example, if Collett and Lethaby agree, but Cartlidge disagrees (like fight 10 in our data above), this is still better agreement than if all three judges give different verdicts. These options are only magnified if we were to consider sets of four or more judges or events with four of more different outcomes.
+
+The proportion of observed agreement is calculated by a long formula:
+
+* $p_{o} = \displaystyle \frac{1}{N * n * (n - 1)} (\sum_{i=1}^{N} \sum_{j=1}^{k}n^{2}_{ij} - N * n)$
+
+where N is the number of observations and n is the number of raters.
+
+For our example, N = 96 and n = 3.
+
+You won't have to calculate it by hand, but sometimes looking through the formula can help us to understand the relationship.
+
+The most complex part involves the two summations. Here, we simply square each numeric cell in the entire table.
+
+Let's calculate the proportion of observed agreement for our set of Cartlidge, Collett, and Lethaby. We filled out our formula with values.
+
+* $p_{o} = \displaystyle \frac{1}{96 * 3 * (3 - 1)} (3^{2} + 0^{2} + 0^{2} + ... + 1^{2} - 96 * 3)$
+
+Take a moment to see how we entered the values into the formula.
+
+After evaluating, we end up with a $p_{o}$ = 0.882. This is our total observed agreement. It includes both real agreement and chance agreement.
+
+The proportion of expected agreement is computed by a much less complex formula.
+
+* $p_{e} = \sum p_{j}^{2}$
+
+We calculate the frequency (or expected rate) for each of the three categories $(p_{j})$, square them, and add them all together. This is like finding the concordant values with two judges. We're finding the odds that the selections appear together randomly.
+
+* $p_{fighter1}$ = 0.524
+* $p_{draw}$ = 0.017
+* $p_{fighter2}$ = 0.458
+
+If we square these frequencies and sum them up, we'll find that $p_{e}$ = 0.485.
+
+This means that if the three judges were to issue random verdicts without watching the fights or consulting with each other, we'd expect the three of them to agree about 48.5% of the time. 
+
+We can solve for Fleiss' kappa $(\kappa)$ with the same formula as the weighted and unweighted kappa values.
+
+* $kappa(\kappa) = \displaystyle \frac{p_{o} - p_{e}}{1 - p_{e}}$.
+
+Fleiss' kappa for Cartlidge, Collett, and Lethaby is 0.771.
+
+Our interpretation for the Fleiss' kappa is identical to that of the weighted and unweighted kappa. Below is a reminder:
+
+* $\kappa > 0.75$               Excellent reproducibility
+* $0.4 \le \kappa \le 0.75$     Good reproducibility
+* $0 \le \kappa < 0.4$          Marginal reproducibility
+
+We can claim that Cartlidge, Collett, and Lethaby have excellent reproducibility in their judgments. This means they are likely to evaluate the fights in similar ways, and if we substituted one for another, we would not expect exceedingly different results. About 23% of the data is a result of chance agreement or disagreement. Once again, this cannot prove that the three of them are good at selecting the correct victor, only that they are likely to select similar victors.
+
+As with the other kappa values, we can calculate a confidence interval. Our 95% confidence interval for Fleiss' kappa is 0.661 to 0.881. Thus, with 95% confidence, we can claim that the interval includes the true value of Fleiss' kappa. This interval does not include 0, so we can conclude with at least 95% confidence that there is some real association between the three judges. The lower end of the confidence interval is 0.661, which would be in the upper portion of the "good reproducibility" bracket. 
+
+Fleiss' kappa does afford us an extra piece of analysis. We can look at the individual kappas for each of the categories to assess the level of agreement across their verdicts. This can help us to break down our kappa into simpler results that assess raters reliability on only one category.
+
+This can be especially helpful for certain tests of reliability. For example, a survey evaluating the inter-rater-reliability of several doctors prescribing or diagnosing patients would immensely benefit by seeing which prescriptions or diagnoses the doctors are most and least consistent in the ratings.
+
+For our data, we'll look at the individual kappas for the categories: fighter1, draw, and fighter2.
+
+<ROutput
+    libraries={[ 'dplyr', 'stringr' ]}
+    prependCode={'indiv_fleiss <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/indiv_fleiss.csv", header=TRUE, sep=",")'}
+code={`
+indiv_fleiss %>% print(row.names = FALSE);
+`} />
+
+Fighter 1 and fighter 2 are arbitrary assignments, so it is fitting that their values are almost identical. Their difference would not tell us anything meaningful regardless. However, the individual kappa of the draw category is much smaller than the others. This demonstrates that the judges have a much lower level of agreement when issuing draws than when they select a fighter.
+
+This makes contextual sense. Draws are unlikely and less desirable. Collett, Cartlidge, and Lethaby never put forth a unanimous draw, and they rarely even had two of three vote draw.
+
+### Other Judges
+
+If you'd like more examples of Fleiss' kappa, or are just curious to find some interesting cases. You're free to explore here. Select any three judges and we'll give you their result tables and outputs. We'll ask you some general questions to help guide your analysis.
+
+It can be difficult to find three judges that appeared together frequently. Here is a table of the most frequent three-judge pairings. We'd recommend you choose one of these pairings.
+
+<DataTable
+  data={tri_pairings}
+/>
+
+Select the own judge pairing trio by entering their names into the vector below.
+
+<RShell
+    code={`stu_picks <- c("Cartlidge", "Sledge", "Lethaby");
+    `} lines={3}
+    />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the data table
+
+stu_picks <- str_sort(stu_picks) %>% str_to_title();
+
+stu_Fleiss <- judges %>% filter(judge == stu_picks[1], judge2 == stu_picks[2], judge3 == stu_picks[3]) %>% select(judge_out, judge2_out, judge3_out) %>% mutate(fight = 1:n(), fighter2 = rowSums(. == "fighter2"), draw = rowSums(. == "draw"), fighter1 = rowSums(. == "fighter1")) %>% relocate(fight, .before = judge_out) %>% rename_with(~ paste0(stu_picks[1]), starts_with("judge_")) %>% rename_with(~ paste0(stu_picks[2]), starts_with("judge2")) %>% rename_with(~ paste0(stu_picks[3]), starts_with("judge3"));
+
+stu_Fleiss;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+Assess the table. How often do the judges appear to agree? Does one judge vote for draws more frequently? Does one judge differ more?
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the proportion of observed agreement
+
+square <- function(x) (x * x);
+
+squares <- stu_Fleiss %>% select(-fight) %>% mutate(across(where(is.numeric), square, .names = "{col}_squared")) %>% summarise(across(ends_with("squared"), mean) * n()) %>% transmute(Total_Squares = rowSums(.)) %>% pull();
+N <- count(stu_Fleiss) %>% pull();
+n <- 3;
+observed = round(1/(N * n * (n - 1)) * (squares - (N * n)), digits = 3);
+observed;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the proportion of expected agreement
+
+expected <- stu_Fleiss %>% select(-fight) %>%     summarise(across(where(is.numeric), mean)/3) %>% transmute(across(where(is.numeric), square, .names = "{col}_freq2")) %>% transmute(Total_Squares = round(rowSums(.), 3)) %>% pull();
+
+expected;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns Fleiss' kappa
+
+kappa <- round((observed - expected)/(1 - expected), 3)
+
+kappa;
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble', 'DescTools']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns a confidence interval
+
+stu_Fleiss %>% select(-fight, -fighter1, -fighter2, -draw) %>% KappaM(method = "Fleiss", conf.level = .95) %>% as_tibble() %>% pull() %>% round(digits = 3);
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+*can't access package DescTools*
+
+<FreeTextQuestion 
+    question="Use the above information to assess the consistency of the three judges. What is the reproducibility? How confident are you in the interchangeability of the three? How much of the data is represented by chance and disagreement?" 
+    rows={3}
+/>
+
+<FreeTextQuestion 
+    question="Assess the confidence interval. Can you reject our null hypothesis?" 
+    rows={3}
+/>
+
+<RShell
+    libraries={[ 'dplyr', 'stats', 'tidyr', 'stringr', 'tibble', 'irr']}
+    prependCode={'judges <- read.csv( "https://raw.githubusercontent.com/CalebSkinner1/mma_kappa/main/judges.csv", header=TRUE, sep=",")'}
+    code={`# code below returns the table of individual kappas
+
+stu_F_indiv <- stu_Fleiss %>% select(-fight, -fighter1, -fighter2, -draw) %>% kappam.fleiss(detail = TRUE);
+
+as.data.frame.matrix(stu_F_indiv$detail) %>% rownames_to_column(var = "Category") %>% mutate(Category = factor(Category, levels = c("fighter1", "draw", "fighter2")));
+    `}
+    lines={2}
+    addPreceding  
+      />
+
+*can't access package irr*
+
+Look through the individual kappas. What can you say about the specific categories: fighter1/fighter2/draw? In which are the judges most consistent?
+
+<FreeTextQuestion
+  question="Look through the individual kappas. What can you say about the specific categories: fighter1/fighter2/draw? In which are the judges most consistent?"
+  rows={3}
+/>
+
+Feel free to continue to assess other judge-pairings.
