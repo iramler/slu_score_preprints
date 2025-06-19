@@ -21,6 +21,14 @@ categories:
   - Summary Statistics
 ---
 
+## Welcome Video
+
+For those interested in how data analytics is used in swimming, please check out this video about how University of Virgina, Mathematics professor Dr. Ken Ono helps the UVA swim team.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E_Q5I0AQSS0?si=3XCjte1_3eRz3H1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
 ## Introduction
 
 For this activity, you will be exploring the event times for female swimmers that competed in the 100m event from 1968 to 2020 in the [Olympics](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}.
