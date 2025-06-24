@@ -1,0 +1,161 @@
+---
+title: "NBA Wingspan & Performance"
+author:
+  - name: Cooper Olney
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "June 23, 2025"
+description: "Exploring wingspan and performance in the NBA by cleaning, merging and analyzing datasets."
+editor: 
+  canonical: true
+categories:
+  - Webscraping
+  - Data visualization
+  - Data wrangling
+---
+
+## Module
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+
+### Introduction
+The National Basketball Association (NBA) is a professional basketball league featuring the best players from around the world. In the modern NBA, player evaluation has gone far beyond just points. Physical attributes like height, [wingspan](https://www.nba.com/knicks/videos/how-to-measure-your-wingspan){target="_blank"} and reach are increasingly used by teams to gain a competitive edge. These measurements not only influence how players are scouted and drafted, but also how they're expected to perform on the court. 
+
+One particularly interesting metric is wingspan advantage which is the difference between a player's wingspan and their height (wingspan - height). A larger wingspan relative to height is often considered beneficial for defense, rebounding, and shot-blocking. However, longer arms can also affect shooting mechanics, sometimes offering an edge by helping players shoot over defenders, but also potentially making it harder to develop a consistent shooting form, but does this actually show up in the data?
+
+In this worksheet, you'll explore how physical traits like wingspan advantage relate to on-court performance. You'll work with real NBA data to practice essential skills such as cleaning and joining datasets, as well as visualizing relationships. By the end, you'll use your cleaned and combined datasets to look for meaningful patterns between a player's wingspan advantage and their statistical output.
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1. Clean and transform raw and messy data into a structured and analysis ready format.
+
+2. Combine multiple datasets, including resolving issues like inconsistent naming.
+
+3. Use web scraping tools to gather additional data from an online source.
+
+4. Explore relationships between variables and communicate findings using visualizations.
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+**Technology Requirement:**
+
+This activity requires the use of RStudio with familiarity in Quarto documents and several `tidyverse` packages including `dplyr`, `tidyr`, `readr` and `stringr`. Students will also work with the `janitor`, `rvest` and `fuzzyjoin` packages to perform webs scraping, clean raw datasets and attempt to resolve joining issues due to data inconsistencies. 
+
+:::
+
+### Data
+The **nba_wingspan_2025.csv** dataset contains 499 rows and 4 columns. Each row represents a NBA player from the 2024-25 season. **Note** this dataset is partially cleaned from the data found at craftednba.com.
+
+Download Data: [nba_wingspan_2025.csv](nba_wingspan_2025.csv)
+
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description
+|-------------------|------------------------------------------------
+| name    | Full name of NBA player, with team abbreviation and primary position
+| height    | Player's height in feet & inches format
+| wingspan    | Player's wingspan in feet & inches format 
+| wingspan_advantage    | Difference between wingspan and height in inches (wingspan - height)  
+
+</details>
+
+#### Data For Version Without Web Scraping
+
+The **nba_per100possessions_2025.csv** dataset contains 736 rows and 14 columns. Each row represents a NBA player from the 2024-25 season. **Note** this dataset contains duplicates because of players switching teams midseason. For example, Luka Dončić will have 3 total rows for his stats with DAL, LAL and his total 2024-25 season stats.
+
+Download Data: [nba_per100possesions_2025.csv](nba_per100possesions_2025.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description
+|-------------------|------------------------------------------------
+| player   | Full name of NBA player
+| g    | Games played during the 2024-25 season
+| mp    | Minutes played during the 2024-25 season 
+| pts    | Points scored per 100 possessions
+| orb | Offensive rebounds per 100 possessions
+| drb | Defensive rebounds per 100 possessions
+| trb | Total rebounds per 100 possessions
+| ast | Assists per 100 possessions
+| stl | Steals per 100 possessions
+| blk | Blocks per 100 possessions
+| o_rtg | Offensive Rating: An estimate of points produced per 100 possessions
+| d_rtg | Defensive Rating: An estimate of points allowed per 100 possessions
+| e_fg_percent | Effective field goal percentage: Adjusts percentage for the fact that a 3pt field goal is worth more than a 2pt field goal
+| ft_percent | Free throw percentage
+
+</details>
+
+The **nba_shooting_2025** data contains 737 rows and 9 columns. Each row represents a NBA player from the 2024-25 season. **Note** this dataset contains duplicates because of players switching teams midseason. For example, Luka Dončić will have 3 total rows for his stats with DAL, LAL and his total 2024-25 season stats.
+
+Download Data: [nba_shooting_2025.csv](nba_shooting_2025.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description
+|-------------------|------------------------------------------------
+| player   | Full name of NBA player
+| g    | Games played during the 2024-25 season
+| fg_percent | Field goal percentage
+| avg_dist_of_fg | Average distance (in feet) of field goal attempts
+| 2pt_rate | Percentage of field goal attempts that are 2 point attempts
+| 3pt_rate | Percentage of field goal attempts that are 3 point attempts
+| 2pt_percent | Make percentage on 2 point attempts
+| 3pt_percent | Make percentage on 3 point attempts
+| dunk_rate | Percentage of field goal attempts that are dunks
+
+</details>
+
+#### Data Sources
+
+[https://craftednba.com/player-traits/length](https://craftednba.com/player-traits/length){target="_blank"}
+
+[https://www.basketball-reference.com/leagues/NBA_2025_per_poss.html](https://www.basketball-reference.com/leagues/NBA_2025_per_poss.html){target="_blank"}
+
+[https://www.basketball-reference.com/leagues/NBA_2025_shooting.html](https://www.basketball-reference.com/leagues/NBA_2025_shooting.html){target="_blank"}
+
+
+### Materials
+
+**Version With Web Scraping**
+
+[Class handout](nba_wingspans_worksheet.qmd)
+
+[Class handout - with solutions](nba_wingspans_solutions.qmd)
+
+**Version Without Web Scraping**
+
+[Class handout](nba_wingspans_solutions_no_webscraping.qmd)
+
+[Class handout - with solutions](nba_wingspans_solutions_no_webscraping.qmd)
+
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Through this module, you explored how physical attributes, specifically wingspan and wingspan advantage might relate to on-court performance in the NBA. By cleaning the combining data from multiple sources, you've created a comprehensive dataset that allowed for deeper exploration of relationships between physical characteristics and basketball statistics. 
+
+With your final combined dataset, you were able to generate visualizations to investigate potential connections, such as whether players with longer wingspan advantages tend to have a larger defensive impact. These kinds of relationships can provide use insights for analysts, scouts and even fans trying to understand the value of certain physical traits. 
+
+This activity underscores the value of data wrangling, merging and visualization and sets the stage for more advanced analysis in the future. Whether that's building predictive models, exploring important relationships, or applying machine learning techniques to sports data.
+
+:::
+
+
+
+
+
+
