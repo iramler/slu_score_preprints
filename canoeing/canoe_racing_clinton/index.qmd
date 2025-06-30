@@ -12,9 +12,6 @@ author:
     affiliation:
       - ref: slu
     
-format: 
-      html:
-          embed-resources: true
 date: "June 17, 2025"
 description: "Using data from the Clinton Canoe Regatta to explore data manipulation and visualization."
 editor: 
@@ -40,7 +37,8 @@ The [Clinton Canoe Regatta](https://www.canoeregatta.org/){target="_blank"} (the
 
 For those interested in learning more about canoe racing, watch this informative and humorous video from AuSable River Canoe Marathon competitor Holly Reynolds - "I am a canoe racer, explaining canoe racing."
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gCF9eyOrfn0?si=177sHSQHqeiX8fkq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gCF9eyOrfn0?si=ZSfNbjKQM0Az61uz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
 This could serve as an in class activity and should take roughly a half an hour to complete. 
@@ -113,7 +111,7 @@ The data are compiled from the [Paddlestats Website](https://paddlestats.net/rac
 
 - [Module Worksheet (R Version)](clinton_module_worksheet.qmd)
 
-- [Module Worksheet (non-R Version)](Clinton_DataVis_Graphing.docx)
+- [Module Worksheet (non-R Version)](Clinton_Graphing_Manipulation.docx)
 
 - [Solutions to Worksheet (R/Quarto Version)](clinton_module_SOLUTIONS.qmd)
 
