@@ -2,50 +2,50 @@ sidebar:
   - section: "By Sport"
     contents:
       - text: "Basketball"
-        href: sports/basketball.html
+        href: basketball/index.html
       - text: "Canoeing"
-        href: sports/canoeing.html
-      - text: "Combat_sports"
-        href: sports/combat_sports.html
-      - text: "Disc_golf"
-        href: sports/disc_golf.html
+        href: canoeing/index.html
+      - text: "Combat Sports"
+        href: combat_sports/index.html
+      - text: "Disc Golf"
+        href: disc_golf/index.html
       - text: "Esports"
-        href: sports/esports.html
-      - text: "Fitness_and_training"
-        href: sports/fitness_and_training.html
-      - text: "Football_american"
-        href: sports/football_american.html
+        href: esports/index.html
+      - text: "Fitness And Training"
+        href: fitness_and_training/index.html
+      - text: "Football American"
+        href: football_american/index.html
       - text: "Golf"
-        href: sports/golf.html
+        href: golf/index.html
       - text: "Gymnastics"
-        href: sports/gymnastics.html
+        href: gymnastics/index.html
       - text: "Handball"
-        href: sports/handball.html
+        href: handball/index.html
       - text: "Hockey"
-        href: sports/hockey.html
+        href: hockey/index.html
       - text: "Lacrosse"
-        href: sports/lacrosse.html
-      - text: "Motor_sports"
-        href: sports/motor_sports.html
+        href: lacrosse/index.html
+      - text: "Motor Sports"
+        href: motor_sports/index.html
       - text: "Multisport"
-        href: sports/multisport.html
+        href: multisport/index.html
       - text: "Rowing"
-        href: sports/rowing.html
+        href: rowing/index.html
       - text: "Running"
-        href: sports/running.html
+        href: running/index.html
       - text: "Skating"
-        href: sports/skating.html
+        href: skating/index.html
       - text: "Skiing"
-        href: sports/skiing.html
+        href: skiing/index.html
       - text: "Softball"
-        href: sports/softball.html
+        href: softball/index.html
       - text: "Swimming"
-        href: sports/swimming.html
+        href: swimming/index.html
       - text: "Tennis"
-        href: sports/tennis.html
+        href: tennis/index.html
       - text: "Triathlon"
-        href: sports/triathlon.html
-      - text: "Ultimate_frisbee"
-        href: sports/ultimate_frisbee.html
+        href: triathlon/index.html
+      - text: "Ultimate Frisbee"
+        href: ultimate_frisbee/index.html
       - text: "Volleyball"
-        href: sports/volleyball.html
+        href: volleyball/index.html

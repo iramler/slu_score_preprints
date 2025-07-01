@@ -4,6 +4,15 @@ library(fs)
 library(stringr)
 library(glue)
 
+# make pretty titles
+title_case_smart <- function(x) {
+  words <- str_split(str_replace_all(x, "[-_]", " "), " ")[[1]]
+  small_words <- c("and", "or", "of", "the", "in", "with", "for", "a", "an")
+  words <- ifelse(tolower(words) %in% small_words, tolower(words), str_to_title(words))
+  words[1] <- str_to_title(words[1])  # Always capitalize the first word
+  paste(words, collapse = " ")
+}
+
 # Step 1: Find all index.qmd files in subfolders like Sport/Module/index.qmd
 module_files <- dir_ls(path = ".", recurse = TRUE, glob = "*/*/index.qmd")
 module_files <- module_files[!str_detect(
@@ -22,20 +31,19 @@ file_df <- data.frame(
 # Step 3: Keep only valid entries
 file_df <- file_df[!is.na(file_df$sport), ]
 
-# Step 4: Create the 'sports' folder if it doesn't exist
-dir_create("sports")
 
-# Step 5: Generate one .qmd file per sport
+# Step 4: Generate one index.qmd file inside each sport folder
 for (sport in unique(file_df$sport)) {
-  file_slug <- str_to_lower(str_replace_all(sport, "\\s+", "-"))
-  file_path <- glue("sports/{file_slug}.qmd")
+  file_path <- glue("{sport}/index.qmd")
 
+  pretty_title <- title_case_smart(sport)
+  
   page_content <- glue(
 '---
-title: "{sport} Modules"
+title: "{pretty_title}"
 listing:
   contents:
-    - "../{sport}/*/index.qmd"
+    - "./*/index.qmd"
   sort: date desc
   type: grid
   fields: [title, author, date, categories]

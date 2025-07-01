@@ -1,28 +1,32 @@
-# build_sidebar_yaml.R
-
 library(fs)
 library(stringr)
 library(glue)
 
-# Find all sport listing files in the sports/ folder
-sport_files <- dir_ls("sports", regexp = ".*\\.qmd$")
+# Step 1: Find top-level directories (sports)
+top_dirs <- dir_ls(path = ".", type = "directory", recurse = FALSE)
 
-# Extract sport names from filenames
-sports <- path_ext_remove(path_file(sport_files))
-sports_sorted <- sort(sports)
+# Step 2: Filter out undesired folders (e.g., system folders, early drafts, .git, etc.)
+valid_sports <- top_dirs[
+  !str_detect(top_dirs, regex("(^|/)early[_\\-\\s]?drafts(/|$)", ignore_case = TRUE)) &
+    !basename(top_dirs) %in% c("_freeze","docs", ".git", ".quarto", "_site", "_extensions", "sports")
+]
 
-# Build YAML block
+# Step 3: Extract folder names and sort
+sport_names <- sort(basename(valid_sports))
+
+# Step 4: Build YAML block
 yaml_lines <- c("sidebar:",
                 '  - section: "By Sport"',
                 '    contents:')
 
-for (sport in sports_sorted) {
-  text_label <- str_to_title(str_replace_all(sport, "-", " "))
-  href_path <- glue("sports/{sport}.html")
+for (sport in sport_names) {
+#  text_label <- str_to_title(str_replace_all(sport, "-", " "))
+  text_label <- str_to_title(str_replace_all(sport, "[-_]", " "))
+  href_path <- glue("{sport}/index.html")
   yaml_lines <- c(yaml_lines, glue('      - text: "{text_label}"'),
-                               glue('        href: {href_path}'))
+                  glue('        href: {href_path}'))
 }
 
-# Write to file
+# Step 5: Write to sidebar-sports.yml
 writeLines(yaml_lines, "sidebar-sports.yml")
 cat("✓ sidebar-sports.yml created\n")

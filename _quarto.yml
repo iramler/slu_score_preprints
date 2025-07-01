@@ -4,11 +4,13 @@ project:
   render: 
     - "index.qmd"
     - "_team.qmd"
-    - "sports/*.qmd" 
-    - "*/*/index.qmd"
+    - "*/index.qmd"         # <- new sport pages
+    - "*/*/index.qmd"       # module pages
     - "by-statsds-topic.qmd"
 
-    
+metadata-files:
+  - sidebar-sports.yml
+
 website:
   google-analytics: "G-JVDQHPRYT1"
   cookie-consent:
@@ -51,5 +53,3 @@ format:
 execute:
   freeze: auto
 
-metadata-files:
-  - sidebar-sports.yml

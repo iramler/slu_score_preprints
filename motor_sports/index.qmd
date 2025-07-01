@@ -1,0 +1,11 @@
+---
+title: "Motor Sports"
+listing:
+  contents:
+    - "./*/index.qmd"
+  sort: date desc
+  type: grid
+  fields: [title, author, date, categories]
+---
+
+These modules use **motor_sports** data to teach topics in statistics and data science.
