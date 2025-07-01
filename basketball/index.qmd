@@ -1,5 +1,5 @@
 ---
-title: "Basketball"
+title: "Simulating NBA Playoff Runs for SGA"
 listing:
   contents:
     - "./*/index.qmd"
