@@ -46,7 +46,7 @@ listing:
     - "./*/index.qmd"
   sort: date desc
   type: default
-  fields: [title, author, date, categories]
+  fields: [title, author, date, categories, description]
 ---
 
 These modules use **{sport}** data to teach topics in statistics and data science.

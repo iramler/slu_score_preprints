@@ -28,6 +28,20 @@ Browse all modules below. Use the sidebar to filter by sport or visit [by statis
 ::: {#all-modules}
 :::
 
+## Other Preprint Servers
+
+This page links to preprint repositories maintained by members of the [SCORE Network](https://scorenetwork.org/index.html). These preprint repositories are created and maintained by faculty and students from the respective institutions. Please note that these materials have not yet completed the required pedagogical and industry peer reviews to become a [published module on the SCORE Network](https://modules.scorenetwork.org/). However, instructors are still welcome to use these materials if they are so inclined.
+
+The following are actively maintained preprint repositories:
+
+-   [Carnegie Mellon University](https://ryurko.github.io/cmu_score_preprints/)
+
+-   [St. Lawrence University (This site)](https://iramler.github.io/slu_score_preprints/)
+
+-   [Baylor University + Azusa Pacific University](https://kgfitzgerald.github.io/baylor_apu_score/)
+
+-   [West Point](https://nick3703.github.io/WP_SCORE/)
+
 ## Contributing and/or Joining the SCORE Network
 
 -   If you are interested in contributing to and/or joining the SCORE Network, please check out [https://scorenetwork.org/index.html](https://scorenetwork.org/index.html){target="_blank"}.
@@ -36,5 +50,4 @@ Browse all modules below. Use the sidebar to filter by sport or visit [by statis
 
 ## Funding Source
 
-*The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).*
-""   # or a tiny comment
+*The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).* "" \# or a tiny comment
