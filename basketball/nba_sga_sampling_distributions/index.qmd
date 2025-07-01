@@ -45,7 +45,7 @@ By the end of this activity, you will be able to:
 
 1. Describe the shape, center and spread of a statistical distribution.
 
-2. Use simulation tools (StatKey or R) to create sampling distributions of the sample mean.
+2. Use simulation tools (such as StatKey) to create sampling distributions of the sample mean.
 
 3. Comparing sampling distributions from different sample sizes.
 
@@ -54,7 +54,7 @@ By the end of this activity, you will be able to:
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 **Technology Requirement:**
 
-This activity uses Statkey or a similar tool for generating sampling distributions
+This activity uses Statkey (or a similar tool) for generating sampling distributions
 
 **Students should have prior knowledge in:**
 
@@ -62,7 +62,7 @@ This activity uses Statkey or a similar tool for generating sampling distributio
 
 - Distinguishing between a population and a sample
 
-- Knowledge of Normal Distributions is required for the optional portion of the handout.
+- Knowledge of Normal Distributions is helpful.
 :::
 
 ## Data
@@ -89,12 +89,12 @@ Saiem Gilani (2023). hoopR: Access Men's Basketball Play by Play Data. R package
 ## Materials
 
 
-[Class Handout - MS Word version using StatKey](nba_sampling_dist_worksheet.docx)
+[Class Handout - MS Word version using StatKey](nba_sga_sampling_distributions.docx)
 
-[Class handout - with solutions](nba_sampling_dist_solutions.docx)
+[Class handout - with solutions](nba_sga_sampling_distributions-solutions.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Through this module, you've used NBA data to explore how sample size affects the behavior of sampling distributions. By treating Shai Gilgeous-Alexander's regular season point totals as a population, you've simulated different playoff scenarios and investigated how consistent or unusual his actual performances were. These simulations provide a hands-on way to see how sample means vary, and how distribution shape changes with sample size. This foundation sets the stage for a deeper understanding of the Central Limit Theorem.
+Through this module, you've used NBA data to explore how sample size affects the behavior of sampling distributions. By treating Shai Gilgeous-Alexander's regular season point totals as a population, you've simulated different playoff scenarios and investigated how consistent or unusual his actual performances were. These simulations provide a hands-on way to see how sample means vary, and how distribution shape changes with sample size. This foundation sets the stage for a deeper understanding of the Central Limit Theorem and Normal Approximation methods.
 
 :::
 

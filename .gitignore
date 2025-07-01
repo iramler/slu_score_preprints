@@ -15,3 +15,13 @@ docs/
 # Session Data files
 .RData
 .RDataTmp
+
+# Word temporary and autosave files
+~$*
+*.tmp
+*.bak
+*.wbk
+*.asd
+*.lnk
+*.lock
+*.docx~
