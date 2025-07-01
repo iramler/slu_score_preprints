@@ -4,7 +4,7 @@
     "href": "by-statsds-topic.html",
     "title": "📊 Modules by Statistics Topic",
     "section": "",
-    "text": "2023 Boston Marathon - Understanding variability using ANOVA\n\n\n\n\n\n\nANOVA\n\n\nInteractions\n\n\nMultiple comparisons\n\n\n\nUsing ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon\n\n\n\n\n\nMar 5, 2024\n\n\nIvan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\n2023 Boston Marathon - Variability in Finish Times\n\n\n\n\n\n\nHistograms\n\n\nSummary statistics\n\n\nBimodal data\n\n\n\nDescribing finish time for runners in the 2023 Boston Marathon\n\n\n\n\n\nMay 13, 2024\n\n\nIvan Ramler, Jack Fay\n\n\n\n\n\n\n\n\n\n\n\n\n2023-24 PWHL - Visualizing the Regular Season\n\n\n\n\n\n\ndata visualization\n\n\ndata wrangling\n\n\nexploratory data Analysis\n\n\n\nVisualizing scoring data for players during the 2023-24 PWHL season\n\n\n\n\n\nJun 6, 2024\n\n\nIvan Ramler, Brendan Karadenes\n\n\n\n\n\n\n\n\n\n\n\n\n2024 College Ultimate Championship Statistics\n\n\n\n\n\n\nData Cleaning\n\n\nJoining\n\n\nData Visualization\n\n\n\nStatistics from the 2024 College Ultimate Championships to be tidied and plotted.\n\n\n\n\n\nJun 26, 2024\n\n\nGavin Cassidy, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nAll-NBA-First Team Prediction Models\n\n\n\n\n\nLearn about and compare two models (Logistic Regression and Random Forest), that will predict NBA players to make the all-NBA first team in a given season.\n\n\n\n\n\nApr 3, 2025\n\n\nJeffrey Merselis, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyzing Lap Times for the 2023 F1 Miami Grand Prix\n\n\n\n\n\n\nSummary statistics\n\n\nHistgram interpretation\n\n\nOutliers\n\n\n\nInvestigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix\n\n\n\n\n\nMay 15, 2024\n\n\nNorah Kuduk, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nBeijing 2022 Olympics - Cleaning and Summarizing Data\n\n\n\n\n\n\nData cleaning\n\n\nSummarization\n\n\nMerging\n\n\n\nDemonstrating how to clean data with different packages and summarise the data using dplyr.\n\n\n\n\n\nMar 8, 2024\n\n\nEric Seltzer, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\n\n\n\nData visualization\n\n\nData manipulation\n\n\n\nUsing data from the Clinton Canoe Regatta to explore data manipulation and visualization.\n\n\n\n\n\nJun 17, 2025\n\n\nPhoebe Jones, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\n\n\n\nData visualization\n\n\nData wrangling\n\n\n\nUsing data from the Clinton Canoe Regatta to explore ggplot and dplyr\n\n\n\n\n\nJun 17, 2025\n\n\nPhoebe Jones\n\n\n\n\n\n\n\n\n\n\n\n\nCorrelations in Division 1 Men’s and Women’s Lacrosse\n\n\n\n\n\n\nCorrelation\n\n\n\nHow much of an impact does winning the draw/face-off have on the final results of a lacrosse game?\n\n\n\n\n\nApr 5, 2025\n\n\nJill Tyrrell, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nDakar Rally Analysis\n\n\n\n\n\n\nMultiple Linear Regression\n\n\nModel Diagnostics\n\n\nTesting\n\n\nSummary Statistics\n\n\n\nInvestigating The 2024 Dakar Rally biker rankings and times, throughout all 12 stages.\n\n\n\n\n\nMar 28, 2024\n\n\nMatt Maslow, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nDisc Golf Pro Tour - Driving or Putting?\n\n\n\n\n\n\nCorrelation\n\n\n\nWhat is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?\n\n\n\n\n\nJun 13, 2024\n\n\nGavin Cassidy, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nDivision Three Volleyball Timeouts\n\n\n\n\n\n\nOne sample proportions\n\n\nConfidence intervals\n\n\n\nInvestigating the effect of timeouts on the outcome of a set.\n\n\n\n\n\nJul 12, 2024\n\n\nIvan Ramler, Cassie Richter, Sierra Hess, Vivian Johnson\n\n\n\n\n\n\n\n\n\n\n\n\nEffects on Total Points\n\n\n\n\n\n\nTwo Way Interaction ANOVA\n\n\nPost Hoc Tukey\n\n\nPair Wise Comparisons\n\n\n\nExploring Interaction and Main Effects on US Olympic Figure Skating\n\n\n\n\n\nInvalid Date\n\n\nFaith Rhinehart\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring the NBA Draft via ANOVA and Tukey's HSD\n\n\n \n\n\nOne-Way Analysis of Variance\n\nDifference in Means\n\nTukey's HSD\n\n\n \n\nPreparing a dataset to complete ANOVA and an analysis of results.\n\n\n\n`Jul 1, 2024`{=html}\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nFINA World Junior Championships 2022 Diving Data\n\n\n\n\n\n\nANOVA for difference in means\n\n\nPairwise Comparisons\n\n\nFisher’s LSD\n\n\nTukey’s HSD\n\n\n\nPreliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.\n\n\n\n\n\nApr 15, 2024\n\n\nEmma Deering, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nFootball Recruiting and Impact in the NFL\n\n\n\n\n\n\ndata wrangling\n\n\n\nCleaning and analyzing football data for top high school wide receivers who played in the NFL in 2023.\n\n\n\n\n\nJul 17, 2024\n\n\nBrendan Karadenes, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nFormula 1 2021 World Championship\n\n\n\n\n\n\nCorrelation\n\n\n\nVisualizing F1 data\n\n\n\n\n\nApr 2, 2024\n\n\nCharlie Gartner, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nHandball Individual Player Statistics for the 2022-2023 Season\n\n\n\n\n\n\nconfidence intervals\n\n\nprediction intervals\n\n\nmultiple linear regression\n\n\nanova for overall fit\n\n\nt.test for correlation\n\n\n\nComparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.\n\n\n\n\n\nJun 12, 2024\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducing ANOVA Through the NBA Draft\n\n\n\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\n\nConducting an ANOVA test and analyzing the results\n\n\n\n\n\nJul 1, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigating The Difference in Olympic Figure Skating Scores Throughout the Years\n\n\n\n\n\n\nANOVA\n\n\nTukey HSD\n\n\nPair wise comparisons\n\n\n\nUsing ANOVA to explore differences in mean scores throughout the years of Winter Olympic Figure Skating\n\n\n\n\n\nJun 27, 2025\n\n\nFaith Rhinehart, Jessica Chapman, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis\n\n\n\n\n\n\nVisualizations\n\n\nDistribution\n\n\nInterpretation\n\n\n\nDescribing distribution shapes and interpreting visualizations or Men’s Professional Tennis data.\n\n\n\n\n\nJun 24, 2024\n\n\nEric Seltzer, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nInvesting The Difference in Figure Skating Scores Throughout the Years\n\n\n\n\n\n\nANOVA\n\n\nPost Hoc Tukey Test\n\n\nConfidence Interval\n\n\n\nUsing ANOVA to determine a difference in mean scores throughout the years of winter Olympics\n\n\n\n\n\nInvalid Date\n\n\nFaith Rhinehart\n\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Multiple Linear Regression\n\n\n\n\n\n\nLinear regression\n\n\n\nUsing Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.\n\n\n\n\n\nFeb 5, 2024\n\n\nA.J. Dykstra, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Simple Linear Regression\n\n\n\n\n\n\nLinear regression\n\n\n\nUsing Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.\n\n\n\n\n\nFeb 5, 2024\n\n\nA.J. Dykstra\n\n\n\n\n\n\n\n\n\n\n\n\nLacrosse Faceoff Proportions\n\n\n\n\n\n\nHypothesis testing\n\n\nSingle proportion\n\n\n\nUsing data from NCAA Div I lacrosse teams to explore the importance of winning faceoffs\n\n\n\n\n\nFeb 5, 2024\n\n\nJack Fay, Ivan Ramler, A.J. Dykstra\n\n\n\n\n\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL\n\n\n\n\n\n\nDifference in two means\n\n\n\nComparing scoring rates between indoor and outdoor profesional lacrosse leagues.\n\n\n\n\n\nFeb 5, 2024\n\n\nJack Cowan, Ivan Ramler, A.J. Dykstra, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL - First Draft\n\n\n\n\n\n\ndifference in two means\n\n\n\nComparing scoring rates between indoor and outdoor profesional lacrosse leagues.\n\n\n\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLeague of Legends - Buffing and Nerfing\n\n\n\n\n\n\nOutliers\n\n\nSummary statistics\n\n\n\nInvestigating game play statistics for League of Legends champions in two different patches.\n\n\n\n\n\nFeb 21, 2024\n\n\nIvan Ramler, George Charalambous, A.J. Dykstra\n\n\n\n\n\n\n\n\n\n\n\n\nMerging Multiple Seasons of NCAA Div 1 Softball Statistics\n\n\n\n\n\n\nJoining\n\n\nSQL\n\n\n\nActvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.\n\n\n\n\n\nFeb 5, 2024\n\n\nSarah Weaver, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nModeling the Impact of Age on Powerlifting\n\n\n\n\n\n\nHigh order modeling\n\n\nIndicator variables\n\n\n\nExploring the impact of age on powerlifting\n\n\n\n\n\nMay 8, 2025\n\n\nSarah Sheldon, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nNASCAR Transformation Module\n\n\n\n\n\n\nLinear regression\n\n\nTransformations\n\n\nPolynomial regression\n\n\n\nUsing NASCAR driver rating data to explore a series of transformations to improve linearity in regression.\n\n\n\n\n\nFeb 5, 2024\n\n\nAlyssa Bigness, Ivan Ramler, Jack Fay\n\n\n\n\n\n\n\n\n\n\n\n\nNBA Wingspan & Performance\n\n\n\n\n\n\nWebscraping\n\n\nData visualization\n\n\nData wrangling\n\n\n\nExploring wingspan and performance in the NBA by cleaning, merging and analyzing datasets.\n\n\n\n\n\nJun 23, 2025\n\n\nCooper Olney, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA D1 Expenditures\n\n\n\n\n\n\nSide-by-side boxplots\n\n\n\nSomething with expenditures by sport.\n\n\n\n\n\nMay 17, 2024\n\n\nDenali Stevens, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Women’s Gymnastics and Bootstrap Distributions\n\n\n\n\n\n\nBootstrap Distribution\n\n\nConfidence Intervals\n\n\nPaired Data\n\n\n\nMaking bootsrap distributions and constructing confidence intervals\n\n\n\n\n\nJul 22, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Data Wrangling\n\n\n\n\n\n\ndplyr\n\n\nfiltering\n\n\ngrouping and summarizing\n\n\nmutating\n\n\n\nArranging data to analyze the total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022.\n\n\n\n\n\nJun 5, 2025\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Summary Statistics\n\n\n\n\n\n\ndistribution and skewness\n\n\noutlier detection\n\n\nsummary statistics\n\n\nconfounding variable\n\n\n\nThe total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022.\n\n\n\n\n\nJun 5, 2025\n\n\nAbigail Smith, Ivan Ramler, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nOlympic Swimming - Changes in the 100m Women’s Event\n\n\n\n\n\n\nBoxplots\n\n\nConfidence intervals\n\n\nDifference in means\n\n\nSummary statistics\n\n\n\nDescribing 100m event times for Women Olympic Swimmers from 1924 to 2020\n\n\n\n\n\nJun 24, 2025\n\n\nBrendan Karadenes, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nPGA - Drive for Show, Putt for Dough?\n\n\n\n\n\n\nCorrelation\n\n\n\nUsing tournament data for professional golfers to see if driving or putting are more strongly related to success.\n\n\n\n\n\nFeb 5, 2024\n\n\nAlyssa Bigness, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nProfessional Bull Riding Analysis\n\n\n\n\n\n\nLinear/Logistic Regression\n\n\nSummary Statistics\n\n\nInfluential Points\n\n\nHypothesis Testing\n\n\n\nInvestigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.\n\n\n\n\n\nMar 6, 2024\n\n\nMatt Maslow, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nRugby Union Result Exploration\n\n\n\n\n\n\nDensities\n\n\n\nHow can we predict which team will beat another team based on certain visualizations?\n\n\n\n\n\nApr 3, 2025\n\n\nAlix du Plessis, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nSki to Sea\n\n\n\n\n\n\nCorrelation\n\n\n\nUsing Ski to Sea results data to see which leg (sport) is more strongly related to a team’s overall finish time.\n\n\n\n\n\nMay 8, 2024\n\n\nSam Peacock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nStrength Ratios - Flat Dumbbell Press to Barbell Bench Press\n\n\n\n\n\n\nData collection methods\n\n\nOne sample means-interval\n\n\n\nCritically exploring self reported strength ratios.\n\n\n\n\n\nJun 13, 2024\n\n\nVivian Johnson, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nUFC: Striking Accuracy Percentages and the Normal Distribution\n\n\n\n\n\n\nNormal Distribution\n\n\nQuantiles\n\n\nProportions\n\n\n\nAnalyzing UFC data from 1993-2021 using the Normal Distribution\n\n\n\n\n\nJun 6, 2024\n\n\nBrendan Karadenes, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nWNBA Data Cleaning Module\n\n\n\n\n\n\nData cleaning\n\n\nMissing Data\n\n\nTables\n\n\n\nThis data set contains team game statistics for 16 WNBA teams and for 20 seasons.\n\n\n\n\n\nMay 15, 2024\n\n\nKristen Varin, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nWomen’s Alpine Skiing Giant Slalom - Paired Data\n\n\n\n\n\n\nPaired Data\n\n\nDifference in Means\n\n\n\nStatistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant\n\n\n\n\n\nMay 15, 2024\n\n\nEmelia Agostinelli, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nWomen’s Alpine Skiing World Giant Slalom - Data Cleaning\n\n\n\n\n\n\nTidying data\n\n\nData Scraping\n\n\n\nStatistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant\n\n\n\n\n\nMay 15, 2024\n\n\nEmelia Agostinelli, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nWomen’s NCAA Basketball - Building a shiny app\n\n\n\n\n\nHow to make an intro shiny app\n\n\n\n\n\nApr 3, 2025\n\n\nAbby Sikora, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nWorld Cup Women’s 10k Classic Nordic Ski Race - Splits\n\n\n\n\n\n\nSimple linear regression\n\n\nCorrelation\n\n\nRandomized block ANOVA\n\n\n\nTimes and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.\n\n\n\n\n\nMay 16, 2024\n\n\nAbigail Smith, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "2023 Boston Marathon - Understanding variability using ANOVA\n\n\n\n\n\n\nANOVA\n\n\nInteractions\n\n\nMultiple comparisons\n\n\n\nUsing ANOVA to explore factors associated with finish time for runners in the 2023 Boston Marathon\n\n\n\n\n\nMar 5, 2024\n\n\nIvan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\n2023 Boston Marathon - Variability in Finish Times\n\n\n\n\n\n\nHistograms\n\n\nSummary statistics\n\n\nBimodal data\n\n\n\nDescribing finish time for runners in the 2023 Boston Marathon\n\n\n\n\n\nMay 13, 2024\n\n\nIvan Ramler, Jack Fay\n\n\n\n\n\n\n\n\n\n\n\n\n2023-24 PWHL - Visualizing the Regular Season\n\n\n\n\n\n\ndata visualization\n\n\ndata wrangling\n\n\nexploratory data Analysis\n\n\n\nVisualizing scoring data for players during the 2023-24 PWHL season\n\n\n\n\n\nJun 6, 2024\n\n\nIvan Ramler, Brendan Karadenes\n\n\n\n\n\n\n\n\n\n\n\n\n2024 College Ultimate Championship Statistics\n\n\n\n\n\n\nData Cleaning\n\n\nJoining\n\n\nData Visualization\n\n\n\nStatistics from the 2024 College Ultimate Championships to be tidied and plotted.\n\n\n\n\n\nJun 26, 2024\n\n\nGavin Cassidy, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nAll-NBA-First Team Prediction Models\n\n\n\n\n\nLearn about and compare two models (Logistic Regression and Random Forest), that will predict NBA players to make the all-NBA first team in a given season.\n\n\n\n\n\nApr 3, 2025\n\n\nJeffrey Merselis, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyzing Lap Times for the 2023 F1 Miami Grand Prix\n\n\n\n\n\n\nSummary statistics\n\n\nHistgram interpretation\n\n\nOutliers\n\n\n\nInvestigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix\n\n\n\n\n\nMay 15, 2024\n\n\nNorah Kuduk, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nBeijing 2022 Olympics - Cleaning and Summarizing Data\n\n\n\n\n\n\nData cleaning\n\n\nSummarization\n\n\nMerging\n\n\n\nDemonstrating how to clean data with different packages and summarise the data using dplyr.\n\n\n\n\n\nMar 8, 2024\n\n\nEric Seltzer, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\n\n\n\nData visualization\n\n\nData manipulation\n\n\n\nUsing data from the Clinton Canoe Regatta to explore data manipulation and visualization.\n\n\n\n\n\nJun 17, 2025\n\n\nPhoebe Jones, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\n\n\n\nData visualization\n\n\nData wrangling\n\n\n\nUsing data from the Clinton Canoe Regatta to explore ggplot and dplyr\n\n\n\n\n\nJun 17, 2025\n\n\nPhoebe Jones\n\n\n\n\n\n\n\n\n\n\n\n\nCorrelations in Division 1 Men’s and Women’s Lacrosse\n\n\n\n\n\n\nCorrelation\n\n\n\nHow much of an impact does winning the draw/face-off have on the final results of a lacrosse game?\n\n\n\n\n\nApr 5, 2025\n\n\nJill Tyrrell, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nDakar Rally Analysis\n\n\n\n\n\n\nMultiple Linear Regression\n\n\nModel Diagnostics\n\n\nTesting\n\n\nSummary Statistics\n\n\n\nInvestigating The 2024 Dakar Rally biker rankings and times, throughout all 12 stages.\n\n\n\n\n\nMar 28, 2024\n\n\nMatt Maslow, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nDisc Golf Pro Tour - Driving or Putting?\n\n\n\n\n\n\nCorrelation\n\n\n\nWhat is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?\n\n\n\n\n\nJun 13, 2024\n\n\nGavin Cassidy, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nDivision Three Volleyball Timeouts\n\n\n\n\n\n\nOne sample proportions\n\n\nConfidence intervals\n\n\n\nInvestigating the effect of timeouts on the outcome of a set.\n\n\n\n\n\nJul 12, 2024\n\n\nIvan Ramler, Cassie Richter, Sierra Hess, Vivian Johnson\n\n\n\n\n\n\n\n\n\n\n\n\nEffects on Total Points\n\n\n\n\n\n\nTwo Way Interaction ANOVA\n\n\nPost Hoc Tukey\n\n\nPair Wise Comparisons\n\n\n\nExploring Interaction and Main Effects on US Olympic Figure Skating\n\n\n\n\n\nInvalid Date\n\n\nFaith Rhinehart\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploring the NBA Draft via ANOVA and Tukey's HSD\n\n\n \n\n\nOne-Way Analysis of Variance\n\nDifference in Means\n\nTukey's HSD\n\n\n \n\nPreparing a dataset to complete ANOVA and an analysis of results.\n\n\n\n`Jul 1, 2024`{=html}\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nFINA World Junior Championships 2022 Diving Data\n\n\n\n\n\n\nANOVA for difference in means\n\n\nPairwise Comparisons\n\n\nFisher’s LSD\n\n\nTukey’s HSD\n\n\n\nPreliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.\n\n\n\n\n\nApr 15, 2024\n\n\nEmma Deering, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nFootball Recruiting and Impact in the NFL\n\n\n\n\n\n\ndata wrangling\n\n\n\nCleaning and analyzing football data for top high school wide receivers who played in the NFL in 2023.\n\n\n\n\n\nJul 17, 2024\n\n\nBrendan Karadenes, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nFormula 1 2021 World Championship\n\n\n\n\n\n\nCorrelation\n\n\n\nVisualizing F1 data\n\n\n\n\n\nApr 2, 2024\n\n\nCharlie Gartner, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nHandball Individual Player Statistics for the 2022-2023 Season\n\n\n\n\n\n\nconfidence intervals\n\n\nprediction intervals\n\n\nmultiple linear regression\n\n\nanova for overall fit\n\n\nt.test for correlation\n\n\n\nComparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.\n\n\n\n\n\nJun 12, 2024\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nIntroducing ANOVA Through the NBA Draft\n\n\n\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\n\nConducting an ANOVA test and analyzing the results\n\n\n\n\n\nJul 1, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigating The Difference in Olympic Figure Skating Scores Throughout the Years\n\n\n\n\n\n\nANOVA\n\n\nTukey HSD\n\n\nPair wise comparisons\n\n\n\nUsing ANOVA to explore differences in mean scores throughout the years of Winter Olympic Figure Skating\n\n\n\n\n\nJun 27, 2025\n\n\nFaith Rhinehart, Jessica Chapman, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis\n\n\n\n\n\n\nVisualizations\n\n\nDistribution\n\n\nInterpretation\n\n\n\nDescribing distribution shapes and interpreting visualizations or Men’s Professional Tennis data.\n\n\n\n\n\nJun 24, 2024\n\n\nEric Seltzer, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nInvesting The Difference in Figure Skating Scores Throughout the Years\n\n\n\n\n\n\nANOVA\n\n\nPost Hoc Tukey Test\n\n\nConfidence Interval\n\n\n\nUsing ANOVA to determine a difference in mean scores throughout the years of winter Olympics\n\n\n\n\n\nInvalid Date\n\n\nFaith Rhinehart\n\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Multiple Linear Regression\n\n\n\n\n\n\nLinear regression\n\n\n\nUsing Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.\n\n\n\n\n\nFeb 5, 2024\n\n\nA.J. Dykstra, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Simple Linear Regression\n\n\n\n\n\n\nLinear regression\n\n\n\nUsing Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on bike times.\n\n\n\n\n\nFeb 5, 2024\n\n\nA.J. Dykstra\n\n\n\n\n\n\n\n\n\n\n\n\nLacrosse Faceoff Proportions\n\n\n\n\n\n\nHypothesis testing\n\n\nSingle proportion\n\n\n\nUsing data from NCAA Div I lacrosse teams to explore the importance of winning faceoffs\n\n\n\n\n\nFeb 5, 2024\n\n\nJack Fay, Ivan Ramler, A.J. Dykstra\n\n\n\n\n\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL\n\n\n\n\n\n\nDifference in two means\n\n\n\nComparing scoring rates between indoor and outdoor profesional lacrosse leagues.\n\n\n\n\n\nFeb 5, 2024\n\n\nJack Cowan, Ivan Ramler, A.J. Dykstra, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL - First Draft\n\n\n\n\n\n\ndifference in two means\n\n\n\nComparing scoring rates between indoor and outdoor profesional lacrosse leagues.\n\n\n\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLeague of Legends - Buffing and Nerfing\n\n\n\n\n\n\nOutliers\n\n\nSummary statistics\n\n\n\nInvestigating game play statistics for League of Legends champions in two different patches.\n\n\n\n\n\nFeb 21, 2024\n\n\nIvan Ramler, George Charalambous, A.J. Dykstra\n\n\n\n\n\n\n\n\n\n\n\n\nMerging Multiple Seasons of NCAA Div 1 Softball Statistics\n\n\n\n\n\n\nJoining\n\n\nSQL\n\n\n\nActvity that uses multiple seasons of NCAA Div 1 Softball batting statistics to practice merging data tables.\n\n\n\n\n\nFeb 5, 2024\n\n\nSarah Weaver, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nModeling the Impact of Age on Powerlifting\n\n\n\n\n\n\nHigh order modeling\n\n\nIndicator variables\n\n\n\nExploring the impact of age on powerlifting\n\n\n\n\n\nMay 8, 2025\n\n\nSarah Sheldon, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nNASCAR Transformation Module\n\n\n\n\n\n\nLinear regression\n\n\nTransformations\n\n\nPolynomial regression\n\n\n\nUsing NASCAR driver rating data to explore a series of transformations to improve linearity in regression.\n\n\n\n\n\nFeb 5, 2024\n\n\nAlyssa Bigness, Ivan Ramler, Jack Fay\n\n\n\n\n\n\n\n\n\n\n\n\nNBA Wingspan & Performance\n\n\n\n\n\n\nWebscraping\n\n\nData visualization\n\n\nData wrangling\n\n\n\nExploring wingspan and performance in the NBA by cleaning, merging and analyzing datasets.\n\n\n\n\n\nJun 23, 2025\n\n\nCooper Olney, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA D1 Expenditures\n\n\n\n\n\n\nSide-by-side boxplots\n\n\n\nSomething with expenditures by sport.\n\n\n\n\n\nMay 17, 2024\n\n\nDenali Stevens, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nNCAA Women’s Gymnastics and Bootstrap Distributions\n\n\n\n\n\n\nBootstrap Distribution\n\n\nConfidence Intervals\n\n\nPaired Data\n\n\n\nMaking bootsrap distributions and constructing confidence intervals\n\n\n\n\n\nJul 22, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Data Wrangling\n\n\n\n\n\n\ndplyr\n\n\nfiltering\n\n\ngrouping and summarizing\n\n\nmutating\n\n\n\nArranging data to analyze the total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022.\n\n\n\n\n\nJun 5, 2025\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Summary Statistics\n\n\n\n\n\n\ndistribution and skewness\n\n\noutlier detection\n\n\nsummary statistics\n\n\nconfounding variable\n\n\n\nThe total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022.\n\n\n\n\n\nJun 5, 2025\n\n\nAbigail Smith, Ivan Ramler, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nOlympic Swimming - Changes in the 100m Women’s Event\n\n\n\n\n\n\nBoxplots\n\n\nConfidence intervals\n\n\nDifference in means\n\n\nSummary statistics\n\n\n\nDescribing 100m event times for Women Olympic Swimmers from 1924 to 2020\n\n\n\n\n\nJun 24, 2025\n\n\nBrendan Karadenes, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nPGA - Drive for Show, Putt for Dough?\n\n\n\n\n\n\nCorrelation\n\n\n\nUsing tournament data for professional golfers to see if driving or putting are more strongly related to success.\n\n\n\n\n\nFeb 5, 2024\n\n\nAlyssa Bigness, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nProfessional Bull Riding Analysis\n\n\n\n\n\n\nLinear/Logistic Regression\n\n\nSummary Statistics\n\n\nInfluential Points\n\n\nHypothesis Testing\n\n\n\nInvestigating a collection of professional bull riders and their statistics from 2023 season for the Touring Pro Division.\n\n\n\n\n\nMar 6, 2024\n\n\nMatt Maslow, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nRugby Union Result Exploration\n\n\n\n\n\n\nDensities\n\n\n\nHow can we predict which team will beat another team based on certain visualizations?\n\n\n\n\n\nApr 3, 2025\n\n\nAlix du Plessis, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nSki to Sea\n\n\n\n\n\n\nCorrelation\n\n\n\nUsing Ski to Sea results data to see which leg (sport) is more strongly related to a team’s overall finish time.\n\n\n\n\n\nMay 8, 2024\n\n\nSam Peacock, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nStrength Ratios - Flat Dumbbell Press to Barbell Bench Press\n\n\n\n\n\n\nData collection methods\n\n\nOne sample means-interval\n\n\n\nCritically exploring self reported strength ratios.\n\n\n\n\n\nJun 13, 2024\n\n\nVivian Johnson, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nUFC: Striking Accuracy Percentages and the Normal Distribution\n\n\n\n\n\n\nNormal Distribution\n\n\nQuantiles\n\n\nProportions\n\n\n\nAnalyzing UFC data from 1993-2021 using the Normal Distribution\n\n\n\n\n\nJun 6, 2024\n\n\nBrendan Karadenes, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nWNBA Data Cleaning Module\n\n\n\n\n\n\nData cleaning\n\n\nMissing Data\n\n\nTables\n\n\n\nThis data set contains team game statistics for 16 WNBA teams and for 20 seasons.\n\n\n\n\n\nMay 15, 2024\n\n\nKristen Varin, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nWomen’s Alpine Skiing Giant Slalom - Paired Data\n\n\n\n\n\n\nPaired Data\n\n\nDifference in Means\n\n\n\nStatistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant\n\n\n\n\n\nMay 15, 2024\n\n\nEmelia Agostinelli, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nWomen’s Alpine Skiing World Giant Slalom - Data Cleaning\n\n\n\n\n\n\nTidying data\n\n\nData Scraping\n\n\n\nStatistics from two runs at a Women’s World Cup Alpine Skiing Giant Slalom Race at Mont-Tremblant\n\n\n\n\n\nMay 15, 2024\n\n\nEmelia Agostinelli, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nWomen’s NCAA Basketball - Building a shiny app\n\n\n\n\n\nHow to make an intro shiny app\n\n\n\n\n\nApr 3, 2025\n\n\nAbby Sikora, Ivan Ramler\n\n\n\n\n\n\n\n\n\n\n\n\nWorld Cup Women’s 10k Classic Nordic Ski Race - Splits\n\n\n\n\n\n\nSimple linear regression\n\n\nCorrelation\n\n\nRandomized block ANOVA\n\n\n\nTimes and ranks of skiers taken at four different distance points (1.3, 4.3, 7.5, and 10k) in a 10k classic race in Trondheim, Norway.\n\n\n\n\n\nMay 16, 2024\n\n\nAbigail Smith, Robin Lock\n\n\n\n\n\n\n\n\n\n\n\n\nbasketball Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncanoeing Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncombat_sports Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndisc_golf Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nesports Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfitness_and_training Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfootball_american Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngolf Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngymnastics Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhandball Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhockey Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlacrosse Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmotor_sports Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmultisport Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrowing Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrunning Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskating Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskiing Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsoftball Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nswimming Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntennis Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntriathlon Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nultimate_frisbee Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvolleyball Modules\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "📊 Modules by Statistics Topic"
@@ -555,6 +555,150 @@
     ]
   },
   {
+    "objectID": "sports/volleyball.html",
+    "href": "sports/volleyball.html",
+    "title": "volleyball Modules",
+    "section": "",
+    "text": "These modules use volleyball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nDivision Three Volleyball Timeouts\n\n\n\nOne sample proportions\n\n\nConfidence intervals\n\n\n\n\nIvan Ramler, Cassie Richter, Sierra Hess, Vivian Johnson\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "volleyball Modules"
+    ]
+  },
+  {
+    "objectID": "sports/triathlon.html",
+    "href": "sports/triathlon.html",
+    "title": "triathlon Modules",
+    "section": "",
+    "text": "These modules use triathlon data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Multiple Linear Regression\n\n\n\nLinear regression\n\n\n\n\nA.J. Dykstra, Ivan Ramler\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Simple Linear Regression\n\n\n\nLinear regression\n\n\n\n\nA.J. Dykstra\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "triathlon Modules"
+    ]
+  },
+  {
+    "objectID": "sports/swimming.html",
+    "href": "sports/swimming.html",
+    "title": "swimming Modules",
+    "section": "",
+    "text": "These modules use swimming data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nOlympic Swimming - Changes in the 100m Women’s Event\n\n\n\nBoxplots\n\n\nConfidence intervals\n\n\nDifference in means\n\n\nSummary statistics\n\n\n\n\nBrendan Karadenes, Robin Lock, Ivan Ramler\n\n\nJun 24, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "swimming Modules"
+    ]
+  },
+  {
+    "objectID": "sports/skiing.html",
+    "href": "sports/skiing.html",
+    "title": "skiing Modules",
+    "section": "",
+    "text": "These modules use skiing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nWorld Cup Women’s 10k Classic Nordic Ski Race - Splits\n\n\n\nSimple linear regression\n\n\nCorrelation\n\n\nRandomized block ANOVA\n\n\n\n\nAbigail Smith, Robin Lock\n\n\nMay 16, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "skiing Modules"
+    ]
+  },
+  {
+    "objectID": "sports/running.html",
+    "href": "sports/running.html",
+    "title": "running Modules",
+    "section": "",
+    "text": "These modules use running data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\n2023 Boston Marathon - Variability in Finish Times\n\n\n\nHistograms\n\n\nSummary statistics\n\n\nBimodal data\n\n\n\n\nIvan Ramler, Jack Fay\n\n\nMay 13, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "running Modules"
+    ]
+  },
+  {
+    "objectID": "sports/multisport.html",
+    "href": "sports/multisport.html",
+    "title": "multisport Modules",
+    "section": "",
+    "text": "These modules use multisport data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nBeijing 2022 Olympics - Cleaning and Summarizing Data\n\n\n\nData cleaning\n\n\nSummarization\n\n\nMerging\n\n\n\n\nEric Seltzer, Ivan Ramler\n\n\nMar 8, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "multisport Modules"
+    ]
+  },
+  {
+    "objectID": "sports/lacrosse.html",
+    "href": "sports/lacrosse.html",
+    "title": "lacrosse Modules",
+    "section": "",
+    "text": "These modules use lacrosse data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nLacrosse Faceoff Proportions\n\n\n\nHypothesis testing\n\n\nSingle proportion\n\n\n\n\nJack Fay, Ivan Ramler, A.J. Dykstra\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL\n\n\n\nDifference in two means\n\n\n\n\nJack Cowan, Ivan Ramler, A.J. Dykstra, Robin Lock\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "lacrosse Modules"
+    ]
+  },
+  {
+    "objectID": "sports/handball.html",
+    "href": "sports/handball.html",
+    "title": "handball Modules",
+    "section": "",
+    "text": "These modules use handball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nHandball Individual Player Statistics for the 2022-2023 Season\n\n\n\nconfidence intervals\n\n\nprediction intervals\n\n\nmultiple linear regression\n\n\nanova for overall fit\n\n\nt.test for correlation\n\n\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\nJun 12, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "handball Modules"
+    ]
+  },
+  {
+    "objectID": "sports/golf.html",
+    "href": "sports/golf.html",
+    "title": "golf Modules",
+    "section": "",
+    "text": "These modules use golf data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nPGA - Drive for Show, Putt for Dough?\n\n\n\nCorrelation\n\n\n\n\nAlyssa Bigness, Robin Lock\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "golf Modules"
+    ]
+  },
+  {
+    "objectID": "sports/fitness_and_training.html",
+    "href": "sports/fitness_and_training.html",
+    "title": "fitness_and_training Modules",
+    "section": "",
+    "text": "These modules use fitness_and_training data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nModeling the Impact of Age on Powerlifting\n\n\n\nHigh order modeling\n\n\nIndicator variables\n\n\n\n\nSarah Sheldon, Ivan Ramler\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\nStrength Ratios - Flat Dumbbell Press to Barbell Bench Press\n\n\n\nData collection methods\n\n\nOne sample means-interval\n\n\n\n\nVivian Johnson, Ivan Ramler\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "fitness_and_training Modules"
+    ]
+  },
+  {
+    "objectID": "sports/disc_golf.html",
+    "href": "sports/disc_golf.html",
+    "title": "disc_golf Modules",
+    "section": "",
+    "text": "These modules use disc_golf data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nDisc Golf Pro Tour - Driving or Putting?\n\n\n\nCorrelation\n\n\n\n\nGavin Cassidy, Ivan Ramler\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "disc_golf Modules"
+    ]
+  },
+  {
+    "objectID": "sports/canoeing.html",
+    "href": "sports/canoeing.html",
+    "title": "canoeing Modules",
+    "section": "",
+    "text": "These modules use canoeing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\nData visualization\n\n\nData manipulation\n\n\n\n\nPhoebe Jones, Robin Lock, Ivan Ramler\n\n\nJun 17, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "canoeing Modules"
+    ]
+  },
+  {
     "objectID": "_team.html",
     "href": "_team.html",
     "title": "🏅 The SLU SCORE Team",
@@ -614,6 +758,150 @@
     "title": "SLU SCORE Module Pre-print Repository",
     "section": "Funding Source",
     "text": "Funding Source\nThe development of the SCORE with Data network is funded by the National Science Foundation (award 2142705)."
+  },
+  {
+    "objectID": "sports/basketball.html",
+    "href": "sports/basketball.html",
+    "title": "basketball Modules",
+    "section": "",
+    "text": "These modules use basketball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nExploring the NBA Draft via ANOVA and Tukey's HSD\n\n\n  \nOne-Way Analysis of Variance\n  \nDifference in Means\n  \nTukey's HSD\n  \n\n\n\nVivian Johnson, Robin Lock\n`Jul 1, 2024`{=html}\n\n\n\n\n\n\n\n\n\n\nIntroducing ANOVA Through the NBA Draft\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\n\n\nVivian Johnson, Robin Lock\n\n\nJul 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nWNBA Data Cleaning Module\n\n\n\nData cleaning\n\n\nMissing Data\n\n\nTables\n\n\n\n\nKristen Varin, Ivan Ramler\n\n\nMay 15, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "basketball Modules"
+    ]
+  },
+  {
+    "objectID": "sports/combat_sports.html",
+    "href": "sports/combat_sports.html",
+    "title": "combat_sports Modules",
+    "section": "",
+    "text": "These modules use combat_sports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nUFC: Striking Accuracy Percentages and the Normal Distribution\n\n\n\nNormal Distribution\n\n\nQuantiles\n\n\nProportions\n\n\n\n\nBrendan Karadenes, Ivan Ramler\n\n\nJun 6, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "combat_sports Modules"
+    ]
+  },
+  {
+    "objectID": "sports/esports.html",
+    "href": "sports/esports.html",
+    "title": "esports Modules",
+    "section": "",
+    "text": "These modules use esports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nLeague of Legends - Buffing and Nerfing\n\n\n\nOutliers\n\n\nSummary statistics\n\n\n\n\nIvan Ramler, George Charalambous, A.J. Dykstra\n\n\nFeb 21, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "esports Modules"
+    ]
+  },
+  {
+    "objectID": "sports/football_american.html",
+    "href": "sports/football_american.html",
+    "title": "football_american Modules",
+    "section": "",
+    "text": "These modules use football_american data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nFootball Recruiting and Impact in the NFL\n\n\n\ndata wrangling\n\n\n\n\nBrendan Karadenes, Robin Lock\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "football_american Modules"
+    ]
+  },
+  {
+    "objectID": "sports/gymnastics.html",
+    "href": "sports/gymnastics.html",
+    "title": "gymnastics Modules",
+    "section": "",
+    "text": "These modules use gymnastics data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nNCAA Women’s Gymnastics and Bootstrap Distributions\n\n\n\nBootstrap Distribution\n\n\nConfidence Intervals\n\n\nPaired Data\n\n\n\n\nVivian Johnson, Robin Lock\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "gymnastics Modules"
+    ]
+  },
+  {
+    "objectID": "sports/hockey.html",
+    "href": "sports/hockey.html",
+    "title": "hockey Modules",
+    "section": "",
+    "text": "These modules use hockey data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\n2023-24 PWHL - Visualizing the Regular Season\n\n\n\ndata visualization\n\n\ndata wrangling\n\n\nexploratory data Analysis\n\n\n\n\nIvan Ramler, Brendan Karadenes\n\n\nJun 6, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "hockey Modules"
+    ]
+  },
+  {
+    "objectID": "sports/motor_sports.html",
+    "href": "sports/motor_sports.html",
+    "title": "motor_sports Modules",
+    "section": "",
+    "text": "These modules use motor_sports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nAnalyzing Lap Times for the 2023 F1 Miami Grand Prix\n\n\n\nSummary statistics\n\n\nHistgram interpretation\n\n\nOutliers\n\n\n\n\nNorah Kuduk, Ivan Ramler\n\n\nMay 15, 2024\n\n\n\n\n\n\n\n\n\n\n\nNASCAR Transformation Module\n\n\n\nLinear regression\n\n\nTransformations\n\n\nPolynomial regression\n\n\n\n\nAlyssa Bigness, Ivan Ramler, Jack Fay\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "motor_sports Modules"
+    ]
+  },
+  {
+    "objectID": "sports/rowing.html",
+    "href": "sports/rowing.html",
+    "title": "rowing Modules",
+    "section": "",
+    "text": "These modules use rowing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Data Wrangling\n\n\n\ndplyr\n\n\nfiltering\n\n\ngrouping and summarizing\n\n\nmutating\n\n\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\nJun 5, 2025\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Summary Statistics\n\n\n\ndistribution and skewness\n\n\noutlier detection\n\n\nsummary statistics\n\n\nconfounding variable\n\n\n\n\nAbigail Smith, Ivan Ramler, Robin Lock\n\n\nJun 5, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "rowing Modules"
+    ]
+  },
+  {
+    "objectID": "sports/skating.html",
+    "href": "sports/skating.html",
+    "title": "skating Modules",
+    "section": "",
+    "text": "These modules use skating data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nInvestigating The Difference in Olympic Figure Skating Scores Throughout the Years\n\n\n\nANOVA\n\n\nTukey HSD\n\n\nPair wise comparisons\n\n\n\n\nFaith Rhinehart, Jessica Chapman, Ivan Ramler\n\n\nJun 27, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "skating Modules"
+    ]
+  },
+  {
+    "objectID": "sports/softball.html",
+    "href": "sports/softball.html",
+    "title": "softball Modules",
+    "section": "",
+    "text": "These modules use softball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nMerging Multiple Seasons of NCAA Div 1 Softball Statistics\n\n\n\nJoining\n\n\nSQL\n\n\n\n\nSarah Weaver, Ivan Ramler\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "softball Modules"
+    ]
+  },
+  {
+    "objectID": "sports/tennis.html",
+    "href": "sports/tennis.html",
+    "title": "tennis Modules",
+    "section": "",
+    "text": "These modules use tennis data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nInvestigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis\n\n\n\nVisualizations\n\n\nDistribution\n\n\nInterpretation\n\n\n\n\nEric Seltzer, Ivan Ramler\n\n\nJun 24, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "tennis Modules"
+    ]
+  },
+  {
+    "objectID": "sports/ultimate_frisbee.html",
+    "href": "sports/ultimate_frisbee.html",
+    "title": "ultimate_frisbee Modules",
+    "section": "",
+    "text": "These modules use ultimate_frisbee data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\n2024 College Ultimate Championship Statistics\n\n\n\nData Cleaning\n\n\nJoining\n\n\nData Visualization\n\n\n\n\nGavin Cassidy, Robin Lock\n\n\nJun 26, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Home",
+      "Sports",
+      "ultimate_frisbee Modules"
+    ]
   },
   {
     "objectID": "basketball/nba_draft_anova_intermediate/index.html",

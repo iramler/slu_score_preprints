@@ -1,0 +1,11 @@
+---
+title: "softball Modules"
+listing:
+  contents:
+    - "../softball/*/index.qmd"
+  sort: date desc
+  type: grid
+  fields: [title, author, date, categories]
+---
+
+These modules use **softball** data to teach topics in statistics and data science.

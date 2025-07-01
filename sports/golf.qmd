@@ -1,0 +1,11 @@
+---
+title: "golf Modules"
+listing:
+  contents:
+    - "../golf/*/index.qmd"
+  sort: date desc
+  type: grid
+  fields: [title, author, date, categories]
+---
+
+These modules use **golf** data to teach topics in statistics and data science.

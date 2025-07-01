@@ -1,0 +1,11 @@
+---
+title: "hockey Modules"
+listing:
+  contents:
+    - "../hockey/*/index.qmd"
+  sort: date desc
+  type: grid
+  fields: [title, author, date, categories]
+---
+
+These modules use **hockey** data to teach topics in statistics and data science.

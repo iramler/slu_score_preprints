@@ -1,0 +1,51 @@
+sidebar:
+  - section: "By Sport"
+    contents:
+      - text: "Basketball"
+        href: sports/basketball.html
+      - text: "Canoeing"
+        href: sports/canoeing.html
+      - text: "Combat_sports"
+        href: sports/combat_sports.html
+      - text: "Disc_golf"
+        href: sports/disc_golf.html
+      - text: "Esports"
+        href: sports/esports.html
+      - text: "Fitness_and_training"
+        href: sports/fitness_and_training.html
+      - text: "Football_american"
+        href: sports/football_american.html
+      - text: "Golf"
+        href: sports/golf.html
+      - text: "Gymnastics"
+        href: sports/gymnastics.html
+      - text: "Handball"
+        href: sports/handball.html
+      - text: "Hockey"
+        href: sports/hockey.html
+      - text: "Lacrosse"
+        href: sports/lacrosse.html
+      - text: "Motor_sports"
+        href: sports/motor_sports.html
+      - text: "Multisport"
+        href: sports/multisport.html
+      - text: "Rowing"
+        href: sports/rowing.html
+      - text: "Running"
+        href: sports/running.html
+      - text: "Skating"
+        href: sports/skating.html
+      - text: "Skiing"
+        href: sports/skiing.html
+      - text: "Softball"
+        href: sports/softball.html
+      - text: "Swimming"
+        href: sports/swimming.html
+      - text: "Tennis"
+        href: sports/tennis.html
+      - text: "Triathlon"
+        href: sports/triathlon.html
+      - text: "Ultimate_frisbee"
+        href: sports/ultimate_frisbee.html
+      - text: "Volleyball"
+        href: sports/volleyball.html

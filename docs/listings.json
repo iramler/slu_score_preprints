@@ -50,7 +50,106 @@
       "/early_drafts/skiing/giant_slalom_paired/index.html",
       "/early_drafts/skiing/giant-slalom_cleaning/index.html",
       "/early_drafts/basketball/women_ncaa_shiny/index.html",
+      "/skiing/nordic_ski_10k_splits/index.html",
+      "/sports/basketball.html",
+      "/sports/canoeing.html",
+      "/sports/combat_sports.html",
+      "/sports/disc_golf.html",
+      "/sports/esports.html",
+      "/sports/fitness_and_training.html",
+      "/sports/football_american.html",
+      "/sports/golf.html",
+      "/sports/gymnastics.html",
+      "/sports/handball.html",
+      "/sports/hockey.html",
+      "/sports/lacrosse.html",
+      "/sports/motor_sports.html",
+      "/sports/multisport.html",
+      "/sports/rowing.html",
+      "/sports/running.html",
+      "/sports/skating.html",
+      "/sports/skiing.html",
+      "/sports/softball.html",
+      "/sports/swimming.html",
+      "/sports/tennis.html",
+      "/sports/triathlon.html",
+      "/sports/ultimate_frisbee.html",
+      "/sports/volleyball.html"
+    ]
+  },
+  {
+    "listing": "/sports/volleyball.html",
+    "items": [
+      "/volleyball/volleyball_timeouts_single_prop/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/triathlon.html",
+    "items": [
+      "/triathlon/multiple_linear_regression/index.html",
+      "/triathlon/simple_linear_regression/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/swimming.html",
+    "items": [
+      "/swimming/olympic_swimming_100m/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/skiing.html",
+    "items": [
       "/skiing/nordic_ski_10k_splits/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/running.html",
+    "items": [
+      "/running/boston_marathon_2023/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/multisport.html",
+    "items": [
+      "/multisport/olympics_beijing_medals/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/lacrosse.html",
+    "items": [
+      "/lacrosse/college_lacrosse_faceoffs/index.html",
+      "/lacrosse/lacrosse_pll_vs_nll/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/handball.html",
+    "items": [
+      "/handball/handball-bundesliga/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/golf.html",
+    "items": [
+      "/golf/pga_drive_putt/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/fitness_and_training.html",
+    "items": [
+      "/fitness_and_training/powerlifting_polyreg/index.html",
+      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/disc_golf.html",
+    "items": [
+      "/disc_golf/dgpt_correlations/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/canoeing.html",
+    "items": [
+      "/canoeing/canoe_racing_clinton/index.html"
     ]
   },
   {
@@ -105,6 +204,82 @@
       "/softball/softball_div1/index.html",
       "/triathlon/multiple_linear_regression/index.html",
       "/triathlon/simple_linear_regression/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/basketball.html",
+    "items": [
+      "/basketball/nba_draft_anova_intermediate/index.html",
+      "/basketball/nba_draft_anova_intro/index.html",
+      "/basketball/wnba_data_quality/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/combat_sports.html",
+    "items": [
+      "/combat_sports/ufc_striking_accuracy/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/esports.html",
+    "items": [
+      "/esports/league_of_legends/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/football_american.html",
+    "items": [
+      "/football_american/football-recruiting-and-impact-NFL/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/gymnastics.html",
+    "items": [
+      "/gymnastics/NCAA-womens-gymnastics-bootstrap/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/hockey.html",
+    "items": [
+      "/hockey/pwhl_season1_visualizations/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/motor_sports.html",
+    "items": [
+      "/motor_sports/formula1_laps/index.html",
+      "/motor_sports/nascar_regression_transformation/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/rowing.html",
+    "items": [
+      "/rowing/olympic_rowing_datawrangling/index.html",
+      "/rowing/olympic_rowing_introstat/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/skating.html",
+    "items": [
+      "/skating/ice_skating_olympics_men_2008-2022/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/softball.html",
+    "items": [
+      "/softball/softball_div1/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/tennis.html",
+    "items": [
+      "/tennis/atp_win_percentages_format_and_surface/index.html"
+    ]
+  },
+  {
+    "listing": "/sports/ultimate_frisbee.html",
+    "items": [
+      "/ultimate_frisbee/college-ultimate-championship-statistics/index.html"
     ]
   }
 ]

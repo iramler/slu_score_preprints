@@ -1,0 +1,11 @@
+---
+title: "football_american Modules"
+listing:
+  contents:
+    - "../football_american/*/index.qmd"
+  sort: date desc
+  type: grid
+  fields: [title, author, date, categories]
+---
+
+These modules use **football_american** data to teach topics in statistics and data science.
