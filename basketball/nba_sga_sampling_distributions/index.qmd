@@ -1,0 +1,105 @@
+---
+title: "Shai Gilgeous-Alexander 2024-25 Points"
+author:
+  - name: Cooper Olney
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+  - name: Robin Lock
+    affiliation:
+      - ref: slu
+      
+date: "July 1, 2025"
+description: "Explore sampling distribution for the sample mean by using Shai Gilgeous-Alexander's game-by-game point totals from the 2024-25 NBA regular season."
+editor: 
+  canonical: true
+categories:
+  - Sampling distribution for sample mean
+---
+
+![Source: https://www.bbc.com/sport/basketball/articles/c62n3gj5kpvo](sga_mvp_finals.jpg.webp)
+
+## Module
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+## Introduction
+The 2024-25 NBA season was a historic one for the Oklahoma City Thunder, who captured their first ever NBA Championship. The NBA Playoffs consist of four rounds, First Round, Second Round, Conference Finals, and NBA Finals, with each round played as a best of seven series. In the 2025, playoffs, the Thunder played a total of 23 games: 4 in the First Round, 7 in the Second Round, 5 in the Conference Finals, and 7 in the NBA Finals.
+
+At the heart of this title run was [Shai Gilgeous-Alexander (SGA)](https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander){target="_blank"}, or SGA for short. SGA led the league in scoring, was named NBA MVP and capped off the season by earning the Finals MVP. His scoring consistency and ability to take over games made him one of the most dominant offensive forces in the league. This dataset, which contains SGA's point totals from every regular season game, offers a snapshot of one of the most impressive individual season in recent NBA history.
+
+::: {.callout-note collapse="true" title="SGA Highlight Reel" appearance="minimal"}
+For those not familiar with Shai Gilgeous-Alexander, feel free to check out his highlight reel from the 2024-25 season!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KwdUKP-mLzA?si=KXpc-DONjKuPHlVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+:::
+
+In addition to its basketball significance, this dataset allows us to explore how statistical tools (such as [StatKey](https://www.lock5stat.com/StatKey/){target="_blank"}) can be used to simulate real-world scenarios. By treating SGA's regular season point totals as the population, we can model specific playoff situations by drawing random samples of different sizes. These simulations help us understand how much variation we might expect in his performances and how likely different playoff outcomes are are based on his regular season scoring.
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1. Describe the shape, center and spread of a statistical distribution.
+
+2. Use simulation tools (StatKey or R) to create sampling distributions of the sample mean.
+
+3. Comparing sampling distributions from different sample sizes.
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+**Technology Requirement:**
+
+This activity uses Statkey or a similar tool for generating sampling distributions
+
+**Students should have prior knowledge in:**
+
+- Understanding and interpreting distributions (shape, center, spread)
+
+- Distinguishing between a population and a sample
+
+- Knowledge of Normal Distributions is required for the optional portion of the handout.
+:::
+
+## Data
+The `sga_points_2025.csv` dataset contains 77 rows and 1 column. Each row represents a game that Shai Gilgeous-Alexander played in during the 2024-25 NBA regular season. **Note** this dataset includes the NBA Cup Championship, but stats from that game are not officially counted in NBA season totals.
+
+Download Data: [sga_points_2025.csv](sga_points_2025.csv)
+
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable          | Description
+|-------------------|------------------------------------------------
+| points    | Total number of points Shai Gilgeous-Alexander scored in that game.
+
+</details>
+
+### Data Sources
+
+Saiem Gilani (2023). hoopR: Access Men's Basketball Play by Play Data. R package version 2.1.0, 
+[https://CRAN.R-project.org/package=hoopR](https://CRAN.R-project.org/package=hoopR){target="_blank"}
+
+## Materials
+
+
+[Class Handout - MS Word version using StatKey](nba_sampling_dist_worksheet.docx)
+
+[Class handout - with solutions](nba_sampling_dist_solutions.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Through this module, you've used NBA data to explore how sample size affects the behavior of sampling distributions. By treating Shai Gilgeous-Alexander's regular season point totals as a population, you've simulated different playoff scenarios and investigated how consistent or unusual his actual performances were. These simulations provide a hands-on way to see how sample means vary, and how distribution shape changes with sample size. This foundation sets the stage for a deeper understanding of the Central Limit Theorem.
+
+:::
+
+
+
+
+
+
