@@ -16,10 +16,10 @@ author:
 date: June 12, 2024
 description: Comparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.
 categories:
-  - confidence intervals
-  - prediction intervals
-  - multiple linear regression
-  - anova for overall fit
+  - Confidence intervals
+  - Prediction intervals
+  - Multiple linear regression
+  - ANOVA for overall fit
   - t.test for correlation
 ---
 

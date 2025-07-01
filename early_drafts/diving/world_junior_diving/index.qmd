@@ -14,8 +14,8 @@ author:
 editor: 
   canonical: true
 categories:
-  - ANOVA for difference in means
-  - Pairwise Comparisons
+  - ANOVA
+  - Pairwise comparisons
   - Fisher’s LSD
   - Tukey’s HSD
 ---
@@ -28,7 +28,7 @@ Please note that these material have not yet completed the required pedagogical 
 
 The FINA Junior World Diving Championships is a elite dive meet where top divers around the world under the age of 18 compete. Each diver completed 9 dives, all of which contributed to their overall score. Each dive is scored by 7 judges. Each judge gives a score individually on a scale of 1-10 at half-point increments based on execution of the dive. 10 represents perfect execution, while 0 represents failed execution. The two lowest and the two highest scores of the judges are voided, and the other three are added together. The sum of the three judges is then multiplied by the difficulty of the attempted dive. The product represent the points earned for that dive. The overall score is calculated by adding together the points earned on each dives.
 
-In this worksheet, we will determine if there are statistical differences in mean total points scored between 16, 17, and 18-year old divers. Understanding how total score differs between different aged divers may tell us something about the importance of age, experince, and skill level in scoring points in diving. 
+In this worksheet, we will determine if there are statistical differences in mean total points scored between 16, 17, and 18-year old divers. Understanding how total score differs between different aged divers may tell us something about the importance of age, experince, and skill level in scoring points in diving.
 
 [Preliminary video ideas](Diving_Video_Topics.docx)
 
@@ -45,9 +45,9 @@ By the end of this activity, you will be able to:
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 Technology requirement: The activity handout provides summary statistics so that no statistical software is required. However, the activity could be modified to ask students to conduct hypothesis tests through a statistical software, produce that information from the raw dataset, and/or extend the activity to investigate other variables available in the data.
 
-1.  Hypothesis Tests: Knowledge of hypothesis tests are vital to this activity. Familiarity with  hypothesizes, test statistics, degrees of freedom, and p-values are important for the completion of this worksheet.
+1.  Hypothesis Tests: Knowledge of hypothesis tests are vital to this activity. Familiarity with hypothesizes, test statistics, degrees of freedom, and p-values are important for the completion of this worksheet.
 
-2.  ANOVA: Understanding and familiarity with the concept of ANOVA tests are important in order to further analyze the data through pairwise comparisons. 
+2.  ANOVA: Understanding and familiarity with the concept of ANOVA tests are important in order to further analyze the data through pairwise comparisons.
 
 3.  Familiarity with basic statistical analysis techniques and terms, specifically mean, categorical variables, and quantitative variables, are important conceptual concepts needed in the aiding in this activity.
 :::
@@ -94,11 +94,8 @@ World Aquatics. (2022). FINA World Junior Diving Championships 2022. <https://ww
 
 [Class handout - ANOVA - Needs Data](WS_Diving_ANOVA_Needs_Data.docx) (requires the datafile)
 
-[Class handout - Two-sample Tests - Key](WS_Diving_TwoSample_Tests_Key.docx) 
-
+[Class handout - Two-sample Tests - Key](WS_Diving_TwoSample_Tests_Key.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-
 To Be Written ...
 :::
-

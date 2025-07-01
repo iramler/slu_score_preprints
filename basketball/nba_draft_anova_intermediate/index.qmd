@@ -15,8 +15,8 @@ editor:
   canonical: true
 categories:
   - One-Way Analysis of Variance 
-  - Difference in Means 
-  - Tukey's HSD 
+  - Difference in means 
+  - Tukey's HSD
 ---
 
 ## Module

@@ -12,9 +12,9 @@ author:
 date: June 26, 2024
 description: Statistics from the 2024 College Ultimate Championships to be tidied and plotted.
 categories:
-  - Data Cleaning
+  - Data cleaning
   - Joining
-  - Data Visualization
+  - Data visualization
 ---
 
 ## Module
@@ -56,7 +56,7 @@ This data comes from the 2024 Division 1 and 3 Men's and Women's College Ultimat
 <summary><b>Variable Descriptions</b></summary>
 
 | Variable  | Description                                                                          |
-|--------------------------|----------------------------------------------|
+|-----------|--------------------------------------------------------------------------------------|
 | player    | player name                                                                          |
 | level     | the level that the player was competing at (D1 or D3)                                |
 | gender    | gender of the player's division (Men or Women)                                       |
@@ -82,7 +82,7 @@ The 2nd dataset contains the total games played by each player's team in the Col
 | gender     | gender of the player's division (Men or Women)        |
 | division   | level and gender of the competing player's division   |
 | team_name  | full name of the players team                         |
-| team_games | the total games played by the player's team            |
+| team_games | the total games played by the player's team           |
 
 **Data Source**
 
@@ -97,5 +97,5 @@ The data is obtained from a [USA Ultimate 2024 Nationals Stats Dashboard](https:
 [ultimate_worksheet_ans.qmd](ultimate_worksheet_ans.qmd) - Answer key/guide for the worksheet
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Students should find that D1 Men's division has very dominant offenses and the D3 Women's division has less dominant offenses with defenses scoring more. 
+Students should find that D1 Men's division has very dominant offenses and the D3 Women's division has less dominant offenses with defenses scoring more.
 :::
