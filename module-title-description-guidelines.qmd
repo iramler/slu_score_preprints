@@ -1,0 +1,62 @@
+---
+title: "Guidelines for Module Titles and Descriptions"
+format: html
+editor: visual
+---
+
+## 📛 Guidelines for Module Titles (`title:` in YAML)
+
+Your module’s title is the **first thing others will see**, so it should be concise, specific, and informative.
+
+### ✅ DO:
+- Use **Title Case** (capitalize major words).
+- Make the title **descriptive of the statistical concept** *and* the context/sport.
+- Try to **highlight what the learner will do or explore**.
+
+#### ✅ Good Examples:
+- `Comparing Run Times Using Paired t-Tests`
+- `Exploring Home Field Advantage in PLL`
+- `Bootstrapping Mean Paddle Times in Canoe Racing`
+- `Visualizing NBA Shot Charts with ggplot2`
+- `Testing a Difference in Batting Averages: MLB vs NPB`
+
+### ❌ Avoid:
+- Vague titles like `Regression Example`, `Module 3`, or `MLB Data`
+- Excessive length or jargon
+- Using all lowercase or ALL CAPS
+
+---
+
+## 📝 Guidelines for Module Descriptions (`description:` in YAML)
+
+The description provides a brief summary of what the module covers — it’s often shown in listings, search results, or previews.
+
+### ✅ DO:
+- Limit to **1–3 sentences**
+- Start with what students will do or learn
+- Mention the **statistical topic** and **sports context**
+- Use **clear, student-friendly language**
+
+#### ✅ Good Examples:
+- `Students explore paired t-tests by comparing split times from a World Cup Giant Slalom race.`
+- `This module uses PLL faceoff win percentages to practice one-sample proportion testing.`
+- `Learners use bootstrap sampling to estimate the average canoe racing time in a 70-mile race.`
+
+### ❌ Avoid:
+- Long blocks of text
+- Repeating the title verbatim
+- Using overly technical descriptions like:  
+  `Demonstration of t-distribution-based inference under paired design with finite population correction.`
+
+---
+
+## 📂 Example YAML (index.qmd)
+
+```yaml
+title: "Comparing Run Times Using Paired t-Tests"
+description: "Students explore paired t-tests by comparing split times from a World Cup Giant Slalom race."
+categories: 
+  - Hypothesis Testing
+  - Paired Data
+  - Confidence Intervals
+```
