@@ -45,7 +45,7 @@ listing:
   contents:
     - "./*/index.qmd"
   sort: date desc
-  type: grid
+  type: default
   fields: [title, author, date, categories]
 ---
 

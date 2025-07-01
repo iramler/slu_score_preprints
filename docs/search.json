@@ -15,7 +15,7 @@
     "href": "volleyball/index.html",
     "title": "Volleyball",
     "section": "",
-    "text": "These modules use volleyball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nDivision Three Volleyball Timeouts\n\n\n\nOne sample proportions\n\n\nConfidence intervals\n\n\n\n\nIvan Ramler, Cassie Richter, Sierra Hess, Vivian Johnson\n\n\nJul 12, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use volleyball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nDivision Three Volleyball Timeouts\n\n\n\n\n\n\nOne sample proportions\n\n\nConfidence intervals\n\n\n\n\n\n\nJul 12, 2024\n\n\nIvan Ramler, Cassie Richter, Sierra Hess, Vivian Johnson\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Volleyball"
@@ -62,7 +62,7 @@
     "href": "tennis/index.html",
     "title": "Tennis",
     "section": "",
-    "text": "These modules use tennis data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nInvestigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis\n\n\n\nVisualizations\n\n\nDistribution\n\n\nInterpretation\n\n\n\n\nEric Seltzer, Ivan Ramler\n\n\nJun 24, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use tennis data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nInvestigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis\n\n\n\n\n\n\nVisualizations\n\n\nDistribution\n\n\nInterpretation\n\n\n\n\n\n\nJun 24, 2024\n\n\nEric Seltzer, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Tennis"
@@ -181,7 +181,7 @@
     "href": "skating/index.html",
     "title": "Skating",
     "section": "",
-    "text": "These modules use skating data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nInvestigating The Difference in Olympic Figure Skating Scores Throughout the Years\n\n\n\nANOVA\n\n\nTukey HSD\n\n\nPair wise comparisons\n\n\n\n\nFaith Rhinehart, Jessica Chapman, Ivan Ramler\n\n\nJun 27, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use skating data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nInvestigating The Difference in Olympic Figure Skating Scores Throughout the Years\n\n\n\n\n\n\nANOVA\n\n\nTukey HSD\n\n\nPair wise comparisons\n\n\n\n\n\n\nJun 27, 2025\n\n\nFaith Rhinehart, Jessica Chapman, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Skating"
@@ -192,7 +192,7 @@
     "href": "running/index.html",
     "title": "Running",
     "section": "",
-    "text": "These modules use running data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\n2023 Boston Marathon - Variability in Finish Times\n\n\n\nHistograms\n\n\nSummary statistics\n\n\nBimodal data\n\n\n\n\nIvan Ramler, Jack Fay\n\n\nMay 13, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use running data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n2023 Boston Marathon - Variability in Finish Times\n\n\n\n\n\n\nHistograms\n\n\nSummary statistics\n\n\nBimodal data\n\n\n\n\n\n\nMay 13, 2024\n\n\nIvan Ramler, Jack Fay\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Running"
@@ -215,7 +215,7 @@
     "href": "rowing/index.html",
     "title": "Rowing",
     "section": "",
-    "text": "These modules use rowing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Data Wrangling\n\n\n\ndplyr\n\n\nfiltering\n\n\ngrouping and summarizing\n\n\nmutating\n\n\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\nJun 5, 2025\n\n\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Summary Statistics\n\n\n\ndistribution and skewness\n\n\noutlier detection\n\n\nsummary statistics\n\n\nconfounding variable\n\n\n\n\nAbigail Smith, Ivan Ramler, Robin Lock\n\n\nJun 5, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use rowing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Data Wrangling\n\n\n\n\n\n\ndplyr\n\n\nfiltering\n\n\ngrouping and summarizing\n\n\nmutating\n\n\n\n\n\n\nJun 5, 2025\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\n\n\n\n\n\nOlympic Rowing Medals Between 1900 and 2022 - Summary Statistics\n\n\n\n\n\n\ndistribution and skewness\n\n\noutlier detection\n\n\nsummary statistics\n\n\nconfounding variable\n\n\n\n\n\n\nJun 5, 2025\n\n\nAbigail Smith, Ivan Ramler, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Rowing"
@@ -226,7 +226,7 @@
     "href": "multisport/index.html",
     "title": "Multisport",
     "section": "",
-    "text": "These modules use multisport data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nBeijing 2022 Olympics - Cleaning and Summarizing Data\n\n\n\nData cleaning\n\n\nSummarization\n\n\nMerging\n\n\n\n\nEric Seltzer, Ivan Ramler\n\n\nMar 8, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use multisport data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nBeijing 2022 Olympics - Cleaning and Summarizing Data\n\n\n\n\n\n\nData cleaning\n\n\nSummarization\n\n\nMerging\n\n\n\n\n\n\nMar 8, 2024\n\n\nEric Seltzer, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Multisport"
@@ -237,7 +237,7 @@
     "href": "motor_sports/index.html",
     "title": "Motor Sports",
     "section": "",
-    "text": "These modules use motor_sports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nAnalyzing Lap Times for the 2023 F1 Miami Grand Prix\n\n\n\nSummary statistics\n\n\nHistgram interpretation\n\n\nOutliers\n\n\n\n\nNorah Kuduk, Ivan Ramler\n\n\nMay 15, 2024\n\n\n\n\n\n\n\n\n\n\n\nNASCAR Transformation Module\n\n\n\nLinear regression\n\n\nTransformations\n\n\nPolynomial regression\n\n\n\n\nAlyssa Bigness, Ivan Ramler, Jack Fay\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use motor_sports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nAnalyzing Lap Times for the 2023 F1 Miami Grand Prix\n\n\n\n\n\n\nSummary statistics\n\n\nHistgram interpretation\n\n\nOutliers\n\n\n\n\n\n\nMay 15, 2024\n\n\nNorah Kuduk, Ivan Ramler\n\n\n\n\n\n\n\nNASCAR Transformation Module\n\n\n\n\n\n\nLinear regression\n\n\nTransformations\n\n\nPolynomial regression\n\n\n\n\n\n\nFeb 5, 2024\n\n\nAlyssa Bigness, Ivan Ramler, Jack Fay\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Motor Sports"
@@ -272,7 +272,7 @@
     "href": "hockey/index.html",
     "title": "Hockey",
     "section": "",
-    "text": "These modules use hockey data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\n2023-24 PWHL - Visualizing the Regular Season\n\n\n\ndata visualization\n\n\ndata wrangling\n\n\nexploratory data Analysis\n\n\n\n\nIvan Ramler, Brendan Karadenes\n\n\nJun 6, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use hockey data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n2023-24 PWHL - Visualizing the Regular Season\n\n\n\n\n\n\ndata visualization\n\n\ndata wrangling\n\n\nexploratory data Analysis\n\n\n\n\n\n\nJun 6, 2024\n\n\nIvan Ramler, Brendan Karadenes\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Hockey"
@@ -319,7 +319,7 @@
     "href": "golf/index.html",
     "title": "Golf",
     "section": "",
-    "text": "These modules use golf data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nPGA - Drive for Show, Putt for Dough?\n\n\n\nCorrelation\n\n\n\n\nAlyssa Bigness, Robin Lock\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use golf data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nPGA - Drive for Show, Putt for Dough?\n\n\n\n\n\n\nCorrelation\n\n\n\n\n\n\nFeb 5, 2024\n\n\nAlyssa Bigness, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Golf"
@@ -342,7 +342,7 @@
     "href": "fitness_and_training/index.html",
     "title": "Fitness and Training",
     "section": "",
-    "text": "These modules use fitness_and_training data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nModeling the Impact of Age on Powerlifting\n\n\n\nHigh order modeling\n\n\nIndicator variables\n\n\n\n\nSarah Sheldon, Ivan Ramler\n\n\nMay 8, 2025\n\n\n\n\n\n\n\n\n\n\n\nStrength Ratios - Flat Dumbbell Press to Barbell Bench Press\n\n\n\nData collection methods\n\n\nOne sample means-interval\n\n\n\n\nVivian Johnson, Ivan Ramler\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use fitness_and_training data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nModeling the Impact of Age on Powerlifting\n\n\n\n\n\n\nHigh order modeling\n\n\nIndicator variables\n\n\n\n\n\n\nMay 8, 2025\n\n\nSarah Sheldon, Ivan Ramler\n\n\n\n\n\n\n\nStrength Ratios - Flat Dumbbell Press to Barbell Bench Press\n\n\n\n\n\n\nData collection methods\n\n\nOne sample means-interval\n\n\n\n\n\n\nJun 13, 2024\n\n\nVivian Johnson, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Fitness and Training"
@@ -573,7 +573,7 @@
     "href": "disc_golf/index.html",
     "title": "Disc Golf",
     "section": "",
-    "text": "These modules use disc_golf data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nDisc Golf Pro Tour - Driving or Putting?\n\n\n\nCorrelation\n\n\n\n\nGavin Cassidy, Ivan Ramler\n\n\nJun 13, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use disc_golf data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nDisc Golf Pro Tour - Driving or Putting?\n\n\n\n\n\n\nCorrelation\n\n\n\n\n\n\nJun 13, 2024\n\n\nGavin Cassidy, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Disc Golf"
@@ -608,7 +608,7 @@
     "href": "canoeing/index.html",
     "title": "Canoeing",
     "section": "",
-    "text": "These modules use canoeing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\nData visualization\n\n\nData manipulation\n\n\n\n\nPhoebe Jones, Robin Lock, Ivan Ramler\n\n\nJun 17, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use canoeing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nClinton Canoe Regatta: Graphing and Data Manipulation\n\n\n\n\n\n\nData visualization\n\n\nData manipulation\n\n\n\n\n\n\nJun 17, 2025\n\n\nPhoebe Jones, Robin Lock, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Canoeing"
@@ -728,7 +728,7 @@
     "href": "basketball/index.html",
     "title": "Basketball",
     "section": "",
-    "text": "These modules use basketball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nExploring the NBA Draft via ANOVA and Tukey’s HSD\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\nTukey’s HSD\n\n\n\n\nVivian Johnson, Robin Lock\n\n\nJul 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nIntroducing ANOVA Through the NBA Draft\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\n\n\nVivian Johnson, Robin Lock\n\n\nJul 1, 2024\n\n\n\n\n\n\n\n\n\n\n\nWNBA Data Cleaning Module\n\n\n\nData cleaning\n\n\nMissing Data\n\n\nTables\n\n\n\n\nKristen Varin, Ivan Ramler\n\n\nMay 15, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use basketball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nExploring the NBA Draft via ANOVA and Tukey’s HSD\n\n\n\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\nTukey’s HSD\n\n\n\n\n\n\nJul 1, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\nIntroducing ANOVA Through the NBA Draft\n\n\n\n\n\n\nOne-Way Analysis of Variance\n\n\nDifference in Means\n\n\n\n\n\n\nJul 1, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\n\nWNBA Data Cleaning Module\n\n\n\n\n\n\nData cleaning\n\n\nMissing Data\n\n\nTables\n\n\n\n\n\n\nMay 15, 2024\n\n\nKristen Varin, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Basketball"
@@ -787,7 +787,7 @@
     "href": "combat_sports/index.html",
     "title": "Combat Sports",
     "section": "",
-    "text": "These modules use combat_sports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nUFC: Striking Accuracy Percentages and the Normal Distribution\n\n\n\nNormal Distribution\n\n\nQuantiles\n\n\nProportions\n\n\n\n\nBrendan Karadenes, Ivan Ramler\n\n\nJun 6, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use combat_sports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nUFC: Striking Accuracy Percentages and the Normal Distribution\n\n\n\n\n\n\nNormal Distribution\n\n\nQuantiles\n\n\nProportions\n\n\n\n\n\n\nJun 6, 2024\n\n\nBrendan Karadenes, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Combat Sports"
@@ -1043,7 +1043,7 @@
     "href": "esports/index.html",
     "title": "Esports",
     "section": "",
-    "text": "These modules use esports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nLeague of Legends - Buffing and Nerfing\n\n\n\nOutliers\n\n\nSummary statistics\n\n\n\n\nIvan Ramler, George Charalambous, A.J. Dykstra\n\n\nFeb 21, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use esports data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nLeague of Legends - Buffing and Nerfing\n\n\n\n\n\n\nOutliers\n\n\nSummary statistics\n\n\n\n\n\n\nFeb 21, 2024\n\n\nIvan Ramler, George Charalambous, A.J. Dykstra\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Esports"
@@ -1114,7 +1114,7 @@
     "href": "football_american/index.html",
     "title": "Football American",
     "section": "",
-    "text": "These modules use football_american data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nFootball Recruiting and Impact in the NFL\n\n\n\ndata wrangling\n\n\n\n\nBrendan Karadenes, Robin Lock\n\n\nJul 17, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use football_american data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nFootball Recruiting and Impact in the NFL\n\n\n\n\n\n\ndata wrangling\n\n\n\n\n\n\nJul 17, 2024\n\n\nBrendan Karadenes, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Football American"
@@ -1149,7 +1149,7 @@
     "href": "gymnastics/index.html",
     "title": "Gymnastics",
     "section": "",
-    "text": "These modules use gymnastics data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nNCAA Women’s Gymnastics and Bootstrap Distributions\n\n\n\nBootstrap Distribution\n\n\nConfidence Intervals\n\n\nPaired Data\n\n\n\n\nVivian Johnson, Robin Lock\n\n\nJul 22, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use gymnastics data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nNCAA Women’s Gymnastics and Bootstrap Distributions\n\n\n\n\n\n\nBootstrap Distribution\n\n\nConfidence Intervals\n\n\nPaired Data\n\n\n\n\n\n\nJul 22, 2024\n\n\nVivian Johnson, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Gymnastics"
@@ -1160,7 +1160,7 @@
     "href": "handball/index.html",
     "title": "Handball",
     "section": "",
-    "text": "These modules use handball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nHandball Individual Player Statistics for the 2022-2023 Season\n\n\n\nconfidence intervals\n\n\nprediction intervals\n\n\nmultiple linear regression\n\n\nanova for overall fit\n\n\nt.test for correlation\n\n\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\nJun 12, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use handball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nHandball Individual Player Statistics for the 2022-2023 Season\n\n\n\n\n\n\nconfidence intervals\n\n\nprediction intervals\n\n\nmultiple linear regression\n\n\nanova for overall fit\n\n\nt.test for correlation\n\n\n\n\n\n\nJun 12, 2024\n\n\nAbigail Smith, Robin Lock, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Handball"
@@ -1195,7 +1195,7 @@
     "href": "lacrosse/index.html",
     "title": "Lacrosse",
     "section": "",
-    "text": "These modules use lacrosse data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nLacrosse Faceoff Proportions\n\n\n\nHypothesis testing\n\n\nSingle proportion\n\n\n\n\nJack Fay, Ivan Ramler, A.J. Dykstra\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL\n\n\n\nDifference in two means\n\n\n\n\nJack Cowan, Ivan Ramler, A.J. Dykstra, Robin Lock\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use lacrosse data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nLacrosse Faceoff Proportions\n\n\n\n\n\n\nHypothesis testing\n\n\nSingle proportion\n\n\n\n\n\n\nFeb 5, 2024\n\n\nJack Fay, Ivan Ramler, A.J. Dykstra\n\n\n\n\n\n\n\nLacrosse PLL vs. NLL\n\n\n\n\n\n\nDifference in two means\n\n\n\n\n\n\nFeb 5, 2024\n\n\nJack Cowan, Ivan Ramler, A.J. Dykstra, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Lacrosse"
@@ -1302,7 +1302,7 @@
     "href": "skiing/index.html",
     "title": "Skiing",
     "section": "",
-    "text": "These modules use skiing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nWorld Cup Women’s 10k Classic Nordic Ski Race - Splits\n\n\n\nSimple linear regression\n\n\nCorrelation\n\n\nRandomized block ANOVA\n\n\n\n\nAbigail Smith, Robin Lock\n\n\nMay 16, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use skiing data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nWorld Cup Women’s 10k Classic Nordic Ski Race - Splits\n\n\n\n\n\n\nSimple linear regression\n\n\nCorrelation\n\n\nRandomized block ANOVA\n\n\n\n\n\n\nMay 16, 2024\n\n\nAbigail Smith, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Skiing"
@@ -1313,7 +1313,7 @@
     "href": "softball/index.html",
     "title": "Softball",
     "section": "",
-    "text": "These modules use softball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nMerging Multiple Seasons of NCAA Div 1 Softball Statistics\n\n\n\nJoining\n\n\nSQL\n\n\n\n\nSarah Weaver, Ivan Ramler\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use softball data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nMerging Multiple Seasons of NCAA Div 1 Softball Statistics\n\n\n\n\n\n\nJoining\n\n\nSQL\n\n\n\n\n\n\nFeb 5, 2024\n\n\nSarah Weaver, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Softball"
@@ -1324,7 +1324,7 @@
     "href": "swimming/index.html",
     "title": "Swimming",
     "section": "",
-    "text": "These modules use swimming data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nOlympic Swimming - Changes in the 100m Women’s Event\n\n\n\nBoxplots\n\n\nConfidence intervals\n\n\nDifference in means\n\n\nSummary statistics\n\n\n\n\nBrendan Karadenes, Robin Lock, Ivan Ramler\n\n\nJun 24, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use swimming data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nOlympic Swimming - Changes in the 100m Women’s Event\n\n\n\n\n\n\nBoxplots\n\n\nConfidence intervals\n\n\nDifference in means\n\n\nSummary statistics\n\n\n\n\n\n\nJun 24, 2025\n\n\nBrendan Karadenes, Robin Lock, Ivan Ramler\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Swimming"
@@ -1359,7 +1359,7 @@
     "href": "triathlon/index.html",
     "title": "Triathlon",
     "section": "",
-    "text": "These modules use triathlon data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Multiple Linear Regression\n\n\n\nLinear regression\n\n\n\n\nA.J. Dykstra, Ivan Ramler\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Simple Linear Regression\n\n\n\nLinear regression\n\n\n\n\nA.J. Dykstra\n\n\nFeb 5, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use triathlon data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Multiple Linear Regression\n\n\n\n\n\n\nLinear regression\n\n\n\n\n\n\nFeb 5, 2024\n\n\nA.J. Dykstra, Ivan Ramler\n\n\n\n\n\n\n\nIronman Triathlon (Canadian Females) - Simple Linear Regression\n\n\n\n\n\n\nLinear regression\n\n\n\n\n\n\nFeb 5, 2024\n\n\nA.J. Dykstra\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Triathlon"
@@ -1394,7 +1394,7 @@
     "href": "ultimate_frisbee/index.html",
     "title": "Ultimate Frisbee",
     "section": "",
-    "text": "These modules use ultimate_frisbee data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n\n\n2024 College Ultimate Championship Statistics\n\n\n\nData Cleaning\n\n\nJoining\n\n\nData Visualization\n\n\n\n\nGavin Cassidy, Robin Lock\n\n\nJun 26, 2024\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "These modules use ultimate_frisbee data to teach topics in statistics and data science.\n\n\n\n\n\n\n\n\n\n2024 College Ultimate Championship Statistics\n\n\n\n\n\n\nData Cleaning\n\n\nJoining\n\n\nData Visualization\n\n\n\n\n\n\nJun 26, 2024\n\n\nGavin Cassidy, Robin Lock\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Home",
       "Ultimate Frisbee"

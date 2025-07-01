@@ -19,6 +19,7 @@ categories:
   - ANOVA
   - Tukey HSD
   - Pair wise comparisons
+image: chen4f3t_zoomslider-900.jpg
 ---
 
 ![Source: https://www.nytimes.com/interactive/2022/02/10/sports/olympics/nathan-chen-jumps.html](chen4f3t_zoomslider-900.jpg)

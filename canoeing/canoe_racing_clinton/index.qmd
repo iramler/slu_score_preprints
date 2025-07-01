@@ -19,6 +19,7 @@ editor:
 categories:
   - Data visualization
   - Data manipulation
+image: Marathon_C2.jpg
 ---
 
 
