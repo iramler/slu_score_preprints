@@ -6,12 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="A.J. Dykstra">
+<meta name="author" content="Cooper Olney">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2024-02-05">
-<meta name="description" content="Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.">
+<meta name="author" content="Robin Lock">
+<meta name="dcterms.date" content="2025-07-01">
+<meta name="description" content="Explore sampling distribution for the sample mean by using Shai Gilgeous-Alexander’s game-by-game point totals from the 2024-25 NBA regular season.">
 
-<title>Ironman Triathlon (Canadian Females) - Multiple Linear Regression – SLU SCORE Module Preprint Repository</title>
+<title>Shai Gilgeous-Alexander 2024-25 Points – SLU SCORE Module Preprint Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +145,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basketball/index.html">Basketball</a></li><li class="breadcrumb-item"><a href="../../basketball/nba_sga_sampling_distributions/index.html">Shai Gilgeous-Alexander 2024-25 Points</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -383,11 +384,11 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../basketball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basketball</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
@@ -402,7 +403,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/nba_sga_sampling_distributions/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basketball/nba_sga_sampling_distributions/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Shai Gilgeous-Alexander 2024-25 Points</span></a>
   </div>
 </li>
@@ -782,14 +783,14 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../triathlon/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Triathlon</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-33" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-33" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
   </div>
 </li>
@@ -840,23 +841,35 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
+  </ul></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../triathlon/index.html">Triathlon</a></li><li class="breadcrumb-item"><a href="../../triathlon/multiple_linear_regression/index.html">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basketball/index.html">Basketball</a></li><li class="breadcrumb-item"><a href="../../basketball/nba_sga_sampling_distributions/index.html">Shai Gilgeous-Alexander 2024-25 Points</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</h1>
+<h1 class="title">Shai Gilgeous-Alexander 2024-25 Points</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Linear regression</div>
+    <div class="quarto-category">Sampling distribution for sample mean</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Using Lake Placid Ironman triathlon results for female Canadian finishers to predict run times for participants based on both swim and bike times.
+    Explore sampling distribution for the sample mean by using Shai Gilgeous-Alexander’s game-by-game point totals from the 2024-25 NBA regular season.
   </div>
 </div>
 
@@ -865,7 +878,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">A.J. Dykstra <a href="mailto:adykstra@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+    <p class="author">Cooper Olney </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -873,7 +886,15 @@ cookieconsent.run({
           </p>
       </div>
     <div class="quarto-title-meta-contents">
-    <p class="author">Ivan Ramler </p>
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Robin Lock </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -888,7 +909,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2024</p>
+      <p class="date">July 1, 2025</p>
     </div>
   </div>
   
@@ -900,99 +921,139 @@ cookieconsent.run({
 </header>
 
 
-<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
-<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/triathlons/ironman-lakeplacid-mlr.html" target="_blank">https://modules.scorenetwork.org/triathlons/ironman-lakeplacid-mlr.html</a></p>
-<!--
-
-### Welcome video
-
-```{=html}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zYG2qdJRolM?si=xXNOvqT4BNY9hw1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-```
-### Introduction
-
-An [Ironman triathlon](https://www.ironman.com/){target="_blank"} is one of the most grueling endurance events in the world, consisting of three sequential races: a 2.4-mile (3.86 km) swim, a 112-mile (180.25 km) bike ride, and a marathon 26.2-mile (42.20 km) run. The event tests the physical and mental limits of athletes, requiring months or even years of dedicated training. Originating in 1978 in Hawaii, the Ironman triathlon has become a global phenomenon, symbolizing the ultimate challenge in long-distance triathlon competitions.
-
-The Triathlon Multiple Linear Regression module focuses on analyzing the relationships and predictive capabilities of multiple variables in the context of triathlon performance. Specifically, we will explore the prediction of run times (the last stage) using swim times and bike times as predictors. By employing simple regression models, checking conditions with residuals plots, and conducting hypothesis tests and confidence intervals, we aim to identify significant predictors and understand their contextual implications. The dataset used for this analysis comprises the 2022 Canadian finishers of the Lake Placid Ironman.
-
-::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This activity would be suitable for an long in-class example (of approximately 30 - 60 minutes) or out-of-class assignment.
-:::
-
-::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
-1.  Understand the concept of multiple linear regression and its application in analyzing sports data.
-2.  Recognize the importance of checking assumptions, such as assessing residuals vs. fits plots, for validating the regression models.
-3.  Gain insights into the significance of predictors through hypothesis tests and confidence intervals.
-4.  Comprehend the interpretation and contextual implications of the findings from multiple linear regression analyses in the triathlon setting.
-:::
-
-::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-To successfully complete this worksheet, students should have prior knowledge of the following statistical concepts:
-
-1.  Familiarity with simple linear regression, including interpretation of slopes, intercepts, and residuals.
-
-2.  Understanding of hypothesis testing and confidence intervals, particularly in the context of regression analysis.
-
-3.  Knowledge of residual analysis, including the interpretation of residual plots.
-
-4.  Basic understanding of the triathlon sport and its components (swimming, biking, and running) to better grasp the contextual implications of the statistical analyses.
-
-**Technology requirement:**
-
--   The "no tech" version of the activity uses Minitab to display the output and requires only simple hand calculations (for predictions and residuals).
-
--   The provided "tech required" handout assumes that students can use technology (such as Minitab) to perform a multiple linear regression analysis.
-:::
-
-### Data
-
-The data set has 64 rows with 17 columns. Each row represents a Canadian female who has participated in the 2022 Lake Placid Ironman. Note that this data set includes more variables than what are needed to complete the activity. Students are welcome to further explore the data using these additional variables.
-
-Download data: [ironman_lake_placid_female_2022_canadian.csv](ironman_lake_placid_female_2022_canadian.csv)
-
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="sga_mvp_finals.jpg.webp" class="img-fluid figure-img"></p>
+<figcaption>Source: https://www.bbc.com/sport/basketball/articles/c62n3gj5kpvo</figcaption>
+</figure>
+</div>
+<section id="module" class="level2">
+<h2 class="anchored" data-anchor-id="module">Module</h2>
+<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The 2024-25 NBA season was a historic one for the Oklahoma City Thunder, who captured their first ever NBA Championship. The NBA Playoffs consist of four rounds, First Round, Second Round, Conference Finals, and NBA Finals, with each round played as a best of seven series. In the 2025, playoffs, the Thunder played a total of 23 games: 4 in the First Round, 7 in the Second Round, 5 in the Conference Finals, and 7 in the NBA Finals.</p>
+<p>At the heart of this title run was <a href="https://en.wikipedia.org/wiki/Shai_Gilgeous-Alexander" target="_blank">Shai Gilgeous-Alexander (SGA)</a>, or SGA for short. SGA led the league in scoring, was named NBA MVP and capped off the season by earning the Finals MVP. His scoring consistency and ability to take over games made him one of the most dominant offensive forces in the league. This dataset, which contains SGA’s point totals from every regular season game, offers a snapshot of one of the most impressive individual season in recent NBA history.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="SGA Highlight Reel">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+SGA Highlight Reel
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For those not familiar with Shai Gilgeous-Alexander, feel free to check out his highlight reel from the 2024-25 season!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KwdUKP-mLzA?si=KXpc-DONjKuPHlVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+</div>
+</div>
+<p>In addition to its basketball significance, this dataset allows us to explore how statistical tools (such as <a href="https://www.lock5stat.com/StatKey/" target="_blank">StatKey</a>) can be used to simulate real-world scenarios. By treating SGA’s regular season point totals as the population, we can model specific playoff situations by drawing random samples of different sizes. These simulations help us understand how much variation we might expect in his performances and how likely different playoff outcomes are are based on his regular season scoring.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By the end of this activity, you will be able to:</p>
+<ol type="1">
+<li><p>Describe the shape, center and spread of a statistical distribution.</p></li>
+<li><p>Use simulation tools (StatKey or R) to create sampling distributions of the sample mean.</p></li>
+<li><p>Comparing sampling distributions from different sample sizes.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Technology Requirement:</strong></p>
+<p>This activity uses Statkey or a similar tool for generating sampling distributions</p>
+<p><strong>Students should have prior knowledge in:</strong></p>
+<ul>
+<li><p>Understanding and interpreting distributions (shape, center, spread)</p></li>
+<li><p>Distinguishing between a population and a sample</p></li>
+<li><p>Knowledge of Normal Distributions is required for the optional portion of the handout.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The <code>sga_points_2025.csv</code> dataset contains 77 rows and 1 column. Each row represents a game that Shai Gilgeous-Alexander played in during the 2024-25 NBA regular season. <strong>Note</strong> this dataset includes the NBA Cup Championship, but stats from that game are not officially counted in NBA season totals.</p>
+<p>Download Data: <a href="sga_points_2025.csv">sga_points_2025.csv</a></p>
 <details>
-
-<summary><b>Variable Descriptions</b></summary>
-
-| Variable      | Description                                                             |
-|---------------|-------------------------------------------------------------------------|
-| Bib           | registration number of each runner used for identification              |
-| Name          | The participant's name                                                  |
-| Country       | What country the participant is from                                    |
-| Gender        | The participant's gender                                                |
-| Division      | The age range or membership a runner is                                 |
-| Division.Rank | Within the divisions, the place each runner has obtained over all races |
-| Overall.Time  | The total time it took to complete the Ironman in minutes               |
-| Overall.Rank  | The runner's finishing place for that particular triathlon              |
-| Swim.Time     | The time in minutes it took to complete the swimming portion            |
-| Swim.Rank     | The place the runner finished for the swim portion                      |
-| Bike.Time     | The time in minutes it took to complete the biking portion              |
-| Bike.Rank     | The place the runner finished for the bike portion                      |
-| Run.Time      | The time in minutes it took to complete the running portion             |
-| Run.Rank      | The place the runner finished for the running portion                   |
-| Finish.Status | States whether someone completed the Ironman successfully               |
-| Location      | Where the Ironman takes place                                           |
-| Year          | They year when the mentioned participant ran                            |
-
+<summary>
+<b>Variable Descriptions</b>
+</summary>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 71%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>points</td>
+<td>Total number of points Shai Gilgeous-Alexander scored in that game.</td>
+</tr>
+</tbody>
+</table>
 </details>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data Sources</h3>
+<p>Saiem Gilani (2023). hoopR: Access Men’s Basketball Play by Play Data. R package version 2.1.0, <a href="https://CRAN.R-project.org/package=hoopR" target="_blank">https://CRAN.R-project.org/package=hoopR</a></p>
+</section>
+</section>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
+<p><a href="nba_sampling_dist_worksheet.docx">Class Handout - MS Word version using StatKey</a></p>
+<p><a href="nba_sampling_dist_solutions.docx">Class handout - with solutions</a></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conclusion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Through this module, you’ve used NBA data to explore how sample size affects the behavior of sampling distributions. By treating Shai Gilgeous-Alexander’s regular season point totals as a population, you’ve simulated different playoff scenarios and investigated how consistent or unusual his actual performances were. These simulations provide a hands-on way to see how sample means vary, and how distribution shape changes with sample size. This foundation sets the stage for a deeper understanding of the Central Limit Theorem.</p>
+</div>
+</div>
+</div>
 
-### Materials
 
-[Class handout - requires technology](Regression_Inference_MLR_Tech.docx)
-
-[Class handout - no technology required](Regression_Inference_MLR_NoTech.docx)
-
-[Class handout - with solutions](Regression_Inference_MLR_Key.docx)
-
-::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In conclusion, the Triathlon Multiple Linear Regression worksheet has provided valuable insights into the predictors of run times in the Lake Placid 2022 Ironman Canadian Finishers dataset. Initially, both Swim Time and Bike Time demonstrated significance as individual predictors, supported by hypothesis tests and confidence intervals. The hypothesis test for the slope term of Bike Time yielded a p-value of 0, indicating its significance. Additionally, the 95% confidence interval for the slope term of Swim Time excluded 0, further affirming its significance.
-
-However, when both Swim Times and Bike Times were included as predictors in the multiple linear regression model, we observed a change in significance. Swim Times were no longer a significant predictor. This finding suggests that when considering both predictors simultaneously, the predictive power of Swim Times in estimating run times diminishes. These findings emphasize the importance of evaluating multiple predictors in regression analysis and understanding how their inclusion can impact the significance and interpretation of individual predictors.
-:::
-
--->
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -56,6 +56,7 @@
       "/rowing/index.html",
       "/early_drafts/rugby/rugby_historical_comparisons/index.html",
       "/running/index.html",
+      "/basketball/nba_sga_sampling_distributions/index.html",
       "/skating/index.html",
       "/early_drafts/multisport/ski_to_sea_correlations/index.html",
       "/skiing/index.html",
@@ -144,16 +145,9 @@
     ]
   },
   {
-    "listing": "/basketball/index.html",
-    "items": [
-      "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
-      "/basketball/wnba_data_quality/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
+      "/basketball/nba_sga_sampling_distributions/index.html",
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/swimming/olympic_swimming_100m/index.html",
       "/early_drafts/basketball/wingspans_and_performance/index.html",
@@ -200,6 +194,15 @@
       "/softball/softball_div1/index.html",
       "/triathlon/multiple_linear_regression/index.html",
       "/triathlon/simple_linear_regression/index.html"
+    ]
+  },
+  {
+    "listing": "/basketball/index.html",
+    "items": [
+      "/basketball/nba_sga_sampling_distributions/index.html",
+      "/basketball/nba_draft_anova_intermediate/index.html",
+      "/basketball/nba_draft_anova_intro/index.html",
+      "/basketball/wnba_data_quality/index.html"
     ]
   },
   {
