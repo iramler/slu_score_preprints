@@ -1,5 +1,5 @@
 ---
-title: "Shai Gilgeous-Alexander 2024-25 Points"
+title: "Sampling Distributions: Shai Gilgeous-Alexander 2024-25 Points"
 author:
   - name: Cooper Olney
     affiliation:
