@@ -1,0 +1,124 @@
+---
+title: "TwoWayANOVA_Solutions"
+Authors: Faith Rhinehart
+execute: 
+  echo: true
+  warning: false
+  error: true
+format: 
+  html:
+    embed-resources: true
+---
+
+Figure skating is a sport where people perform routines on ice to music, combining athletic skill with artistic expression. Skaters compete in different categories like men's singles, women's singles, pairs (a man and a woman skating together), and ice dance (which focuses more on rhythm and movement). Each skater or team performs two routines: the short program and the free skate. The short program is a shorter routine with a list of required moves that every skater must include. Judges look at how well each move is done and how smoothly everything fits with the music. The free skate is longer and gives skaters more freedom to show their personal style and creativity. They still need to include certain types of moves, but they can choose how to put them together. Judges give scores for both routines based on how difficult the moves are, how well they’re done, and how artistic the performance is. The scores from both routines are added together, and the skater or team with the highest total wins.
+
+Read in the data:
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(here)
+library(readr)
+library(dplyr)
+library(ggthemes)
+
+MensFigureSkating <- read_csv("MensFigureSkating.csv")
+
+womensFigureSkating <- read_csv("womensFigureSkating.csv")
+```
+
+1) Change the `TP` variable in the women's data set into a <double> instead of a <character>
+```{r}
+womensFigureSkating$TP <- as.double(womensFigureSkating$TP)
+```
+
+2) Combine the men and women data set into one data set
+```{r}
+combined_Skate <- bind_rows(womensFigureSkating, MensFigureSkating)
+```
+
+3) Conduct a two-way ANOVA with Sex as the interaction term. Make sure to include all parts of a formal hypothesis test.
+
+Main Effects:
+H₀₁ (Sex): There is no main effect of Sex on TP.
+H₀₂ (Category): There is no main effect of Year on TP.
+
+Interaction Effect:
+H₀₃ (Sex × Category): There is no interaction effect between Sex and Year on TP.
+
+Alternative Hypotheses: There is an effect between the variables.
+
+```{r}
+anova_result <- aov(TP ~ as.factor(Year) * Sex, data = combined_Skate)
+summary(anova_result)
+```
+
+There is strong evidence that there is a main effect of Sex on TP (df = 4, F Value = 31.932, P-Value = <2e-16).
+There is strong evidence that there is a main effect of Year on TP (df = 1, F Value = 235.289, P-Value = <2e-16).
+There is no evidence that there is an significant interaction effect between Sex and Year on TP (df = 4, F Value = 1.949, P-Value = .103). 
+
+4) Create a boxplot that models this interaction with `Sex` on the x-axis, `TP` on the y-axis, and fill by `Year`. (You will have to change `Year` to a factor). Comment on what you notice. 
+
+```{r}
+ggplot(combined_Skate, aes(x = Sex, y = TP, fill = factor(Year))) +
+  geom_boxplot() +
+  labs(title = "Boxplot of Total Points by Year and Sex",
+       x = "Year",
+       y = "Total Points") +
+  theme_minimal() 
+```
+
+Females tend to increases by steps whereas for males it increase unevenly. 
+
+5) Conduct another two-way ANOVA with `Sex` as a additive term. Make sure to include all parts of a formal hypothesis test.
+
+Main Effects:
+H₀₁ (Sex): There is no main effect of Sex on TP.
+H₀₂ (Category): There is no main effect of Year on TP.
+
+Alternative Hypotheses: There is an effect between the variables.
+
+```{r}
+anova_result2 <- aov(TP ~ as.factor(Year) + Sex, data = combined_Skate)
+summary(anova_result2)
+```
+
+There is strong evidence that there is a main effect of Sex on TP (df = 4, F Value = 31.42, P-Value = <2e-16).
+There is strong evidence that there is a main effect of Year on TP (df = 1, F Value = 231.52, P-Value = <2e-16).
+
+6) Preform a Post-Hoc Tukey Test on the two-way ANOVA from question 5. Report that years that are significant and the years that are not. Comment on the significance of the `Sex` variable. 
+
+```{r}
+tukey_result2 <- TukeyHSD(anova_result2)
+tukey_result2
+```
+
+Significant:
+2010-2006 
+2014-2006 
+2018-2006 
+2022-2006 
+2018-2010 
+2022-2010 
+2018-2014 
+2022-2014 
+
+Not Significant:
+2014-2010 
+2022-2018  
+
+The sex variable is significant:
+$Sex
+                diff      lwr      upr p adj
+Male-Female 56.60501 49.27531 63.93472     0
+
+7) Make a Pair-Wise Comparisons for `Year` to visualize the significance between years.
+
+2022 --- a
+2018 --- a
+2014 ---  b 
+2010 ---  b  
+2006 ---     
+
+8) If you completed the one-way ANOVA module and did the optional pair wise comparisons, comment on how and why this two-way ANOVA letter's table is different from the one you did in the other one. 
+
+There is significance between 2006 and 2010 in the two-way ANOVA (granted it is very weak), but in the other one there was no significance. This is because the two-way ANOVA accounts for the interaction between two independent variables, which can reveal subtle effects that a one-way ANOVA might miss. In the one-way ANOVA, only one factor (such as year) was considered in isolation, so any interaction effects with a second factor (Sex) were ignored. The one in the two-way ANOVA reflects these interactions, which can lead to different groupings and significance outcomes compared to the one-way version.

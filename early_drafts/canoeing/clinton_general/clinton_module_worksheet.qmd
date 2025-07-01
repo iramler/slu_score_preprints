@@ -1,0 +1,45 @@
+---
+title: "The General Clinton Canoe Regatta: Working with GGPlot and Dplyr"
+format: html
+---
+
+Downriver racing is a sport where competitors take their watercraft (usually a canoe, kayak, or stand-up paddle board) down a race course in competition with other paddlers. The General Clinton Canoe Regatta (nicknamed "the 70-miler") is a prominent race in the sport that has been running since the 1960s. The race is a 63 mile course down the Susquehanna River in New York (from Cooperstown to Bainbridge). Paddlers compete against each other to achieve the fastest time in their class, with the fastest boats finishing about 7-8 hours after they start.
+Completing this race is an impressive feat, and this combined with the race’s fame means there is usually high attendance. However, unlike most races, where the turnout is mostly recreational paddlers, the difficulty of this race means that most paddlers at the General Clinton are pros. This phenomenon has interesting impacts on data from the race.
+
+```{r}
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+clinton_full <- read_csv("phoebechar/canoeing/clinton/module/full_clinton.csv")
+```
+
+Each row in this data set represents a specific paddler from a year of the Clinton. This data set contains results from 2014-2025 (excluding 2020 and 2021, when the race was cancelled due to the Covid-19 Pandemic).
+
+#### For ease of understanding, modify the data set so the first columns are `displayName` and `bib` number. The order after that does not matter.
+
+#### Using the fact that each bib number is only assigned to one boat per year, modify the data set to only include each boat/team once (rather than including each racer in a boat/team)
+
+#### 1. Make a horizontal bar graph comparing counts of the different classes.
+
+##### a. Change the color and fill of the bars to any combination you like.
+
+#### From 2014-2019, the Clinton tracked teams who registered but did not start or did not finish the race by marking them as DNS or DNF, which is entered under 'status' in the data. Modify the data set to only include teams with an NA under 'status'.
+
+#### 2. Make a histogram showing the distribution of times.
+
+#### We can see a very short bar at time == 0 (which is obviously impossible), indicating one boat with an unrecorded time slipped through our earlier filtering. Open the data set and sort ascendingly by time to find the boat and filter it out.
+
+#### Remake the histogram.
+
+##### a. Change the number of bins (test out a few options!)
+
+
+#### Create a version of the data set that only includes the following classes: oc2pro, oc2rec, oc2stock, oc2cruiser. These classes are all tandem (2 person) canoes of various types. Depending on the class, there are different specs the boats are expected to be within. Rec boats are shortest and heaviest, stock boats are longer but taller/deeper, and pro and cruising boats are long and shallow and have very few differences, and the choice between the two is mostly attributed to the racer's goal with the race. Cruisers are (as the name suggests) more laid back than the pros. The picture below shows an example of (in order) a rec boat, a stock boat, and a pro (or cruiser) boat.
+![Boat Types](boatTypes.png)
+
+
+#### With the new dataset, make boxplots showing time distribution for each class.
+
+##### What do the plots tell you?

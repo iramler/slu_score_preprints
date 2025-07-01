@@ -1,0 +1,147 @@
+---
+title: "AnswerKey: Dakar Rally"
+format: 
+  html:
+    embed-resources: true
+---
+
+In January of 2024, Saudi Arabia hosted the Dakar Rally, an epic off-road endurance event spanning thousands of kilometers across the rugged terrain. With
+drivers navigating deserts, mountains, and dunes, this race poses formidable challenges for all sorts of vehicles, such as bikes, cars, and trucks. Our 
+focus will be on exploring the bikers ranking based off the racers time statistics and driver information.
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+riders <- read_csv(here::here("Dakar Rally/data/dakarRally_bikes_data.csv"))
+```
+
+
+# 1.
+
+**Given the data, fit a linear model that uses Hours, Minutes, Seconds, Penalty_Hours, Penalty_Minutes, Penalty_Seconds to predict riders ranking.**
+
+## a.
+
+**Fit the model **
+
+```{r}
+mod <- lm(Rank ~ (Hours) + (Minutes) + (Seconds) + (Penalty_Hours) + (Penalty_Minutes) + (Penalty_Seconds), data = riders)
+summary(mod)
+```
+
+## b.
+
+**Interpret the coefficient for $\hat\{beta_{Hours}}$ & $\hat\{beta_{Penalty_Hours}}$**
+
+*For every hour added to a riders time it will decrease their rank by 0.16597, and for context the lower the rank of a rider the better, meaning first is best.*
+
+*For every penalty hour added to a riders overall time will increase their rank by 0.45848, which in context of of teh problem this would drop them farther back in the ranks.*
+
+
+## c.
+
+**Test the significance of $\hat{\beta_{Minutes}}$**
+
+*Hypothesis:*
+
+*$H_O: \beta = 0$ *
+
+*$H_A: \beta \not= 0$*
+
+  *Useful info:*
+  
+  *$\hat{B}_{Minutes} = -0.08820$*
+    
+  *$B_i = 0$*
+    
+  *$\widehat{SE}_\hat{B}_{Minutes}$ = 0.04877*
+    
+  *Test stat:*
+  
+```{r}
+n = 1584
+(df = n-2)
+(t = -0.08820/0.04877)
+```
+
+*Now using information above I can plug it into a t-test in statkey to obtain p-value.*
+
+  *p = 2(0.035), and times two since we are looking at both tails*
+    
+  *p = 0.07 > 0.05, considered not very significant therefor the evidence is not strong enough.*
+  
+  *There is not enough evidence to reject the  $H_O$. (t = -1.808489, df = 1582, p = 0.07)*
+
+
+## c.
+
+**Now, looking $\hat{\beta_{Hours}}$, conduct a 95% confidence interval.**
+
+```{r}
+B_i = -0.16597
+SEb = 0.03676
+t1 = 1.962
+
+(neg = B_i - (t1 * SEb))
+(pos = B_i + (t1 * SEb))
+
+c(neg, pos)
+```
+
+ *On average, with 95% confidence, the mean hours for the riders is between -0.238 and -0.094*
+
+
+# 2.	
+
+**Given the data, create a summary output that has the mean time as penalty times for each stage (make sure to incorporate minutes and seconds).**
+
+## a. 
+
+**Create Summary output**
+
+```{r}
+riders %>%
+  group_by(Stage) %>%
+  summarise(`num of riders` = n(),
+            mean_hour_time = mean((Hours) + Minutes/60 + Seconds/3600), 
+            mean_hour_penalty = mean((Penalty_Hours) + (Penalty_Minutes/60) + (Penalty_Seconds/3600))) %>%
+  arrange(mean_hour_time, mean_hour_penalty)
+```
+
+## b.
+
+**What stage in the race on average takes the riders the longest to complete?**
+
+*The fifth stage of the race, 5-6, is the longest stage on average with 11ish hours*
+
+
+## c.
+**At what stage did the rider's seem to gain the most penalties on average?**
+
+*The seventh stage of the race has the highest amount of penalties penalties on average with 6.9 hours*
+
+
+## d. 
+
+**Determine how many riders started the event versus ended it. How many rider's dropped out or were disqualified?**
+
+*At the beginning the race there were 142 riders, however, in the end only 103 riders remained, meaning 39 riders were disqualified or dropped out.*
+
+
+
+# 3.
+
+**Based on the summary output, which stage(s) in the race are the most significant towards overall ranking and why?**
+
+*Based on the answers to questions above one can conclude that the stages five through nine hold a lot of significance for the results of the race. Especially, with the fifth stage where on average it took riders about 11ish hours to complete, then looking at the penalties, majority received during the seventh and eighth stages. Overall, the fifth stage seems like it could be the most important as if the rider is able to achieve a time below average it would rank/place them in a very good position come the end of the race.*
+
+
+
+
+
+
+
+
+
+
+
+  

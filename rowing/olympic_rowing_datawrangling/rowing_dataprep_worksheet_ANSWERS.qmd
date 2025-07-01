@@ -1,0 +1,72 @@
+---
+title: "rowing_dataprep_worksheet_ANSWERS"
+format: html
+---
+
+
+Get the data
+```{r message=FALSE, warning=FALSE}
+library(tidyverse,quietly=TRUE)
+library(readr)
+athletes_df <- read_csv("athlete_events.csv", show_col_types = FALSE)
+```
+
+
+
+
+## Task 1
+
+Adjust the data so that it contains rowing as the only `Sport` and remove any NA values for `Medal`, meaning the dataset will only have medaling countries.
+
+```{r}
+rowing_df <- athletes_df |> filter(Sport == "Rowing")
+```
+
+```{r}
+rowing_df <- rowing_df |> filter(!is.na(Medal))
+```
+
+## Task 2
+
+Organize the data so that there is only one athlete representing each team in each event in each year.
+
+```{r}
+country_event <- rowing_df |> group_by(Year, Event, Medal, NOC) |> 
+  select(Year, Event, NOC, Medal) |> slice(1) |> 
+  arrange(Year, Event, Medal)
+```
+
+## Task 3
+
+There is a lot of debate about how to best weigh the points for the different types of medals. Read [this page](https://www.topendsports.com/events/summer/medal-tally/rankings-weighted.htm){target="_blank"} for more information about different medal point scales.
+
+Create a variable for the total number of points each country won using any weighting scale you want. Create another variable for the total number of medals each country won.
+
+```{r}
+country_medals <- country_event |> 
+  mutate(n_point= case_when(Medal == "Gold" ~ 3, Medal == "Silver" ~ 2, Medal == "Bronze" ~ 1), 
+         n_gold = case_when(Medal == "Gold" ~ 1, Medal == "Silver" ~ 0, Medal == "Bronze" ~ 0), 
+         n_silver = case_when(Medal == "Gold" ~ 0, Medal == "Silver" ~ 1, Medal == "Bronze" ~ 0), 
+         n_bronze = case_when(Medal == "Gold" ~ 0, Medal == "Silver" ~ 0, Medal == "Bronze" ~ 1)) |> 
+  group_by(NOC) |> 
+  summarise(medals = n(), 
+            points = sum(n_point), 
+            gold = sum(n_gold), 
+            silver = sum(n_silver), 
+            bronze = sum(n_bronze))
+```
+
+## Task 4
+
+Create a histogram of points for all countries. Describe the distribution of points.
+
+*The data is right-skewed meaning that the values are clustered around the smaller values for points, so it is more common for nations to get fewer medals in Olympic rowing.*
+
+```{r}
+medals_hist <- country_medals |> filter(points >= 5) |> arrange(desc(points)) 
+
+ggplot(medals_hist, aes(x = points)) + 
+  geom_histogram(fill = "lightblue", colour = "black", bins = 20) + 
+  theme_minimal() + 
+  labs(title = "Histogram of points for all countries in all events")
+```
