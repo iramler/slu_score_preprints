@@ -757,7 +757,7 @@
     "href": "index.html#funding-source",
     "title": "SLU SCORE Module Pre-print Repository",
     "section": "Funding Source",
-    "text": "Funding Source\nThe development of the SCORE with Data network is funded by the National Science Foundation (award 2142705)."
+    "text": "Funding Source\nThe development of the SCORE with Data network is funded by the National Science Foundation (award 2142705). “” # or a tiny comment"
   },
   {
     "objectID": "basketball/index.html",
