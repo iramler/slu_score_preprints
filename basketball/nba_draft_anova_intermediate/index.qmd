@@ -16,7 +16,8 @@ editor:
 categories:
   - ANOVA
   - Post Hoc Comparisons
-  - Two-Sample Tests
+  - Confidence Intervals
+
 
 #categories:
 #  - One-Way Analysis of Variance 
