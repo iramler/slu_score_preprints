@@ -14,9 +14,7 @@ description: Describing distribution shapes and interpreting visualizations or M
 editor: 
   canonical: true
 categories:
-  - Visualizations
-  - Distribution
-  - Interpretation
+  - Data Visualization
 ---
 
 ## Module
