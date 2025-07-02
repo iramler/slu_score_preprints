@@ -16,9 +16,9 @@ date: June 24, 2025
 description: Describing 100m event times for Women Olympic Swimmers from 1924 to 2020
 categories: 
   - Boxplots
-  - Confidence intervals
-  - Difference in means
-  - Summary statistics
+  - Confidence Intervals
+  - Two-Sample Tests
+
 ---
 
 ## Welcome Video

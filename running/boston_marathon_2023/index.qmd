@@ -10,11 +10,10 @@ author:
     affiliation:
       - ref: slu
 date: May 13, 2024
-description: Describing finish time for runners in the 2023 Boston Marathon
+description: Visualizaing finish times for runners in the 2023 Boston Marathon.
 categories:
-  - Histograms
-  - Summary statistics
-  - Bimodal data
+  - Data Visualization
+  - Summary Statistics
 ---
 
 This module is now fully published and available on the SCORE Network Module Repository.

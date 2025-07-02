@@ -14,8 +14,9 @@ author:
 editor: 
   canonical: true
 categories:
-  - Joining
+  - Joining / Merging
   - SQL
+  - R
 ---
 
 ## Module

@@ -16,10 +16,8 @@ author:
 date: June 5, 2025
 description: Arranging data to analyze the total number of medals and the weighted points for nations competing in rowing events in the Summer Olympic Games between 1900 and 2022.
 categories:
-  - dplyr
-  - filtering
-  - grouping and summarizing
-  - mutating
+  - Data Wrangling
+  - Tidyverse
 ---
 
 ### Introduction to Rowing

@@ -13,10 +13,10 @@ author:
 description: Demonstrating how to clean data with different packages and summarise the data using dplyr.
 editor: 
   canonical: true
-categories:
-  - Data cleaning
-  - Summarization
-  - Merging
+#categories:
+#  - Data cleaning
+#  - Summarization
+#  - Merging
 categories:
   - Data Wrangling
   - Joining / Merging

@@ -14,9 +14,9 @@ description: Times and ranks of skiers taken at four different distance points (
 editor: 
   canonical: true
 categories:
-  - Simple linear regression
+  - Linear Regression
   - Correlation
-  - Randomized block ANOVA
+  - ANOVA
 ---
 
 ## Module

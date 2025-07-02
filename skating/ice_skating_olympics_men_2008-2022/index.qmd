@@ -17,8 +17,7 @@ editor:
   canonical: true
 categories:
   - ANOVA
-  - Tukey's HSD
-  - Pair wise comparisons
+  - Post Hoc Comparisons
 image: chen4f3t_zoomslider-900.jpg
 ---
 
