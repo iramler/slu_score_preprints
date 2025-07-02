@@ -1,5 +1,5 @@
 ---
-title: "Exploring the NBA Draft via ANOVA and Tukey's HSD"
+title: "Do NBA Draft Picks Matter? Wrangling and Analyzing Player Minutes"
 author:
   - name: Vivian Johnson
     affiliation:
@@ -10,13 +10,16 @@ author:
     affiliation:
       - ref: slu
 date: "July 1, 2024"
-description: "Preparing a dataset to complete ANOVA and an analysis of results."
+description: "This module involves cleaning and wrangling NBA draft data, creating visualizations, and using ANOVA with post hoc comparisons to examine differences in average minutes played across first-round pick groups."
+
 editor: 
   canonical: true
 categories:
   - ANOVA
   - Post Hoc Comparisons
-  - Confidence Intervals
+  - Data Visualization
+  - Data Wrangling
+  - Tidyverse
 
 
 #categories:

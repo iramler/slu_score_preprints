@@ -1,5 +1,5 @@
 ---
-title: "Introducing ANOVA Through the NBA Draft"
+title: "Do NBA Draft Picks Matter? Exploring Player Minutes with ANOVA"
 author:
   - name: Vivian Johnson
     affiliation:
@@ -10,7 +10,8 @@ author:
     affiliation:
       - ref: slu
 date: "July 1, 2024"
-description: "Conducting an ANOVA test and analyzing the results"
+description: "This module uses NBA draft data to test for differences in average minutes played across early, mid, and late first-round picks using ANOVA and visualizations."
+
 editor: 
   canonical: true
 #categories:
@@ -18,7 +19,11 @@ editor:
 #  - Difference in Means 
 categories:
   - ANOVA
-  - Two-Sample Tests
+  - Hypothesis Testing
+  - Confidence Intervals
+  - Summary Statistics
+  - Data Visualization
+
 ---
 
 ## Module

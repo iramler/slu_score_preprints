@@ -14,14 +14,17 @@ author:
       - ref: slu
       
 date: "July 1, 2025"
-description: "Explore sampling distribution for the sample mean by using Shai Gilgeous-Alexander's game-by-game point totals from the 2024-25 NBA regular season."
+description: "Explore the concept of sampling distributions using Shai Gilgeous-Alexander’s regular season scoring data to simulate playoff scenarios."
+
 editor: 
   canonical: true
 #categories:
 #  - Sampling distribution for sample mean
 categories:
   - Sampling Distributions
+  - Simulation
   - Central Limit Theorem
+
 ---
 
 ![Source: https://www.bbc.com/sport/basketball/articles/c62n3gj5kpvo](sga_mvp_finals.jpg.webp)

@@ -1,5 +1,5 @@
 ---
-title: "WNBA Data Cleaning Module"
+title: "What Can Box Scores Tell Us? Exploring WNBA Player Stats"
 date: "2024-05-15"
 author:
   - name: Kristen Varin
@@ -10,11 +10,12 @@ author:
     email: iramler@stlawu.edu
     affiliation:
       - ref: slu
-description: This data set contains team game statistics for 16 WNBA teams and for 20 seasons.
+description: "Explore WNBA box score data to compare positional differences in player performance using summary statistics and visualizations."
+
 editor: 
   canonical: true
 categories:
-  - Data Cleaning
+  - Data Wrangling
   - Missing Data
   - Frequency Tables
 ---
