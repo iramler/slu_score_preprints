@@ -10,13 +10,19 @@ author:
     affiliation:
       - ref: slu
 date: "July 22, 2024"
-description: "Making bootsrap distributions and constructing confidence intervals"
+description: "Use bootstrap distributions and confidence intervals to compare beam scores between 1st and 4th place teams at the NCAA Women’s Gymnastics National Championship."
+
 editor: 
   canonical: true
+#categories:
+#  - Bootstrap distribution
+#  - Confidence intervals
+#  - Paired data
 categories:
-  - Bootstrap distribution
-  - Confidence intervals
-  - Paired data
+  - Bootstrap Methods
+  - Confidence Intervals
+  - Paired Data
+
 ---
 
 ## Module

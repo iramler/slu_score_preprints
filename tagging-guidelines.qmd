@@ -73,6 +73,7 @@ These guidelines are intended to help students and contributors choose appropria
 -   Bootstrap Methods\
 -   Randomization Tests\
 -   p-values and Errors
+-   Paired Data
 
 ### Regression & Modeling
 

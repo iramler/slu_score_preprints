@@ -1,5 +1,5 @@
 ---
-title: "Handball Individual Player Statistics for the 2022-2023 Season"
+title: "Does Aggression Pay Off? Modeling Handball Player Performance"
 author:
   - name: Abigail Smith
     affiliation:
@@ -14,13 +14,20 @@ author:
       - ref: slu
 
 date: June 12, 2024
-description: Comparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.
+#description: Comparing offensive statistics to penalties for individual players in the Handball-Bundesliga for the 2022-23 season.
+description: "Use linear regression to model handball performance as a function of offensive actions and penalties."
+
 categories:
-  - Confidence intervals
-  - Prediction intervals
-  - Multiple linear regression
-  - ANOVA for overall fit
-  - t.test for correlation
+  - Linear Regression
+  - Data Visualization
+  - Correlation
+
+#categories:
+#  - Confidence intervals
+#  - Prediction intervals
+#  - Multiple linear regression
+#  - ANOVA for overall fit
+#  - t.test for correlation
 ---
 
 ### Welcome video
