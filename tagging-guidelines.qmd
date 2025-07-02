@@ -8,112 +8,125 @@ editor: visual
 
 These guidelines are intended to help students and contributors choose appropriate topic categories (tags) for modules in the repository. Tags help users find relevant content and maintain consistency across the site.
 
-- You should aim to use **1–3 tags** per module.
-- Tags should reflect the **main statistical or data science ideas** in your module.
-- Choose from the **approved list of categories** below. If you feel something is missing, discuss it with your mentor or instructor.
+-   You should aim to use **2–5 tags** per module.
+-   Tags should reflect the **main statistical or data science ideas** in your module.
+-   Choose from the **approved list of categories** below. If you feel something is missing, discuss it with your mentor or instructor.
 
 ## Approved Categories
 
 ### Descriptive Statistics & Data Visualization
-- Summary Statistics  
-- Boxplots  
-- Histograms  
-- Dotplots  
-- Quantiles  
-- Outliers  
-- Skewness  
-- Data Visualization  
-- Exploratory Data Analysis  
+
+-   Summary Statistics
+-   Boxplots
+-   Histograms
+-   Dotplots
+-   Quantiles
+-   Outliers
+-   Skewness
+-   Data Visualization
+-   Exploratory Data Analysis
+-   Frequency Tables
+-   Correlation
 
 ### Data Wrangling & Cleaning
-- Data Cleaning  
-- Data Wrangling  
-- Filtering  
-- Mutating  
-- Grouping and Summarizing  
-- Joining / Merging  
-- Missing Data  
-- Tidying Data  
+
+-   Data Cleaning\
+-   Data Wrangling\
+-   Filtering\
+-   Mutating\
+-   Grouping and Summarizing\
+-   Joining / Merging\
+-   Missing Data\
+-   Tidying Data
 
 ### Study Design & Data Collection
-- Study Design  
-- Observational Studies  
-- Experiments  
-- Random Sampling  
-- Random Assignment  
-- Blocking  
-- Confounding Variables  
-- Data Collection Methods  
+
+-   Study Design\
+-   Observational Studies\
+-   Experiments\
+-   Random Sampling\
+-   Random Assignment\
+-   Blocking\
+-   Confounding Variables\
+-   Data Collection Methods
 
 ### Probability & Distributions
-- Probability  
-- Sampling Distributions  
-- Central Limit Theorem  
-- Normal Distribution  
-- t Distribution  
-- Binomial Distribution  
+
+-   Probability\
+-   Sampling Distributions\
+-   Central Limit Theorem\
+-   Normal Distribution\
+-   t Distribution\
+-   Binomial Distribution
 
 ### Statistical Inference
-- Confidence Intervals  
-- Hypothesis Testing  
-- One-Sample Tests  
-- Two-Sample Tests  
-- Paired Data  
-- Proportions  
-- Chi-Square Tests  
-- ANOVA  
-- Post Hoc Comparisons  
-- Bootstrap Methods  
-- Randomization Tests  
-- p-values and Errors  
+
+-   Confidence Intervals\
+-   Hypothesis Testing\
+-   One-Sample Tests\
+-   Two-Sample Tests\
+-   Paired Data\
+-   Proportions\
+-   Chi-Square Tests\
+-   ANOVA\
+-   Post Hoc Comparisons\
+-   Bootstrap Methods\
+-   Randomization Tests\
+-   p-values and Errors
 
 ### Regression & Modeling
-- Simple Linear Regression  
-- Multiple Linear Regression  
-- Logistic Regression  
-- Interaction Terms  
-- Model Diagnostics  
-- Indicator Variables  
-- Prediction Intervals  
+
+-   Simple Linear Regression\
+-   Multiple Linear Regression\
+-   Logistic Regression\
+-   Interaction Terms\
+-   Model Diagnostics\
+-   Indicator Variables\
+-   Prediction Intervals
 
 ### Intermediate & Computational Tools
-- Simulation  
-- Web Scraping  
-- APIs  
-- SQL  
-- R  
-- Python  
-- Tidyverse  
-- Reproducibility  
+
+-   Simulation\
+-   Web Scraping\
+-   APIs\
+-   SQL\
+-   R\
+-   Python\
+-   Tidyverse\
+-   Reproducibility
 
 ## Examples
 
 ### Example 1: Two-Sample t-Test
-**Tags:**  
-- Hypothesis Testing  
-- Two-Sample Tests  
+
+**Tags:**\
+- Hypothesis Testing\
+- Two-Sample Tests\
 - Confidence Intervals
 
 ### Example 2: Paired t-Test on Athlete Run Times
-**Tags:**  
-- Hypothesis Testing  
-- Paired Data  
+
+**Tags:**\
+- Hypothesis Testing\
+- Paired Data\
 - Confidence Intervals
 
 ### Example 3: Boxplot Comparison of Groups
-**Tags:**  
-- Data Visualization  
-- Summary Statistics  
+
+**Tags:**\
+- Data Visualization\
+- Summary Statistics\
 - Two-Sample Tests
 
 ### Example 4: Bootstrapping to Estimate a Mean
-**Tags:**  
-- Bootstrap Methods  
-- Confidence Intervals  
+
+**Tags:**\
+- Bootstrap Methods\
+- Confidence Intervals\
 - Sampling Distributions
 
 ## Tips
-- Do **not** include duplicate or redundant tags.
-- Do **not** create custom tags unless approved.
-- Keep all tags **in Title Case** (e.g., `Summary Statistics`, not `summary statistics` or `Summary statistics`).
 
+-   Do **not** include duplicate or redundant tags.
+-   Do **not** create custom tags unless approved.
+-   Keep all tags **in Title Case** (e.g., `Summary Statistics`, not `summary statistics` or `Summary statistics`).

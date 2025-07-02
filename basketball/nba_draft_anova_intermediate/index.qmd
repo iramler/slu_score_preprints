@@ -14,9 +14,14 @@ description: "Preparing a dataset to complete ANOVA and an analysis of results."
 editor: 
   canonical: true
 categories:
-  - One-Way Analysis of Variance 
-  - Difference in means 
-  - Tukey's HSD
+  - ANOVA
+  - Post Hoc Comparisons
+  - Two-Sample Tests
+
+#categories:
+#  - One-Way Analysis of Variance 
+#  - Difference in means 
+#  - Tukey's HSD
 ---
 
 ## Module

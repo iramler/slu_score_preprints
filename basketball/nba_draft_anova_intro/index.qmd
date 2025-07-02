@@ -13,9 +13,12 @@ date: "July 1, 2024"
 description: "Conducting an ANOVA test and analyzing the results"
 editor: 
   canonical: true
+#categories:
+#  - One-Way Analysis of Variance 
+#  - Difference in Means 
 categories:
-  - One-Way Analysis of Variance 
-  - Difference in Means 
+  - ANOVA
+  - Two-Sample Tests
 ---
 
 ## Module

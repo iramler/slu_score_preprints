@@ -14,26 +14,23 @@ description: This data set contains team game statistics for 16 WNBA teams and f
 editor: 
   canonical: true
 categories:
-  - Data cleaning
+  - Data Cleaning
   - Missing Data
-  - Tables
+  - Frequency Tables
 ---
-
 
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
-
 ### Introduction
 
-The WNBA worksheet will introduce the idea of predicting playoff teams from their record earlier in the season. Most of the time, it is expected that teams with better records halfway through the season will have a higher chance of making it to the playoffs, but is this always the case? How do you know that the data you are using is a valid way of predicting this? By completing this worksheet, you will be guided through various data cleaning steps and will be able to answer these questions. 
+The WNBA worksheet will introduce the idea of predicting playoff teams from their record earlier in the season. Most of the time, it is expected that teams with better records halfway through the season will have a higher chance of making it to the playoffs, but is this always the case? How do you know that the data you are using is a valid way of predicting this? By completing this worksheet, you will be guided through various data cleaning steps and will be able to answer these questions.
 
 ::: {.callout-note collapse="true" title="Background on the WNBA" appearance="minimal"}
 The Women's National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women's basketball at the professional level. The league's inaugural season began in 1997 with eight teams.
 
-Throughout its history, the WNBA has been a pioneering force in women's sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, as of 2024, consists of 12 teams. 
-
+Throughout its history, the WNBA has been a pioneering force in women's sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, as of 2024, consists of 12 teams.
 
 <details>
 
@@ -65,30 +62,27 @@ Beyond its competitive play, the WNBA has been a leader in promoting social just
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 
--	Use various `dplyr`, `tidyr`, and `lubridate` package functions to clean a data set for further use. 
+-   Use various `dplyr`, `tidyr`, and `lubridate` package functions to clean a data set for further use.
 
--	Learn the process of cleaning data, recognizing any problems within the data, and determining whether the data can be used for the given analysis problem. 
+-   Learn the process of cleaning data, recognizing any problems within the data, and determining whether the data can be used for the given analysis problem.
 
--	Understand why missing data presents a problem for analysis and brainstorm ways to troubleshoot this problem. 
-
+-   Understand why missing data presents a problem for analysis and brainstorm ways to troubleshoot this problem.
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 Technology requirement: The activity handout requires knowledge of Quarto and the following tidyverse packages: `dplyr`, `tidyr`, `lubridate`. The activity will allow students to use these packages together to complete a more complex task.
 :::
 
-
 ### Data
 
-The `wnba_data` data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows: 
+The `wnba_data` data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows:
 
 <details>
 
 <summary><b> Data: Variable Descriptions</b></summary>
 
-
-| **Variable**          | **Description**                                                   |
-|-------------------|-----------------------------------------------------|
+| **Variable**      | **Description**                                               |
+|-------------------|---------------------------------------------------------------|
 | game_id           | game id number                                                |
 | season            | season number                                                 |
 | season_type       | binary predictor; 2 if regular season game; 3 if playoff game |
@@ -103,11 +97,9 @@ The `wnba_data` data set contains 8920 rows and 9 columns. Each row represents a
 
 Download data: [wnba_data.csv](wnba_data.csv)
 
-
 #### Data Source
 
 Gilani S, Hutchinson G (2022). *wehoop: Access Women's Basketball Play by Play Data*. R package version 1.5.0, <https://CRAN.R-project.org/package=wehoop>.
-
 
 ### Materials
 
@@ -117,28 +109,10 @@ We offer worksheets (and their solutions) in Quarto (using R) format.
 
 [Class handout - Quarto - with solutions](wnba_boxscore_worksheet_key.qmd)
 
-
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Exploration of the WNBA data revealed that there are missing values for games throughout the 2003-2022 seasons. We found this by tallying the number of games played by each team within each season and noticing that the number of games played was inconsistent between teams. We then used the internet to find an example of a missing game within the dataset. 
+Exploration of the WNBA data revealed that there are missing values for games throughout the 2003-2022 seasons. We found this by tallying the number of games played by each team within each season and noticing that the number of games played was inconsistent between teams. We then used the internet to find an example of a missing game within the dataset.
 
-Reflecting on the challenges that missing values presented us, we came up with a few solutions to continue our analysis. Some of these include: filtering the data for seasons that have no missing data or using the internet to manually fill in data. While neither of these methods are perfect and present other challenges, they are valid ways to deal with missing values. 
+Reflecting on the challenges that missing values presented us, we came up with a few solutions to continue our analysis. Some of these include: filtering the data for seasons that have no missing data or using the internet to manually fill in data. While neither of these methods are perfect and present other challenges, they are valid ways to deal with missing values.
 
-Once dealing with the seasons with imperfect data, students can continue the analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs. 
+Once dealing with the seasons with imperfect data, students can continue the analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs.
 :::
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

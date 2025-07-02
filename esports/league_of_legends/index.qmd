@@ -19,7 +19,7 @@ editor:
   canonical: true
 categories:
   - Outliers
-  - Summary statistics
+  - Summary Statistics
 ---
 
 This module is now fully published and available on the SCORE Network Module Repository.

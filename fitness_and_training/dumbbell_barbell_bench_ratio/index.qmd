@@ -13,9 +13,13 @@ date: "June 13, 2024"
 description: "Critically exploring self reported strength ratios."
 editor: 
   canonical: true
+#categories:
+#  - Data collection methods 
+#  - One sample means-interval 
 categories:
-  - Data collection methods 
-  - One sample means-interval 
+  - Data Collection Methods
+  - One-Sample Tests
+  - Confidence Intervals
 ---
 
 ## Module
@@ -55,14 +59,12 @@ By the end of this activity, you will:
 
 1.  Enhance proficiency in constructing and interpreting confidence intervals.
 
-2. Understand the limitations of using smaller datasets of self-selected individuals.
+2.  Understand the limitations of using smaller datasets of self-selected individuals.
 
 3.  Explain the importance of obtaining a sample that reaches across multiple audiences.
-
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-
 Students are expected to have been exposed to one-sample inference for means (most likely t-intervals). Students will also need to have been exposed to general sampling practices - including common biases or problematics sampling schemes such as convenience samples and self-reported data.
 :::
 
@@ -101,7 +103,7 @@ The data is sourced from a self-reported Reddit open forum. Users provided their
 [Class handout - with solutions](weight_ratio_worksheet_SOLUTIONS.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Upon conclusion, students should recognize that the data collected likely strictly limits which population the resulting confidence interval can be applied to.  Additionally, students should recognize that, even with the limitations of these data, they can still provide value. 
+Upon conclusion, students should recognize that the data collected likely strictly limits which population the resulting confidence interval can be applied to. Additionally, students should recognize that, even with the limitations of these data, they can still provide value.
 
 This learning module offers valuable insight into the process of data collection and the role it has in making concrete conclusions. There are some obvious biases in the way the data was collected, those who report their ratios belong to similar audiences, and we can't assume that the sample is representative of a broad population. Nevertheless, it presents a valuable opportunity for thought and good practice at constructing one sample t tests and recognizing the extent to which they can be used.
 :::
