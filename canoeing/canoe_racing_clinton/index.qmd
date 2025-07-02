@@ -6,7 +6,8 @@ author:
       - id: slu
         name: St. Lawrence University
   - name: Robin Lock
-    affliation: slu
+    affiliation:
+      - ref: slu
   - name: Ivan Ramler
     email: iramler@stlawu.edu
     affiliation:

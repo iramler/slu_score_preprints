@@ -15,8 +15,8 @@ editor:
   canonical: true
 categories:
   - Webscraping
-  - Data visualization
-  - Data wrangling
+  - Data Visualization
+  - Data Wrangling
 ---
 
 ## Module

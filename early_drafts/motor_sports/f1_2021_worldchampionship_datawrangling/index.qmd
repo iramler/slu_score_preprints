@@ -12,7 +12,8 @@ author:
 date: April 2, 2024
 description: Visualizing F1 data
 categories:
-  - Correlation
+  - Data Visualization
+  - Data Wrangling
 ---
 
 ## Module

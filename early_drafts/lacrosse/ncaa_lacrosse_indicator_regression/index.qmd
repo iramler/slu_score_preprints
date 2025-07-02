@@ -12,7 +12,8 @@ author:
 date: April 5, 2025
 description: How much of an impact does winning the draw/face-off have on the final results of a lacrosse game?
 categories:
-  - Correlation
+  - Linear Regression
+  - Indicator Variables
 ---
 
 ## Module

@@ -14,10 +14,8 @@ description: Investigating a collection of professional bull riders and their st
 editor: 
   canonical: true
 categories:
-  - Linear/Logistic Regression
-  - Summary Statistics
-  - Influential Points
-  - Hypothesis Testing
+  - Linear Regression
+  - Logistic Regression
 ---
 
 ## Module

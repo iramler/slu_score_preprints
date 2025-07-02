@@ -14,7 +14,7 @@ author:
 editor: 
     canonical: true
 categories:
-  - Linear regression
+  - Linear Regression
 ---
 
 This module is now fully published and available on the SCORE Network Module Repository.

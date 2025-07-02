@@ -11,7 +11,7 @@ author:
 editor: 
     canonical: true
 categories:
-  - Linear regression
+  - Linear Regression
 ---
 
 ## Module

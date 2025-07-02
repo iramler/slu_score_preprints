@@ -15,9 +15,7 @@ editor:
   canonical: true
 categories:
   - ANOVA
-  - Pairwise comparisons
-  - Fisher’s LSD
-  - Tukey’s HSD
+  - Post Hoc Comparisons
 ---
 
 ## Module

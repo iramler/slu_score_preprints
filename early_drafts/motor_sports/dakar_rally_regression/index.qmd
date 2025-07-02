@@ -14,10 +14,8 @@ description: Investigating The 2024 Dakar Rally biker rankings and times, throug
 editor: 
   canonical: true
 categories:
-  - Multiple Linear Regression
-  - Model Diagnostics
-  - Testing
-  - Summary Statistics
+  - Linear Regression
+  - Hypothesis Testing
 ---
 
 

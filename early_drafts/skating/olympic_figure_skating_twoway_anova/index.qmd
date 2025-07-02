@@ -1,5 +1,5 @@
 ---
-title: "Effects on Total Points"
+title: "Men's Olympic Figure Skating - Two-Way ANOVA"
 author:
   - name: Faith Rhinehart
     affiliation:
@@ -10,9 +10,8 @@ description: "Exploring Interaction and Main Effects on US Olympic Figure Skatin
 editor: 
   canonical: true
 categories:
-  - Two Way Interaction ANOVA
-  - Post Hoc Tukey
-  - Pair Wise Comparisons
+  - ANOVA
+  - Post Hoc Comparisons
 ---
 
 ### Background to Figure Skating Video

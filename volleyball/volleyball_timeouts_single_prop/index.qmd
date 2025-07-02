@@ -22,8 +22,8 @@ description: Investigating the effect of timeouts on the outcome of a set.
 editor: 
   canonical: true
 categories:
-  - One sample proportions 
-  - Confidence intervals
+  - Proportions 
+  - Confidence Intervals
 ---
 
 ## Module

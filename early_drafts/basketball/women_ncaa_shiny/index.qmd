@@ -10,8 +10,11 @@ author:
     affiliation:
       - ref: slu
 date: April 3, 2025
-description: How to make an intro shiny app
+description: Tutorial on how to make an intro shiny app using Caitlin Clark's NCAA season statistics.
 categories:
+  - Data Visualization
+  - Shiny
+  - R
 ---
 
 ## Module

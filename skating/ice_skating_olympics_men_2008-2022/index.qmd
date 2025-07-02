@@ -7,9 +7,11 @@ author:
         name: St. Lawrence University
   - name: Jessica Chapman
     email: jchapman@stlawu.edu
-    affiliation: slu
+    affiliation:
+      - ref: slu
   - name: Ivan Ramler
-    affiliation: slu
+    affiliation:
+      - ref: slu
 
 date: "June 27, 2025"
 description: "Using ANOVA to explore differences in mean scores throughout the years of Winter Olympic Figure Skating"

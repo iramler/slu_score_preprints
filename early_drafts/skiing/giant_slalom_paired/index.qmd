@@ -15,7 +15,8 @@ editor:
   canonical: true
 categories:
   - Paired Data
-  - Difference in Means
+  - Confidence Intervals
+  - Hypothesis Testing
 ---
 
 ## Module

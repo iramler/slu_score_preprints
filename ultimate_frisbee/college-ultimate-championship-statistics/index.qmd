@@ -12,9 +12,9 @@ author:
 date: June 26, 2024
 description: Statistics from the 2024 College Ultimate Championships to be tidied and plotted.
 categories:
-  - Data cleaning
-  - Joining
-  - Data visualization
+  - Data Cleaning
+  - Joining / Merging
+  - Data Visualization
 ---
 
 ## Module

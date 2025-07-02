@@ -14,8 +14,8 @@ author:
 editor: 
   canonical: true
 categories:
-  - Tidying data
-  - Data Scraping
+  - Data Wrangling
+  - Webscraping
 ---
 
 ## Module
