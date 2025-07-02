@@ -2,6 +2,7 @@
 title: "SLU SCORE Module Pre-print Repository"
 listing:
   id: all-modules
+  page-size: 10
   contents:
     - "*/*/index.qmd"
   sort: date desc
