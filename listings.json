@@ -2,11 +2,9 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
-      "/early_drafts/running/boston_marathon_anova/index.html",
       "/running/boston_marathon_2023/index.html",
       "/hockey/pwhl_season1_visualizations/index.html",
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
-      "/early_drafts/basketball/all_nba_prediction/index.html",
       "/motor_sports/formula1_laps/index.html",
       "/basketball/index.html",
       "/multisport/olympics_beijing_medals/index.html",
@@ -21,7 +19,6 @@
       "/basketball/nba_draft_anova_intro/index.html",
       "/basketball/nba_draft_anova_intermediate/index.html",
       "/handball/handball-bundesliga/index.html",
-      "/early_drafts/skating/olympic_figure_skating_twoway_anova/index.html",
       "/esports/index.html",
       "/early_drafts/diving/world_junior_diving/index.html",
       "/fitness_and_training/index.html",
@@ -40,6 +37,7 @@
       "/lacrosse/college_lacrosse_faceoffs/index.html",
       "/lacrosse/lacrosse_pll_vs_nll/index.html",
       "/esports/league_of_legends/index.html",
+      "/early_drafts/skating/olympic_figure_skating_twoway_anova/index.html",
       "/softball/softball_div1/index.html",
       "/fitness_and_training/powerlifting_polyreg/index.html",
       "/motor_sports/index.html",
@@ -53,7 +51,6 @@
       "/golf/pga_drive_putt/index.html",
       "/early_drafts/rodeo_sports/bull_riding_regression/index.html",
       "/rowing/index.html",
-      "/early_drafts/rugby/rugby_historical_comparisons/index.html",
       "/running/index.html",
       "/basketball/nba_sga_sampling_distributions/index.html",
       "/skating/index.html",
@@ -138,24 +135,9 @@
     ]
   },
   {
-    "listing": "/disc_golf/index.html",
+    "listing": "/combat_sports/index.html",
     "items": [
-      "/disc_golf/dgpt_correlations/index.html"
-    ]
-  },
-  {
-    "listing": "/canoeing/index.html",
-    "items": [
-      "/canoeing/canoe_racing_clinton/index.html"
-    ]
-  },
-  {
-    "listing": "/basketball/index.html",
-    "items": [
-      "/basketball/nba_sga_sampling_distributions/index.html",
-      "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
-      "/basketball/wnba_data_quality/index.html"
+      "/combat_sports/ufc_striking_accuracy/index.html"
     ]
   },
   {
@@ -170,9 +152,7 @@
       "/rowing/olympic_rowing_introstat/index.html",
       "/fitness_and_training/powerlifting_polyreg/index.html",
       "/early_drafts/lacrosse/ncaa_lacrosse_indicator_regression/index.html",
-      "/early_drafts/basketball/all_nba_prediction/index.html",
       "/early_drafts/basketball/women_ncaa_shiny/index.html",
-      "/early_drafts/rugby/rugby_historical_comparisons/index.html",
       "/gymnastics/NCAA-womens-gymnastics-bootstrap/index.html",
       "/football_american/football-recruiting-and-impact-NFL/index.html",
       "/volleyball/volleyball_timeouts_single_prop/index.html",
@@ -197,7 +177,6 @@
       "/early_drafts/motor_sports/dakar_rally_regression/index.html",
       "/multisport/olympics_beijing_medals/index.html",
       "/early_drafts/rodeo_sports/bull_riding_regression/index.html",
-      "/early_drafts/running/boston_marathon_anova/index.html",
       "/early_drafts/skating/olympic_figure_skating_twoway_anova/index.html",
       "/esports/league_of_legends/index.html",
       "/golf/pga_drive_putt/index.html",
@@ -210,9 +189,24 @@
     ]
   },
   {
-    "listing": "/combat_sports/index.html",
+    "listing": "/basketball/index.html",
     "items": [
-      "/combat_sports/ufc_striking_accuracy/index.html"
+      "/basketball/nba_sga_sampling_distributions/index.html",
+      "/basketball/nba_draft_anova_intermediate/index.html",
+      "/basketball/nba_draft_anova_intro/index.html",
+      "/basketball/wnba_data_quality/index.html"
+    ]
+  },
+  {
+    "listing": "/canoeing/index.html",
+    "items": [
+      "/canoeing/canoe_racing_clinton/index.html"
+    ]
+  },
+  {
+    "listing": "/disc_golf/index.html",
+    "items": [
+      "/disc_golf/dgpt_correlations/index.html"
     ]
   },
   {
