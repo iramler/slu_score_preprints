@@ -5,8 +5,8 @@ listing:
   contents:
     - "*/*/index.qmd"
   sort: date desc
-  type: table
-  fields: [title, author, date, categories]
+  type: default
+  fields: [title, author, date, categories, description]
 ---
 
 This page contains education materials for the [SCORE Network](https://scorenetwork.org/index.html) that were created by faculty and students from the [Department of Mathematics, Computer Science, and Statistics at St. Lawrence University](https://www.stlawu.edu/offices/math-computer-science-and-statistics){target="_blank"}.
