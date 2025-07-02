@@ -13,7 +13,7 @@ date: July 17, 2024
 description: Cleaning and analyzing football data for top high school wide receivers who played in the NFL in 2023.
 categories: 
   - Data Wrangling
-  - R
+  - Data Visualization
   - Tidyverse
 ---
 

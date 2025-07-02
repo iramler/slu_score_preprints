@@ -76,13 +76,13 @@ These guidelines are intended to help students and contributors choose appropria
 
 ### Regression & Modeling
 
--   Simple Linear Regression\
--   Multiple Linear Regression\
+-   Linear Regression\
 -   Logistic Regression\
 -   Interaction Terms\
 -   Model Diagnostics\
 -   Indicator Variables\
 -   Prediction Intervals
+-   Transformations
 
 ### Intermediate & Computational Tools
 

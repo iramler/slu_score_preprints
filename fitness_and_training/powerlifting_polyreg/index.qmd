@@ -10,15 +10,16 @@ author:
     affiliation:
       - ref: slu
 date: "May 8, 2025"
-description: "Exploring the impact of age on powerlifting using Polynomial Regression"
+description: "Exploring the impact of age on powerlifting using polynomial regression."
 editor: 
   canonical: true
 #categories:
 #  - High order modeling 
 #  - Indicator variables 
 categories:
-  - Multiple Linear Regression
-  - Indicator Variables
+  - Linear Regression
+  - Data Visualization
+  - Data Wrangling
 ---
 
 ## Module
