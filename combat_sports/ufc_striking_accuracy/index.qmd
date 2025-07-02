@@ -13,8 +13,8 @@ date: June 6, 2024
 description: Analyzing UFC data from 1993-2021 using the Normal Distribution
 categories:
   - Normal Distribution
-  - Quantiles
-  - Proportions
+  - z-scores
+  - Percentiles
 ---
 
 ### Welcome Video

@@ -13,12 +13,12 @@ author:
       - ref: slu
     
 date: "June 17, 2025"
-description: "Using data from the Clinton Canoe Regatta to explore data manipulation and visualization."
+description: "Using explore data from the Clinton Canoe Regatta using data wrangling and visualization."
 editor: 
   canonical: true
 categories:
-  - Data visualization
-  - Data manipulation
+  - Data Visualization
+  - Data Wrangling
 #categories:
 #  - Data visualization
 #  - Data manipulation

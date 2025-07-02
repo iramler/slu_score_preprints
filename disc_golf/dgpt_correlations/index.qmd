@@ -13,6 +13,8 @@ author:
 date: June 13, 2024
 categories:
   - Correlation
+  - Data Visualization
+  - Summary Statistics
 ---
 
 ## Module
