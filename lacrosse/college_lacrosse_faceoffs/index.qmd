@@ -17,8 +17,10 @@ author:
 editor: 
   canonical: true      
 categories:
-  - Hypothesis testing
-  - Single proportion
+  - One-Sample Tests
+  - Proportions
+  - Hypothesis Testing
+
 ---
 
 This module is now fully published and available on the SCORE Network Module Repository.

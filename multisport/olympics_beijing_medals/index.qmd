@@ -17,6 +17,11 @@ categories:
   - Data cleaning
   - Summarization
   - Merging
+categories:
+  - Data Wrangling
+  - Joining / Merging
+  - Data Visualization
+
 ---
 
 ## Module

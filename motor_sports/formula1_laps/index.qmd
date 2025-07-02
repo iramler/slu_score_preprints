@@ -14,8 +14,8 @@ author:
 editor: 
   canonical: true
 categories:
-  - Summary statistics
-  - Histgram interpretation
+  - Summary Statistics
+  - Data Visualization
   - Outliers
 ---
 

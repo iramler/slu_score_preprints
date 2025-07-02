@@ -15,9 +15,8 @@ author:
     affiliation:
     - ref: slu
 categories:
-  - Linear regression
+  - Linear Regression
   - Transformations
-  - Polynomial regression
 ---
 
 [![](https://www.nascar.com/wp-content/uploads/sites/7/2021/06/14/9-crossover-18.gif){target="_blank" fig-alt="Stock cars used in NASCAR" fig-align="center" width="50%"}](https://www.nascar.com/gallery/best-gifs-from-2021-all-star-race-weekend/)

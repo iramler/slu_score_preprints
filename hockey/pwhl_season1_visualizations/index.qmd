@@ -10,11 +10,12 @@ author:
     affiliation:
       - ref: slu
 date: June 6, 2024
-description: Visualizing scoring data for players during the 2023-24 PWHL season
+description: Visualizing scoring data for players during the 2023-24 Professional Women’s Hockey League season
+
 categories:
-  - data visualization
-  - data wrangling
-  - exploratory data Analysis
+  - Data Visualization
+  - Grouped Comparisons
+  - Data Wrangling
 ---
 
 ## Module

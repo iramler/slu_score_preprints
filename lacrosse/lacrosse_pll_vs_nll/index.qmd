@@ -20,7 +20,11 @@ author:
 editor: 
   canonical: true
 categories:
-  - Difference in two means
+  - Two-Sample Tests
+  - Hypothesis Testing
+  - Confidence Intervals
+  - Simulation
+
 ---
 
 This module is now fully published and available on the SCORE Network Module Repository.
