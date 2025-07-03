@@ -6,12 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ivan Ramler">
-<meta name="author" content="Jack Fay">
-<meta name="dcterms.date" content="2024-05-13">
-<meta name="description" content="Visualizaing finish times for runners in the 2023 Boston Marathon.">
+<meta name="author" content="Phoebe Jones">
+<meta name="author" content="Robin Lock">
+<meta name="dcterms.date" content="2025-06-11">
+<meta name="description" content="Investigate how water flow relates to race dropout rates in the Raisin River Race by fitting a linear regression model.">
 
-<title>2023 Boston Marathon - Variability in Finish Times – SLU SCORE Module Preprint Repository</title>
+<title>Raisin River Results and Oulier Impact/Exclusion – SLU SCORE Module Preprint Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +144,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">2023 Boston Marathon - Variability in Finish Times</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../canoeing/index.html">Canoeing</a></li><li class="breadcrumb-item"><a href="../../canoeing/raisin_river_regression/index.html">Raisin River Results and Oulier Impact/Exclusion</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -372,11 +372,11 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../canoeing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Canoeing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../canoeing/canoe_racing_clinton/index.html" class="sidebar-item-text sidebar-link">
@@ -385,7 +385,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Raisin River Results and Oulier Impact/Exclusion</span></a>
   </div>
 </li>
@@ -640,14 +640,14 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../running/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Running</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
   </div>
 </li>
@@ -800,24 +800,39 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#background-video" id="toc-background-video" class="nav-link" data-scroll-target="#background-video">Background Video</a></li>
+  </ul></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
+  <ul class="collapse">
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  </ul></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../running/index.html">Running</a></li><li class="breadcrumb-item"><a href="../../running/boston_marathon_2023/index.html">2023 Boston Marathon - Variability in Finish Times</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../canoeing/index.html">Canoeing</a></li><li class="breadcrumb-item"><a href="../../canoeing/raisin_river_regression/index.html">Raisin River Results and Oulier Impact/Exclusion</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">2023 Boston Marathon - Variability in Finish Times</h1>
+<h1 class="title">Raisin River Results and Oulier Impact/Exclusion</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Data Visualization</div>
-    <div class="quarto-category">Summary Statistics</div>
+    <div class="quarto-category">Linear Regression</div>
+    <div class="quarto-category">Outliers</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Visualizaing finish times for runners in the 2023 Boston Marathon.
+    Investigate how water flow relates to race dropout rates in the Raisin River Race by fitting a linear regression model.
   </div>
 </div>
 
@@ -826,7 +841,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+    <p class="author">Phoebe Jones </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -834,7 +849,7 @@ cookieconsent.run({
           </p>
       </div>
     <div class="quarto-title-meta-contents">
-    <p class="author">Jack Fay </p>
+    <p class="author">Robin Lock <a href="mailto:rlock@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -849,7 +864,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 13, 2024</p>
+      <p class="date">June 11, 2025</p>
     </div>
   </div>
   
@@ -861,99 +876,173 @@ cookieconsent.run({
 </header>
 
 
-<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
-<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/marathons/boston-marathon-finish_times-2023.html" target="_blank">https://modules.scorenetwork.org/marathons/boston-marathon-finish_times-2023.html</a></p>
-<!--
-
-### Welcome video
-
-
-
-### Introduction
-
-For this activity, you will be exploring the result times from female and male runners that finished the 2023 [Boston Marathon](https://www.baa.org/races/boston-marathon){target="_blank"}. 
-
-In particular, you will examine both visualizations and summary statistics of result times to explore the variation in finish times as well as use comparative techniques, such as z-scores, to compare and contrast male and female participants.
-
-Investigating these trends is useful for several reasons. Firstly, exploring these trends can help to deepen our understanding of how different factors, such as gender, impact marathon performances. Secondly, analyzing the distribution of finish times and the performance of top finishers against the masses provides insights into the competitive landscape of the marathon. It can identify outliers or exceptional performances and understand how elite athletes compare to average participants. Although not directly connected to this data, analyses like these can inform training strategies, highlight the effectiveness of different preparation methods, and inspire both new and experienced runners by showcasing the range of achievable performances.
-
-::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This activity would be suitable for an in-class example or quiz.
-:::
-
-
-
-::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
-By the end of the activity, you will be able to:
-
-1.  Analyze distributions using histograms
-2.  Identify potential confounding variables to explain bimodal data
-3.  Compare and contrast distributions for a pair of groups
-4.  Calculate and compare z-scores for individual cases
-:::
-
-::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-For this activity, students will primarily use basic concepts of histograms and summary statistics to analyze distributions. Students will also likely require knowledge of z-scores.
-:::
-
-::: {.callout-note collapse="true" title="Technology Requiremens" appearance="minimal"}
-The provided worksheets do not require any specific statistical software. (Although they will likely require access to a calculator.) 
-
-Since the data are provided, instructors are encouraged to modify the worksheets to have student construct visualizations and calculate summary statistics using whichever software they choose.
-:::
-
-### Data
-
-The data set contains 26598 rows and 15 columns. Each row represents a runner who completed the Boston Marathon in 2023
-
-Download data: 
-
-Available on the [SCORE Data Repository](https://data.scorenetwork.org/): [boston_marathon_2023.csv](https://github.com/SCOREnetworkorg/sports-data-repository/raw/main/data/boston_marathon_2023.csv)
-
+<section id="module" class="level2">
+<h2 class="anchored" data-anchor-id="module">Module</h2>
+<p>Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Each year, the Raisin Region Conservation Authority (RRCA) holds the Raisin River Race. This race is one of the longest races in Eastern Ontario, spanning almost 19 miles (30 km) on the Raisin River, from St.&nbsp;Andrews West to Williamstown. Paddlers compete against each other to achieve the fastest time in their class. Classes vary by the years and are split up based on boat type and paddler/s.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Map of Raisin River Route">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Map of Raisin River Route
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="raisinmap.png" class="img-fluid figure-img"></p>
+<figcaption>Source: https://rrca.on.ca/page.php?id=10</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The Raisin River Race can be paddled by canoes or kayaks, but stand-up paddleboards are not permitted.</p>
+<section id="background-video" class="level3">
+<h3 class="anchored" data-anchor-id="background-video">Background Video</h3>
+<p>For those interested in learning more about canoe racing, watch this informative and humorous video from AuSable River Canoe Marathon competitor Holly Reynolds - “I am a canoe racer, explaining canoe racing.”</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gCF9eyOrfn0?si=ZSfNbjKQM0Az61uz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This could serve as an in class activity and should take roughly a half an hour to complete.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By the end of this activity, students will:</p>
+<ol type="1">
+<li><p>Increase ability to find and investigate outliers in a dataset.</p></li>
+<li><p>Be able remove influential observations from a dataset.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Students should have knowledge of how to fit linear regression models and familiarity with the measures of unusualness/influence. Students should also be able to modify data sets to remove unwanted observations.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technology Requirements
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Students will need to use R or other stat software like Minitab.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>This activity uses the data set: <a href="raisin_river_DNF.csv">raisin_river_DNF.csv</a></p>
+<p>The <code>raisin_river_DNF.csv</code> data set includes data from Paddlestats and the Raisin River Race website about the Raisin River Race from the years 2015-2025 (excluding 2020 and 2021 as no race was held due to the COVID-19 pandemic and 2019 due to incomplete finish status data). Each row contains the year, the flow from that year, and the proportion of DNFs from that year (calculated by dividing number of DNFs by total number of participants).</p>
 <details>
-<summary><b>Variable Descriptions</b></summary>
-
-| Variable | Description |
-|----|----------------------------|
-| age_group | age group of the runner |
-| place_overall | finishing place of the runner out of all runners |
-| place_gender | finishing place of runner among the same gender |
-| place_division | finishing place of runner among runners of the same gender and age group |
-| name | name of runner |
-| gender | gender of runner |
-| team | team the runner is affiliated with |
-| bib_number | bib number of runner |
-| half_time | half marathon time of runner |
-| finish_net | finishing time timed from when they cross the starting gate |
-| finish_gun | finishing time of runner timed from when the starter gun is fired |
-| half_time_sec | half marathon time in seconds |
-| finish_net_sec | net finish in seconds |
-| finish_gun_sec | gun finish in seconds |
-| finish_net_minutes | net finish in minutes |
-
-
-
-**Data Source**
-
-[Boston Athletic Association](https://www.baa.org){target="_blank"}
-
+<summary>
+<b>Variable Descriptions</b>
+</summary>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>year</td>
+<td>Year of Raisin River Race</td>
+</tr>
+<tr class="even">
+<td>prop_DNF</td>
+<td>The ratio of DNFs at the race.</td>
+</tr>
+<tr class="odd">
+<td>flow</td>
+<td>The flow of the water for that year</td>
+</tr>
+</tbody>
+</table>
 </details>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
+<p>The data are compiled from the <a href="https://paddlestats.net/racehistory/RAISIN" target="_blank">Paddlestats Website</a> and the <a href="https://rrca.on.ca/page.php?id=13" target="_blank">Raisin River Race Website</a>. This data set is a pared down version of the <a href="https://data.scorenetwork.org/water_sports/canoe_racing_raisin_river.html" target="_blank"><code>raisin_river_full.csv</code></a> file from the SCORE Data Repository.</p>
+</section>
+</section>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
+<ul>
+<li><p><a href="raisin_river_module_worksheet.qmd">Module Worksheet (R Version)</a></p></li>
+<li><p><a href="&quot;RaisinRiver_Module_Worksheet&quot;">Module Worksheet (Other Software Version)</a></p></li>
+<li><p><a href="raisin_river_module_SOLUTIONS.qmd">Solutions to Worksheet (R/Quarto Version)</a></p></li>
+<li><p><a href="raisin_river_module_SOLUTIONS.pdf">Solutions to Worksheet (PDF)</a></p></li>
+</ul>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conclusion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Upon conclusion of this module, students will have an understanding of how to detect outliers in their data set, the influence these observations can have, and how to remove them if appropriate.</p>
+</div>
+</div>
+</div>
 
-### Materials
 
-We provide editable MS Word handouts along with their solutions.
-
-[Class handout](boston_marathon_worksheet.docx)
-
-[Class handout - with solutions](boston_marathon_worksheet-key.docx)
-
-::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In conclusion, the Boston Marathon Times worksheet provides valuable learning opportunities for students in several key areas. It allows them to understand reasons by variability might exist and to discover multimodal distributions can occur simply due to excluding an important explanatory variable that otherwise confounds the analysis. The calculation of z-scores or other similar measurement of relative location enables students to compare and contrast the remarkable achievements of the top female and male finishers, shedding light on their talent in their respective fields. Overall, this worksheet allows students to critically analyze the 2023 marathon result data and draw meaningful conclusions about the extraordinary performances of athletes in the race.
-:::
-
--->
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

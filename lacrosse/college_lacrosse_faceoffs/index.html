@@ -384,6 +384,12 @@ cookieconsent.run({
  <span class="menu-text">Clinton Canoe Regatta: Graphing and Data Manipulation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisin River Results and Oulier Impact/Exclusion</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -952,7 +958,6 @@ Instructors interested in updating the data to a newer season can do so via the 
 3.  In the "Teams", download each of the data tables.
 4.  Read in each file, join the tables, and do some light cleaning. The code below shows an example used for the 2022-2023 season.
 
-
 ::: {.cell}
 
 ```{.r .cell-code  code-fold="true" code-summary="Show the code"}
@@ -1015,7 +1020,6 @@ lax_2022_2023 <- lax_2022_2023 %>%
 write_csv(x = lax_2022_2023, file = "lax_2022_2023.csv")
 ```
 :::
-
 
 </details>
 
