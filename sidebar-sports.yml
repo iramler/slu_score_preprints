@@ -1,6 +1,8 @@
 sidebar:
   - section: "By Sport"
     contents:
+      - text: " Img"
+        href: _img/index.html
       - text: "Basketball"
         href: basketball/index.html
       - text: "Canoeing"

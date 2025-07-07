@@ -4,8 +4,8 @@ listing:
   contents:
     - "./*/index.qmd"
   sort: date desc
-  type: default
-  fields: [title, author, date, categories, description]
+  image-placeholder: "../_img/default_thumbnail.png"
+  fields: [image, title, author, date, categories, description]
 ---
 
 These modules use **ultimate_frisbee** data to teach topics in statistics and data science.

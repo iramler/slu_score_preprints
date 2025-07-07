@@ -6,8 +6,9 @@ listing:
   contents:
     - "*/*/index.qmd"
   sort: date desc
-  type: default
-  fields: [title, author, date, categories, description]
+  image-placeholder: "_img/default_thumbnail.png"
+#  type: default
+  fields: [image, title, author, date, categories, description]
 ---
 
 This page contains education materials for the [SCORE Network](https://scorenetwork.org/index.html) that were created by faculty and students from the [Department of Mathematics, Computer Science, and Statistics at St. Lawrence University](https://www.stlawu.edu/offices/math-computer-science-and-statistics){target="_blank"}.
@@ -51,4 +52,4 @@ The following are actively maintained preprint repositories:
 
 ## Funding Source
 
-*The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).* "" \# or a tiny comment
+*The development of the SCORE with Data network is funded by the National Science Foundation (award 2142705).* 

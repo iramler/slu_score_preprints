@@ -2,9 +2,11 @@
 title: "📊 Modules by Statistics Topic"
 listing:
   categories: true
+  sort: "date desc"
+  image-placeholder: "_img/default_thumbnail.png"
   contents:
-    - "*/*.qmd"
-    - "!_team.qmd"
+    - "*/*/index.qmd"
+  fields: [image, title, author, date, categories, description]
 ---
 
 

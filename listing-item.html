@@ -1,0 +1,30 @@
+<div class="module-card">
+  <h3 class="module-title">
+    <a href="{{ .url }}">{{ .title }}</a>
+  </h3>
+
+  <div class="module-meta">
+    <div><strong>{{ .date }}</strong></div>
+    <div>{{ .author }}</div>
+  </div>
+
+  {{ if .image }}
+    <div class="module-image">
+      <img src="{{ .image }}" alt="Thumbnail for {{ .title }}">
+    </div>
+  {{ end }}
+
+  {{ if .categories }}
+    <div class="module-categories">
+      {{ range .categories }}
+        <span class="badge">{{ . }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ if .description }}
+    <p class="module-description">
+      {{ .description }}
+    </p>
+  {{ end }}
+</div>
