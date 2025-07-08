@@ -1,0 +1,191 @@
+---
+title: "Clinton Canoe Regatta: Describing Distributions"
+author:
+  - name: Phoebe Jones
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+format: 
+      html:
+          embed-resources: false
+date: "June 20, 2025"
+description: "Using data from the Clinton Canoe Regatta to compare distributios of finishing times for pro and non-pro style canoes."
+editor: 
+  canonical: true
+image: boatTypes.png
+categories:
+  - Histograms
+  - Boxplots
+  - Normal Distributions
+  - Skewness
+---
+
+## Module
+
+Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+## Introduction
+
+The [Clinton Canoe Regatta](https://www.canoeregatta.org/){target="_blank"} (the 70-miler) is an annual event in the downriver canoeing community. This race is one leg of the [Canoeing Triple Crown](https://www.ausablecanoemarathon.org/stats-and-history/triple-crown/){target="_blank"} (a challenge made up of three marathon canoe races in North America) and spans about 63 miles on the Susquehanna River in New York, from Cooperstown to Bainsbridge. Paddlers compete against each other to achieve the fastest time in their class.
+
+In this module, students will analyze the time to complete the race (in seconds) - comparing pro style canoes (which are lighter, sleeker, and harder to control while paddling) to heavier non-pro styles like stock and recreational.
+
+
+### Background Video
+
+For those interested in learning more about canoe racing, watch this informative and humorous video from AuSable River Canoe Marathon competitor Holly Reynolds - "I am a canoe racer, explaining canoe racing."
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gCF9eyOrfn0?si=ZSfNbjKQM0Az61uz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+
+::: {.callout-note}
+### Types of Canoes in the General Clinton Canoe Regatta
+
+The General Clinton Canoe Regatta features a wide range of canoe classes. Click on each type below to learn more.
+
+<details>
+<summary><strong>OC1 (Solo Canoe Classes)</strong></summary>
+
+- **oc1**: General solo canoe class.
+- **oc1master**: Solo canoe class for master (older) paddlers.
+- **oc1pro**: Professional-level solo canoe class with high-performance boats and experienced paddlers.
+- **oc1stock**: Stock solo canoe class using heavier, more standardized canoes, focusing on accessibility.
+
+All OC1 classes are solo paddlers using single-blade paddles. Pro classes use specialized lightweight boats, while stock and recreational classes use heavier, more stable canoes.
+
+</details>
+
+<details>
+<summary><strong>OC2 Cruiser Canoe Classes (2-Person Racing Canoes)</strong></summary>
+
+- **oc2cruiser**: General two-person racing canoe class.
+- **oc2cruiserjrsr**: Junior-Senior teams (often younger and older paddlers combined).
+- **oc2cruisermaster**: Master paddlers racing in cruiser-style canoes.
+- **oc2cruisermix**: Mixed-gender cruiser teams.
+- **oc2cruisersenior**: Senior paddler cruiser teams.
+- **oc2cruiserwomen**: Women’s cruiser canoe teams.
+
+Cruiser canoes are designed for speed and performance, typically paddled by experienced racers in competitive categories.
+
+</details>
+
+<details>
+<summary><strong>OC2 Pro (Professional 2-Person Canoe)</strong></summary>
+
+- **oc2pro**: Top-level professional two-person canoe class. These boats are optimized for maximum speed, requiring advanced skill and teamwork. This is typically the premier class of the Regatta.
+
+</details>
+
+<details>
+<summary><strong>OC2 Recreational Canoe Classes</strong></summary>
+
+- **oc2rec**: Recreational class for two-person canoes, focusing on accessibility and fun rather than competition.
+- **oc2recmix**: Mixed-gender recreational teams.
+
+These classes are popular with novice and casual paddlers using more stable, heavier canoes.
+
+</details>
+
+<details>
+<summary><strong>OC2 Stock Canoe Classes</strong></summary>
+
+- **oc2stock**: General two-person stock canoe class, following specific size and weight limits.
+- **oc2stockalum**: Aluminum two-person canoes (a traditional and durable material class).
+- **oc2stockmix**: Mixed-gender teams in the stock canoe division.
+
+Stock classes focus on affordability and accessibility with rules limiting modifications for competitive fairness.
+
+</details>
+
+<details>
+<summary><strong>OC4 Canoe Classes (4-Person Canoes)</strong></summary>
+
+- **oc4stock**: Four-person stock canoe class, requiring teamwork and coordination.
+- **oc4unlimited**: Four-person unlimited class, with fewer restrictions on boat design, allowing for potentially faster craft.
+
+These larger canoes require high levels of coordination but can be very fast, especially in the unlimited division.
+
+</details>
+
+:::
+
+
+
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete. 
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, students will:
+
+1. Increase ability to describe the appearances of data distributions.
+
+2. Be able to use summary statistics to compare the distribution of data.
+
+3. Apply context to data to explain phenomenon.
+
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+
+Students should have had an introduction to normal distributions, histograms, boxplots, and summary statistics.
+
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+
+Students may need access to a calculator (of any sort). 
+
+One version of the worksheet associated with this module will not require any other sort of technology.
+
+A separate version of the worksheet requires the use of technology capable of producing summary statistics and simple plots (e.g., histograms). 
+
+:::
+
+## Data
+
+This activity uses the data set: [clinton_canoes.csv](clinton_canoes.csv){target="_blank"}
+
+The `clinton_canoes.csv` data set includes data from Paddlestats about the Clinton Canoe Regatta from the years 2014-2025 (excluding 2020 and 2021 as no race was held due to the COVID-19 pandemic). Each row refers to a specific racer from a year at the race. For the purposes of this module, the data was filtered down to only include each boat once (rather than including each paddler in each boat). Any times of 0 or `NA` were also removed. 
+
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable    | Description                                               |
+|-------------|-----------------------------------------------------------|
+| bib         | Bib number                                                |
+| year        | Year raced                                                |
+| classID     | Class (oc4stock, oc2pro, etc)                             |
+| place       | Where the boat placed in their class's results            |
+| time        | The time to complete the race (in sec)                    |
+| overall     | Overall rank (out of all boats ever)                      |
+| pro         | pro = 1 if the canoe is pro style, pro = 0 for stock and recreational  |
+| n_paddlers | The number of paddlers in the canoe |
+
+</details>
+
+#### Data Source
+
+The data are compiled from the [Paddlestats Website](https://paddlestats.net/racehistory/CLINTON70){target="_blank"}.
+
+## Materials
+
+[Module Worksheet - No Technology Required](Clinton_Time_Distribution_Worksheet.docx)
+
+[Module Worksheet - Technology Required](Clinton_Time_Distribution_Worksheet-TechRequired.docx)
+
+
+[Solutions to Worksheet](Clinton_Time_Distribution_SOLUTIONS.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Upon conclusion of this module, students will have a greater understanding of the importance of the shape, spread, and centers of data distributions as well as how those factors can be seen through various plots and summary statistics.
+:::

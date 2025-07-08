@@ -17,6 +17,7 @@ date: "June 17, 2025"
 description: "Using explore data from the Clinton Canoe Regatta using data wrangling and visualization."
 editor: 
   canonical: true
+image: Marathon_C2.jpg
 categories:
   - Data Visualization
   - Data Wrangling
@@ -25,7 +26,9 @@ categories:
 #  - Data manipulation
 ---
 
+<!--
 ![Source: https://commons.wikimedia.org/wiki/File:Marathon_C2.jpg](Marathon_C2.jpg){width="3in"}
+-->
 
 ## Module
 
