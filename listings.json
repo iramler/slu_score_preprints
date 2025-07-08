@@ -6,6 +6,7 @@
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/swimming/olympic_swimming_100m/index.html",
       "/early_drafts/basketball/wingspans_and_performance/index.html",
+      "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
       "/canoeing/raisin_river_regression/index.html",
       "/rowing/olympic_rowing_datawrangling/index.html",
@@ -120,17 +121,9 @@
   {
     "listing": "/canoeing/index.html",
     "items": [
+      "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
       "/canoeing/raisin_river_regression/index.html"
-    ]
-  },
-  {
-    "listing": "/basketball/index.html",
-    "items": [
-      "/basketball/nba_sga_sampling_distributions/index.html",
-      "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
-      "/basketball/wnba_data_quality/index.html"
     ]
   },
   {
@@ -140,6 +133,7 @@
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/swimming/olympic_swimming_100m/index.html",
       "/early_drafts/basketball/wingspans_and_performance/index.html",
+      "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
       "/canoeing/raisin_river_regression/index.html",
       "/rowing/olympic_rowing_datawrangling/index.html",
@@ -180,6 +174,15 @@
       "/softball/softball_div1/index.html",
       "/triathlon/multiple_linear_regression/index.html",
       "/triathlon/simple_linear_regression/index.html"
+    ]
+  },
+  {
+    "listing": "/basketball/index.html",
+    "items": [
+      "/basketball/nba_sga_sampling_distributions/index.html",
+      "/basketball/nba_draft_anova_intermediate/index.html",
+      "/basketball/nba_draft_anova_intro/index.html",
+      "/basketball/wnba_data_quality/index.html"
     ]
   },
   {
