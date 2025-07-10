@@ -2,10 +2,10 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
+      "/basketball/nba_wingspans_and_performance/index.html",
       "/basketball/nba_sga_sampling_distributions/index.html",
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/swimming/olympic_swimming_100m/index.html",
-      "/early_drafts/basketball/wingspans_and_performance/index.html",
       "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
       "/canoeing/raisin_river_regression/index.html",
@@ -113,26 +113,18 @@
     ]
   },
   {
-    "listing": "/combat_sports/index.html",
+    "listing": "/disc_golf/index.html",
     "items": [
-      "/combat_sports/ufc_striking_accuracy/index.html"
-    ]
-  },
-  {
-    "listing": "/canoeing/index.html",
-    "items": [
-      "/canoeing/canoe_racing_clinton_distributions/index.html",
-      "/canoeing/canoe_racing_clinton/index.html",
-      "/canoeing/raisin_river_regression/index.html"
+      "/disc_golf/dgpt_correlations/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/basketball/nba_wingspans_and_performance/index.html",
       "/basketball/nba_sga_sampling_distributions/index.html",
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/swimming/olympic_swimming_100m/index.html",
-      "/early_drafts/basketball/wingspans_and_performance/index.html",
       "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
       "/canoeing/raisin_river_regression/index.html",
@@ -179,6 +171,7 @@
   {
     "listing": "/basketball/index.html",
     "items": [
+      "/basketball/nba_wingspans_and_performance/index.html",
       "/basketball/nba_sga_sampling_distributions/index.html",
       "/basketball/nba_draft_anova_intermediate/index.html",
       "/basketball/nba_draft_anova_intro/index.html",
@@ -186,9 +179,17 @@
     ]
   },
   {
-    "listing": "/disc_golf/index.html",
+    "listing": "/canoeing/index.html",
     "items": [
-      "/disc_golf/dgpt_correlations/index.html"
+      "/canoeing/canoe_racing_clinton_distributions/index.html",
+      "/canoeing/canoe_racing_clinton/index.html",
+      "/canoeing/raisin_river_regression/index.html"
+    ]
+  },
+  {
+    "listing": "/combat_sports/index.html",
+    "items": [
+      "/combat_sports/ufc_striking_accuracy/index.html"
     ]
   },
   {
