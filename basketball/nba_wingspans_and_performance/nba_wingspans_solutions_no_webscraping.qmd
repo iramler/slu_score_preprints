@@ -1,0 +1,381 @@
+---
+title: "NBA Wingspan & Performance Solutions (no webscraping)"
+format:
+  html:  
+    embed-resources: true
+execute: 
+  eval: false
+  echo: true
+---
+
+In professional basketball, physical traits can have a major impact on how a player performs. One key trait that often draws attention from scouts and analysts is **wingspan**, the distance from fingertip to fingertip with arms fully extended.
+
+This worksheet explores the question: How does wingspan, especially wingspan relative to height, relate to player performance in the NBA?
+
+You’ll analyze data combining NBA player profiles (including height and wingspan) with in-game statistics from the 2024–25 season. A key variable is **wingspan_advantage**: the difference between a player’s wingspan and height, often viewed as a potential edge in defense and rebounding, but a potential disadvantage in shooting.
+
+Throughout this worksheet, you’ll clean and combine messy datasets, visualize relationships, and explore meaningful patterns, just like a data analyst working for an NBA front office. Your goal is to investigate whether a player’s wingspan advantage is linked to any performance metrics, and to think critically about how physical traits might (or might not) translate to on-court impact.
+
+# 0. Load the Following Packages
+
+```{r}
+#| message: false
+library(tidyverse)
+library(rvest)
+```
+
+# 1. Load in CSV file
+
+Load in the `nba_wingspan_2025.csv` from the data folder.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan <- read_csv("nba_wingspan_2025.csv")
+```
+
+</details>
+
+# 2. Clean the Dataset
+
+Clean the dataset using the following packages from tidyverse: `dplyr`, `tidyr`, `readr` and `stringr`.
+
+Once you are finished cleaning this dataset, these should be the following variables.
+
+| Variable             | Type | Description                                                          |
+|----------------------|------|----------------------------------------------------------------------|
+| `name`               | chr  | Full name of the NBA player                                          |
+| `team`               | chr  | Three-letter abbreviation of the team the player is on               |
+| `position`           | chr  | Player's primary on-court position in abbreviated form               |
+| `height_inches`      | num  | Player's height in inches                                            |
+| `wingspan_inches`    | num  | Player's wingspan in inches                                          |
+| `wingspan_advantage` | num  | Difference between wingspan and height in inches (wingspan - height) |
+
+a.  Convert the `height` variable (which is currently a character string like 6'4") into a new numeric variable called `height_inches` that represents each player's height in total inches. **Hint** using helper variables (such as to `separate` variables into feet and inches) can make this process easier.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan <-
+  wingspan %>%
+  separate_wider_delim(
+    cols = height,
+    names = c("feet", "inches"),
+    delim = "'"
+  ) %>%
+  mutate(
+    feet = parse_number(feet),
+    inches = parse_number(inches),
+    height_inches = feet * 12 + inches
+  ) %>%
+  select(-feet, -inches)
+```
+
+</details>
+
+b.  Do the same thing as above, but with the `wingspan` variable. Create a new numeric variable called `wingspan_inches` that represents each player’s wingspan in total inches.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan <-
+  wingspan %>%
+  separate_wider_delim(
+    cols = wingspan,
+    names = c("feet", "inches"),
+    delim = "'"
+  ) %>%
+  mutate(
+    feet = parse_number(feet),
+    inches = parse_number(inches),
+    wingspan_inches = feet * 12 + inches
+  ) %>%
+  select(-feet, -inches) %>%
+  relocate(wingspan_advantage, .after = wingspan_inches)
+```
+
+</details>
+
+c.  Extract the player's position (e.g. "SG" or "C") from the `name` variable and store it in a new variable called `position`, so that the position is no longer part of the name column.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan <-
+  wingspan %>%
+  separate_wider_delim(
+    cols = name,
+    names = c("name", "position"),
+    delim = " | "
+  )
+```
+
+</details>
+
+d.  Remove players who are not currently on a team. In the `name` column, these players do not have a three-letter team abbreviation at the end of their name (e.g. "LeBron JamesLAL" vs. "LeBron James"). Then, split the name and team abbreviation into two separate variables: `name` and `team`. **Hint:** Use stringr functions to complete this step.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan <-
+  wingspan %>%
+  filter(
+    str_detect(name, pattern = "[A-Z]{3}$")
+  ) %>%
+  mutate(
+    team = str_extract(name, pattern = "[A-Z]{3}$"),
+    name = str_remove(name, pattern = "[A-Z]{3}$")
+  ) %>%
+  relocate(team, .after = name)
+```
+
+</details>
+
+e.  At this point, there may still be errors in the dataset, such as invalid or incorrectly extracted team abbreviations. To catch these, use the reference dataset of valid NBA team abbreviations: `nba_team_abbreviations.csv`.
+
+```{r}
+teams <- read_csv("nba_team_abbreviations.csv")
+```
+
+-   First use `anti_join()` to identify any rows in the wingspan dataset with invalid team names.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+anti_join(wingspan, teams, by = "team")
+```
+
+</details>
+
+-   Then remove those rows from the dataset. Although this could be done with `filter`s, instead practice using `semi_join()`.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan <- semi_join(wingspan, teams, by = "team")
+```
+
+</details>
+
+# 3. Load Data From Basketball Reference
+
+**Why Per 100 Possessions:** Per 100 possessions stats are often preferred over per game stats in basketball because some teams have more possessions simply due to pace. These stats adjusts for that by standardizing performance across the same number of plays, making it easier to compare players fairly and evaluate efficiency and impact.
+
+a.  Load the data from the `nba_per100possessions_2025.csv` file from the data folder.
+
+```{r}
+per_100_poss <- read_csv("nba_per100possessions_2025.csv")
+```
+
+b.  To tidy the dataset by completing the following steps:
+
+**First**, remove duplicate player entries by keeping only the row that represents a player’s full season total. For example, Luka Dončić was traded mid-season, so he appears three times: once for his stats with DAL, once with LAL, and once for his total 2024–25 season stats.
+
+**Hint:** Use `group_by(player)` to group rows by player name. Then use `slice_max()` and order by games to keep only the row where each player had the most games played, which will be their season total. Finally, use `ungroup()` to remove the grouping.
+
+**Optional:** Use `select()` to keep only the variables you're interested in.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+per_100_poss <-
+  per_100_poss %>%
+  group_by(player) %>%
+  slice_max(order_by = g, n = 1, with_ties = FALSE) %>%
+  ungroup()
+```
+
+</details>
+
+c.  This csv file also contained a row for the League Average. Remove it from the dataset. (Tip: The only variables with non-missing entries for the League Average are `e_fg_percent` and `ft_percent`. This might help you more easily find it in the dataset.))
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+per_100_poss <-
+  per_100_poss %>%
+  drop_na(g)
+```
+
+</details>
+
+d.  Do the same steps as in parts **a - c**, but this time use the `nba_shooting_2025.csv` file from the data folder.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+shooting <- read_csv("nba_shooting_2025.csv")
+```
+
+```{r}
+shooting <-
+  shooting %>%
+  group_by(player) %>%
+  slice_max(order_by = g, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  drop_na(g) %>%
+  select(-g) # no need to keep the duplicate variable
+```
+
+</details>
+
+e.  Combine/Merge the two cleaned datasets from Basketball Reference into a single dataset.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+bball_ref <-
+  per_100_poss %>%
+  full_join(shooting, by = "player")
+```
+
+</details>
+
+# 4. Combine Datasets
+
+Combine the cleaned wingspan dataset from part 2, with the combined Basketball Reference dataset you created in part 3.e.
+
+In the `nba_wingspan_2025.csv` file, sevearl names were misspelled compared to their spellings on Basketball Reference. Keep this in mind as you work through the questions.
+
+a.  Explain why `anti_join` would allow us to identify the players with misspelled names.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+*Because, when joined by the player's name, it will identify rows that do not have a match.*
+
+</details>
+
+b.  Use `anti_join()` to identify the players in the wingspan dataset without a match in the merged data from 3.e.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+wingspan %>%
+  anti_join(bball_ref, by = c("name" = "player"))
+```
+
+</details>
+
+c.  Manually explore the player names in the merged data from 3.e (e.g., using the `View` function available with the R Studio IDE) to determine which players were misspelled and which players with wingspans are not in the performance statistics dataset. Summarize your findings here.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+*You should notice that Alperen Şengün and Jimmy Butler are the only two that should have a match but didn't.*
+
+</details>
+
+d.  After comparing the differences, use `mutate()` to correct the two misspelled names in the wingspan dataset. Then, recombine the datasets and this time there should be no mismatches.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+combined <- 
+  wingspan %>%
+  mutate(
+    name = if_else(name == "Alperen Sengun", "Alperen Şengün", name),
+    name = if_else(name == "Jimmy Butler III", "Jimmy Butler", name)
+  ) %>%
+  left_join(bball_ref, by = c("name" = "player"))
+```
+
+</details>
+
+# 5. Explore the Combined Dataset
+
+Use the newly created dataset to investigate potential relationships between a player's physical traits and their performance on the court.
+
+a.  Create a histogram of the `wingspan_advantage` variable to see how common different levels of advantage (or disadvantage) are across players in the NBA. Provide a brief summary of the distribution.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+combined %>%
+  ggplot(., aes(x = wingspan_advantage)) +
+  geom_histogram(binwidth = 1, color = "black")
+```
+
+*Nearly all players have a larger wingspan than height (i.e., a positive advantage). The distribution is approximately normally distributed with a center around 4 inches. Most advantages are in the 1 - 8 inch range.*
+
+</details>
+
+b.  Create a scatterplot using `wingspan_advantage` as the explanatory variable and `blk` as the response variable. What kind of relationship, if any, do you observe? Are there any outliers?
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+combined %>%
+  ggplot(., aes(x = wingspan_advantage, y = blk)) +
+  geom_point() +
+  geom_smooth(method = "loess", se = TRUE)
+```
+
+*Not surprisingly, as the advantage increases there is a "Blocks per 100 possessions" statistic. While a steady/consistent trend, there is still plenty of variability associated with it though.*
+
+</details>
+
+c.  Create a scatterplot using `wingspan_inches` as the explanatory variable and `3pt_rate` as the response variable. Include a regression line, a title, and labels for the x and y axes. Then separate the plot by `position`.What patterns or relationships stand out within or across positions? (Hint: Recall that `3pt_rate` measures the proportion of a player's shots that are 3 point attempt.)
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+combined %>%
+  ggplot(aes(x = wingspan_advantage, y = `3pt_rate`)) +
+  geom_point() +
+  geom_smooth(method = "loess", se = TRUE) +
+  facet_wrap(~position) +
+  labs(
+    title = "Relationship Between Wingspan and\n3PT Rate by Position",
+    x = "Wingspan Advantage (inches)",
+    y = "3PT Shooting Rate"
+  )
+```
+
+*Besides Point Guards (PG), there tends to be a slight negative relationship between the two variables. This is most pronounced in the Shooting Guard (SG) and Small Forward (SF) positions - both of which tend to be the higher scoring positions "outside shooters" on a team. An overall conclusion would be that 3pt shooter effectiveness decreases as the wingspan advantage increases. (The additional readings section of the module page provides some references that have some similar findings.) It is unclear why point guards would be immune to this, although they do tend to be the shortest players on a team - which might indicate that the longer arms may compensate for their shorter bodies, allowing them to more effectively shoot 3pointers.*
+
+</details>
+
+d.  **Optional:** Investigate any other combination of physical traits and on-court performance metric you find interesting. Create a visualization to explore the relationship and try to explain any patterns or outliers you observe.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+*Answers will vary*
+
+</details>

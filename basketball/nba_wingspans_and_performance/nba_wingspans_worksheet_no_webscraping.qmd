@@ -1,0 +1,177 @@
+---
+title: "NBA Wingspan & Performance (no webscraping)"
+format:
+  html:  
+    embed-resources: true
+---
+
+In professional basketball, physical traits can have a major impact on how a player performs. One key trait that often draws attention from scouts and analysts is **wingspan**, the distance from fingertip to fingertip with arms fully extended.
+
+This worksheet explores the question: How does wingspan, especially wingspan relative to height, relate to player performance in the NBA?
+
+You’ll analyze data combining NBA player profiles (including height and wingspan) with in-game statistics from the 2024–25 season. A key variable is **wingspan_advantage**: the difference between a player’s wingspan and height, often viewed as a potential edge in defense and rebounding, but a potential disadvantage in shooting.
+
+Throughout this worksheet, you’ll clean and combine messy datasets, visualize relationships, and explore meaningful patterns, just like a data analyst working for an NBA front office. Your goal is to investigate whether a player’s wingspan advantage is linked to any performance metrics, and to think critically about how physical traits might (or might not) translate to on-court impact.
+
+# 0. Load the Following Packages
+
+```{r}
+#| message: false
+library(tidyverse)
+library(rvest)
+```
+
+# 1. Load in CSV file
+
+Load in the `nba_wingspan_2025.csv` from the data folder.
+
+```{r}
+
+```
+
+# 2. Clean the Dataset
+
+Clean the dataset using the following packages from tidyverse: `dplyr`, `tidyr`, `readr` and `stringr`.
+
+Once you are finished cleaning this dataset, these should be the following variables.
+
+| Variable             | Type | Description                                                          |
+|----------------------|------|----------------------------------------------------------------------|
+| `name`               | chr  | Full name of the NBA player                                          |
+| `team`               | chr  | Three-letter abbreviation of the team the player is on               |
+| `position`           | chr  | Player's primary on-court position in abbreviated form               |
+| `height_inches`      | num  | Player's height in inches                                            |
+| `wingspan_inches`    | num  | Player's wingspan in inches                                          |
+| `wingspan_advantage` | num  | Difference between wingspan and height in inches (wingspan - height) |
+
+a.  Convert the `height` variable (which is currently a character string like 6'4") into a new numeric variable called `height_inches` that represents each player's height in total inches. **Hint** using helper variables (such as to `separate` variables into feet and inches) can make this process easier.
+
+```{r}
+
+```
+
+b.  Do the same thing as above, but with the `wingspan` variable. Create a new numeric variable called `wingspan_inches` that represents each player’s wingspan in total inches.
+
+```{r}
+
+```
+
+c.  Extract the player's position (e.g. "SG" or "C") from the `name` variable and store it in a new variable called `position`, so that the position is no longer part of the name column.
+
+```{r}
+
+```
+
+d.  Remove players who are not currently on a team. In the `name` column, these players do not have a three-letter team abbreviation at the end of their name (e.g. "LeBron JamesLAL" vs. "LeBron James"). Then, split the name and team abbreviation into two separate variables: `name` and `team`. **Hint:** Use stringr functions to complete this step.
+
+```{r}
+
+```
+
+e.  At this point, there may still be errors in the dataset, such as invalid or incorrectly extracted team abbreviations. To catch these, use the reference dataset of valid NBA team abbreviations: `nba_team_abbreviations.csv`.
+
+```{r}
+teams <- read_csv("nba_team_abbreviations.csv")
+```
+
+-   First use `anti_join()` to identify any rows in the wingspan dataset with invalid team names.
+
+```{r}
+
+```
+
+-   Then remove those rows from the dataset. Although this could be done with `filter`s, instead practice using `semi_join()`.
+
+```{r}
+
+```
+
+# 3. Load Data From Basketball Reference
+
+**Why Per 100 Possessions:** Per 100 possessions stats are often preferred over per game stats in basketball because some teams have more possessions simply due to pace. These stats adjusts for that by standardizing performance across the same number of plays, making it easier to compare players fairly and evaluate efficiency and impact.
+
+a.  Load the data from the `nba_per100possessions_2025.csv` file from the data folder.
+
+```{r}
+per_100_poss <- read_csv("nba_per100possessions_2025.csv")
+```
+
+b.  To tidy the dataset by completing the following steps:
+
+**First**, remove duplicate player entries by keeping only the row that represents a player’s full season total. For example, Luka Dončić was traded mid-season, so he appears three times: once for his stats with DAL, once with LAL, and once for his total 2024–25 season stats.
+
+**Hint:** Use `group_by(player)` to group rows by player name. Then use `slice_max()` and order by games to keep only the row where each player had the most games played, which will be their season total. Finally, use `ungroup()` to remove the grouping.
+
+**Optional:** Use `select()` to keep only the variables you're interested in.
+
+```{r}
+
+```
+
+c.  This csv file also contained a row for the League Average. Remove it from the dataset. (Tip: The only variables with non-missing entries for the League Average are `e_fg_percent` and `ft_percent`.)
+
+```{r}
+
+```
+
+d.  Do the same steps as in parts **a - c**, but this time use the `nba_shooting_2025.csv` file from the data folder.
+
+```{r}
+
+```
+
+e.  Combine/Merge the two cleaned datasets from Basketball Reference into a single dataset.
+
+```{r}
+
+```
+
+# 4. Combine Datasets
+
+Combine the cleaned wingspan dataset from part 2, with the combined Basketball Reference dataset you created in part 3.e.
+
+In the `nba_wingspan_2025.csv` file, sevearl names were misspelled compared to their spellings on Basketball Reference. Keep this in mind as you work through the questions.
+
+a.  Explain why `anti_join` would allow us to identify the players with misspelled names.
+
+b.  Use `anti_join()` to identify the players in the wingspan dataset without a match in the merged data from 3.e.
+
+```{r}
+
+```
+
+c.  Manually explore the player names in the merged data from 3.e (e.g., using the `View` function available with the R Studio IDE) to determine which players were misspelled and which players with wingspans are not in the performance statistics dataset. Summarize your findings here.
+
+d.  After comparing the differences, use `mutate()` to correct the two misspelled names in the wingspan dataset. Then, recombine the datasets and this time there should be no mismatches.
+
+```{r}
+
+```
+
+# 5. Explore the Combined Dataset
+
+Use the newly created dataset to investigate potential relationships between a player's physical traits and their performance on the court.
+
+a.  Create a histogram of the `wingspan_advantage` variable to see how common different levels of advantage (or disadvantage) are across players in the NBA. Provide a brief summary of the distribution.
+
+```{r}
+
+```
+
+b.  Create a scatterplot using `wingspan_advantage` as the explanatory variable and `blk` as the response variable. What kind of relationship, if any, do you observe? Are there any outliers?
+
+```{r}
+
+```
+
+c.  Create a scatterplot using `wingspan_inches` as the explanatory variable and `3pt_rate` as the response variable. Include a regression line, a title, and labels for the x and y axes. Then separate the plot by `position`.What patterns or relationships stand out within or across positions? (Hint: Recall that `3pt_rate` measures the proportion of a player's shots that are 3 point attempt.)
+
+```{r}
+
+```
+
+d.  **Optional:** Investigate any other combination of physical traits and on-court performance metric you find interesting. Create a visualization to explore the relationship and try to explain any patterns or outliers you observe.
+
+```{r}
+
+```
