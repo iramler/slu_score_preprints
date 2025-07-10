@@ -86,7 +86,7 @@ The `nba_team_abbreviations.csv` dataset contains the abbreviations and full nam
 
 The `nba_per100possessions_2025.csv` dataset contains 736 rows and 14 columns. Each row represents a NBA player from the 2024-25 season. **Note** this dataset contains duplicates because of players switching teams midseason. For example, Luka Dončić will have 3 total rows for his stats with DAL, LAL and his total 2024-25 season stats.
 
-Download Data: [nba_per100possesions_2025.csv](nba_per100possesions_2025.csv){target="_blank"}
+Download Data: [nba_per100possessions_2025.csv](nba_per100possessions_2025.csv){target="_blank"}
 
 <details>
 
