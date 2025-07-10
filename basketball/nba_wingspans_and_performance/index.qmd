@@ -33,6 +33,11 @@ One particularly interesting metric is wingspan advantage which is the differenc
 
 In this worksheet, you'll explore how physical traits like wingspan advantage relate to on-court performance. You'll work with real NBA data to practice essential skills such as cleaning and joining datasets, as well as visualizing relationships. By the end, you'll use your cleaned and combined datasets to look for meaningful patterns between a player's wingspan advantage and their statistical output.
 
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could bew suitable of an out of class activity or one that spans more than one class period.
+:::
+
+
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 

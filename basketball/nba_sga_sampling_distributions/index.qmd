@@ -52,6 +52,11 @@ For those not familiar with Shai Gilgeous-Alexander, feel free to check out his 
 
 In addition to its basketball significance, this dataset allows us to explore how statistical tools (such as [StatKey](https://www.lock5stat.com/StatKey/){target="_blank"}) can be used to simulate real-world scenarios. By treating SGA's regular season point totals as the population, we can model specific playoff situations by drawing random samples of different sizes. These simulations help us understand how much variation we might expect in his performances and how likely different playoff outcomes are are based on his regular season scoring.
 
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete.
+:::
+
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 
