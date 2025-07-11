@@ -31,6 +31,8 @@ sidebar:
         href: motor_sports/index.html
       - text: "Multisport"
         href: multisport/index.html
+      - text: "Racquet Sports"
+        href: racquet_sports/index.html
       - text: "Rowing"
         href: rowing/index.html
       - text: "Running"
@@ -43,8 +45,6 @@ sidebar:
         href: softball/index.html
       - text: "Swimming"
         href: swimming/index.html
-      - text: "Tennis"
-        href: tennis/index.html
       - text: "Triathlon"
         href: triathlon/index.html
       - text: "Ultimate Frisbee"

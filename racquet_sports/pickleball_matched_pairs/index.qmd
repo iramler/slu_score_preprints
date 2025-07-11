@@ -1,0 +1,100 @@
+---
+title: "Exploring Differences in Pickeball Reliability Scores"
+author:
+  - name: Faith Rhinehart
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Jessica Chapman
+    email: jchapman@stlawu.edu
+    affiliation:
+      - ref: slu
+  - name: Robin Lock
+    affiliation:
+      - ref: slu
+  - name: Ivan Ramler
+    affiliation:
+      - ref: slu
+    
+date: "July 10, 2025"
+description: "Using matched pairs to determine a difference in mean reliability scores for pickleball players"
+editor: 
+  canonical: true
+format: 
+  html:
+    embed-resources: false
+categories:
+  - Paired Data
+image: pickleImage.jpg
+---
+
+## Background to Pickleball Video
+
+If you are unfamiliar with Pickleball, please watch this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fTvPYdKZqO0?si=1UuCNuORNX791EU6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## Introduction to Module
+
+Pickleball is a fast-paced sport blending tennis, badminton, and ping-pong, played with paddles and a plastic ball on a small court. College tournaments feature singles, doubles, and mixed doubles in a best-of-three format, emphasizing strategy, teamwork, and precision. Player performance is often tracked using the DUPR (Dynamic Universal Pickleball Rating) system, which rates skill from 2.000 to 8.000 based on match results, opponent strength, and recent play. A Reliability Score (1–100%) reflects how accurate a rating is, with 60%+ considered dependable.
+
+The pickleBall dataset features data from the NCPA (National Collegiate Pickleball Association) of male and female players in 2024. Variables include characteristics such as name and sex. Other variables included the overrall, singles, doubles, and mixed rating and the overall, singles, doubles, and mixed reliability score. The relevant variables for this specific module are doubles reliability and singles reliability.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+Students will gain experience performing matched pairs t-test and confidence intervals.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will need to use a statistical software capable of plotting data. 
+
+Students are expected to understand the concept of hypothesis forming, rejecting hypothesis, confidence intervals.
+:::
+
+## Data
+
+The `pickleBall` data contains ratings and reliability scores for collegiate matches.
+
+Download data: [pickleBall.csv](pickleBall.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+NCPA male and female players (380 cases with 12 variables) data:
+
+| Variable | Description |
+|-------------------|-----------------------------------------------------|
+| First Name | First name of player |
+| Last Name | Last name of player |
+| Overall | Overall rating |
+| Overall Reliability | Overall Reliability score (percent expressed as a decimal) |
+| Singles | Singles rating |
+| Singles Reliability | Singles Reliability score (percent expressed as a decimal) |
+| Doubles | Doubles rating |
+| Doubles Reliability | Doubles Reliability score (percent expressed as a decimal) |
+| Mixed | Mixed rating |
+| Mixed Reliability | Mixed Reliability score (percent expressed as a decimal) |
+| Sex | Sex of player |
+
+</details>
+
+### Data Source
+
+Details on the data are available in the associated [SCORE Data Repository entry](https://data.scorenetwork.org/pickleball/pickleball_ncpa_player_ratings-2024.html){target="_blank"}.
+
+
+## Materials
+
+- [Class handout (MS Word)](pickleball_worksheet.docx)
+
+- [Class handout - with solutions](pickleball_worksheet_solutions.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Students should gain an understanding of matched pairs t-test to compare mean reliability scores for singles and doubles ratings.
+:::

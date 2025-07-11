@@ -1,5 +1,5 @@
 ---
-title: "Tennis"
+title: "Racquet Sports"
 listing:
   contents:
     - "./*/index.qmd"
@@ -8,4 +8,4 @@ listing:
   fields: [image, title, author, date, categories, description]
 ---
 
-These modules use **tennis** data to teach topics in statistics and data science.
+These modules use **racquet_sports** data to teach topics in statistics and data science.
