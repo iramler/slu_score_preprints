@@ -1,5 +1,5 @@
 ---
-title: "Exploring Differences in Pickeball Reliability Scores"
+title: "Pickleball: Comparing Reliability in Player Ratings for Doubles vs Singles matches"
 author:
   - name: Faith Rhinehart
     affiliation:
@@ -17,7 +17,7 @@ author:
       - ref: slu
     
 date: "July 10, 2025"
-description: "Using matched pairs to determine a difference in mean reliability scores for pickleball players"
+description: "Using matched pairs to determine a difference in mean reliability scores for pickleball player ratings in doubles vs singles matches."
 editor: 
   canonical: true
 format: 
