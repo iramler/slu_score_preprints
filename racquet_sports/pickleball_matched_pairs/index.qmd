@@ -1,5 +1,5 @@
 ---
-title: "Pickleball: Comparing Reliability in Player Ratings for Doubles vs Singles matches"
+title: "Pickleball: Comparing Reliability in Player Ratings for Doubles vs Singles Matches"
 author:
   - name: Faith Rhinehart
     affiliation:
