@@ -1,0 +1,72 @@
+---
+title: "Pickleball: Estimating the proportion of dependable DUPR ratings"
+author:
+  - name: Faith Rhinehart
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    affiliation: 
+      - ref: slu
+    email: iramler@stlawu.edu
+  - name: Jessica Chapman
+    affiliation: 
+      - ref: slu
+    
+date: "July 14, 2025"
+description: "Estimate the proportion of collegiate pickleball players who have a dependable overall DUPR reliability score (of 60% or higher)."
+editor: 
+  canonical: true
+format: 
+  html:
+    embed-resources: false
+categories:
+  - Confidence Intervals
+  - Proportions
+image: pickleImage.jpg
+---
+
+## Background to Pickleball Video
+
+If you are unfamiliar with Pickleball, please watch this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fTvPYdKZqO0?si=1UuCNuORNX791EU6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+## Introduction to Module
+
+Pickleball is a fast-paced sport blending tennis, badminton, and ping-pong, played with paddles and a plastic ball on a small court. College tournaments feature singles, doubles, and mixed doubles in a best-of-three format, emphasizing strategy, teamwork, and precision. Player performance is often tracked using the DUPR (Dynamic Universal Pickleball Rating) system, which rates skill from 2.000 to 8.000 based on match results, opponent strength, and recent play. A Reliability Score (1–100%) reflects how accurate a rating is, with 60%+ considered dependable.
+
+The pickleBall dataset features data from the NCPA (National Collegiate Pickleball Association) of male and female players in 2024. Variables include characteristics such as name and sex. Other variables included the overrall, singles, doubles, and mixed rating and the overall, singles, doubles, and mixed reliability score. The relevant variables for this specific module are doubles reliability and singles reliability.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+Students will gain experience performing single proportion confidence intervals.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students are expected to have been exposed to the concept confidence intervals for a single proportion. (Although this is intended to be used as an earlier example for the topic.)
+:::
+
+## Data
+
+This module used the `pickleBall` data from the [SCORE Data Repository](https://data.scorenetwork.org/pickleball/pickleball_ncpa_player_ratings-2024.html){target="_blank"}
+
+However, students do not need access to the data to complete the module as it is summarized in the provided worksheet. 
+
+
+## Materials
+
+- [Class handout (MS Word)](Pickleball_ConfidenceIntervalsProportions_Worksheet.docx)
+
+- [Class handout - with solutions](Pickleball_ConfidenceIntervalProportion_Worksheet_Solutions.docx)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+
+Students should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.
+:::
+
