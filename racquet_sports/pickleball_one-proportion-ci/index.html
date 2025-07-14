@@ -6,12 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Cooper Olney">
+<meta name="author" content="Faith Rhinehart">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2025-07-10">
-<meta name="description" content="Exploring wingspan and performance in the NBA by cleaning, merging and analyzing datasets.">
+<meta name="author" content="Jessica Chapman">
+<meta name="dcterms.date" content="2025-07-14">
+<meta name="description" content="Estimate the proportion of collegiate pickleball players who have a dependable overall DUPR reliability score (of 60% or higher).">
 
-<title>NBA Wingspan &amp; Performance – SLU SCORE Module Preprint Repository</title>
+<title>Pickleball: Estimating the proportion of dependable DUPR ratings – SLU SCORE Module Preprint Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -144,7 +145,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basketball/index.html">Basketball</a></li><li class="breadcrumb-item"><a href="../../basketball/nba_wingspans_and_performance/index.html">NBA Wingspan &amp; Performance</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../racquet_sports/index.html">Racquet Sports</a></li><li class="breadcrumb-item"><a href="../../racquet_sports/pickleball_one-proportion-ci/index.html">Pickleball: Estimating the proportion of dependable DUPR ratings</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -331,11 +332,11 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../basketball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basketball</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
@@ -356,7 +357,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../basketball/nba_wingspans_and_performance/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../basketball/nba_wingspans_and_performance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NBA Wingspan &amp; Performance</span></a>
   </div>
 </li>
@@ -623,11 +624,11 @@ cookieconsent.run({
       <div class="sidebar-item-container"> 
             <a href="../../racquet_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Racquet Sports</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../racquet_sports/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
@@ -642,7 +643,7 @@ cookieconsent.run({
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../racquet_sports/pickleball_one-proportion-ci/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../racquet_sports/pickleball_one-proportion-ci/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Pickleball: Estimating the proportion of dependable DUPR ratings</span></a>
   </div>
 </li>
@@ -823,33 +824,28 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#background-to-pickleball-video" id="toc-background-to-pickleball-video" class="nav-link active" data-scroll-target="#background-to-pickleball-video">Background to Pickleball Video</a></li>
+  <li><a href="#introduction-to-module" id="toc-introduction-to-module" class="nav-link" data-scroll-target="#introduction-to-module">Introduction to Module</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#additional-reading" id="toc-additional-reading" class="nav-link" data-scroll-target="#additional-reading">Additional Reading</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../basketball/index.html">Basketball</a></li><li class="breadcrumb-item"><a href="../../basketball/nba_wingspans_and_performance/index.html">NBA Wingspan &amp; Performance</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../racquet_sports/index.html">Racquet Sports</a></li><li class="breadcrumb-item"><a href="../../racquet_sports/pickleball_one-proportion-ci/index.html">Pickleball: Estimating the proportion of dependable DUPR ratings</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">NBA Wingspan &amp; Performance</h1>
+<h1 class="title">Pickleball: Estimating the proportion of dependable DUPR ratings</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Webscraping</div>
-    <div class="quarto-category">Data Visualization</div>
-    <div class="quarto-category">Data Wrangling</div>
-    <div class="quarto-category">Joining / Merging</div>
+    <div class="quarto-category">Confidence Intervals</div>
+    <div class="quarto-category">Proportions</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Exploring wingspan and performance in the NBA by cleaning, merging and analyzing datasets.
+    Estimate the proportion of collegiate pickleball players who have a dependable overall DUPR reliability score (of 60% or higher).
   </div>
 </div>
 
@@ -858,7 +854,7 @@ cookieconsent.run({
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Cooper Olney </p>
+    <p class="author">Faith Rhinehart </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -873,6 +869,14 @@ cookieconsent.run({
             St.&nbsp;Lawrence University
           </p>
       </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Jessica Chapman </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
   </div>
 
 <div class="quarto-title-meta">
@@ -881,7 +885,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 10, 2025</p>
+      <p class="date">July 14, 2025</p>
     </div>
   </div>
   
@@ -893,14 +897,16 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The National Basketball Association (NBA) is a professional basketball league featuring the best players from around the world. In the modern NBA, player evaluation has gone far beyond just points. Physical attributes like height, <a href="https://www.nba.com/knicks/videos/how-to-measure-your-wingspan" target="_blank">wingspan</a> and reach are increasingly used by teams to gain a competitive edge. These measurements not only influence how players are scouted and drafted, but also how they’re expected to perform on the court.</p>
-<p>One particularly interesting metric is wingspan advantage which is the difference between a player’s wingspan and their height (wingspan - height). A larger wingspan relative to height is often considered beneficial for defense, rebounding, and shot-blocking. However, longer arms can also affect shooting mechanics, sometimes offering an edge by helping players shoot over defenders, but also potentially making it harder to develop a consistent shooting form, but does this actually show up in the data?</p>
-<p>In this worksheet, you’ll explore how physical traits like wingspan advantage relate to on-court performance. You’ll work with real NBA data to practice essential skills such as cleaning and joining datasets, as well as visualizing relationships. By the end, you’ll use your cleaned and combined datasets to look for meaningful patterns between a player’s wingspan advantage and their statistical output.</p>
+<section id="background-to-pickleball-video" class="level2">
+<h2 class="anchored" data-anchor-id="background-to-pickleball-video">Background to Pickleball Video</h2>
+<p>If you are unfamiliar with Pickleball, please watch this video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fTvPYdKZqO0?si=1UuCNuORNX791EU6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="introduction-to-module" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-module">Introduction to Module</h2>
+<p>Pickleball is a fast-paced sport blending tennis, badminton, and ping-pong, played with paddles and a plastic ball on a small court. College tournaments feature singles, doubles, and mixed doubles in a best-of-three format, emphasizing strategy, teamwork, and precision. Player performance is often tracked using the DUPR (Dynamic Universal Pickleball Rating) system, which rates skill from 2.000 to 8.000 based on match results, opponent strength, and recent play. A Reliability Score (1–100%) reflects how accurate a rating is, with 60%+ considered dependable.</p>
+<p>The pickleBall dataset features data from the NCPA (National Collegiate Pickleball Association) of male and female players in 2024. Variables include characteristics such as name and sex. Other variables included the overrall, singles, doubles, and mixed rating and the overall, singles, doubles, and mixed reliability score. The relevant variables for this specific module are doubles reliability and singles reliability.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -913,7 +919,7 @@ Activity Length
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This could bew suitable of an out of class activity or one that spans more than one class period.</p>
+<p>This could serve as an in class activity and should take roughly a half an hour to complete.</p>
 </div>
 </div>
 </div>
@@ -929,13 +935,7 @@ Learning Objectives
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ol type="1">
-<li><p>Clean and transform raw and messy data into a structured and analysis ready format.</p></li>
-<li><p>Combine multiple datasets, including resolving issues like inconsistent naming.</p></li>
-<li><p>Explore relationships between variables and communicate findings using visualizations.</p></li>
-<li><p>(Optional) Use web scraping tools to gather additional data from an online source.</p></li>
-</ol>
+<p>Students will gain experience performing single proportion confidence intervals.</p>
 </div>
 </div>
 </div>
@@ -951,233 +951,21 @@ Methods
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Technology Requirement:</strong></p>
-<p>This activity requires the use of <code>R</code> with familiarity in <code>Quarto</code> documents and several <code>tidyverse</code> packages including <code>dplyr</code>, <code>tidyr</code>, <code>readr</code> and <code>stringr</code>. Students will also work with the <code>janitor</code> and <code>rvest</code> packages to perform webs scraping and clean raw datasets due to data inconsistencies.</p>
+<p>Students are expected to have been exposed to the concept confidence intervals for a single proportion. (Although this is intended to be used as an earlier example for the topic.)</p>
 </div>
 </div>
 </div>
 </section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The <code>nba_wingspan_2025.csv</code> dataset contains 499 rows and 4 columns. Each row represents a NBA player from the 2024-25 season. <strong>Note</strong> this dataset is partially cleaned from the data found at craftednba.com.</p>
-<p>Download Data: <a href="nba_wingspan_2025.csv" target="_blank">nba_wingspan_2025.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name</td>
-<td>Full name of NBA player, with team abbreviation and primary position</td>
-</tr>
-<tr class="even">
-<td>height</td>
-<td>Player’s height in feet &amp; inches format</td>
-</tr>
-<tr class="odd">
-<td>wingspan</td>
-<td>Player’s wingspan in feet &amp; inches format</td>
-</tr>
-<tr class="even">
-<td>wingspan_advantage</td>
-<td>Difference between wingspan and height in inches (wingspan - height)</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>The <code>nba_team_abbreviations.csv</code> dataset contains the abbreviations and full names of the 30 NBA (National Basketball Association) teams.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>team_name</td>
-<td>Full name of the NBA team</td>
-</tr>
-<tr class="even">
-<td>team</td>
-<td>Standard 3-letter abbreviation for the NBA team</td>
-</tr>
-</tbody>
-</table>
-<section id="additional-data-for-version-without-web-scraping" class="level4">
-<h4 class="anchored" data-anchor-id="additional-data-for-version-without-web-scraping">Additional Data For Version Without Web Scraping</h4>
-<p>The <code>nba_per100possessions_2025.csv</code> dataset contains 736 rows and 14 columns. Each row represents a NBA player from the 2024-25 season. <strong>Note</strong> this dataset contains duplicates because of players switching teams midseason. For example, Luka Dončić will have 3 total rows for his stats with DAL, LAL and his total 2024-25 season stats.</p>
-<p>Download Data: <a href="nba_per100possessions_2025.csv" target="_blank">nba_per100possessions_2025.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 89%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>player</td>
-<td>Full name of NBA player</td>
-</tr>
-<tr class="even">
-<td>g</td>
-<td>Games played during the 2024-25 season</td>
-</tr>
-<tr class="odd">
-<td>mp</td>
-<td>Minutes played during the 2024-25 season</td>
-</tr>
-<tr class="even">
-<td>pts</td>
-<td>Points scored per 100 possessions</td>
-</tr>
-<tr class="odd">
-<td>orb</td>
-<td>Offensive rebounds per 100 possessions</td>
-</tr>
-<tr class="even">
-<td>drb</td>
-<td>Defensive rebounds per 100 possessions</td>
-</tr>
-<tr class="odd">
-<td>trb</td>
-<td>Total rebounds per 100 possessions</td>
-</tr>
-<tr class="even">
-<td>ast</td>
-<td>Assists per 100 possessions</td>
-</tr>
-<tr class="odd">
-<td>stl</td>
-<td>Steals per 100 possessions</td>
-</tr>
-<tr class="even">
-<td>blk</td>
-<td>Blocks per 100 possessions</td>
-</tr>
-<tr class="odd">
-<td>o_rtg</td>
-<td>Offensive Rating: An estimate of points produced per 100 possessions</td>
-</tr>
-<tr class="even">
-<td>d_rtg</td>
-<td>Defensive Rating: An estimate of points allowed per 100 possessions</td>
-</tr>
-<tr class="odd">
-<td>e_fg_percent</td>
-<td>Effective field goal percentage: Adjusts percentage for the fact that a 3pt field goal is worth more than a 2pt field goal</td>
-</tr>
-<tr class="even">
-<td>ft_percent</td>
-<td>Free throw percentage</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>The <code>nba_shooting_2025</code> data contains 737 rows and 9 columns. Each row represents a NBA player from the 2024-25 season. <strong>Note</strong> this dataset contains duplicates because of players switching teams midseason. For example, Luka Dončić will have 3 total rows for his stats with DAL, LAL and his total 2024-25 season stats.</p>
-<p>Download Data: <a href="nba_shooting_2025.csv" target="_blank">nba_shooting_2025.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>player</td>
-<td>Full name of NBA player</td>
-</tr>
-<tr class="even">
-<td>g</td>
-<td>Games played during the 2024-25 season</td>
-</tr>
-<tr class="odd">
-<td>fg_percent</td>
-<td>Field goal percentage</td>
-</tr>
-<tr class="even">
-<td>avg_dist_of_fg</td>
-<td>Average distance (in feet) of field goal attempts</td>
-</tr>
-<tr class="odd">
-<td>2pt_rate</td>
-<td>Proportion of field goal attempts that are 2 point attempts</td>
-</tr>
-<tr class="even">
-<td>3pt_rate</td>
-<td>Proportion of field goal attempts that are 3 point attempts</td>
-</tr>
-<tr class="odd">
-<td>2pt_percent</td>
-<td>Make proportion on 2 point attempts</td>
-</tr>
-<tr class="even">
-<td>3pt_percent</td>
-<td>Make proportion on 3 point attempts</td>
-</tr>
-<tr class="odd">
-<td>dunk_rate</td>
-<td>Proportion of field goal attempts that are dunks</td>
-</tr>
-</tbody>
-</table>
-</details>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>This module used the <code>pickleBall</code> data from the <a href="https://data.scorenetwork.org/pickleball/pickleball_ncpa_player_ratings-2024.html" target="_blank">SCORE Data Repository</a></p>
+<p>However, students do not need access to the data to complete the module as it is summarized in the provided worksheet.</p>
 </section>
-<section id="data-sources" class="level4">
-<h4 class="anchored" data-anchor-id="data-sources">Data Sources</h4>
-<p><a href="https://craftednba.com/player-traits/length" target="_blank">https://craftednba.com/player-traits/length</a></p>
-<p><a href="https://www.basketball-reference.com/leagues/NBA_2025_per_poss.html" target="_blank">https://www.basketball-reference.com/leagues/NBA_2025_per_poss.html</a></p>
-<p><a href="https://www.basketball-reference.com/leagues/NBA_2025_shooting.html" target="_blank">https://www.basketball-reference.com/leagues/NBA_2025_shooting.html</a></p>
-</section>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><strong>Version With Web Scraping</strong></p>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
 <ul>
-<li><p><a href="nba_wingspans_worksheet.qmd">Class handout</a></p></li>
-<li><p>Solutions:</p>
-<ul>
-<li><a href="nba_wingspans_solutions.qmd">Quarto with visible R code</a></li>
-<li><a href="nba_wingspans_solutions.html">HTML with hideable R code</a></li>
-</ul></li>
-</ul>
-<p><strong>Version Without Web Scraping</strong></p>
-<ul>
-<li><p><a href="nba_wingspans_solutions_no_webscraping.qmd">Class handout</a></p></li>
-<li><p>Solutions:</p>
-<ul>
-<li><a href="nba_wingspans_solutions_no_webscraping.qmd">Quarto with visible R code</a></li>
-<li><a href="nba_wingspans_solutions_no_webscraping.html">HTML with hideable R code</a></li>
-</ul></li>
+<li><p><a href="Pickleball_ConfidenceIntervalsProportions_Worksheet.docx">Class handout (MS Word)</a></p></li>
+<li><p><a href="Pickleball_ConfidenceIntervalProportion_Worksheet_Solutions.docx">Class handout - with solutions</a></p></li>
 </ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -1191,25 +979,12 @@ Conclusion
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Through this module, you explored how physical attributes, specifically wingspan and wingspan advantage might relate to on-court performance in the NBA. By cleaning the combining data from multiple sources, you’ve created a comprehensive dataset that allowed for deeper exploration of relationships between physical characteristics and basketball statistics.</p>
-<p>With your final combined dataset, you were able to generate visualizations to investigate potential connections, such as whether players with longer wingspan advantages tend to have a larger defensive impact. These kinds of relationships can provide use insights for analysts, scouts and even fans trying to understand the value of certain physical traits.</p>
-<p>This activity underscores the value of data wrangling, merging and visualization and sets the stage for more advanced analysis in the future. Whether that’s building predictive models, exploring important relationships, or applying machine learning techniques to sports data.</p>
+<p>Students should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="additional-reading" class="level3">
-<h3 class="anchored" data-anchor-id="additional-reading">Additional Reading</h3>
-<ul>
-<li><ul>
-<li>Kaazempur-Mofrad, A. R. (2022, December). <a href="https://sportrxiv.org/index.php/server/preprint/view/238"><em>Basketball players’ long wingspan enhances defensive upside but hinders shooting capabilities: A statistical inquiry of the effect of NBA player wingspans on shooting accuracy and defensive impact</em></a> (Preprint). <em>SportRxiv</em>. https://doi.org/10.51224/SRXIV.238</li>
-</ul></li>
-<li><p><a href="https://www.wsj.com/articles/the-freakish-advantage-of-nba-all-stars-1455224954" target="_blank">The Freakish Advantage of NBA All-Stars - The Wall Street Journal</a> (Subscription required)</p></li>
-<li><p><a href="https://www.thesportster.com/current-nba-players-with-largest-longest-widest-wingspans/" target="_blank">17 Current NBA Players With The Largest Wingspans, Ranked By Length - TheSportster</a></p></li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
