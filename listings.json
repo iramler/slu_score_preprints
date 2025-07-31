@@ -2,7 +2,7 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
-      "/football_american/nfl-points-spread-inference/index.html",
+      "/football_american/nfl-point-spread-inference/index.html",
       "/racquet_sports/pickleball_one-proportion-ci/index.html",
       "/basketball/nba_wingspans_and_performance/index.html",
       "/racquet_sports/pickleball_matched_pairs/index.html",
@@ -105,7 +105,7 @@
   {
     "listing": "/football_american/index.html",
     "items": [
-      "/football_american/nfl-points-spread-inference/index.html",
+      "/football_american/nfl-point-spread-inference/index.html",
       "/football_american/football-recruiting-and-impact-NFL/index.html"
     ]
   },
@@ -142,7 +142,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/football_american/nfl-points-spread-inference/index.html",
+      "/football_american/nfl-point-spread-inference/index.html",
       "/racquet_sports/pickleball_one-proportion-ci/index.html",
       "/basketball/nba_wingspans_and_performance/index.html",
       "/racquet_sports/pickleball_matched_pairs/index.html",
