@@ -112,9 +112,9 @@ Point spreads and scores from ESPN's Pigskin Pick'em Game (but links only work i
     -   [Only identifying procedures - PDF](NFLPointsSolutions1.pdf)
     -   [Identification and answers - Word](NFLPointsSolutions2.docx)
     -   [Identification and answers - PDF](NFLPointsSolutions2.pdf)
-    -   [Identification and solutions - Word](NFLPointsSolutions3.docx)
-    -   [Identification and solutions - PDF](NFLPointsSolutions3.pdf)
-    -   [Identification and solutions - Quarto](NFLPointsSolutions3.qmd)
+    -   [Identification and full solutions - Word](NFLPointsSolutions3.docx)
+    -   [Identification and full solutions - PDF](NFLPointsSolutions3.pdf)
+    -   [Identification and full solutions - Quarto](NFLPointsSolutions3.qmd)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 The questions in this activity cover many of the topics involving inference for means or proportions with applications dealing with point spreads, hoime field advantage, and scores of NFL games.  
