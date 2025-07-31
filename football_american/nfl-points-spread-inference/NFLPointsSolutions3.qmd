@@ -1,0 +1,500 @@
+---
+title: "NFL Point Spreads - Solutions"
+author: "R. Lock"
+format: 
+  pdf: default
+  docx: default
+---
+
+Solutions to 20 questions from the NFL Point Spreads and Game Scores module.
+
+Get the dataset.
+
+```{r}
+NFLPoints<-read.csv("NFLPoints.csv")
+```
+
+**1. What proportion of the time does the favored team actually win the game outright?**
+
+Procedure: CI for a proportion (one sample)
+
+Via formula
+
+```{r}
+x=sum(NFLPoints$FavWin)
+n=length(NFLPoints$FavWin)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+zstar=qnorm(0.975)
+ME=zstar*SE
+lower=phat-ME
+upper=phat+ME
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+CI for p is `r round(phat,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
+
+We are 95% sure that the proportion of times the favored team wins the game is between 0.641 and 0.719.
+
+Using an internal R function 
+```{r}
+prop.test(x,n,correct=FALSE)
+```
+
+Note that the method used for this CI is slightly different than the formula-based method above. 
+
+**2. Is the chance the favorite covers the spread discernibly different from 0.50?**
+
+Procedure: Test for proportion (one sample)
+
+$H_0:p=0.5$ vs. $H_a:p\ne 0.5$ where $p$ is the proportion of games the favored team covers the spread
+
+Via formula
+
+```{r}
+x=sum(NFLPoints$FavCover)
+n=length(NFLPoints$FavCover)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+z=(phat-0.5)/SE
+pvalue=2*pnorm(-abs(z))
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+z=(`r round(phat,3)` - 0.5)/`r round(SE,4)`=`r round(z,2)`, p-value=`r round(pvalue,3)`
+
+At a 5% significance level we do not have convincing evidence that the proportion of times the favorite covers the spread is different from 0.50.
+
+
+Using an internal R function 
+```{r}
+prop.test(x,n, correct=FALSE)
+```
+
+Note that the R prop.test function uses a chi-square statistic, rather than a z-statistic, but the square root of that chi-square statistic should match the z-statistic up to the +/- sign. 
+
+
+**3.	How different is the average point spread when the favored team is playing at home as compared to the favorite playing on the road? **
+
+Procedure: CI for a difference in means (two samples)
+
+```{r}
+(HomePts<-t.test(Pts~HomeDog, data=NFLPoints))
+```
+
+The difference in means is $\overline{x}_H-\overline{x}_A= 5.119-4.176=0.943$ and the 95% confidence interval for the difference in means is (`r round(HomePts$conf.int[1],2)`,`r  round(HomePts$conf.int[2],2)`).
+
+We are 95% sure that the average point spread when the  home team is favored is between 0.44 and 1.44 more than when the road team is favored.
+
+**4.	Many football fans say that the home field advantage is about a field goal (three points). Is the average home margin (*HomeDiff*) discernibly different from three points?**
+
+Procedure: Test for a mean (one sample using *HomeDiff*) OR
+Test for two means (paired data, using *HomeScore* and *AwayScore*)
+
+
+$H_0:\mu=3$ vs. $H_a:\mu \ne 3$ where $\mu$ is the mean home field margin
+
+```{r}
+(Home4<-t.test(NFLPoints$HomeDiff,mu=3))
+```
+
+The mean home field advantage is $\overline{x}_d=$ `r round(mean(NFLPoints$HomeDiff),2)`.
+
+The p-value for the test is `r round(Home4$p.value,3)` which is more than 5% so we don't (quite) have enough evidence to tell that the mean home margin is different from 3 points.  Note also that the 95% confidence interval for the mean difference includes 3. 
+
+
+**5.	Is there convincing evidence that the  average point spread assigned to the home team (HomePts) is different from three points?**
+
+Procedure: Test for a mean (one sample)
+
+$H_0:\mu=3$ vs. $H_a:\mu \ne 3$ where $\mu$ is the mean point spread
+
+```{r}
+(Home5<-t.test(NFLPoints$HomePts,mu=3))
+```
+
+The mean point spread for the home team is $\overline{x}=$ `r round(mean(NFLPoints$HomePts),2)`.
+
+The p-value for the test is  very close to zero so we have very strong evidence that the mean point spread assigned to the home team is less than 3 points.
+
+*Interesting point:* The mean home point spread (`r round(mean(NFLPoints$HomePts),2)`) is not a lot farther from 3 than the mean home margin (`r round(mean(NFLPoints$HomeDiff),2)`), but the evidence of a difference is much stronger.  One reason for this is that the standard deviaitn of the home point spreads (`r round(sd(NFLPoints$HomePts),2)`) is much smaller than the standard deviation of the home margins (`r round(sd(NFLPoints$HomeDiff),2)`).  
+  
+  
+**6.	Estimate the mean difference between the point spread (*Pts*) and the actual margin for the favored team (*FavDiff*).  Note that the margin will be negative if the favored team loses. **
+  
+Procedure: CI for difference in means (paired data)
+
+```{r}
+(Q6<-t.test(NFLPoints$Pts,NFLPoints$FavDiff,paired=TRUE))
+```
+
+The mean difference between the point spread and the actual margin for the favored team is `r round(Q6$estimate,2)` and the 95% confidence interval for the difference mean difference is (`r round(Q6$conf.int[1],2)`,`r  round(Q6$conf.int[2],2)`).
+
+We are 95% sure that the mean point spread is between `r -round(Q6$conf.int[1],2)` points less and `r  round(Q6$conf.int[2],2)` points more than the actual margin for the favored team. 
+
+**7.	Is there convincing evidence that point spreads (*Pts*) tend, on average,  to underestimate the margin for the favored team (*FavDiff*)?**  
+
+Procedure: Test for a difference in means (paired data)
+
+$H_0:\mu_d=0$ vs. $H_a:\mu_d < 0$ where $\mu_d$ is the mean difference between the point spread and the actual margin for the favored team. 
+
+```{r}
+(Q7<-t.test(NFLPoints$Pts,NFLPoints$FavDiff,paired=TRUE,alternative="less"))
+```
+
+The mean difference between the point spread and the actual margin for the favored team is `r round(Q7$estimate,2)`.
+
+The t-statistic is `r round(Q7$statistic,2)` and p-value is `r round(Q7$p.value,3)` which is less than 5%. 
+
+At a 5% level we have enough evidence to conclude that the mean point spread is less than the mean actual margin for the favored team. 
+
+Note: The two-tailed CI for #6 barely includes zero (which would indicate not a discernible difference), but the one-tailed procedure in #7 has enough evidence to conclude the mean difference is negative. 
+
+
+**8.	What is the average absolute value of the difference between the point spread (Pts) and the actual game margin (FavDiff)?**
+
+Procedure: CI for a mean
+
+Via formula:
+```{r}
+AbsDiff<-abs(NFLPoints$Pts-NFLPoints$FavDiff)
+xbar=mean(AbsDiff)
+s=sd(AbsDiff)
+n=length(AbsDiff)
+SE=s/sqrt(n)
+tstar=qt(0.975,n-1)
+ME=tstar*SE
+lower=round(xbar-ME,2)
+upper=round(xbar+ME,2)
+```
+
+$\overline{x}_{AD} =$ `r round(xbar,2)` with SE=`r round(SE,3)`
+
+CI for the mean is `r round(xbar,2)` $\pm$ `r round(tstar,3)` $\cdot$ `r  round(SE,3)` = (`r lower`,`r upper`)
+
+We are 95% sure that the average distance from the point spread to the actual game margin is between `r lower` and `r upper` points.
+
+Using an internal R function 
+```{r}
+t.test(AbsDiff)
+```
+
+
+**Do point spreads get more accurate as the season goes along?  Address this in two ways:**
+
+**9.	Is the proportion of games where the favored team wins higher during the second half of the season (weeks 10-18) than the first half of the season (weeks 1-9)?**
+
+Procedure: Test for a difference in proportions (two samples)
+
+$H_0:p_2=p_1$ vs. $H_a:p_2 > p_1$ where $p_1$  and $p_2$ are the proportion of games the favored team wins in the first and second half of the season, respectively.
+
+Via formula
+
+```{r}
+Half<-ifelse(NFLPoints$Week<10,1,2)
+FirstCover<-NFLPoints$FavWin[Half==1]
+SecondCover<-NFLPoints$FavWin[Half==2]
+x1=sum(FirstCover)
+x2=sum(SecondCover)
+n1=length(FirstCover)
+n2=length(SecondCover)
+phat1=x1/n1
+phat2=x2/n2
+phat=(x1+x2)/(n1+n2)
+SE=sqrt(phat*(1-phat)*(1/n1+1/n2))
+z=(phat2-phat1)/SE
+pvalue=1-pnorm(z)
+```
+
+$\hat{p}_2-\hat{p}_1 =$ `r x2`/`r n2`  -  `r x1`/`r n1` = `r round(phat2,3)`  -  `r round(phat1,3)` = `r round(phat2-phat1,3)` with SE=`r round(SE,4)`
+
+z=(`r round(phat2,3)`  $-$  `r round(phat1,3)`)/`r round(SE,4)` = `r round(z,2)`, p-value=`r round(pvalue,3)`
+
+We do not have convincing evidence that the proportion of games predicted correctly by the point spread is higher in the second half of the season than in the first half. 
+
+Using an internal R function 
+```{r}
+prop.test(c(x2,x1),c(n2,n1),correct=FALSE,alternative="greater")
+```
+
+
+**10.	Refer to the absolute value of the difference between the point spread (*Pts*) and the actual game margin (*FavDiff*) from question #8.  Is the average discrepancy smaller in the second half of the season than the first half? **
+
+Procedure: Test for a difference in means (two samples)
+
+$H_0:\mu_1=\mu_2$ vs. $H_a:\mu_1>\mu_2$, where $\mu_1$ and $\mu_2$ are the mean absolute difference between the point spread and actual margin for the favored team in the first and second half of the season, respectively. 
+
+```{r}
+(Q10<-t.test(AbsDiff~Half,alternative="greater"))
+```
+
+$\overline{x}_2-\overline{x}_1 =$ `r round(Q10$estimate[1],2)` - `r round(Q10$estimate[2],2)` = `r round(Q10$estimate[1]-Q10$estimate[2],2)`
+
+t = `r round(Q10$statistic,2)` and  p-value = `r round(Q10$p.value,3)`.
+
+We do not have convincing evidence that the mean absolute difference between the point spreads and actual game margins is smaller in the second half of the season than in the first half. 
+
+**11.	Some fans say they avoid choosing a favorite when the spread is double digits (more than 10 points). Is the proportion of favorites who cover discernibly less than 0.50 when the spread is more than ten points?**
+
+Procedure: Test for a proportion (one sample)
+
+$H_0:p=0.5$ vs. $H_a:p < 0.5$ where $p$ is the proportion of games teams favored by at least 10 points that cover the spread.
+
+Via formula
+
+```{r}
+BigSpread<-NFLPoints$FavCover[NFLPoints$Pts>10]
+x=sum(BigSpread)
+n=length(BigSpread)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+z=(phat-0.5)/SE
+pvalue=pnorm(z)
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+Note: The sample proportion of big favorites that cover the spread is not less than 0.50!  Thus we know even before doing the details of the test that we will not be able to go with $H_a:p<0.5$.  
+
+Checking the details for the test, z=(`r round(phat,3)` - 0.5)/`r round(SE,4)`=`r round(z,2)`, p-value=`r round(pvalue,3)`
+
+At a 5% significance level we do not have convincing evidence that the proportion of times the a 10+ point favorite covers the spread is less than 0.50.
+
+
+Using an internal R function 
+```{r}
+prop.test(x,n, correct=FALSE,alternative="less")
+```
+
+
+**12. How often is the away team favored to win the game?**
+
+Procedure: CI for a proportion (one sample)
+
+Via formula
+
+```{r}
+x=sum(NFLPoints$HomeDog)
+n=length(NFLPoints$HomeDog)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+zstar=qnorm(0.975)
+ME=zstar*SE
+lower=phat-ME
+upper=phat+ME
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+CI for p is `r round(phat,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
+
+We are 95% sure that the proportion of times the favored team wins the game is between `r round(lower,3)` and `r round(upper,3)`.
+
+Using an internal R function 
+```{r}
+prop.test(x,n,correct=FALSE)
+```
+
+
+**13.	Is the mean number of points scored by the favored team higher in 2024 than in 2023?**
+
+Procedure: No statistical inference needed.  We know the means in 2023 and 2024 exactly!
+
+```{r}
+(Q13<-aggregate(FavScore~Year,FUN=mean,data=NFLPoints))
+```
+
+$\mu_{2023} =$ `r round(Q13$FavScore[1],2)`  and $\mu_{2024} =$ `r round(Q13$FavScore[2],2)`,  so the mean points scored by the favorite is higher in 2024 than in 2023.
+
+
+**14.	What is the average number of points scored by the winning team in NFL games?**
+
+Procedure: CI for a mean (one sample)
+
+Via formula:
+```{r}
+WinScore<-with(NFLPoints,ifelse(FavWin==1,FavScore,DogScore))
+xbar=mean(WinScore)
+s=sd(WinScore)
+n=length(WinScore)
+SE=s/sqrt(n)
+tstar=qt(0.975,n-1)
+ME=tstar*SE
+lower=round(xbar-ME,2)
+upper=round(xbar+ME,2)
+```
+
+$\overline{x}_{W} =$ `r round(xbar,2)` with SE=`r round(SE,3)`
+
+CI for the mean is `r round(xbar,2)` $\pm$ `r round(tstar,3)` $\cdot$ `r  round(SE,3)` = (`r lower`, `r upper`)
+
+We are 95% sure that the mean points scored by the winning team in NFL games is between `r lower` and `r upper` points.
+
+Using an internal R function 
+```{r}
+t.test(WinScore)
+```
+
+
+**15.	The weather is often more of a factor later in the season.  How much does the mean number of points scored (both teams combined) compare between the first half of the season (weeks 1-9) and the second half (weeks 10-18)? **
+
+Procedure: CI for a difference in means (two samples)
+
+
+```{r}
+(Q15<-t.test((FavScore+DogScore)~Half, data=NFLPoints))
+```
+
+The difference in means is $\overline{x}_1-\overline{x}_2 =$ `r round(Q15$estimate[1],2)` - `r round(Q15$estimate[2],2)` = `r round(Q15$estimate[1]-Q15$estimate[2],2)` and the 95% confidence interval for the difference in means is (`r round(Q15$conf.int[1],2)`, `r  round(Q15$conf.int[2],2)`).
+
+We are 95% sure that the mean combined points scored by both teams in NFL games in the first half of the season is between `r -round(Q15$conf.int[1],2)` less and `r  round(Q15$conf.int[2],2)` more than in the second half of the season.  
+
+**16.	The most common scoring events in football are a field goal (3 points) and a touchdown with an extra point (7 points).  What proportion of point spreads are within ½ point of either 3 or 7 (i.e., 2.5, 3.5, 6.5, or 7.5)?**
+
+Procedure: CI for a proportion (one sample)
+
+Via formula
+
+```{r}
+Pts37<-ifelse(NFLPoints$Pts %in% c(2.5, 3.5, 6.5, 7.5),1,0 )
+x=sum(Pts37)
+n=length(Pts37)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+zstar=qnorm(0.975)
+ME=zstar*SE
+lower=phat-ME
+upper=phat+ME
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+CI for p is `r round(phat,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
+
+We are 95% sure that the proportion of times the point spread is within one-half point of 3 or 7 is between `r round(lower,3)` and `r round(upper,3)`.
+
+Using an internal R function 
+```{r}
+prop.test(x,n,correct=FALSE)
+```
+
+**17.	How much more (or less) often do favorites cover the spread when playing at home vs. favorites on the road?**
+
+Procedure: CI for a difference in proportions (two samples)
+
+Via formula
+
+```{r}
+HomeCover<-with(NFLPoints,FavCover[HomeDog==0])
+AwayCover<-with(NFLPoints,FavCover[HomeDog==1])
+x1=sum(HomeCover)
+x2=sum(AwayCover)
+n1=length(HomeCover)
+n2=length(AwayCover)
+phat1=x1/n1
+phat2=x2/n2
+pdiff=phat1-phat2
+SE=sqrt(phat1*(1-phat1)/n1+phat2*(1-phat2)/n2)
+zstar=qnorm(0.975)
+ME=zstar*SE
+lower=pdiff-ME
+upper=pdiff+ME
+```
+
+$\hat{p}_2-\hat{p}_1 =$ `r x1`/`r n1`  -  `r x2`/`r n2` = `r round(phat1,3)`  -  `r round(phat2,3)` = `r round(phat1-phat2,3)` with SE=`r round(SE,4)`
+
+CI for $p_1-p_2$ is `r round(pdiff,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
+
+We are 95% sure that the proportion of times that home favorites cover the spread is between `r -round(lower,3)` less and `r round(upper,3)` more than the proportion of road favorites that cover. 
+
+Using an internal R function 
+```{r}
+prop.test(c(x1,x2),c(n1,n2),correct=FALSE)
+```
+
+
+**18.	How often does the favorite win the game, but fail to cover the point spread? **
+
+Procedure: CI for a proportion (one sample)
+
+Via formula
+
+```{r}
+#Find the cases where favorite wins but doesn't cover
+WinNoCover<-NFLPoints$FavWin-NFLPoints$FavCover
+x=sum(WinNoCover)
+n=length(WinNoCover)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+zstar=qnorm(0.975)
+ME=zstar*SE
+lower=round(phat-ME,3)
+upper=round(phat+ME,3)
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+CI for p is `r round(phat,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r lower`, `r upper`)
+
+We are 95% sure that the proportion of times the favorite wins the game but fails to cover the spread is between `r lower` and `r upper`.
+
+Using an internal R function 
+```{r}
+prop.test(x,n,correct=FALSE)
+```
+
+**Is there a home field advantage?   Address this in two ways:**  
+
+**19.	Compare the mean points scored by home teams to the mean points scored by away teams.**
+
+Procedure: Test for a difference in means (paired data using *HomeScore* and *AwayScore*) or   
+     Test for a single mean (using *HomeDiff*)
+     
+$H_0:\mu_H=\mu_A$  vs. $H_a:\mu_H>\mu_A$ where $\mu_H$ and $\mu_A$ are the mean points scored when home or away, respectively.
+
+Or
+
+$H_0:\mu_d=0$ vs. $H_a:\mu_d>0$ where $\mu_d$ is the mean difference of home minus away scores. 
+
+
+```{r}
+(Q19<-t.test(NFLPoints$HomeScore,NFLPoints$AwayScore,paired=TRUE,alternative="greater"))
+```
+
+The mean difference between the home score and the away score is `r round(Q19$estimate,2)`.
+
+The t-statistic is `r round(Q19$statistic,2)` and p-value is `r round(Q19$p.value,3)` which is less than 5%. 
+
+We have very strong evidence to conclude that the mean points scored by home teams is more than the mean points scored by road teams. 
+
+**20.	Use how often the home team wins the game outright.**
+
+Procedure: Test for a proportion (one sample) 
+
+$H_0:p=0.5$ vs. $H_a:p > 0.5$ where $p$ is the proportion of games teams won by the home team.
+
+Via formula
+
+```{r}
+x=sum(NFLPoints$HomeWin)
+n=length(NFLPoints$HomeWin)
+phat=x/n
+SE=sqrt(phat*(1-phat)/n)
+z=(phat-0.5)/SE
+pvalue=1-pnorm(z)
+```
+
+$\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
+
+
+Checking the details for the test, z=(`r round(phat,3)` - 0.5)/`r round(SE,4)`=`r round(z,2)`, p-value=`r round(pvalue,3)`
+
+At a 5% significance level we have convincing evidence that the proportion of times home team wins the game outright is more than  0.50.
+
+
+Using an internal R function 
+```{r}
+prop.test(x,n, correct=FALSE,alternative="greater")
+```

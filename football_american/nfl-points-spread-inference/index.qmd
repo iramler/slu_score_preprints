@@ -1,0 +1,121 @@
+---
+title: "NFL Point Spreads and Game Scores"
+author:
+  - name: Robin Lock
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+date: "July 26, 2025"
+description: "A review of inference (tests and confidence intervals) for one and two sample problems involving means or proportions using pointspreads for NFL games"
+editor: 
+  canonical: true
+image: nfl_icons.png
+format:
+    html:
+      embed-resources: false
+categories:
+  -   Confidence Intervals
+  -   Hypothesis Testing
+  -   Paired Data
+  -   Proportions
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+An [ESPN article](https://www.espn.com/sports-betting/story/_/id/41111932/estimated-35-billion-expected-bet-nfl-season){target="_blank"} estimated that bets on National Football League (NFL) games in 2024 would total about \$35 billion. One of the most popular wagers is to pick the winner of a game against a "point spread".
+
+### A Primer on Point Spreads
+
+The point spread is a mechanism to make it hard to predict the "winner" by adding a fixed number of extra points to what is perceived to be the weaker team's (the *underdog*) score. In order to "win against the points" (or *cover*), the favored team must win by more points than the point spread. If the underdog wins the game outright or finishes within the point spread of the winner's score, they win against the points.
+
+**Example**: The Kansas City Chiefs played at the Buffalo Bills in week #12 of the 2024 season and Buffalo was a 2.5 point favorite. The final score was Buffalo 30 - Kansas City 21, so Buffalo won against the points. If Kansas City had scored one more touchdown to make the score 30-28, they would have covered the 2.5 spread.
+
+In theory, the point spread makes the game a toss up, so either team has a 50% chance of winning. In practice, the point spreads are often chosen to try to get an equal amount of action on either side of the bet. We use point spreads from [ESPN's Pigskin Pick'em Game](https://fantasy.espn.com/games/nfl-pigskin-pickem-2024/){target="_blank"} which are all in "half points" (1.5, 2.5, etc.) so there is always a "winner" against the points.
+
+The dataset includes the point spreads for each game of the 2023 and 2024 NFL regular seasons along with the actual scores of the games and various indicators of the results from the perspective of the favorite and also the home team. The worksheets contain a series of questions pertaining to point spreads and game scores. These could be used as an exam prep where students are asked to identify the correct statistical procedure to apply and/or use the data to complete any analysis needed to answer a question. The questions cover most of the standard inference procedures (tests and confidence intervals) for one and two sample problems involving means or proportions.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity could take a couple of different forms:
+
+1.  An in-class review after instruction on inference for means and proportions where students are simply asked to identify what statistical procedure is appropriate to answer each of the questions. Giving time for students (individually or in pairs) to make the identifications for each question should take 20-30 minutes.
+
+2.  Use the *NFLPoints* dataset to apply the chosen inference procedure to answer some set of the questions.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, students will be able to:
+
+1.  Identify the proper inference procedure for means or proportions needed to address specific questions.
+
+2.  Use the data to perform the appropriate inference procedure (for means or proportions) to answer the specific question in context.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+**Technology Requirement:**
+
+The "procedure identification" task does not require any technology.
+
+Carrying out the procedure would generally require some statistics software package, although some questions could be included in an assessment with appropriate summary statistics to be done with a calculator.
+:::
+
+### Data
+
+The dataset has the point spreads and game results for all 544 regular season games in the 2023 and 2024 NFL seasons. Each row is a single game with information on 16 different variables.
+
+Download Data: [NFLPoints.csv](NFLPoints.csv){target="_blank"}
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable  | Description                                                  |
+|-----------|--------------------------------------------------------------|
+| FavScore  | Points scored for the favored team                           |
+| Favorite  | Team name for the favored team                               |
+| Pts       | Point spread                                                 |
+| Underdog  | Team name for the underdog                                   |
+| DogScore  | Points scored by the underdog team                           |
+| FavCover  | 1=Favorite wins against the spread, 0=Underdog covers        |
+| FavDiff   | Favorite's score minus underdog's score                      |
+| FavWin    | Favorite wins the game outright                              |
+| HomeDog   | 1=Home team is the underdog, 0=Away team is the underdog     |
+| HomeScore | Points scored for the home team                              |
+| AwayScore | Points scored for the away team                              |
+| HomePts   | Point spread for the home team (negative is a home underdog) |
+| HomeCover | 1=Home team covers the spread, 0=Away team covers            |
+| HomeDiff  | Home team score minus Away team score                        |
+| HomeWin   | Home team wins the game outright                             |
+| Week      | Week of the regular season (1-18)                            |
+| Year      | Year of the season (2023 or 2024)                            |
+
+</details>
+
+#### Data Sources
+
+Point spreads and scores from ESPN's Pigskin Pick'em Game (but links only work if your have an account for that season).
+
+[Pigskin Pick'em -2023](https://fantasy.espn.com/games/nfl-pigskin-pickem-2023/){target="_blank"}
+
+[Pigskin Pick'em -2024](https://fantasy.espn.com/games/nfl-pigskin-pickem-2024/){target="_blank"}
+
+### Materials
+
+-   [Class handout - Word version](NFLPointsWorksheet.docx)
+
+-   Solutions:
+
+    -   [Only identifying procedures - Word](NFLPointsSolutions1.docx)
+    -   [Only identifying procedures - PDF](NFLPointsSolutions1.pdf)
+    -   [Identification and answers - Word](NFLPointsSolutions2.docx)
+    -   [Identification and answers - PDF](NFLPointsSolutions2.pdf)
+    -   [Identification and solutions - Word](NFLPointsSolutions3.docx)
+    -   [Identification and solutions - PDF](NFLPointsSolutions3.pdf)
+    -   [Identification and solutions - Quarto](NFLPointsSolutions3.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+The questions in this activity cover many of the topics involving inference for means or proportions with applications dealing with point spreads and scores of NFL games.
+:::
