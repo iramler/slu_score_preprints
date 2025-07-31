@@ -81,12 +81,12 @@ Note that the R prop.test function uses a chi-square statistic, rather than a z-
 Procedure: CI for a difference in means (two samples)
 
 ```{r}
-(HomePts<-t.test(Pts~HomeDog, data=NFLPoints))
+(Q3<-t.test(Pts~HomeDog, data=NFLPoints))
 ```
 
-The difference in means is $\overline{x}_H-\overline{x}_A= 5.119-4.176=0.943$ and the 95% confidence interval for the difference in means is (`r round(HomePts$conf.int[1],2)`,`r  round(HomePts$conf.int[2],2)`).
+The difference in means is $\overline{x}_H-\overline{x}_A= 5.119-4.176=0.943$ and the 95% confidence interval for the difference in means is (`r round(Q3$conf.int[1],2)`, `r  round(Q3$conf.int[2],2)`).
 
-We are 95% sure that the average point spread when the  home team is favored is between 0.44 and 1.44 more than when the road team is favored.
+We are 95% sure that the average point spread when the  home team is favored is between `r round(Q3$conf.int[1],2)` and `r  round(Q3$conf.int[2],2)` more than when the road team is favored.
 
 **4.	Many football fans say that the home field advantage is about a field goal (three points). Is the average home margin (*HomeDiff*) discernibly different from three points?**
 
@@ -97,12 +97,12 @@ Test for two means (paired data, using *HomeScore* and *AwayScore*)
 $H_0:\mu=3$ vs. $H_a:\mu \ne 3$ where $\mu$ is the mean home field margin
 
 ```{r}
-(Home4<-t.test(NFLPoints$HomeDiff,mu=3))
+(Q4<-t.test(NFLPoints$HomeDiff,mu=3))
 ```
 
 The mean home field advantage is $\overline{x}_d=$ `r round(mean(NFLPoints$HomeDiff),2)`.
 
-The p-value for the test is `r round(Home4$p.value,3)` which is more than 5% so we don't (quite) have enough evidence to tell that the mean home margin is different from 3 points.  Note also that the 95% confidence interval for the mean difference includes 3. 
+The p-value for the test is `r round(Q4$p.value,3)` which is more than 5% so we don't (quite) have enough evidence to tell that the mean home margin is different from 3 points.  Note also that the 95% confidence interval for the mean difference includes 3. 
 
 
 **5.	Is there convincing evidence that the  average point spread assigned to the home team (HomePts) is different from three points?**
@@ -112,14 +112,14 @@ Procedure: Test for a mean (one sample)
 $H_0:\mu=3$ vs. $H_a:\mu \ne 3$ where $\mu$ is the mean point spread
 
 ```{r}
-(Home5<-t.test(NFLPoints$HomePts,mu=3))
+(Q5<-t.test(NFLPoints$HomePts,mu=3))
 ```
 
 The mean point spread for the home team is $\overline{x}=$ `r round(mean(NFLPoints$HomePts),2)`.
 
 The p-value for the test is  very close to zero so we have very strong evidence that the mean point spread assigned to the home team is less than 3 points.
 
-*Interesting point:* The mean home point spread (`r round(mean(NFLPoints$HomePts),2)`) is not a lot farther from 3 than the mean home margin (`r round(mean(NFLPoints$HomeDiff),2)`), but the evidence of a difference is much stronger.  One reason for this is that the standard deviaitn of the home point spreads (`r round(sd(NFLPoints$HomePts),2)`) is much smaller than the standard deviation of the home margins (`r round(sd(NFLPoints$HomeDiff),2)`).  
+*Interesting point:* The mean home point spread (`r round(mean(NFLPoints$HomePts),2)`) is not a lot farther from 3 than the mean home margin (`r round(mean(NFLPoints$HomeDiff),2)`), but the evidence of a difference is much stronger.  One reason for this is that the standard deviation of the home point spreads (`r round(sd(NFLPoints$HomePts),2)`) is much smaller than the standard deviation of the home margins (`r round(sd(NFLPoints$HomeDiff),2)`).  
   
   
 **6.	Estimate the mean difference between the point spread (*Pts*) and the actual margin for the favored team (*FavDiff*).  Note that the margin will be negative if the favored team loses. **
@@ -155,7 +155,7 @@ Note: The two-tailed CI for #6 barely includes zero (which would indicate not a 
 
 **8.	What is the average absolute value of the difference between the point spread (Pts) and the actual game margin (FavDiff)?**
 
-Procedure: CI for a mean
+Procedure: CI for a mean (one sample)
 
 Via formula:
 ```{r}
@@ -230,7 +230,7 @@ $H_0:\mu_1=\mu_2$ vs. $H_a:\mu_1>\mu_2$, where $\mu_1$ and $\mu_2$ are the mean 
 (Q10<-t.test(AbsDiff~Half,alternative="greater"))
 ```
 
-$\overline{x}_2-\overline{x}_1 =$ `r round(Q10$estimate[1],2)` - `r round(Q10$estimate[2],2)` = `r round(Q10$estimate[1]-Q10$estimate[2],2)`
+$\overline{x}_1-\overline{x}_2 =$ `r round(Q10$estimate[1],2)` - `r round(Q10$estimate[2],2)` = `r round(Q10$estimate[1]-Q10$estimate[2],2)`
 
 t = `r round(Q10$statistic,2)` and  p-value = `r round(Q10$p.value,3)`.
 
@@ -290,7 +290,7 @@ $\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
 
 CI for p is `r round(phat,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
 
-We are 95% sure that the proportion of times the favored team wins the game is between `r round(lower,3)` and `r round(upper,3)`.
+We are 95% sure that the proportion of times the away team is favored to win is between `r round(lower,3)` and `r round(upper,3)`.
 
 Using an internal R function 
 ```{r}
@@ -403,9 +403,9 @@ lower=pdiff-ME
 upper=pdiff+ME
 ```
 
-$\hat{p}_2-\hat{p}_1 =$ `r x1`/`r n1`  -  `r x2`/`r n2` = `r round(phat1,3)`  -  `r round(phat2,3)` = `r round(phat1-phat2,3)` with SE=`r round(SE,4)`
+$\hat{p}_H-\hat{p}_A =$ `r x1`/`r n1`  -  `r x2`/`r n2` = `r round(phat1,3)`  -  `r round(phat2,3)` = `r round(phat1-phat2,3)` with SE=`r round(SE,4)`
 
-CI for $p_1-p_2$ is `r round(pdiff,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
+CI for $p_H-p_A$ is `r round(pdiff,3)` $\pm$ `r round(zstar,3)` $\cdot$ `r  round(SE,4)` = (`r round(lower,3)`,`r round(upper,3)`)
 
 We are 95% sure that the proportion of times that home favorites cover the spread is between `r -round(lower,3)` less and `r round(upper,3)` more than the proportion of road favorites that cover. 
 
@@ -491,7 +491,7 @@ $\hat{p} =$ `r x`/`r n`=`r round(phat,3)` with SE=`r round(SE,4)`
 
 Checking the details for the test, z=(`r round(phat,3)` - 0.5)/`r round(SE,4)`=`r round(z,2)`, p-value=`r round(pvalue,3)`
 
-At a 5% significance level we have convincing evidence that the proportion of times home team wins the game outright is more than  0.50.
+At a 5% significance level we have convincing evidence that the proportion of times home team wins the game outright is more than  0.50, so there appears to be some home field advantage. 
 
 
 Using an internal R function 
