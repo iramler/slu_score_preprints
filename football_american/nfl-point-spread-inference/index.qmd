@@ -6,7 +6,7 @@ author:
       - id: slu
         name: St. Lawrence University
 date: "July 26, 2025"
-description: "A review of inference (tests and confidence intervals) for one and two sample problems involving means or proportions using pointspreads for NFL games"
+description: "A review of inference (tests and confidence intervals) for one and two sample problems involving means or proportions using point spreads for NFL games"
 editor: 
   canonical: true
 image: nfl_icons.png
@@ -43,7 +43,7 @@ This activity could take a couple of different forms:
 
 1.  An in-class review after instruction on inference for means and proportions where students are simply asked to identify what statistical procedure is appropriate to answer each of the questions. Giving time for students (individually or in pairs) to make the identifications for each question should take 20-30 minutes.
 
-2.  Use the *NFLPoints* dataset to apply the chosen inference procedure to answer some set of the questions.
+2.  Use the *NFLPoints.csv* dataset to apply the chosen inference procedure to answer some set of the questions.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
@@ -64,7 +64,7 @@ Carrying out the procedure would generally require some statistics software pack
 
 ### Data
 
-The dataset has the point spreads and game results for all 544 regular season games in the 2023 and 2024 NFL seasons. Each row is a single game with information on 16 different variables.
+The dataset has the point spreads and game results for all 544 regular season games in the 2023 and 2024 NFL seasons. Each row is a single game with information on 17 different variables.
 
 Download Data: [NFLPoints.csv](NFLPoints.csv){target="_blank"}
 
@@ -112,10 +112,10 @@ Point spreads and scores from ESPN's Pigskin Pick'em Game (but links only work i
     -   [Only identifying procedures - PDF](NFLPointsSolutions1.pdf)
     -   [Identification and answers - Word](NFLPointsSolutions2.docx)
     -   [Identification and answers - PDF](NFLPointsSolutions2.pdf)
-    -   [Identification and solutions - Word](NFLPointsSolutions3.docx)
-    -   [Identification and solutions - PDF](NFLPointsSolutions3.pdf)
-    -   [Identification and solutions - Quarto](NFLPointsSolutions3.qmd)
+    -   [Identification and full solutions - Word](NFLPointsSolutions3.docx)
+    -   [Identification and full solutions - PDF](NFLPointsSolutions3.pdf)
+    -   [Identification and full solutions - Quarto](NFLPointsSolutions3.qmd)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-The questions in this activity cover many of the topics involving inference for means or proportions with applications dealing with point spreads and scores of NFL games.
+The questions in this activity cover many of the topics involving inference for means or proportions with applications dealing with point spreads, home field advantage, and scores of NFL games.  
 :::
