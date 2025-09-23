@@ -25,7 +25,7 @@ categories:
 
 This module is now fully published and available on the SCORE Network Module Repository.
 
-Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/lacrosse/college_lacrosse_faceoffs.html](https://modules.scorenetwork.org/lacrosse/college_lacrosse_faceoffs.html){target="_blank"}
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/lacrosse/college_lacrosse_faceoffs/](https://modules.scorenetwork.org/lacrosse/college_lacrosse_faceoffs/){target="_blank"}
 
 ````{=html}
 <!--

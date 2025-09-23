@@ -29,7 +29,7 @@ categories:
 
 This module is now fully published and available on the SCORE Network Module Repository.
 
-Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/lacrosse/lacrosse_pll_vs_nll.html](https://modules.scorenetwork.org/lacrosse/lacrosse_pll_vs_nll.html){target="_blank"}
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/lacrosse/lacrosse_pll_vs_nll/](https://modules.scorenetwork.org/lacrosse/lacrosse_pll_vs_nll/){target="_blank"}
 
 ```{=html}
 <!--
