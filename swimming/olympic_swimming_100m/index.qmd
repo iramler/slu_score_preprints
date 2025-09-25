@@ -1,5 +1,5 @@
 ---
-title: "Olympic Swimming - Changes in the 100m Women's Event"
+title: "Olympic Swimming - Comparing 100m Women's Event"
 author:
   - name: "Brendan Karadenes"
     affiliation:
@@ -18,7 +18,7 @@ categories:
   - Boxplots
   - Confidence Intervals
   - Two-Sample Tests
-
+image: "Simone-Manuel-By-Jack-Spitser-CD8I3720-scaled.jpg"
 ---
 
 ## Welcome Video
@@ -38,7 +38,7 @@ In particular, you will examine visualizations and conduct confidence intervals 
 Investigating this data is useful for several reasons. Exploring this data can deepen our understanding of how swimming techniques and training have improved over the years and which strokes will be the fastest in this event. Also, analyzing how times have improved over the years gives insights into how competitive the event has gotten in recent years. It can show the subtle time differentials between the top and average athletes. Analysis like this can help inform the impact of modern training strategies, inspire athletes to practice different strokes, and help aspiring Olympic swimmers understand what times they need to be competitive.
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This activity would be suitable for an in-class example or quiz.
+This activity would be suitable for an in-class example or quiz that lasts roughly 15 - 30 minutes.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}

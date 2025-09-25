@@ -21,7 +21,7 @@ categories:
   - Data Wrangling
   - Joining / Merging
   - Data Visualization
-
+image: beijing_olympics.jpg
 ---
 
 ## Module
