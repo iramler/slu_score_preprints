@@ -59,7 +59,7 @@ Since the data are provided, instructors are encouraged to adapt the worksheets 
 
 ## Data
 
-The data set contains 194 rows and 10 columns. Each row represents a female swimmer who competed in the 100m Olympic event during the period 1968 to 2020. The data includes top 8 finishers from woman racers however, due to lack of records, some of the data is missing.
+The data set contains 218 rows and 10 columns. Each row represents a female swimmer who competed in the 100m Olympic event during the period 1968 to 2024. The data includes top 8 finishers from woman racers however, due to lack of records, some of the data is missing.
 
 Download data: [olympic_swimming_women.csv](olympic_swimming_women.csv)
 
@@ -76,32 +76,39 @@ Download data: [olympic_swimming_women.csv](olympic_swimming_women.csv)
 | Gender      | gender of swimmer (Female only - see below)                                           |
 | Team        | 3 letter country code the swimmer is affiliated with                                  |
 | Athlete     | first and last name of the swimmer                                                    |
-| Results     | time, in seconds, that the swimmer completed the race                                 |
+| Time     | time, in seconds, that the swimmer completed the race                                 |
 | Rank        | place of the swimmer in the event out of four                                         |
-| time_period | time period that olympian swam in, either "early" (1924-1972) or "recent" (1976-2020) |
+| Era | time period that olympian swam in, either "early" (1924-1996) or "recent" (2000-2024) |
 
 **Data Source**
 
 [Kaggle Olympic Swimming 1912 to 2020](https://www.kaggle.com/datasets/datasciencedonut/olympic-swimming-1912-to-2020){target="_blank"}
 
+and 
+
+[Olympics.com](https://www.olympics.com/en/olympic-games/paris-2024/results/swimming){target="_blank"}
+
 </details>
 
 ::: {.callout-note collapse="true" title="Related Dataset" appearance="minimal"}
-A larger version of this data is available on the SCORE Data Repository: [olympic_swimming](https://data.scorenetwork.org/swimming/olympic_swimming.html){target="_blank"}
+A related version of this data, that includes Men's 100m events too, is available on the SCORE Data Repository: [olympic_swimming](https://data.scorenetwork.org/swimming/olympic_swimming.html){target="_blank"}
 
-The data set contains 606 rows and 10 columns. Each row represents a swimmer who competed in the 100m Olympic event during the period 1924 to 2020. The data includes top 8 finishers from men and woman racers however, due to lack of records, some of the data is excluded.
+That data set contains 606 rows and 10 columns during the period 1924 to 2020.
 :::
 
 ## Materials
 
 We provide an editable Microsoft Word handout along with its solutions.
 
-The handouts should only require a calculator and can be modified to fit the instructors needs.
+This [Low tech class handout](olympic_swimming_ws-lowtech.docx) is based on provided summary statistics and graphics and should only require a calculator and the means to look up a t-score and can be modified to fit the instructors needs.
 
-[Class handout](olympic_swimming_ws.docx)
 
-[Class handout - with solutions](olympic_swimming_ws_key.docx)
+The [Tech required class handout](olympic_swimming_ws-tech.docx) assumes students will be analyzing the data themselves to acquire the necessary output.
+
+The [Sample solutions](olympic_swimming_ws_key.docx) are based on the *low tech* handout.
+
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In conclusion, the Olympic swimming module provides valuable opportunities for students in several important areas. It allows them to understand how to interpret visuals and confidence intervals to conclude statistical significance. The calculation of confidence intervals enables student's to understand the remarkable progress that's been made in swimming training. In general, this worksheet allows students to critically analyze Olympic swimming results from 1968 to 2020 and draw important conclusions regarding the different styles of swimming over the years.
+This module gives students practice interpreting boxplots and constructing confidence intervals in a real-world setting. By analyzing Olympic swimming results, they can see how statistical methods reveal meaningful differences between strokes and across eras. The activity highlights how changes in training, technology, and participation result in improvements in swimming.
 :::
+
