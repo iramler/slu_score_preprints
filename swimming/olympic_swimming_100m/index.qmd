@@ -53,9 +53,9 @@ For this activity, students will primarily use basic concepts of boxplots and tw
 :::
 
 ::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
-The provided *low-tech worksheets* require StatKey or similar software to obtain t-scores, as well as access to a calculator.
+The provided *low-tech worksheet* requires StatKey or similar software to obtain t-scores, as well as access to a calculator.
 
-Since the data are provided, instructors are encouraged to adapt the worksheets so students can make calculations and build graphics using their preferred software. The *tech worksheets* are designed to facilitate this approach.
+Since the data are provided, instructors are encouraged to adapt the worksheets so students can make calculations and build graphics using their preferred software. The *tech worksheet* is designed to facilitate this approach.
 :::
 
 ## Data
