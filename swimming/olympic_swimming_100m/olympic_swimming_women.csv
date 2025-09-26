@@ -1,7 +1,7 @@
-Location,Year,dist_m,Stroke,Gender,Team,Athlete,Time (sec),Rank,Era
-Paris,2024,100,Freestyle,Women,SWE,Sarah Sjöström,52.16,1,recent
+Location,Year,dist_m,Stroke,Gender,Team,Athlete,Time,Rank,Era
+Paris,2024,100,Freestyle,Women,SWE,Sarah Sjoestroem,52.16,1,recent
 Paris,2024,100,Freestyle,Women,USA,Torri Huske,52.29,2,recent
-Paris,2024,100,Freestyle,Women,HKG,Siobhán Bernadette Haughey,52.33,3,recent
+Paris,2024,100,Freestyle,Women,HKG,Siobhan Bernadette Haughey,52.33,3,recent
 Paris,2024,100,Freestyle,Women,AUS,Mollie O'Callaghan,52.34,4,recent
 Paris,2024,100,Freestyle,Women,AUS,Shayna Jack,52.72,5,recent
 Paris,2024,100,Freestyle,Women,CHN,Yang Junxuan,52.82,6,recent
