@@ -1,5 +1,5 @@
 ---
-title: "Olympic Swimming - Comparing 100m Women's Event"
+title: "Women’s 100m Olympic Swimming: Comparing Strokes and Eras"
 author:
   - name: "Brendan Karadenes"
     affiliation:
@@ -12,8 +12,8 @@ author:
     email: iramler@stlawu.edu
     affiliation:
       - ref: slu
-date: June 24, 2025
-description: Describing 100m event times for Women Olympic Swimmers from 1924 to 2020
+date: September 24, 2025
+description: This module explores results from women’s 100m Olympic swimming events between 1964 and 2024, comparing different strokes and examining how times have changed over time.
 categories: 
   - Boxplots
   - Confidence Intervals
@@ -23,7 +23,7 @@ image: "Simone-Manuel-By-Jack-Spitser-CD8I3720-scaled.jpg"
 
 ## Welcome Video
 
-For those interested in how data analytics is used in swimming, please check out this video about how University of Virgina, Mathematics professor Dr. Ken Ono helps the UVA swim team.
+For those interested in how data analytics is used in swimming, please check out this video about how University of Virginia, Mathematics professor Dr. Ken Ono helps the UVA swim team.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E_Q5I0AQSS0?si=3XCjte1_3eRz3H1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
@@ -31,14 +31,12 @@ For those interested in how data analytics is used in swimming, please check out
 
 ## Introduction
 
-For this activity, you will be exploring the event times for female swimmers that competed in the 100m event from 1968 to 2020 in the [Olympics](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}.
+In Olympic swimming, athletes compete using different strokes, each with unique styles and challenges. [Freestyle](https://youtu.be/5HLW2AI1Ink?si=0bEoXJDhNXL8Kvwq){target="_blank"} is usually the fastest (alternating arm strokes and a flutter kick), [butterfly](https://youtu.be/UffZn_-lU54?si=kFFY_iPlkRbu1n1m){target="_blank"} is powerful but demanding (both arms moving symmetrically, accompanied by the dolphin kick), and [backstroke](https://youtu.be/89HxafulzyI?si=sHjHikfo4K1Z4e31){target="_blank"} is swum on the back (arms reach alternately above the head and enter the water directly in line with the shoulders).
 
-In particular, you will examine visualizations and conduct confidence intervals to explore the changes in finish times between different types of strokes and earlier vs. recent years.
-
-Investigating this data is useful for several reasons. Exploring this data can deepen our understanding of how swimming techniques and training have improved over the years and which strokes will be the fastest in this event. Also, analyzing how times have improved over the years gives insights into how competitive the event has gotten in recent years. It can show the subtle time differentials between the top and average athletes. Analysis like this can help inform the impact of modern training strategies, inspire athletes to practice different strokes, and help aspiring Olympic swimmers understand what times they need to be competitive.
+This module analyzes results from the women’s 100m events (finalists) from 1964-2024 (where complete results are available) as recorded by [Olympics.com](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}. Over time, performances reflect advances in training and technology, rule changes (e.g., the 15 m underwater limit), and the growth of women’s participation. You will compare strokes and quantify changes across eras using boxplots and two-sample confidence intervals.
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This activity would be suitable for an in-class example or quiz that lasts roughly 15 - 30 minutes.
+This activity would likely be suitable for an in-class example or quiz that lasts roughly 20 - 30 minutes.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
@@ -50,13 +48,13 @@ By the end of the activity, you will be able to:
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-For this activity, students will primarily use basic concepts of boxplots and confidence intervals to analyze data.
+For this activity, students will primarily use basic concepts of boxplots and two-sample t confidence intervals to analyze data. The activity can easily be adapted to use other inference methods such as ANOVA or Bootstrap intervals.
 :::
 
-::: {.callout-note collapse="true" title="Technology Requiremens" appearance="minimal"}
-The provided worksheets require StatKey or similar software to get the z-score. They will also require access to a calculator.
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The provided *low-tech worksheets* require StatKey or similar software to obtain t-scores, as well as access to a calculator.
 
-Since the data are provided, instructors are encouraged to modify the worksheets to have student's to make calculations and models on their preferred software.
+Since the data are provided, instructors are encouraged to adapt the worksheets so students can make calculations and build graphics using their preferred software. The *tech worksheets* are designed to facilitate this approach.
 :::
 
 ## Data
