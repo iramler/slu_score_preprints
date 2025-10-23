@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alyssa Bigness">
 <meta name="author" content="Robin Lock">
-<meta name="dcterms.date" content="2024-02-05">
+<meta name="dcterms.date" content="2025-10-23">
 <meta name="description" content="Using tournament data for professional golfers to see if driving or putting are more strongly related to success.">
 
 <title>PGA - Drive for Show, Putt for Dough? – SLU SCORE Module Preprint Repository</title>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-b64742d2bd4faa3800c49c9891be0eb7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -841,7 +841,6 @@ cookieconsent.run({
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -891,7 +890,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 5, 2024</p>
+      <p class="date">October 23, 2025</p>
     </div>
   </div>
   
@@ -905,13 +904,30 @@ cookieconsent.run({
 
 <section id="module" class="level2">
 <h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined. (Revised October 2025)</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>A common expression among golfers is “Drive for show, putt for dough.” This implies that the long initial tee shots (drives) on each hole are impressive, but the real key to success is the final strokes rolling the ball along the green into the hole (putts). Do data support this adage?</p>
-<p>The dataset for this activity was obtained from the PGA statistics website <a href="https://www.pgatour.com/stats">PGA Statistics Website</a>. Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The “driving” variables include average driving distance (<em>avgDriveDist</em>), driving accuracy percentage (<em>drivePct</em>), and strokes gained off the tee (<em>driveSG</em>). The “putting” variables are average putts per round (avgPuttsPerRound), one putt percentage (<em>onePuttPct</em>), and strokes gained putting (<em>puttsSG</em>). The variables to measure “success” are scoring average (<em>avgScore</em>), official money won (<em>Money</em>), and Fedex Cup points (<em>Points</em>).</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>The dataset for this activity was obtained from the <a href="https://www.pgatour.com/stats">PGA Statistics Website</a>. Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The “driving” variables include average driving distance (<em>avgDriveDist</em>), driving accuracy percentage (<em>drivePct</em>), and strokes gained off the tee (<em>driveSG</em>). The “putting” variables are average putts per round (avgPuttsPerRound), one putt percentage (<em>onePuttPct</em>), and strokes gained putting (<em>puttsSG</em>). The variables to measure “success” are scoring average (<em>avgScore</em>), official money won (<em>Money</em>), and Fedex Cup points (<em>Points</em>).</p>
+<p>Example of “strokes gained”: Suppose that a golfer is on the green with the ball 10 feet from the hole and PGA players use 1.6 putts, on average, to finish the hole from this distance. If the golfer makes the 10-foot putt, the strokes gained is 1.6-1=0.6, but a miss (and two putts) gives 1.6-2=-0.4 strokes “gained” (which is is actually a “loss”).</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The “No Tech” version of this activity (where the correlation matrix is provided) should take less than 15 minutes to complete in class. Time might go up half an hour if students are using technology to compute correlations and draw graphs.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -920,19 +936,19 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The learning objectives associated with this module are:</p>
 <ul>
 <li>Students will be able to use correlation to measure the strength association between quantitative variables.</li>
-<li>Checking regression model assumptions</li>
+<li>Students will be able to check regression model conditions.</li>
 <li>Students will be able to compare correlations to assess which variables may be more strongly related.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -941,7 +957,7 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This module requires students compare correlations between pairs of variables.</p>
 <p>Technology requirement: Two handout activities accommodate different levels of available technology.</p>
@@ -955,7 +971,7 @@ cookieconsent.run({
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>Each row of data gives the measures for one golfer in one tournament. The dataset covers 19 PGA tournaments from the 2022 season with 1387 cases in all. Each tournament consists of four rounds of golf. Some golfers are eliminated after the first two (or sometimes three) rounds. Only players who competed in all four rounds (i.e.&nbsp;those that made the “cut”) are included in this dataset.</p>
+<p>Each row of data gives the measures for one golfer in one tournament. The dataset covers 19 PGA tournaments from the 2022 season with 1376 cases in all. Each tournament consists of four rounds of golf. Some golfers are eliminated after the first two (or sometimes three) rounds. Only players who competed in all four rounds (i.e.&nbsp;those that made the “cut”) are included in this dataset. Some golfers (for example amateurs) may be missing values if they are not eligible for money won or Fedex Cup points.</p>
 <p>Download data: <a href="PGA2022.csv">PGA2022.csv</a></p>
 <details>
 <summary>
@@ -991,7 +1007,7 @@ cookieconsent.run({
 </tr>
 <tr class="odd">
 <td><code>driveSG</code></td>
-<td>Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player’s drive is than the PGA Tour average</td>
+<td>Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player’s drive is than the PGA Tour average. Values are average strokes gained per round.</td>
 </tr>
 <tr class="even">
 <td><code>avgPuttsPerRound</code></td>
@@ -1003,7 +1019,7 @@ cookieconsent.run({
 </tr>
 <tr class="even">
 <td><code>puttsSG</code></td>
-<td>Strokes gained putting measures how many strokes a player gains or loses on the greens compared to the PGA Tour average</td>
+<td>Strokes gained putting measures how many strokes a player gains or loses on the greens (on average per round) compared to average performance for PGA Tour golfers.</td>
 </tr>
 <tr class="odd">
 <td><code>avgScore</code></td>
@@ -1011,11 +1027,11 @@ cookieconsent.run({
 </tr>
 <tr class="even">
 <td><code>Money</code></td>
-<td>The official money is the prize money award to the Professional members</td>
+<td>The official money is the prize money award to the PGA members</td>
 </tr>
 <tr class="odd">
 <td><code>Points</code></td>
-<td>FedexCup Regular Season Points are awarded points by finished position for performance in each tournament</td>
+<td>FedexCup Points awarded based on finish position in each tournament</td>
 </tr>
 <tr class="even">
 <td><code>Tournament</code></td>
@@ -1030,14 +1046,14 @@ cookieconsent.run({
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
 <p>The data and worksheet associated with this module are available for download through the following links.</p>
-<p><a href="PGA2022.csv">PGA2022.csv</a> - Dataset with driving, putting, and success measures for indivudal golfer in 19 PGA tournaments in 2022.</p>
+<p><a href="PGA2022.csv">PGA2022.csv</a> - Dataset with driving, putting, and success measures for individual golfer in 19 PGA tournaments in 2022.</p>
 <p><a href="PGACorrelationsNoTech.docx">PGACorrelationsNoTech.docx</a>- “No Tech” version of the activity worksheet provides a correlation matrix for students to use in answering the questions.</p>
 <p><a href="PGACorrelationsWithTech.docx">PGACorrelationsWithTech.docx</a> - “With Tech” version of the activity worksheet assumes students have technology to compute any needed correlations from the provided dataset.</p>
 <p>Sample solutions to the worksheets</p>
 <p><a href="PGACorrelationsNoTech-Ans.docx">PGACorrelationsNoTech-Ans.docx</a>- Sample solutions to the “No Tech” version of the activity worksheet.</p>
 <p><a href="PGACorrelationsWithTech-Ans.docx">PGACorrelationsWithTech-Ans.docx</a> - Sample solutions to the “With Tech” version of the activity worksheet.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1046,16 +1062,12 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Students should find evidence to support the claim that. in general, putting statistics tend to be better predictors of tournament success than driving statistics. So golfers really do “drive for show, but putt for dough”.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="authors" class="level3">
-<h3 class="anchored" data-anchor-id="authors">Authors</h3>
-<p>Fill in later</p>
 
 
 </section>
