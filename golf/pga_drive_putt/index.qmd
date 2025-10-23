@@ -1,6 +1,6 @@
 ---
 title: "PGA - Drive for Show, Putt for Dough?"
-date: February 5, 2024
+date: October 23, 2025
 description: Using tournament data for professional golfers to see if driving or putting are more strongly related to success.
 author:
   - name: Alyssa Bigness
@@ -19,19 +19,26 @@ categories:
 
 ## Module
 
-Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined. (Revised October 2025)
 
 ### Introduction
 
 A common expression among golfers is "Drive for show, putt for dough." This implies that the long initial tee shots (drives) on each hole are impressive, but the real key to success is the final strokes rolling the ball along the green into the hole (putts). Do data support this adage?
 
-The dataset for this activity was obtained from the PGA statistics website [PGA Statistics Website](https://www.pgatour.com/stats). Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The "driving" variables include average driving distance (*avgDriveDist*), driving accuracy percentage (*drivePct*), and strokes gained off the tee (*driveSG*). The "putting" variables are average putts per round (avgPuttsPerRound), one putt percentage (*onePuttPct*), and strokes gained putting (*puttsSG*). The variables to measure "success" are scoring average (*avgScore*), official money won (*Money*), and Fedex Cup points (*Points*).
+The dataset for this activity was obtained from the [PGA Statistics Website](https://www.pgatour.com/stats). Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The "driving" variables include average driving distance (*avgDriveDist*), driving accuracy percentage (*drivePct*), and strokes gained off the tee (*driveSG*). The "putting" variables are average putts per round (avgPuttsPerRound), one putt percentage (*onePuttPct*), and strokes gained putting (*puttsSG*). The variables to measure "success" are scoring average (*avgScore*), official money won (*Money*), and Fedex Cup points (*Points*).
+
+Example of "strokes gained": Suppose that a golfer is on the green with the ball 10 feet from the hole and PGA players use 1.6 putts, on average, to finish the hole from this distance. If the golfer makes the 10-foot putt, the strokes gained is 1.6-1=0.6, but a miss (and two putts) gives 1.6-2=-0.4 strokes "gained" (which is is actually a "loss"). 
+
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+The "No Tech" version of this activity (where the correlation matrix is provided) should take less than 15 minutes to complete in class.  Time might go up half an hour if students are using technology to compute correlations and draw graphs.
+:::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 The learning objectives associated with this module are:
 
 -   Students will be able to use correlation to measure the strength association between quantitative variables.
--   Checking regression model assumptions
+-   Students will be able to check regression model conditions.
 -   Students will be able to compare correlations to assess which variables may be more strongly related.
 :::
 
@@ -47,7 +54,7 @@ Technology requirement: Two handout activities accommodate different levels of a
 
 ### Data
 
-Each row of data gives the measures for one golfer in one tournament. The dataset covers 19 PGA tournaments from the 2022 season with 1387 cases in all. Each tournament consists of four rounds of golf. Some golfers are eliminated after the first two (or sometimes three) rounds. Only players who competed in all four rounds (i.e. those that made the "cut") are included in this dataset.
+Each row of data gives the measures for one golfer in one tournament. The dataset covers 19 PGA tournaments from the 2022 season with 1376 cases in all. Each tournament consists of four rounds of golf. Some golfers are eliminated after the first two (or sometimes three) rounds. Only players who competed in all four rounds (i.e. those that made the "cut") are included in this dataset. Some golfers (for example amateurs) may be missing values if they are not eligible for money won or Fedex Cup points. 
 
 Download data: [PGA2022.csv](PGA2022.csv)
 
@@ -61,13 +68,13 @@ Download data: [PGA2022.csv](PGA2022.csv)
 | `country`          | The country where the player is from                                                                                                                                  |
 | `avgDriveDist`     | Average driving distance (in yards)                                                                                                                                   |
 | `drivePct`         | Percentage of times a tee shot comes to rest in the fairway                                                                                                           |
-| `driveSG`          | Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player's drive is than the PGA Tour average |
+| `driveSG`          | Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player's drive is than the PGA Tour average. Values are average strokes gained per round. |
 | `avgPuttsPerRound` | Average number of total putts per round                                                                                                                               |
 | `onePuttPct`       | Percentage of times it took one putt to get the ball into the hole                                                                                                    |
-| `puttsSG`          | Strokes gained putting measures how many strokes a player gains or loses on the greens compared to the PGA Tour average                                               |
+| `puttsSG`          | Strokes gained putting measures how many strokes a player gains or loses on the greens (on average per round) compared to average performance for PGA Tour golfers.                                              |
 | `avgScore`         | The scoring average is the total strokes divided by the total rounds                                                                                                  |
-| `Money`            | The official money is the prize money award to the Professional members                                                                                               |
-| `Points`           | FedexCup Regular Season Points are awarded points by finished position for performance in each tournament                                                             |
+| `Money`            | The official money is the prize money award to the PGA members                                                                                               |
+| `Points`           | FedexCup Points awarded based on finish position in each tournament                                                             |
 | `Tournament`       | The tournament where the PGA Tour is taking place                                                                                                                     |
 
 **Data Source**
@@ -80,7 +87,7 @@ The data were obtained from the [PGA Statistics website](https://www.pgatour.com
 
 The data and worksheet associated with this module are available for download through the following links.
 
-[PGA2022.csv](PGA2022.csv) - Dataset with driving, putting, and success measures for indivudal golfer in 19 PGA tournaments in 2022.
+[PGA2022.csv](PGA2022.csv) - Dataset with driving, putting, and success measures for individual golfer in 19 PGA tournaments in 2022.
 
 [PGACorrelationsNoTech.docx](PGACorrelationsNoTech.docx)- "No Tech" version of the activity worksheet provides a correlation matrix for students to use in answering the questions.
 
@@ -96,6 +103,4 @@ Sample solutions to the worksheets
 Students should find evidence to support the claim that. in general, putting statistics tend to be better predictors of tournament success than driving statistics. So golfers really do "drive for show, but putt for dough".
 :::
 
-### Authors
 
-Fill in later
