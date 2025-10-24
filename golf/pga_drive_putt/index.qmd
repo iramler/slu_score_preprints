@@ -15,8 +15,16 @@ editor:
   canonical: true
 categories:
   - Correlation
+image: aussiegambler.jpeg
 ---
 
+```{=html}
+<!--
+
+Thumbnail image from https://americanclassicgolf.com/drive-for-show-put-for-dough-blog/
+
+-->
+```
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined. (Revised October 2025)
@@ -27,11 +35,10 @@ A common expression among golfers is "Drive for show, putt for dough." This impl
 
 The dataset for this activity was obtained from the [PGA Statistics Website](https://www.pgatour.com/stats). Cases include all golfers who made the cut in each of 19 PGA tournaments in 2022. The dataset includes variables for driving ability, putting ability, and measuring success in the tournament. The "driving" variables include average driving distance (*avgDriveDist*), driving accuracy percentage (*drivePct*), and strokes gained off the tee (*driveSG*). The "putting" variables are average putts per round (avgPuttsPerRound), one putt percentage (*onePuttPct*), and strokes gained putting (*puttsSG*). The variables to measure "success" are scoring average (*avgScore*), official money won (*Money*), and Fedex Cup points (*Points*).
 
-Example of "strokes gained": Suppose that a golfer is on the green with the ball 10 feet from the hole and PGA players use 1.6 putts, on average, to finish the hole from this distance. If the golfer makes the 10-foot putt, the strokes gained is 1.6-1=0.6, but a miss (and two putts) gives 1.6-2=-0.4 strokes "gained" (which is is actually a "loss"). 
-
+Example of "strokes gained": Suppose that a golfer is on the green with the ball 10 feet from the hole and PGA players use 1.6 putts, on average, to finish the hole from this distance. If the golfer makes the 10-foot putt, the strokes gained is 1.6-1=0.6, but a miss (and two putts) gives 1.6-2=-0.4 strokes "gained" (which is is actually a "loss").
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-The "No Tech" version of this activity (where the correlation matrix is provided) should take less than 15 minutes to complete in class.  Time might go up half an hour if students are using technology to compute correlations and draw graphs.
+The "No Tech" version of this activity (where the correlation matrix is provided) should take less than 15 minutes to complete in class. Time might go up half an hour if students are using technology to compute correlations and draw graphs.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
@@ -47,14 +54,14 @@ This module requires students compare correlations between pairs of variables.
 
 Technology requirement: Two handout activities accommodate different levels of available technology.
 
--   The "No Tech version" provides a correlation matrix for students to use to find the required correlations to compare. 
+-   The "No Tech version" provides a correlation matrix for students to use to find the required correlations to compare.
 
-- The "With Tech" version provides the dataset and asks students to use technology to compute the needed correlations.
+-   The "With Tech" version provides the dataset and asks students to use technology to compute the needed correlations.
 :::
 
 ### Data
 
-Each row of data gives the measures for one golfer in one tournament. The dataset covers 19 PGA tournaments from the 2022 season with 1376 cases in all. Each tournament consists of four rounds of golf. Some golfers are eliminated after the first two (or sometimes three) rounds. Only players who competed in all four rounds (i.e. those that made the "cut") are included in this dataset. Some golfers (for example amateurs) may be missing values if they are not eligible for money won or Fedex Cup points. 
+Each row of data gives the measures for one golfer in one tournament. The dataset covers 19 PGA tournaments from the 2022 season with 1376 cases in all. Each tournament consists of four rounds of golf. Some golfers are eliminated after the first two (or sometimes three) rounds. Only players who competed in all four rounds (i.e. those that made the "cut") are included in this dataset. Some golfers (for example amateurs) may be missing values if they are not eligible for money won or Fedex Cup points.
 
 Download data: [PGA2022.csv](PGA2022.csv)
 
@@ -62,20 +69,20 @@ Download data: [PGA2022.csv](PGA2022.csv)
 
 <summary><b>Variable Descriptions</b></summary>
 
-| Variable           | Description                                                                                                                                                           |
-|-----------------|-------------------------------------------------------|
-| `playerName`       | Name of the player                                                                                                                                                    |
-| `country`          | The country where the player is from                                                                                                                                  |
-| `avgDriveDist`     | Average driving distance (in yards)                                                                                                                                   |
-| `drivePct`         | Percentage of times a tee shot comes to rest in the fairway                                                                                                           |
+| Variable           | Description                                                                                                                                                                                                         |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `playerName`       | Name of the player                                                                                                                                                                                                  |
+| `country`          | The country where the player is from                                                                                                                                                                                |
+| `avgDriveDist`     | Average driving distance (in yards)                                                                                                                                                                                 |
+| `drivePct`         | Percentage of times a tee shot comes to rest in the fairway                                                                                                                                                         |
 | `driveSG`          | Strokes gained off the tee measures player performance off the tee on all par 4s and par 5s of how much better or worse a player's drive is than the PGA Tour average. Values are average strokes gained per round. |
-| `avgPuttsPerRound` | Average number of total putts per round                                                                                                                               |
-| `onePuttPct`       | Percentage of times it took one putt to get the ball into the hole                                                                                                    |
-| `puttsSG`          | Strokes gained putting measures how many strokes a player gains or loses on the greens (on average per round) compared to average performance for PGA Tour golfers.                                              |
-| `avgScore`         | The scoring average is the total strokes divided by the total rounds                                                                                                  |
-| `Money`            | The official money is the prize money award to the PGA members                                                                                               |
-| `Points`           | FedexCup Points awarded based on finish position in each tournament                                                             |
-| `Tournament`       | The tournament where the PGA Tour is taking place                                                                                                                     |
+| `avgPuttsPerRound` | Average number of total putts per round                                                                                                                                                                             |
+| `onePuttPct`       | Percentage of times it took one putt to get the ball into the hole                                                                                                                                                  |
+| `puttsSG`          | Strokes gained putting measures how many strokes a player gains or loses on the greens (on average per round) compared to average performance for PGA Tour golfers.                                                 |
+| `avgScore`         | The scoring average is the total strokes divided by the total rounds                                                                                                                                                |
+| `Money`            | The official money is the prize money award to the PGA members                                                                                                                                                      |
+| `Points`           | FedexCup Points awarded based on finish position in each tournament                                                                                                                                                 |
+| `Tournament`       | The tournament where the PGA Tour is taking place                                                                                                                                                                   |
 
 **Data Source**
 
@@ -102,5 +109,3 @@ Sample solutions to the worksheets
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Students should find evidence to support the claim that. in general, putting statistics tend to be better predictors of tournament success than driving statistics. So golfers really do "drive for show, but putt for dough".
 :::
-
-
