@@ -38,7 +38,7 @@ The dataset for this activity was obtained from the [PGA Statistics Website](htt
 Example of "strokes gained": Suppose that a golfer is on the green with the ball 10 feet from the hole and PGA players use 1.6 putts, on average, to finish the hole from this distance. If the golfer makes the 10-foot putt, the strokes gained is 1.6-1=0.6, but a miss (and two putts) gives 1.6-2=-0.4 strokes "gained" (which is is actually a "loss").
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-The "No Tech" version of this activity (where the correlation matrix is provided) should take less than 15 minutes to complete in class. Time might go up half an hour if students are using technology to compute correlations and draw graphs.
+The "No Tech" version of this activity (where the correlation matrix is provided) should take less than 15 minutes to complete in class. Time might go up to half an hour if students are using technology to compute correlations and draw graphs.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
