@@ -15,7 +15,7 @@ editor:
   canonical: true
 categories:
   - ANOVA
-  - Post Hoc Comparisons
+  - post hoc comparisons
 image: Gemini_Generated_diver.png
 ---
 

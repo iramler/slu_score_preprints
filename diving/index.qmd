@@ -1,0 +1,11 @@
+---
+title: "Diving"
+listing:
+  contents:
+    - "./*/index.qmd"
+  sort: date desc
+  image-placeholder: "../_img/default_thumbnail.png"
+  fields: [image, title, author, date, categories, description]
+---
+
+These modules use **diving** data to teach topics in statistics and data science.
