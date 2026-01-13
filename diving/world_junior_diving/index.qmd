@@ -16,6 +16,7 @@ editor:
 categories:
   - ANOVA
   - Post Hoc Comparisons
+image: Gemini_Generated_diver.png
 ---
 
 ## Module
