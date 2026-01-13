@@ -37,6 +37,7 @@
       "/motor_sports/formula1_laps/index.html",
       "/running/boston_marathon_2023/index.html",
       "/early_drafts/multisport/ski_to_sea_correlations/index.html",
+      "/diving/world_junior_diving/index.html",
       "/early_drafts/diving/world_junior_diving/index.html",
       "/early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html",
       "/early_drafts/motor_sports/dakar_rally_regression/index.html",
@@ -116,6 +117,12 @@
     ]
   },
   {
+    "listing": "/diving/index.html",
+    "items": [
+      "/diving/world_junior_diving/index.html"
+    ]
+  },
+  {
     "listing": "/combat_sports/index.html",
     "items": [
       "/combat_sports/ufc_striking_accuracy/index.html"
@@ -177,6 +184,7 @@
       "/motor_sports/formula1_laps/index.html",
       "/running/boston_marathon_2023/index.html",
       "/early_drafts/multisport/ski_to_sea_correlations/index.html",
+      "/diving/world_junior_diving/index.html",
       "/early_drafts/diving/world_junior_diving/index.html",
       "/early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html",
       "/early_drafts/motor_sports/dakar_rally_regression/index.html",
