@@ -21,12 +21,26 @@ jobs:
       - name: Install R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          cache-version: 1
           packages: |
+            any::tidyverse
             any::fs
-            any::stringr
             any::glue
+            any::lubridate
+            any::SimplyAgree
+            any::DescTools
+            any::fmsb
+            any::scales
+            any::janitor
+            any::psych
+            any::here
+            any::irr
+            any::magrittr
+            any::flextable
+            any::webexercises
+            any::rmarkdown
+            any::knitr
             any::quarto
+          cache: true
 
       - name: Build sport and sidebar pages
         run: Rscript build_sport_pages.R && Rscript build_sidebar_yaml.R
