@@ -1,0 +1,137 @@
+---
+title: Nathan's Hotdog Eating Contest
+author: Keelin Joyce
+format:
+  closeread-html:
+    cr-style:
+      narrative-background-color-sidebar: "#182"
+      narrative-text-color-sidebar: "#fff"
+      section-background-color: "#f7f6f5"
+---
+:::{#cr-intro}
+![](https://www.tastingtable.com/img/gallery/everything-to-know-about-nathans-famous-july-4th-international-hot-dog-eating-contest-2024/intro-1719859047.jpg)
+:::
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse) 
+library(dplyr)
+library(ggrepel)
+hotdog_cleaned <- read_csv("~/Downloads/HotdogData.csv")
+hotdog_men <- hotdog_cleaned |> filter(Sex == 1)
+```
+
+
+::: cr-section
+How many hotdogs per minute does the winner of each year's champion of the Nathan's Hotdog Eating Contest eat?
+
+
+::: {#cr-biggraph}
+```{r}
+ggplot(data = hotdog_men, aes(x = Year, y = Hotdogs_per_minute)) +
+  geom_point() +
+  ylim(0, 8) +
+  labs(y = "Hotdogs Per Minute", title = "Hotdogs Eaten by Competition Winner By Year") +
+  theme_minimal()
+```
+:::
+
+There are a few interesting trends that stand out here. @cr-biggraph
+
+Why do we think that there is a continual decrease in the first \~10 years?
+
+Taking a look at the raw data in the early years, the original run time of the contest was between 2-6 minutes, where it now typically runs at with 10 or 12 minutes. @cr-runtime
+
+::: {#cr-runtime}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+hotdog_time <- hotdog_men |> slice(44:51) 
+
+ggplot(data = hotdog_men, aes(x = Year, y = Hotdogs_per_minute)) +
+  geom_point() +
+  ylim(0, 8) +
+  labs(y = "Hotdogs Per Minute", title = "Hotdogs Eaten by Competition Winner By Year") +
+  geom_text_repel(data = hotdog_time, aes(label = Time)) +
+  geom_point(data = hotdog_time, size = 2, colour = "red") +
+  theme_minimal()
+```
+:::
+
+This means that contestants were able to eat more hotdogs per minute as they were eating for less time. @cr-runtime
+
+
+There is also quite a large jump in number of hotdogs consumed per minute between 2000 and 2001. There were no changes in rules and both competitions were 12 minutes. What could account for Kobayashi (2001 winner) eating nearly double the amount that previous winners had? @cr-label2001
+
+::: {#cr-label2001}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+hotdog_2001 <- hotdog_men |> slice(25) |>
+  summarise(Year, Winner, Hotdogs_per_minute)
+
+ggplot(data = hotdog_men, aes(x = Year, y = Hotdogs_per_minute)) +
+  geom_point() +
+  ylim(0, 8) +
+  labs(y = "Hotdogs Per Minute", title = "Hotdogs Eaten by Competition Winner By Year") +
+  geom_text_repel(data = hotdog_2001, aes(label = Winner),
+                  nudge_y = -0.75, nudge_x = -1) +
+  geom_point(data = hotdog_2001, size = 2, colour = "red") +
+  theme_minimal()
+```
+:::
+
+::: {#cr-kobayashi}
+![](https://i.guim.co.uk/img/media/c3fb7fa62b488a153448562ae34d77694a64299d/0_0_2849_2848/master/2849.jpg?width=480&dpr=1&s=none&crop=none)
+:::
+
+In 2001, Takeru Kobayashi introduced the Solomon method of competitive hotdog eating. This includes breaking the hotdog in half, eating the meat first, and dipping the bun in water. @cr-kobayashi
+
+Following the end to Kobayashi's reign, Joey Chestnut, the current name in Nathan hotdog competitive eating entered the scene. @cr-winnerswitch
+
+::: {#cr-winnerswitch}
+```{r}
+hotdog_kobayashi <- hotdog_men |> filter(Winner == "Takeru Kobayashi")
+hotdog_joey <- hotdog_men |> filter(Winner == "Joey Chestnut")
+hotdog_kobayashi_label <- hotdog_kobayashi |> slice(4)
+hotdog_joey_label <- hotdog_joey |> slice(15)
+
+ggplot(data = hotdog_men, aes(x = Year, y = Hotdogs_per_minute)) +
+  geom_point() +
+  ylim(0, 8) +
+  labs(y = "Hotdogs Per Minute", title = "Hotdogs Eaten by Competition Winner By Year") +
+  geom_text_repel(data = hotdog_kobayashi_label, aes(label = Winner), nudge_y = -0.5, colour = "red") +
+  geom_point(data = hotdog_kobayashi, size = 2, colour = "red") +
+  geom_text_repel(data = hotdog_joey_label, aes(label = Winner),
+                  nudge_y = 0.5, colour = "dodgerblue") +
+  geom_point(data = hotdog_joey, size = 2, colour = "dodgerblue") +
+  theme_minimal()
+```
+
+:::
+Joey Chestnut had a winning streak for years, excluding 2015 (when he lost with 60 hotdogs compared to Matt Stonie's 62) and 2024 (when he was barred from the competition due to sponsership conflicts) @cr-joey
+
+::: {#cr-joey}
+```{r}
+ggplot(data = hotdog_men, aes(x = Year, y = Hotdogs_per_minute)) +
+  geom_point() +
+  ylim(0, 8) +
+  labs(y = "Hotdogs Per Minute", title = "Hotdogs Eaten by Competition Winner By Year") +
+  geom_text_repel(data = hotdog_joey_label, aes(label = Winner),
+                  nudge_y = 0.5, colour = "dodgerblue") +
+  geom_point(data = hotdog_joey, size = 2, colour = "dodgerblue") +
+  theme_minimal()
+```
+:::
+
+The most recent winner recorded in the dataset is Joey Chestnut, winning with 70 hotdogs in 10 minutes in 2025. @cr-joeyreign
+
+::: {#cr-joeyreign}
+```{r}
+hotdog_joey_label2 <- hotdog_joey |> slice(1)
+ggplot(data = hotdog_men, aes(x = Year, y = Hotdogs_per_minute)) +
+  geom_point() +
+  ylim(0, 8) +
+  labs(y = "Hotdogs Per Minute", title = "Hotdogs Eaten by Competition Winner By Year") +
+  geom_text_repel(data = hotdog_joey_label2, aes(label = Winner),
+                  nudge_x = 0.5, nudge_y = -0.4, colour = "dodgerblue") +
+  geom_point(data = hotdog_joey_label2, size = 2, colour = "dodgerblue") +
+  theme_minimal()
+```
+
