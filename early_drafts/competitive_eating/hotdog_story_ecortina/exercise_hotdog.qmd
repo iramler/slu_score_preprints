@@ -1,0 +1,74 @@
+---
+title: "Hot Dog Closeread Exercise"
+subtitle: "Using closeread HTML to tell the story of Nathan's Hot Dog Eating Competition."
+description: "A data storytelling module teaching students to use Closeread HTML to visualize data meaningfully."
+format:
+  closeread-html:
+    code-fold: true
+    cr-style:
+      narrative-background-color-sidebar: "#09753C" # nathan's brand green
+      narrative-text-color-sidebar: white
+knitr:
+  opts_chunk: 
+    dev.args:
+      bg: transparent
+---
+
+### In this exercise, you will create a plot with data from the Wikipedia page for The Story of Nathan's Hot Dog Eating Competition
+
+Loading the necessary libraries to edit the data set and create plots on R.
+
+```{r}
+#| message: false
+#| warning: false
+library(dplyr)
+library(ggplot2)
+library(here)
+library(plotly)
+library(gghighlight)
+```
+
+Loading the data from the file `hotdog.csv`
+
+```{r}
+# Reading in the data set: Hint code
+# hotdog <- read.csv("hotdog.csv")
+```
+
+### Exercise
+
+1. Create a scatter plot that highlight the data points that correspond to Joey Chestnut's wins. Hint: You might find it easier to filter on the data frame itself before editing the plot's aesthetics.
+- Highlight the data points and change the shape and color of the points. Hint use the `gghighlight` function of the `gghighlight` library.
+
+
+
+<details>
+
+<summary><b>The `gghighlight` library and function</b></summary>
+
+[gghighlight()](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html) highlights (almost) any geoms according to the given predicates.\
+\
+This function decreases the opacity of elements that are specified outside of the function's predicate. This is the unhighlighted layer. An unhighlighted layer is the colorless version of the above points with the same data. \
+\
+The highlighted data layer, maintains the graph choices within the function predicate.\
+\
+More details on gghighlight() are available [here](https://yutani.rbind.io/post/2018-06-03-anatomy-of-gghighlight/).
+
+
+2. Add a text label to the plot that describes briefly what the highlighted points represent.
+- You could do a `label` or a `text` type annotation.
+
+
+</details>
+
+
+
+3. Redact a brief description for the plot you created. Mention which specific features of the data are being brought out by the plot and which special R functions were used in the code.
+
+
+
+
+4. Add the reference label for the closeread sticky in the text you redacted to describe the plot. The plot will appear as soon as the reference appears within the mid-line of the screen.
+
+
+

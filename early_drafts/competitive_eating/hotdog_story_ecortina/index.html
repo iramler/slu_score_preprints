@@ -6,8 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Elena Cortina">
+<meta name="author" content="Ivan Ramler">
+<meta name="dcterms.date" content="2026-02-11">
+<meta name="description" content="Data visualization of historical Nathan’s Famous Hot Dog Competition winners with tidyverse and the closeread HTML extension.">
 
-<title>Ultimate Frisbee – SLU SCORE Module Preprint Repository</title>
+<title>Nathan’s Famous Hot Dog Competition - Data visualization – SLU SCORE Module Preprint Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +27,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d75d18f1702e7957d5758e27967631ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-d75d18f1702e7957d5758e27967631ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JVDQHPRYT1"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -129,35 +102,6 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -168,7 +112,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">SLU SCORE Module Preprint Repository</span>
     </a>
   </div>
@@ -179,7 +123,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -201,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ultimate_frisbee/index.html">Ultimate Frisbee</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Early Drafts</li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html">Competitive Eating</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html">Nathan’s Famous Hot Dog Competition - Data visualization</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -215,25 +159,25 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🏅 The SLU SCORE Team</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📊 Modules by Statistics Topic</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Early Drafts</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -245,7 +189,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/basketball/women_ncaa_shiny/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/basketball/women_ncaa_shiny/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s NCAA Basketball - Building a shiny app</span></a>
   </div>
 </li>
@@ -253,22 +197,22 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Competitive Eating</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/competitive_eating/hotdog_story_ecortina/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Nathan’s Famous Hot Dog Competition - Data visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/competitive_eating/hotdog_story_kjoyce/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/competitive_eating/hotdog_story_kjoyce/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analyzing Winners of Nathan’s Famous Hotdog Eating Competition through Data Storytelling</span></a>
   </div>
 </li>
@@ -285,7 +229,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
   </div>
 </li>
@@ -302,7 +246,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/lacrosse/ncaa_lacrosse_indicator_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/lacrosse/ncaa_lacrosse_indicator_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations in Division 1 Men’s and Women’s Lacrosse</span></a>
   </div>
 </li>
@@ -319,13 +263,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dakar Rally Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Formula 1 2021 World Championship</span></a>
   </div>
 </li>
@@ -342,7 +286,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ski to Sea</span></a>
   </div>
 </li>
@@ -359,7 +303,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Professional Bull Riding Analysis</span></a>
   </div>
 </li>
@@ -376,7 +320,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/skating/olympic_figure_skating_twoway_anova/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/skating/olympic_figure_skating_twoway_anova/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Men’s Olympic Figure Skating - Two-Way ANOVA</span></a>
   </div>
 </li>
@@ -393,13 +337,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
   </div>
 </li>
@@ -409,7 +353,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../basketball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../basketball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basketball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -418,31 +362,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Do NBA Draft Picks Matter? Wrangling and Analyzing Player Minutes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Do NBA Draft Picks Matter? Exploring Player Minutes with ANOVA</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basketball/nba_sga_sampling_distributions/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/nba_sga_sampling_distributions/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sampling Distributions: Shai Gilgeous-Alexander 2024-25 Points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basketball/nba_wingspans_and_performance/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/nba_wingspans_and_performance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NBA Wingspan &amp; Performance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Can Box Scores Tell Us? Exploring WNBA Player Stats</span></a>
   </div>
 </li>
@@ -450,7 +394,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../canoeing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../canoeing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Canoeing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -459,19 +403,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../canoeing/canoe_racing_clinton/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../canoeing/canoe_racing_clinton/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Clinton Canoe Regatta: Graphing and Data Manipulation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../canoeing/canoe_racing_clinton_distributions/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../canoeing/canoe_racing_clinton_distributions/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Clinton Canoe Regatta: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Raisin River Results and Oulier Impact/Exclusion</span></a>
   </div>
 </li>
@@ -479,7 +423,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../combat_sports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../combat_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Combat Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -488,7 +432,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">UFC: Striking Accuracy Percentages and the Normal Distribution</span></a>
   </div>
 </li>
@@ -496,7 +440,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../disc_golf/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../disc_golf/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Disc Golf</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -505,7 +449,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Disc Golf Pro Tour - Driving or Putting?</span></a>
   </div>
 </li>
@@ -513,7 +457,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../diving/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Diving</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -522,7 +466,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
   </div>
 </li>
@@ -530,7 +474,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../esports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../esports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Esports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -539,7 +483,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">League of Legends - Buffing and Nerfing</span></a>
   </div>
 </li>
@@ -547,7 +491,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../fitness_and_training/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../fitness_and_training/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fitness and Training</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -556,13 +500,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../fitness_and_training/powerlifting_polyreg/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../fitness_and_training/powerlifting_polyreg/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Modeling the Impact of Age on Powerlifting</span></a>
   </div>
 </li>
@@ -570,7 +514,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../football_american/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../football_american/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football American</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -579,13 +523,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football Recruiting and Impact in the NFL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../football_american/nfl-point-spread-inference/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../football_american/nfl-point-spread-inference/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NFL Point Spreads and Game Scores</span></a>
   </div>
 </li>
@@ -593,7 +537,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../golf/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../golf/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Golf</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -602,7 +546,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PGA - Drive for Show, Putt for Dough?</span></a>
   </div>
 </li>
@@ -610,7 +554,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../gymnastics/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../gymnastics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gymnastics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -619,7 +563,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NCAA Women’s Gymnastics and Bootstrap Distributions</span></a>
   </div>
 </li>
@@ -627,7 +571,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../handball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../handball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -636,7 +580,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Does Aggression Pay Off? Modeling Handball Player Performance</span></a>
   </div>
 </li>
@@ -644,7 +588,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../hockey/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../hockey/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hockey</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -653,7 +597,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023-24 PWHL - Visualizing the Regular Season</span></a>
   </div>
 </li>
@@ -661,7 +605,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../lacrosse/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../lacrosse/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -670,13 +614,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL</span></a>
   </div>
 </li>
@@ -684,7 +628,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../motor_sports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../motor_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motor Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -693,13 +637,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -707,7 +651,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../multisport/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../multisport/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multisport</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -716,7 +660,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beijing 2022 Olympics - Cleaning and Summarizing Data</span></a>
   </div>
 </li>
@@ -724,7 +668,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../racquet_sports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../racquet_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Racquet Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -733,19 +677,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../racquet_sports/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../racquet_sports/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Investigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../racquet_sports/pickleball_matched_pairs/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../racquet_sports/pickleball_matched_pairs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pickleball: Comparing Reliability in Player Ratings for Doubles vs Singles Matches</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../racquet_sports/pickleball_one-proportion-ci/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../racquet_sports/pickleball_one-proportion-ci/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pickleball: Estimating the proportion of dependable DUPR ratings</span></a>
   </div>
 </li>
@@ -753,7 +697,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../rowing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../rowing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rowing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -762,13 +706,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Data Wrangling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Summary Statistics</span></a>
   </div>
 </li>
@@ -776,7 +720,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../running/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../running/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Running</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -785,7 +729,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
   </div>
 </li>
@@ -793,7 +737,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../skating/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../skating/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Skating</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -802,7 +746,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skating/ice_skating_olympics_men_2008-2022/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../skating/ice_skating_olympics_men_2008-2022/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Investigating The Difference in Olympic Figure Skating Scores Throughout the Years</span></a>
   </div>
 </li>
@@ -810,7 +754,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../skiing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../skiing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Skiing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -819,7 +763,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">World Cup Women’s 10k Classic Nordic Ski Race - Splits</span></a>
   </div>
 </li>
@@ -827,7 +771,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../softball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../softball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Softball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-31" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -836,7 +780,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-31" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</span></a>
   </div>
 </li>
@@ -844,7 +788,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../swimming/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../swimming/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Swimming</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-32" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -853,7 +797,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-32" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s 100m Olympic Swimming: Comparing Strokes and Eras</span></a>
   </div>
 </li>
@@ -861,7 +805,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../triathlon/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../triathlon/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Triathlon</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -870,13 +814,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-33" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -884,16 +828,16 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../ultimate_frisbee/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../ultimate_frisbee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ultimate Frisbee</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-34" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-34" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2024 College Ultimate Championship Statistics</span></a>
   </div>
 </li>
@@ -901,7 +845,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../volleyball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../volleyball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Volleyball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-35" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -910,7 +854,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-35" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Division Three Volleyball Timeouts</span></a>
   </div>
 </li>
@@ -921,22 +865,72 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Early Drafts</li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html">Competitive Eating</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html">Nathan’s Famous Hot Dog Competition - Data visualization</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Ultimate Frisbee</h1>
+<h1 class="title">Nathan’s Famous Hot Dog Competition - Data visualization</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">tidyverse</div>
+    <div class="quarto-category">closeread</div>
+    <div class="quarto-category">data visualization</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Data visualization of historical Nathan’s Famous Hot Dog Competition winners with <code>tidyverse</code> and the <code>closeread</code> HTML extension.
+  </div>
 </div>
 
-
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Elena Cortina </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 11, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -946,50 +940,211 @@ window.Quarto = {
 </header>
 
 
-<p>These modules use <strong>ultimate_frisbee</strong> data to teach topics in statistics and data science.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyMENsZWFuaW5nJTJDSm9pbmluZyUyMCUyRiUyME1lcmdpbmclMkNEYXRhJTIwVmlzdWFsaXphdGlvbg==" data-listing-date-sort="1719360000000" data-listing-file-modified-sort="1771426510531" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1231">
-<div class="thumbnail"><a href="../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="no-external">
-
-<p class="card-img-top"><img src="../_img/default_thumbnail.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="no-external">2024 College Ultimate Championship Statistics</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMENsZWFuaW5n'); return false;">Data Cleaning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Sm9pbmluZyUyMCUyRiUyME1lcmdpbmc='); return false;">Joining / Merging</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFZpc3VhbGl6YXRpb24='); return false;">Data Visualization</div>
-
+<section id="module" class="level2">
+<h2 class="anchored" data-anchor-id="module">Module</h2>
+<p>Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The Nathan’s Famous Fourth of July International Hot Dog Eating Contest has a 100+ year tradition. Over time, competitors have pushed the limits of human eating ability in ways no one might have imagined.</p>
+<p>This module explains the process of creating effective data visualization plots using <code>tidyverse</code> and the <code>closeread</code> HTML Quarto extension.</p>
+</section>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p><a href="https://closeread.dev"><strong>Closeread</strong></a> is a custom format for Quarto that enables <em>scrollytelling</em> features for HTML documents.<br>
+</p>
+<p>Please, refer to the link above to download and install the extension before continuing along with the module. For additional, detailed guidance on the use of Closeread, please watch <a href="https://www.youtube.com/watch?v=KqLxy66B3lQ">this talk</a> “Andrew Bray - Closeread: bringing Scrollytelling to Quarto” at the Posit Conference 2024.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Scrollytelling">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="delink listing-description"><a href="../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="no-external">
-<p>Statistics from the 2024 College Ultimate Championships to be tidied and plotted.</p>
-</a></div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Scrollytelling
 </div>
-<div class="metadata">
-<a href="../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="no-external">
-<div class="listing-date">
-Jun 26, 2024
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div class="listing-author">
-Gavin Cassidy, Robin Lock
-</div>
-</a>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Scrollytelling is a style of web design that transitions graphics and text as a user scrolls, allowing stories to progress naturally. Despite its power, <em>scrollytelling</em> typically requires specialist web dev skills beyond the reach of many data scientists.<br>
+<br>
+Closeread is a Quarto extension that makes a wide range of <em>scrollytelling</em> techniques available to authors without traditional web dev experience, with support for cross-fading plots, graphics and other chunk output alongside narrative content. You can zoom in on poems, prose and images, as well as highlighting important phrases of text.</p>
 </div>
 </div>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<section id="how-to-create-a-section" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-create-a-section">How to create a section</h4>
+<ul>
+<li>Section: Elements within a section will appear as a <code>closeread</code> story while elements outside of a section will appear as a normal Quarto HTML document.<br>
+</li>
+</ul>
+<p>Creating sections follows the syntax <code>::::{.cr-section_name}</code> where <code>section_name</code> is the name that will identify the section whenever it needs to be referenced. The three consecutive colons go in front of the section notation and at the end of the section as <code>::::</code> on its own line of code to act as delimitation for the space of the section.</p>
+</section>
+<section id="how-to-create-a-sticky" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-create-a-sticky">How to create a sticky</h4>
+<ul>
+<li>Sticky: An element of your document that you wish to do a close read of is called a “sticky”; as the user scrolls, it will remained pinned in the middle of the main column like a sticky note.<br>
+</li>
+</ul>
+<p>Creating stickies (on a very general sense) involves de syntax <code>:::{#cr-sticky_name}</code> where <code>sticky_name</code> is the name that will identify the sticky whenever it needs to be referenced. The three consecutive colons go in front of the section notation and at the end of the section as <code>:::</code> on their own line of code to act as delimitation for the space of the sticky.</p>
+</section>
+<section id="section-on-referencing-and-other-details-of-the-closeread-code-style." class="level4">
+<h4 class="anchored" data-anchor-id="section-on-referencing-and-other-details-of-the-closeread-code-style.">Section on referencing and other details of the closeread code style.</h4>
+<p>Referencing is done within the Quarto code to trigger a sticky to appear as soon as the line of the reference reaches the middle of the screen. Use the syntax <code>@cr-sticky_name</code> to trigger a sticky to show on the <code>closeread</code> section.</p>
+<p>Other details:<br>
+- Pane types:<br>
+- Zooming in and Highlighting:<br>
+- Panes colors and style:<br>
+</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Additional Helpful Resources on Closeread
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For more details and guidance on Closeread’s formatting settings and capabilities, please refer to <a href="https://www.gastonsanchez.com/learn-closeread/modules/09-style-formatting.html">this helpful online source</a> by Gaston Sanchez.</p>
+</div>
+</div>
+</section>
+<section id="the-gghighlight-library-and-function" class="level4">
+<h4 class="anchored" data-anchor-id="the-gghighlight-library-and-function">The <code>gghighlight</code> library and function</h4>
+<p><a href="https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html">gghighlight()</a> highlights (almost) any geoms according to the given predicates.<br>
+<br>
+This function decreases the opacity of elements that are specified outside of the function’s predicate. This is the unhighlighted layer. An unhighlighted layer is the colorless version of the above points with the same data.<br>
+<br>
+The highlighted data layer, maintains the graph choices within the function predicate.<br>
+<br>
+More details on <code>gghighlight()</code> are available <a href="https://yutani.rbind.io/post/2018-06-03-anatomy-of-gghighlight/">here</a>.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>By the end of this activity, you will be able to:</p>
+<ol type="1">
+<li><p>Create effective data visualization plots from the data through contextual analysis.</p></li>
+<li><p>Analyze and describe the trends and significant features of the data set with appropriate annotations.</p></li>
+<li><p>Use the <code>closeread</code> HTML extension for Quarto documents to create a <em>scrollytelling</em> file.</p></li>
+<li><p>Interpret general trend information of a specific data set from the visualization plots and annotations.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Technology requirement: The activity handout provides a guidance Quarto document and a <em>solved</em> HTML, for reference on solutions and code references.</p>
+<ol type="1">
+<li><p>Plots: Familiarity with <code>tidyverse</code>, mainly <code>ggplot2</code>, <code>dplyr</code> and <code>tidyr</code> as a techniques for statistical analysis and data representation is crucial. You should understand how to use R code to perform changes on the data set.</p></li>
+<li><p>Basic understanding of the <code>closeread</code> syntax to create sections, stickies and reference files within the code to appear as desired in the final HTML document.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>A data frame for 69 champions of the Nathan’s Famous Hot Dog eating competition from 1972 until 2025. The data has been scraped from the web source Wikipedia, “Nathan’s Famous Hot Dog Eating Contest”, and cleaned with the R <code>tidyverse</code> library. The variable for the dogs eaten is the result of calculating the ratio of the hot dogs each winner ate in non-extra time periods by the time of the competition in minutes. This was done because the competition times are not the same for all the years in the data set.</p>
+<p>Download data: <a href="hotdog.csv">hotdog.csv</a></p>
+<details>
+<summary>
+<b>Variable Descriptions</b>
+</summary>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Year</td>
+<td>Year the competition took place</td>
+</tr>
+<tr class="even">
+<td>Sex</td>
+<td>Sex of the winner for the year the competition took place</td>
+</tr>
+<tr class="odd">
+<td>Dogs</td>
+<td>Total hot dogs eaten</td>
+</tr>
+<tr class="even">
+<td>Winner</td>
+<td>Name of the winner for their sex category</td>
+</tr>
+<tr class="odd">
+<td>Time</td>
+<td>Time in minutes the competition elapsed</td>
+</tr>
+<tr class="even">
+<td>DPM</td>
+<td>Dogs eaten per minute</td>
+</tr>
+</tbody>
+</table>
+</details>
+<section id="data-source" class="level4">
+<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
+<p>Nathan’s Famous Hot Dog Eating Contest winners. <a href="https://en.wikipedia.org/wiki/Nathan%27s_Hot_Dog_Eating_Contest" class="uri">https://en.wikipedia.org/wiki/Nathan%27s_Hot_Dog_Eating_Contest</a></p>
+</section>
+</section>
+<section id="materials" class="level3">
+<h3 class="anchored" data-anchor-id="materials">Materials</h3>
+<p>No physical handout is designed for this particular module. Please refer to the attached walk-through documents at the end of this section.</p>
+<section id="exercise" class="level4">
+<h4 class="anchored" data-anchor-id="exercise">Exercise</h4>
+<p>To create your own plot within the <code>closeread</code> page, please download the <a href="hotdog.csv">Hot Dog</a> data set and the <a href="exercise_hotdog.qmd">exercise Quarto</a> document to create a plot annotating the data showing Joey Chestnut’s wins on Nathan’s Famous Hot Dog Eating Competition.</p>
+<p><a href="elena_final_hotdog_closearead.html">HTML walk-through file</a></p>
+<p><a href="elena_final_hotdog_closearead.qmd">Solution Quarto RMD file</a></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Conclusion
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In conclusion, the analysis of winners of this hot dog eating competition can be useful to extrapolate the knowledge on data visualization, effective plot annotation and applying novel techniques to create sophisticate and engaging UIs for the viewers to understand our work and results.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="authors" class="level3">
+<h3 class="anchored" data-anchor-id="authors">Authors</h3>
+<p>Created by Elena Cortina Pino (St.&nbsp;Lawrence University), <a href="mailto:iramler@stlawu.edu">Ivan Ramler (St.&nbsp;Lawrence University)</a>.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
