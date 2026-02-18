@@ -1,0 +1,152 @@
+---
+title: "Nathan's Famous Hot Dog Competition - Data visualization"
+author:
+  - name: Elena Cortina
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "February 11, 2026"
+description: "Data visualization of historical Nathan's Famous Hot Dog Competition winners with `tidyverse` and the `closeread` HTML extension."
+editor: 
+  canonical: true
+image: Nathans.png
+categories:
+  - tidyverse
+  - closeread
+  - data visualization
+---
+
+## Module
+
+Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+The Nathan’s Famous Fourth of July International Hot Dog Eating Contest has a 100+ year tradition. Over time, competitors have pushed the limits of human eating ability in ways no one might have imagined.
+
+This module explains the process of creating effective data visualization plots using `tidyverse` and the `closeread` HTML Quarto extension.
+
+### Background
+
+[**Closeread**](https://closeread.dev) is a custom format for Quarto that enables *scrollytelling* features for HTML documents.
+\
+
+Please, refer to the link above to download and install the extension before continuing along with the module. For additional, detailed guidance on the use of Closeread, please watch [this talk](https://www.youtube.com/watch?v=KqLxy66B3lQ) "Andrew Bray - Closeread: bringing Scrollytelling to Quarto" at the Posit Conference 2024.
+
+
+::: {.callout-note collapse="true" title="Scrollytelling" appearance="minimal"}
+Scrollytelling is a style of web design that transitions graphics and text as a user scrolls, allowing stories to progress naturally. Despite its power, *scrollytelling* typically requires specialist web dev skills beyond the reach of many data scientists. \
+\
+Closeread is a Quarto extension that makes a wide range of *scrollytelling* techniques available to authors without traditional web dev experience, with support for cross-fading plots, graphics and other chunk output alongside narrative content. You can zoom in on poems, prose and images, as well as highlighting important phrases of text. 
+:::
+
+#### How to create a section
+
+-   Section: Elements within a section will appear as a `closeread` story while elements outside of a section will appear as a normal Quarto HTML document.\
+
+Creating sections follows the syntax `::::{.cr-section_name}` where `section_name` is the name that will identify the section whenever it needs to be referenced. The three consecutive colons go in front of the section notation and at the end of the section as `::::` on its own line of code to act as delimitation for the space of the section.
+
+#### How to create a sticky
+
+-   Sticky: An element of your document that you wish to do a close read of is called a “sticky”; as the user scrolls, it will remained pinned in the middle of the main column like a sticky note.\
+
+Creating stickies (on a very general sense) involves de syntax `:::{#cr-sticky_name}` where `sticky_name` is the name that will identify the sticky whenever it needs to be referenced. The three consecutive colons go in front of the section notation and at the end of the section as `:::` on their own line of code to act as delimitation for the space of the sticky.
+
+#### Section on referencing and other details of the closeread code style.
+
+Referencing is done within the Quarto code to trigger a sticky to appear as soon as the line of the reference reaches the middle of the screen. Use the syntax `@cr-sticky_name` to trigger a sticky to show on the `closeread` section.
+
+Other details:\
+- Pane types:\
+- Zooming in and Highlighting:\
+- Panes colors and style:\
+
+::: {.callout-tip}
+## Additional Helpful Resources on Closeread
+
+For more details and guidance on Closeread's formatting settings and capabilities, please refer to [this helpful online source](https://www.gastonsanchez.com/learn-closeread/modules/09-style-formatting.html) by Gaston Sanchez.
+:::
+
+
+#### The `gghighlight` library and function
+
+[gghighlight()](https://cran.r-project.org/web/packages/gghighlight/vignettes/gghighlight.html) highlights (almost) any geoms according to the given predicates.\
+\
+This function decreases the opacity of elements that are specified outside of the function's predicate. This is the unhighlighted layer. An unhighlighted layer is the colorless version of the above points with the same data. \
+\
+The highlighted data layer, maintains the graph choices within the function predicate.\
+\
+More details on `gghighlight()` are available [here](https://yutani.rbind.io/post/2018-06-03-anatomy-of-gghighlight/).
+
+
+
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Create effective data visualization plots from the data through contextual analysis.
+
+2.  Analyze and describe the trends and significant features of the data set with appropriate annotations.
+
+3.  Use the `closeread` HTML extension for Quarto documents to create a *scrollytelling* file.
+
+4.  Interpret general trend information of a specific data set from the visualization plots and annotations.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: The activity handout provides a guidance Quarto document and a *solved* HTML, for reference on solutions and code references.
+
+1.  Plots: Familiarity with `tidyverse`, mainly `ggplot2`, `dplyr` and `tidyr` as a techniques for statistical analysis and data representation is crucial. You should understand how to use R code to perform changes on the data set.
+
+2.  Basic understanding of the `closeread` syntax to create sections, stickies and reference files within the code to appear as desired in the final HTML document.
+:::
+
+### Data
+
+A data frame for 69 champions of the Nathan's Famous Hot Dog eating competition from 1972 until 2025. The data has been scraped from the web source Wikipedia, "Nathan's Famous Hot Dog Eating Contest", and cleaned with the R `tidyverse` library. The variable for the dogs eaten is the result of calculating the ratio of the hot dogs each winner ate in non-extra time periods by the time of the competition in minutes. This was done because the competition times are not the same for all the years in the data set.
+
+Download data: [hotdog.csv](hotdog.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                               |
+|----------|-----------------------------------------------------------|
+| Year     | Year the competition took place                           |
+| Sex      | Sex of the winner for the year the competition took place |
+| Dogs     | Total hot dogs eaten                                      |
+| Winner   | Name of the winner for their sex category                 |
+| Time     | Time in minutes the competition elapsed                   |
+| DPM      | Dogs eaten per minute                                     |
+
+</details>
+
+#### Data Source
+
+Nathan's Famous Hot Dog Eating Contest winners. <https://en.wikipedia.org/wiki/Nathan%27s_Hot_Dog_Eating_Contest>
+
+### Materials
+
+No physical handout is designed for this particular module. Please refer to the attached walk-through documents at the end of this section.
+
+#### Exercise
+
+To create your own plot within the `closeread` page, please download the [Hot Dog](hotdog.csv) data set and the [exercise Quarto](exercise_hotdog.qmd) document to create a plot annotating the data showing Joey Chestnut's wins on Nathan's Famous Hot Dog Eating Competition.
+
+[HTML walk-through file](elena_final_hotdog_closearead.html)
+
+[Solution Quarto RMD file](elena_final_hotdog_closearead.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+In conclusion, the analysis of winners of this hot dog eating competition can be useful to extrapolate the knowledge on data visualization, effective plot annotation and applying novel techniques to create sophisticate and engaging UIs for the viewers to understand our work and results.
+:::
+
+### Authors
+
+Created by Elena Cortina Pino (St. Lawrence University), [Ivan Ramler (St. Lawrence University)](mailto:iramler@stlawu.edu).

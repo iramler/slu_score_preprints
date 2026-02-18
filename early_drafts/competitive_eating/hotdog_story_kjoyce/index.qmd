@@ -12,7 +12,7 @@ editor:
   canonical: true
   markdown: 
     wrap: 72
-image: sr_map.png
+image: joey_miko.jpg
 categories:
   - Data Visualization
   - Closeread Extention

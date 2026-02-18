@@ -1,0 +1,364 @@
+---
+title: "Hot Dog Closeread"
+subtitle: "Using closeread HTML to tell the story of Nathan's Hot Dog Eating Competition."
+author:
+  - "Elena Cortina Pino"
+description: "A data storytelling module teaching students to use Closeread HTML to visualize data meaningfully."
+format:
+  closeread-html:
+    mainfont: Gotham
+    code-fold: true
+    cr-style:
+      poem-font-family: Gotham
+      narrative-background-color-sidebar: "#09753C" # nathan's brand green
+      narrative-text-color-sidebar: white
+      narrative-sidebar-width: minmax(600px, 1fr)
+knitr:
+  opts_chunk: 
+    dev.args:
+      bg: transparent
+---
+
+
+### Notes: use tennis sample size module template to fit this module in
+
+
+### In this demo, we'll create a plot with data from the Wikipedia page for The Story of Nathan's Hot Dog Eating Competition.
+Data was accessed from Wikipedia, "Nathan's Hot Dog Eating Contest", and cleaned with the R `tidyverse` library.
+[Nathan's Hot Dog Eating Competition on Wikipedia](https://en.wikipedia.org/wiki/Nathan%27s_Hot_Dog_Eating_Contest).
+
+```{r}
+#| message: false
+#| warning: false
+
+# Loading libraries
+library(dplyr)
+library(ggplot2)
+library(here)
+library(plotly)
+library(gghighlight)
+
+```
+
+
+```{r}
+
+# This code chunk needs to be somewhere. 
+# I don't know where else to have it. 
+# I am scared if I get rid of it the whole thing breaks.
+hotdog_clean <- read.csv("C:/Users/elena/Downloads/academics/SYE Seminar/stat450-spr2026-score/hotdogs/hotdog_clean.csv")
+hotdog_clean_2 <- hotdog_clean |> mutate(DPM = Dogs/Time)
+# Writing the new 
+write.csv(hotdog_clean_2, "hotdog.csv", row.names = FALSE) 
+
+```
+
+
+
+```{r}
+# Reading in the data set
+hotdog <- read.csv("hotdog.csv")
+```
+
+::::{.cr-section layout = "sidebar-left"}
+
+The Story of Nathan's Hot Dog Eating Competition.  @cr-final
+
+Let's take a look at the development of this historical competition. @cr-basicplot
+
+- First we set the stage for where the data points will be represented and explain the axes clearly with straightforward labeling.
+- The y-axis is already modified to account for standardization since the competitions across the years lasted different times. This was done with `dplyr` from `tidyverse`.
+The simple mathematics for the y-axis are:
+$\text{Dogs per minute} = \frac{\text{Dogs eaten}}{\text{Event time}}$
+
+\
+The Nathan’s Famous Fourth of July International Hot Dog Eating Contest has a 100+ year tradition. Over time, competitors have pushed the limits of human capacity in ways no one originally imagined.\
+
+:::{#cr-basicplot}
+```{r}
+#| label: basicplot
+#| message: false
+#| warning: false
+
+ggplot(hotdog) +
+  aes(
+    x = Year,
+    y = DPM) +
+  geom_point(
+    aes(
+      colour = Sex, size = 1), alpha = 0) +
+  annotate("text", x = Inf, y = -Inf,
+    label = "Years →",
+    hjust = 1, vjust = -0.5) +
+  annotate("text", x = -Inf, y = Inf,
+    label = "↑\nDogs per\nminute",  #python string notation
+    hjust = 0, vjust = 1) +
+  guides(colour = "none", shape = "none") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute")
+```
+:::
+
+Now we can start the story from the beginning! 
+(Let's add the data points without formatting...) @cr-points
+
+
+This shows us the big picture for the historical timeline of winners across Nathan's story. We added the points without formatting to be able to create a baseline from which to build up our descriptions of special aspects of the data-that's the main goal for data storytelling in highlighting the meaningful from the seemingly unclear.
+
+:::{#cr-points}
+```{r}
+#| label: points
+#| message: false
+#| warning: false
+
+ggplot(hotdog) +
+  aes(
+    x = Year,
+    y = DPM) +
+  geom_point(
+    aes(
+      colour = factor(Sex), size = 1)) + # turned it into factor just to use scale_colour_manual()
+  scale_colour_manual(values = c("#000000", "#000000"))+
+annotate("text", 
+         x = -Inf, y = Inf,
+         label = "All winners throughout Nathan's History",
+         hjust = -0.1, vjust = 1.1) +
+  #annotate("text", x = -Inf, y = Inf,
+  #  label = "↑\nDogs per\nminute",  #python string notation
+  #  hjust = 0, vjust = 1) +
+  #guides(colour = "none", shape = "none") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute")
+```
+:::
+
+@cr-women
+
+We can distinguish categories in the data by taking advantage of the `ggplot2` library. This particular data set does not include many categories that would allow us to see different dimensions of the data points. However, we can use the winners' genders to highlight a breakthrough in the competitions , and can use that to our advantage to extrapolate the narrative to other competitive eating events, and changes  they underwent to make competitions inclusive, or more fun!\
+\
+- Here we map the `color aesthetics` of the plot to distinguish between male and women in the competition with 2 different colors.\
+\
+- An interesting feature of this plot is the function `gghighlight` from the library `gghighlight`. This allows us to keep our other data points in the plot intact and highlight the points we want to highlight based on a specific feature without having to `filter`, `slice`, or `select` portions of our data to mae out the plot!
+
+:::{#cr-women}
+```{r}
+#| label: women
+#| message: false
+#| warning: false
+
+ggplot(hotdog) +
+  aes(
+    x = Year,
+    y = DPM) +
+  geom_point(
+    aes(
+      colour = factor(Sex), size = 1)) + # turned it into factor just to use scale_colour_manual()
+  scale_colour_manual(values = c("#95F527", "#01401C"))+
+  annotate("label", x = 1976, y = 6.8,
+    label = "Women", fill = "#95F527") +
+  gghighlight::gghighlight(Sex == 0) +
+  #annotate("text", x = -Inf, y = Inf,
+  #  label = "↑\nDogs per\nminute",  #python string notation
+  #  hjust = 0, vjust = 1) +
+  #guides(colour = "none", shape = "none") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute")
+```
+:::
+
+
+Let's take a closer look at the changes in the competition from 2011: @cr-population
+\
+The art of annotation can be tactfully developed. Sometimes more is more, sometimes, an overwhelming amount of annotations in the plot can create confusion in the reader and distract from the main point.\
+\
+Use `text` and `label` `aesthetics` to distinguish between levels of importance in the annotations inside the plot.
+
+:::{#cr-population}
+```{r}
+#| label: population
+#| message: false
+#| warning: false
+
+ggplot(hotdog) +
+  aes(
+    x = Year,
+    y = DPM) +
+  geom_point(
+    aes(
+      colour = factor(Sex), size = 1)) + # turned it into factor just to use scale_colour_manual()
+  scale_colour_manual(values = c("#95F527", "#01401C"))+
+  annotate("label", x = 1976, y = 6.8,
+    label = "Women", fill = "#95F527") +
+  annotate("label", x = 1976, y = 7.2,
+    label = "Men", fill = "#01401C", color = "#FFFFFF" ) +
+  guides(colour = "none", shape = "none") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute") +
+  geom_vline(xintercept = 2001, linetype = 1) +
+      annotate("text",
+               x = 2013,
+            y = 1.5, 
+            size = 3.63,
+            label = "→ Takeru Kobayashi enters the game")
+```
+:::
+
+Takeru Kobayashi introduced some serious techniques into his competitive eating.
+His strategy consisted of eating some cabbage and fasting before the contests. 
+- This kind of commentary can complement what is happening inside the plot. There are many ways to explain that Takeru changed the game *while* highlighting that in the plot using a line (like done here), highlighting the point that corresponds to Takeru's first win with a bright red diamond shaped point, etc...
+
+@cr-code Here's a look at the code that produces this annotated plot.
+
+:::{#cr-code}
+| ggplot(hotdog) +
+|   aes(x = Year, y = DPM) +
+|   geom_point(aes(colour = factor(Sex))) +
+|   scale_colour_manual(values = c("#95F527", "#01401C")) +
+|   annotate("label", x = 1976, y = 6.8, label = "Women", fill = "#95F527") +
+|   annotate("label", x = 1976, y = 7.2, label = "Men", fill = "#01401C",
+|   color = "#FFFFFF") +
+|   guides(colour = "none", shape = "none") +
+|   theme_minimal() +
+|   theme(legend.position = "none") +
+|   labs(x = "Year", y = "Dogs eaten per minute") +
+|   geom_vline(xintercept = 2001, linetype = 1) +
+|   annotate("text", x = 2013, y = 1.5, size = 3.63,
+|             label = "→ Takeru Kobayashi enters the game")
+| 
+:::
+
+\
+In the women's category, Miki Sudo, native to Florida, is the overall champion. @cr-mikisudo
+
+:::{#cr-mikisudo}
+```{r}
+#| label: mikisudo
+#| message: false
+#| warning: false
+
+miki_wins <- hotdog |> filter(Winner == "Miki Sudo")
+ggplot(hotdog) +
+  aes(
+    x = Year,
+    y = DPM) +
+  geom_point(aes(colour = factor(Sex))) + # turned it into factor just to use scale_colour_manual()
+  scale_colour_manual(values = c("#95F527", "#01401C"))+
+  annotate("label", x = 1976, y = 6.8,
+    label = "Women", fill = "#95F527") +
+  annotate("label", x = 1976, y = 7.2,
+    label = "Men", fill = "#01401C", color = "#FFFFFF" ) +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute") +
+  #geom_vline(xintercept = 2001, linetype = 1) +
+      annotate("text",
+               x = 2015,
+            y = 2.67, 
+            size = 3.67,
+            label = "Miki Sudo's wins") +
+  geom_point(data = miki_wins, shape = 18, color = "#27b7a1", size = 3) +
+  theme_minimal() +
+  guides(colour = "none", shape = "none") +
+  gghighlight::gghighlight(Winner == "Miki Sudo")
+```
+:::
+
+
+Taking a look at the general trend of the wins: @cr-final
+
+When it comes to making inferences on time series data like this one, it is easy to infer things that aren't necessarily causal or follow a mathematical trend. Perhaps that is the distribution  of the points for this particular data and that's the information we have and work with.
+- Other data sets with independent variables other than `time` allow us to draw more nuanced interpretations on the relationships between the variables in out plot.
+
+:::{#cr-final}
+```{r}
+#| label: final
+#| message: false
+#| warning: false
+
+ggplot(hotdog) +
+  aes(
+    x = Year,
+    y = DPM) +
+  geom_point(
+    aes(
+      colour = factor(Sex))) + # turned it into factor just to use scale_colour_manual()
+  scale_colour_manual(values = c("#95F527", "#01401C"))+
+  annotate("label", x = 1976, y = 6.8,
+    label = "Women", fill = "#95F527") +
+  annotate("label", x = 1976, y = 7.2,
+    label = "Men", fill = "#01401C", color = "#FFFFFF" ) +
+  guides(colour = "none", shape = "none") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute") +
+  geom_smooth(colour = "gray")
+  #geom_vline(xintercept = 2001, linetype = 1) +
+      #annotate(
+      #     "text",
+      #      x = 2013,
+      #      y = 1.5,
+      #      size = 3,
+      #      label = "Takeru Kobayashi enters the game") + 
+  # annotate("rect", xmin = 2010, xmax = 2026, ymin = 2.5, ymax = 5.2, alpha = .2, fill = "blue4")
+```
+:::
+
+There seems to be a sinusoidal trend in the hot dog wins.\
+\
+- This comment could be something entirely different such as: "It seems like the amount of hot dogs competitive eaters can consume will begin flattening after a few more years."
+
+
+## Exercise
+
+@cr-exercise 
+
+This is the solution plot for the exercise in this module. Many solutions are possible. A correct plot includes:\
+- Labeled axes for `x = year` and `y = dogs eaten per minute`\
+- Scatter plot for all the observations in the data set.\
+- Highlight for Joey Chestnut's observations.\
+- Different color and/or shape for Joey Chestnut's observations.\
+- Annotation that explains shortly which points correspond to Joey Chestnut's wins.\
+
+:::{#cr-exercise}
+```{r}
+#| label: exercise
+#| message: false
+#| warning: false
+
+exercise <- hotdog |> filter(Winner == "Joey Chestnut")
+ggplot(hotdog, aes(x = Year, y = DPM)) +
+  geom_point() +
+  labs(
+    x = "Year",
+    y = "Dogs eaten per minute") +
+      annotate("text",
+               x = 1997,
+            y = 6.5, 
+            size = 3.67,
+            label = "Joey Chestnut's wins") +
+  geom_point(data = exercise,
+             color = "#256432",
+             size = 3) +
+  theme_minimal() +
+  guides(colour = "none", shape = "none") + gghighlight::gghighlight(Winner == "Joey Chestnut")
+```
+:::
+
+
+::::
+Thank you for scrolling!
+
