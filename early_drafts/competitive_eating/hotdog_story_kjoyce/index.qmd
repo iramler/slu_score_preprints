@@ -45,7 +45,7 @@ Sudo](https://www.tastingtable.com/img/gallery/everything-to-know-about-nathans-
 In this module, we will look at how to use the Closeread Quarto
 extension to tell a story using data.
 
-##### Here is an example [Nathan's Hotdog Eating Contest Closeread](file:///Users/keelinjoyce/Desktop/SYE/github%20repos/stat450-spr2026-score/keelinjoyce/hotdogstory/ClosereadSolution.html){target="_blank"} telling the story of the contest using data visualization. This is what we will be creating in this module.
+##### Here is an example [Nathan's Hotdog Eating Contest Closeread](ClosereadSolution.html){target="_blank"} telling the story of the contest using data visualization. This is what we will be creating in this module.
 
 The data for this module comes from
 [Wikipedia](https://en.wikipedia.org/wiki/Nathan%27s_Hot_Dog_Eating_Contest){target="_blank"},
@@ -65,7 +65,7 @@ Download Data:
 
 ```{r message=FALSE}
 library(readr)
-hotdog_data <- read_csv("~/Downloads/HotdogData.csv")
+hotdog_data <- read_csv("HotdogData.csv")
 ```
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
