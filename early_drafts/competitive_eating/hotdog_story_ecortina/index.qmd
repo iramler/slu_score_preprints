@@ -2,7 +2,7 @@
 title: "Nathan's Famous Hot Dog Competition - Data visualization"
 author:
   - name: Elena Cortina
-  - ur: https://www.linkedin.com/in/elenacortina
+    url: https://www.linkedin.com/in/elenacortina
     affiliation:
       - id: slu
         name: St. Lawrence University
