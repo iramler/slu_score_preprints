@@ -13,6 +13,8 @@ editor:
   markdown: 
     wrap: 72
 image: joey_miko.jpg
+resources: 
+  - "ClosereadSolution_files/"
 categories:
   - Data Visualization
   - Closeread Extention

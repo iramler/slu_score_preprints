@@ -15,6 +15,8 @@ description: "Data visualization of historical Nathan's Famous Hot Dog Competiti
 editor: 
   canonical: true
 image: Nathans.png
+resources: 
+  - "elena_final_hotdog_closearead_files/"
 categories:
   - tidyverse
   - closeread

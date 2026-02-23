@@ -31,6 +31,11 @@ At the time of racing, the [2023 Miami Grand Prix](https://en.wikipedia.org/wiki
 
 In this worksheet, we will analyze and describe distributions of lap times for Max Verstappen for the 2023 F1 Miami Grand Prix. Lap times over the course of a race are determined by a multitude of factors, including tire softness (usually a change in tenths of a second) or pit stops (a change in time by upwards of 15 seconds). Understanding the distribution of lap times over the course of a race and identifying potential outliers can provide valuable insights into the consistency and performance of a driver.
 
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete.
+:::
+
+
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 

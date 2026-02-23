@@ -1,6 +1,8 @@
 ---
 title: Nathan's Hotdog Eating Contest
 author: Keelin Joyce
+resources: 
+  - "ClosereadSolution_files/"
 format:
   closeread-html:
     cr-style:

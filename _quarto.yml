@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - "_img/default_thumbnail.png"
+    - "_extensions"
   render: 
     - "index.qmd"
     - "_team.qmd"
