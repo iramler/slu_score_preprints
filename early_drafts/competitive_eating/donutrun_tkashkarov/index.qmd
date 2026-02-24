@@ -1,0 +1,145 @@
+---
+title: "Doughnut Run: Time Adjustments & Performance"
+author:
+  - name: Tim Kashkarov
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "Feb 18, 2026"
+description: "Exploring race time adjustments and performance by cleaning, joining, and analyzing doughnut run datasets."
+editor: 
+  canonical: true
+categories:
+  - Data Visualization
+  - Data Wrangling
+  - Joining / Merging
+  - Modeling
+---
+
+## Module
+
+Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+Fun runs often include nontraditional race elements such as bonus challenges, costumes, or food stations. In a doughnut run, participants may stop during the race to eat doughnuts, and their official race time may be adjusted based on how many doughnuts they consume. This creates an interesting data analysis problem: how can we estimate doughnuts eaten from race timing data, and what relationship (if any) exists between doughnuts and performance?
+
+In this worksheet, students analyze race data from a doughnut run using three datasets: adjusted race results, unadjusted race results, and a bonus threshold table. The main idea is to compare each runner’s adjusted and unadjusted times, compute the time difference, and use that difference as a proxy for how many doughnuts were eaten.
+
+Throughout the activity, students will practice core data analysis skills including cleaning inconsistent time strings, converting time values into seconds, joining datasets by a common identifier, constructing a derived variable from thresholds, and exploring relationships with visualizations and a simple quadratic model.
+
+This activity is especially useful for introducing students to realistic “messy data” workflows, where variables must be interpreted carefully and transformations must be justified before analysis begins.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity is suitable for a single class period or as a short out-of-class lab.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1. Clean and standardize messy time values into a consistent format.
+2. Convert time strings into numeric values (seconds) for analysis.
+3. Join multiple datasets using a shared identifier.
+4. Visualize relationships and compare patterns across groups.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+**Technology Requirement:**
+
+This activity requires `R` with familiarity in `Quarto` documents and `tidyverse` tools (especially `dplyr`, `readr`, and `ggplot2`). Students will also use `lubridate` to work with time data.
+:::
+
+### Data
+
+You will work with three datasets:
+
+- `doughnut2015.csv`: adjusted race results
+- `doughnut2015unadj.csv`: unadjusted race results
+- `doughnuttime.csv`: the “bonus time thresholds” for each doughnut
+
+Download Data:
+
+[doughnut2015.csv] {target="_blank"}
+[doughnut2015unadj.csv] {target="_blank"}
+[doughnuttime.csv] {target="_blank"}
+
+
+The doughnut2015.csv dataset contains race results given the donut-adjustment. Each row represents one runner. Students will create time_sec during the cleaning process.
+
+<details> <summary><b>Variable Descriptions: <code>doughnut2015.csv</code> (Adjusted Results)</b></summary>
+
+| Variable           | Description                |
+|--------------------|----------------------------|
+| Position           | Overall finishing position |
+| Race Number        | Unique runner ID           |
+| Name               | Runner name                |
+| Time               | Race time                  |
+| TimeAdj            | Adjusted race tim          |
+| Category           | Runner's age category      |
+| Cat Pos            | Position within category   |
+| Gender             | Runner gender              |
+| Gen Pos            | Position within gender     |
+
+</details>
+
+The doughnut2015unadj.csv dataset contains race results without donut-adjustment. Students will also create time_sec during the cleaning process.
+
+<details> <summary><b>Variable Descriptions: <code>doughnut2015unadj.csv</code> (Unadjusted Results)</b></summary>
+
+| Variable           | Description                |
+|--------------------|----------------------------|
+| Position           | Overall finishing position |
+| Race Number        | Unique runner ID           |
+| Name               | Runner name                |
+| Time               | Race time                  |
+| Category           | Runner's age category      |
+| Cat Pos            | Position within category   |
+| Gender             | Runner gender              |
+| Gen Pos            | Position within gender     |
+
+</details>
+
+The doughnuttime.csv dataset contains the number of doughnuts that determine threshold times.
+
+<details> <summary><b>Variable Descriptions: <code>doughnuttime.csv</code></b></summary>
+
+| Variable | Description      |
+|----------|------------------|
+| Donut    | Number of Donuts |
+| Bonus    | Time threshold   |
+
+</details>
+
+#### Data Sources
+
+[https://truetimeracing.com/event/doughnut-run-2015/]{target="_blank"}
+[https://truetimeracing.com/event/doughnut-run-2015/]{target="_blank"}
+[https://github.com/iramler/stat450-spr2026-score/blob/main/donuts/donut_times.jpg]{target="_blank"}
+
+### Materials
+
+- [Class handout](doughnut_worksheet.qmd)
+
+- Solutions:
+  + [Quarto with visible R code](doughnut_answerkey.qmd)
+  + [HTML with hideable R code](doughnut_answerkey.html)
+  
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Through this module, students work with a realistic multi-table dataset and build a complete analysis workflow from raw data to interpretation. They begin by cleaning inconsistent time fields, converting times to seconds, and joining adjusted and unadjusted race results. They then use a threshold lookup table to explore how number of doughnuts eaten relates to race performance.
+
+The activity highlights an important idea in applied data science: sometimes the variable of interest is not directly measured, and must be constructed from proxy information. This creates opportunities to discuss both the usefulness and the limitations of derived variables.
+
+The final visualizations and quadratic model encourage students to move beyond simple linear thinking and consider whether relationships may be curved, noisy, or influenced by subgroups such as finish rank or gender. This makes the module a strong bridge between data wrangling and statistical modeling.
+:::
+
+### Additional Reading
+
+- Introduction to Data Wrangling with dplyr [https://dplyr.tidyverse.org/]{target="_blank"}
+
+- Data Visualization with ggplot2 [https://ggplot2.tidyverse.org/]{target="_blank"}
+
+- Working with Dates and Times in R [https://lubridate.tidyverse.org/]{target="_blank"}
