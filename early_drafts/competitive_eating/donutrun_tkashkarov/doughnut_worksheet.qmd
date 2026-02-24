@@ -1,0 +1,191 @@
+---
+title: "Doughnut Run: Time Adjustments & Performance"
+format: html
+---
+
+In some races (especially fun runs), runners may stop for bonus challenges—like eating doughnuts. This worksheet explores:
+
+**How many doughnuts did runners eat, and how is that related to race time?**
+
+You will work with three datasets:
+
+- `doughnut2015.csv`: adjusted race results
+- `doughnut2015unadj.csv`: unadjusted race results
+- `doughnuttime.csv`: the “bonus time thresholds” for each doughnut
+
+You’ll practice realistic data analyst tasks:
+1. cleaning messy time strings
+2. converting time into seconds for analysis
+3. joining datasets by an ID
+4. turning thresholds into a derived variable (donuts eaten)
+5. visualizing patterns and fitting a simple model
+
+# 0. Load the Following Packages
+
+```{r}
+#| message: false
+library(tidyverse)
+library(lubridate)
+```
+
+
+# 1. Load in the CSV Files
+
+Load the three datasets from your data folder.
+
+```{r}
+doughnut2015     <- read_csv("Tim_Kashkarov/doughnut2015.csv")
+doughnut2015unadj<- read_csv("Tim_Kashkarov/doughnut2015unadj.csv")
+doughnuttime     <- read_csv("Tim_Kashkarov/doughnuttime.csv")
+```
+
+
+# 2. Fix the Time Column Format
+
+In these datasets, the Time column may be inconsistent. Some values look like mm:ss:00 but should really be interpreted as 00:mm:ss.
+
+We will make sure every time is in HH:MM:SS format.
+
+Below is a function fix_time() that:
+1. turns mm:ss:00 into 00:mm:ss
+2. pads h:m:s into hh:mm:ss
+3. returns NA if the format is not usable
+
+You don't need to write it again.
+
+```{r}
+fix_time <- function(x) {
+  x <- as.character(x)
+  parts <- strsplit(x, ":", fixed = TRUE)
+
+  vapply(parts, function(p) {
+    if (length(p) != 3) return(NA_character_)
+
+    # if third element is "00", treat as mm:ss:00 -> 00:mm:ss
+    if (p[3] == "00") {
+      sprintf("00:%02d:%02d", as.integer(p[1]), as.integer(p[2]))
+    } else {
+      sprintf("%02d:%02d:%02d", as.integer(p[1]), as.integer(p[2]), as.integer(p[3]))
+    }
+  }, character(1))
+}
+```
+
+b) Apply the function to both race result datasets
+
+```{r}
+
+```
+
+
+# 3. Convert HH:MM:SS to Total Seconds
+
+For analysis, it is easier to compare times as numbers (seconds).
+
+a) Let's have a new column time_sec in each race dataset
+
+```{r}
+doughnut2015 <- doughnut2015 |>
+  mutate(time_sec = as.numeric(as.difftime(Time, format = "%H:%M:%S", units = "secs")))
+
+doughnut2015unadj <- doughnut2015unadj |>
+  mutate(time_sec = as.numeric(as.difftime(Time, format = "%H:%M:%S", units = "secs")))
+```
+
+
+# 4. Join Adjusted and Unadjusted Results + Compute Time Difference
+
+You want one dataset where each runner has:
+
+- adjusted time (sec)
+- unadjusted time (sec)
+- difference: unadjusted - adjusted
+
+a) Create a dataset df_diff using an inner join by Race Number
+Tip: Rename before joining so you avoid suffix + rename steps.
+
+```{r}
+
+```
+
+
+# 5. Convert Bonus Thresholds to Seconds + Compute Doughnuts Eaten
+
+The dataset doughnuttime contains a time threshold for each doughnut in the Bonus column. If a runner’s time difference is greater than a threshold, they earned that doughnut.
+
+a) Convert Bonus to seconds
+
+```{r}
+
+```
+
+b) Create a Donut column in df_diff
+Use findInterval(): it counts how many thresholds a value exceeds 
+
+```{r}
+
+```
+
+
+# 6. Explore the Results
+
+a) Make a plot of distribution of doughnuts eaten
+
+```{r}
+
+```
+
+b) Make a plot of doughnuts by finish group
+
+First, create a finish group based on Position using mutate:
+1–10, 11–50, 51–100, 101–260
+
+```{r}
+
+```
+
+c) Make a plot showing relationship between doughnuts and adjusted time
+```{r}
+
+```
+
+d) Remove non-eaters and re-check the relationship
+```{r}
+
+```
+
+
+# 7. Modeling: Is There an “Optimal” Number of Doughnuts?
+
+Fit a quadratic model:
+
+$time = \beta_0 + \beta_1 Donut + \beta_2 Donut^2$.
+
+Then estimate the “optimal” number of doughnuts (the turning point).
+```{r}
+
+```
+
+# 8. Compare Patterns by Gender
+
+Use a scatterplot + smoother, faceted by Gender.
+```{r}
+
+```
+
+# 9. Reflection Questions (Write Short Answers)
+
+**1. Do runners who eat more doughnuts tend to be faster or slower? Is it linear?**
+
+
+
+**2. Why might the relationship differ after removing runners with 0 doughnuts?**
+
+
+
+**3. Based on your quadratic model, does the “optimal” doughnut count make sense?**
+
+
+
+**4. What is one limitation of using time_diff_sec as a proxy for doughnuts eaten?**
+
