@@ -19,6 +19,13 @@ categories:
 image: barbell-bench-press-vs-dumbbell-bench-press.jpeg
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/fitness_and_training/dumbbell_barbell_bench_ratio/](https://modules.scorenetwork.org/fitness_and_training/dumbbell_barbell_bench_ratio/){target="_blank"}
+
+```{=html}
+<!--
+
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
@@ -119,7 +126,8 @@ Upon conclusion, students should recognize that the data collected likely strict
 This learning module offers valuable insight into the process of data collection and the role it has in making concrete conclusions. There are some obvious biases in the way the data was collected, those who report their ratios belong to similar audiences, and we can't assume that the sample is representative of a broad population. Nevertheless, it presents a valuable opportunity for thought and good practice at constructing one sample t tests and recognizing the extent to which they can be used.
 :::
 
-
+-->
+```
 ## References
 
-- Thumbnail image taken from <https://adventurefitness.club/barbell-vs-dumbbell-bench-press/>
+-   Thumbnail image taken from <https://adventurefitness.club/barbell-vs-dumbbell-bench-press/>

@@ -26,6 +26,13 @@ categories:
 image: pickleImage.jpg
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/pickleball/pickleball_one-proportion-ci/](https://modules.scorenetwork.org/pickleball/pickleball_one-proportion-ci/){target="_blank"}
+
+```{=html}
+<!--
+
 ## Background to Pickleball Video
 
 If you are unfamiliar with Pickleball, please watch this video:
@@ -70,3 +77,5 @@ However, students do not need access to the data to complete the module as it is
 Students should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.
 :::
 
+-->
+```

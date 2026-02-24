@@ -24,7 +24,7 @@ categories:
 
 This module is now fully published and available on the SCORE Network Module Repository.
 
-Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html](https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html){target="_blank"}
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing/](https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing/){target="_blank"}
 
 ```{=html}
 <!--
