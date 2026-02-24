@@ -2,6 +2,7 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
+      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
       "/early_drafts/competitive_eating/hotdog_story_kjoyce/index.html",
       "/early_drafts/competitive_eating/hotdog_story_ecortina/index.html",
       "/golf/pga_drive_putt/index.html",
@@ -28,7 +29,6 @@
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
       "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
       "/disc_golf/dgpt_correlations/index.html",
-      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
       "/handball/handball-bundesliga/index.html",
       "/combat_sports/ufc_striking_accuracy/index.html",
       "/hockey/pwhl_season1_visualizations/index.html",
@@ -151,6 +151,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
       "/early_drafts/competitive_eating/hotdog_story_kjoyce/index.html",
       "/early_drafts/competitive_eating/hotdog_story_ecortina/index.html",
       "/golf/pga_drive_putt/index.html",
@@ -177,7 +178,6 @@
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
       "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
       "/disc_golf/dgpt_correlations/index.html",
-      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
       "/handball/handball-bundesliga/index.html",
       "/combat_sports/ufc_striking_accuracy/index.html",
       "/hockey/pwhl_season1_visualizations/index.html",
@@ -213,8 +213,8 @@
   {
     "listing": "/fitness_and_training/index.html",
     "items": [
-      "/fitness_and_training/powerlifting_polyreg/index.html",
-      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html"
+      "/fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
+      "/fitness_and_training/powerlifting_polyreg/index.html"
     ]
   },
   {
