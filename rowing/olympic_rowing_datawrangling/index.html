@@ -866,17 +866,8 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction-to-rowing" id="toc-introduction-to-rowing" class="nav-link active" data-scroll-target="#introduction-to-rowing">Introduction to Rowing</a></li>
-  <li><a href="#introduction-to-module" id="toc-introduction-to-module" class="nav-link" data-scroll-target="#introduction-to-module">Introduction to Module</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -944,204 +935,101 @@ cookieconsent.run({
 </header>
 
 
-<section id="introduction-to-rowing" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-rowing">Introduction to Rowing</h3>
-<p>If you are unfamiliar with the sport of rowing, we encourage you to watch the following video from <a href="https://worldrowing.com/about/" target="_blank">World Rowing</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/64N-QvIDyqI?si=d3xLOJ1EbWfL_vde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
+<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/rowing/olympic_rowing_datawrangling/" target="_blank">https://modules.scorenetwork.org/rowing/olympic_rowing_datawrangling/</a></p>
+<!--
+
+
+### Introduction to Rowing
+
+If you are unfamiliar with the sport of rowing, we encourage you to watch the following video from [World Rowing](https://worldrowing.com/about/){target="_blank"}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/64N-QvIDyqI?si=d3xLOJ1EbWfL_vde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
-</section>
-<section id="introduction-to-module" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-module">Introduction to Module</h3>
-<p>This activity organizes the data in <a href="https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download" target="_blank">Olympic rowing between 1900 and 2022</a> so that the total medals and points for countries can be analyzed.</p>
-<p>The Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 but was cancelled due to weather. It has been in every Summer Olympics since 1900. Rowing races in the Olympic context are regatta style, meaning that there are multiple boats racing head to head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m, but before then there had been a range in distances. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze.</p>
-<p>Over the course of its time as an Olympic sport there have been 25 different event entries. These events are separated by gender and range with the number of rowers in the boat (1, 2, 4, 6, 8, 17), the rigging (inrigged, outrigged), sculling, sweeping, and whether or not they are coxed. An inrigged shell means the riggers (where the oar is attached to the boat) are on the inside of the boat, outrigged shells mean the riggers are on the outside. Sculling is where the rowers have an oar on each side and sweeping is when each rower only has one oar on one side. The coxswain steers the boat and guides the rowers, some events have coxed boats whereas some others do not.</p>
-<p>The original data set (<a href="athlete_events.csv" target="_blank">athlete_events.csv</a>) is not just about rowing but for every Olympic sport since 1896. It will be important to adjust the data so that it is just rowing. Moreover, medals are given to each athlete in the boat. In Olympic scoring however, the medals should be counted as one towards the entire boat. It is important to make sure this is the case when arranging the data.</p>
-<p>In looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lop-sided medaling can be in rowing at the Olympic level. This effect could likely be attributed towards how much funding nations are placing towards their rowing teams.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity Length
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This activity could be used as an example or a short take home assessment. Best to use as a predecessor to the introductory statistics rowing module associated with this module.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of the activity, students will be able to:</p>
-<ol type="1">
-<li>Filter a dataset so there are no NA values</li>
-<li>Group data to procure summarized data</li>
-<li>Mutate data to create new variables</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Students will use basic <code>dplyr</code> skills to structure data to match the descriptions listed in the questions. Basic <code>ggplot2</code> functions are also needed to visualize the data.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Technology Requirements
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>All the questions will require the use of R or a similar programming language.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>In the data set there are 271,106 athletes from 230 countries competing in 66 sports at 35 different Olympics. Each row represents an individual athlete competing in an event at an Olympics. There are 15 variables in the dataset.</p>
-<dl>
-<dt>Download data:</dt>
-<dd>
-<p><a href="athlete_events.csv" target="_blank">athlete_events.csv</a></p>
-</dd>
-</dl>
+
+### Introduction to Module
+
+This activity organizes the data in [Olympic rowing between 1900 and 2022](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download){target="_blank"} so that the total medals and points for countries can be analyzed.
+
+The Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 but was cancelled due to weather. It has been in every Summer Olympics since 1900. Rowing races in the Olympic context are regatta style, meaning that there are multiple boats racing head to head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m, but before then there had been a range in distances. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze.
+
+Over the course of its time as an Olympic sport there have been 25 different event entries. These events are separated by gender and range with the number of rowers in the boat (1, 2, 4, 6, 8, 17), the rigging (inrigged, outrigged), sculling, sweeping, and whether or not they are coxed. An inrigged shell means the riggers (where the oar is attached to the boat) are on the inside of the boat, outrigged shells mean the riggers are on the outside. Sculling is where the rowers have an oar on each side and sweeping is when each rower only has one oar on one side. The coxswain steers the boat and guides the rowers, some events have coxed boats whereas some others do not.
+
+The original data set ([athlete_events.csv](athlete_events.csv){target="_blank"}) is not just about rowing but for every Olympic sport since 1896. It will be important to adjust the data so that it is just rowing. Moreover, medals are given to each athlete in the boat. In Olympic scoring however, the medals should be counted as one towards the entire boat. It is important to make sure this is the case when arranging the data.
+
+In looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lop-sided medaling can be in rowing at the Olympic level. This effect could likely be attributed towards how much funding nations are placing towards their rowing teams.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity could be used as an example or a short take home assessment. Best to use as a predecessor to the introductory statistics rowing module associated with this module.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, students will be able to:
+
+1.  Filter a dataset so there are no NA values
+2.  Group data to procure summarized data
+3.  Mutate data to create new variables
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students will use basic `dplyr` skills to structure data to match the descriptions listed in the questions. Basic `ggplot2` functions are also needed to visualize the data.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+All the questions will require the use of R or a similar programming language.
+:::
+
+### Data
+
+In the data set there are 271,106 athletes from 230 countries competing in 66 sports at 35 different Olympics. Each row represents an individual athlete competing in an event at an Olympics. There are 15 variables in the dataset. 
+
+Download data:
+
+:   [athlete_events.csv](athlete_events.csv){target="_blank"}
+
 <details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>ID</code></td>
-<td>The ID number assigned to the athlete.</td>
-</tr>
-<tr class="even">
-<td><code>Name</code></td>
-<td>The name of the athlete in <code>first name last name</code> order.</td>
-</tr>
-<tr class="odd">
-<td><code>Sex</code></td>
-<td>The sex of the athlete.</td>
-</tr>
-<tr class="even">
-<td><code>Age</code></td>
-<td>The age of the athlete at the time of competing.</td>
-</tr>
-<tr class="odd">
-<td><code>Height</code></td>
-<td>The height of the athlete at the time of competing. Measured in cm.</td>
-</tr>
-<tr class="even">
-<td><code>Weight</code></td>
-<td>The weight of the athlete at the time of competing. Measured in kg.</td>
-</tr>
-<tr class="odd">
-<td><code>Team</code></td>
-<td>The team the athlete is a member of. In some cases this is different than the<code>NOC</code>.</td>
-</tr>
-<tr class="even">
-<td><code>NOC</code></td>
-<td>The nation the athlete is representing, usually the best variable to choose to analyze nations.</td>
-</tr>
-<tr class="odd">
-<td><code>Games</code></td>
-<td>The Olympic Games the case is from. e.g.&nbsp;“1992 Summer Olympics”.</td>
-</tr>
-<tr class="even">
-<td><code>Year</code></td>
-<td>The year the athlete was competing.</td>
-</tr>
-<tr class="odd">
-<td><code>Season</code></td>
-<td>The season the athlete was competing, “Summer” or “Winter”.</td>
-</tr>
-<tr class="even">
-<td><code>City</code></td>
-<td>The city the Olympics were hosted in the case.</td>
-</tr>
-<tr class="odd">
-<td><code>Sport</code></td>
-<td>The sport the athlete competed in.</td>
-</tr>
-<tr class="even">
-<td><code>Event</code></td>
-<td>The event the athlete competed in.</td>
-</tr>
-<tr class="odd">
-<td><code>Medal</code></td>
-<td>If the athlete medaled, which medal they won.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Data Source</strong></p>
-<p>Kaggle: <a href="https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download" target="_blank">120 years of Olympic history: athletes and results</a></p>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                                                                     |
+|----------|-------------------------------------------------------------------------------------------------|
+| `ID`     | The ID number assigned to the athlete.                                                          |
+| `Name`   | The name of the athlete in `first name last name` order.                                        |
+| `Sex`    | The sex of the athlete.                                                                         |
+| `Age`    | The age of the athlete at the time of competing.                                                |
+| `Height` | The height of the athlete at the time of competing. Measured in cm.                             |
+| `Weight` | The weight of the athlete at the time of competing. Measured in kg.                             |
+| `Team`   | The team the athlete is a member of. In some cases this is different than the`NOC`.             |
+| `NOC`    | The nation the athlete is representing, usually the best variable to choose to analyze nations. |
+| `Games`  | The Olympic Games the case is from. e.g. "1992 Summer Olympics".                                |
+| `Year`   | The year the athlete was competing.                                                             |
+| `Season` | The season the athlete was competing, "Summer" or "Winter".                                     |
+| `City`   | The city the Olympics were hosted in the case.                                                  |
+| `Sport`  | The sport the athlete competed in.                                                              |
+| `Event`  | The event the athlete competed in.                                                              |
+| `Medal`  | If the athlete medaled, which medal they won.                                                   |
+
+**Data Source**
+
+Kaggle: [120 years of Olympic history: athletes and results](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results?resource=download){target="_blank"}
+
 </details>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p>We provide editable qmd files along with their solutions.</p>
-<p><a href="rowing_dataprep_worksheet.qmd">Worksheet</a></p>
-<p><a href="rowing_dataprep_worksheet_ANSWERS.qmd">Worksheet Answers</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This dataprep worksheet helps students familiarize themselves with the use of basic dplyr tools to structure data in a way that is easier to analyze. In doing so, it enables to students to draw conclusions about different patterns in rowing as an Olympic sport when it comes to medaling.</p>
-</div>
-</div>
-</div>
+
+### Materials
+
+We provide editable qmd files along with their solutions.
+
+[Worksheet](rowing_dataprep_worksheet.qmd)
+
+[Worksheet Answers](rowing_dataprep_worksheet_ANSWERS.qmd)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+This dataprep worksheet helps students familiarize themselves with the use of basic dplyr tools to structure data in a way that is easier to analyze. In doing so, it enables to students to draw conclusions about different patterns in rowing as an Olympic sport when it comes to medaling.
+:::
+
+-->
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

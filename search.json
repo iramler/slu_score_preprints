@@ -192,7 +192,7 @@
     "href": "rowing/olympic_rowing_introstat/index.html",
     "title": "Olympic Rowing Medals Between 1900 and 2022 - Summary Statistics",
     "section": "",
-    "text": "Introduction to Rowing\nIf you are unfamiliar with the sport of rowing, we encourage you to watch the following video from World Rowing\n\n\n\n\nIntroduction to Module\nThis activity looks at the total number of medals and points for nations in Olympic rowing between 1900 and 2022.\nThe Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 and has been in every Summer Olympics since. Rowing races in the Olympic context are typically regatta style, meaning that there are multiple boats racing head-to-head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze. Over the course of its time as an Olympic sport there have been 25 different event entries.\nIn this dataset, the medals are counted as one medal towards each boat as opposed to each athlete in the boat. In looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lob-sided medaling can be in rowing at the Olympic level.\n\n\n\n\n\n\nNoteActivity Length\n\n\n\n\n\nThis activity could be used as an example or a short take home assessment.\n\n\n\n\n\n\n\n\n\nNoteLearning Objectives\n\n\n\n\n\nBy the end of the activity, students will be able to:\n\nAssess and interpret data distribution using histograms\nObtain summary statistics with with statistical software\nIdentify outliers with IQR\n\n\n\n\n\n\n\n\n\n\nNoteMethods\n\n\n\n\n\nStudents will use an understanding of histograms and summary statistics to assess data distribution. Students will also use the IQR method to identify outliers.\n\n\n\n\n\n\n\n\n\nNoteTechnology Requirements\n\n\n\n\n\nThe non tech version of the worksheet will only require a calculator, but the tech version will require the use of basic statistical software.\n\n\n\n\n\nData\nIn the data set there are 41 medalling nations that competed in 25 different events. Each row represents a nation and their medals and points which are cumulative from all rowing Olympics between 1900 and 2022. In total, there are 41 rows with 3 variables. In the original dataset, there were 101 nations in rowing, but the data has been adjusted to include only nations that medalled.\n\nDownload data:\n\nrowing_medals.csv\n\n\n\n\nVariable Descriptions\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nNOC\nNational Olympic Committee or the nation competing.\n\n\nmedals\nThe total number of medals for that country in that event.\n\n\npoints\nThe total number of points for that country in that event. The points are scaled with a gold medal counting for 3 points, a silver for 2, and a bronze for 1.\n\n\ngold\nThe total number of gold medals for that country.\n\n\nsilver\nThe total number of silver medals for that country.\n\n\nbronze\nThe total number of bronze medals for that country.\n\n\n\nData Source\nOriginal Kaggle Dataset - 120-years-of-olympic-history-athletes-and-results\n\n\n\nMaterials\nWe provide editable MS Word handouts that don’t require additional technology. We also provide editable worksheets that require the use of R (MS Word and Quarto format). Solutions are provided for all versions.\nNo Tech Required\n\nWorksheet\nWorksheet Answers\n\nTech Required\nMS Word Documents - solutions written in R, but any software will suffice.\n\nTech Worksheet - MS Word\nTech Worksheet Answers - MS Word\n\nQuarto Documents - assumes students will use R\n\nTech Worksheet - R Quarto\nTech Worksheet Answers - R Quarto\n\n\n\n\n\n\n\nNoteConclusion\n\n\n\n\n\nThis Olympic rowing medals worksheet builds students’ understanding of data distribution through histograms, summary statistics, and outliers. It also strengthens students’ ability to critically evaluate confounding variables and devising relationships amongst variables through looking at barplots. Additionally, it provides an interesting opportunity for students to look at patterns in medals for Olympic rowing.",
+    "text": "This module is now fully published and available on the SCORE Network Module Repository.\nClick the following link to access the materials (opens a new tab): https://modules.scorenetwork.org/rowing/olympic_rowing_introstat/",
     "crumbs": [
       "Home",
       "Rowing",
@@ -438,31 +438,7 @@
     "href": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html",
     "title": "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press",
     "section": "",
-    "text": "Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.",
-    "crumbs": [
-      "Home",
-      "Fitness and Training",
-      "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press"
-    ]
-  },
-  {
-    "objectID": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html#module",
-    "href": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html#module",
-    "title": "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press",
-    "section": "",
-    "text": "Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.",
-    "crumbs": [
-      "Home",
-      "Fitness and Training",
-      "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press"
-    ]
-  },
-  {
-    "objectID": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html#background-to-chest-press-video",
-    "href": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html#background-to-chest-press-video",
-    "title": "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press",
-    "section": "Background to Chest Press Video",
-    "text": "Background to Chest Press Video\nIf you are unfamiliar with dumbbell or flat bench press weightlifting, please watch this video:\n\n\n\nIntroduction\nWeightlifters may be inclined to track the specific ratio between flat dumbbell press and barbell bench press.\nA dumbbell is a short bar with equal weight on both sides designed to be held in the lifter’s hands. Flat dumbbell press is when the lifter lies on a flat bench with their arms positioned at roughly 45 degree angles, lifts two equal sized dumbbells, brings them back to the chest, and then keeps going.\nA barbell is similar in shape to a dumbbell, but is a longer, much heavier bar where multiple weighted plates can be placed on either side. Barbell bench press is when the lifter lies on a bench with the barbell positioned at their chest, lifts the barbell, and then brings it back down.\nThe ratio of flat dumbbell press to barbell bench press works to track how much someone is lifting two dumbbells compared to how much they are able to lift the weighted barbell. When calculating the ratio, it was multiplied by two in order to account for the total weight lifted when doing a flat dumbbell press, as there are two dumbbells that would have to be held by the lifter.\nAn example of this is as follows:\nSay Melissa is able to flat dumbbell press two 30 lbs dumbbells. The total amount she can flat dumbbell press is 60 lbs (one dumbbell for each arm). On barbell bench press, she can lift 75 lbs. Her ratio would be calculated by dividing flat dumbbell press by barbell bench press (60/75) which equals 0.8, meaning that Melissa can lift two dumbbells up to 80% as heavy as she can bench press the barbell.\nWhile both exercises predominately target the chest muscles, each can focus on different secondary muscle groups. Many weightlifters like to track this ratio to work towards specific strength goals and target any weakness in certain muscle groups1.\nFor example, if someone’s ratio is low (i.e. they can barbell bench press much more than they can flat dumbbell press), it highlights that they might want to work on targeting the secondary muscles used in flat dumbbell press. In this case, these muscles are usually referred to as the stabilizer muscles. This could mean they rely more on the barbell for their pressing strength and might benefit from incorporating more dumbbell exercises to improve muscle balance and stability.\nOn the flip side, if someone’s ratio is high, it might indicate strong stabilizer muscles and good overall balance. This could mean they have well-developed coordination and muscular control, potentially reducing the risk of injury and enhancing overall athletic performance. However, it might also suggest that their barbell press strength is relatively underdeveloped, implying a need to focus more on barbell training to ensure balanced muscle development or to increase their overall strength.\nFinally, a lifter might be interested in being close to the average ratio of dumbbell to barbell press because it indicates a balanced strength development. In particular, this can be useful if they are able to compare themselves to the average from a group of peers. Being close to the average suggests that their training regimen is effective in developing both primary pressing muscles and stabilizer muscles evenly. This balance can contribute to better overall performance, reduced injury risk, and a more well-rounded physique.\nThe data on the ratio between dumbbell and barbell weightlifting comes from responses in a Reddit thread on the r/fitness subreddit. People who tend to use the fitness subreddit are likely fitness enthusiasts - including beginners, intermediate, and advanced lifters. This community is diverse, with members ranging from casual gym-goers to serious athletes. As with most social media, typical ages of users on the fitness subreddit tend to be in the younger demographic, often ranging from late teens to early 30s. However, there are still users of all ages, including older individuals who are interested in maintaining their fitness and connecting with the community.\nThis module involves using the strength ratio to look at dot plots, construct and use confidence intervals, and discuss the effect that data collection methods have on the reliability of the data.\n\n\n\n\n\n\nNoteActivity Length\n\n\n\n\n\nThis could serve as an in class activity and should take roughly 30 minutes to complete.\n\n\n\n\n\n\n\n\n\nNoteLearning Objectives\n\n\n\n\n\nBy the end of this activity, you will:\n\nEnhance proficiency in constructing and interpreting confidence intervals.\nUnderstand the limitations of using smaller datasets of self-selected individuals.\nExplain the importance of obtaining a sample that reaches across multiple audiences.\n\n\n\n\n\n\n\n\n\n\nNoteMethods\n\n\n\n\n\nStudents are expected to have been exposed to one-sample inference for means (most likely t-intervals). Students will also need to have been exposed to general sampling practices - including common biases or problematics sampling schemes such as convenience samples and self-reported data.\n\n\n\n\n\n\n\n\n\nNoteTechnology Requirements\n\n\n\n\n\nNo explicit technology is required, although a calculator is recommended. Additionally, the module worksheets can easily be adapted to be used with statistical software.\n\n\n\n\n\nData\nThe dumbbell_barbell_weight_ratio data set contains observed strength ratios from 18 different weightlifters. Each row represents a different weightlifter.\nData is available on the SCORE Data Repository Website\nDownload data: dumbbell_barbell_weight_ratio.csv\n\n\nVariable Descriptions\n\n\n\n\nVariable\nDescription\n\n\n\n\nRatio\nFlat dumbbell press to barbell bench press weight ratio\n\n\n\n\n\nData Source\nWeight Ratio\nThe data is sourced from a self-reported Reddit open forum. Users provided their weight for both a flat dumbbell press and a barbell bench press, and it was compiled by another user into the corresponding weight ratio. It is important to note that as this is a self-reported open forum, biases may be introduced that wouldn’t otherwise be present.\nNote that the Reddit user that compiled the data calculated the ratio as the weight of a single dumbbell divided by the barbell weight. The data used in this module uses the weight of the pair of dumbbells divided by the barbell weight (to represent a ratio of the total amount of weight being lifted for each method). To revert to the original source style, simply divide the data from this module by two.\n\n\n\nMaterials\nClass handout\nClass handout - with solutions\n\n\n\n\n\n\nNoteConclusion\n\n\n\n\n\nUpon conclusion, students should recognize that the data collected likely strictly limits which population the resulting confidence interval can be applied to. Additionally, students should recognize that, even with the limitations of these data, they can still provide value.\nThis learning module offers valuable insight into the process of data collection and the role it has in making concrete conclusions. There are some obvious biases in the way the data was collected, those who report their ratios belong to similar audiences, and we can’t assume that the sample is representative of a broad population. Nevertheless, it presents a valuable opportunity for thought and good practice at constructing one sample t tests and recognizing the extent to which they can be used.",
+    "text": "This module is now fully published and available on the SCORE Network Module Repository.\nClick the following link to access the materials (opens a new tab): https://modules.scorenetwork.org/fitness_and_training/dumbbell_barbell_bench_ratio/",
     "crumbs": [
       "Home",
       "Fitness and Training",
@@ -475,18 +451,6 @@
     "title": "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press",
     "section": "References",
     "text": "References\n\nThumbnail image taken from https://adventurefitness.club/barbell-vs-dumbbell-bench-press/",
-    "crumbs": [
-      "Home",
-      "Fitness and Training",
-      "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press"
-    ]
-  },
-  {
-    "objectID": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html#footnotes",
-    "href": "fitness_and_training/dumbbell_barbell_bench_ratio/index.html#footnotes",
-    "title": "Strength Ratios - Flat Dumbbell Press to Barbell Bench Press",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAlthough many weightlifters may use this ratio for tracking progress and examining muscle balance, it isn’t an official statistic used in competitions, only a personal one.↩︎",
     "crumbs": [
       "Home",
       "Fitness and Training",
@@ -1394,7 +1358,7 @@
     "href": "esports/league_of_legends/index.html",
     "title": "League of Legends - Buffing and Nerfing",
     "section": "",
-    "text": "This module is now fully published and available on the SCORE Network Module Repository.\nClick the following link to access the materials (opens a new tab): https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing.html",
+    "text": "This module is now fully published and available on the SCORE Network Module Repository.\nClick the following link to access the materials (opens a new tab): https://modules.scorenetwork.org/esports/league-of-legends-buffing-nerfing/",
     "crumbs": [
       "Home",
       "Esports",
@@ -1605,55 +1569,7 @@
     "href": "racquet_sports/pickleball_one-proportion-ci/index.html",
     "title": "Pickleball: Estimating the proportion of dependable DUPR ratings",
     "section": "",
-    "text": "If you are unfamiliar with Pickleball, please watch this video:",
-    "crumbs": [
-      "Home",
-      "Racquet Sports",
-      "Pickleball: Estimating the proportion of dependable DUPR ratings"
-    ]
-  },
-  {
-    "objectID": "racquet_sports/pickleball_one-proportion-ci/index.html#background-to-pickleball-video",
-    "href": "racquet_sports/pickleball_one-proportion-ci/index.html#background-to-pickleball-video",
-    "title": "Pickleball: Estimating the proportion of dependable DUPR ratings",
-    "section": "",
-    "text": "If you are unfamiliar with Pickleball, please watch this video:",
-    "crumbs": [
-      "Home",
-      "Racquet Sports",
-      "Pickleball: Estimating the proportion of dependable DUPR ratings"
-    ]
-  },
-  {
-    "objectID": "racquet_sports/pickleball_one-proportion-ci/index.html#introduction-to-module",
-    "href": "racquet_sports/pickleball_one-proportion-ci/index.html#introduction-to-module",
-    "title": "Pickleball: Estimating the proportion of dependable DUPR ratings",
-    "section": "Introduction to Module",
-    "text": "Introduction to Module\nPickleball is a fast-paced sport blending tennis, badminton, and ping-pong, played with paddles and a plastic ball on a small court. College tournaments feature singles, doubles, and mixed doubles in a best-of-three format, emphasizing strategy, teamwork, and precision. Player performance is often tracked using the DUPR (Dynamic Universal Pickleball Rating) system, which rates skill from 2.000 to 8.000 based on match results, opponent strength, and recent play. A Reliability Score (1–100%) reflects how accurate a rating is, with 60%+ considered dependable.\nThe pickleBall dataset features data from the NCPA (National Collegiate Pickleball Association) of male and female players in 2024. Variables include characteristics such as name and sex. Other variables included the overrall, singles, doubles, and mixed rating and the overall, singles, doubles, and mixed reliability score. The relevant variables for this specific module are doubles reliability and singles reliability.\n\n\n\n\n\n\nNoteActivity Length\n\n\n\n\n\nThis could serve as an in class activity and should take roughly a half an hour to complete.\n\n\n\n\n\n\n\n\n\nNoteLearning Objectives\n\n\n\n\n\nStudents will gain experience performing single proportion confidence intervals.\n\n\n\n\n\n\n\n\n\nNoteMethods\n\n\n\n\n\nStudents are expected to have been exposed to the concept confidence intervals for a single proportion. (Although this is intended to be used as an earlier example for the topic.)",
-    "crumbs": [
-      "Home",
-      "Racquet Sports",
-      "Pickleball: Estimating the proportion of dependable DUPR ratings"
-    ]
-  },
-  {
-    "objectID": "racquet_sports/pickleball_one-proportion-ci/index.html#data",
-    "href": "racquet_sports/pickleball_one-proportion-ci/index.html#data",
-    "title": "Pickleball: Estimating the proportion of dependable DUPR ratings",
-    "section": "Data",
-    "text": "Data\nThis module used the pickleBall data from the SCORE Data Repository\nHowever, students do not need access to the data to complete the module as it is summarized in the provided worksheet.",
-    "crumbs": [
-      "Home",
-      "Racquet Sports",
-      "Pickleball: Estimating the proportion of dependable DUPR ratings"
-    ]
-  },
-  {
-    "objectID": "racquet_sports/pickleball_one-proportion-ci/index.html#materials",
-    "href": "racquet_sports/pickleball_one-proportion-ci/index.html#materials",
-    "title": "Pickleball: Estimating the proportion of dependable DUPR ratings",
-    "section": "Materials",
-    "text": "Materials\n\nClass handout (MS Word)\nClass handout - with solutions\n\n\n\n\n\n\n\nNoteConclusion\n\n\n\n\n\nStudents should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.",
+    "text": "This module is now fully published and available on the SCORE Network Module Repository.\nClick the following link to access the materials (opens a new tab): https://modules.scorenetwork.org/pickleball/pickleball_one-proportion-ci/",
     "crumbs": [
       "Home",
       "Racquet Sports",
@@ -1665,7 +1581,7 @@
     "href": "rowing/olympic_rowing_datawrangling/index.html",
     "title": "Olympic Rowing Medals Between 1900 and 2022 - Data Wrangling",
     "section": "",
-    "text": "Introduction to Rowing\nIf you are unfamiliar with the sport of rowing, we encourage you to watch the following video from World Rowing\n\n\n\n\nIntroduction to Module\nThis activity organizes the data in Olympic rowing between 1900 and 2022 so that the total medals and points for countries can be analyzed.\nThe Summer Olympic Games are an international athletics event held every four years and hosted in different countries around the world. Rowing was added to the Olympics in 1896 but was cancelled due to weather. It has been in every Summer Olympics since 1900. Rowing races in the Olympic context are regatta style, meaning that there are multiple boats racing head to head against each other in multiple lanes. Since 1912, the standard distance for Olympic regattas has been 2000m, but before then there had been a range in distances. The boat that is first to cross the finish line is awarded a gold medal, the second a silver medal, and the third a bronze.\nOver the course of its time as an Olympic sport there have been 25 different event entries. These events are separated by gender and range with the number of rowers in the boat (1, 2, 4, 6, 8, 17), the rigging (inrigged, outrigged), sculling, sweeping, and whether or not they are coxed. An inrigged shell means the riggers (where the oar is attached to the boat) are on the inside of the boat, outrigged shells mean the riggers are on the outside. Sculling is where the rowers have an oar on each side and sweeping is when each rower only has one oar on one side. The coxswain steers the boat and guides the rowers, some events have coxed boats whereas some others do not.\nThe original data set (athlete_events.csv) is not just about rowing but for every Olympic sport since 1896. It will be important to adjust the data so that it is just rowing. Moreover, medals are given to each athlete in the boat. In Olympic scoring however, the medals should be counted as one towards the entire boat. It is important to make sure this is the case when arranging the data.\nIn looking at the total medals and total points for each nation, it is interesting to see which nations dominate in Olympic rowing. Additionally, looking at the overall distribution of the medals for all countries provides insight on just how lop-sided medaling can be in rowing at the Olympic level. This effect could likely be attributed towards how much funding nations are placing towards their rowing teams.\n\n\n\n\n\n\nNoteActivity Length\n\n\n\n\n\nThis activity could be used as an example or a short take home assessment. Best to use as a predecessor to the introductory statistics rowing module associated with this module.\n\n\n\n\n\n\n\n\n\nNoteLearning Objectives\n\n\n\n\n\nBy the end of the activity, students will be able to:\n\nFilter a dataset so there are no NA values\nGroup data to procure summarized data\nMutate data to create new variables\n\n\n\n\n\n\n\n\n\n\nNoteMethods\n\n\n\n\n\nStudents will use basic dplyr skills to structure data to match the descriptions listed in the questions. Basic ggplot2 functions are also needed to visualize the data.\n\n\n\n\n\n\n\n\n\nNoteTechnology Requirements\n\n\n\n\n\nAll the questions will require the use of R or a similar programming language.\n\n\n\n\n\nData\nIn the data set there are 271,106 athletes from 230 countries competing in 66 sports at 35 different Olympics. Each row represents an individual athlete competing in an event at an Olympics. There are 15 variables in the dataset.\n\nDownload data:\n\nathlete_events.csv\n\n\n\n\nVariable Descriptions\n\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nID\nThe ID number assigned to the athlete.\n\n\nName\nThe name of the athlete in first name last name order.\n\n\nSex\nThe sex of the athlete.\n\n\nAge\nThe age of the athlete at the time of competing.\n\n\nHeight\nThe height of the athlete at the time of competing. Measured in cm.\n\n\nWeight\nThe weight of the athlete at the time of competing. Measured in kg.\n\n\nTeam\nThe team the athlete is a member of. In some cases this is different than theNOC.\n\n\nNOC\nThe nation the athlete is representing, usually the best variable to choose to analyze nations.\n\n\nGames\nThe Olympic Games the case is from. e.g. “1992 Summer Olympics”.\n\n\nYear\nThe year the athlete was competing.\n\n\nSeason\nThe season the athlete was competing, “Summer” or “Winter”.\n\n\nCity\nThe city the Olympics were hosted in the case.\n\n\nSport\nThe sport the athlete competed in.\n\n\nEvent\nThe event the athlete competed in.\n\n\nMedal\nIf the athlete medaled, which medal they won.\n\n\n\nData Source\nKaggle: 120 years of Olympic history: athletes and results\n\n\n\nMaterials\nWe provide editable qmd files along with their solutions.\nWorksheet\nWorksheet Answers\n\n\n\n\n\n\nNoteConclusion\n\n\n\n\n\nThis dataprep worksheet helps students familiarize themselves with the use of basic dplyr tools to structure data in a way that is easier to analyze. In doing so, it enables to students to draw conclusions about different patterns in rowing as an Olympic sport when it comes to medaling.",
+    "text": "This module is now fully published and available on the SCORE Network Module Repository.\nClick the following link to access the materials (opens a new tab): https://modules.scorenetwork.org/rowing/olympic_rowing_datawrangling/",
     "crumbs": [
       "Home",
       "Rowing",
