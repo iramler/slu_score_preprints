@@ -18,13 +18,18 @@ categories:
 image: aussiegambler.jpeg
 ---
 
-```{=html}
-<!--
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/golf/pga_drive_show_putt_dough/](https://modules.scorenetwork.org/golf/pga_drive_show_putt_dough/){target="_blank"}
+
 
 Thumbnail image from https://americanclassicgolf.com/drive-for-show-put-for-dough-blog/
 
--->
-```
+
+```{=html}
+<!--
+
+
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined. (Revised October 2025)
@@ -109,3 +114,6 @@ Sample solutions to the worksheets
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Students should find evidence to support the claim that. in general, putting statistics tend to be better predictors of tournament success than driving statistics. So golfers really do "drive for show, but putt for dough".
 :::
+
+-->
+```
