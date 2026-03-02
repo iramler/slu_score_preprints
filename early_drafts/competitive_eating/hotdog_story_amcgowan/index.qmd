@@ -42,7 +42,8 @@ By the end of this tutorial, you will be able to:
 
 2.  Transform a dataset to answer those questions.
 
-3.  Use the `Closeread` Quarto extension to create a visually engaging story. 
+3.  Use the [`Closeread`](https://closeread.dev/){target="_blank"} Quarto extension to create a visually engaging story.
+
 :::
 
 ::: {.callout-note collapse = "true" title = "Activity Length" appearance = "minimal"} 
