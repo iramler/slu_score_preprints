@@ -47,16 +47,22 @@ By the end of this tutorial, you will be able to:
 :::
 
 ::: {.callout-note collapse = "true" title = "Activity Length" appearance = "minimal"} 
+
 This could be suitable of an out of class activity or one that spans one or more class periods. 
+
 :::
+
 
 ::: {.callout-note collapse = "true" title = "Methods" appearance = "minimal"} 
 
 **Technology Requirement:**
 
-This activity is designed to be completed primarily in `R` using a Quarto document workflow with a Closeread format. Students should be comfortable importing data and making basic plots with packages from the tidyverse (especially `readr`, `dplyr`, and `ggplot2`).
+- This activity is designed to be completed primarily in `R` using a Quarto document workflow with a Closeread format. 
 
-No previous experience with Closeread is required. 
+- Students should be comfortable importing data and making basic plots with packages from the tidyverse (especially `readr`, `dplyr`, and `ggplot2`).
+
+- No previous experience with Closeread is required. 
+
 :::
 
 # Data
