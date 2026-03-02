@@ -112,13 +112,11 @@ df_diff <- doughnut2015 |>
     `Race Number`,
     time_sec_adjusted = time_sec,
     Position,
-    Gender
-  ) |>
+    Gender) |>
   inner_join(
     doughnut2015unadj |>
       transmute(`Race Number`, time_sec_unadjusted = time_sec),
-    by = "Race Number"
-  ) |>
+    by = "Race Number") |>
   mutate(time_diff_sec = time_sec_unadjusted - time_sec_adjusted)
 ```
 
