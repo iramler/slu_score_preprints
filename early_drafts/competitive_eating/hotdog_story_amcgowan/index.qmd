@@ -34,21 +34,29 @@ Nathan's Famous, an American hot dog brand established in Brooklyn, New York, in
 
 In this module, you will learn how to use the quarto extension `closeread` to tell a story using data from Nathan's Hot Dog Contest. Upon completion of this module, you will have a Closeread document that looks similar to this: [Example Closeread](example-closeread.html){target="_blank"}
 
-::: {.callout-note collapse = "true" title = "Learning Objectives" appearance = "minimal"} By the end of this tutorial, you will be able to:
+::: {.callout-note collapse = "true" title = "Learning Objectives" appearance = "minimal"} 
+
+By the end of this tutorial, you will be able to:
 
 1.  Identify meaningful questions about a dataset.
 
 2.  Transform a dataset to answer those questions.
 
-3.  Use the `Closeread` Quarto extension to create a visually engaging story. :::
+3.  Use the `Closeread` Quarto extension to create a visually engaging story. 
+:::
 
-::: {.callout-note collapse = "true" title = "Activity Length" appearance = "minimal"} This could be suitable of an out of class activity or one that spans one or more class periods. :::
+::: {.callout-note collapse = "true" title = "Activity Length" appearance = "minimal"} 
+This could be suitable of an out of class activity or one that spans one or more class periods. 
+:::
 
-::: {.callout-note collapse = "true" title = "Methods" appearance = "minimal"} **Technology Requirement:**
+::: {.callout-note collapse = "true" title = "Methods" appearance = "minimal"} 
+
+**Technology Requirement:**
 
 This activity is designed to be completed primarily in `R` using a Quarto document workflow with a Closeread format. Students should be comfortable importing data and making basic plots with packages from the tidyverse (especially `readr`, `dplyr`, and `ggplot2`).
 
-No previous experience with Closeread is required. :::
+No previous experience with Closeread is required. 
+:::
 
 # Data
 
@@ -140,7 +148,9 @@ If you want to customize your Closeread further, there are more options here: [C
 
 To make a Closeread document, you need a section, a sticky, and a trigger.
 
-::: {.callout-note collapse = "true" title = "Section" appearance = "minimal"} A section (`cr-section`) enables Closeread features. If you type inside of the section, the text will appear on your sidebar. If you type outside of your section, the text will render like it would on a normal Quarto document. This is how you format a section:
+::: {.callout-note collapse = "true" title = "Section" appearance = "minimal"} 
+
+A section (`cr-section`) enables Closeread features. If you type inside of the section, the text will appear on your sidebar. If you type outside of your section, the text will render like it would on a normal Quarto document. This is how you format a section:
 
 ``` markdown
 
@@ -159,7 +169,10 @@ This is also where you will put your stickies!
 
 :::
 
-::: {.callout-note collapse = "true" title = "Sticky" appearance = "minimal"} Stickies (e.g. `#cr-ID`) stay stuck to the page, fixed in place while your sidebar text changes. You can name the ID part of the label anything you'd like, for example #cr-HotdogPlot or #cr-table. This is how you format a sticky:
+
+::: {.callout-note collapse = "true" title = "Sticky" appearance = "minimal"} 
+
+Stickies (e.g. `#cr-ID`) stay stuck to the page, fixed in place while your sidebar text changes. You can name the ID part of the label anything you'd like, for example #cr-HotdogPlot or #cr-table. This is how you format a sticky:
 
 ``` markdown
 
@@ -176,7 +189,9 @@ This is also where you will put your stickies!
 
 :::
 
-::: {.callout-note collapse = "true" title = "Trigger" appearance = "minimal"} A trigger (e.g. `@cr-ID`) allows you to make something from the section, like text, be the signal that a particular graph should appear on the right of the sidebar at the same time as whatever text the trigger is on. This is how you format a trigger:
+::: {.callout-note collapse = "true" title = "Trigger" appearance = "minimal"}
+
+A trigger (e.g. `@cr-ID`) allows you to make something from the section, like text, be the signal that a particular graph should appear on the right of the sidebar at the same time as whatever text the trigger is on. This is how you format a trigger:
 
 ``` markdown
 :::{.cr-section}
@@ -200,7 +215,9 @@ If you would like more information about the three parts of a Closeread (the sec
 
 Create a new Quarto document in the project folder where you installed the Closeread extension.
 
-::: {.callout-note title = "Exercise 1: Enable Closeread & Load Data" icon = false} a. Try editing the YAML header to enable Closeread and customize the colors.
+::: {.callout-note title = "Exercise 1: Enable Closeread & Load Data" icon = false} 
+
+a. Try editing the YAML header to enable Closeread and customize the colors.
 
 <details>
 
@@ -246,7 +263,9 @@ hotdog_winners <- read_csv("HotdogData.csv")
 
 :::
 
-::: {.callout-note title = "Exercise 2: Brainstorm Questions" icon = false} Now our document is ready! What story should we tell?
+::: {.callout-note title = "Exercise 2: Brainstorm Questions" icon = false}
+
+Now our document is ready! What story should we tell?
 
 Think of 2 questions that you would like to investigate about these winners.
 
@@ -264,7 +283,9 @@ Some questions we might explore:
 
 :::
 
-::: {.callout-note title = "Exercise 3: Start Your Closeread Story" icon = false} For our story, we will investigate: "How many hotdogs does someone need to eat to win the contest and has that number gone up over time?"
+::: {.callout-note title = "Exercise 3: Start Your Closeread Story" icon = false} 
+
+For our story, we will investigate: "How many hotdogs does someone need to eat to win the contest and has that number gone up over time?"
 
 a.  In plain text under your code to get our data, introduce your reader to Nathan's contest and your guiding questions.
 
@@ -303,7 +324,9 @@ When you are data scrollytelling with Closeread, it is nice to put visuals on th
 
 Let's make a sticky that will help us start to share with our readers how many hotdogs winners have to eat to claim first place and whether the number of hotdogs they have to eat to win has increased over the years.
 
-::: {.callout-note title = "Exercise 4: Create Your First Sticky" icon = false} a. Create a sticky called `#cr-plot1` inside your `cr-section`.
+::: {.callout-note title = "Exercise 4: Create Your First Sticky" icon = false} 
+
+a. Create a sticky called `#cr-plot1` inside your `cr-section`.
 
 <details>
 
@@ -483,7 +506,9 @@ If you need help finding out how, try searching the internet for things like <i>
 
 Once you have found out what Kobayashi did differently than previous winners, look for a picture of him that you like. We will continue our story by adding a picture of Kobayashi and a summary of how he doubled the amount of hotdogs people ate during the competition.
 
-::: {.callout-note title = "Exercise 6: Mention of Kobayashi" icon = false} a. Create a third sticky called `#cr-photo1`.
+::: {.callout-note title = "Exercise 6: Mention of Kobayashi" icon = false} 
+
+a. Create a third sticky called `#cr-photo1`.
 
 <details>
 
@@ -558,7 +583,9 @@ Let's make a new variable to help us see how the speed of winners has changed ov
 hotdog_winners <- hotdog_winners |> mutate(hotdogs_per_minute = Dogs/Time)
 ```
 
-::: {.callout-note title = "Exercise 7: Hotdogs Per Minute" icon = false} Make a new code chunk outside of your Closeread section. I recommend putting it under the code you used to get our data. Make sure to add `#| include: false` to keep the code from showing up when you render your document.
+::: {.callout-note title = "Exercise 7: Hotdogs Per Minute" icon = false} 
+
+Make a new code chunk outside of your Closeread section. I recommend putting it under the code you used to get our data. Make sure to add `#| include: false` to keep the code from showing up when you render your document.
 
 a.  Within your new code chunk, create a new variable called `hotdogs_per_minute` that tells us how many hotdogs per minute a winner ate during their competition.
 
@@ -703,4 +730,4 @@ If you're interested in understanding how competitive eaters are able to consume
 
 # References
 
-Bray, A., & Goldie, J. (2024). *Closeread*. https://closeread.dev/
+Bray, A., & Goldie, J. (2024). *Closeread*. <https://closeread.dev/>
