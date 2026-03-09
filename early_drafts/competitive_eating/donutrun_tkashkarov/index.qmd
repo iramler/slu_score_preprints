@@ -13,6 +13,7 @@ date: "Feb 18, 2026"
 description: "Exploring race time adjustments and performance by cleaning, joining, and analyzing doughnut run datasets."
 editor: 
   canonical: true
+image: Krispy_Kreme_Challenge_2010.webp
 categories:
   - Data Visualization
   - Data Wrangling
@@ -137,3 +138,9 @@ The final visualizations and quadratic model encourage students to move beyond s
 - Data Visualization with ggplot2 [https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/){target="_blank"}
 
 - Working with Dates and Times in R [https://lubridate.tidyverse.org/](https://lubridate.tidyverse.org/){target="_blank"}
+
+
+
+<!--
+https://krispykremechallenge.com/about-virtual-race
+-->
