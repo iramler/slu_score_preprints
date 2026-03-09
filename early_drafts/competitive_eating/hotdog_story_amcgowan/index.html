@@ -941,7 +941,7 @@ cookieconsent.run({
 <h1 class="title">An Introduction to Data Scrollytelling: Nathan’s Hot Dog Eating Contest</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Data Visualization</div>
-    <div class="quarto-category">Closeread Extention</div>
+    <div class="quarto-category">Closeread Extension</div>
     <div class="quarto-category">Data Storytelling</div>
   </div>
   </div>
@@ -995,25 +995,64 @@ cookieconsent.run({
 <h1>Introduction</h1>
 <p>Nathan’s Famous, an American hot dog brand established in Brooklyn, New York, in 1916, is widely recognized for its annual hot dog eating contest held each year on July 4th. Originally created as a promotional event to increase brand visibility, the contest has evolved into what many call the “Super Bowl” of competitive eating. Beginning in 2008, the event was standardized at a duration of ten minutes, though earlier competitions ranged from 2.5 to 12 minutes long. In order to compete, participants must be at least 18 years old and qualify by winning a smaller regional contest. On the day of the event, between 15 and 30 competitive eaters participate. In 2011, the organizers introduced separate divisions for men and women, resulting in two first-place winners each year. The top five competitors in each division receive cash prizes, with first place earning $10,000 in 2025.</p>
 <p>In this module, you will learn how to use the quarto extension <code>closeread</code> to tell a story using data from Nathan’s Hot Dog Contest. Upon completion of this module, you will have a Closeread document that looks similar to this: <a href="example-closeread.html" target="_blank">Example Closeread</a></p>
-<p>::: {.callout-note collapse = “true” title = “Learning Objectives” appearance = “minimal”}</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>By the end of this tutorial, you will be able to:</p>
 <ol type="1">
 <li><p>Identify meaningful questions about a dataset.</p></li>
 <li><p>Transform a dataset to answer those questions.</p></li>
 <li><p>Use the <a href="https://closeread.dev/" target="_blank"><code>Closeread</code></a> Quarto extension to create a visually engaging story.</p></li>
 </ol>
-<p>:::</p>
-<p>::: {.callout-note collapse = “true” title = “Activity Length” appearance = “minimal”}</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>This could be suitable of an out of class activity or one that spans one or more class periods.</p>
-<p>:::</p>
-<p>::: {.callout-note collapse = “true” title = “Methods” appearance = “minimal”}</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p><strong>Technology Requirement:</strong></p>
 <ul>
 <li><p>This activity is designed to be completed primarily in <code>R</code> using a Quarto document workflow with a Closeread format.</p></li>
 <li><p>Students should be comfortable importing data and making basic plots with packages from the tidyverse (especially <code>readr</code>, <code>dplyr</code>, and <code>ggplot2</code>).</p></li>
 <li><p>No previous experience with Closeread is required.</p></li>
 </ul>
-<p>:::</p>
+</div>
+</div>
+</div>
 </section>
 <section id="data" class="level1">
 <h1>Data</h1>
@@ -1108,7 +1147,18 @@ cookieconsent.run({
 </details>
 <p>If you want to customize your Closeread further, there are more options here: <a href="https://closeread.dev/guide/styling.html">Closeread Styling Page</a></p>
 <p>To make a Closeread document, you need a section, a sticky, and a trigger.</p>
-<p>::: {.callout-note collapse = “true” title = “Section” appearance = “minimal”}</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Section">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Section
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>A section (<code>cr-section</code>) enables Closeread features. If you type inside of the section, the text will appear on your sidebar. If you type outside of your section, the text will render like it would on a normal Quarto document. This is how you format a section:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Anything you put here would render normally </span>
@@ -1122,8 +1172,21 @@ cookieconsent.run({
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>This is also where you will put your stickies!</span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>::: </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>:::</p>
-<p>::: {.callout-note collapse = “true” title = “Sticky” appearance = “minimal”}</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Sticky">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sticky
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Stickies (e.g.&nbsp;<code>#cr-ID</code>) stay stuck to the page, fixed in place while your sidebar text changes. You can name the ID part of the label anything you’d like, for example #cr-HotdogPlot or #cr-table. This is how you format a sticky:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>:::{.cr-section} </span>
@@ -1135,9 +1198,11 @@ cookieconsent.run({
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>:::</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Trigger">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1146,7 +1211,7 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>A trigger (e.g.&nbsp;<code>@cr-ID</code>) allows you to make something from the section, like text, be the signal that a particular graph should appear on the right of the sidebar at the same time as whatever text the trigger is on. This is how you format a trigger:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>:::{.cr-section}</span>
@@ -1168,7 +1233,16 @@ cookieconsent.run({
 <section id="creating-a-closeread-document" class="level1">
 <h1>Creating a Closeread Document</h1>
 <p>Create a new Quarto document in the project folder where you installed the Closeread extension.</p>
-<p>::: {.callout-note title = “Exercise 1: Enable Closeread &amp; Load Data” icon = false}</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 1: Enable Closeread &amp; Load Data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise 1: Enable Closeread &amp; Load Data
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="a">
 <li>Try editing the YAML header to enable Closeread and customize the colors.</li>
 </ol>
@@ -1200,7 +1274,8 @@ cookieconsent.run({
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>hotdog_winners &lt;- read_csv("HotdogData.csv")</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>:::</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 2: Brainstorm Questions">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1220,13 +1295,21 @@ cookieconsent.run({
 <p>Some questions we might explore:</p>
 <ol type="1">
 <li><p>How many hotdogs does someone need to eat to win the contest and has that number gone up over time?</p></li>
-<li><p>Do male and female winners show different patterns over time?<br>
-</p></li>
+<li><p>Do male and female winners show different patterns over time?</p></li>
 </ol>
 </details>
 </div>
 </div>
-<p>::: {.callout-note title = “Exercise 3: Start Your Closeread Story” icon = false}</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 3: Start Your Closeread Story">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise 3: Start Your Closeread Story
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>For our story, we will investigate: “How many hotdogs does someone need to eat to win the contest and has that number gone up over time?”</p>
 <ol type="a">
 <li>In plain text under your code to get our data, introduce your reader to Nathan’s contest and your guiding questions.</li>
@@ -1253,11 +1336,21 @@ cookieconsent.run({
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>:::</p>
+</div>
+</div>
 <p>Now that we have introduced the readers of our story to our data and guiding questions, we should make a plot to start working on answering our questions.</p>
 <p>When you are data scrollytelling with Closeread, it is nice to put visuals on the right side of the sidebar in stickies, so that readers can look at the visuals while they scroll through text that explains what they are looking at.</p>
 <p>Let’s make a sticky that will help us start to share with our readers how many hotdogs winners have to eat to claim first place and whether the number of hotdogs they have to eat to win has increased over the years.</p>
-<p>::: {.callout-note title = “Exercise 4: Create Your First Sticky” icon = false}</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 4: Create Your First Sticky">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise 4: Create Your First Sticky
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="a">
 <li>Create a sticky called <code>#cr-plot1</code> inside your <code>cr-section</code>.</li>
 </ol>
@@ -1289,7 +1382,7 @@ cookieconsent.run({
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hotdog_winners, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Dogs)) <span class="sc">+</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Hotdogs Eaten"</span>, <span class="at">title =</span> <span class="st">"Total Hotdogs Eaten by Winners Over Time"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Hotdogs Eaten"</span>, <span class="at">title=</span><span class="st">"Total Hotdogs Eaten by Winners Over Time"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1331,7 +1424,8 @@ cookieconsent.run({
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>:::</p>
+</div>
+</div>
 <p>After looking at the plot, did you notice the dramatic jump from 2000 to 2001? It looks like the amount of hotdogs someone has to eat to claim first place nearly doubles after 2000.</p>
 <p>Let’s figure out why that happened.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 5: Create Another Sticky">
@@ -1440,7 +1534,16 @@ cookieconsent.run({
 <p>Take a moment to look Kobayashi up and try to figure out how he was able to eat so many more hotdogs than the winner from the year before him.</p>
 <p>If you need help finding out how, try searching the internet for things like <i>“How does Kobayashi eat so many hotdogs?”</i> or <i>“What did Kobayashi do in 2001 to win Nathan’s Hot Dog Contest?”</i></p>
 <p>Once you have found out what Kobayashi did differently than previous winners, look for a picture of him that you like. We will continue our story by adding a picture of Kobayashi and a summary of how he doubled the amount of hotdogs people ate during the competition.</p>
-<p>::: {.callout-note title = “Exercise 6: Mention of Kobayashi” icon = false}</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 6: Mention of Kobayashi">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise 6: Mention of Kobayashi
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ol type="a">
 <li>Create a third sticky called <code>#cr-photo1</code>.</li>
 </ol>
@@ -1490,11 +1593,21 @@ cookieconsent.run({
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>water to make it easier to swallow. Kobayashi paired this new strategy with </span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>shaking his body to force food down. @cr-photo1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>:::</p>
+</div>
+</div>
 <p>Now we know how Kobayashi did it, but how much faster is his method, compared to earlier years? In our plot, the earliest winners ate a lot fewer hotdogs than more recent champions. Maybe what early winners lacked in the amount they were able to eat, they made up for in speed?</p>
 <p>How can we look at how fast winners were eating hotdogs, not just the total amount of hotdogs they were able to eat?</p>
 <p>Let’s make a new variable to help us see how the speed of winners has changed over time.</p>
-<p>::: {.callout-note title = “Exercise 7: Hotdogs Per Minute” icon = false}</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 7: Hotdogs Per Minute">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise 7: Hotdogs Per Minute
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Make a new code chunk outside of your Closeread section. I recommend putting it under the code you used to get our data. Make sure to add <code>#| include: false</code> to keep the code from showing up when you render your document.</p>
 <ol type="a">
 <li>Within your new code chunk, create a new variable called <code>hotdogs_per_minute</code> that tells us how many hotdogs per minute a winner ate during their competition.</li>
@@ -1530,7 +1643,7 @@ cookieconsent.run({
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> hotdog_winners, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> hotdogs_per_minute)) <span class="sc">+</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Hotdogs Eaten Per Minute"</span>, <span class="at">title =</span> <span class="st">"Amount of Hotdogs Eaten Per Minute by Winners"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Hotdogs Eaten Per Minute"</span>, <span class="at">title=</span><span class="st">"Amount of Hotdogs Eaten Per Minute by Winners"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1558,10 +1671,23 @@ cookieconsent.run({
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>as Kobayashi did during his 2001 win. If past winners could match his speed, why</span>
 <span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>did they eat so many fewer total hotdogs?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>:::</p>
+</div>
+</div>
 <p>Do you notice anything interesting about speed over time from our new plot?</p>
 <p>Why had none of the winners from earlier years eaten as many total hotdogs as Kobayashi when we can see that they matched his pace in hotdogs eaten per minute?</p>
-<p>::: {.callout-note title = “Exercise 8: Context Matters” icon = false} a. Why do you think early winners have such impressive hotdogs per minute rates?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 8: Context Matters">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exercise 8: Context Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Why do you think early winners have such impressive hotdogs per minute rates?</li>
+</ol>
 <details>
 <summary>
 <b>Click for answer</b>
@@ -1581,7 +1707,7 @@ cookieconsent.run({
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>) <span class="sc">+</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Hotdogs Eaten Per Minute"</span>, <span class="at">title =</span> <span class="st">"Amount of Hotdogs Eaten Per Minute by Winners"</span>, <span class="at">color =</span> <span class="st">"Contest Duration (Mins)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Hotdogs Eaten Per Minute"</span>, <span class="at">title=</span><span class="st">"Amount of Hotdogs Eaten Per Minute by Winners"</span>, <span class="at">color =</span> <span class="st">"Contest Duration (Mins)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1614,7 +1740,8 @@ cookieconsent.run({
 <span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>No matter the duration, it definitely takes dedication and a strong stomach to </span>
 <span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>place first in this famous competitive eating contest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<p>:::</p>
+</div>
+</div>
 <p>Congratulations! You just finished your first data scrollytelling project!</p>
 <p>Closeread has all kinds of cool features that you can use to make your story even more engaging. If you want to keep learning about Closeread, you can learn how to highlight parts of your sticky, zoom in on plots and pictures, and check out published examples of other Closeread stories here: <a href="https://closeread.dev/gallery/">Closeread Gallery</a></p>
 </section>
