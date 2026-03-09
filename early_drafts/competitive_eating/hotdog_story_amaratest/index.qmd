@@ -35,21 +35,26 @@ Nathan's Famous, an American hot dog brand established in Brooklyn, New York, in
 In this module, you will learn how to use the quarto extension `closeread` to tell a story using data from Nathan's Hot Dog Contest. Upon completion of this module, you will have a Closeread document that looks similar to this: [Example Closeread](example-closeread.html){target="_blank"}
 
 
+
 :::{.callout-note collapse="true" title="Learning Objectives" appearance="minimal"} 
 By the end of this tutorial, you will be able to:
 
-Identify meaningful questions about a dataset.
+1. Identify meaningful questions about a dataset.
   
-Transform a dataset to answer those questions.
+2. Transform a dataset to answer those questions.
   
-Use the [`Closeread`](https://closeread.dev/){target="_blank"} Quarto extension to create a visually engaging story.
+3. Use the [`Closeread`](https://closeread.dev/){target="_blank"} Quarto extension to create a visually engaging story.
 :::
+
+
 
 :::{.callout-note collapse="true" title="Activity Length" appearance="minimal"} 
 
 This could be suitable of an out of class activity or one that spans one or more class periods. 
 
 :::
+
+
 
 
 :::{.callout-note collapse="true" title="Methods" appearance="minimal"}
@@ -64,7 +69,7 @@ This could be suitable of an out of class activity or one that spans one or more
 
 :::
 
-<!--
+
 
 # Data
 
@@ -156,7 +161,7 @@ If you want to customize your Closeread further, there are more options here: [C
 
 To make a Closeread document, you need a section, a sticky, and a trigger.
 
-::: {.callout-note collapse = "true" title = "Section" appearance = "minimal"} 
+:::{.callout-note collapse="true" title="Section" appearance="minimal"} 
 
 A section (`cr-section`) enables Closeread features. If you type inside of the section, the text will appear on your sidebar. If you type outside of your section, the text will render like it would on a normal Quarto document. This is how you format a section:
 
@@ -178,7 +183,7 @@ This is also where you will put your stickies!
 :::
 
 
-::: {.callout-note collapse = "true" title = "Sticky" appearance = "minimal"} 
+:::{.callout-note collapse="true" title="Sticky" appearance="minimal"} 
 
 Stickies (e.g. `#cr-ID`) stay stuck to the page, fixed in place while your sidebar text changes. You can name the ID part of the label anything you'd like, for example #cr-HotdogPlot or #cr-table. This is how you format a sticky:
 
@@ -197,7 +202,7 @@ Stickies (e.g. `#cr-ID`) stay stuck to the page, fixed in place while your sideb
 
 :::
 
-::: {.callout-note collapse = "true" title = "Trigger" appearance = "minimal"}
+:::{.callout-note collapse="true" title="Trigger" appearance="minimal"}
 
 A trigger (e.g. `@cr-ID`) allows you to make something from the section, like text, be the signal that a particular graph should appear on the right of the sidebar at the same time as whatever text the trigger is on. This is how you format a trigger:
 
@@ -223,7 +228,7 @@ If you would like more information about the three parts of a Closeread (the sec
 
 Create a new Quarto document in the project folder where you installed the Closeread extension.
 
-::: {.callout-note title = "Exercise 1: Enable Closeread & Load Data" icon = false} 
+:::{.callout-note title="Exercise 1: Enable Closeread & Load Data" icon=false} 
 
 a. Try editing the YAML header to enable Closeread and customize the colors.
 
@@ -271,7 +276,7 @@ hotdog_winners <- read_csv("HotdogData.csv")
 
 :::
 
-::: {.callout-note title = "Exercise 2: Brainstorm Questions" icon = false}
+:::{.callout-note title="Exercise 2: Brainstorm Questions" icon=false}
 
 Now our document is ready! What story should we tell?
 
@@ -285,13 +290,13 @@ Some questions we might explore:
 
 1.  How many hotdogs does someone need to eat to win the contest and has that number gone up over time?
 
-2.  Do male and female winners show different patterns over time?\
+2.  Do male and female winners show different patterns over time?
 
 </details>
 
 :::
 
-::: {.callout-note title = "Exercise 3: Start Your Closeread Story" icon = false} 
+:::{.callout-note title="Exercise 3: Start Your Closeread Story" icon=false} 
 
 For our story, we will investigate: "How many hotdogs does someone need to eat to win the contest and has that number gone up over time?"
 
@@ -332,7 +337,7 @@ When you are data scrollytelling with Closeread, it is nice to put visuals on th
 
 Let's make a sticky that will help us start to share with our readers how many hotdogs winners have to eat to claim first place and whether the number of hotdogs they have to eat to win has increased over the years.
 
-::: {.callout-note title = "Exercise 4: Create Your First Sticky" icon = false} 
+:::{.callout-note title="Exercise 4: Create Your First Sticky" icon=false} 
 
 a. Create a sticky called `#cr-plot1` inside your `cr-section`.
 
@@ -367,7 +372,7 @@ b.  Inside the sticky, plot Total Hotdogs Eaten by Winners Over Time.
 ggplot(data = hotdog_winners, aes(x = Year, y = Dogs)) +
   geom_point() +
   theme_minimal() +
-  labs(y = "Hotdogs Eaten", title = "Total Hotdogs Eaten by Winners Over Time")
+  labs(y = "Hotdogs Eaten", title="Total Hotdogs Eaten by Winners Over Time")
 ```
 
 </details>
@@ -414,7 +419,7 @@ After looking at the plot, did you notice the dramatic jump from 2000 to 2001? I
 
 Let's figure out why that happened.
 
-::: {.callout-note title = "Exercise 5: Create Another Sticky" icon = false}
+:::{.callout-note title="Exercise 5: Create Another Sticky" icon=false}
 
 a.  Create a second sticky called `#cr-table1`.
 
@@ -514,7 +519,7 @@ If you need help finding out how, try searching the internet for things like <i>
 
 Once you have found out what Kobayashi did differently than previous winners, look for a picture of him that you like. We will continue our story by adding a picture of Kobayashi and a summary of how he doubled the amount of hotdogs people ate during the competition.
 
-::: {.callout-note title = "Exercise 6: Mention of Kobayashi" icon = false} 
+:::{.callout-note title="Exercise 6: Mention of Kobayashi" icon=false} 
 
 a. Create a third sticky called `#cr-photo1`.
 
@@ -591,7 +596,7 @@ Let's make a new variable to help us see how the speed of winners has changed ov
 hotdog_winners <- hotdog_winners |> mutate(hotdogs_per_minute = Dogs/Time)
 ```
 
-::: {.callout-note title = "Exercise 7: Hotdogs Per Minute" icon = false} 
+:::{.callout-note title="Exercise 7: Hotdogs Per Minute" icon=false} 
 
 Make a new code chunk outside of your Closeread section. I recommend putting it under the code you used to get our data. Make sure to add `#| include: false` to keep the code from showing up when you render your document.
 
@@ -634,7 +639,7 @@ c.  Inside your new sticky, make a plot of Hotdogs Per Minute Eaten by Winners O
 ggplot(data = hotdog_winners, aes(x = Year, y = hotdogs_per_minute)) +
   geom_point() +
   theme_minimal() +
-  labs(y = "Hotdogs Eaten Per Minute", title = "Amount of Hotdogs Eaten Per Minute by Winners")
+  labs(y = "Hotdogs Eaten Per Minute", title="Amount of Hotdogs Eaten Per Minute by Winners")
 ```
 
 </details>
@@ -667,7 +672,7 @@ Do you notice anything interesting about speed over time from our new plot?
 
 Why had none of the winners from earlier years eaten as many total hotdogs as Kobayashi when we can see that they matched his pace in hotdogs eaten per minute?
 
-::: {.callout-note title = "Exercise 8: Context Matters" icon = false} a. Why do you think early winners have such impressive hotdogs per minute rates?
+:::{.callout-note title="Exercise 8: Context Matters" icon=false} a. Why do you think early winners have such impressive hotdogs per minute rates?
 
 <details>
 
@@ -690,7 +695,7 @@ ggplot(data = hotdog_winners, aes(x = Year, y = hotdogs_per_minute, color = Time
   geom_point() +
   theme_minimal() +
   scale_color_viridis_c(option = "plasma") +
-  labs(y = "Hotdogs Eaten Per Minute", title = "Amount of Hotdogs Eaten Per Minute by Winners", color = "Contest Duration (Mins)")
+  labs(y = "Hotdogs Eaten Per Minute", title="Amount of Hotdogs Eaten Per Minute by Winners", color = "Contest Duration (Mins)")
 ```
 
 </details>
@@ -724,7 +729,7 @@ place first in this famous competitive eating contest.
 
 :::
 
--->
+
 
 
 Congratulations! You just finished your first data scrollytelling project!
