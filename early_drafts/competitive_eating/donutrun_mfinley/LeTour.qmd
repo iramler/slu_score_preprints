@@ -1,0 +1,18 @@
+---
+title: "Tour De France"
+format: html
+---
+
+The Tour de France is a multi-day multi-stage bike race around france and surrounding countries. Athletes are pushed to their limit both physiologically and psychologically for ego, earnings, teamates, and national pride. I will be looking at best nation, best age, and interesting outliers.
+
+The goal for the me is to teach the reader about the tour and help them learn about some interesting facts and data.
+
+The idea I want the reader to take away is how to scrape data, how to create simple plots and to graph the data in a meaningful way.
+
+https://www.procyclingstats.com/race/tour-de-france/statistics
+```{r}
+library(dplyr)
+library(readr)
+library(tidyverse)
+rider = data
+```

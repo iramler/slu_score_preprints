@@ -1,0 +1,349 @@
+---
+title: "Doughnuts and 5ks"
+author:
+  - name: Max Finley
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+date: "Feburary 25th, 2026"
+description: "Exploring competitive eating while running."
+editor: 
+  canonical: true
+image: order-krispy-kreme-original-glazed-online_02.jpg
+execute:
+  eval: false
+  echo: false
+  warning: false
+  message: false
+categories:
+  - Webscraping
+  - Data Visualization
+  - Data Wrangling
+  - Joining / Merging
+---
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+
+### Introduction
+
+The Doughnut Run 5k is a very special athletic contest, held every year since 2015. This event is put on by the local college triathlon team in Ames Iowa. In this sporting event, athletes must complete a 5k, all the while eating as many doughnuts for as big a time bonus as possible. Here are the time bonuses: 
+```{r}
+library(tidyverse)
+library(dplyr)
+#install.packages("jpeg")
+library(jpeg)
+
+img <- readJPEG("donut_times.jpg")
+
+plot.new()
+rasterImage(img, 0, 0, 1, 1)
+```
+
+I will note that there are athletes who participated in this event who didn' eat donuts, and have been excluded from tests and plots for the sake of doughnuts and the 5k.
+
+In this worksheet, you will create linear models, and new data sets to answer questions.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could be suitable of an out of class activity or one that spans more than one class period.
+:::
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Filter Data to meet requirements.
+
+2.  Create and plot a regression model.
+
+3.  Explore relationships between variables and communicate findings using visualizations.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+**Technology Requirement:**
+
+This activity requires the use of `R` with familiarity in `Quarto` documents and several `tidyverse` packages including `dplyr`and  `readr`.
+:::
+
+### Data
+
+The `X5KRunUnadj1` dataset contains 177 rows and 11 columns. Each row represents a runner player from the 2015 Doughnut 5k.
+
+Data:
+```{r}
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+
+# --- Set 2: Run Files ---
+# Read and force Time to be character
+run_adj <- read_csv("5KRun1.csv") %>%
+  mutate(Time = as.character(Time))|> select(1:4) # Ensure this is text
+
+run_unadj <- read_csv("5KRunUnadj1.csv") |> select(1:4)
+
+# --- Combine (Join) them ---
+X5KRun1 <- bind_rows(book_adj, run_adj)
+X5KRunUnadj1 <- bind_rows(book_unadj, run_unadj)
+
+# --- Clean Unadjusted ---
+X5KRunUnadj1 <- X5KRunUnadj1[, colSums(is.na(X5KRunUnadj1)) < nrow(X5KRunUnadj1)]
+
+
+
+# adjusted dataset
+
+X5KRun1$Time <- as.character(X5KRun1$Time)
+fix_time <- function(x) {
+  x <- as.character(x)
+
+  parts <- strsplit(x, ":", fixed = TRUE)
+
+  out <- vapply(parts, function(p) {
+    if (length(p) == 3 && p[3] == "00") {
+      # mm:ss:00  ->  00:mm:ss
+      sprintf("00:%02d:%02d", as.integer(p[1]), as.integer(p[2]))
+    } else if (length(p) == 3) {
+      # already hh:mm:ss, just pad
+      sprintf("%02d:%02d:%02d", as.integer(p[1]), as.integer(p[2]), as.integer(p[3]))
+    } else {
+      NA_character_
+    }
+  }, character(1))
+
+  out
+}
+
+X5KRun1$Time <- fix_time(X5KRun1$Time)
+
+
+# time_sec culumn
+X5KRun1$time_sec <- with(
+  as.data.frame(do.call(rbind, strsplit(X5KRun1$Time, ":"))),
+  as.integer(V1) * 3600 + as.integer(V2) * 60 + as.integer(V3)
+)
+
+
+
+# unadjusted dataset
+
+X5KRunUnadj1$Time <- as.character(X5KRunUnadj1$Time)
+fix_time <- function(x) {
+  x <- as.character(x)
+
+  parts <- strsplit(x, ":", fixed = TRUE)
+
+  out <- vapply(parts, function(p) {
+    if (length(p) == 3 && p[3] == "00") {
+      # mm:ss:00  ->  00:mm:ss
+      sprintf("00:%02d:%02d", as.integer(p[1]), as.integer(p[2]))
+    } else if (length(p) == 3) {
+      # already hh:mm:ss, just pad
+      sprintf("%02d:%02d:%02d", as.integer(p[1]), as.integer(p[2]), as.integer(p[3]))
+    } else {
+      NA_character_
+    }
+  }, character(1))
+
+  out
+}
+
+X5KRunUnadj1$Time <- fix_time(X5KRunUnadj1$Time)
+
+
+# time_sec culumn
+
+X5KRunUnadj1$time_sec <- with(
+  as.data.frame(do.call(rbind, strsplit(X5KRunUnadj1$Time, ":"))),
+  as.integer(V1) * 3600 + as.integer(V2) * 60 + as.integer(V3))
+
+
+# time diff
+
+# time diff
+library(dplyr)
+
+df_diff <- X5KRun1 %>%
+  inner_join(X5KRunUnadj1 %>% select(`Race Number`, time_sec),
+             by = "Race Number",
+             suffix = c("_adj", "_unadj")) %>%
+  # The difference is Unadjusted (raw time) minus Adjusted (time after donuts)
+  mutate(time_diff_sec = time_sec_unadj - time_sec_adj)
+
+
+
+# doughnut table
+
+bonus_tbl <- data.frame(
+  donuts = 1:40,
+  bonus = c(
+    "00:00:15","00:00:45","00:01:30","00:02:30","00:03:30","00:04:30",
+    "00:05:30","00:06:30","00:07:30","00:10:30","00:11:30","00:12:30",
+    "00:13:30","00:14:30","00:17:30","00:18:30","00:19:30","00:20:30",
+    "00:21:30","00:24:30","00:25:30","00:26:30","00:27:30","00:28:30",
+    "00:31:30","00:32:30","00:33:30","00:34:30","00:35:30","00:38:30",
+    "00:39:30","00:40:30","00:41:30","00:42:30","00:45:30","00:46:30",
+    "00:47:30","00:48:30","00:49:30","00:52:30"
+  )
+)
+
+library(lubridate)
+bonus_tbl$bonus_sec <- as.numeric(hms(bonus_tbl$bonus))
+
+
+
+
+# number of doughnuts
+
+# number of doughnuts
+# This counts how many bonus milestones from the table the runner actually achieved
+df_diff$donuts <- sapply(df_diff$time_diff_sec, function(x) {
+  if (is.na(x) || x <= 0) return(0)
+  
+  # sum up how many rows in the bonus table are less than or equal to the time saved
+  count <- sum(x >= bonus_tbl$bonus_sec)
+  return(count)
+})
+
+# SAFETY FILTER: 
+# If your data has errors (like a runner matched with the wrong time), 
+# this removes people with impossible donut counts (e.g., > 13).
+df_diff <- df_diff %>% filter(donuts <= 13)
+
+
+
+# results
+
+library(ggplot2)
+
+ggplot(df_diff, aes(x = donuts)) +
+  geom_bar(fill = "#d95f02") +
+  labs(
+    title = "Distribution of Donuts Eaten",
+    x = "Number of Donuts",
+    y = "Number of Runners"
+  ) +
+  theme_minimal()
+
+
+
+ggplot(df_diff, aes(x = time_sec_unadj, y = time_sec_adj)) +
+  geom_point(alpha = 0.7, color = "#2c7fb8") +
+  # Adds a reference line where Adjusted = Original (0 donuts eaten)
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "red") +
+  labs(
+    title = "Original vs. Adjusted Time",
+    subtitle = "Points below the red line represent time saved by eating donuts",
+    x = "Original Time (seconds)",
+    y = "Adjusted Time (seconds)"
+  ) +
+  theme_minimal()
+
+
+
+# 1. Create a new rank column based on the CORRECT column name (time_sec_adj)
+df_diff$time_rank <- rank(df_diff$time_sec_adj, ties.method = "min")
+
+# 2. Cut based on the new time_rank
+# Adjust the 'breaks' if your total number of runners (383) exceeds the previous limit
+df_diff$rank_group <- cut(df_diff$time_rank, breaks = c(0, 10, 50, 100, 700))
+
+# 3. Plot the boxplot
+library(ggplot2)
+ggplot(df_diff, aes(x = rank_group, y = donuts)) +
+  geom_boxplot(fill = "lightblue") +
+  labs(
+    title = "Donuts Eaten by Finish Rank Group",
+    subtitle = "Ranked by Final Adjusted Time",
+    x = "Finish Rank Group (1 = Fastest)",
+    y = "Number of Donuts"
+  ) +
+  theme_minimal()
+
+
+library(ggplot2)
+ggplot(df_diff, aes(x = donuts, y = time_sec_adj)) +
+  geom_point(fill = "#d95f02") +
+  geom_smooth() +
+  labs(
+    title = "Distribution of Donuts Eaten",
+    x = "Number of Donuts",
+    y = "Time Adj"
+  ) +
+  theme_minimal()
+
+
+
+
+df_diff2 <- df_diff |> filter(donuts > 0)
+ggplot(df_diff2, aes(x = donuts, y = time_sec_adj)) +
+  geom_point(fill = "#d95f02") +
+  geom_smooth() +
+  labs(
+    title = "Distribution of Donuts Eaten more than 0",
+    x = "Number of Donuts",
+    y = "time adj"
+  ) +
+  theme_minimal()
+```
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable           | Description                                                          |
+|--------------------|----------------------------------------------------------------------|
+| Position           | The place the athlete got                                            |
+| Race Number        | Number on bib of racer                                               |
+| Time               | Time adjusted for doughnuts ate                                      |
+| time_sec_adj       | total seconds of adjusted time                                       |
+| time_sec_unadj     | seconds it took to complete 5k without adjustment                    |
+| time_sec_diff      | difference between adjusted and unadjusted                           |
+|--------------------|----------------------------------------------------------------------|
+|                    |                                                                      |
+
+</details>
+
+</details>
+
+#### Data Sources
+
+
+### Materials
+This data set has been made palatable so you don't have to do the gritty work.
+
+
+Find fastest runner who ate more than 10 donuts, using un-adjusted time. Then the slowest of who ate more than 10, then the fastest of who ate less than 3, and the slowest of who ate less than 3.
+```{r}
+
+```
+
+Create a linear model using the un-adjusted time to predict the adjusted time, then create a linear model using the donuts eaten to find adjusted time. Interpret the slope for both models.
+```{r}
+
+```
+
+Your turn:
+ create a visualization of this data you think would be interesting or useful:
+```{r}
+ 
+```
+- Solutions:
+  + [Quarto with visible R code](~/stat450-spr2026-score/Max_Finley/doughnert.qmd)
+  + [HTML with hideable R code](~/stat450-spr2026-score/Max_Finley/doughnert.html)
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+This is an intro to linear regression module that acts as an assignment and not a walk through.
+:::
+
+<!-- 
+
+https://krispykremesa.com/wp-content/uploads/2023/06/order-krispy-kreme-original-glazed-online_02.jpg
+
+-->
