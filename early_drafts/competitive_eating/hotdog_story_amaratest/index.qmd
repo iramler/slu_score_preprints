@@ -14,7 +14,7 @@ resources:
   - "example-closeread_files/"
 categories:
   - Data Visualization
-  - Closeread Extention
+  - Closeread Extension
   - Data Storytelling
 ---
 
@@ -34,26 +34,25 @@ Nathan's Famous, an American hot dog brand established in Brooklyn, New York, in
 
 In this module, you will learn how to use the quarto extension `closeread` to tell a story using data from Nathan's Hot Dog Contest. Upon completion of this module, you will have a Closeread document that looks similar to this: [Example Closeread](example-closeread.html){target="_blank"}
 
-:::{.callout-note collapse = "true" title = "Learning Objectives" appearance = "minimal"} 
 
+:::{.callout-note collapse="true" title="Learning Objectives" appearance="minimal"} 
 By the end of this tutorial, you will be able to:
 
-1.  Identify meaningful questions about a dataset.
-
-2.  Transform a dataset to answer those questions.
-
-3.  Use the [`Closeread`](https://closeread.dev/){target="_blank"} Quarto extension to create a visually engaging story.
-
+Identify meaningful questions about a dataset.
+  
+Transform a dataset to answer those questions.
+  
+Use the [`Closeread`](https://closeread.dev/){target="_blank"} Quarto extension to create a visually engaging story.
 :::
 
-:::{.callout-note collapse = "true" title = "Activity Length" appearance = "minimal"} 
+:::{.callout-note collapse="true" title="Activity Length" appearance="minimal"} 
 
 This could be suitable of an out of class activity or one that spans one or more class periods. 
 
 :::
 
 
-:::{.callout-note collapse = "true" title = "Methods" appearance = "minimal"} 
+:::{.callout-note collapse="true" title="Methods" appearance="minimal"}
 
 **Technology Requirement:**
 
