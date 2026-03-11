@@ -24,7 +24,7 @@ format:
 categories:
   - Paired Data
   - Difference in Means
-image: womens_gs.jpeg
+image: womens_gs.png
 ---
 
 ## Introduction to Giant Slalom Skiing
