@@ -1,0 +1,114 @@
+---
+title: "Exploring Differences in Women's World Cup Giant Slalom Run Times"
+author: 
+  - name: Emilia Agostinelli
+    url: 
+    affiliation: 
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    email: iramler@stlawu.edu
+    affiliation: 
+      - ref: slu
+  - name: Robin Lock
+    affiliation:
+      - ref: slu
+  
+date: March 5, 2025
+description: "Statistics from two runs at a women's World Cup alpine skiing giant slalom race at Mont-Tremblant"
+editor: 
+  canonical: true
+format:
+  html:
+    embed-resources: false
+categories:
+  - Paired Data
+  - Difference in Means
+image: womens_gs.jpeg
+---
+
+## Introduction to Giant Slalom Skiing
+
+If you are unfamiliar with giant slalom skiing, please watch this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XN5j8t1GEuU?si=_KFsIYXd7qevRl62" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+World Cup Giant Slalom (GS) is a high-speed alpine skiing event where skiers navigate a series of wide, rhythmic turns through pairs of gates. In World Cup GS, there are two runs. Only the thirty fastest racers on the first run take a second run. If a racer is disqualified (DSQ) or did not finish (DNF) their first run, they do not take a second run. The order for the first run is determined by taking all racers and ordering them by their World Cup points, from highest to lowest. World Cup points are a measure to rank a skier's performance throughout the season. The best ranked skier has the highest points. From there, the top 30 racers are put into three groups. The best seven racers are randomly assigned a bib 1-7. The next eight best competitors are randomly assigned a bib 8-15. The next best 15 racers are randomly assigned a bib 16-30. The remaining racers go in descending order of World Cup points. A second run takes place a couple hours after the first run is completed, allowing time for racers to have a break, for the course to be reset, and for racers to inspect the new course. Competitors race in reverse order of their results on the first run, so the 30th fastest racer on the first run goes 1st on the second run and so on. This data set includes data from only the top thirty finishers as any racers who placed higher than 30th do not take a second run.
+
+In this worksheet, we will be able to explore paired data, as we have information on 2 runs by the same competitor (unless they DSQ or DNF on the second run). Additionally, we will investigate difference in means between the 2 runs to determine if racers are on average faster or slower on a specific run. We will brainstorm reasoning for findings and understand the real-world applications of this data exercise.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly a half an hour to complete. Questions can also be pulled from this activity to serve as shorter examples.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+1.  Gather summary statistics.
+
+2.  Perform a test for difference in means.
+
+3.  Interpret findings from a paired t-test.
+
+4.  Find a confidence interval (CI) for difference in mean run time.
+
+5.  Relate findings from CIs and t-tests.
+
+6.  Recognizing the limitations of data.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will need access to a statistical software, such as Minitab or R.
+
+Students are expected to have:
+
+1.  Familiarity with basic statistical analysis techniques, such as measures of central tendency (mean) and measures of dispersion (standard deviation).
+
+2.  Knowledge of performing and interpreting a t-test for difference in means with paired data.
+
+3.  Understanding of confidence intervals and their interpretations.
+:::
+
+### Data
+
+Two sets of data are explored in this module. The majority of analysis is based on a data set containing information from a women's World Cup GS race at Mont-Tremblant. A data set containing information from a women's World Cup GS race at Copper Mountain is also referenced. 
+
+Each data set has 30 rows, with each row representing a racer. There are a few missing values in the Run2_Time and Time_Diff columns due to racers not finishing their second run. There are three variables in each data set as described below.
+
+| Variable   | Description                                  |
+|------------|----------------------------------------------|
+| Run1_Time  | Time for run 1 in seconds                    |
+| Run2_Time  | Time for run 2 in seconds                    |
+| Time_Diff  | Difference between run 1 time and run 2 time |
+
+The data sets can be accessed here:
+
+[Tremblant_diff.csv](Tremblant_diff.csv)
+
+[Copper_diff.csv](Copper_diff.csv)
+
+### Data Source
+
+[FIS World Cup Women's GS at Tremblant](https://www.fis-ski.com/DB/general/results.html?sectorcode=AL&raceid=118343 "FIS World Cup Women's GS at Tremblant"){target="_blank"}
+
+- The description of the data scraping/cleaning for Tremblant can be accessed here: [Women’s Alpine Skiing World Cup GS Statistics](https://data.scorenetwork.org/skiing/Womens_Tremblant_GS.html){target="_blank"}
+
+[FIS World Cup Women's GS at Copper](https://www.fis-ski.com/DB/general/results.html?sectorcode=AL&raceid=127442 "FIS World Cup Women's GS at Copper"){target="blank"}
+
+### Materials
+
+[Class Worksheet](Tremblant_Worksheet.docx)
+
+[Class Worksheet Key](Tremblant_Worksheet_Key.docx)
+
+### Acknowledgements
+
+Image credits:
+
+Trovati, Alessandro. "Mikaela Shiffrin leans into a turn during her winning giant-slalom run Thursday at the alpine skiing world championships in Meribel, France." Los Angeles Times, 16 Feb. 2023, www.latimes.com/sports/olympics/story/2023-02-16/mikaela-shiffrin-wins-gold-giant-slalom-world-championships. 
