@@ -901,10 +901,7 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-video" id="toc-welcome-video" class="nav-link active" data-scroll-target="#welcome-video">Welcome Video</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link active" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </nav>
     </div>
@@ -975,201 +972,105 @@ cookieconsent.run({
 </header>
 
 
-<section id="welcome-video" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-video">Welcome Video</h2>
-<p>For those interested in how data analytics is used in swimming, please check out this video about how University of Virginia, Mathematics professor Dr.&nbsp;Ken Ono helps the UVA swim team.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E_Q5I0AQSS0?si=3XCjte1_3eRz3H1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
+<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/swimming/olympic_swimming_100m/" target="_blank">https://modules.scorenetwork.org/swimming/olympic_swimming_100m/</a></p>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Thumbnail photo taken from <a href="https://swimswam.com/tokyo-2020-olympic-previews-no-room-for-error-in-the-womens-50-freestyle/" class="uri">https://swimswam.com/tokyo-2020-olympic-previews-no-room-for-error-in-the-womens-50-freestyle/</a>, archive photo via Jaimi Joy, &lt;www.jaimijoy.com&gt;</p>
+<!--
+
+## Welcome Video
+
+For those interested in how data analytics is used in swimming, please check out this video about how University of Virginia, Mathematics professor Dr. Ken Ono helps the UVA swim team.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E_Q5I0AQSS0?si=3XCjte1_3eRz3H1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
 </iframe>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In Olympic swimming, athletes compete using different strokes, each with unique styles and challenges. <a href="https://youtu.be/5HLW2AI1Ink?si=0bEoXJDhNXL8Kvwq" target="_blank">Freestyle</a> is usually the fastest (alternating arm strokes and a flutter kick), <a href="https://youtu.be/UffZn_-lU54?si=kFFY_iPlkRbu1n1m" target="_blank">butterfly</a> is powerful but demanding (both arms moving symmetrically, accompanied by the dolphin kick), and <a href="https://youtu.be/89HxafulzyI?si=sHjHikfo4K1Z4e31" target="_blank">backstroke</a> is swum on the back (arms reach alternately above the head and enter the water directly in line with the shoulders).</p>
-<p>This module analyzes results from the women’s 100m events (finalists) from 1964-2024 (where complete results are available) as recorded by <a href="https://olympics.com/en/paris-2024/sports/swimming" target="_blank">Olympics.com</a>. Over time, performances reflect advances in training and technology, rule changes, and the growth of women’s participation. You will compare strokes and quantify changes across eras using boxplots and two-sample confidence intervals. Note that there is a fourth event, the 100m breaststroke, but it is excluded from this module because complete finalist times were not available on Olympics.com prior to 2020.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity Length
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This activity would likely be suitable for an in-class example or quiz that lasts roughly 20 - 30 minutes.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of the activity, you will be able to:</p>
-<ol type="1">
-<li>Analyze distributions using boxplots.</li>
-<li>Compare and contrast distributions in the same or different groups.</li>
-<li>Assess differences between two samples using confidence intervals.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>For this activity, students will primarily use basic concepts of boxplots and two-sample t confidence intervals to analyze data. The activity can easily be adapted to use other inference methods such as ANOVA or Bootstrap intervals.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Technology Requirements
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The provided <em>low-tech worksheet</em> requires StatKey or similar software to obtain t-scores, as well as access to a calculator.</p>
-<p>Since the data are provided, instructors are encouraged to adapt the worksheets so students can make calculations and build graphics using their preferred software. The <em>tech worksheet</em> is designed to facilitate this approach.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>The data set contains 218 rows and 10 columns. Each row represents a female swimmer who competed in the 100m Olympic event during the period 1968 to 2024. The data includes top 8 finishers from woman racers however, due to lack of records, some of the data is missing.</p>
-<p>Download data: <a href="olympic_swimming_women.csv">olympic_swimming_women.csv</a></p>
+
+## Introduction
+
+In Olympic swimming, athletes compete using different strokes, each with unique styles and challenges. [Freestyle](https://youtu.be/5HLW2AI1Ink?si=0bEoXJDhNXL8Kvwq){target="_blank"} is usually the fastest (alternating arm strokes and a flutter kick), [butterfly](https://youtu.be/UffZn_-lU54?si=kFFY_iPlkRbu1n1m){target="_blank"} is powerful but demanding (both arms moving symmetrically, accompanied by the dolphin kick), and [backstroke](https://youtu.be/89HxafulzyI?si=sHjHikfo4K1Z4e31){target="_blank"} is swum on the back (arms reach alternately above the head and enter the water directly in line with the shoulders).
+
+This module analyzes results from the women’s 100m events (finalists) from 1964-2024 (where complete results are available) as recorded by [Olympics.com](https://olympics.com/en/paris-2024/sports/swimming){target="_blank"}. Over time, performances reflect advances in training and technology, rule changes, and the growth of women’s participation. You will compare strokes and quantify changes across eras using boxplots and two-sample confidence intervals. Note that there is a fourth event, the 100m breaststroke, but it is excluded from this module because complete finalist times were not available on Olympics.com prior to 2020.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would likely be suitable for an in-class example or quiz that lasts roughly 20 - 30 minutes.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of the activity, you will be able to:
+
+1.  Analyze distributions using boxplots.
+2.  Compare and contrast distributions in the same or different groups.
+3.  Assess differences between two samples using confidence intervals.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+For this activity, students will primarily use basic concepts of boxplots and two-sample t confidence intervals to analyze data. The activity can easily be adapted to use other inference methods such as ANOVA or Bootstrap intervals.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The provided *low-tech worksheet* requires StatKey or similar software to obtain t-scores, as well as access to a calculator.
+
+Since the data are provided, instructors are encouraged to adapt the worksheets so students can make calculations and build graphics using their preferred software. The *tech worksheet* is designed to facilitate this approach.
+:::
+
+## Data
+
+The data set contains 218 rows and 10 columns. Each row represents a female swimmer who competed in the 100m Olympic event during the period 1968 to 2024. The data includes top 8 finishers from woman racers however, due to lack of records, some of the data is missing.
+
+Download data: [olympic_swimming_women.csv](olympic_swimming_women.csv)
+
 <details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 89%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Location</td>
-<td>hosting city of the Olympics that the swimmer competed in</td>
-</tr>
-<tr class="even">
-<td>Year</td>
-<td>year that the swimmer competed</td>
-</tr>
-<tr class="odd">
-<td>dist_m</td>
-<td>distance in meters of the race</td>
-</tr>
-<tr class="even">
-<td>Stroke</td>
-<td>Backstroke, Butterfly, or Freestyle</td>
-</tr>
-<tr class="odd">
-<td>Gender</td>
-<td>gender of swimmer (Female only - see below)</td>
-</tr>
-<tr class="even">
-<td>Team</td>
-<td>3 letter country code the swimmer is affiliated with</td>
-</tr>
-<tr class="odd">
-<td>Athlete</td>
-<td>first and last name of the swimmer</td>
-</tr>
-<tr class="even">
-<td>Time</td>
-<td>time, in seconds, that the swimmer completed the race</td>
-</tr>
-<tr class="odd">
-<td>Rank</td>
-<td>place of the swimmer in the event out of four</td>
-</tr>
-<tr class="even">
-<td>Era</td>
-<td>time period that Olympian swam in, either “early” (1924-1996) or “recent” (2000-2024)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Data Source</strong></p>
-<p>Adapted from</p>
-<ul>
-<li><a href="https://www.kaggle.com/datasets/datasciencedonut/olympic-swimming-1912-to-2020" target="_blank">Kaggle Olympic Swimming 1912 to 2020</a></li>
-</ul>
-<p>and</p>
-<ul>
-<li><a href="https://www.olympics.com/en/olympic-games/paris-2024/results/swimming" target="_blank">Olympics.com</a></li>
-</ul>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                                                           |
+|----------|---------------------------------------------------------------------------------------|
+| Location | hosting city of the Olympics that the swimmer competed in                             |
+| Year     | year that the swimmer competed                                                        |
+| dist_m   | distance in meters of the race                                                        |
+| Stroke   | Backstroke, Butterfly, or Freestyle                                                   |
+| Gender   | gender of swimmer (Female only - see below)                                           |
+| Team     | 3 letter country code the swimmer is affiliated with                                  |
+| Athlete  | first and last name of the swimmer                                                    |
+| Time     | time, in seconds, that the swimmer completed the race                                 |
+| Rank     | place of the swimmer in the event out of four                                         |
+| Era      | time period that Olympian swam in, either "early" (1924-1996) or "recent" (2000-2024) |
+
+**Data Source**
+
+Adapted from
+
+-   [Kaggle Olympic Swimming 1912 to 2020](https://www.kaggle.com/datasets/datasciencedonut/olympic-swimming-1912-to-2020){target="_blank"}
+
+and
+
+-   [Olympics.com](https://www.olympics.com/en/olympic-games/paris-2024/results/swimming){target="_blank"}
+
 </details>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Related Dataset">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Related Dataset
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>A related version of this data, that includes Men’s 100m events too, is available on the SCORE Data Repository: <a href="https://data.scorenetwork.org/swimming/olympic_swimming.html" target="_blank">olympic_swimming</a></p>
-<p>That data set contains 606 rows and 10 columns during the period 1924 to 2020.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<p>We provide an editable Microsoft Word handout along with its solutions.</p>
-<ul>
-<li><p>This <a href="olympic_swimming_ws-lowtech.docx">Low tech class handout</a> is based on provided summary statistics and graphics and should only require a calculator and the means to look up a t-score and can be modified to fit the instructors needs.</p></li>
-<li><p>The <a href="olympic_swimming_ws-tech.docx">Tech required class handout</a> assumes students will be analyzing the data themselves to acquire the necessary output.</p></li>
-<li><p><a href="olympic_swimming_ws_key.docx">Sample solutions</a> are based on Mintab output.</p></li>
-</ul>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This module gives students practice interpreting boxplots and constructing confidence intervals in a real-world setting. By analyzing Olympic swimming results, they can see how statistical methods reveal meaningful differences between strokes and across eras. The activity highlights how changes in training, technology, and participation result in improvements in swimming.</p>
-</div>
-</div>
-</div>
+
+::: {.callout-note collapse="true" title="Related Dataset" appearance="minimal"}
+A related version of this data, that includes Men's 100m events too, is available on the SCORE Data Repository: [olympic_swimming](https://data.scorenetwork.org/swimming/olympic_swimming.html){target="_blank"}
+
+That data set contains 606 rows and 10 columns during the period 1924 to 2020.
+:::
+
+## Materials
+
+We provide an editable Microsoft Word handout along with its solutions.
+
+-   This [Low tech class handout](olympic_swimming_ws-lowtech.docx) is based on provided summary statistics and graphics and should only require a calculator and the means to look up a t-score and can be modified to fit the instructors needs.
+
+-   The [Tech required class handout](olympic_swimming_ws-tech.docx) assumes students will be analyzing the data themselves to acquire the necessary output.
+
+-   [Sample solutions](olympic_swimming_ws_key.docx) are based on Mintab output.
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+This module gives students practice interpreting boxplots and constructing confidence intervals in a real-world setting. By analyzing Olympic swimming results, they can see how statistical methods reveal meaningful differences between strokes and across eras. The activity highlights how changes in training, technology, and participation result in improvements in swimming.
+:::
+
+-->
 
 
 </section>
