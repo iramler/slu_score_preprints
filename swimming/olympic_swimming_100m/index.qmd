@@ -22,6 +22,16 @@ categories:
 image: "Simone-Manuel-By-Jack-Spitser-CD8I3720-scaled.jpg"
 ---
 
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/swimming/olympic_swimming_100m/](https://modules.scorenetwork.org/swimming/olympic_swimming_100m/){target="_blank"}
+
+## Acknowledgements
+
+Thumbnail photo taken from <https://swimswam.com/tokyo-2020-olympic-previews-no-room-for-error-in-the-womens-50-freestyle/>, archive photo via Jaimi Joy, <www.jaimijoy.com> 
+
+<!--
+
 ## Welcome Video
 
 For those interested in how data analytics is used in swimming, please check out this video about how University of Virginia, Mathematics professor Dr. Ken Ono helps the UVA swim team.
@@ -112,3 +122,5 @@ We provide an editable Microsoft Word handout along with its solutions.
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 This module gives students practice interpreting boxplots and constructing confidence intervals in a real-world setting. By analyzing Olympic swimming results, they can see how statistical methods reveal meaningful differences between strokes and across eras. The activity highlights how changes in training, technology, and participation result in improvements in swimming.
 :::
+
+-->
