@@ -14,7 +14,7 @@ author:
     affiliation:
       - ref: slu
   
-date: March 5, 2026
+date: March 13, 2026
 description: "Statistics from two runs at a women's World Cup alpine skiing giant slalom race at Mont-Tremblant"
 editor: 
   canonical: true
@@ -24,7 +24,7 @@ format:
 categories:
   - Paired Data
   - Difference in Means
-image: womens_gs.png
+image: womens_gs.jpeg
 ---
 
 ## Introduction to Giant Slalom Skiing
