@@ -1,0 +1,91 @@
+---
+title: "kungfu_solution"
+desciption: Solution file to the activity proposed in the Main Kung Fu Complete Linkage Clustering Heatmap Module
+format: html
+---
+
+::: {.callout-note appearance="simple}
+This is the solution file to the activity proposed in ["2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering" module](insert link here for the other module), the data to be used is [data for the 8th edition of the WKFC (2017)](year8kungfudata.csv)
+:::
+
+### Activity Solution
+
+_The following solution is simply one of the many ways (as explained in the module) that exist to successfully and efficiently construct a complete linkage clustered heatmap for competitive Kung Fu data._
+
+
+```{r}
+#| label: libraries
+#| message: false
+#| echo: false
+#| warning: false
+
+# Loading the libraries in:
+
+library(tidyverse)
+library(ggplot2)
+library(here)
+library(VIM)
+library(gplots)
+library(pheatmap)
+library("RColorBrewer")
+library(grid)
+```
+
+```{r}
+#| label: datareading
+#| warning: false
+#| echo: false
+#| eval: true
+
+# read data which comes from many many iterations of dplyr code
+year8data <- read.csv("year8kungfudata.csv") |> select(-X)
+
+# selecting OUT non-numeric columns in the data frame
+mat <- as.matrix(year8data[,-1])
+
+# chooses which column from the dataset to use for row names
+rownames(mat) <- as.character(year8data$Form_new)
+
+# setting color palette to blue, white, and red from WKFC logo colors
+col<- colorRampPalette(c("navy", "white", "orange"))(256)
+```
+
+```{r}
+#| label: heatmap
+#| warning: false
+#| eval: false
+
+
+# using pheatmap() to create the clustered heatmap
+heatmap <- pheatmap(
+  mat,
+  scale = "row", # values centered and scaled in row direction 
+  clustering_distance_rows = 'euclidean',
+  #clustering_distance_cols = 'euclidean',
+  clustering_method = "complete",
+  cluster_rows = T,
+  cluster_cols = F,
+  show_colnames = TRUE, 
+  show_rownames = TRUE,
+  display_numbers = T,
+  cellwidth = NA,
+  cellheight = NA, 
+  angle_col = 0,
+  number_color = "#303030",
+  border_color = "#303030", 
+  # main = "Complete Linkage Clustered Heatmap with Dendrograms",
+  cutree_rows = 5, # number of major clusters of forms. 6 is too many
+  color = col,
+  legend = T
+  )
+
+```
+
+Really interesting insights from this plot! Specifically if we zoom into the smaller clusters:
+
+1. Yang Style Taijiquan (杨式太极拳)
+2. Zui Jian (Drunken Sword) （醉贱）
+  Only had 1 participating group with 7 athletes competing.
+3.1 Chen Style Taijiquan (陈式太极拳)
+3.2 Other Traditional Single Weapon
+3.3 Jian (Straight Sword) （剑）
