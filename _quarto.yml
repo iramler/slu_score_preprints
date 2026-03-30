@@ -1,15 +1,15 @@
 project:
   type: website
   output-dir: _site
-  resources:
-    - "_img/default_thumbnail.png"
-    - "_extensions"
   render: 
     - "index.qmd"
     - "_team.qmd"
     - "*/index.qmd"         # <- new sport pages
     - "*/*/index.qmd"       # module pages
     - "by-statsds-topic.qmd"
+  resources:
+    - "_img/default_thumbnail.png"
+    - "_extensions"
 
 metadata-files:
   - sidebar-sports.yml
