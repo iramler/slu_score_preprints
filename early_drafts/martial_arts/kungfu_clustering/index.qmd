@@ -1,0 +1,241 @@
+---
+title: "2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering"
+subtitle: "Exploratory data analysis of the age groups and Kung Fu forms"
+author:
+  - name: "Elena Cortina Pino"
+    url: https://www.linkedin.com/in/elenacortina
+description: "This module goes through the process of creating a heatmap to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data."
+lightbox: true
+format: 
+  html:
+    embed-resources: false
+execute: 
+  echo: fenced
+reference-location: margin
+citation-location: margin
+categories:
+  - Hierarchical clustering
+  - Data visualization
+  - Complete Linkage
+  - Z-Scores
+---
+
+::: {.callout-note title="Notice" appearance="simple"}
+Please note that these materials have not yet completed the required
+pedagogical and industry peer-reviews to become a published module on
+the SCORE Network. However, instructors are still welcome to use these
+materials if they are so inclined.
+:::
+
+## Background
+
+[Wang Shengrong, Group D, Winner Drunken Fist form, Team China]{.column-margin}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BFFqe0Iyqu0?si=koIdq7uZ7_F2Vpda" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
+
+### World Kung Fu Championships 2025: Forms, Groups, Ranking
+
+The World Kung Fu Championships (WKFC), hosted by the IWUF, is an international level sporting event established in 2004 to propagate the development of wushu around the world. As there are dozens of Kung Fu (traditional wushu) styles represented in the WKFC, these championships offer a unique platform for thousands of practitioners of all ages and varying skill levels to come together every two years.\
+\
+This module introduces Kung Fu to students in an exploratory approach allowing them to gain insight about the legendary sport and explains the process of utilizing complex, raw sports data to analyze the ways that championship scores relate across the competing Kung Fu forms.\
+\
+This module also introduces ingenious ways to address issues with missing data observations, and presenting that data in a meaningful graphic display that communicates the nature of the relationship across some variables at a glance.\
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+Students will gain experience constructing a complete linkage clustered heatmap.
+:::
+
+Athletes can compete in a wide of events:
+
+## Competing Kung Fu Events
+
+### Individual Events
+
+
+| Taijiquan-type Events | Nanquan-type Events | Other |
+|-------------------|----------------------|-------------------------------|
+| Chen Style | Yongchunquan (Wing Chun) | Xingyiquan |
+| Yang Style | Wuzuquan (Ngo Cho) | Baguazhang |
+| Wu Style | Cailifoquan (Choy Lay Fut) | Bajiquan |
+| Wuu Style | Hongjiaquan (Hung Gar) | Tongbiquan |
+| Sun Style | Dishuquan | Piguaquan |
+| 42-posture Taijiquan | other southern styles | Fanziquan |
+| other Taijiquan routines |  | Ditangquan |
+|  |  | Yingzhaoquan (Eagle Style) |
+|  |  | Tanglangquan (Mantis Style) |
+|  |  | Chaquan |
+|  |  | Huaquan |
+|  |  | Paoquan |
+|  |  | Hongquan |
+|  |  | Shaolinquan |
+|  |  | Wudangquan |
+|  |  | Emeiquan |
+|  |  | other types of traditional styles |
+
+### Weaponry
+
+| Single-weapon Routines | Double-weapon Routines | Flexible/Soft-weapon Routines |
+|-------------------|----------------------|-------------------------------|
+| Dao (Broadsword) | Shuangdao (Double Broadsword) | Jiujiebian (Nine Section Whip Chain) |
+| Jian (Straight Sword) | Shuangjian (Double Straight Sword/ Double Long Tassel Straight Sword) | Shuangjiegun (Nunchucks) |
+| Gun (Cudgel/Staff) | Shuangbian (DoubleNineSection Whip Chain/ One Nine Section Whip Chain with Broadsword) | Sanjiegun (Three Section Staff) |
+| Qiang (Spear) | Shuanggou (Double Tiger Hooks) | Liuxingchui (Meteor Hammer) |
+| Pudao | Shuangbishou (DoubleDaggers) | Shengbiao (Rope Dart) |
+| Guandao (Kwan Dao) | Shuangyue (Bagua Double Deer Horn Knives) | other traditional flexible/soft-weapon routines |
+| Shanzi (Fan) | other traditional double-weapon routines |  |
+| Bishou(Dagger) |  |  |
+| Changsuijian (Long Tassel Straight Sword) |  |  |
+| Taijijian |  |  |
+| 42-posture Taijijian |  |  |
+| Taijidao |  |  |
+| Taijiqiang |  |  |
+| Taijishan |  |  |
+| Zuijian (Drunken Sword) |  |  |
+| Nandao(Southern Broadsword) |  |  |
+| Nangun (Southern Staff/Cudgel) |  |  |
+| other traditional single-weapon routines |  |  |
+
+#### Groups
+
+The competition welcomes competitors of all ages. The age categories are divided according to the following periods.\
+\
+
+| Groups | Age | Classification on age requirements for competition |
+|:--------------:|:-------------------:|:----------------------------------:|
+| A | 11 years of age and below | Born in and after 2014 |
+| B | 12‐14 years of age | The year of birth: 2011 - 2013 |
+| C | 15‐17 years of age | The year of birth: 2008 - 2010 |
+| D | 18‐39 years of age | The year of birth: 1986 - 2007 |
+| E | 40‐59 years of age | The year of birth: 1966 - 1985 |
+| F | 60 years of age and above | Born in and before 1965 |
+
+#### Awards
+
+-   1st, 2nd and 3rd Category Prize recipients will receive medals and achievement certificates.\
+-   If the actual number of participants is 12 or more persons in an individual event, the awarding methods are as follows:\
+    Gold, silver and bronze medals and certificates will be awarded to the athletes ranked top 3 of the individual events respectively.\
+-   2nd Category Prize (Awarded to 20% of the actual number of participants) recipients will receive medals and achievement certificates.\
+-   3rd Category Prize (Awarded to 30% of the actual number of participants) recipients will receive medals and achievement certificates.\
+-   Other athletes will receive participation certificates only.
+
+#### Data
+
+The data comes from the results book of the 2025 10th World Kung Fu Championship, from The International Wushu Federation (IWUF).\
+\
+The result book is only available online as a 218-page pdf document containing the tables from each event, group and form separately. This pdf document was parsed into a csv document containing the same information.\
+\
+For the purpose of this module, the data as been trimmed to include only individual events but not group events.\
+\
+The ready-to-use data set in matrix form is available for this module in the `Materials` section.
+
+#### Variables
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                             |
+|----------|-----------------------------------------|
+| Form     | Kung Fu form the athlete competed in    |
+| A        | Means per form for Group A participants |
+| B        | Means per form for Group B participants |
+| C        | Means per form for Group C participants |
+| D        | Means per form for Group D participants |
+| E        | Means per form for Group E participants |
+| F        | Means per form for Group F participants |
+
+</details>
+
+
+
+## Complete Linkage Hierarchical Clustering
+
+Hierarchical Clustering via Complete Linkage is a Machine Learning technique that groups clusters of data from the furthermost point to the point of reference. In hierarchical clustering, the two nearest clusters are repeatedly merged until the desired number of clusters is reached[^2]. 
+
+[^2]: (Sokhonn, Park, Lee, 2024, "Hierarchical Clustering via Single and Complete Linkage Using Fully Homomorphic Encryption").
+
+::: {callout-tip}
+Complete linkage is the metric through which we measure the clusters' proximity.
+:::
+
+This process serves as an exploratory data analysis technique, categorizing data into distinct groups or subsets, where elements within each subset are more similar to each other than to elements in different subsets. A useful application of this method for our case study data set on Kung Fu is understanding how the forms and the age groups can be grouped in clusters to understand the relationships between these two variables with respect to the scores.
+
+### Z-Scores
+
+$$Z = \frac{x-\mu}{\sigma}$$
+
+We've calculated the means for each Form by groups B through E and turned those means into the columns of the data to be mapped by Kung Fu Form which are the rows of our data frame. This structure should be thought of as a matrix, with vectors for each age group.
+
+Within the `pheatmap` function, the `scale` argument scales the means into Z-scores for those means. In our example, the means of scores have been centered and scaled by rows, this is, by Kung fu form. This computation gives us a normalized scaled measure of how far away from the mean each mean and we've chose to keep the data scaled by rows instead of the default row *and* column because we are interested in understanding how scored change by form within age group columns.\
+\
+For any particular Kung Fu form, the z-score scaling computation would happen as:
+
+$$\frac{\text{Mean score for a given age group - Mean score for the form across all age groups}}{\text{Standard deviation}}$$
+
+Values $\sigma$-standard deviations from the mean in the positive direction have the bright red color and values $\sigma$-standard deviations from the mean in the negative direction are mapped in blue.
+
+
+### Euclidean distance
+
+$$d = \sqrt{\Sigma(x_i+ y_i)^2}$$
+
+The rows of the data matrix are re-ordered according to the hierarchical clustering result, putting similar observations close to each other.\
+
+### Dendrograms
+
+The dendrograms are the lines on the outside of the plot that connect forms with one another and then connect groups of forms to other groups.
+
+Dendrograms are commonly utilized in the field of Biology to represent groups of genetically resembling species.
+
+![](dendrogram_explained.png){fig-alt="Dendrogram: Phylogentic tree example" width="300" fig-align="center"} 
+
+::: column-margin
+
+_A simplified phylogenetic tree of the kingdom Animalia showing only the nine most species-rich phyla._
+
+Reference: "Inactivity Is Nycthemeral, Endogenously Generated, Homeostatically Regulated, and Melatonin Modulated in a Free-Living Platyhelminth Flatworm" by Biologist Shauni E. T. Omond (2017)
+:::
+
+
+## Complete Linkage Clustered Heatmap
+![](WKFC_heatmap.png){.lightbox} [To preserve the most information possible from the data, we removed groups A and F since their scores across forms were considerably (and understandably) lower than the other groups.]{.column-margin}
+
+
+::: {.callout-tip title="The `pheatmap` library"}
+The `pheatmap` function from this library has been chosen for this task because of the advantages it provides when drawing clustered heatmaps while having better control over some graphical parameters relative to other functions that construct essentially the same type of graphic display of data. Other useful options to construct a heatmap using R code include:\
+- `geom_tile()`\
+- `ggheatmap()`\
+- `heatmaply()`\
+- `heatmap.2()`\
+- `complexheatmap()`
+:::
+
+
+Along with the `pheatmap` function, we have resourced the `RColorBrewer` library to have better control over the color palette in our heatmap. This ability to control visual features in our data visualization endeavors represents a huge portion of our task in being effective in communication to the viewer our findings on the data-exploration process so it is important to utilize resources effectively and explore options from packages and libraries beyond those in the base.\
+
+
+### Conclusion from the exploration
+
+Athletes at the very beginning and end of their Kung Fu career can experience high levels of exhaustion, insufficient technique on the side of the infants participating and decay of explosiveness and endurance that a sport such as Kung Fu requires.\
+\
+Participants from the ages between 12 and 59 years old can be considered the most competitive athletes in the competition because they can leverage the explosiveness and endurance of being at the peak of age ability and the technique from having trained for long enough.\
+
+Group D participants, thanks to being in their physical prime and having sufficient technique development excel in scoring across all Kung Fu forms.
+
+Most of the *Single Weapon Routines* cluster together in scoring in two main clusters.
+
+## Activity
+
+For this module, the activity will be an involved exercise in creating a heatmap similar to the one presented in this module, but using a different data set, this time from the _8th edition of the World Kung Fu Championships (2017)_.
+
+From the `Materials` section, download the [data for the 8th edition of the WKFC (2017)](year8forsure.csv) data to construct our own clustered heatmap.
+
+### Materials
+
+For this module, the reference materials for the module are the [Kung Fu](mat_10kf.csv) data set, and [the solution QMD](kungfu.qmd).
+
+For the solution file to the activity proposed above, the data to be used is [data for the 8th edition of the WKFC (2017)](year8forsure.csv), and the solved exercise is outlined in [this solution Quarto document](kungfu_solution.qmd).
+
+

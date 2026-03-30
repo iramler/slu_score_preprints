@@ -1,0 +1,94 @@
+---
+title: "Kung Fu Reference Document"
+description: "This document is not the solution for the activity in Kung Fu module."
+author:
+  - name: "Elena Cortina Pino"
+    url: https://www.linkedin.com/in/elenacortina
+date: February 19, 2026
+lastedit: March 24, 2026
+format: 
+  html:
+    embed-resources: false
+execute: 
+  echo: fenced
+---
+
+**This is the arranged document that consolidates information from `kungfu.qmd`[^2] and `cleaningmorekfdata.qmd`[^1] to serve as the Reference document for the ["2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering" module](insert link here for the other module)**
+
+[^1]: This file makes reference to the other module about this topic. That module detailedly explain the process of scraping, cleaning, and visualizing data before it was ready to be used for the ["2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering" module](insert link here for the other module)
+
+
+[^2]: This document is simply the chopping table for the ["2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering" module](insert link here for the other module)
+
+
+### Loading libraries
+
+```{r}
+#| label: libraries
+#| message: false
+#| echo: false
+#| warning: false
+
+# Loading the libraries in:
+
+library(tidyverse)
+library(ggplot2)
+library(here)
+library(VIM)
+library(gplots)
+library(pheatmap)
+library("RColorBrewer")
+library(grid)
+```
+
+These two chunks generate the clustered heatmap in the module index.\
+These chunks can be used for reference to complete the activity in the module, but they do not represent the solution to the activity.
+```{r}
+#| label: datareading
+#| warning: false
+#| echo: false
+#| eval: false
+
+# read data which comes from many many iterations of dplyr code
+matrix_kf10 <- read.csv("mat_10kf.csv") |> select(-A) |> select(-`F`)
+
+# selecting OUT non-numeric columns in the data frame
+mat <- as.matrix(matrix_kf10[,-1])
+
+# chooses which column from the dataset to use for row names
+rownames(mat) <- as.character(matrix_kf10$Forms)
+
+# setting color palette to blue, white, and red from IWCF logo colors
+col<- colorRampPalette(c("#2565AD", "white", "#E34825"))(256)
+```
+
+```{r}
+#| label: heatmap
+#| warning: false
+#| eval: false
+
+
+# using pheatmap() to create the clustered heatmap
+heatmap <- pheatmap(
+  mat,
+  scale = "row", # values centered and scaled in row direction 
+  clustering_distance_rows = 'euclidean',
+  #clustering_distance_cols = 'euclidean',
+  clustering_method = "complete",
+  cluster_rows = T,
+  cluster_cols = F,
+  show_colnames = TRUE, 
+  show_rownames = TRUE,
+  display_numbers = T,
+  cellwidth = NA,
+  cellheight = NA, 
+  angle_col = 0,
+  number_color = "#303030",
+  border_color = "#303030", 
+  # main = "Complete Linkage Clustered Heatmap with Dendrograms",
+  cutree_rows = 6, # number of major clusters of forms
+  color = col,
+  legend = T
+  )
+
+```
