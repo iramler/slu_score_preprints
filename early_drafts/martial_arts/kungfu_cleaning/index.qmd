@@ -1,0 +1,203 @@
+---
+title: "World Kung Fu Championship - Data Scraping, Cleaning and Visualizing"
+subtitle: "Method for scraping raw data from pdf document into usable table form csv document with Excel, R code, Regex and Notepad++"
+author:
+  - name: "Elena Cortina Pino"
+    url: https://www.linkedin.com/in/elenacortina
+description: "This module goes through the process of scraping and cleaning raw data from the International Wushu Federation Result Books from the World Kung Fu Championships available online from the 7th edition through the 10th edition."
+lightbox: true
+format: 
+  html:
+    embed-resources: false
+execute: 
+  echo: fenced
+reference-location: margin
+citation-location: margin
+categories:
+  - Data scraping
+  - Data cleaning
+  - Regex
+  - dplyr
+  - Notepad++
+---
+
+::: {.callout-note title="Notice" appearance="simple"}
+Please note that these materials have not yet completed the required
+pedagogical and industry peer-reviews to become a published module on
+the SCORE Network. However, instructors are still welcome to use these
+materials if they are so inclined.
+:::
+
+
+## Background
+
+The World Kung Fu Championships (WKFC), hosted by the International Wushu Federation (IWUF), is an international level sporting event established in 2004 to propagate the development of wushu around the world. As there are dozens of Kung Fu (traditional wushu) styles represented in the WKFC, these championships offer a unique platform for thousands of practitioners of all ages and varying skill levels to come together every two years.\
+
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+1.  Students will gain experience and insight into processes of scraping complex, raw sports data and cleaning it to construct a data set that is in usable form ready for data analysis and visualization.
+2. Students will learn about using regular expressions within R code 
+:::
+
+
+#### Data by years:
+
+**7th**\
+
+[7th World Kungfu Championships, 2017](https://www.iwuf.org/wp-content/uploads/2018/12/7th-World-Kungfu-Championships-Regulations.pdf)
+
+The 7th edition of the competition divided age categories in only 5 groups, as opposed to 6 categories like in the following years' result books.\
+
+
+**8th**\
+[8th World Kungfu Championships, 2019](https://iwuf.org/wp-content/uploads/2019/06/8th-WKFC-Program-Book-International-Group.pdf)
+
+For this edition the result book is separated into the International group and the Domestic Group. The domestic group (Chinese Mainland athletes) is relatively the same size as the international group.
+
+**9th**\
+[9th World Kungfu Championships, 2023](https://www.iwuf.org/wp-content/uploads/2023/09/9th-WKFC-Results-Book-境外组.pdf)
+
+For this edition the result book is separated into the International group and the Domestic Group. The domestic group (Chinese Mainland athletes) is relatively the same size as the international group.
+
+**10th**\
+[10th World Kungfu Championships, 2025](https://xhimg.iwuf.org/xhimg/soft/251113/2025-10th-World-Kungfu-Championships-Results-Book.pdf)
+
+## Result Books Download
+
+We first downloaded the result books from the International Wushu Federation's website. These documents include tables on each page which contain information on the following variables:
+
+##### Variables
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description                                  |
+|----------|------------------------------------------------|
+|Bib number| Athlete-identifying bib number               |
+| Sex      | Sex of athlete                               |
+| Form     | Kung fu form the athlete competed in         |
+| Group    |Age group the athlete belongs to in competition|
+| Rank     | Rank of athlete in the event                 |
+| Team     | Country the athlete is representing          |
+| Athlete  | Athlete's name                               |
+| Score    | Numerical score out of 10 possible points    |
+| Remark   | Prize awarded based on the score and event   |
+
+</details>
+
+In addition to the information concerning the athletes in the competition, the document also states the date and time of the competition, the location of the competition, the name of the Chief Referee and the Chief Recording official, and the date and time that the document was recorded.\
+\
+
+Sample preview of the tables that compose the result books for each year of the competition available online and used for this module.
+
+```{css}
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  border: 1px solid #ccc; /* Optional: adds a border */
+}
+
+.scroll-container img {
+  display: inline-block;
+  height: 200px; /* Set height, width scales automatically */
+  margin: 2px;
+}
+
+```
+
+
+::: {.scroll-container}
+
+![Sample Result Table (7th WKFC)]("images/result_table_year_7.png")
+
+:::
+
+
+
+::: {.scroll-container}
+![Sample Result Table (10th WKFC)]("result_table_year_10-.png")
+
+:::
+
+
+
+
+
+
+
+## Cleaning Columns in Excel after scraping the pdf into excel or csv
+
+#### Excel
+
+
+
+#### Notepad++
+
+This app has a lot of helpful functionalities that helped us clean this data quickly without having to start another file on R or Excel and to keep the structure of the data integral.
+
+In multiple iterations of the cleanup process, and simply because this deals with so many strings I basically got inventive and resourceful so I used what I was more inclined to use and knew would solve the issue faster... Some people wouldn't like this....
+
+
+We're in Excel, then copy the entire column ,paste it into Notepad++, clean up what needs to be cleaned up quickly, and move the column back to the excel exactly where it was without loosing observations or messing with the order.
+
+
+Some of the Notepad++ functionalities that came in extra helpful (more than they would have been in Excel) are:
+1. Line operations
+2. Blank operations
+3. Find and replace all occurrences of a string or characters.
+
+We recognize that these are all possible from within R or Excel.... But because these are strings, it makes sense to be tactful and resourceful in the tools we use to work on cleaning the (broader) string.
+
+For example: in Notepad++ we can Ctrl + Alt and select down the same line of text down to the last line and simultaneously edit from that position of the line in all lines at the same time. That can't be done in Excel.
+
+
+Using find and replace in Excel is troublesome for a few reasons, the main one being that it's not always quite accurate. From the Excel toolkit , we used the filtering and the sorting to be able to identify `NA` observations in Missing scores, to filter forms into alphabetical order to identify duplicate forms that were registered in the result book with different ways to say the same thing.. and to clear some columns while we were at it, such as the bib number, the group events and the Rank.
+
+
+
+
+
+#### RStudio
+
+Within the RStudio portion of the process we utilize a significant amount of reg-ex knowledge. There is a vast selection of good AI-backed regex libraries online that provide what we would describe as "english to regex" translations.
+
+
+We can say it in a few different ways, also navigating the limitations R has to interpret `\s` and `\S`.
+
+**Example**
+
+**_"International Women's Group C Traditional Chen Style Taijiquan"_**
+
+We need to separate this information, which currently appears all together as a single string in a cell after the data was scraped, into 3 different columns:\
+1. The sex of the athlete\
+2. The Age group they compete in\
+3. The Kung Fu form they compete in\
+
+There are many good approaches to go about successfully and efficiently completing this task. We can list a few: (evaluating all possible approaches before start redacting up code is a good habit to get into. Think of this process as an algorithm. There can be many algorithms that are equally useful in a situation, though one of them might be discerningly more efficient...)
+
+1. We can first select the `W` in `Women's` to fetch the sex of the player. Consider the nature of the data as it changes across rows. That`W` can also be an `M`. That `W`/`M` is sufficient information to check that box. That step leaves us with `W` or `M` in a column and everything else in another column (starting after the `W` we just took away). Let's name the sex column `Sex` and the resting can have any name... Let's choose `Working` since we have some more splitting to do.\
+\
+Then, we can get the age group (which goes from `A-F`) by selecting the first capital letter after the second space. That leaves us with another new column. Lets name it `Group` the rest can be `Form`.\
+\
+These iterations leave us with a few spaces to delete here and there. The approach we've takes is to be very clear about the information we keep and decide to remove, so it might seem longer than one might originally conceive the task to be...\
+\
+\
+
+2. Using the `separate` function from the `tidyr` package, our strategy changes. Here we can use the structure of the string as an advantage to separate it into three columns:
+  2. 1  Use the middle element of the string as the separating element that the function `separate` requires.
+  In this case, we can use the `Group` as the separator between our information of the `sex` and the `form`. This then becomes an easier cleanup once we have all three parts on their own columns.\
+  2.2 Once separated, we still have to cleanup the inevitable spaces, extra words and, if present, punctuation.\
+
+3. ? Come up with another inventive way to separate the string as an exercise...
+
+
+
+#### Regular expressions
+
+
+this link
+
+https://www.subiregex.com

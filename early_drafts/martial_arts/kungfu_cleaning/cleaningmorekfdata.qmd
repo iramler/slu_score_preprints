@@ -1,0 +1,140 @@
+---
+title: "Cleaning Kung Fu Data - Walkthrough document"
+format: html
+categories:
+  - Data cleaning
+  - Reg-ex
+  - Data visualization
+  - Data imputation
+---
+
+```{r}
+#| message: false
+#| warning: false
+
+# Loading the libraries in:
+library(tidyverse)
+library(ggplot2)
+
+```
+
+
+
+```{r}
+kf_8 <- read.csv("8kf.csv")
+
+head(kf_8, 25)
+```
+
+
+
+```{r}
+first_step<- kf_8 |> separate_wider_regex(Form, c(Sex = "^.", Form = ".*")) |> separate_wider_regex(Form, c(delete = "^[^G]*", Group = ".*")) |> select (-delete)
+
+```
+
+
+```{r}
+
+eightyearkungfu <- read.csv("working8thkungfu.csv")
+
+kungfu_8 <- eightyearkungfu |> separate_wider_regex(Group, c(Group = "^[^ ]+ [^ ]+", Form = ".*")) |> separate_wider_regex(Form, c(Delete = "^[^a-zA-Z]*", Form = ".*")) |> select (-Delete)
+
+
+write.csv(kungfu_8, "kungfu_8.csv")
+```
+
+
+
+```{r}
+ninthyear<- read.csv("9kf.csv")
+
+working <- ninthyear |> separate_wider_regex(Form, c(Delete = "^[^a-zA-Z]*", Form = ".*")) |> select (-Delete) |> separate_wider_regex(Form, c(Sex = "^.", Form = ".*")) |> separate_wider_regex(Form, c(Form = ".*(?=G[^G]*$)", Group = ".*")) |> separate_wider_regex(Form, c(Delete = "^[^s]*s", Form = ".*")) |> select (-Delete) |> separate_wider_regex(Form, c(Delete = "^[^a-zA-Z]*", Form = ".*")) |> select (-Delete)
+
+write.csv(working, "kungfu_9.csv")
+
+```
+
+
+
+```{r}
+
+sevenyear <- read.csv("7kf.csv")
+
+sevenyearworking <- sevenyear |> separate_wider_regex(Form, c(Delete = "^[^MW]*", Form = ".*")) |> select (-Delete) |> separate_wider_regex(Form, c(Sex = "^[^G]*", Form = ".*")) |> 
+  separate_wider_regex(Form, c(Group = "^[^A-Z]*[A-Z][^A-Z]*[A-Z]",
+                               Form = ".*"), too_few = "align_start") |> na.omit(Form) |> separate_wider_regex(Sex, c(Sex = "^.", Delete = ".*")) |> select (-Delete) |> separate_wider_regex(Form, c(Delete = "^.", Form = ".*")) |> select (-Delete) |> filter(Athlete != "Angela WANG") |> filter(Athlete != "Lisa Muresu") |> filter(Group != "O") |> separate_wider_regex(Group, c(Delete = "^.*(?=.$)", Group = ".$")) |> select (-Delete) |> filter(Group != "O")
+
+# Group F does not exist in this year's data
+
+# write.csv(sevenyearworking, "kungfu_7.csv")
+
+```
+
+
+
+The following is fixing the forms for the 10th year:
+
+```{r}
+kf10<- read.csv("10kf.csv")
+names(kf10)
+kf10 <- kf10 |> mutate(Form = factor(Form))
+levels(kf10$Form)
+```
+
+
+Now lets do imputation:
+method for imputation is KNN because we're doing clustering here so it makes sense:\
+To deal with the NA's , we perform a substitution, plugging in means for each NA value. And we're gonna do means by form cause that makes more sense.
+
+```{r}
+library(VIM)
+library(ggplot2)
+library(gplots)
+library(pheatmap)
+
+kf10_imputed <- kNN(kungfu_10, k = 5) |> select(-A_imp,-B_imp,-C_imp,-D_imp,-E_imp,-F_imp, -recoded_forms_imp)  # You can adjust 'k' as needed
+
+# View the imputed data
+#cat("\nDataset after KNN imputation:\n")
+#print(head(kf10_imputed))
+```
+
+```{r}
+# write.csv(kf10_imputed, "matrix_kf10.csv")
+```
+
+```{r}
+#| label: heatmap
+#| warning: false
+
+
+mat <- as.matrix(kf10_imputed)
+rownames(mat) <- kf10_imputed$recoded_forms
+
+heatmap <- pheatmap(
+  mat,
+  scale = "row", # character indicating if the values should be centered and scaled in either the row direction or the column direction, or none.
+  clustering_distance_rows = 'euclidean',
+  clustering_distance_cols = 'euclidean',
+  clustering_method = "complete",
+  cluster_rows = T,
+  cluster_cols = T,
+  show_colnames = TRUE, 
+  show_rownames = TRUE,
+  fontsize_row = 7,
+  fontsize_col = 7, 
+  angle_col = 0,
+  main = "Heatmap with dendrogram",
+  cutree_rows = 5,
+  color = colorRampPalette(rev(brewer.pal(n = 7, name = "RdYlBu")))(100),
+  legend = T)
+
+
+#clusters<- heatmap$tree_row
+
+```
+
+
+
+
