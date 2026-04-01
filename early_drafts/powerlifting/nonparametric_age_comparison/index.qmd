@@ -14,7 +14,7 @@ author:
 execute:
   error: true
 
-date: March 25, 2026
+date: April 1, 2026
 description: This module explores results from powerlifting competitions, comparing ranks between age groups using the Kruskal-Wallis and Dunn's tests.
 categories: 
   - non-parametric analysis
@@ -121,7 +121,7 @@ openpl_female <- read_csv("openpl_female.csv")
 
 The Kruskal-Wallis test is a non-parametric test for centrality to determine if there are statistical differences between independent groups. It is typically used as an alternative to ANOVA testing on non-normal data and compares the medians of the data as opposed to the means.
 
-ANOVA testing is used to compare the means if groups to test for statistical discernibility. This only works for normally distributed data. When looking at data that is skewed, like what we have here, we need to use a different test. Because there are a few elite performers that skew the data, it is more appropriate to look at the medians of age classes instead of the means.
+ANOVA testing is used to compare the means of groups to test for statistical discernibility. This only works for normally distributed data. When looking at data that is skewed, like what we have here, we need to use a different test. Because there are a few elite performers that skew the data, it is more appropriate to look at the medians of age classes instead of the means.
 
 The Kruskal-Wallis test is used with population medians as opposed to means when the data is continuous or ordinal (as powerlifting data would be). It is typically used in place of ANOVA testing when the normality assumption is violated. The test requires the assumptions of independence and a large enough sample size (n\>5) to still hold.
 
@@ -153,7 +153,7 @@ Find the sum of the ranks for each group.
 
 Use test in R to calculate the Kruskal-Wallis H statistic.
 
-If the p-value is less than 0.05, reject the null indicating as least one group differs slightly.
+If the p-value is less than 0.05, reject the null indicating at least one group differs slightly.
 
 If the null is rejected, use Dunn's test (multiple comparison test) to find which groups specifically differ.
 
