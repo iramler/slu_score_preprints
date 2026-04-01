@@ -1,12 +1,23 @@
 ---
 title: "World Kung Fu Championship - Data Scraping, Cleaning and Visualizing"
-subtitle: "Method for scraping raw data from pdf document into usable table form csv document with Excel, R code, Regex and Notepad++"
+
+engine: markdown
+
+#subtitle: "Method for scraping raw data from pdf document into usable table form csv document with Excel, R code, Regex and Notepad++"
+
 author:
   - name: "Elena Cortina Pino"
     url: https://www.linkedin.com/in/elenacortina
+
 description: "This module goes through the process of scraping and cleaning raw data from the International Wushu Federation Result Books from the World Kung Fu Championships available online from the 7th edition through the 10th edition."
+
+date: April 1, 2026
+
 lightbox: true
-format: 
+
+editor: 
+  canonical: true
+format:
   html:
     embed-resources: false
 execute: 
@@ -19,9 +30,10 @@ categories:
   - Regex
   - dplyr
   - Notepad++
+image: module_thumbnail.png
 ---
 
-::: {.callout-note title="Notice" appearance="simple"}
+:::{.callout-note title="Notice" appearance="simple"}
 Please note that these materials have not yet completed the required
 pedagogical and industry peer-reviews to become a published module on
 the SCORE Network. However, instructors are still welcome to use these
@@ -35,7 +47,7 @@ The World Kung Fu Championships (WKFC), hosted by the International Wushu Federa
 
 
 
-::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+:::{.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 1.  Students will gain experience and insight into processes of scraping complex, raw sports data and cleaning it to construct a data set that is in usable form ready for data analysis and visualization.
 2. Students will learn about using regular expressions within R code 
 :::
@@ -92,6 +104,8 @@ In addition to the information concerning the athletes in the competition, the d
 
 Sample preview of the tables that compose the result books for each year of the competition available online and used for this module.
 
+
+
 ```{css}
 .scroll-container {
   overflow-x: auto;
@@ -121,11 +135,6 @@ Sample preview of the tables that compose the result books for each year of the 
 ![Sample Result Table (10th WKFC)]("result_table_year_10-.png")
 
 :::
-
-
-
-
-
 
 
 ## Cleaning Columns in Excel after scraping the pdf into excel or csv
@@ -201,3 +210,5 @@ These iterations leave us with a few spaces to delete here and there. The approa
 this link
 
 https://www.subiregex.com
+
+

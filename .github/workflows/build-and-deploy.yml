@@ -40,6 +40,12 @@ jobs:
             any::rmarkdown
             any::knitr
             any::quarto
+            any::vembedr
+            any::igraph
+            any::netrankr
+            any::dunn.test
+            any::FSA
+            any::reshape2
           cache: true
 
       - name: Build sport and sidebar pages

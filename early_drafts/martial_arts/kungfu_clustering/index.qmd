@@ -5,6 +5,7 @@ author:
   - name: "Elena Cortina Pino"
     url: https://www.linkedin.com/in/elenacortina
 description: "This module goes through the process of creating a heatmap to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data."
+date: March 25, 2026
 lightbox: true
 format: 
   html:
@@ -18,6 +19,7 @@ categories:
   - Data visualization
   - Complete Linkage
   - Z-Scores
+image: iwsf_logo.png
 ---
 
 ::: {.callout-note title="Notice" appearance="simple"}

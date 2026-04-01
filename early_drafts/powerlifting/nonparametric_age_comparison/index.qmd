@@ -1,0 +1,356 @@
+---
+title: "Female Powerlifting: Performing Kruskal-Wallis and Dunn's Test Analyses Across Age Groups"
+author:
+  - name: "Keelin Joyce"
+    email: kjoyc22@stlawu.edu
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: "Ivan Ramler"
+    email: iramler@stlawu.edu
+    affiliation:
+      - ref: slu
+
+execute:
+  error: true
+
+date: March 25, 2026
+description: This module explores results from powerlifting competitions, comparing ranks between age groups using the Kruskal-Wallis and Dunn's tests.
+categories: 
+  - non-parametric analysis
+  - Kruskal-Wallis Test
+  - post-hoc Dunn's Test
+image: Stefanie-Cohen.05.jpg
+---
+
+![Female Powerlifter: Stefanie Cohen](https://www.greatestphysiques.com/wp-content/uploads/2017/10/Stefanie-Cohen.05.jpg){width="75%"}
+
+## Welcome Video
+
+For those interested in how some events in powerlifting competitions look, please check out this video from Powerlifting America Open Nationals from @A7Intl.
+
+<iframe width="360" height="640" src="https://www.youtube.com/embed/x3wKUPmtSEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+## Introduction
+
+In powerlifting competitions, athletes compete in three compound events to lift as much weight as possible. [Bench press](https://www.youtube.com/shorts/hWbUlkb5Ms4?feature=share){target="_blank"} is done with athletes laying flat on their back and lowering the bar to their chest and lifting back up, targeting upper body (specifically chest, triceps, and shoulders). [Deadlifts](https://www.youtube.com/shorts/ZaTM37cfiDs?feature=share){target="_blank"} are a full body lift in which athletes lift a bar from the ground to hip level (targets glutes, hamstrings, and back). [Squats](https://www.youtube.com/shorts/PPmvh7gBTi0){target="_blank"} are done with a barbell on their back, just below the shoulders, and hinging until the hips are lower than the top of the knee (targeting quads, glutes, hamstrings, and core).
+
+This module analyzes results from powerlifting competitions. Results are found at [OpenPowerlifting](https://www.openpowerlifting.org){target="_blank"}, a project aimed at collecting powerlifting data over time. Performances are ranked by how much weight is lifted and athletes are sorted into age classes. You will compare the rankings achieved by athletes across age classes and distinguish any differences between classes.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity would likely be suitable for an in-class example that lasts roughly 60 minutes. There are also additional exercises and extensions provided that can be assigned as work outside of class or a second class period.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+For this activity, students will primarily use their previous knowledge of ANOVA and Tukey testing to apply it to non parametric data.
+
+By the end of the activity, you will be able to:
+
+1.  Assess and sort large data sets appropriately in order to run statistical tests.
+2.  Analyze non-parametric comparisons using the Kruskal-Wallis Test.
+3.  Assess differences between two groups using Dunn's Test for multiple comparison.
+4.  Construct a visualization to display results from testing.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+In this module, students will use Open Powerlifting data to assess that comparisons in performance between age classes.
+
+They will use the Kruskal-Wallis Test for comparison after organizing the data appropriately for the test to run.
+
+After finding a discernible difference between groups, students will run the Dunn's Test of pairwise comparison and create an appropriate visualization to show which groups have discernible medians.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The testing is designed to be completed using RStudio and is not intended to be done by hand.
+
+This module assumes basic familiarity with the use of RStudio, but sample code is provided so proficiency is not required.
+
+Analyses can be done on paper following the testing completed in RStudio.
+:::
+
+## Data
+
+The initial data set from [OpenPowerlifting Dataset](https://www.openpowerlifting.org){target="_blank"} contains over 3,000,000 rows of individuals and 42 columns of variables. We will be using a separate female and male data set taken from the larger set, each containing 300 individual observations and 15 variables. These have been condensed for this module from a female data set and male data set from [SCORE Sports Data Repository](https://data.scorenetwork.org/powerlifting/openpowerlifting.html){target="_blank"}. Each row represents a powerlifting athlete and variables including their demographics and how much weight they lifted (in kilograms).
+
+For the convenience of this module, the data has been further cleaned and can be downloaded here. 
+
+Download wrangled and cleaned data:
+
+**Male athletes**: [openpl_male.csv](openpl_male.csv)
+
+**Female athletes**: [openpl_female.csv](openpl_female.csv)
+
+#### Data Source
+
+Adapted from [OpenPowerlifting](https://www.openpowerlifting.org0){target="_blank"} and [SCORE Sports Data Repository](https://data.scorenetwork.org/powerlifting/openpowerlifting.html){target="_blank"}
+
+<details>
+
+<summary><b>Descriptions of Relevant Variables</b></summary>
+
+| Variable | Description |
+|------------------|------------------------------------------------------|
+| Name | Name of the athlete |
+| Age | Age of the athlete on the start date |
+| AgeClass | Age class the athlete falls in (e.g. 40-45) |
+| BodyweightKg | Recorded bodyweight of athlete in kilograms at the start of the event |
+| Squat | Weight in kilograms of the athlete's best attempt at squatting |
+| Bench | Weight in kilograms of the athlete's best attempt at benching |
+| Deadlift | Weight in kilograms of the athlete's best attempt at deadlifting |
+| TotalKg | Sum of weight lifted between the three exercises |
+
+## Performing the Tests
+
+#### Load in the Data
+
+```{r warning=FALSE, output=FALSE}
+library(tidyverse)
+library(readr)
+library(ggplot2)
+
+## download data from above before loading
+
+openpl_male <- read_csv("openpl_male.csv")
+
+openpl_female <- read_csv("openpl_female.csv")
+```
+
+## Kruskal-Wallis Test of Differences
+
+The Kruskal-Wallis test is a non-parametric test for centrality to determine if there are statistical differences between independent groups. It is typically used as an alternative to ANOVA testing on non-normal data and compares the medians of the data as opposed to the means.
+
+ANOVA testing is used to compare the means if groups to test for statistical discernibility. This only works for normally distributed data. When looking at data that is skewed, like what we have here, we need to use a different test. Because there are a few elite performers that skew the data, it is more appropriate to look at the medians of age classes instead of the means.
+
+The Kruskal-Wallis test is used with population medians as opposed to means when the data is continuous or ordinal (as powerlifting data would be). It is typically used in place of ANOVA testing when the normality assumption is violated. The test requires the assumptions of independence and a large enough sample size (n\>5) to still hold.
+
+$H = \frac{12}{N(N+1)} \sum_{i=1}^{k} \frac{R_i^2}{n_i} - 3(N+1)$
+
+where
+
+*N: total number of observations*
+
+*k: number of groups*
+
+$R_i$*: sum of ranks in i-th group*
+
+$n_i$*: number of observations in i-th group*
+
+### General steps to run Kruskal-Wallis test
+
+Form a hypothesis where the structure is similar to an ANOVA hypotheses.
+
+    -   null hypothesis is population medians are equal
+
+    -   alternate hypothesis is that at least one group is different
+
+Rank data from smallest to largest from all groups.
+
+Sort by intended grouping.
+
+Find the sum of the ranks for each group.
+
+Use test in R to calculate the Kruskal-Wallis H statistic.
+
+If the p-value is less than 0.05, reject the null indicating as least one group differs slightly.
+
+If the null is rejected, use Dunn's test (multiple comparison test) to find which groups specifically differ.
+
+### Forming a Hypothesis
+
+For a Kruskal-Wallis test, similar to an ANOVA test, the null hypothesis is always that there is no difference in medians between groups and the alternative hypothesis claims that there is a difference between at least two groups.
+
+$H_0:$ there is no difference in the median of powerlifting weight between age groups
+
+$H_a:$ at least one group differs from another
+
+### Organizing the Data
+
+To run the Kruskal-Wallis test, the data gets ranked from 1-n before being grouped by level, in this case `AgeClass`.
+
+We want to rank the data before it is grouped so the overall rankings and where they land can be compared between groups.
+
+Using dplyr functions `mutate`, `filter`, and `select`, arrange the data appropriately and rank it before grouping by `AgeClass`:
+
+<details>
+
+<summary><b>Click to reveal code</b></summary>
+```{r echo=TRUE, output = FALSE}
+female_bench_ranked <- openpl_female |> arrange(desc(Bench)) |>
+  mutate(rank = row_number()) |>
+  filter(!is.na(AgeClass)) |>
+  mutate(AgeClass = fct_relevel(AgeClass, "5-12")) |>
+  select(Name, Age, AgeClass, Bench, rank)|>
+  mutate(AgeClass = fct_recode(AgeClass,
+                              "05-12" = "5-12"))
+## recoding "5-12" as "05-12" so it appears in the correct order
+```
+
+### Visualizing Trends
+
+Create a boxplot with `AgeClass` on the x-axis and `Bench` on the y-axis to look at the distribution of bench weight across age classes:
+
+<details>
+
+<summary><b>Click to reveal code</b></summary>
+```{r echo=TRUE, eval=FALSE}
+ggplot(data = female_bench_ranked, aes(x = AgeClass, y = Bench)) +
+  geom_boxplot() +
+  theme_minimal()
+```
+</details>
+
+```{r echo=FALSE, eval=TRUE}
+ggplot(data = female_bench_ranked, aes(x = AgeClass, y = Bench)) +
+  geom_boxplot() +
+  theme_minimal()
+```
+
+The boxplot shows that the general trend of the data increases to a peak and steadily decreases after that.
+
+### Running the Test
+
+Run the test using the `kruskal.test()` function:
+
+Using the standard alpha value of 0.05, if the p-value is larger than that there is no reason to reject the null hypothesis but any smaller value would indicate a difference in medians between each `AgeClass` and we would have reason to reject the null.
+
+```{r}
+#| echo: true
+#| eval: false
+female_bench_results <- kruskal.test(female_bench_ranked$rank ~ 
+                                       female_bench_ranked$AgeClass)
+female_bench_results
+```
+
+<details>
+
+<summary><b>Click to reveal results</b></summary>
+```{r}
+#| echo: false
+#| eval: true
+female_bench_results <- kruskal.test(female_bench_ranked$rank ~ 
+                                       female_bench_ranked$AgeClass)
+female_bench_results
+```
+</details>
+
+Using an alpha value of 0.5, the p-value is much smaller indicating that our results are statistically discernible, or significant, and we can claim that there is a statistical difference between at least two groups.
+
+Because the Kruskal-Wallis test only determines *if* there is a discernible difference between groups, we need to use a post-hoc test to determine *which* groups are statistically discernible from each other. The most appropriate post-hoc test following a Kruskal-Wallis test is the Dunn's Test.
+
+### Dunn's Test of Multiple Comparisons
+
+The Dunn's Test is a pairwise comparison test (similar to a Tukey Test) that determines which groups are discernibly different from each other once we have determined there are differences using a predetermined alpha level (here we will use the standard $\alpha = 0.05$). 
+
+Load in the necessary packages for the test:
+
+```{r warning=FALSE, output=FALSE}
+library(dunn.test)
+library(FSA)
+library(reshape2)
+```
+
+Use the `dunn.test()` function to compile p-values of the differences between groups and form a table of the values:
+
+```{r output=FALSE}
+female_bench_dunn <- dunn.test(female_bench_ranked$rank, female_bench_ranked$AgeClass, method = "bh")
+dunn_results_df <- as.data.frame(female_bench_dunn$P.adjusted, female_bench_dunn$comparisons) |>
+  tibble::rownames_to_column("comparison") |>
+  separate(comparison, into = c("group1", "group2"), sep = " - ") |>
+  rename("p_value" = `female_bench_dunn$P.adjusted`)
+```
+
+
+Below is a table created of all the p-values generated by the Dunn's Test. There are 18 groups being compared with each other resulting in a whopping 153 different p-values.
+<details>
+
+<summary><b>Click to reveal results</b></summary>
+```{r}
+female_bench_dunn <- dunn.test(female_bench_ranked$rank, female_bench_ranked$AgeClass, method = "bh")
+```
+</details>
+
+Because there are 18 age classes each being compared with 17 other classes, it is not reasonable to look at each value and determine significance. The best way to assess the discernibility between groups is making a heatmap and shading by p-value.
+
+## Visualizing Results
+
+Getting an idea of which p-values indicate a statistical discernibility is difficult when there are so many. Creating a visualization of the values is the easiest way to see which groups are different and which are not.
+
+Create a heatmap of the p-values to see where the results are discernible:
+
+<details>
+
+<summary><b>Click to reveal code</b></summary>
+```{r}
+#| echo: true
+#| eval: false
+dunn_results_df <- as.data.frame(female_bench_dunn$P.adjusted, female_bench_dunn$comparisons) |>
+  tibble::rownames_to_column("comparison") |>
+  separate(comparison, into = c("group1", "group2"), sep = " - ") |>
+  rename("p_value" = `female_bench_dunn$P.adjusted`)
+
+dunn_results_df <- dunn_results_df |>
+  mutate(log_p = -log10(p_value))
+
+ggplot(dunn_results_df, aes(x = group1, y = group2, fill = p_value)) +
+  geom_tile(colour = "black", linewidth = 0.5) +
+  scale_fill_gradient(low = "forestgreen", high = "grey100") +
+  theme_minimal()
+```
+</details>
+
+```{r}
+#| echo: false
+#| eval: true
+dunn_results_df <- as.data.frame(female_bench_dunn$P.adjusted, female_bench_dunn$comparisons) |>
+  tibble::rownames_to_column("comparison") |>
+  separate(comparison, into = c("group1", "group2"), sep = " - ") |>
+  rename("p_value" = `female_bench_dunn$P.adjusted`)
+
+dunn_results_log <- dunn_results_df |>
+  mutate(log_p = -log10(p_value))
+
+ggplot(dunn_results_log, aes(x = group1, y = group2, fill = log_p)) +
+  geom_tile(colour = "black", linewidth = 0.5) +
+  scale_fill_gradient(low = "forestgreen", high = "white") +
+  theme_minimal()
+```
+
+The -log10 p-value heatmap shows us how many zeros are following the decimal point indicating that the darker green values are less statistically discernible as there are less zeros. The lighter values are more statistically discernible as they are smaller p-values with many zeros following the decimal point. 
+
+It is still difficult to conceptualize the differences of these p-values with this visual.
+
+Using an alpha value of 0.05, construct another heatmap indicating which values are discernible or not.
+
+```{r}
+dunn_results_df$sig <- if_else(dunn_results_df$p_value <= 0.05,1,0)
+
+ggplot(dunn_results_df, aes(x = group1, y = group2, fill = factor(sig))) +
+  geom_tile(colour = "black", linewidth = 0.5) +
+  scale_fill_manual(values = c("0" = "forestgreen", "1" = "white"),
+                    labels = c("Not significant", "Significant")) +
+  theme_minimal()
+```
+
+These results are much easier to conceptualize: either significant or not significant.
+
+The results in green show there is not a statistical discernibility between the two groups. The white groups are recognized as different from each other.
+
+As both of these show, there is the same general trend in discernibility that we saw earlier with the boxplots.
+
+If the pairwise test was completed using a different alpha value, the heatmap would look different. Try using different alpha values (e.g. $\alpha = 0.1$, $\alpha = 0.01$) and look at how the results differ.
+
+::: {.callout-note  title="Additional Exercises and Extensions"}
+This module can be extended using the datasets provided for further variable testing.
+
+-   This module is done using female benching data, but provided is also data on female squatting, female deadlifting, and all three exercises for males
+-   The module can be extended further to examine differences between exercises and genders in addition to age groups.
+-   A sample module for female squatting can be found here [Sample Module](Sample Powerlifting Module.html){target="_blank"}
+:::
+
+## Conclusion
+In this module, you have learned about the Kruskal-Wallis test, which is used to determine if there is a statistical discernibility between 3 or more groups that do not meet the normality assumption for ANOVA testing. You have also learned about the Dunn's test that determines which groups are discernible from each other and how to appropriately visualize these results.
+
+The Kruskal-Wallis test is a nonparametric test for association that is used when assumptions are violated. The Dunn's Test is the most appropriate post hoc test to find which groups are significantly discernible following the Kruskal-Wallis testing. A heatmap is the easiest conceptual mapping for visualizing multiple p-values.
+

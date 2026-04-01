@@ -1,0 +1,363 @@
+---
+title: "Clash Royale Card Synergy: A Network Analysis Tutorial"
+author:
+  - name: Kevin Euyoque
+    email: kevin.euyoque04@gmail.com
+    affiliations:
+      - ref: slu
+  - name: Ivan Ramler
+    email: mailto:iramler@stlawu.edu
+    affiliations:
+      - ref: slu
+affiliations:
+  - id: slu
+    name: St. Lawrence University
+date: "TBD"
+description: "A network analysis tutorial exploring card synergy in Clash Royale using Season 3 deck data."
+format: html
+categories:
+  - Network Analysis
+  - Data Visualization
+  - igraph
+  - R
+image: clashroyalecover.jpeg
+execute:
+  error: true
+---
+
+Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(vembedr)
+library(igraph)
+library(netrankr)
+# devtools::install_github("schochastics/networkdata")
+```
+
+## Welcome Video
+
+If you are unfamiliar with Clash Royale, you can watch this short gameplay video for an introduction to the game:
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/_hNxfiXmeAE" title="Clash Royale Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+
+## Introduction:
+
+Clash Royale is a real-time strategy mobile game developed by Supercell in which players build decks of eight cards and compete in one on one battles. Each card represents a troop, spell, or building with distinct mechanics and strategic roles.
+
+Success in the game depends heavily on card combinations, as certain cards perform more effectively when used together. Because of this emphasis on synergy, Clash Royale provides a natural setting for studying relationships between elements using network analysis.
+
+
+:::{.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this tutorial, you will be able to:
+
+- explain how a card-pair dataset can be represented as a network
+- construct matrices showing pair counts, pair wins, and pair win rates
+- convert a matrix of card relationships into an edge list
+- build and visualize a weighted network using igraph
+- interpret what a card synergy network suggests about the Clash Royale meta
+:::
+
+:::{.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This module could be used as a short in-class lab, a longer out-of-class assignment, or part of a larger unit on network analysis and data visualization.
+:::
+# a class period
+
+:::{.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology Requirement:
+
+This activity is designed to be completed in R using RStudio and Quarto.
+
+Packages used in this module:
+
+- [tidyverse](inserturl){target="_blank"}
+- [igraph](inserturl){target="_blank"}
+- [vembedr](inserturl){target="_blank"}
+- [netrankr](inserturl){target="_blank"}
+
+Some previous experience with data wrangling in R is helpful, but no previous experience with network analysis is required.
+:::
+
+# add a hyperlink that sends the reader to the page for each package
+
+## Data
+
+The main dataset used in this module is cr_season3_5000decks.csv, which contains deck-level Clash Royale data from Season 3. Each row corresponds to a card appearing in a specific deck, along with whether that deck won.
+
+We will reshape this data so that each deck becomes one row and each card becomes its own column. From there, we will calculate how often pairs of cards appear together, how often those pairs win, and their overall paired win rates.
+
+Download Data: [cr_season3_5000decks.csv]("cr_season3_5000decks.csv")
+
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description |
+|----------|-------------|
+| id | Unique identifier for each deck |
+| card | Name of the Clash Royale card appearing in the deck |
+| winner | Indicator for whether the deck won the match |
+
+</details>
+
+<details> <summary><b>Data Notes</b></summary>
+
+The analysis in this module focuses on building a card-by-card relationship structure. Specifically, we want to create:
+
+- the number of decks containing each pair of cards
+- the number of wins for each pair
+- the paired win rate for each pair
+- a binary version of the win rate matrix
+- a filtered edge list for network construction
+- The diagonal of each matrix is removed because a card is not paired with itself in this analysis.
+
+</details>
+# insert into module instead
+
+## Goal of this module
+
+In this tutorial, we will treat Clash Royale cards as nodes in a network.
+
+Two cards are connected by an edge if they perform well together, measured by paired win rate.
+
+We will treat:
+
+-   Cards -\> nodes
+-   Strong pair win-rates -\> edges
+-   Win-rate value -\> edge weight
+
+By the end, we will:
+
+-   Build a synergy network from paired win rates
+-   Learn network vocabulary (nodes, edges, weights, degree)
+-   Compute centrality (who matters most)
+-   Find cliques / communities (tight synergy groups)
+
+
+## Get started
+
+
+```{r}
+library(readr)
+cr_season3_5000decks <- read_csv("cr_season3_5000decks.csv")
+
+cards_id <- pivot_wider(data = cr_season3_5000decks, names_from = card, values_from = winner)
+
+clash_decks <- cards_id |> mutate(across(-id, ~replace(.,!is.na(.),1))) |>
+  mutate(across(-id, ~replace(.,is.na(.),0)))
+
+# gets rid of first column
+clash_deck_n <- t(as.matrix(clash_decks[,-1])) %*% as.matrix(clash_decks[,-1])
+
+
+# Clash deck wins
+clash_wins <- cards_id |>
+  mutate(across(-id, ~ ifelse(is.na(.), 0, as.integer(.))))
+
+clash_deck_wins <- t(as.matrix(clash_wins[, -1])) %*% as.matrix(clash_wins[, -1])
+
+
+# Clash deck win rate
+clash_deck_rate <- clash_deck_wins / clash_deck_n
+
+clash_deck_wins["Zap", "Hog Rider"]
+clash_deck_n["Zap", "Hog Rider"]
+clash_deck_rate["Zap", "Hog Rider"]
+```
+
+```{r}
+# Now need to remove the self-pairs
+diag(clash_deck_n) <- NA
+diag(clash_deck_wins) <- NA
+diag(clash_deck_rate) <- NA
+
+```
+
+```{r}
+# convert the table into an edge list
+pair_data <- as.data.frame(as.table(clash_deck_n)) |>
+  rename(card1 = Var1, card2 = Var2, decks = Freq) |>
+  mutate(
+    wins = as.vector(clash_deck_wins),
+    winrate = as.vector(clash_deck_rate)) |>
+  filter(card1 != card2)
+
+
+# Only show decks that have been used more than 50 times
+# this allows for only prominently used decks meaning more important
+# 1572 rows total
+pair_data <- pair_data |>
+  filter(decks > 50)
+
+```
+
+
+
+```{r}
+# any win rate above 50% convert to a 1 and under to a 0
+clash_deck_ratebinary <- ifelse(clash_deck_rate > 0.5, 1, 0)
+
+diag(clash_deck_ratebinary) <- 0
+```
+
+
+
+```{r}
+# Shows all the cards available to use 
+# including if they have an evo and/or hero upgrade
+cards <- read_csv("clash_royale_cards_125.csv")
+```
+
+
+
+
+
+
+
+# Network Representation
+
+To represent Clash Royale synergy as a network, we will model the data as a graph.
+
+```{r}
+# Build the network graph
+network <- graph_from_data_frame(
+  pair_data,
+  directed = FALSE)
+
+network
+```
+In this we see there are 69 cards that pass the greater than 50 decks filter
+
+- 69 nodes
+
+There is a total of 1572 card pair connections
+
+- 1572 edges
+
+
+## Nodes
+
+A node represents one Clash Royale card.
+
+Examples of nodes could be:
+
+-   Hog Rider
+-   Fireball
+-   Miner
+-   Ice Spirit
+
+In the network, each card appears once as a node.
+
+## Edges
+
+An **edge** represents a connection between two nodes (two cards).
+
+In this module, an edge means:
+
+The two cards are commonly used together and they perform well together based on paired win rate
+
+So if two cards have strong synergy, they will be connected.
+
+## Edge weights
+
+Edges can also have a weight, which measures how strong the connection is.
+
+For Clash Royale synergy, the edge weight will be the paired win rate for that card pair.
+
+Interpretation:
+
+-   Higher paired win rate → stronger connection
+-   Lower paired win rate → weaker connection
+
+## Why use a network?
+
+A network is useful here because it lets us study:
+
+-   which cards connect to many others
+-   which groups of cards form groups of synergy
+-   how the meta might be structured through relationships, not just individual win rates
+
+There are over 37,235,730,424,788 possible unique deck combinations
+
+
+(Pick 16 cards from the dataset for which we will use, go back to adjacency matrix, only 16 nodes and only have edges for nodes with higher than 50% win rate)
+
+# make an exercise using diff win rates diff cards for new matrix
+
+# add random deck builder for said exercise
+
+# write on the centrality of the decks
+```{r}
+used_cards <- c("Hog Rider", "Zap", "Valkyrie", "Giant Skeleton", "Baby Dragon",
+                "Mini P.E.K.K.A", "Witch", "Musketeer", "Balloon", "Arrows", "Skeleton Army", "Electro Wizard", "Mega Knight", "Fireball", "Executioner", "P.E.K.K.A")
+```
+
+```{r}
+pair_data_16 <- pair_data |>
+  filter(card1 %in% used_cards, card2 %in% used_cards) |>
+  mutate(synergy = ifelse(winrate > 0.57, 1, 0)) |>
+  #filter(synergy == 1) |>
+  select(card1, card2, synergy) 
+  
+
+
+
+network_16 <- graph_from_data_frame(pair_data_16, directed = FALSE)
+
+plot(network_16,
+     layout = layout_with_fr,
+     vertex.size = 8,
+     vertex.label.cex = .8,
+     edge.width = E(network_16)$synergy)
+
+```
+
+
+# below are test runs using other methods
+
+```{r}
+# Add edge weights
+E(network)$weight <- pair_data$winrate
+
+# plot a network
+plot(network,
+     layout = layout_with_fr,
+     vertex.size = 7,
+     vertex.label.cex = .7,
+     edge.width = E(network)$weight * 5)
+```
+
+```{r}
+# find most connected cards
+card_degree <- degree(network)
+sort(card_degree, decreasing = TRUE)[1:10]
+
+
+# Filtered more decks since network too dense
+# show only strongest edges
+pair_data_small <- pair_data |>
+  filter(decks > 290, winrate > 0.50)
+
+network_small <- graph_from_data_frame(pair_data_small, directed = FALSE)
+
+# gives layout more time to spread out
+lay <- layout_with_fr(network_small, niter = 5000)
+
+# plot
+plot(network_small,
+     layout = lay,
+     vertex.size = 8,
+     vertex.label.cex = 0.75,
+     edge.width = E(network_small)$winrate * 4)
+```
+Here we can see a 16 node network
+
+- 16 cards are used

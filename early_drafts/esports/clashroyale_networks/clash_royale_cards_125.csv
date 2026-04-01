@@ -1,0 +1,126 @@
+card_name,elixir,type,evolution,hero_upgrade
+Barbarian Hut,7,Building,FALSE,FALSE
+Bomb Tower,4,Building,FALSE,FALSE
+Cannon,3,Building,TRUE,FALSE
+Elixir Collector,6,Building,FALSE,FALSE
+Goblin Cage,4,Building,TRUE,FALSE
+Goblin Drill,4,Building,FALSE,FALSE
+Goblin Hut,4,Building,FALSE,FALSE
+Inferno Tower,5,Building,FALSE,FALSE
+Mortar,4,Building,TRUE,FALSE
+Tesla,4,Building,TRUE,FALSE
+Tombstone,3,Building,FALSE,FALSE
+X-Bow,6,Building,FALSE,FALSE
+Arrows,3,Spell,FALSE,FALSE
+Barbarian Barrel,2,Spell,FALSE,FALSE
+Clone,3,Spell,FALSE,FALSE
+Earthquake,3,Spell,FALSE,FALSE
+Fireball,4,Spell,FALSE,FALSE
+Freeze,4,Spell,FALSE,FALSE
+Giant Snowball,2,Spell,TRUE,FALSE
+Goblin Barrel,3,Spell,TRUE,FALSE
+Goblin Curse,2,Spell,FALSE,FALSE
+Graveyard,5,Spell,FALSE,FALSE
+Lightning,6,Spell,FALSE,FALSE
+Mirror,,Spell,FALSE,FALSE
+Poison,4,Spell,FALSE,FALSE
+Rage,2,Spell,FALSE,FALSE
+Rocket,6,Spell,FALSE,FALSE
+Royal Delivery,3,Spell,FALSE,FALSE
+The Log,2,Spell,FALSE,FALSE
+Tornado,3,Spell,FALSE,FALSE
+Vines,3,Spell,FALSE,FALSE
+Void,3,Spell,FALSE,FALSE
+Zap,2,Spell,TRUE,FALSE
+Cannoneer,,Tower Troop,FALSE,FALSE
+Dagger Duchess,,Tower Troop,FALSE,FALSE
+Royal Chef,,Tower Troop,FALSE,FALSE
+Tower Princess,,Tower Troop,FALSE,FALSE
+Archer Queen,5,Troop,FALSE,FALSE
+Archers,3,Troop,TRUE,FALSE
+Baby Dragon,4,Troop,FALSE,FALSE
+Balloon,5,Troop,FALSE,FALSE
+Bandit,3,Troop,FALSE,FALSE
+Barbarians,5,Troop,TRUE,FALSE
+Bats,2,Troop,TRUE,FALSE
+Battle Healer,4,Troop,FALSE,FALSE
+Battle Ram,4,Troop,FALSE,FALSE
+Berserker,2,Troop,FALSE,FALSE
+Bomber,2,Troop,TRUE,FALSE
+Boss Bandit,6,Troop,FALSE,FALSE
+Bowler,5,Troop,FALSE,FALSE
+Cannon Cart,5,Troop,FALSE,FALSE
+Dark Prince,4,Troop,FALSE,FALSE
+Dart Goblin,3,Troop,FALSE,FALSE
+Electro Dragon,5,Troop,FALSE,FALSE
+Electro Giant,7,Troop,FALSE,FALSE
+Electro Spirit,1,Troop,FALSE,FALSE
+Electro Wizard,4,Troop,FALSE,FALSE
+Elite Barbarians,6,Troop,FALSE,FALSE
+Elixir Golem,3,Troop,FALSE,FALSE
+Executioner,5,Troop,FALSE,FALSE
+Fire Spirit,1,Troop,FALSE,FALSE
+Firecracker,3,Troop,TRUE,FALSE
+Fisherman,3,Troop,FALSE,FALSE
+Flying Machine,4,Troop,FALSE,FALSE
+Furnace,4,Troop,TRUE,FALSE
+Giant,5,Troop,FALSE,TRUE
+Giant Skeleton,6,Troop,FALSE,FALSE
+Goblin Demolisher,4,Troop,FALSE,FALSE
+Goblin Gang,3,Troop,FALSE,FALSE
+Goblin Giant,6,Troop,FALSE,FALSE
+Goblin Machine,5,Troop,FALSE,FALSE
+Goblins,2,Troop,FALSE,TRUE
+Goblinstein,5,Troop,FALSE,FALSE
+Golden Knight,4,Troop,FALSE,FALSE
+Golem,8,Troop,FALSE,FALSE
+Guards,3,Troop,FALSE,FALSE
+Heal Spirit,1,Troop,FALSE,FALSE
+Hog Rider,4,Troop,FALSE,FALSE
+Hunter,4,Troop,FALSE,FALSE
+Ice Golem,2,Troop,FALSE,TRUE
+Ice Spirit,1,Troop,TRUE,FALSE
+Ice Wizard,3,Troop,FALSE,FALSE
+Inferno Dragon,4,Troop,FALSE,FALSE
+Knight,3,Troop,TRUE,TRUE
+Lava Hound,7,Troop,FALSE,FALSE
+Little Prince,3,Troop,FALSE,FALSE
+Lumberjack,4,Troop,FALSE,FALSE
+Magic Archer,4,Troop,FALSE,FALSE
+Mega Knight,7,Troop,FALSE,FALSE
+Mega Minion,3,Troop,FALSE,TRUE
+Mighty Miner,4,Troop,FALSE,FALSE
+Miner,3,Troop,FALSE,FALSE
+Mini P.E.K.K.A,4,Troop,FALSE,TRUE
+Minion Horde,5,Troop,FALSE,FALSE
+Minions,3,Troop,FALSE,FALSE
+Monk,5,Troop,FALSE,FALSE
+Mother Witch,4,Troop,FALSE,FALSE
+Musketeer,4,Troop,TRUE,TRUE
+Night Witch,4,Troop,FALSE,FALSE
+P.E.K.K.A,7,Troop,FALSE,FALSE
+Phoenix,4,Troop,FALSE,FALSE
+Prince,5,Troop,FALSE,FALSE
+Princess,3,Troop,FALSE,FALSE
+Ram Rider,5,Troop,FALSE,FALSE
+Rascals,5,Troop,FALSE,FALSE
+Royal Ghost,3,Troop,FALSE,FALSE
+Royal Giant,6,Troop,TRUE,FALSE
+Royal Hogs,5,Troop,FALSE,FALSE
+Royal Recruits,7,Troop,TRUE,FALSE
+Rune Giant,4,Troop,FALSE,FALSE
+Skeleton Army,3,Troop,FALSE,FALSE
+Skeleton Barrel,3,Troop,TRUE,FALSE
+Skeleton Dragons,4,Troop,FALSE,FALSE
+Skeleton King,4,Troop,FALSE,FALSE
+Skeletons,1,Troop,TRUE,FALSE
+Sparky,6,Troop,FALSE,FALSE
+Spear Goblins,2,Troop,FALSE,FALSE
+Spirit Empress,6,Troop,FALSE,FALSE
+Suspicious Bush,2,Troop,FALSE,FALSE
+Three Musketeers,9,Troop,FALSE,FALSE
+Valkyrie,4,Troop,TRUE,FALSE
+Wall Breakers,2,Troop,FALSE,FALSE
+Witch,5,Troop,FALSE,FALSE
+Wizard,5,Troop,TRUE,TRUE
+Zappies,4,Troop,FALSE,FALSE
