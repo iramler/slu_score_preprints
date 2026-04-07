@@ -14,7 +14,7 @@ author:
 execute:
   error: true
 
-date: April 1, 2026
+date: April 7, 2026
 description: This module explores results from powerlifting competitions, comparing ranks between age groups using the Kruskal-Wallis and Dunn's tests.
 categories: 
   - non-parametric analysis
@@ -346,7 +346,7 @@ This module can be extended using the datasets provided for further variable tes
 
 -   This module is done using female benching data, but provided is also data on female squatting, female deadlifting, and all three exercises for males
 -   The module can be extended further to examine differences between exercises and genders in addition to age groups.
--   A sample module for female squatting can be found here [Sample Module](Sample Powerlifting Module.html){target="_blank"}
+-   A sample set of solutions for female squatting can be found here [Female Squat Sample Solutions](female_squat_solutions.qmd)
 :::
 
 ## Conclusion
