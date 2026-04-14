@@ -6,11 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kevin Euyoque">
-<meta name="dcterms.date" content="2026-03-02">
-<meta name="description" content="A data visualization module using Nathan’s Hot Dog Eating Contest data through a closeread story.">
+<meta name="author" content="Keelin Joyce">
+<meta name="author" content="Ivan Ramler">
+<meta name="dcterms.date" content="2026-04-10">
+<meta name="description" content="Estimate the proportion of collegiate rowers who meet their goal time set before an erg piece.">
 
-<title>Intro to Closeread Scrollytelling: Nathan’s Hotdog Eating Contest – SLU SCORE Module Preprint Repository</title>
+<title>Rowing: Estimating the proportion of athletes meeting their goal – SLU SCORE Module Preprint Repository</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,66 +27,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-244ce1b9ec229af56bb6f90d24b3371d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../../site_libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
-<script src="../../../site_libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
-<script src="../../../site_libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-47904113db2c9d372546618f5015bf2e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -140,11 +103,8 @@ cookieconsent.run({
 });
 </script> 
   
-<meta cr-debug-mode="false">
-<meta cr-remove-header-space="false">
 
 
-<link rel="stylesheet" href="_extensions/qmd-lab/closeread/closeread.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light">
@@ -154,7 +114,7 @@ cookieconsent.run({
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SLU SCORE Module Preprint Repository</span>
     </a>
   </div>
@@ -165,7 +125,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -187,27 +147,27 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/donutrun_mfinley/index.html">Competitive Eating</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/hotdog_story_keuyoque/index.html">Intro to Closeread Scrollytelling: Nathan’s Hotdog Eating Contest</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../early_drafts/rowing/index.html">Rowing: Estimating the proportion of athletes meeting their goal</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🏅 The SLU SCORE Team</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../by-statsds-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📊 Modules by Statistics Topic</span></a>
   </div>
 </li>
@@ -222,7 +182,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/rowing/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/rowing/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Rowing: Estimating the proportion of athletes meeting their goal</span></a>
   </div>
 </li>
@@ -237,7 +197,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/basketball/women_ncaa_shiny/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/basketball/women_ncaa_shiny/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s NCAA Basketball - Building a shiny app</span></a>
   </div>
 </li>
@@ -245,46 +205,46 @@ cookieconsent.run({
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Competitive Eating</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/competitive_eating/donutrun_mfinley/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/competitive_eating/donutrun_mfinley/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doughnuts and 5ks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/competitive_eating/donutrun_tkashkarov/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/competitive_eating/donutrun_tkashkarov/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Doughnut Run: Time Adjustments &amp; Performance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/competitive_eating/hotdog_story_amcgowan/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/competitive_eating/hotdog_story_amcgowan/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">An Introduction to Data Scrollytelling: Nathan’s Hot Dog Eating Contest</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/competitive_eating/hotdog_story_ecortina/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nathan’s Famous Hot Dog Competition - Data visualization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/competitive_eating/hotdog_story_keuyoque/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../early_drafts/competitive_eating/hotdog_story_keuyoque/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Intro to Closeread Scrollytelling: Nathan’s Hotdog Eating Contest</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/competitive_eating/hotdog_story_kjoyce/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/competitive_eating/hotdog_story_kjoyce/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analyzing Winners of Nathan’s Famous Hotdog Eating Competition through Data Storytelling</span></a>
   </div>
 </li>
@@ -301,7 +261,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
   </div>
 </li>
@@ -318,7 +278,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/esports/clashroyale_networks/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/esports/clashroyale_networks/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Clash Royale Card Synergy: A Network Analysis Tutorial</span></a>
   </div>
 </li>
@@ -335,7 +295,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/football/qbr_reverse_engineering/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/football/qbr_reverse_engineering/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reverse Engineering ESPN’s Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python</span></a>
   </div>
 </li>
@@ -352,7 +312,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/lacrosse/ncaa_lacrosse_indicator_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/lacrosse/ncaa_lacrosse_indicator_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Correlations in Division 1 Men’s and Women’s Lacrosse</span></a>
   </div>
 </li>
@@ -369,13 +329,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/martial_arts/kungfu_cleaning/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/martial_arts/kungfu_cleaning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">World Kung Fu Championship - Data Scraping, Cleaning and Visualizing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/martial_arts/kungfu_clustering/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/martial_arts/kungfu_clustering/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering</span></a>
   </div>
 </li>
@@ -392,13 +352,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/motor_sports/dakar_rally_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dakar Rally Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Formula 1 2021 World Championship</span></a>
   </div>
 </li>
@@ -415,7 +375,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/multisport/ski_to_sea_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ski to Sea</span></a>
   </div>
 </li>
@@ -432,7 +392,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/powerlifting/nonparametric_age_comparison/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/powerlifting/nonparametric_age_comparison/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Female Powerlifting: Performing Kruskal-Wallis and Dunn’s Test Analyses Across Age Groups</span></a>
   </div>
 </li>
@@ -449,7 +409,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/rodeo_sports/bull_riding_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Professional Bull Riding Analysis</span></a>
   </div>
 </li>
@@ -466,7 +426,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/skating/olympic_figure_skating_twoway_anova/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/skating/olympic_figure_skating_twoway_anova/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Men’s Olympic Figure Skating - Two-Way ANOVA</span></a>
   </div>
 </li>
@@ -483,13 +443,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/skiing/giant-slalom_cleaning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing World Giant Slalom - Data Cleaning</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../early_drafts/skiing/giant_slalom_paired/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s Alpine Skiing Giant Slalom - Paired Data</span></a>
   </div>
 </li>
@@ -499,7 +459,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../basketball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../basketball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basketball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -508,31 +468,31 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basketball/nba_draft_anova_intermediate/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Do NBA Draft Picks Matter? Wrangling and Analyzing Player Minutes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basketball/nba_draft_anova_intro/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Do NBA Draft Picks Matter? Exploring Player Minutes with ANOVA</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../basketball/nba_sga_sampling_distributions/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basketball/nba_sga_sampling_distributions/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sampling Distributions: Shai Gilgeous-Alexander 2024-25 Points</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../basketball/nba_wingspans_and_performance/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basketball/nba_wingspans_and_performance/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NBA Wingspan &amp; Performance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../basketball/wnba_data_quality/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What Can Box Scores Tell Us? Exploring WNBA Player Stats</span></a>
   </div>
 </li>
@@ -540,7 +500,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../canoeing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../canoeing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Canoeing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-16" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -549,19 +509,19 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-16" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../canoeing/canoe_racing_clinton/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../canoeing/canoe_racing_clinton/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Clinton Canoe Regatta: Graphing and Data Manipulation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../canoeing/canoe_racing_clinton_distributions/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../canoeing/canoe_racing_clinton_distributions/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Clinton Canoe Regatta: Describing Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../canoeing/raisin_river_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Raisin River Results and Oulier Impact/Exclusion</span></a>
   </div>
 </li>
@@ -569,7 +529,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../combat_sports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../combat_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Combat Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-17" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -578,7 +538,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-17" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../combat_sports/ufc_striking_accuracy/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">UFC: Striking Accuracy Percentages and the Normal Distribution</span></a>
   </div>
 </li>
@@ -586,7 +546,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../disc_golf/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../disc_golf/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Disc Golf</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-18" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -595,7 +555,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-18" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../disc_golf/dgpt_correlations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Disc Golf Pro Tour - Driving or Putting?</span></a>
   </div>
 </li>
@@ -603,7 +563,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../diving/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Diving</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-19" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -612,7 +572,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-19" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
   </div>
 </li>
@@ -620,7 +580,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../esports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../esports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Esports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-20" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -629,7 +589,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-20" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../esports/league_of_legends/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">League of Legends - Buffing and Nerfing</span></a>
   </div>
 </li>
@@ -637,7 +597,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../fitness_and_training/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../fitness_and_training/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fitness and Training</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-21" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -646,13 +606,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-21" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../fitness_and_training/dumbbell_barbell_bench_ratio/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Strength Ratios - Flat Dumbbell Press to Barbell Bench Press</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../fitness_and_training/powerlifting_polyreg/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../fitness_and_training/powerlifting_polyreg/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Modeling the Impact of Age on Powerlifting</span></a>
   </div>
 </li>
@@ -660,7 +620,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../football_american/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../football_american/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football American</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-22" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -669,13 +629,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-22" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../football_american/football-recruiting-and-impact-NFL/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Football Recruiting and Impact in the NFL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../football_american/nfl-point-spread-inference/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../football_american/nfl-point-spread-inference/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NFL Point Spreads and Game Scores</span></a>
   </div>
 </li>
@@ -683,7 +643,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../golf/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../golf/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Golf</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-23" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -692,7 +652,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-23" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../golf/pga_drive_putt/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PGA - Drive for Show, Putt for Dough?</span></a>
   </div>
 </li>
@@ -700,7 +660,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../gymnastics/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../gymnastics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gymnastics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-24" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -709,7 +669,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-24" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gymnastics/NCAA-womens-gymnastics-bootstrap/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NCAA Women’s Gymnastics and Bootstrap Distributions</span></a>
   </div>
 </li>
@@ -717,7 +677,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../handball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../handball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Handball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-25" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -726,7 +686,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-25" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../handball/handball-bundesliga/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Does Aggression Pay Off? Modeling Handball Player Performance</span></a>
   </div>
 </li>
@@ -734,7 +694,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../hockey/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../hockey/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hockey</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-26" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -743,7 +703,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-26" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../hockey/pwhl_season1_visualizations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023-24 PWHL - Visualizing the Regular Season</span></a>
   </div>
 </li>
@@ -751,7 +711,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../lacrosse/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../lacrosse/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-27" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -760,13 +720,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-27" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lacrosse/college_lacrosse_faceoffs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse Faceoff Proportions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../lacrosse/lacrosse_pll_vs_nll/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lacrosse PLL vs.&nbsp;NLL</span></a>
   </div>
 </li>
@@ -774,7 +734,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../motor_sports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../motor_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motor Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-28" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -783,13 +743,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-28" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../motor_sports/formula1_laps/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analyzing Lap Times for the 2023 F1 Miami Grand Prix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../motor_sports/nascar_regression_transformation/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NASCAR Transformation Module</span></a>
   </div>
 </li>
@@ -797,7 +757,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../multisport/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../multisport/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multisport</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-29" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -806,7 +766,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-29" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../multisport/olympics_beijing_medals/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beijing 2022 Olympics - Cleaning and Summarizing Data</span></a>
   </div>
 </li>
@@ -814,7 +774,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../racquet_sports/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../racquet_sports/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Racquet Sports</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-30" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -823,19 +783,19 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-30" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../racquet_sports/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../racquet_sports/atp_win_percentages_format_and_surface/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Investigating the Impact of Tournament Length and Surface Type on Win Percentages in Professional Tennis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../racquet_sports/pickleball_matched_pairs/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../racquet_sports/pickleball_matched_pairs/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pickleball: Comparing Reliability in Player Ratings for Doubles vs Singles Matches</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../racquet_sports/pickleball_one-proportion-ci/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../racquet_sports/pickleball_one-proportion-ci/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pickleball: Estimating the proportion of dependable DUPR ratings</span></a>
   </div>
 </li>
@@ -843,7 +803,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../rowing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../rowing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Rowing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-31" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -852,13 +812,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-31" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../rowing/olympic_rowing_datawrangling/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Data Wrangling</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../rowing/olympic_rowing_introstat/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Olympic Rowing Medals Between 1900 and 2022 - Summary Statistics</span></a>
   </div>
 </li>
@@ -866,7 +826,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../running/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../running/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Running</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-32" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -875,7 +835,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-32" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../running/boston_marathon_2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2023 Boston Marathon - Variability in Finish Times</span></a>
   </div>
 </li>
@@ -883,7 +843,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../skating/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../skating/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Skating</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-33" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -892,7 +852,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-33" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skating/ice_skating_olympics_men_2008-2022/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../skating/ice_skating_olympics_men_2008-2022/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Investigating The Difference in Olympic Figure Skating Scores Throughout the Years</span></a>
   </div>
 </li>
@@ -900,7 +860,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../skiing/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../skiing/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Skiing</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-34" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -909,13 +869,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-34" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skiing/giant_salom_womens_worldcup/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../skiing/giant_salom_womens_worldcup/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exploring Differences in Women’s World Cup Giant Slalom Run Times</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../skiing/nordic_ski_10k_splits/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">World Cup Women’s 10k Classic Nordic Ski Race - Splits</span></a>
   </div>
 </li>
@@ -923,7 +883,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../softball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../softball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Softball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-35" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -932,7 +892,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-35" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../softball/softball_div1/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Merging Multiple Seasons of NCAA Div 1 Softball Statistics</span></a>
   </div>
 </li>
@@ -940,7 +900,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../swimming/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../swimming/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Swimming</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-36" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -949,7 +909,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-36" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../swimming/olympic_swimming_100m/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Women’s 100m Olympic Swimming: Comparing Strokes and Eras</span></a>
   </div>
 </li>
@@ -957,7 +917,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../triathlon/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../triathlon/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Triathlon</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-37" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -966,13 +926,13 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-37" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../triathlon/multiple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Multiple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../triathlon/simple_linear_regression/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ironman Triathlon (Canadian Females) - Simple Linear Regression</span></a>
   </div>
 </li>
@@ -980,7 +940,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../ultimate_frisbee/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../ultimate_frisbee/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ultimate Frisbee</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-38" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -989,7 +949,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-38" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ultimate_frisbee/college-ultimate-championship-statistics/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">2024 College Ultimate Championship Statistics</span></a>
   </div>
 </li>
@@ -997,7 +957,7 @@ cookieconsent.run({
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../volleyball/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../volleyball/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Volleyball</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-39" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -1006,7 +966,7 @@ cookieconsent.run({
       <ul id="quarto-sidebar-section-39" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../volleyball/volleyball_timeouts_single_prop/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Division Three Volleyball Timeouts</span></a>
   </div>
 </li>
@@ -1017,41 +977,50 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-erging" id="toc-introduction-to-erging" class="nav-link active" data-scroll-target="#introduction-to-erging">Introduction to Erging</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
-      <!-- user-provided yaml closeread style options -->
-      <style>
-        :root {
-          --cr-narrative-background-color-sidebar: #09753C;
---cr-narrative-text-color-sidebar: white;
-        }
-      </style>
-    
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/donutrun_mfinley/index.html">Competitive Eating</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/competitive_eating/hotdog_story_keuyoque/index.html">Intro to Closeread Scrollytelling: Nathan’s Hotdog Eating Contest</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../early_drafts/rowing/index.html">Rowing: Estimating the proportion of athletes meeting their goal</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Closeread Scrollytelling: Nathan’s Hotdog Eating Contest</h1>
+<h1 class="title">Rowing: Estimating the proportion of athletes meeting their goal</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">tidyverse</div>
-    <div class="quarto-category">closeread</div>
-    <div class="quarto-category">data visualization</div>
-    <div class="quarto-category">scrollytelling</div>
+    <div class="quarto-category">Confidence Intervals</div>
+    <div class="quarto-category">Proportions</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A data visualization module using Nathan’s Hot Dog Eating Contest data through a closeread story.
+    Estimate the proportion of collegiate rowers who meet their goal time set before an erg piece.
   </div>
 </div>
 
-<div class="quarto-title-meta-author column-page-right">
-  <div class="quarto-title-meta-heading">Author</div>
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Kevin Euyoque </p>
+    <p class="author">Keelin Joyce </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -1060,13 +1029,13 @@ cookieconsent.run({
       </div>
   </div>
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta">
 
       
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 2, 2026</p>
+      <p class="date">April 10, 2026</p>
     </div>
   </div>
   
@@ -1078,63 +1047,35 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="hotdog-pic.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
-</figure>
-</div>
+<section id="introduction-to-erging" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-erging">Introduction to Erging</h2>
+<p>If you are unfamiliar with the sport of rowing, and specifically erging, please watch this video from the University of Virginia’s winter training season:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3dGgmNNHDsg?si=IJy33f-PIcaOPPrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The Nathan’s Famous Hot Dog Eating Contest has been held annually since 1972. Over time, changes in contest duration, training methods, and competitive intensity have shaped modern performance levels.</p>
-<p>In this module, students explore contest data through a <strong>closeread scrollytelling format</strong> in Quarto. The goal is not only to analyze performance trends, but to understand how data visualization can be structured into a guided narrative.</p>
-<p>Rather than simply producing graphs, students will learn how to structure visualizations into a guided analytical narrative.</p>
-</section>
-<section id="background-closeread" class="level2">
-<h2 class="anchored" data-anchor-id="background-closeread">Background: Closeread</h2>
-<p><a href="https://closeread.dev"><strong>Closeread</strong></a> is a Quarto extension that enables scrollytelling for HTML documents.</p>
-<p>Scrollytelling is a style of web-based storytelling in which:</p>
-<p>Text and graphics transition as the reader scrolls</p>
-<p>Visual elements become “sticky” and remain fixed while the narrative changes</p>
-<p>Attention is directed intentionally toward specific analytical moments</p>
-<p>Closeread allows these techniques to be implemented directly within Quarto using structured sections and plot references.</p>
-</section>
-<section id="closeread-structure" class="level2">
-<h2 class="anchored" data-anchor-id="closeread-structure">Closeread Structure</h2>
-<p>Closeread documents are built using three key components:</p>
-<ol type="1">
-<li>Sections</li>
-</ol>
-<p>Sections define areas where scrollytelling behavior occurs</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "::::{.cr-section}\n...\n::::"</code></pre>
-</div>
-</div>
-<p>Everything inside a .cr-section behaves as part of the scroll-driven story.</p>
-<ol start="2" type="1">
-<li>Stickies (Plots or Elements to Highlight)</li>
-</ol>
-<p>A sticky element is defined with a unique ID:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] ":::{#cr-plotname}\n&lt;plot code&gt;\n:::"</code></pre>
-</div>
-</div>
-<p>This element becomes pinned (or “sticky”) when triggered.</p>
-<ol start="3" type="1">
-<li>Referencing a Sticky</li>
-</ol>
-<p>Inside the narrative text, reference the sticky using:</p>
-<div data-focus-on="cr-plotname">
-
-</div>
-<p>When that line scrolls into view, the corresponding sticky element becomes the focus.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>While collegiate rowing is a two season sport having both a fall (August-November) and spring (March-May) season, practicing during the winter is proven to be difficult as most climates force rowers indoors for the season. The most common practice during the winter training period in rowing is the ergometer, commonly called an erg. The erg mimics the stroke that rowers take in the boat and instantly displays performance metrics to the rower. These metrics can be assessed to show a rower where their fitness is at during a time where they cannot practice on the water. Ergs are used for both fitness training and assessment purposes.</p>
+<p>During the period of winter training, athletes focus on strength training, building speed, and improving their stroke before they can get back on the water in early spring. The main measure of their progress is shown in their performance during test pieces</p>
+<p>There are 111 observations of completed pieces. We will focus on the <code>Goal</code> and <code>Split</code> variables to assess the proportion of athletes that are surpassing their goal. There are other variables in this dataset that are not necessary for this module. Erg data was collected from a Div-III collegiate rowing team and their test piece results were compiled into a dataset. These data were approved by the Institutional Research Board from the author’s institution to be publicly released.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This could serve as an in class activity and should take roughly an hour to complete.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1143,21 +1084,14 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ol type="1">
-<li>Create time series visualizations using ggplot</li>
-<li>Explain why standardizing measurements (ex: hot dogs per minute) improves comparisons across time</li>
-<li>Identify structural shifts in performance trends</li>
-<li>Implement closeread syntax to build a scrollytelling data document in Quarto</li>
-<li>Combine narrative reasoning with visual evidence</li>
-</ol>
+<p>Students will gain experience performing single proportion confidence intervals.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1166,390 +1100,41 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology Requirements</p>
-<ul>
-<li>R</li>
-<li>RStudio</li>
-<li>Quarto with closeread extension installed</li>
-</ul>
-<p>Statistical Concepts Used</p>
-<ul>
-<li>Time series plots</li>
-<li>Standardization (rates vs totals)</li>
-<li>Visual trend analysis</li>
-<li>Annotation of key observations</li>
-</ul>
-<p>Technical Concepts Used</p>
-<ul>
-<li>tidyverse for data manipulation and plotting</li>
-<li>Closeread section and sticky syntax</li>
-<li>Narrative-triggered visualization</li>
-</ul>
+<p>Students are expected to have been exposed to the concept confidence intervals for a single proportion, although this is intended to be used as an earlier example for the topic.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>This module uses a cleaned dataset of winners from the Nathan’s Famous Hot Dog Eating Contest from 1972 to 2025.</p>
-<p>Download data: <a href="&quot;hotdog_clean.csv&quot;">hotdog_clean.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Year</td>
-<td>Year the competition took place</td>
-</tr>
-<tr class="even">
-<td>Sex</td>
-<td>Sex of the winner for the year the competition took place</td>
-</tr>
-<tr class="odd">
-<td>Dogs</td>
-<td>Total hot dogs eaten</td>
-</tr>
-<tr class="even">
-<td>Winner</td>
-<td>Name of the winner for their sex category</td>
-</tr>
-<tr class="odd">
-<td>Time</td>
-<td>Time in minutes the competition elapsed</td>
-</tr>
-<tr class="even">
-<td>DPM</td>
-<td>Dogs eaten per minute</td>
-</tr>
-</tbody>
-</table>
-</details>
+<p>This module used the <code>rowing</code> data from the <a href="https://data.scorenetwork.org/water_sports/rowing_wintertraining_div3.html" target="_blank">SCORE Data Repository</a></p>
+<p>However, the data is summarized in the provided worksheet and students do not need direct access to the data.</p>
 </section>
-<section id="closeread-essentials" class="level2">
-<h2 class="anchored" data-anchor-id="closeread-essentials">Closeread essentials</h2>
-<p>Closeread adds one key idea to a normal Quarto document:</p>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
 <ul>
-<li><p>A plot becomes a target when it has an ID like {#cr-plotname}</p></li>
-<li><div data-focus-on="cr-plotname">
-<p>Your narrative becomes a trigger when it references the target using</p>
-</div></li>
-<li><p>When the reader scrolls to that trigger, the plot becomes the focus</p></li>
-<li><p>You will see the same dataset multiple times. This is intentional, scrollytelling uses one anchor visualization and changes it slightly as the story advances.</p></li>
+<li><p>There are no technology requirements for this module</p></li>
+<li><p><a href="Erging_ConfidenceIntervals.docx">Class handout</a></p></li>
+<li><p><a href="Erging_ConfidenceIntervals_Solutions.docx">Class handout - with solutions</a></p></li>
 </ul>
-</section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<p>Students will:</p>
-<ol type="1">
-<li>Construct a baseline plot of total hot dogs eaten over time.</li>
-<li>Identify a structural shift in the early 2000s.</li>
-<li>Standardize performance using hot dogs per minute.</li>
-<li>Use closeread references to structure a scroll-based narrative.</li>
-<li>Highlight Joey Chestnut’s winning years within the larger historical trend.</li>
-</ol>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Summary">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Summary
+<span class="screen-reader-only">Note</span>Conclusion
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>This module demonstrates how statistical reasoning and visual storytelling can be integrated into a cohesive scrollytelling experience. By combining careful metric selection with structured narrative flow, students learn not only how to analyze data, but how to communicate it effectively.</p>
+<p>Students should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.</p>
 </div>
 </div>
 </div>
-<div id="cr-intro">
-
-</div>
-<div class="cr-section cr-column-screen sidebar-left">
-<div class="narrative-col">
-<div class="trigger new-trigger" data-focus-on="cr-anchor">
-<div class="narrative">
-<p>Step 1 — Establish an anchor plot</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Create one plot that the reader can return to throughout the story. This “anchor plot” should be simple and readable. It does not need heavy styling.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-anchor">
-<div class="narrative">
-<p>Here, the anchor shows men’s winner performance over time, measured as hot dogs per minute.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Locate years that look unusually high compared to nearby years.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-totals">
-<div class="narrative">
-<p>Step 2 — Teach a storytelling transition: totals vs rates</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Show how to justify a metric choice. A common storytelling move is: start with the obvious metric (totals) and then explain why you switch to a fairer metric (rates).</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-totals">
-<div class="narrative">
-<p>This plot shows total hot dogs eaten by the men’s winner each year.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>This jump is worth investigating. Next, we check whether this is a real performance shift or a measurement issue</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-hist">
-<div class="narrative">
-<p>Step 3 — Add a distribution view (rates)</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>A histogram helps you define what “typical” looks like before you talk about extremes.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-hist">
-<div class="narrative">
-<p>This histogram summarizes men’s winner pace across years.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-rate-time">
-<div class="narrative">
-<p>Step 4 — Return to the anchor frame (rates over time)</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Scrollytelling often reuses the same frame (Year vs performance) to keep readers oriented.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-rate-time">
-<div class="narrative">
-<p>Here we go back to the time series, now using the fair metric (hot dogs per minute).</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Now answer the story question: Is the jump still there when we standardize? If yes, it supports the idea of a real performance-era shift.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-smooth">
-<div class="narrative">
-<p>Step 5 — Summarize the long-run direction (smooth)</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Smoothing helps you write a clean “big picture” sentence.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-smooth">
-<div class="narrative">
-<p>A smoother reduces year-to-year noise so your reader can see the overall direction.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>At this point, your narrative should do one thing: Summarize the trend in one sentence.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-joey">
-<div class="narrative">
-<p>Step 6 — Highlight Joey Chestnut’s winning years within the larger historical trend.</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>Keep the same plot frame, but highlight one “character moment.”</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-joey">
-<div class="narrative">
-<p>This is a common ending structure for data stories: we move from “trend” -&gt; “era.”</p>
-</div>
-</div>
-</div>
-<div class="sticky-col">
-<div class="sticky-col-stack">
-<div id="cr-anchor" class="sticky">
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Hotdogs_per_minute)) <span class="sc">+</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Men: Winners’ Eating Rates Over Time"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Hot Dogs per Minute"</span>) <span class="sc">+</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/anchor-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="cr-totals" class="sticky">
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Dogs)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Men: Total Hot Dogs Eaten by Year"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Total Hot Dogs (Winner)"</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/totals-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="cr-hist" class="sticky">
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Hotdogs_per_minute)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Men: Distribution of Winner Pace"</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Hot Dogs per Minute"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Count of Years"</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/hist-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="cr-rate-time" class="sticky">
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Hotdogs_per_minute)) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Men: Hot Dogs per Minute by Year"</span>,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Hot Dogs per Minute"</span>) <span class="sc">+</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/rate_time-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="cr-smooth" class="sticky">
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Hotdogs_per_minute)) <span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Men: Smoothed Trend in Winner Pace"</span>,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Hot Dogs per Minute"</span>) <span class="sc">+</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/smooth-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div id="cr-joey" class="sticky">
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="st">"Winner"</span> <span class="sc">%in%</span> <span class="fu">names</span>(hotdog_men)) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  joey_wins <span class="ot">&lt;-</span> hotdog_men <span class="sc">|&gt;</span> <span class="fu">filter</span>(Winner <span class="sc">==</span> <span class="st">"Joey Chestnut"</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Hotdogs_per_minute)) <span class="sc">+</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>, <span class="at">color =</span> <span class="st">"grey"</span>) <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">data =</span> joey_wins, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"Joey Chestnut’s Winning Years Highlighted"</span>,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Hot Dogs per Minute"</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(hotdog_men, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Hotdogs_per_minute)) <span class="sc">+</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"Joey highlight requires a Winner column"</span>,</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Hot Dogs per Minute"</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/joey-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Congratulations! You just finished your first data scrollytelling project!</p>
-<p>Closeread has many different ways it can be used to show data. Hopefully this helped understand its overall introduction through a fun scrollytelling format.</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Bray, A., &amp; Goldie, J. (2024). Closeread. https://closeread.dev</p>
 
 
 </section>

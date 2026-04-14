@@ -2,6 +2,7 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
+      "/early_drafts/rowing/index.html",
       "/early_drafts/powerlifting/nonparametric_age_comparison/index.html",
       "/early_drafts/martial_arts/kungfu_cleaning/index.html",
       "/early_drafts/martial_arts/kungfu_clustering/index.html",
@@ -35,25 +36,25 @@
       "/basketball/nba_draft_anova_intermediate/index.html",
       "/basketball/nba_draft_anova_intro/index.html",
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
-      "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
       "/disc_golf/dgpt_correlations/index.html",
+      "/handball/handball-bundesliga/index.html",
       "/combat_sports/ufc_striking_accuracy/index.html",
       "/hockey/pwhl_season1_visualizations/index.html",
-      "/skiing/nordic_ski_10k_splits/index.html",
       "/basketball/wnba_data_quality/index.html",
+      "/early_drafts/skiing/giant-slalom_cleaning/index.html",
+      "/early_drafts/skiing/giant_slalom_paired/index.html",
+      "/motor_sports/formula1_laps/index.html",
       "/early_drafts/multisport/ski_to_sea_correlations/index.html",
       "/diving/world_junior_diving/index.html",
       "/early_drafts/competitive_eating/donutrun_mfinley/index.html",
       "/early_drafts/diving/world_junior_diving/index.html",
       "/early_drafts/esports/clashroyale_networks/index.html",
-      "/handball/handball-bundesliga/index.html",
-      "/early_drafts/skiing/giant-slalom_cleaning/index.html",
-      "/early_drafts/skiing/giant_slalom_paired/index.html",
-      "/motor_sports/formula1_laps/index.html",
       "/early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html",
       "/early_drafts/motor_sports/dakar_rally_regression/index.html",
       "/early_drafts/rodeo_sports/bull_riding_regression/index.html",
       "/early_drafts/skating/olympic_figure_skating_twoway_anova/index.html",
+      "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
+      "/skiing/nordic_ski_10k_splits/index.html",
       "/running/boston_marathon_2023/index.html",
       "/multisport/olympics_beijing_medals/index.html",
       "/esports/league_of_legends/index.html",
@@ -106,38 +107,15 @@
     ]
   },
   {
-    "listing": "/diving/index.html",
+    "listing": "/disc_golf/index.html",
     "items": [
-      "/diving/world_junior_diving/index.html"
-    ]
-  },
-  {
-    "listing": "/combat_sports/index.html",
-    "items": [
-      "/combat_sports/ufc_striking_accuracy/index.html"
-    ]
-  },
-  {
-    "listing": "/canoeing/index.html",
-    "items": [
-      "/canoeing/canoe_racing_clinton_distributions/index.html",
-      "/canoeing/canoe_racing_clinton/index.html",
-      "/canoeing/raisin_river_regression/index.html"
-    ]
-  },
-  {
-    "listing": "/basketball/index.html",
-    "items": [
-      "/basketball/nba_wingspans_and_performance/index.html",
-      "/basketball/nba_sga_sampling_distributions/index.html",
-      "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
-      "/basketball/wnba_data_quality/index.html"
+      "/disc_golf/dgpt_correlations/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/early_drafts/rowing/index.html",
       "/early_drafts/powerlifting/nonparametric_age_comparison/index.html",
       "/early_drafts/martial_arts/kungfu_cleaning/index.html",
       "/early_drafts/martial_arts/kungfu_clustering/index.html",
@@ -171,25 +149,25 @@
       "/basketball/nba_draft_anova_intermediate/index.html",
       "/basketball/nba_draft_anova_intro/index.html",
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
-      "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
       "/disc_golf/dgpt_correlations/index.html",
+      "/handball/handball-bundesliga/index.html",
       "/combat_sports/ufc_striking_accuracy/index.html",
       "/hockey/pwhl_season1_visualizations/index.html",
-      "/skiing/nordic_ski_10k_splits/index.html",
       "/basketball/wnba_data_quality/index.html",
+      "/early_drafts/skiing/giant-slalom_cleaning/index.html",
+      "/early_drafts/skiing/giant_slalom_paired/index.html",
+      "/motor_sports/formula1_laps/index.html",
       "/early_drafts/multisport/ski_to_sea_correlations/index.html",
       "/diving/world_junior_diving/index.html",
       "/early_drafts/competitive_eating/donutrun_mfinley/index.html",
       "/early_drafts/diving/world_junior_diving/index.html",
       "/early_drafts/esports/clashroyale_networks/index.html",
-      "/handball/handball-bundesliga/index.html",
-      "/early_drafts/skiing/giant-slalom_cleaning/index.html",
-      "/early_drafts/skiing/giant_slalom_paired/index.html",
-      "/motor_sports/formula1_laps/index.html",
       "/early_drafts/motor_sports/f1_2021_worldchampionship_datawrangling/index.html",
       "/early_drafts/motor_sports/dakar_rally_regression/index.html",
       "/early_drafts/rodeo_sports/bull_riding_regression/index.html",
       "/early_drafts/skating/olympic_figure_skating_twoway_anova/index.html",
+      "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
+      "/skiing/nordic_ski_10k_splits/index.html",
       "/running/boston_marathon_2023/index.html",
       "/multisport/olympics_beijing_medals/index.html",
       "/esports/league_of_legends/index.html",
@@ -202,9 +180,33 @@
     ]
   },
   {
-    "listing": "/disc_golf/index.html",
+    "listing": "/basketball/index.html",
     "items": [
-      "/disc_golf/dgpt_correlations/index.html"
+      "/basketball/nba_wingspans_and_performance/index.html",
+      "/basketball/nba_sga_sampling_distributions/index.html",
+      "/basketball/nba_draft_anova_intermediate/index.html",
+      "/basketball/nba_draft_anova_intro/index.html",
+      "/basketball/wnba_data_quality/index.html"
+    ]
+  },
+  {
+    "listing": "/canoeing/index.html",
+    "items": [
+      "/canoeing/canoe_racing_clinton_distributions/index.html",
+      "/canoeing/canoe_racing_clinton/index.html",
+      "/canoeing/raisin_river_regression/index.html"
+    ]
+  },
+  {
+    "listing": "/combat_sports/index.html",
+    "items": [
+      "/combat_sports/ufc_striking_accuracy/index.html"
+    ]
+  },
+  {
+    "listing": "/diving/index.html",
+    "items": [
+      "/diving/world_junior_diving/index.html"
     ]
   },
   {
