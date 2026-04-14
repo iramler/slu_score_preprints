@@ -1,0 +1,71 @@
+---
+title: "Rowing: Estimating the proportion of athletes meeting their goal"
+author:
+  - name: Keelin Joyce
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Ivan Ramler
+    affiliation: 
+      - ref: slu
+    email: iramler@stlawu.edu
+    
+date: "April 10, 2026"
+description: "Estimate the proportion of collegiate rowers who meet their goal time set before an erg piece."
+editor: 
+  canonical: true
+format: 
+  html:
+    embed-resources: false
+categories:
+  - Confidence Intervals
+  - Proportions
+image: crop.webp
+---
+
+## Introduction to Erging
+
+If you are unfamiliar with the sport of rowing, and specifically erging, please watch this video from the University of Virginia's winter training season:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3dGgmNNHDsg?si=IJy33f-PIcaOPPrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Introduction
+
+While collegiate rowing is a two season sport having both a fall (August-November) and spring (March-May) season, practicing during the winter is proven to be difficult as most climates force rowers indoors for the season. The most common practice during the winter training period in rowing is the ergometer, commonly called an erg. The erg mimics the stroke that rowers take in the boat and instantly displays performance metrics to the rower. These metrics can be assessed to show a rower where their fitness is at during a time where they cannot practice on the water. Ergs are used for both fitness training and assessment purposes. 
+
+During the period of winter training, athletes focus on strength training, building speed, and improving their stroke before they can get back on the water in early spring. The main measure of their progress is shown in their performance during test pieces
+
+There are 111 observations of completed pieces. We will focus on the `Goal` and `Split` variables to assess the proportion of athletes that are surpassing their goal. There are other variables in this dataset that are not necessary for this module. Erg data was collected from a Div-III collegiate rowing team and their test piece results were compiled into a dataset. These data were approved by the Institutional Research Board from the author's institution to be publicly released.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This could serve as an in class activity and should take roughly an hour to complete.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+Students will gain experience performing single proportion confidence intervals.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students are expected to have been exposed to the concept confidence intervals for a single proportion, although this is intended to be used as an earlier example for the topic.
+:::
+
+## Data
+
+This module used the `rowing` data from the [SCORE Data Repository](https://data.scorenetwork.org/water_sports/rowing_wintertraining_div3.html){target="_blank"}
+
+However, the data is summarized in the provided worksheet and students do not need direct access to the data. 
+
+
+## Materials
+
+- There are no technology requirements for this module
+
+- [Class handout](Erging_ConfidenceIntervals.docx)
+
+- [Class handout - with solutions](Erging_ConfidenceIntervals_Solutions.docx)
+
+::: {.callout-note collapse="false" title="Conclusion" appearance="minimal"}
+
+Students should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.
+:::
+
