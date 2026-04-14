@@ -20,7 +20,7 @@ format:
 categories:
   - Confidence Intervals
   - Proportions
-image: crop.webp
+image: crew.webp
 ---
 
 ## Introduction to Erging
