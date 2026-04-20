@@ -12,17 +12,25 @@ author:
 affiliations:
   - id: slu
     name: St. Lawrence University
-date: "TBD"
+date: "April 1, 2026"
 description: "A network analysis tutorial exploring card synergy in Clash Royale using Season 3 deck data."
-format: html
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    code-fold: true
+execute:
+  echo: false
+  warning: false
+  message: false
+  error: true
 categories:
   - Network Analysis
   - Data Visualization
   - igraph
   - R
 image: clashroyalecover.jpeg
-execute:
-  error: true
 ---
 
 Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
@@ -31,6 +39,7 @@ Please note that these materials have not yet completed the required pedagogical
 ```{r}
 #| label: setup
 #| include: false
+#| echo: true
 
 library(tidyverse)
 library(vembedr)
@@ -39,7 +48,7 @@ library(netrankr)
 # devtools::install_github("schochastics/networkdata")
 ```
 
-## Welcome Video
+# Welcome Video
 
 If you are unfamiliar with Clash Royale, you can watch this short gameplay video for an introduction to the game:
 
@@ -66,9 +75,9 @@ By the end of this tutorial, you will be able to:
 :::
 
 :::{.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This module could be used as a short in-class lab, a longer out-of-class assignment, or part of a larger unit on network analysis and data visualization.
+This module could be used as a short in-class lab that lasts about 60 minutes or part of a larger unit on network analysis and data visualization.
 :::
-# a class period
+
 
 :::{.callout-note collapse="true" title="Methods" appearance="minimal"}
 Technology Requirement:
@@ -77,15 +86,14 @@ This activity is designed to be completed in R using RStudio and Quarto.
 
 Packages used in this module:
 
-- [tidyverse](inserturl){target="_blank"}
-- [igraph](inserturl){target="_blank"}
-- [vembedr](inserturl){target="_blank"}
-- [netrankr](inserturl){target="_blank"}
+- [tidyverse](https://tidyverse.org/packages/){target="_blank"}
+- [igraph](https://r.igraph.org/){target="_blank"}
+- [vembedr](https://www.rdocumentation.org/packages/vembedr/versions/0.1.5){target="_blank"}
+- [netrankr](https://schochastics.github.io/netrankr/){target="_blank"}
 
 Some previous experience with data wrangling in R is helpful, but no previous experience with network analysis is required.
 :::
 
-# add a hyperlink that sends the reader to the page for each package
 
 ## Data
 
@@ -120,7 +128,6 @@ The analysis in this module focuses on building a card-by-card relationship stru
 - The diagonal of each matrix is removed because a card is not paired with itself in this analysis.
 
 </details>
-# insert into module instead
 
 ## Goal of this module
 
@@ -146,6 +153,7 @@ By the end, we will:
 
 
 ```{r}
+#| echo: true
 library(readr)
 cr_season3_5000decks <- read_csv("cr_season3_5000decks.csv")
 
@@ -167,11 +175,16 @@ clash_deck_wins <- t(as.matrix(clash_wins[, -1])) %*% as.matrix(clash_wins[, -1]
 
 # Clash deck win rate
 clash_deck_rate <- clash_deck_wins / clash_deck_n
+```
+```{r}
+#| label: load-data
+#| echo: true
 
 clash_deck_wins["Zap", "Hog Rider"]
 clash_deck_n["Zap", "Hog Rider"]
 clash_deck_rate["Zap", "Hog Rider"]
 ```
+
 
 ```{r}
 # Now need to remove the self-pairs
@@ -215,9 +228,6 @@ diag(clash_deck_ratebinary) <- 0
 # including if they have an evo and/or hero upgrade
 cards <- read_csv("clash_royale_cards_125.csv")
 ```
-
-
-
 
 
 
@@ -290,11 +300,36 @@ There are over 37,235,730,424,788 possible unique deck combinations
 
 (Pick 16 cards from the dataset for which we will use, go back to adjacency matrix, only 16 nodes and only have edges for nodes with higher than 50% win rate)
 
-# make an exercise using diff win rates diff cards for new matrix
 
-# add random deck builder for said exercise
+## Centrality of Cards
 
-# write on the centrality of the decks
+Up to this point, we have visualized relationships between cards. However, we can go further by measuring how *important* each card is within the network.
+
+This is done using **centrality**, which measures how connected or influential a node is in a network.
+
+### Degree Centrality
+
+The simplest measure is **degree centrality**, which counts how many connections each card has.
+
+- High degree → card appears with many other cards  
+- Low degree → card appears with fewer pairings  
+
+Cards with high degree centrality are often:
+
+- flexible across many strategies  
+- commonly used in decks  
+- important to the overall meta  
+
+<!--
+
+# speak about the process on creating the network
+
+# make a table for the cards in the network with their centrality
+
+# go into depth with the meta and explain why centrality is important with these certain cards
+
+-->
+
 ```{r}
 used_cards <- c("Hog Rider", "Zap", "Valkyrie", "Giant Skeleton", "Baby Dragon",
                 "Mini P.E.K.K.A", "Witch", "Musketeer", "Balloon", "Arrows", "Skeleton Army", "Electro Wizard", "Mega Knight", "Fireball", "Executioner", "P.E.K.K.A")
@@ -321,43 +356,55 @@ plot(network_16,
 ```
 
 
-# below are test runs using other methods
+## Try it yourself
+
+_Either choose 16 cards yourself or choose to use the randomizer code_
 
 ```{r}
-# Add edge weights
-E(network)$weight <- pair_data$winrate
+#| echo: True
+all_cards <- unique(cr_season3_5000decks$card)
 
-# plot a network
-plot(network,
-     layout = layout_with_fr,
-     vertex.size = 7,
-     vertex.label.cex = .7,
-     edge.width = E(network)$weight * 5)
+random_16 <- sample(all_cards, 16)
+
+random_16
 ```
+This bit of code allows for a random sample of any 16 cards within the dataset
 
 ```{r}
-# find most connected cards
-card_degree <- degree(network)
-sort(card_degree, decreasing = TRUE)[1:10]
-
-
-# Filtered more decks since network too dense
-# show only strongest edges
-pair_data_small <- pair_data |>
-  filter(decks > 290, winrate > 0.50)
-
-network_small <- graph_from_data_frame(pair_data_small, directed = FALSE)
-
-# gives layout more time to spread out
-lay <- layout_with_fr(network_small, niter = 5000)
-
-# plot
-plot(network_small,
-     layout = lay,
-     vertex.size = 8,
-     vertex.label.cex = 0.75,
-     edge.width = E(network_small)$winrate * 4)
+#| echo: True
+pair_data_random <- pair_data |>
+  filter(card1 %in% random_16, card2 %in% random_16)
+  
+network_random <- graph_from_data_frame(pair_data_random, directed = FALSE)
+  
+plot(network_random,
+       layout = layout_with_fr(network_random),
+       vertex.size = 8,
+       vertex.label.cex = 0.8,
+       edge.width = E(network_random)$winrate * 8)
 ```
-Here we can see a 16 node network
 
-- 16 cards are used
+<!--
+
+# rather than change code, explain why some networks might not have all 16 cards included, meaning those cards would be excluded since they do not work well together
+
+-->
+
+
+## Conclusion
+
+In this module, we explored how network analysis can be used to understand relationships between cards in Clash Royale.
+
+Starting from raw deck data, we transformed the dataset into pairwise matrices that captured how often cards appear together and how successful those pairings are. By converting this information into a network, we were able to visualize and analyze card synergy in a more meaningful way.
+
+Through this process, we observed that:
+
+- some cards are highly connected and appear across many strategies  
+- certain card pairings consistently perform well together  
+- groups of cards form clusters that reflect common deck archetypes  
+
+We also extended this analysis by generating random sets of cards and comparing how their network structure changes, reinforcing how different combinations influence overall performance.
+
+Finally, by introducing centrality, we identified which cards play a more influential role within the network, helping us better understand the structure of the game’s meta.
+
+Overall, this module demonstrates how network analysis can reveal patterns and relationships in complex systems where interactions between elements are more important than the elements themselves.
