@@ -1,0 +1,134 @@
+---
+title: "Premier Hockey Federation Shots - Worksheet"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  html:
+    embed-resources: true
+---
+
+In this worksheet, you will analyze play-by-play shot data from the 2021--2022 PHF season, including information about shooters, goalies, teams, and shot outcomes. A central focus will be shot efficiency and goaltending effectiveness, measured using statistics such as shooting percentage and save proportion.
+
+Throughout this worksheet, you will clean, summarize, and visualize real hockey data using R, much like a sports data analyst working for a professional team. Using tools from the tidyverse, you will explore patterns in player and team performance.
+
+
+# Load the following libraries:
+
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+# A. Loading in the data
+
+Download the csv file containing data from the Premier Hockey Federation 2021-2022 season from the SCORE Network website from this URL and assign the data set a name. URL: <https://data.scorenetwork.org/data/phf-shots-2021.csv>. You can load the data set using `read_csv()`.
+
+
+```{r}
+
+```
+
+# B. Exploring the data
+
+1. How many rows and columns does the data set have? Hint: use the `dim()` function.
+
+
+```{r}
+
+```
+
+
+2. Use `head()` or `glimpse()` to explore the structure of the data, then answer the questions that follow.
+
+
+```{r}
+
+```
+
+
+3. Assuming that each team made at least one shot in the season (is listed under the `shooting_team` column), use dplyr and tidyr functions to create a data frame showing all the teams that were in this season and the total number of shots each team made throughout the season.
+
+The column names of your table should be: Team and Shots
+
+
+```{r}
+
+```
+
+
+4. Using the data frame from Question 3, make a lollipop plot to visualize the number of shots made by each team in descending order of shots. Include a title and axis labels on your plot.
+
+```{r}
+
+```
+
+
+5. Create a new variable called `is_goal` that is 1 when `shot_result == "made"` and 0 otherwise. Hint: use `if_else()`.
+
+
+
+```{r}
+
+```
+
+
+6. The name of the player who made the shot is recorded under the column `player_name_1`. Rename this column to `shooter`. Then create a bar plot to show (in descending order) the top ten most frequent shooters (shooters with the ten highest number of shots in the season) and the total number of shots they made.
+
+
+```{r}
+
+```
+
+
+7. In hockey, save proportion measures how often a goalie successfully stops shots on goal. Shots on goal consist of shots that are recorded as "made" or "saved", but do not include shots "blocked" as these are shots blocked by other defense players, not the goalie. Save proportion is calculated as the goalie's (shots saved) / (total shots on goal).
+
+a. Using some dplyr and/or tidyr functions, create a data frame with each goalie's save proportion.
+
+Hint: The variables of interest here are `goalie_involved` (which shows the names of goalies) and `shot_result`, which has categories: blocked, made, saved. Since this exploration excludes blocked shots, start by filtering to exclude them.
+
+
+```{r}
+
+```
+
+
+b. You should notice an NA value under `goalie_involved` after completing this. Remove the row with that NA value from the final data frame.
+
+
+```{r}
+
+```
+
+
+c. You should also notice that the `goalie_involved` variable includes entries like "Allie Morse replaced by #". Filter using `goalie_involved %in% c()` where `c()` takes the names of goalies without "replaced..." entries.
+
+
+```{r}
+
+```
+
+8. Using the data frame from your answer to Question 7c above, create a visualization of your choice to display goalies' save proportions in ascending order. Use `coord_flip()` such that the goalie variable is on the y axis and save proportion is on the x axis. Remember to use descriptive axis labels and a title.
+
+
+```{r}
+
+```
+
+
+9. So far, we have compared goalies using ordered plots. Another useful way to understand data is by examining its distribution.
+
+a. Using the `phf_goalies` data frame from Question 7c, create a histogram of goalie save proportions. Choose an appropriate bin width, and include a title and axis labels.
+
+
+```{r}
+
+```
+
+
+b. Based on your histogram, describe the distribution of save proportions. In your answer, consider the following:
+
+ - Is the distribution symmetric, left-skewed, or right-skewed?
+
+ - Are there any noticeable outliers?

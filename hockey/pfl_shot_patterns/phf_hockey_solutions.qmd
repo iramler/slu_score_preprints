@@ -1,0 +1,250 @@
+---
+title: "Premier Hockey Federation Shots - Solutions"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  html:
+    embed-resources: true
+---
+
+In this worksheet, you will analyze play-by-play shot data from the 2021--2022 PHF season, including information about shooters, goalies, teams, and shot outcomes. A central focus will be shot efficiency and goaltending effectiveness, measured using statistics such as shooting percentage and save proportion.
+
+Throughout this worksheet, you will clean, summarize, and visualize real hockey data using R, much like a sports data analyst working for a professional team. Using tools from the tidyverse, you will explore patterns in player and team performance.
+
+
+# Load the following libraries:
+
+```{r}
+library(tidyverse)
+library(readr)
+```
+
+# A. Loading in the data
+
+Download the csv file containing data from the Premier Hockey Federation 2021-2022 season from the SCORE Network website from this URL and assign the data set a name. URL: <https://data.scorenetwork.org/data/phf-shots-2021.csv>. You can load the data set using `read_csv()`.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+url <- "https://data.scorenetwork.org/data/phf-shots-2021.csv"
+
+phf_shots <- read_csv(url)
+```
+</details>
+
+# B. Exploring the data
+
+1. How many rows and columns does the data set have? Hint: use the `dim()` function.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+dim(phf_shots)
+
+# 1505 rows and 17 columns
+```
+</details>
+
+2. Use the `View()` function (or `head()` / `glimpse()`) to explore the data, then answer the questions that follow. Note: `View()` only works interactively in RStudio and will not render in a Quarto document.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+# View(phf_shots) # use interactively in RStudio
+glimpse(phf_shots)
+```
+</details>
+
+3. Assuming that each team made at least one shot in the season (is listed under the `shooting_team` column), use dplyr and tidyr functions to create a data frame showing all the teams that were in this season and the total number of shots each team made throughout the season.
+
+The column names of your table should be: Team and Shots
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+phf_teams <- phf_shots |>
+  group_by(shooting_team) |>
+  summarise(Shots = n()) |>
+  rename(Team = shooting_team)
+  
+phf_teams
+```
+</details>
+
+4. Using the data frame from Question 3, make a lollipop plot to visualize the number of shots made by each team in descending order of shots. Include a title and axis labels on your plot.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+phf_teams <- phf_teams |>
+  mutate(Team = fct_reorder(Team, Shots))
+
+ggplot(data = phf_teams, aes(x = Team, y = Shots)) +
+  geom_point() +
+  geom_segment(aes(xend = Team, y = 0, yend = Shots)) +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Total Shots Taken by Each Team in the '21-'22 PHF Season",
+       y = "Total Number of Shots",
+       x = "Team")
+```
+</details>
+
+5. Create a new variable called `is_goal` that is 1 when `shot_result == "made"` and 0 otherwise. Hint: use `if_else()`.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+phf_shots <- phf_shots |>
+  mutate(is_goal = if_else(shot_result == "made", 1, 0))
+```
+</details>
+
+6. The name of the player who made the shot is recorded under the column `player_name_1`. Rename this column to `shooter`. Then create a bar plot to show (in descending order) the top ten most frequent shooters (shooters with the ten highest number of shots in the season) and the total number of shots they made.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+top10_shooters <- phf_shots |>
+  rename(shooter = player_name_1) |> 
+  group_by(shooter) |>
+  summarise(total_shots = n()) |>
+  arrange(desc(total_shots)) |>
+  slice(1:10) |>
+  mutate(shooter = fct_reorder(shooter, total_shots))
+
+ggplot(data = top10_shooters, aes(x = shooter, y = total_shots)) +
+  geom_col(fill = "skyblue") +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Top 10 Shooters of the '21-'22 PHF Season",
+       y = "Total Number of Shots",
+       x = "Shooter")
+```
+</details>
+
+7. In hockey, save proportion measures how often a goalie successfully stops shots on goal. Shots on goal consist of shots that are recorded as "made" or "saved", but do not include shots "blocked" as these are shots blocked by other defense players, not the goalie. Save proportion is calculated as the goalie's (shots saved) / (total shots on goal).
+
+a. Using some dplyr and/or tidyr functions, create a data frame with each goalie's save proportion.
+
+Hint: The variables of interest here are `goalie_involved` (which shows the names of goalies) and `shot_result`, which has categories: blocked, made, saved. Since this exploration excludes blocked shots, start by filtering to exclude them.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+phf_goalies <- phf_shots |>
+  filter(shot_result != "blocked") |>
+  group_by(goalie_involved) |>
+  summarise(
+    shots_on_goal = n(),
+    total_goals = sum(shot_result == "made"),
+    total_saves = sum(shot_result == "saved"),
+    save_prop = total_saves / shots_on_goal
+  )
+  
+phf_goalies
+```
+</details>
+
+b. You should notice an NA value under `goalie_involved` after completing this. Remove the row with that NA value from the final data frame.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+phf_goalies <- phf_goalies |>
+  filter(!is.na(goalie_involved))
+
+phf_goalies
+```
+</details>
+
+c. You should also notice that the `goalie_involved` variable includes entries like "Allie Morse replaced by #". Filter using `goalie_involved %in% c()` where `c()` takes the names of goalies without "replaced..." entries.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+phf_goalies <- phf_goalies |>
+  filter(goalie_involved %in% c(
+    "Abbie Ives", "Amanda Leveille", "Brooke Wolejko",
+    "Carly Jackson", "Elaine Chuli", "Samantha Ridgewell",
+    "Sonjia Shelly", "Tera Hofmann", "Victoria Hanson"
+  ))
+
+phf_goalies
+```
+</details>
+
+8. Using the data frame from your answer to Question 7c above, create a visualization of your choice to display goalies' save proportions in ascending order. Use `coord_flip()` such that the goalie variable is on the y axis and save proportion is on the x axis. Remember to use descriptive axis labels and a title.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+# A lollipop plot, bar plot, or dot plot would all work here.
+
+phf_goalies <- phf_goalies |>
+  mutate(goalie_involved = fct_reorder(goalie_involved, save_prop))
+
+ggplot(phf_goalies, aes(x = save_prop, y = goalie_involved)) +
+  geom_point(size = 3, colour = "skyblue") +
+  theme_minimal() +
+  labs(title = "Goalie Save Proportions in the '21-'22 PHF Season",
+       x = "Save Proportion",
+       y = "Goalie")
+```
+</details>
+
+9. So far, we have compared goalies using ordered plots. Another useful way to understand data is by examining its distribution.
+
+a. Using the `phf_goalies` data frame from Question 7c, create a histogram of goalie save proportions. Choose an appropriate bin width, and include a title and axis labels.
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+```{r}
+ggplot(phf_goalies, aes(x = save_prop)) +
+  geom_histogram(binwidth = 0.02, fill = "skyblue") +
+  theme_minimal() +
+  labs(title = "Distribution of Goalie Save Proportions",
+       x = "Save Proportion",
+       y = "Count")
+```
+</details>
+
+b. Based on your histogram, describe the distribution of save proportions. In your answer, consider the following:
+
+ - Is the distribution symmetric, left-skewed, or right-skewed?
+
+ - Are there any noticeable outliers?
+
+<details>
+
+<summary><b>Click for solution</b></summary>
+
+Most goalies have a save proportion between about 0.87 and 0.95. The distribution is left-skewed, with one goalie posting a save proportion below 0.70 --- a potential outlier well below the rest of the group.
+
+</details>
