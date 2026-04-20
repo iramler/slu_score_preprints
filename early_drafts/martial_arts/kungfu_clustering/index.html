@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Elena Cortina Pino">
-<meta name="dcterms.date" content="2026-03-25">
-<meta name="description" content="This module goes through the process of creating a heatmap to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data.">
+<meta name="description" content="This module goes through the process of creating a heat map to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data.">
 
 <title>2025 10th World Kung Fu Championship - Complete Linkage Hierarchical Clustering – SLU SCORE Module Preprint Repository</title>
 <style>
@@ -1017,24 +1016,21 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#world-kung-fu-championships-2025-forms-groups-ranking" id="toc-world-kung-fu-championships-2025-forms-groups-ranking" class="nav-link" data-scroll-target="#world-kung-fu-championships-2025-forms-groups-ranking">World Kung Fu Championships 2025: Forms, Groups, Ranking</a></li>
   </ul></li>
-  <li><a href="#competing-kung-fu-events" id="toc-competing-kung-fu-events" class="nav-link" data-scroll-target="#competing-kung-fu-events">Competing Kung Fu Events</a>
-  <ul class="collapse">
-  <li><a href="#individual-events" id="toc-individual-events" class="nav-link" data-scroll-target="#individual-events">Individual Events</a></li>
-  <li><a href="#weaponry" id="toc-weaponry" class="nav-link" data-scroll-target="#weaponry">Weaponry</a></li>
-  </ul></li>
   <li><a href="#complete-linkage-hierarchical-clustering" id="toc-complete-linkage-hierarchical-clustering" class="nav-link" data-scroll-target="#complete-linkage-hierarchical-clustering">Complete Linkage Hierarchical Clustering</a>
   <ul class="collapse">
   <li><a href="#z-scores" id="toc-z-scores" class="nav-link" data-scroll-target="#z-scores">Z-Scores</a></li>
   <li><a href="#euclidean-distance" id="toc-euclidean-distance" class="nav-link" data-scroll-target="#euclidean-distance">Euclidean distance</a></li>
+  <li><a href="#heat-maps" id="toc-heat-maps" class="nav-link" data-scroll-target="#heat-maps">Heat Maps</a></li>
   <li><a href="#dendrograms" id="toc-dendrograms" class="nav-link" data-scroll-target="#dendrograms">Dendrograms</a></li>
   </ul></li>
-  <li><a href="#complete-linkage-clustered-heatmap" id="toc-complete-linkage-clustered-heatmap" class="nav-link" data-scroll-target="#complete-linkage-clustered-heatmap">Complete Linkage Clustered Heatmap</a>
+  <li><a href="#complete-linkage-hierarchically-clustered-heat-map" id="toc-complete-linkage-hierarchically-clustered-heat-map" class="nav-link" data-scroll-target="#complete-linkage-hierarchically-clustered-heat-map">Complete Linkage Hierarchically Clustered Heat Map</a>
   <ul class="collapse">
-  <li><a href="#conclusion-from-the-exploration" id="toc-conclusion-from-the-exploration" class="nav-link" data-scroll-target="#conclusion-from-the-exploration">Conclusion from the exploration</a></li>
+  <li><a href="#conclusions-from-the-analysis" id="toc-conclusions-from-the-analysis" class="nav-link" data-scroll-target="#conclusions-from-the-analysis">Conclusions from the analysis</a></li>
   </ul></li>
   <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
   <ul class="collapse">
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#supplementary-data-information" id="toc-supplementary-data-information" class="nav-link" data-scroll-target="#supplementary-data-information">Supplementary Data Information</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1056,7 +1052,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    This module goes through the process of creating a heatmap to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data.
+    This module goes through the process of creating a heat map to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data.
   </div>
 </div>
 
@@ -1070,12 +1066,6 @@ window.Quarto = {
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 25, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -1101,13 +1091,13 @@ window.Quarto = {
 <section id="background" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">Wang Shengrong, Group D, Winner Drunken Fist form, Team China</span></div></div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BFFqe0Iyqu0?si=koIdq7uZ7_F2Vpda" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BFFqe0Iyqu0?si=feNJdiPCbuKkyCEB&amp;start=46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
 <section id="world-kung-fu-championships-2025-forms-groups-ranking" class="level3">
 <h3 class="anchored" data-anchor-id="world-kung-fu-championships-2025-forms-groups-ranking">World Kung Fu Championships 2025: Forms, Groups, Ranking</h3>
-<p>The World Kung Fu Championships (WKFC), hosted by the IWUF, is an international level sporting event established in 2004 to propagate the development of wushu around the world. As there are dozens of Kung Fu (traditional wushu) styles represented in the WKFC, these championships offer a unique platform for thousands of practitioners of all ages and varying skill levels to come together every two years.<br>
+<p>The World Kung Fu Championships (WKFC), hosted by the International Wushu Federation (IWUF), is an international level sporting event established in 2004 to propagate the development of wushu around the world. As there are dozens of Kung Fu (traditional wushu) styles represented in the WKFC, these championships offer a unique platform for thousands of practitioners of all ages and varying skill levels to come together every two years.<br>
 <br>
-This module introduces Kung Fu to students in an exploratory approach allowing them to gain insight about the legendary sport and explains the process of utilizing complex, raw sports data to analyze the ways that championship scores relate across the competing Kung Fu forms.<br>
+This module introduces Kung Fu to students in an exploratory approach allowing them to gain insight about the legendary sport, and explains the process of utilizing complex, raw sports data to analyze how championship scores relate across the competing Kung Fu forms.<br>
 <br>
 This module also introduces ingenious ways to address issues with missing data observations, and presenting that data in a meaningful graphic display that communicates the nature of the relationship across some variables at a glance.<br>
 </p>
@@ -1123,17 +1113,27 @@ This module also introduces ingenious ways to address issues with missing data o
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Students will gain experience constructing a complete linkage clustered heatmap.</p>
+<ul>
+<li>Learn about complete linkage hierarchical clustering including the following components.
+<ul>
+<li>The role of z-scores in clustering.</li>
+<li>Intuitive understanding of Euclidean distance computations.</li>
+<li>Understanding dendrograms contextually and practically.</li>
+<li>Interpreting and constructing heat maps for data visualization.</li>
+<li>Using R code to compute their own complete linkage hierarchically clustered heat map.</li>
+</ul></li>
+</ul>
 </div>
 </div>
 </div>
-<p>Athletes can compete in a wide of events:</p>
-</section>
-</section>
-<section id="competing-kung-fu-events" class="level2">
-<h2 class="anchored" data-anchor-id="competing-kung-fu-events">Competing Kung Fu Events</h2>
-<section id="individual-events" class="level3">
-<h3 class="anchored" data-anchor-id="individual-events">Individual Events</h3>
+<section id="competition-events" class="level4">
+<h4 class="anchored" data-anchor-id="competition-events">Competition Events</h4>
+<p>The championship welcomed athletes competing in the following two groups of Kung Fu forms:</p>
+Kung Fu events unaccompanied by weapons or any other objects:
+<details>
+<summary>
+<b>Individual Bare-hand Routines</b>
+</summary>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -1235,9 +1235,12 @@ This module also introduces ingenious ways to address issues with missing data o
 </tr>
 </tbody>
 </table>
-</section>
-<section id="weaponry" class="level3">
-<h3 class="anchored" data-anchor-id="weaponry">Weaponry</h3>
+</details>
+<p>Kung Fu events including weaponry and other instruments:</p>
+<details>
+<summary>
+<b>Weapon Events</b>
+</summary>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
@@ -1344,82 +1347,15 @@ This module also introduces ingenious ways to address issues with missing data o
 </tr>
 </tbody>
 </table>
-<section id="groups" class="level4">
-<h4 class="anchored" data-anchor-id="groups">Groups</h4>
-<p>The competition welcomes competitors of all ages. The age categories are divided according to the following periods.<br>
-<br>
-</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 28%">
-<col style="width: 49%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Groups</th>
-<th style="text-align: center;">Age</th>
-<th style="text-align: center;">Classification on age requirements for competition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">11 years of age and below</td>
-<td style="text-align: center;">Born in and after 2014</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">B</td>
-<td style="text-align: center;">12‐14 years of age</td>
-<td style="text-align: center;">The year of birth: 2011 - 2013</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">15‐17 years of age</td>
-<td style="text-align: center;">The year of birth: 2008 - 2010</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">18‐39 years of age</td>
-<td style="text-align: center;">The year of birth: 1986 - 2007</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">40‐59 years of age</td>
-<td style="text-align: center;">The year of birth: 1966 - 1985</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">60 years of age and above</td>
-<td style="text-align: center;">Born in and before 1965</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="awards" class="level4">
-<h4 class="anchored" data-anchor-id="awards">Awards</h4>
-<ul>
-<li>1st, 2nd and 3rd Category Prize recipients will receive medals and achievement certificates.<br>
-</li>
-<li>If the actual number of participants is 12 or more persons in an individual event, the awarding methods are as follows:<br>
-Gold, silver and bronze medals and certificates will be awarded to the athletes ranked top 3 of the individual events respectively.<br>
-</li>
-<li>2nd Category Prize (Awarded to 20% of the actual number of participants) recipients will receive medals and achievement certificates.<br>
-</li>
-<li>3rd Category Prize (Awarded to 30% of the actual number of participants) recipients will receive medals and achievement certificates.<br>
-</li>
-<li>Other athletes will receive participation certificates only.</li>
-</ul>
+</details>
 </section>
 <section id="data" class="level4">
 <h4 class="anchored" data-anchor-id="data">Data</h4>
-<p>The data comes from the results book of the 2025 10th World Kung Fu Championship, from The International Wushu Federation (IWUF).<br>
+<p>The data for this module comes from the Result Book of the 2025 10th World Kung Fu Championship, from The International Wushu Federation (IWUF).<br>
 <br>
-The result book is only available online as a 218-page pdf document containing the tables from each event, group and form separately. This pdf document was parsed into a csv document containing the same information.<br>
+The Result Book is only available online as a 218-page pdf document containing the tables from each event, group and form separately. This pdf document was parsed into a <em>.csv</em> document containing the same information. To gain an in-depth insight into the process that resulted in the clean data set that was used for the work within this module, please refer to another SCORE module titled “<a href="https://iramler.github.io/slu_score_preprints/early_drafts/martial_arts/kungfu_cleaning/">World Kung Fu Championship - Data Scraping, Cleaning and Visualizing</a>”.<br>
 <br>
-For the purpose of this module, the data as been trimmed to include only individual events but not group events.<br>
-<br>
-The ready-to-use data set in matrix form is available for this module in the <code>Materials</code> section.</p>
+For the purpose of this module, the data as been cleaned and trimmed to include only individual events but not group events. The processed data used for this module already in matrix form is available for download in the <code>Materials</code> section.</p>
 </section>
 <section id="variables" class="level4">
 <h4 class="anchored" data-anchor-id="variables">Variables</h4>
@@ -1428,40 +1364,62 @@ The ready-to-use data set in matrix form is available for this module in the <co
 <b>Variable Descriptions</b>
 </summary>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 31%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
 <th>Description</th>
+<th>Age interval</th>
+<th>Birth year intervals</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Form</td>
 <td>Kung Fu form the athlete competed in</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>A</td>
-<td>Means per form for Group A participants</td>
+<td>Means by form for Group A athletes</td>
+<td>11 and below</td>
+<td>2014 and after</td>
 </tr>
 <tr class="odd">
 <td>B</td>
-<td>Means per form for Group B participants</td>
+<td>Means by form for Group B athletes</td>
+<td>12‐14</td>
+<td>2011 - 2013</td>
 </tr>
 <tr class="even">
 <td>C</td>
-<td>Means per form for Group C participants</td>
+<td>Means by form for Group C athletes</td>
+<td>15‐17</td>
+<td>2008 - 2010</td>
 </tr>
 <tr class="odd">
 <td>D</td>
-<td>Means per form for Group D participants</td>
+<td>Means by form for Group D athletes</td>
+<td>18‐39</td>
+<td>1986 - 2007</td>
 </tr>
 <tr class="even">
 <td>E</td>
-<td>Means per form for Group E participants</td>
+<td>Means by form for Group E athletes</td>
+<td>40‐59</td>
+<td>1966 - 1985</td>
 </tr>
 <tr class="odd">
 <td>F</td>
-<td>Means per form for Group F participants</td>
+<td>Means by form for Group F athletes</td>
+<td>60 and above</td>
+<td>1965 and before</td>
 </tr>
 </tbody>
 </table>
@@ -1472,30 +1430,82 @@ The ready-to-use data set in matrix form is available for this module in the <co
 <section id="complete-linkage-hierarchical-clustering" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="complete-linkage-hierarchical-clustering">Complete Linkage Hierarchical Clustering</h2>
 <p>Hierarchical Clustering via Complete Linkage is a Machine Learning technique that groups clusters of data from the furthermost point to the point of reference. In hierarchical clustering, the two nearest clusters are repeatedly merged until the desired number of clusters is reached<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;(Sokhonn, Park, Lee, 2024, “Hierarchical Clustering via Single and Complete Linkage Using Fully Homomorphic Encryption”).</p></div></div><div class="{callout-tip}">
-<p>Complete linkage is the metric through which we measure the clusters’ proximity.</p>
-</div>
-<p>This process serves as an exploratory data analysis technique, categorizing data into distinct groups or subsets, where elements within each subset are more similar to each other than to elements in different subsets. A useful application of this method for our case study data set on Kung Fu is understanding how the forms and the age groups can be grouped in clusters to understand the relationships between these two variables with respect to the scores.</p>
-<section id="z-scores" class="level3">
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Lynin Sokhonn, et al.&nbsp;“Hierarchical Clustering via Single and Complete Linkage Using Fully Homomorphic Encryption.” Sensors, vol.&nbsp;24, no. 15, 25 July 2024, pp.&nbsp;4826–4826, https://doi.org/10.3390/s24154826.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;“Heatmap Plot.” Thermofisher.com, 2026, apps.thermofisher.com/apps/help/MAN0010505/GUID-C7F25EF3-8918-468E-86C7-863FF8752875.html.</p></div></div><p>Complete linkage is the metric through which we measure the clusters’ proximity. The distance between the clusters (the inter-cluster distance) is defined by the linkage method which can be single, complete, or average.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>When making the heat map, the clusters’ hierarchy is calculated by representing each score by a node in the plot that is successively joined to nodes nearest to it by branches until all points are combined into a single cluster.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;“Heatmap Plot.” Thermofisher.com, 2026, apps.thermofisher.com/apps/help/MAN0010505/GUID-C7F25EF3-8918-468E-86C7-863FF8752875.html.</p></div></div><p>A useful application of this method for our case study data set on Kung Fu is understanding how the forms and the age groups can be grouped in clusters to understand the relationships between these two variables with respect to the scores.</p>
+<section id="z-scores" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="z-scores">Z-Scores</h3>
-<p><span class="math display">\[Z = \frac{x-\mu}{\sigma}\]</span></p>
+<p>The z-score tells how many standard deviations the value is from the mean, and is independent of the unit of measurement.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Lock, Robin H, et al.&nbsp;Statistics : Unlocking the Power of Data. Hoboken, Wiley, 2020.</p></div></div><p><span class="math display">\[Z = \frac{x-\mu}{\sigma}\]</span></p>
 <p>We’ve calculated the means for each Form by groups B through E and turned those means into the columns of the data to be mapped by Kung Fu Form which are the rows of our data frame. This structure should be thought of as a matrix, with vectors for each age group.</p>
-<p>Within the <code>pheatmap</code> function, the <code>scale</code> argument scales the means into Z-scores for those means. In our example, the means of scores have been centered and scaled by rows, this is, by Kung fu form. This computation gives us a normalized scaled measure of how far away from the mean each mean and we’ve chose to keep the data scaled by rows instead of the default row <em>and</em> column because we are interested in understanding how scored change by form within age group columns.<br>
+<p>Within the <code>pheatmap</code> function, the <code>scale</code> argument scales the means into Z-scores for those means. In our example, the means of scores have been centered and scaled by rows, this is, by Kung fu form. This computation gives us a normalized scaled measure of how far away from the mean each mean and we’ve chose to keep the data scaled by rows instead of the default <em>row <em>and</em> column</em> because we are interested in understanding how scored change by form within age group columns.<br>
 <br>
 For any particular Kung Fu form, the z-score scaling computation would happen as:</p>
 <p><span class="math display">\[\frac{\text{Mean score for a given age group - Mean score for the form across all age groups}}{\text{Standard deviation}}\]</span></p>
-<p>Values <span class="math inline">\(\sigma\)</span>-standard deviations from the mean in the positive direction have the bright red color and values <span class="math inline">\(\sigma\)</span>-standard deviations from the mean in the negative direction are mapped in blue.</p>
+<p>Let’s take a macro glance into how this computation happens specifically for the Eagle Style mean scores in groups B, C, D and E:</p>
+<p>For each, let’s grab the z-score and then compile everything as a little table</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>Eagle Style Score Means</th>
+<th>Z-score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B</td>
+<td>8.398</td>
+<td>-0.942</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>8.466</td>
+<td>-0.5</td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>8.754</td>
+<td>1.370</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>8.554</td>
+<td>0.071</td>
+</tr>
+</tbody>
+</table>
+<p>Mean of Eagle Style Score Means: 8.543<br>
+Standard deviation: 0.154<br>
+Eagle Style for Group B Z-score sample calculation:</p>
+<p><span class="math display">\[\frac{8.398 - 8.543}{0.154} = -0.942\]</span></p>
+<p>To produce the heat map in this module, the R code, used the option <code>scale= "row"</code>. In practice, these computations are not done manually.</p>
+<p>Afterwards, we want to understand how far apart those z-scores are from <em>each other</em> to understand which forms are closer or further. Closer z-scores will form clusters. Let’s move on to find out the behind-the-code computation of the distances between these z-scores.</p>
 </section>
-<section id="euclidean-distance" class="level3">
+<section id="euclidean-distance" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="euclidean-distance">Euclidean distance</h3>
-<p><span class="math display">\[d = \sqrt{\Sigma(x_i+ y_i)^2}\]</span></p>
+<p>When making the heat map, the clusters’ hierarchy is calculated by representing each score by a node in the plot that is successively joined to nodes nearest to it by branches until all points are combined into a single cluster.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn5"><p><sup>5</sup>&nbsp;“Heatmap Plot.” Thermofisher.com, 2026, apps.thermofisher.com/apps/help/MAN0010505/GUID-C7F25EF3-8918-468E-86C7-863FF8752875.html.</p></div></div><p><span class="math display">\[d = \sqrt{\Sigma(x_i - y_i)^2}\]</span></p>
 <p>The rows of the data matrix are re-ordered according to the hierarchical clustering result, putting similar observations close to each other.<br>
 </p>
+<p>For any two forms (rows), the computation of their Euclidean distance would be:</p>
+<p><span class="math display">\[d = \sqrt{(\text{Form 2 Group B's z-score - Form 1 Group B' z-score})^{2} + (\text{Form 2 Group C's z-score - Form 1 Group C's z-score})^{2} ...} \]</span></p>
+<p>Let’s take a closer look into how R computes these distances behind the code to construct a heat map in a few seconds. Taking 42 posture Taijiquan and Chen Style Taijiquan as our exaple forms, let’s see how the cluster get formed from the distances between forms we obtain:</p>
+<p>Let Form 1 = 42 posture Taijiquan, and Form 2 = Chen Style Taijiquan<br>
+</p>
+<p><span class="math display">\[d = \sqrt{\left(-1.27+1.33\right)^{2}+\left(-0.17+0.16\right)^{2}+\left(1.08-0.98\right)^{2}+\left(0.38-0.51\right)^{2}} = 0.175\]</span> They have a very small distance between each other, which explains why they get grouped together. In the same manner as with the z-scores, this computation is not done <em>by hand</em>, the code for the heat map instantly applies a sorting algorithm that computes two random distances first, then takes another form and compares their distance, this process goes on continuously until all the forms have been sorted into the smallest to greatest distances.<br>
+<br>
+Let’s now see the result of all these computations combined!</p>
+</section>
+<section id="heat-maps" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="heat-maps">Heat Maps</h3>
+<p>A heat map is a graphical method for visualizing high-dimensional data, in which a table of numbers are encoded as a grid of colored cells. The rows and columns of the matrix are ordered to highlight patterns and are often accompanied by dendrograms. Heat maps are used in many fields for visualizing observations, correlations, missing values patterns, and more.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;“Introduction to Heatmaply.” Github.io, 2023, talgalili.github.io/heatmaply/articles/heatmaply.html.</p></div></div><p>The heat map in this module is a graphic representation of the unsupervised hierarchical clustering of Kung Fu forms across all age groups in the competition. In the plot, the forms and groups are arranged according to the similarity of the scores.</p>
 </section>
 <section id="dendrograms" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="dendrograms">Dendrograms</h3>
-<p>The dendrograms are the lines on the outside of the plot that connect forms with one another and then connect groups of forms to other groups.</p>
-<p>Dendrograms are commonly utilized in the field of Biology to represent groups of genetically resembling species.</p>
+<p>A dendrogram (or tree diagram) is a network structure. It is constituted of a root node that multifurcates off into to several nodes connected by branches. The last nodes of the hierarchy are called leaves.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Holtz, Yan. “Dendrogram | the R Graph Gallery.” R-Graph-Gallery.com, r-graph-gallery.com/dendrogram.html.</p></div></div><p>Dendrograms are commonly utilized in the field of Biology to represent groups of genetically resembling species.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="dendrogram_explained.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="dendrogram_explained.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Dendrogram: Phylogentic tree example" width="300"></a></p>
@@ -1503,13 +1513,56 @@ For any particular Kung Fu form, the z-score scaling computation would happen as
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><em>A simplified phylogenetic tree of the kingdom Animalia showing only the nine most species-rich phyla.</em></p>
-<p>Reference: “Inactivity Is Nycthemeral, Endogenously Generated, Homeostatically Regulated, and Melatonin Modulated in a Free-Living Platyhelminth Flatworm” by Biologist Shauni E. T. Omond (2017)</p>
-</div></div></section>
+<p>A simplified phylogenetic tree of the kingdom Animalia showing only the nine most species-rich phyla. This image has been slightly edited to enhance how clusters are formed.<br>
+</p>
+<p>Reference: Omond, Shauni, et al.&nbsp;“Inactivity Is Nycthemeral, Endogenously Generated, Homeostatically Regulated, and Melatonin Modulated in a Free-Living Platyhelminth Flatworm.” Sleep, vol.&nbsp;40, no. 10, Aug.&nbsp;2017, https://doi.org/10.1093/sleep/zsx124.</p>
+</div></div><p>The diagram depicts clusters of phyla which represent clades that are formed from the evolutionary relationships descending from a common ancestor.<br>
+<br>
+Porifera split off first, Cnidaria split off next, after Porifera but before the bilaterian animals which are the rest of the groups shown. The remaining phyla (Arthropoda, Mollusca, etc.) form a more recently diverged cluster.<br>
+<br>
+The first cluster represents the deuterostome clade. The second cluster (Arthropoda and Nematoda) corresponds to ecdysozoans. The third cluster (Annelida, Mollusca, and Platyhelminthes) corresponds to spiralians (protostomes).<br>
+</p>
+<p>The same conceptual understanding for dendrograms in this Biology example can be extrapolated to dendrograms annexed to heat maps. Below, we will expand on the analysis of a heat map combined with the information that dendrograms provide about clustering.</p>
 </section>
-<section id="complete-linkage-clustered-heatmap" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="complete-linkage-clustered-heatmap">Complete Linkage Clustered Heatmap</h2>
-<div class="page-columns page-full"><p><a href="WKFC_heatmap.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="WKFC_heatmap.png" class="img-fluid"></a> </p><div class="no-row-height column-margin column-container"><span class="">To preserve the most information possible from the data, we removed groups A and F since their scores across forms were considerably (and understandably) lower than the other groups.</span></div></div>
+</section>
+<section id="complete-linkage-hierarchically-clustered-heat-map" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="complete-linkage-hierarchically-clustered-heat-map">Complete Linkage Hierarchically Clustered Heat Map</h2>
+<p>We have constructed a heat map with dendrograms to clearly identify the ways forms relate according to their average scores. Those means of scores have been standardized by z-scores. Z-scores <span class="math inline">\(\sigma\)</span>-standard deviations from the mean in the positive direction have the bright red color and values <span class="math inline">\(\sigma\)</span>-standard deviations from the mean in the negative direction are mapped in blue. On an intuitive level, we gain insight into how unusual a form’s mean score is for each age group relative to the mean score for the entire age group across all forms.<br>
+</p>
+<p>By manually deciding to establish 6 major clusters, we can think of this process as “cutting” vertically the outermost branches of the tree 6 times.</p>
+<div class="page-columns page-full"><p><a href="WKFC_heatmap.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="WKFC_heatmap.png" class="img-fluid"></a> </p><div class="no-row-height column-margin column-container"><span class="">To gain the most information possible from the data, we removed groups A and F since their scores across forms were considerably (and understandably) lower than the other groups.</span></div></div>
+<p><strong>Cluster-by-cluster interpretation of the heat map</strong></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The number of clusters was deliberately set to 6. We could have opted for a different number of k-means clusters to be formed under the same mathematical principles.<br>
+<br>
+Choosing the number of clusters is often a hard decision. There are data-driven methods that can be used (none of which are perfect) to choose the most <em>optimal</em> number fo clusters. You can also use visual methods such as looking at clear breaks in the dendrogams. Occasionally, you might have subject-matter knowledge that gives you a good guess of how many clusters we should set the heat map to have.<br>
+<br>
+It is useful to find a balance between a small number of clusters that can be interpreted but not too small such that observations that are dissimilar from each other end up in the same cluster.</p>
+</div></div><p>|6. This cluster is dominated by non-weapon events, abundantly Taijiquan events. These forms require balance, technical ability and enhanced experience, they’re not over reliant on power explosivity and athleticism. It would be fair to interpret the general clustering trend of these forms thanks to their similarly mature nature, expressiveness, and traditional technique. Groups E and F carry the advantage.<br>
+<br>
+|5. This cluster is dominated by 75% weapon routines. On a similar way as the 6th cluster.<br>
+<br>
+|4. This cluster’s scoring trend is very meaningful <em>stylistically</em>. The general patterns are positive z-scores in E and sometimes F, lower or moderate in group D, and negative in B.<br>
+<br>
+In general these forms require expression over athleticism. They emphasize intent, flow, and internal mechanics. Older groups (E and F) perform them better. They are able to thrive thanks to these forms being less dependent on jumps and speed bursts, resourcing their advantage on structure, rhythm, maturity and of course depth of understanding stylistic authenticity, which increases with age.<br>
+|3. This cluster likely reflects noise and stylistic diversity. We are not able to conclude that there’s a clean technical grouping. Z-scores are less extreme in this cluster and reflect more variability. It is very likely that the abundance in “other”-forms creates confounding groupings.<br>
+2. This cluster makes <em>technical</em> sense. These forms require mainly timing precision and expressive rhythm. Group B’s performance likely lacks the refinement to gain the judges’ highest rewards although they often represent optimal balance of athleticism and control.<br>
+<br>
+These forms expose athletes’ instability, lack of intent, poor transitions, etcetera. This reflects quite starkly in harsher scoring for younger groups.<br>
+<br>
+|1. This cluster is populated only by Taiji weapon events. The technical clarity and precision required to score high in handling weapons within Taiji makes the scoring rightfully lean more positively for older athletes.<br>
+<br>
+Where clustering makes strong sense:<br>
+- High-skill and control-heavy forms<br>
+- Athletic competition forms grouped together<br>
+- Traditional/internal forms grouped together<br>
+</p>
+<p>Where clustering is weaker:<br>
+- Mixed “Other” categories<br>
+- Some weapon/bare-hand mixing<br>
+- Forms with high stylistic variability<br>
+</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="The `pheatmap` library">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1520,37 +1573,72 @@ For any particular Kung Fu form, the z-score scaling computation would happen as
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The <code>pheatmap</code> function from this library has been chosen for this task because of the advantages it provides when drawing clustered heatmaps while having better control over some graphical parameters relative to other functions that construct essentially the same type of graphic display of data. Other useful options to construct a heatmap using R code include:<br>
+<p>The <code>pheatmap</code> function from this library has been chosen for this task because of the advantages it provides when drawing clustered heat maps while having better control over some graphical parameters relative to other functions that construct essentially the same type of graphic display of data. Other useful options of functions to use when constructing a heat map using R code include:<br>
 - <code>geom_tile()</code><br>
 - <code>ggheatmap()</code><br>
 - <code>heatmaply()</code><br>
 - <code>heatmap.2()</code><br>
-- <code>complexheatmap()</code></p>
+- <code>complexheatmap()</code><br>
+- <code>levelplot()</code><br>
+- <code>d3heatmap()</code></p>
 </div>
 </div>
-<p>Along with the <code>pheatmap</code> function, we have resourced the <code>RColorBrewer</code> library to have better control over the color palette in our heatmap. This ability to control visual features in our data visualization endeavors represents a huge portion of our task in being effective in communication to the viewer our findings on the data-exploration process so it is important to utilize resources effectively and explore options from packages and libraries beyond those in the base.<br>
+<p>Along with the <code>pheatmap</code> function, we have resourced the <code>RColorBrewer</code> library to have better control over the color palette in our heat map This ability to control visual features in our data visualization endeavors represents a huge portion of our task in being effective communicating to the viewer our findings on the data-exploration process. It is important to utilize resources effectively and explore options from packages and libraries beyond those in the base.<br>
 </p>
-<section id="conclusion-from-the-exploration" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-from-the-exploration">Conclusion from the exploration</h3>
+<section id="conclusions-from-the-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="conclusions-from-the-analysis">Conclusions from the analysis</h3>
 <p>Athletes at the very beginning and end of their Kung Fu career can experience high levels of exhaustion, insufficient technique on the side of the infants participating and decay of explosiveness and endurance that a sport such as Kung Fu requires.<br>
 <br>
-Participants from the ages between 12 and 59 years old can be considered the most competitive athletes in the competition because they can leverage the explosiveness and endurance of being at the peak of age ability and the technique from having trained for long enough.<br>
+Participants from the ages between 12 and 59 years old can be considered the most competitive athletes because they can leverage both the explosiveness and the endurance of being at the peak of age ability and the technique from having trained for long enough.<br>
 </p>
 <p>Group D participants, thanks to being in their physical prime and having sufficient technique development excel in scoring across all Kung Fu forms.</p>
 <p>Most of the <em>Single Weapon Routines</em> cluster together in scoring in two main clusters.</p>
 </section>
 </section>
-<section id="activity" class="level2">
+<section id="activity" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="activity">Activity</h2>
-<p>For this module, the activity will be an involved exercise in creating a heatmap similar to the one presented in this module, but using a different data set, this time from the <em>8th edition of the World Kung Fu Championships (2017)</em>.</p>
-<p>From the <code>Materials</code> section, download the <a href="year8forsure.csv">data for the 8th edition of the WKFC (2017)</a> data to construct our own clustered heatmap.</p>
+<p>For this module, the activity will be an involved exercise in creating a heat map similar to the one presented in this module, but using a different data set, this time from the <em>8th edition of the World Kung Fu Championships (2017)</em>.</p>
+<p><strong>Tasks</strong><br>
+1. From the <code>Materials</code> section, download the <a href="year8kungfudata.csv">data for the 8th edition of the WKFC (2017)</a> data.&nbsp; 2. Using the <code>pheatmap</code> Construct a complete linkage clustered heat map with dendrograms.&nbsp; 3. Write an in-depth, cluster-by-cluster interpretation of your exploratory data visualization exercise.&nbsp;</p>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p>For this module, the reference materials for the module are the <a href="mat_10kf.csv">Kung Fu</a> data set, and <a href="kungfu.qmd">the solution QMD</a>.</p>
-<p>For the solution file to the activity proposed above, the data to be used is <a href="year8forsure.csv">data for the 8th edition of the WKFC (2017)</a>, and the solved exercise is outlined in <a href="kungfu_solution.qmd">this solution Quarto document</a>.</p>
-
-
+<p>For this module, the reference materials for the module are the <a href="mat_10kf.csv">Kung Fu</a> data set, and <a href="kungfu_module.qmd">the code for this module’s heat map</a>.&nbsp;<br>
+For the solution file to the activity proposed above, the data to be used is <a href="year8kungfudata.csv">data from the 8th edition of the WKFC (2017)</a>, and the solved exercise is outlined in <a href="kungfu_solution.qmd">this solution Quarto document</a>.</p>
 </section>
+<section id="supplementary-data-information" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="supplementary-data-information">Supplementary Data Information</h3>
+<p>Due to the nature of the competition and the manner in which the results were presented, some adjustments in variable use and form identification had to be made to use the data meaningfully for this module.<br>
+</p>
+<p>Below is some information from the result book that did not form a part of the final data.</p>
+<details>
+<summary>
+<b>Omitted Variables</b>
+</summary>
+<ul>
+<li><p><strong>Bib number</strong> Personal identifying four-digit number representing each athlete in the competition.</p></li>
+<li><p><strong>Team</strong> Unique, three-letter identifier for the country each athlete represented in the competition.</p></li>
+<li><p><strong>Athlete</strong> Athlete’s full legal name.</p></li>
+<li><p><strong>Athletes’ sex</strong> “Men” or “Women” text specifying the sex of the athlete in the competition.</p></li>
+<li><p><strong>Awards</strong> 1st, 2nd or 3rd Category Prize. Gold, Silver or Bronze.</p></li>
+<li><p><strong>FOP #</strong> Field of play. Which competition area the event took place in (FOP 1, FOP 2, etc.)</p></li>
+<li><p><strong>Group #</strong> Which group number of athletes competed when multiple age groups competed in the same Kung Fu form or both sexes.</p></li>
+</ul>
+</details>
+<p><strong>Supplementary Image 1.</strong><br>
+</p>
+<details>
+<summary>
+<b>Complete Linkage Clustered Heat Map with Highlighted Forms of the same Event type.</b>
+</summary>
+<img src="heat_map_highlighted_forms.png" class="img-fluid quarto-figure quarto-figure-center" style="width:50.0%">
+</details>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>This image aids the interpretation of the heat map focusing on which types of events are clustering together more often across each major cluster.<br>
+Forms highlighted in green belong to <em>Individual Events</em> and events highlighted in purple, <em>Weapon Events</em>.</p>
+</div></div></section>
 </section>
 
 

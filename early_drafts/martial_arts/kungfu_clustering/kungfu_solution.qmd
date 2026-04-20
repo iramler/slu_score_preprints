@@ -81,11 +81,11 @@ heatmap <- pheatmap(
 
 ```
 
-Really interesting insights from this plot! Specifically if we zoom into the smaller clusters:
-
-1. Yang Style Taijiquan (杨式太极拳)
-2. Zui Jian (Drunken Sword) （醉贱）
-  Only had 1 participating group with 7 athletes competing.
-3.1 Chen Style Taijiquan (陈式太极拳)
-3.2 Other Traditional Single Weapon
-3.3 Jian (Straight Sword) （剑）
+Really interesting insights from this plot! Specifically if we zoom into the smaller clusters:\
+\
+1. Yang Style Taijiquan (杨式太极拳).\
+2. Zui Jian (Drunken Sword) (醉贱).\
+    Only had 1 participating group with 7 athletes competing.\
+3.1 Chen Style Taijiquan (陈式太极拳).\
+3.2 Other Traditional Single Weapon\
+3.3 Jian (Straight Sword) (剑).
