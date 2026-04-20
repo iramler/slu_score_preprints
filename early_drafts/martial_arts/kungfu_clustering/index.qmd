@@ -21,6 +21,7 @@ categories:
 editor: 
   markdown: 
     wrap: 72
+image: "iwsf_logo.png"
 ---
 
 ::: {.callout-note title="Notice" appearance="simple"}
