@@ -1,0 +1,127 @@
+---
+title: "PHF Hockey Analytics: Shot Patterns and Goaltending Performance"
+author:
+  - name: Lala Sefale
+    affiliation:
+      - id: slu
+        name: St. Lawrence University
+  - name: Leiyue Li
+    email: leiyueli@stlawu.edu
+    affiliation:
+      - ref: slu
+date: March 30, 2026
+description: Exploring shot-level data from the Premier Hockey Federation to analyze team shooting patterns, top shooters, and goalie save proportions.
+editor: 
+  canonical: true
+categories:
+  - Data visualization
+  - Summary statistics
+  - Data wrangling
+image: hockey.jpg
+format:
+  html:
+    embed-resources: false
+---
+
+## Module
+
+Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Welcome Video
+
+If you are unfamiliar with ice hockey, the video below provides a quick overview of the sport and how the game is played.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nv2FUnHceqU?si=vMgRfp6Jkr4OJRP2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+### Introduction
+
+Ice hockey is a fast-paced team sport played on a rink, where players try to score by shooting a puck into the opposing team's net. The Premier Hockey Federation ([PHF](https://en.wikipedia.org/wiki/Premier_Hockey_Federation){target="_blank"}) was a professional women's hockey league that showcased elite-level competition, strategy, and goaltending talent across North America.
+
+Two key metrics stand out when evaluating player and team performance in hockey: shooting efficiency (how often a player's shots result in goals) and goaltending effectiveness, typically measured as save proportion --- the fraction of shots on goal that a goalie successfully stops. These metrics are foundational in hockey analytics and give a clear picture of both offensive and defensive strength.
+
+This module uses play-by-play shot data from the 2021--2022 PHF season. The dataset tracks every shot attempt, recording who took the shot, which goalie was in net, the outcome (made, saved, or blocked), and the teams involved. Students will work through the data to tally shot counts by team, identify the most active shooters, and compute goalie save proportions --- building familiarity with real-world sports data analysis along the way.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This module works well as an out-of-class project or a lab-style assignment. Expect roughly 60--90 minutes of work time depending on R experience.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this module, students will be able to:
+
+1.  Import and explore a real-world sports dataset using R.
+
+2.  Create new variables (e.g., binary indicators) to measure performance outcomes.
+
+3.  Summarize and compare statistics across teams, players, and goalies using `dplyr`.
+
+4.  Build and interpret visualizations including lollipop plots, bar charts, and histograms using `ggplot2`.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Students should have a working familiarity with:
+
+-   Data wrangling with `dplyr` and `tidyr` (filtering, grouping, summarizing, mutating)
+-   Data visualization with `ggplot2` (bar plots, lollipop plots, histograms)
+-   Reading CSV data into R using `readr`
+
+No advanced modeling is required --- this module focuses on exploratory data analysis and visualization.
+:::
+
+::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
+The worksheet requires R and the following packages:
+
+-   `tidyverse` (includes `dplyr`, `ggplot2`, `tidyr`, `readr`, `forcats`)
+
+Students should be comfortable running R code in RStudio or a similar environment.
+:::
+
+### Data
+
+The dataset contains 1,502 shot-level observations from the 2021--2022 PHF season. Each row represents a single shot attempt during a game. The data was sourced from the [SCORE Network data repository](https://data.scorenetwork.org/){target="_blank"}.
+
+Download data: [phf_shots_2021.csv](phf_shots_2021.csv)
+
+<details>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable | Description |
+|------------------------------------|------------------------------------|
+| play_description | Detailed text description of the event |
+| play_type | Outcome category of the shot (Goal, PP Goal, SH Goal, Shot, Shot BLK) |
+| period_id | Game period (1, 2, 3, or overtime) |
+| time_remaining | Time left in the period (MM:SS format) |
+| sec_from_start | Seconds elapsed since the start of the game |
+| home_team | Name of the home team |
+| away_team | Name of the away team |
+| home_goals | Home team score after this event |
+| away_goals | Away team score after this event |
+| shooting_team | Team taking the shot |
+| player_name_1 | Name of the player taking the shot |
+| player_name_2 | Name of the secondary event player (blocker or goalie) |
+| goalie_involved | Name of the goalie involved in the shot attempt |
+| shot_result | Outcome of the shot: blocked, made, or saved |
+| on_ice_situation | Strength indicator (Even Strength or Power Play) |
+| home_score_total | Final home team score |
+| away_score_total | Final away team score |
+
+</details>
+
+#### Data Source
+
+Premier Hockey Federation shot data from the 2021--2022 PHF season, accessed via the [SCORE Network data repository](https://data.scorenetwork.org/){target="_blank"}.
+
+### Materials
+
+[Worksheet (.qmd)](phf_hockey_worksheet.qmd) --- Student handout with guided questions and empty code chunks.
+
+[Solutions (.qmd)](phf_hockey_solutions.qmd) --- Complete solutions with code and output.
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+After completing this module, students should have hands-on experience wrangling a real sports dataset, computing summary statistics at the team and player level, and choosing appropriate visualizations to communicate patterns. Key takeaways include understanding how to calculate and compare save proportions across goalies, how to identify top performers using grouped summaries, and how the shape of a distribution (e.g., left-skewed save proportions) tells a story about the data.
+:::
+
+### Acknowledgements
+
+Thumbnail photo by Getty Images, published on [Just Women's Sports](https://justwomenssports.com){target="_blank"}.
