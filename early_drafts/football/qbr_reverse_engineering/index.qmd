@@ -1,5 +1,5 @@
 ---
-title: "Reverse Engineering ESPN's Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python"
+title: "Modeling ESPN's Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python"
 author:
   - name: Amara McGowan
     url: https://www.linkedin.com/in/amaramcgowan/
@@ -12,11 +12,17 @@ author:
 affiliations:
   - id: slu
     name: St. Lawrence University
-date: March 16, 2026
-description: "TBD"
+date: "April 22, 2026"
+description: "Guide to VS Code and R, Python, and Julia..."
 format: html
+image: ThumbnailPhoto.png
 categories:
+  - Stepwise Regression
   - Quantile Regression
+  - VS Code
+  - R
+  - Python
+  - Julia
 ---
 
 Please note that these material have not yet completed the required
@@ -32,17 +38,23 @@ If you are unfamiliar with ESPN's Total Quarterback Rating (QBR), you can watch 
 
 # Introduction 
 
-The National Football League (NFL) has 14 official positions: 7 offensive, 5 defensive, and 2 special teams positions. One of the offensive positions is called Quarterback (QB), and their role is to lead their team on the field. ESPN streams NFL games and provides a lot of data on NFL players, including their Total Quarterback Rating (QBR), a 0-100 score measuring a quarterback's contribution to winning. Higher scores indicate better performance.
+The National Football League (NFL) has 14 official positions for players: 7 offensive, 5 defensive, and 2 special teams positions. One of the offensive positions is called Quarterback (QB), and their role is to lead their team on the field. ESPN streams NFL games and provides a lot of data on NFL players, including their Total Quarterback Rating (QBR), a 0-100 score measuring a quarterback's contribution to winning. Higher scores indicate better performance.
 
-In this module, you will learn how to reverse engineer the Total Quarterback Rating using data from the 2025 NFL Regular season. To reverse enginner QBR, we will use Quantile Regression and you will have the choice of learning it in Julia, R, Python, or multiple languages. 
+In this module, you will learn how to model Total Quarterback Rating using only game-level data from the 2025 NFL Regular season. To predict QBR, we will use stepwise regression and you will have the choice of learning it in Julia, R, or Python. After using stepwise, we will use quantile regression to see for which quantile of quarterbacks we can most accurately predict QBR given the best model we found with stepwise regression. 
 
 :::{.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
-TODO: By the end of this tutorial, you will be able to:
+By the end of this tutorial, you will be able to:
+
+1.  Perform stepwise regression in Julia, R, or Python.
+
+2.  Perform quantile regression in Julia, R, or Python.
+
+3.  Understand how to interpret the results of stepwise and quantile regression.
 
 :::
 
 :::{.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-TODO: This could be suitable of an out of class activity or one that spans one
+This could be suitable of an out of class activity or one that spans one
 or more class periods.
 :::
 
@@ -51,7 +63,7 @@ or more class periods.
 
 This activity is designed to be completed in `Julia`, `R`, or `Python` using Google Colab, RStudio, or VS Code. 
 
-No previous experience with Quantile Regression is required, but some experience with regression and familiarity with one of the programming languages is recommended.
+No previous experience with regression is required, but some familiarity with one of the programming languages is recommended.
 :::
 
 # Data
@@ -87,37 +99,79 @@ Download Data: [nfl_qbr.csv](nfl_qbr.csv)
 The data was all scraped from [https://www.espn.com/nfl/](https://www.espn.com/nfl/) using the R package `nflreadr`. The uncleaned data included weekly Total QBR, player statistics, and game schedules for the 2025 NFL Regular season. After cleaning, the final dataset includes only quarterbacks and each row represents a game played in the regular season. 
 </details>
 
-# Quantile Regression
+# Visual Studio Code (VS Code)
 
-Quantile Regression is a statistical method that estimates conditional quantiles of the response variable (qbr, in our case). 
+# Pick a Programming Language
 
-# Getting Started in Julia, R, or Python
+The module is available in Julia, R, or Python. You can switch between modules using the tabs below based on which programming language you would like to use for this module. 
+
+Here is a little bit about each language to help you make your decision: 
+
+:::{.callout-important title="WARNING" appearance="minimal"}
+Do not install any of the languages yet using the links below if you do not already have them, there are downloading guides provided for each language within its respective tab further in the module.
+:::
+
+Learn more about R: [here](https://www.coursera.org/articles/what-is-r-programming)
+
+Learn more about Python: [here](https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python)
+
+Learn more about Julia: [here](https://julialang.org/) 
+
+<!-- OR keep consistent... (https://www.coursera.org/articles/julia-programming-language) -->
 
 :::{.panel-tabset}
 
-## Julia
-
-Package: QuantReg.jl
-
-```markdown
-Julia code
-```
 ## R
+
+# Getting started in R
+
+To start programming in R, I recommend downloading RStudio. To do so, you can follow this guide here: [Guide to Installing R and RStudio](https://rstudio-education.github.io/hopr/starting.html).
+
+If you already have another platform downloaded that you would like to use, that will also work, but there will be some language specific to the RStudio platform within this module.  
 
 ```markdown
 install.packages("quantreg")
 library(quantreg)
 ```
+# Using Quantile Regression
+
 
 ## Python
+
+# Getting started in Python
+
+To start programming in Python, I recommend downloading Visual Studio Code (VS Code). To do so, you can follow this guide here: [Guide to Installing Python and VS Code](https://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter).
+
+If you already have another platform downloaded that you would like to use, that will also work, but there will be some language specific to the VS Code platform within this module.  
 
 Package: statsmodels
 
 ```markdown
 Python code
 ```
+# Using Quantile Regression
+
+## Julia
+
+# Getting started in Julia
+
+To start programming in Julia, I recommend downloading Visual Studio Code (VS Code). To do so, you can follow this guide here: [Guide to Installing Julia and VS Code](https://code.visualstudio.com/docs/languages/julia).
+
+If you already have another platform downloaded that you would like to use, that will also work, but there will be some language specific to the VS Code platform within this module.  
+
+Package: QuantReg.jl
+
+```markdown
+Julia code
+```
+# Using Quantile Regression
+
 :::
+
 
 # References
 
 Ho T, Carl S (2026). nflreadr: Download 'nflverse' Data. R package version 1.5.0.9002, https://nflreadr.nflverse.com.
+
+
+Thumbnail image from <https://simpsonstappedout.fandom.com/wiki/Football_Nelson>
