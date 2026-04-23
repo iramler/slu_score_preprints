@@ -1,5 +1,5 @@
 ---
-title: "Modeling ESPN's Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python"
+title: "Modeling ESPN's Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in R, Python, and Julia"
 author:
   - name: Amara McGowan
     url: https://www.linkedin.com/in/amaramcgowan/
@@ -99,7 +99,7 @@ Download Data: [nfl_qbr.csv](nfl_qbr.csv)
 The data was all scraped from [https://www.espn.com/nfl/](https://www.espn.com/nfl/) using the R package `nflreadr`. The uncleaned data included weekly Total QBR, player statistics, and game schedules for the 2025 NFL Regular season. After cleaning, the final dataset includes only quarterbacks and each row represents a game played in the regular season. 
 </details>
 
-# Visual Studio Code (VS Code)
+<!-- # Visual Studio Code (VS Code) -->
 
 # Pick a Programming Language
 
@@ -173,5 +173,4 @@ Julia code
 
 Ho T, Carl S (2026). nflreadr: Download 'nflverse' Data. R package version 1.5.0.9002, https://nflreadr.nflverse.com.
 
-
-Thumbnail image from <https://simpsonstappedout.fandom.com/wiki/Football_Nelson>
+Thumbnail photo from <https://simpsonstappedout.fandom.com/wiki/Football_Nelson>

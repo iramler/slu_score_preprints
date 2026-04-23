@@ -25,7 +25,7 @@ categories:
   - Chi-square Test for Assocations
   - Type I Error
   - Type II Error
-image: Gemini_Generated_diver.png
+image: chatgpt_Generated_diver.png
 ---
 
 ## Introduction to Diving
