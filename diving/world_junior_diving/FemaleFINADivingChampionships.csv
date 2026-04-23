@@ -1,0 +1,2521 @@
+LastName,Country,Age,TotalPoints,DiveNum,DiveName,Difficulty,Points,Judge,Point_Awarded,Judge_Result
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge1,7,Okay
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge2,6.5,Too Low
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge3,7.5,Too High
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge4,7.5,Too High
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge5,7,Okay
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge6,7,Okay
+Fung,CAN,18,374.7,1,103B,1.7,35.7,Judge7,7,Okay
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge1,6.5,Okay
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge2,6,Too Low
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge3,6.5,Okay
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge4,7,Too High
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge5,6.5,Okay
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge6,6.5,Okay
+Fung,CAN,18,374.7,2,201B,1.6,31.2,Judge7,6,Too Low
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge1,6.5,Okay
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge2,6.5,Okay
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge3,6.5,Okay
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge4,6.5,Okay
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge5,6.5,Okay
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge6,6.5,Okay
+Fung,CAN,18,374.7,3,5233D,2.5,48.75,Judge7,6,Too Low
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge1,6,Too Low
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge2,6.5,Okay
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge3,6,Too Low
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge4,6.5,Okay
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge5,6.5,Okay
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge6,7.5,Too High
+Fung,CAN,18,374.7,4,301B,1.7,33.15,Judge7,6.5,Okay
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge1,7,Okay
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge2,7,Okay
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge3,7,Okay
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge4,7.5,Too High
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge5,7,Okay
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge6,6.5,Too Low
+Fung,CAN,18,374.7,5,401B,1.5,31.5,Judge7,7,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge1,6.5,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge2,6.5,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge3,6.5,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge4,7,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge5,7,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge6,7,Okay
+Fung,CAN,18,374.7,6,403B,2.4,49.2,Judge7,7,Okay
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge1,7,Okay
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge2,7,Okay
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge3,7.5,Too High
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge4,7,Okay
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge5,6.5,Too Low
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge6,6.5,Too Low
+Fung,CAN,18,374.7,7,105B,2.6,54.6,Judge7,7,Okay
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge1,5.5,Okay
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge2,5.5,Okay
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge3,6.5,Okay
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge4,6.5,Okay
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge5,6.5,Okay
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge6,5,Too Low
+Fung,CAN,18,374.7,8,203B,2.3,41.4,Judge7,6,Okay
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge1,6,Too Low
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge2,6.5,Okay
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge3,7,Okay
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge4,7,Okay
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge5,6.5,Okay
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge6,7,Okay
+Fung,CAN,18,374.7,9,303B,2.4,49.2,Judge7,7,Okay
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge1,6.5,Okay
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge2,6.5,Okay
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge3,7,Okay
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge4,7,Okay
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge5,7.5,Too High
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge6,7,Okay
+Brown,GBR,17,373.5,1,401B,1.5,30.75,Judge7,6,Too Low
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge1,7,Okay
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge2,7.5,Too High
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge3,7,Okay
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge4,7,Okay
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge5,7,Okay
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge6,7.5,Too High
+Brown,GBR,17,373.5,2,103B,1.7,35.7,Judge7,7,Okay
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge1,7,Okay
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge2,7.5,Too High
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge3,7,Okay
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge4,7,Okay
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge5,7,Okay
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge6,7,Okay
+Brown,GBR,17,373.5,3,201B,1.6,33.6,Judge7,6.5,Too Low
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge1,7.5,Okay
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge2,7.5,Okay
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge3,8,Too High
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge4,7.5,Okay
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge5,7.5,Okay
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge6,7.5,Okay
+Brown,GBR,17,373.5,4,301B,1.7,38.25,Judge7,7.5,Okay
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge1,6.5,Okay
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge2,7,Too High
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge3,6.5,Okay
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge4,6,Too Low
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge5,6.5,Okay
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge6,6,Too Low
+Brown,GBR,17,373.5,5,5132D,2.2,42.9,Judge7,7,Too High
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge1,6.5,Okay
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge2,7,Too High
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge3,6.5,Okay
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge4,6.5,Okay
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge5,7,Too High
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge6,6.5,Okay
+Brown,GBR,17,373.5,6,403B,2.4,46.8,Judge7,6.5,Okay
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge1,6.5,Too Low
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge2,7,Okay
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge3,7,Okay
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge4,7,Okay
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge5,7,Okay
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge6,7,Okay
+Brown,GBR,17,373.5,7,105B,2.6,54.6,Judge7,7,Okay
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge1,5.5,Okay
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge2,5.5,Okay
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge3,5.5,Okay
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge4,5.5,Okay
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge5,5.5,Okay
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge6,5,Too Low
+Brown,GBR,17,373.5,8,5134D,2.6,42.9,Judge7,4.5,Too Low
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge1,6.5,Okay
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge2,6,Too Low
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge3,7,Okay
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge4,7,Okay
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge5,6.5,Okay
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge6,7.5,Too High
+Brown,GBR,17,373.5,9,303B,2.4,48,Judge7,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge1,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge2,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge3,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge4,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge5,6,Too Low
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge6,6,Too Low
+Monroy Manriquez,MEX,17,371.35,1,103B,1.7,33.15,Judge7,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge1,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge2,7,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge3,7,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge4,7,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge5,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge6,7,Okay
+Monroy Manriquez,MEX,17,371.35,2,401B,1.5,30.75,Judge7,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge1,7,Okay
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge2,7,Okay
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge3,7,Okay
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge4,7,Okay
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge5,6,Too Low
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge6,7,Okay
+Monroy Manriquez,MEX,17,371.35,3,201B,1.6,33.6,Judge7,6.5,Too Low
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge1,7,Okay
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge2,7.5,Too High
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge3,7,Okay
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge4,7,Okay
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge5,7,Okay
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge6,7,Okay
+Monroy Manriquez,MEX,17,371.35,4,301B,1.7,35.7,Judge7,7.5,Too High
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge1,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge2,6,Okay
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge3,6,Okay
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge4,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge5,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge6,5.5,Too Low
+Monroy Manriquez,MEX,17,371.35,5,5132D,2.2,41.8,Judge7,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge1,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge2,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge3,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge4,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge5,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge6,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,6,105B,2.6,50.7,Judge7,7,Too High
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge1,6,Too Low
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge2,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge3,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge4,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge5,7,Too High
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge6,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,7,203B,2.3,44.85,Judge7,6,Too Low
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge1,6,Okay
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge2,6,Okay
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge3,6,Okay
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge4,6,Okay
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge5,6.5,Too High
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge6,6,Okay
+Monroy Manriquez,MEX,17,371.35,8,305C,3,54,Judge7,7,Too High
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge1,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge2,7,Too High
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge3,6,Too Low
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge4,6,Too Low
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge5,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge6,6.5,Okay
+Monroy Manriquez,MEX,17,371.35,9,403B,2.4,46.8,Judge7,6.5,Okay
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge1,6.5,Too Low
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge2,7,Okay
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge3,7.5,Too High
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge4,7.5,Too High
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge5,6.5,Too Low
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge6,7,Okay
+Hubert,GER,18,370.2,1,103B,1.7,35.7,Judge7,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge1,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge2,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge3,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge4,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge5,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge6,7,Okay
+Hubert,GER,18,370.2,2,201A,1.7,35.7,Judge7,6.5,Too Low
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge1,7.5,Too Low
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge2,8.5,Too High
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge3,8,Okay
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge4,8,Okay
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge5,8,Okay
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge6,8,Okay
+Hubert,GER,18,370.2,3,301B,1.7,40.8,Judge7,8,Okay
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge1,7.5,Too High
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge2,7,Okay
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge3,7.5,Too High
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge4,7,Okay
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge5,7,Okay
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge6,7,Okay
+Hubert,GER,18,370.2,4,401B,1.5,31.5,Judge7,7,Okay
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge1,6,Too Low
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge2,6.5,Okay
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge3,6.5,Okay
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge4,6.5,Okay
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge5,7,Too High
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge6,6,Too Low
+Hubert,GER,18,370.2,5,5331D,2.2,42.9,Judge7,6.5,Okay
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge1,6.5,Okay
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge2,6,Too Low
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge3,6,Too Low
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge4,6.5,Okay
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge5,6.5,Okay
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge6,6.5,Okay
+Hubert,GER,18,370.2,6,5333D,2.6,50.7,Judge7,7,Too High
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge1,7,Okay
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge2,7,Okay
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge3,6.5,Too Low
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge4,7,Okay
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge5,7,Okay
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge6,7,Okay
+Hubert,GER,18,370.2,7,403B,2.4,50.4,Judge7,7.5,Too High
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge1,5.5,Okay
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge2,5,Too Low
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge3,5.5,Okay
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge4,5.5,Okay
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge5,6,Too High
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge6,5.5,Okay
+Hubert,GER,18,370.2,8,105B,2.6,42.9,Judge7,4,Too Low
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge1,5,Too Low
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge2,5.5,Okay
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge3,5.5,Okay
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge4,6,Too High
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge5,5.5,Okay
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge6,5.5,Okay
+Hubert,GER,18,370.2,9,303B,2.4,39.6,Judge7,4.5,Too Low
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge1,7,Okay
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge2,7,Okay
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge3,7,Okay
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge4,7.5,Too High
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge5,7,Okay
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge6,7.5,Too High
+Palkhivala,CAN,17,365.3,1,401B,1.5,31.5,Judge7,7,Okay
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge1,7,Okay
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge2,6.5,Too Low
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge3,7.5,Too High
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge4,7,Okay
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge5,7,Okay
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge6,7,Okay
+Palkhivala,CAN,17,365.3,2,103B,1.7,35.7,Judge7,7.5,Too High
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge1,7.5,Okay
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge2,6.5,Too Low
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge3,7.5,Okay
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge4,8,Too High
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge5,7.5,Okay
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge6,7,Okay
+Palkhivala,CAN,17,365.3,3,201B,1.6,35.2,Judge7,7,Okay
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge1,7.5,Okay
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge2,7,Too Low
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge3,7.5,Okay
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge4,8,Too High
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge5,7.5,Okay
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge6,7,Too Low
+Palkhivala,CAN,17,365.3,4,301B,1.7,38.25,Judge7,8,Too High
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge1,6.5,Too Low
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge2,7.5,Too High
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge3,7,Okay
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge4,7,Okay
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge5,7,Okay
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge6,7,Okay
+Palkhivala,CAN,17,365.3,5,5132D,2.2,46.2,Judge7,6.5,Too Low
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge1,7,Okay
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge2,6.5,Too Low
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge3,7,Okay
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge4,7,Okay
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge5,7,Okay
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge6,7,Okay
+Palkhivala,CAN,17,365.3,6,403B,2.4,50.4,Judge7,8,Too High
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge1,5,Okay
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge2,5,Okay
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge3,5,Okay
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge4,4.5,Okay
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge5,4,Too Low
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge6,4.5,Okay
+Palkhivala,CAN,17,365.3,7,303B,2.4,34.8,Judge7,5,Okay
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge1,6.5,Okay
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge2,6.5,Okay
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge3,6.5,Okay
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge4,7,Too High
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge5,6,Too Low
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge6,6.5,Okay
+Palkhivala,CAN,17,365.3,8,105B,2.6,50.7,Judge7,6.5,Okay
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge1,6,Okay
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge2,6,Okay
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge3,6.5,Okay
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge4,6.5,Okay
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge5,5,Too Low
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge6,6,Okay
+Palkhivala,CAN,17,365.3,9,203B,2.3,42.55,Judge7,6.5,Okay
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge1,6.5,Okay
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge2,6,Okay
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge3,5,Too Low
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge4,6.5,Okay
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge5,6.5,Okay
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge6,6.5,Okay
+Milligan,AUS,18,357.3,1,401A,1.8,34.2,Judge7,6,Okay
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge1,6.5,Okay
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge2,6.5,Okay
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge3,6.5,Okay
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge4,6.5,Okay
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge5,6.5,Okay
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge6,7,Too High
+Milligan,AUS,18,357.3,2,103B,1.7,33.15,Judge7,6.5,Okay
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge1,7.5,Too High
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge2,7,Okay
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge3,7,Okay
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge4,7.5,Too High
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge5,7,Okay
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge6,7,Okay
+Milligan,AUS,18,357.3,3,201B,1.6,33.6,Judge7,7,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge1,7,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge2,7,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge3,7,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge4,7,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge5,6.5,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge6,6.5,Okay
+Milligan,AUS,18,357.3,4,301B,1.7,34.85,Judge7,6.5,Okay
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge1,6,Too High
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge2,5.5,Okay
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge3,5.5,Okay
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge4,5.5,Okay
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge5,5.5,Okay
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge6,5.5,Okay
+Milligan,AUS,18,357.3,5,5132D,2.2,36.3,Judge7,6.5,Too High
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge1,7,Too High
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge2,6,Okay
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge3,6,Okay
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge4,6.5,Okay
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge5,6.5,Okay
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge6,6.5,Okay
+Milligan,AUS,18,357.3,6,403B,2.4,45.6,Judge7,6,Okay
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge1,6,Okay
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge2,5,Too Low
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge3,5.5,Okay
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge4,6,Okay
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge5,6,Okay
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge6,5,Too Low
+Milligan,AUS,18,357.3,7,105B,2.6,45.5,Judge7,6,Okay
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge1,6.5,Okay
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge2,6,Okay
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge3,6.5,Okay
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge4,6.5,Okay
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge5,6.5,Okay
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge6,5.5,Too Low
+Milligan,AUS,18,357.3,8,203B,2.3,43.7,Judge7,6,Okay
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge1,7,Okay
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge2,7,Okay
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge3,7,Okay
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge4,7.5,Too High
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge5,7,Okay
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge6,6.5,Too Low
+Milligan,AUS,18,357.3,9,303B,2.4,50.4,Judge7,7,Okay
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge1,7,Okay
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge2,6,Too Low
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge3,6.5,Okay
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge4,7,Okay
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge5,7,Okay
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge6,6.5,Okay
+Widerstrom,SWE,18,357.15,1,201B,1.6,32,Judge7,6.5,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge1,7,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge2,7,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge3,7.5,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge4,7.5,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge5,7,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge6,7,Okay
+Widerstrom,SWE,18,357.15,2,301B,1.7,36.55,Judge7,7.5,Okay
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge1,7.5,Too High
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge2,6.5,Too Low
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge3,7,Okay
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge4,6.5,Too Low
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge5,7,Okay
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge6,7,Okay
+Widerstrom,SWE,18,357.15,3,103B,1.7,35.7,Judge7,7,Okay
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge1,6,Okay
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge2,6,Okay
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge3,6,Okay
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge4,6,Okay
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge5,6.5,Too High
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge6,5.5,Too Low
+Widerstrom,SWE,18,357.15,4,401A,1.8,32.4,Judge7,6,Okay
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge1,5.5,Okay
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge2,5,Too Low
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge3,5.5,Okay
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge4,6,Okay
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge5,6,Okay
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge6,6,Okay
+Widerstrom,SWE,18,357.15,5,5331D,2.2,37.4,Judge7,4.5,Too Low
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge1,7,Too High
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge2,6.5,Okay
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge3,6,Okay
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge4,6,Okay
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge5,6,Okay
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge6,5.5,Too Low
+Widerstrom,SWE,18,357.15,6,5333D,2.6,48.1,Judge7,6.5,Okay
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge1,6,Okay
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge2,5,Too Low
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge3,6,Okay
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge4,5,Too Low
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge5,5.5,Okay
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge6,5.5,Okay
+Widerstrom,SWE,18,357.15,7,203B,2.3,39.1,Judge7,6,Okay
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge1,6,Okay
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge2,5.5,Okay
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge3,6,Okay
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge4,6,Okay
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge5,6,Okay
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge6,5,Too Low
+Widerstrom,SWE,18,357.15,8,105B,2.6,45.5,Judge7,5.5,Okay
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge1,7.5,Too High
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge2,7.5,Too High
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge3,7,Okay
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge4,7,Okay
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge5,7,Okay
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge6,6,Too Low
+Widerstrom,SWE,18,357.15,9,403B,2.4,50.4,Judge7,7,Okay
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge1,6,Okay
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge2,6,Okay
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge3,6,Okay
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge4,6.5,Okay
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge5,7,Too High
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge6,6.5,Okay
+Arnautova,UKR,18,348.3,1,401A,1.8,34.2,Judge7,6.5,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge1,7,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge2,6.5,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge3,7,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge4,6.5,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge5,6.5,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge6,7,Okay
+Arnautova,UKR,18,348.3,2,103B,1.7,34,Judge7,6.5,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge1,6,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge2,6,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge3,6,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge4,6,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge5,6,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge6,6,Okay
+Arnautova,UKR,18,348.3,3,201B,1.6,28.8,Judge7,5.5,Too Low
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge1,5.5,Too Low
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge2,5.5,Too Low
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge3,6,Okay
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge4,6,Okay
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge5,6,Okay
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge6,6.5,Too High
+Arnautova,UKR,18,348.3,4,301B,1.7,30.6,Judge7,6,Okay
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge1,6,Okay
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge2,6.5,Too High
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge3,6,Okay
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge4,6,Okay
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge5,5,Too Low
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge6,6,Okay
+Arnautova,UKR,18,348.3,5,5132D,2.2,39.6,Judge7,6.5,Too High
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge1,6,Okay
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge2,6.5,Too High
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge3,6.5,Too High
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge4,6,Okay
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge5,6,Okay
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge6,6,Okay
+Arnautova,UKR,18,348.3,6,403B,2.4,43.2,Judge7,6,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge1,6.5,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge2,6.5,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge3,6.5,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge4,6,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge5,6,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge6,6.5,Okay
+Arnautova,UKR,18,348.3,7,105B,2.6,49.4,Judge7,6,Okay
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge1,6,Okay
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge2,6,Okay
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge3,6.5,Okay
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge4,6,Okay
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge5,6.5,Okay
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge6,7,Too High
+Arnautova,UKR,18,348.3,8,303B,2.4,45.6,Judge7,6.5,Okay
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge1,5.5,Okay
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge2,5.5,Okay
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge3,5.5,Okay
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge4,6,Too High
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge5,5.5,Okay
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge6,6,Too High
+Arnautova,UKR,18,348.3,9,5333D,2.6,42.9,Judge7,5.5,Okay
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge1,6.5,Okay
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge2,6.5,Okay
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge3,6,Too Low
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge4,6.5,Okay
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge5,6.5,Okay
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge6,7,Too High
+Pizzini,ITA,17,335.55,1,401B,1.5,29.25,Judge7,6,Too Low
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge1,7,Too High
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge2,6,Too Low
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge3,6.5,Okay
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge4,6.5,Okay
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge5,6,Too Low
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge6,6.5,Okay
+Pizzini,ITA,17,335.55,2,103B,1.7,33.15,Judge7,6.5,Okay
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge1,7,Too High
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge2,6.5,Okay
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge3,6.5,Okay
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge4,6.5,Okay
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge5,6.5,Okay
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge6,7.5,Too High
+Pizzini,ITA,17,335.55,3,201B,1.6,31.2,Judge7,6.5,Okay
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge1,6.5,Okay
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge2,6.5,Okay
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge3,6.5,Okay
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge4,6,Too Low
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge5,6.5,Okay
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge6,7,Too High
+Pizzini,ITA,17,335.55,4,301B,1.7,33.15,Judge7,6,Too Low
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge1,5.5,Okay
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge2,5,Too Low
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge3,5.5,Okay
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge4,5.5,Okay
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge5,6,Okay
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge6,6,Okay
+Pizzini,ITA,17,335.55,5,5331D,2.2,37.4,Judge7,6,Okay
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge1,6.5,Too High
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge2,6,Okay
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge3,6,Okay
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge4,5.5,Too Low
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge5,6,Okay
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge6,6,Okay
+Pizzini,ITA,17,335.55,6,403B,2.4,43.2,Judge7,6,Okay
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge1,6,Okay
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge2,6.5,Too High
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge3,6,Okay
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge4,6,Okay
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge5,6.5,Too High
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge6,6,Okay
+Pizzini,ITA,17,335.55,7,105B,2.6,46.8,Judge7,6,Okay
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge1,4.5,Okay
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge2,4.5,Okay
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge3,5,Okay
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge4,4.5,Okay
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge5,5.5,Too High
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge6,5,Okay
+Pizzini,ITA,17,335.55,8,203B,2.3,32.2,Judge7,4.5,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge1,6.5,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge2,6.5,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge3,7,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge4,7,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge5,7,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge6,7,Okay
+Pizzini,ITA,17,335.55,9,303B,2.4,49.2,Judge7,6.5,Okay
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge1,6,Too Low
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge2,5.5,Too Low
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge3,7,Too High
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge4,6.5,Okay
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge5,6.5,Okay
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge6,7,Too High
+Shurda,UKR,18,335.45,1,401A,1.8,35.1,Judge7,6.5,Okay
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge1,7,Too High
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge2,6.5,Okay
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge3,7,Too High
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge4,6.5,Okay
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge5,6.5,Okay
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge6,6.5,Okay
+Shurda,UKR,18,335.45,2,103B,1.7,33.15,Judge7,6.5,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge1,7,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge2,6.5,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge3,6.5,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge4,6.5,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge5,7,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge6,7,Okay
+Shurda,UKR,18,335.45,3,201B,1.6,32,Judge7,6.5,Okay
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge1,7,Okay
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge2,7,Okay
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge3,7,Okay
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge4,7,Okay
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge5,6,Too Low
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge6,8,Too High
+Shurda,UKR,18,335.45,4,301B,1.7,35.7,Judge7,7,Okay
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge1,6,Okay
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge2,6,Okay
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge3,6,Okay
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge4,6,Okay
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge5,5.5,Too Low
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge6,6,Okay
+Shurda,UKR,18,335.45,5,5132D,2.2,39.6,Judge7,6,Okay
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge1,6,Okay
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge2,5,Too Low
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge3,6,Okay
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge4,5,Too Low
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge5,5.5,Okay
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge6,6.5,Too High
+Shurda,UKR,18,335.45,6,105B,2.6,45.5,Judge7,6,Okay
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge1,6.5,Too High
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge2,5.5,Okay
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge3,6,Okay
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge4,5.5,Okay
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge5,6,Okay
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge6,5,Too Low
+Shurda,UKR,18,335.45,7,203B,2.3,39.1,Judge7,5.5,Okay
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge1,4.5,Okay
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge2,5.5,Too High
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge3,4,Too Low
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge4,4.5,Okay
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge5,4.5,Okay
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge6,5,Too High
+Shurda,UKR,18,335.45,8,303B,2.4,32.4,Judge7,4.5,Okay
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge1,5.5,Okay
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge2,5.5,Okay
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge3,4.5,Too Low
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge4,5.5,Okay
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge5,5.5,Okay
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge6,6,Too High
+Shurda,UKR,18,335.45,9,5333D,2.6,42.9,Judge7,5.5,Okay
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge1,3,Too High
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge2,2,Okay
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge3,1,Too Low
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge4,2,Okay
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge5,2.5,Okay
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge6,2.5,Okay
+Rollinson,GBR,18,334.65,1,103B,1.7,11.05,Judge7,2,Okay
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge1,5.5,Okay
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge2,4.5,Too Low
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge3,5.5,Okay
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge4,6.5,Too High
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge5,6,Okay
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge6,6,Okay
+Rollinson,GBR,18,334.65,2,201B,1.6,28,Judge7,6,Okay
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge1,7,Too High
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge2,6.5,Okay
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge3,7,Too High
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge4,6.5,Okay
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge5,6,Too Low
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge6,6,Too Low
+Rollinson,GBR,18,334.65,3,301B,1.7,33.15,Judge7,6.5,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge1,6,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge2,6,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge3,6.5,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge4,6.5,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge5,6.5,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge6,6,Okay
+Rollinson,GBR,18,334.65,4,401A,1.8,33.3,Judge7,6,Okay
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge1,6.5,Okay
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge2,6.5,Okay
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge3,6.5,Okay
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge4,6.5,Okay
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge5,7,Too High
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge6,6.5,Okay
+Rollinson,GBR,18,334.65,5,5132D,2.2,42.9,Judge7,6.5,Okay
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge1,7,Too Low
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge2,7,Too Low
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge3,7.5,Okay
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge4,7.5,Okay
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge5,7.5,Okay
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge6,7.5,Okay
+Rollinson,GBR,18,334.65,6,403B,2.4,54,Judge7,7.5,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge1,5.5,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge2,5.5,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge3,5.5,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge4,5.5,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge5,6,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge6,6,Okay
+Rollinson,GBR,18,334.65,7,5134D,2.6,44.2,Judge7,6,Okay
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge1,6,Okay
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge2,6,Okay
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge3,7,Too High
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge4,6.5,Okay
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge5,6.5,Okay
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge6,6,Okay
+Rollinson,GBR,18,334.65,8,203B,2.3,42.55,Judge7,6,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge1,6,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge2,6,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge3,6,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge4,6,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge5,5.5,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge6,5.5,Okay
+Rollinson,GBR,18,334.65,9,105B,2.6,45.5,Judge7,5,Too Low
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge1,7,Okay
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge2,7,Okay
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge3,6.5,Too Low
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge4,7,Okay
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge5,7,Okay
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge6,7,Okay
+Osorio,COL,16,330.55,1,201B,1.6,33.6,Judge7,6.5,Too Low
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge1,6.5,Okay
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge2,6.5,Okay
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge3,6,Too Low
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge4,6.5,Okay
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge5,7,Too High
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge6,6.5,Okay
+Osorio,COL,16,330.55,2,301B,1.7,33.15,Judge7,6.5,Okay
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge1,6.5,Okay
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge2,7,Too High
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge3,6.5,Okay
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge4,6.5,Okay
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge5,6.5,Okay
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge6,6.5,Okay
+Osorio,COL,16,330.55,3,101C,1.2,23.4,Judge7,7,Too High
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge1,6,Okay
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge2,6,Okay
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge3,6,Okay
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge4,5.5,Okay
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge5,5.5,Okay
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge6,6,Okay
+Osorio,COL,16,330.55,4,403B,2.4,42,Judge7,5.5,Okay
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge1,5.5,Okay
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge2,5.5,Okay
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge3,6,Too High
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge4,5.5,Okay
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge5,5,Too Low
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge6,5.5,Okay
+Osorio,COL,16,330.55,5,5231D,2.1,34.65,Judge7,6,Too High
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge1,5.5,Okay
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge2,5,Okay
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge3,5.5,Okay
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge4,5,Okay
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge5,5.5,Okay
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge6,5,Okay
+Osorio,COL,16,330.55,6,105B,2.6,41.6,Judge7,5.5,Okay
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge1,6,Too Low
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge2,6.5,Okay
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge3,6.5,Okay
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge4,6.5,Okay
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge5,6.5,Okay
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge6,6.5,Okay
+Osorio,COL,16,330.55,7,203B,2.3,44.85,Judge7,6.5,Okay
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge1,4.5,Okay
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge2,6,Too High
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge3,4.5,Okay
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge4,4.5,Okay
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge5,4.5,Okay
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge6,6,Too High
+Osorio,COL,16,330.55,8,303B,2.4,34.8,Judge7,5.5,Okay
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge1,5,Too Low
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge2,6,Okay
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge3,5,Too Low
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge4,6,Okay
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge5,5.5,Okay
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge6,6,Okay
+Osorio,COL,16,330.55,9,5233D,2.5,42.5,Judge7,5.5,Okay
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge1,5.5,Okay
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge2,5.5,Okay
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge3,5.5,Okay
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge4,4.5,Too Low
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge5,6.5,Too High
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge6,5.5,Okay
+Joyce,USA,17,324.55,1,403C,2.2,36.3,Judge7,6,Too High
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge1,6,Too Low
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge2,7,Too High
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge3,6.5,Okay
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge4,7,Too High
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge5,6.5,Okay
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge6,6.5,Okay
+Joyce,USA,17,324.55,2,101B,1.3,25.35,Judge7,6.5,Okay
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge1,5.5,Okay
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge2,5.5,Okay
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge3,4.5,Too Low
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge4,6,Too High
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge5,5.5,Okay
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge6,5.5,Okay
+Joyce,USA,17,324.55,3,201B,1.6,26.4,Judge7,5,Too Low
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge1,6.5,Too Low
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge2,6.5,Too Low
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge3,7,Okay
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge4,7,Okay
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge5,7,Okay
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge6,7,Okay
+Joyce,USA,17,324.55,4,301B,1.7,35.7,Judge7,7,Okay
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge1,6,Okay
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge2,6,Okay
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge3,6.5,Too High
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge4,6,Okay
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge5,6.5,Too High
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge6,6,Okay
+Joyce,USA,17,324.55,5,5132D,2.2,39.6,Judge7,6,Okay
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge1,7,Okay
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge2,7,Okay
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge3,7.5,Too High
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge4,7,Okay
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge5,6.5,Too Low
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge6,6.5,Too Low
+Joyce,USA,17,324.55,6,105B,2.6,54.6,Judge7,7,Okay
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge1,5.5,Too Low
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge2,5.5,Too Low
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge3,6.5,Okay
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge4,7,Too High
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge5,6.5,Okay
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge6,6,Okay
+Joyce,USA,17,324.55,7,203B,2.3,42.55,Judge7,6,Okay
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge1,5.5,Okay
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge2,6,Okay
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge3,5,Too Low
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge4,5.5,Okay
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge5,6,Okay
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge6,7,Too High
+Joyce,USA,17,324.55,8,303B,2.4,40.8,Judge7,5.5,Okay
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge1,2,Too Low
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge2,3,Too High
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge3,3,Too High
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge4,2.5,Okay
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge5,2.5,Okay
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge6,1.5,Too Low
+Joyce,USA,17,324.55,9,405C,3.1,23.25,Judge7,2.5,Okay
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge1,6,Too Low
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge2,7,Too High
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge3,6.5,Okay
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge4,6,Too Low
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge5,6.5,Okay
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge6,6.5,Okay
+Witte,USA,17,324.2,1,103B,1.7,33.15,Judge7,6.5,Okay
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge1,6,Okay
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge2,7,Too High
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge3,6,Okay
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge4,6.5,Okay
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge5,6.5,Okay
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge6,7,Too High
+Witte,USA,17,324.2,2,201B,1.6,30.4,Judge7,6,Okay
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge1,6,Too Low
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge2,7,Too High
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge3,6.5,Okay
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge4,6.5,Okay
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge5,6.5,Okay
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge6,6.5,Okay
+Witte,USA,17,324.2,3,301B,1.7,33.15,Judge7,6.5,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge1,7,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge2,7,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge3,7,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge4,6.5,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge5,6.5,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge6,6.5,Okay
+Witte,USA,17,324.2,4,401B,1.5,30.75,Judge7,7.5,Too High
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge1,5,Too Low
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge2,5.5,Okay
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge3,6,Too High
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge4,6,Too High
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge5,5.5,Okay
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge6,5.5,Okay
+Witte,USA,17,324.2,5,5132D,2.2,36.3,Judge7,5.5,Okay
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge1,6.5,Okay
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge2,7,Too High
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge3,7,Too High
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge4,6.5,Okay
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge5,6.5,Okay
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge6,6.5,Okay
+Witte,USA,17,324.2,6,105B,2.6,50.7,Judge7,6.5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge1,5.5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge2,5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge3,5.5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge4,5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge5,5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge6,5.5,Okay
+Witte,USA,17,324.2,7,203B,2.3,35.65,Judge7,5,Okay
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge1,6.5,Okay
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge2,6.5,Okay
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge3,6.5,Okay
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge4,6,Too Low
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge5,6.5,Okay
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge6,6,Too Low
+Witte,USA,17,324.2,8,403B,2.4,46.8,Judge7,6.5,Okay
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge1,3.5,Okay
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge2,4,Too High
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge3,3,Too Low
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge4,3.5,Okay
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge5,3,Too Low
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge6,3.5,Okay
+Witte,USA,17,324.2,9,5134D,2.6,27.3,Judge7,3.5,Okay
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge1,6.5,Okay
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge2,7,Too High
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge3,6.5,Okay
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge4,7,Too High
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge5,6.5,Okay
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge6,6.5,Okay
+Medina Tito,CUB,17,314.8,1,103B,1.7,33.15,Judge7,6.5,Okay
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge1,6,Okay
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge2,6.5,Okay
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge3,6,Okay
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge4,5.5,Too Low
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge5,6.5,Okay
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge6,7,Too High
+Medina Tito,CUB,17,314.8,2,201B,1.6,29.6,Judge7,6,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge1,5,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge2,5.5,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge3,5,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge4,5,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge5,5.5,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge6,5.5,Okay
+Medina Tito,CUB,17,314.8,3,301B,1.7,26.35,Judge7,5,Okay
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge1,7,Okay
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge2,7,Okay
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge3,7,Okay
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge4,7,Okay
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge5,7.5,Too High
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge6,6,Too Low
+Medina Tito,CUB,17,314.8,4,401B,1.5,31.5,Judge7,6.5,Too Low
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge1,5.5,Too Low
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge2,6,Okay
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge3,6.5,Too High
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge4,6,Okay
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge5,6,Okay
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge6,6,Okay
+Medina Tito,CUB,17,314.8,5,5132D,2.2,39.6,Judge7,6,Okay
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge1,4,Too Low
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge2,4.5,Okay
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge3,4.5,Okay
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge4,4.5,Okay
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge5,5,Too High
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge6,4.5,Okay
+Medina Tito,CUB,17,314.8,6,203B,2.3,31.05,Judge7,4.5,Okay
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge1,5.5,Okay
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge2,6,Too High
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge3,5.5,Okay
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge4,6,Too High
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge5,5.5,Okay
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge6,5,Too Low
+Medina Tito,CUB,17,314.8,7,105B,2.6,42.9,Judge7,4.5,Too Low
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge1,4.5,Okay
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge2,5,Okay
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge3,5,Okay
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge4,5.5,Too High
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge5,4.5,Okay
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge6,4.5,Okay
+Medina Tito,CUB,17,314.8,8,5233D,2.5,36.25,Judge7,5.5,Too High
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge1,6,Okay
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge2,6,Okay
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge3,6.5,Okay
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge4,6.5,Okay
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge5,6.5,Okay
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge6,6,Okay
+Medina Tito,CUB,17,314.8,9,403B,2.4,44.4,Judge7,6,Okay
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge1,6.5,Too High
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge2,5.5,Too Low
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge3,5.5,Too Low
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge4,6.5,Too High
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge5,6,Okay
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge6,6,Okay
+Wheeler,AUS,17,307.7,1,401A,1.8,32.4,Judge7,6,Okay
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge1,6,Too Low
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge2,6.5,Okay
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge3,6.5,Okay
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge4,6.5,Okay
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge5,6.5,Okay
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge6,6.5,Okay
+Wheeler,AUS,17,307.7,2,103B,1.7,33.15,Judge7,6.5,Okay
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge1,4.5,Too Low
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge2,4.5,Too Low
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge3,5.5,Too High
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge4,5,Okay
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge5,5,Okay
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge6,5,Okay
+Wheeler,AUS,17,307.7,3,201B,1.6,24,Judge7,5,Okay
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge1,6.5,Okay
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge2,6,Okay
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge3,6,Okay
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge4,7,Too High
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge5,6,Okay
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge6,7,Too High
+Wheeler,AUS,17,307.7,4,301B,1.7,31.45,Judge7,6,Okay
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge1,6,Okay
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge2,5.5,Too Low
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge3,6,Okay
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge4,6,Okay
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge5,5,Too Low
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge6,6,Okay
+Wheeler,AUS,17,307.7,5,5132D,2.2,39.6,Judge7,6,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge1,6,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge2,5.5,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge3,5.5,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge4,5.5,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge5,6,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge6,5.5,Okay
+Wheeler,AUS,17,307.7,6,105B,2.6,44.2,Judge7,6,Okay
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge1,5,Okay
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge2,5,Okay
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge3,5.5,Too High
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge4,5.5,Too High
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge5,5,Okay
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge6,4.5,Too Low
+Wheeler,AUS,17,307.7,7,203B,2.3,34.5,Judge7,5,Okay
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge1,4,Okay
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge2,3,Too Low
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge3,3.5,Okay
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge4,2.5,Too Low
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge5,4,Okay
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge6,4,Okay
+Wheeler,AUS,17,307.7,8,303B,2.4,27.6,Judge7,4,Okay
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge1,6,Okay
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge2,5.5,Okay
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge3,6.5,Too High
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge4,6,Okay
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge5,5.5,Okay
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge6,5.5,Okay
+Wheeler,AUS,17,307.7,9,403B,2.4,40.8,Judge7,5.5,Okay
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge1,7,Too High
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge2,6,Okay
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge3,6,Okay
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge4,6,Okay
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge5,6,Okay
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge6,6.5,Too High
+Huljev,CRO,18,307.55,1,201B,1.6,28.8,Judge7,6,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge1,6,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge2,6,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge3,6.5,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge4,6.5,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge5,6,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge6,6,Okay
+Huljev,CRO,18,307.55,2,301B,1.7,31.45,Judge7,7,Too High
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge1,6,Too High
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge2,5.5,Okay
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge3,5.5,Okay
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge4,5.5,Okay
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge5,5.5,Okay
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge6,5,Too Low
+Huljev,CRO,18,307.55,3,5132D,2.2,36.3,Judge7,5.5,Okay
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge1,6.5,Okay
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge2,6.5,Okay
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge3,6.5,Okay
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge4,6,Too Low
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge5,6.5,Okay
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge6,6,Too Low
+Huljev,CRO,18,307.55,4,103B,1.7,33.15,Judge7,7,Too High
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge1,7,Too High
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge2,6.5,Okay
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge3,6.5,Okay
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge4,6.5,Okay
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge5,6,Too Low
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge6,6.5,Okay
+Huljev,CRO,18,307.55,5,401B,1.5,29.25,Judge7,6.5,Okay
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge1,6,Okay
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge2,6.5,Okay
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge3,6.5,Okay
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge4,6,Okay
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge5,6.5,Okay
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge6,5.5,Too Low
+Huljev,CRO,18,307.55,6,403B,2.4,44.4,Judge7,6,Okay
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge1,6.5,Okay
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge2,6.5,Okay
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge3,6.5,Okay
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge4,7,Too High
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge5,6,Too Low
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge6,6.5,Okay
+Huljev,CRO,18,307.55,7,105B,2.6,50.7,Judge7,7,Too High
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge1,2,Okay
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge2,2,Okay
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge3,2,Okay
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge4,2,Okay
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge5,1.5,Too Low
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge6,2,Okay
+Huljev,CRO,18,307.55,8,303B,2.4,14.4,Judge7,2,Okay
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge1,5,Too Low
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge2,5,Too Low
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge3,6,Okay
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge4,5.5,Okay
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge5,5.5,Okay
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge6,6,Okay
+Huljev,CRO,18,307.55,9,203B,2.3,39.1,Judge7,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge1,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge2,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge3,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge4,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge5,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge6,6,Okay
+Bartolic,CRO,17,303.3,1,401A,1.8,32.4,Judge7,6,Okay
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge1,7,Okay
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge2,7,Okay
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge3,7,Okay
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge4,7,Okay
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge5,6.5,Too Low
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge6,7,Okay
+Bartolic,CRO,17,303.3,2,103B,1.7,35.7,Judge7,7,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge1,6,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge2,5.5,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge3,5.5,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge4,5.5,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge5,6,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge6,6,Okay
+Bartolic,CRO,17,303.3,3,201B,1.6,28,Judge7,6,Okay
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge1,6,Too Low
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge2,6.5,Okay
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge3,6.5,Okay
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge4,6.5,Okay
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge5,6,Too Low
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge6,6.5,Okay
+Bartolic,CRO,17,303.3,4,301B,1.7,33.15,Judge7,6.5,Okay
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge1,4.5,Too Low
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge2,5,Okay
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge3,4.5,Too Low
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge4,5,Okay
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge5,5,Okay
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge6,5,Okay
+Bartolic,CRO,17,303.3,5,5331D,2.2,33,Judge7,5,Okay
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge1,4,Too Low
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge2,4.5,Okay
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge3,4.5,Okay
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge4,4,Too Low
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge5,4.5,Okay
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge6,4.5,Okay
+Bartolic,CRO,17,303.3,6,303B,2.4,32.4,Judge7,4.5,Okay
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge1,4.5,Too High
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge2,4,Okay
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge3,4,Okay
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge4,4,Okay
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge5,4,Okay
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge6,4,Okay
+Bartolic,CRO,17,303.3,7,105B,2.6,31.2,Judge7,4.5,Too High
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge1,6,Okay
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge2,5.5,Okay
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge3,5.5,Okay
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge4,6,Okay
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge5,5.5,Okay
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge6,6,Okay
+Bartolic,CRO,17,303.3,8,203B,2.3,40.25,Judge7,6,Okay
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge1,5,Okay
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge2,5,Okay
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge3,5.5,Okay
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge4,6,Too High
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge5,4.5,Too Low
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge6,5.5,Okay
+Bartolic,CRO,17,303.3,9,403B,2.4,37.2,Judge7,5,Okay
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge1,6.5,Okay
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge2,6.5,Okay
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge3,6.5,Okay
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge4,6.5,Okay
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge5,6.5,Okay
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge6,7,Too High
+Ricci,PER,15,302.55,1,401B,1.5,29.25,Judge7,6.5,Okay
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge1,6.5,Okay
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge2,6.5,Okay
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge3,6.5,Okay
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge4,6.5,Okay
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge5,6.5,Okay
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge6,6,Too Low
+Ricci,PER,15,302.55,2,103B,1.7,33.15,Judge7,6,Too Low
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge1,7,Okay
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge2,7.5,Too High
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge3,7,Okay
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge4,6.5,Okay
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge5,6.5,Okay
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge6,6.5,Okay
+Ricci,PER,15,302.55,3,201B,1.6,32,Judge7,6.5,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge1,6,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge2,6.5,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge3,6,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge4,6,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge5,6,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge6,6.5,Okay
+Ricci,PER,15,302.55,4,301B,1.7,31.45,Judge7,6.5,Okay
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge1,6,Too High
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge2,5.5,Okay
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge3,6,Too High
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge4,5,Too Low
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge5,5.5,Okay
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge6,5.5,Okay
+Ricci,PER,15,302.55,5,5132D,2.2,36.3,Judge7,5.5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge1,5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge2,5.5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge3,5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge4,5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge5,5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge6,5.5,Okay
+Ricci,PER,15,302.55,6,303C,2.1,32.55,Judge7,5.5,Okay
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge1,4.5,Okay
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge2,4.5,Okay
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge3,5,Too High
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge4,4.5,Okay
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge5,4.5,Okay
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge6,4,Too Low
+Ricci,PER,15,302.55,7,203B,2.3,31.05,Judge7,4.5,Okay
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge1,4.5,Okay
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge2,4.5,Okay
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge3,4.5,Okay
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge4,4,Too Low
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge5,5,Too High
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge6,5.5,Too High
+Ricci,PER,15,302.55,8,105C,2.4,32.4,Judge7,4.5,Okay
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge1,6,Okay
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge2,6,Okay
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge3,7,Too High
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge4,6.5,Okay
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge5,6,Okay
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge6,6,Okay
+Ricci,PER,15,302.55,9,403B,2.4,44.4,Judge7,6.5,Okay
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge1,5.5,Okay
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge2,5.5,Okay
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge3,5.5,Okay
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge4,6.5,Too High
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge5,5,Too Low
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge6,5,Too Low
+Mayorga Flores,MEX,18,301.55,1,103B,1.7,28.05,Judge7,6,Too High
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge1,6,Okay
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge2,5.5,Okay
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge3,5,Too Low
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge4,5.5,Okay
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge5,6,Okay
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge6,6,Okay
+Mayorga Flores,MEX,18,301.55,2,201B,1.6,28,Judge7,6,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge1,5.5,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge2,5.5,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge3,5.5,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge4,5.5,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge5,5.5,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge6,5.5,Okay
+Mayorga Flores,MEX,18,301.55,3,301B,1.7,28.05,Judge7,6,Too High
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge1,6.5,Okay
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge2,6.5,Okay
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge3,6.5,Okay
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge4,6.5,Okay
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge5,6,Okay
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge6,6,Okay
+Mayorga Flores,MEX,18,301.55,4,401B,1.5,28.5,Judge7,6,Okay
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge1,4.5,Okay
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge2,4.5,Okay
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge3,4.5,Okay
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge4,4,Too Low
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge5,4.5,Okay
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge6,4.5,Okay
+Mayorga Flores,MEX,18,301.55,5,5132D,2.2,29.7,Judge7,4.5,Okay
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge1,6,Okay
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge2,5,Too Low
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge3,6,Okay
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge4,5.5,Okay
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge5,5.5,Okay
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge6,5.5,Okay
+Mayorga Flores,MEX,18,301.55,6,105B,2.6,44.2,Judge7,6,Okay
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge1,4,Too Low
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge2,4.5,Okay
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge3,4.5,Okay
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge4,4.5,Okay
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge5,4.5,Okay
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge6,4,Too Low
+Mayorga Flores,MEX,18,301.55,7,203B,2.3,31.05,Judge7,4.5,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge1,6,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge2,5.5,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge3,6,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge4,5.5,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge5,5.5,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge6,5.5,Okay
+Mayorga Flores,MEX,18,301.55,8,303B,2.4,40.8,Judge7,6,Okay
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge1,6,Okay
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge2,6.5,Too High
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge3,6,Okay
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge4,6.5,Too High
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge5,6,Okay
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge6,5.5,Too Low
+Mayorga Flores,MEX,18,301.55,9,403B,2.4,43.2,Judge7,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge1,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge2,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge3,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge4,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge5,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge6,6,Okay
+Remund,SUI,17,298.45,1,201B,1.6,28.8,Judge7,6,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge1,5.5,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge2,5,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge3,5,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge4,5.5,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge5,5,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge6,5.5,Okay
+Remund,SUI,17,298.45,2,301B,1.7,27.2,Judge7,5.5,Okay
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge1,5.5,Okay
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge2,5.5,Okay
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge3,5.5,Okay
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge4,5.5,Okay
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge5,5.5,Okay
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge6,6,Too High
+Remund,SUI,17,298.45,3,103B,1.7,28.05,Judge7,6,Too High
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge1,5,Too Low
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge2,5,Too Low
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge3,6,Too High
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge4,5.5,Okay
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge5,6,Too High
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge6,5.5,Okay
+Remund,SUI,17,298.45,4,401A,1.8,29.7,Judge7,5.5,Okay
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge1,6,Too High
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge2,6,Too High
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge3,5,Too Low
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge4,5.5,Okay
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge5,5.5,Okay
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge6,5.5,Okay
+Remund,SUI,17,298.45,5,5132D,2.2,36.3,Judge7,5.5,Okay
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge1,5.5,Okay
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge2,6.5,Too High
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge3,6,Okay
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge4,5.5,Okay
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge5,6,Okay
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge6,5.5,Okay
+Remund,SUI,17,298.45,6,105C,2.4,42,Judge7,6,Okay
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge1,4,Too Low
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge2,4,Too Low
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge3,5,Okay
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge4,5,Okay
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge5,5,Okay
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge6,4.5,Okay
+Remund,SUI,17,298.45,7,203B,2.3,33.35,Judge7,5,Okay
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge1,5.5,Okay
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge2,5.5,Okay
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge3,5.5,Okay
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge4,5.5,Okay
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge5,5,Too Low
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge6,6,Too High
+Remund,SUI,17,298.45,8,303C,2.1,34.65,Judge7,5.5,Okay
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge1,5,Okay
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge2,6,Too High
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge3,5.5,Okay
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge4,5,Okay
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge5,5,Okay
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge6,6,Too High
+Remund,SUI,17,298.45,9,403B,2.4,38.4,Judge7,5.5,Okay
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge1,6,Okay
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge2,6,Okay
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge3,6,Okay
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge4,6,Okay
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge5,5.5,Too Low
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge6,6,Okay
+Methula,RSA,16,290.5,1,401B,1.5,27,Judge7,6,Okay
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge1,5.5,Okay
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge2,5,Too Low
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge3,5.5,Okay
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge4,6,Okay
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge5,6,Okay
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge6,6,Okay
+Methula,RSA,16,290.5,2,103B,1.7,29.75,Judge7,6,Okay
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge1,6,Okay
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge2,5,Too Low
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge3,6,Okay
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge4,6,Okay
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge5,6,Okay
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge6,6.5,Too High
+Methula,RSA,16,290.5,3,201B,1.6,28.8,Judge7,6,Okay
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge1,5,Okay
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge2,5.5,Okay
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge3,5,Okay
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge4,5.5,Okay
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge5,5,Okay
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge6,6,Too High
+Methula,RSA,16,290.5,4,301B,1.7,26.35,Judge7,5,Okay
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge1,6,Okay
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge2,6,Okay
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge3,5.5,Okay
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge4,6,Okay
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge5,6.5,Too High
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge6,5.5,Okay
+Methula,RSA,16,290.5,5,5331D,2.2,25.3,Judge7,5.5,Okay
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge1,3.5,Okay
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge2,3.5,Okay
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge3,3,Too Low
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge4,3.5,Okay
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge5,4,Too High
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge6,2.5,Too Low
+Methula,RSA,16,290.5,6,105B,2.6,27.3,Judge7,3.5,Okay
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge1,5.5,Okay
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge2,5.5,Okay
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge3,6,Too High
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge4,5.5,Okay
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge5,5,Too Low
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge6,5.5,Okay
+Methula,RSA,16,290.5,7,403B,2.4,39.6,Judge7,6.5,Too High
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge1,5,Too Low
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge2,5.5,Okay
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge3,5,Too Low
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge4,6,Too High
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge5,5.5,Okay
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge6,5.5,Okay
+Methula,RSA,16,290.5,8,303B,2.4,39.6,Judge7,5.5,Okay
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge1,6,Okay
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge2,6,Okay
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge3,5,Too Low
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge4,6,Okay
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge5,6.5,Too High
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge6,6,Okay
+Methula,RSA,16,290.5,9,5333D,2.6,46.8,Judge7,5,Too Low
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge1,5,Okay
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge2,5,Okay
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge3,5,Okay
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge4,5.5,Too High
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge5,5,Okay
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge6,5,Okay
+Li,TPE,17,286.3,1,103B,1.7,25.5,Judge7,5.5,Too High
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge1,6,Okay
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge2,5.5,Too Low
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge3,6,Okay
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge4,6,Okay
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge5,5.5,Too Low
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge6,6,Okay
+Li,TPE,17,286.3,2,201B,1.6,28.8,Judge7,6.5,Too High
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge1,6.5,Too High
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge2,5.5,Okay
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge3,6,Okay
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge4,5.5,Okay
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge5,5.5,Okay
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge6,5.5,Okay
+Li,TPE,17,286.3,3,301B,1.7,28.9,Judge7,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge1,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge2,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge3,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge4,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge5,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge6,6,Okay
+Li,TPE,17,286.3,4,401B,1.5,27,Judge7,6,Okay
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge1,5.5,Okay
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge2,5.5,Okay
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge3,5,Too Low
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge4,5,Too Low
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge5,5.5,Okay
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge6,5.5,Okay
+Li,TPE,17,286.3,5,5132D,2.2,36.3,Judge7,5.5,Okay
+Li,TPE,17,286.3,6,105B,2.6,39,Judge1,5.5,Too High
+Li,TPE,17,286.3,6,105B,2.6,39,Judge2,5.5,Too High
+Li,TPE,17,286.3,6,105B,2.6,39,Judge3,5,Okay
+Li,TPE,17,286.3,6,105B,2.6,39,Judge4,4.5,Too Low
+Li,TPE,17,286.3,6,105B,2.6,39,Judge5,5,Okay
+Li,TPE,17,286.3,6,105B,2.6,39,Judge6,4.5,Too Low
+Li,TPE,17,286.3,6,105B,2.6,39,Judge7,5,Okay
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge1,4,Okay
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge2,4,Okay
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge3,4,Okay
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge4,4.5,Too High
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge5,4,Okay
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge6,4,Okay
+Li,TPE,17,286.3,7,203B,2.3,27.6,Judge7,4,Okay
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge1,5,Okay
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge2,5.5,Okay
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge3,5,Okay
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge4,5.5,Okay
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge5,5.5,Okay
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge6,6,Too High
+Li,TPE,17,286.3,8,303B,2.4,38.4,Judge7,5,Okay
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge1,5,Okay
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge2,5,Okay
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge3,4.5,Okay
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge4,4.5,Okay
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge5,5,Okay
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge6,5.5,Too High
+Li,TPE,17,286.3,9,403B,2.4,34.8,Judge7,4.5,Okay
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge1,6,Okay
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge2,5.5,Okay
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge3,6,Okay
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge4,6,Okay
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge5,4.5,Too Low
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge6,4.5,Too Low
+Mikynova,CZE,17,284.95,1,201B,1.6,28,Judge7,6,Okay
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge1,6.5,Okay
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge2,6,Too Low
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge3,7,Okay
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge4,7,Okay
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge5,6.5,Okay
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge6,6.5,Okay
+Mikynova,CZE,17,284.95,2,301B,1.7,34,Judge7,7,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge1,4.5,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge2,4,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge3,4.5,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge4,4,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge5,4.5,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge6,4,Okay
+Mikynova,CZE,17,284.95,3,103B,1.7,22.1,Judge7,4.5,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge1,4.5,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge2,4.5,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge3,4,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge4,4,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge5,4,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge6,4.5,Okay
+Mikynova,CZE,17,284.95,4,5132D,2.2,28.6,Judge7,4.5,Okay
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge1,5,Okay
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge2,5,Okay
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge3,5,Okay
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge4,5.5,Too High
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge5,5,Okay
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge6,6,Too High
+Mikynova,CZE,17,284.95,5,401A,1.8,27,Judge7,5,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge1,5.5,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge2,6,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge3,6,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge4,5.5,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge5,6,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge6,5.5,Okay
+Mikynova,CZE,17,284.95,6,403B,2.4,42,Judge7,6,Okay
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge1,5.5,Okay
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge2,4.5,Too Low
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge3,6,Too High
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge4,5.5,Okay
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge5,5.5,Okay
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge6,5.5,Okay
+Mikynova,CZE,17,284.95,7,203B,2.3,37.95,Judge7,6,Too High
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge1,6,Okay
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge2,6,Okay
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge3,6,Okay
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge4,6,Okay
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge5,5.5,Too Low
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge6,7,Too High
+Mikynova,CZE,17,284.95,8,303B,2.4,43.2,Judge7,6,Okay
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge1,3,Okay
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge2,3,Okay
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge3,3,Okay
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge4,2,Too Low
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge5,3,Okay
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge6,2,Too Low
+Mikynova,CZE,17,284.95,9,105B,2.6,22.1,Judge7,2.5,Okay
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge1,5.5,Too Low
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge2,6,Okay
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge3,6,Okay
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge4,6,Okay
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge5,5.5,Too Low
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge6,6,Okay
+Iacazzi,SUI,17,281.05,1,103B,1.7,30.6,Judge7,6,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge1,5,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge2,5.5,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge3,5.5,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge4,5,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge5,5,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge6,5.5,Okay
+Iacazzi,SUI,17,281.05,2,201B,1.6,24.8,Judge7,5,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge1,5.5,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge2,5.5,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge3,6,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge4,6,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge5,6,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge6,5.5,Okay
+Iacazzi,SUI,17,281.05,3,301B,1.7,29.75,Judge7,6.5,Too High
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge1,5.5,Okay
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge2,5.5,Okay
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge3,6,Too High
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge4,5.5,Okay
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge5,5,Too Low
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge6,5.5,Okay
+Iacazzi,SUI,17,281.05,4,401A,1.8,29.7,Judge7,6,Too High
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge1,5.5,Okay
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge2,5.5,Okay
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge3,5,Okay
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge4,5.5,Okay
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge5,5,Okay
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge6,5,Okay
+Iacazzi,SUI,17,281.05,5,5132D,2.2,35.2,Judge7,6,Too High
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge1,5,Too High
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge2,4.5,Okay
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge3,4.5,Okay
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge4,4.5,Okay
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge5,4.5,Okay
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge6,4.5,Okay
+Iacazzi,SUI,17,281.05,6,105B,2.6,35.1,Judge7,4.5,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge1,4.5,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge2,4,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge3,4.5,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge4,4,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge5,4,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge6,4.5,Okay
+Iacazzi,SUI,17,281.05,7,203B,2.3,28.75,Judge7,4,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge1,5,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge2,5,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge3,5.5,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge4,5.5,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge5,5,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge6,5.5,Okay
+Iacazzi,SUI,17,281.05,8,303B,2.4,38.4,Judge7,6,Too High
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge1,3.5,Okay
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge2,3.5,Okay
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge3,4,Okay
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge4,3.5,Okay
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge5,4,Okay
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge6,4,Okay
+Iacazzi,SUI,17,281.05,9,5233D,2.5,28.75,Judge7,4,Okay
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge1,5,Too Low
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge2,5.5,Okay
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge3,5.5,Okay
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge4,5.5,Okay
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge5,5.5,Okay
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge6,5.5,Okay
+Brammer,RSA,17,280.4,1,401B,1.5,24.75,Judge7,6.5,Too High
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge1,6,Okay
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge2,6,Okay
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge3,6.5,Too High
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge4,6,Okay
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge5,6,Okay
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge6,6,Okay
+Brammer,RSA,17,280.4,2,103B,1.7,30.6,Judge7,6,Okay
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge1,5,Too Low
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge2,5.5,Okay
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge3,6,Okay
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge4,5.5,Okay
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge5,6,Okay
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge6,6,Okay
+Brammer,RSA,17,280.4,3,201B,1.6,27.2,Judge7,5.5,Okay
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge1,4.5,Okay
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge2,5,Too High
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge3,4.5,Okay
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge4,4.5,Okay
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge5,4.5,Okay
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge6,5.5,Too High
+Brammer,RSA,17,280.4,4,301B,1.7,22.95,Judge7,4.5,Okay
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge1,6,Okay
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge2,6,Okay
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge3,6,Okay
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge4,5.5,Too Low
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge5,6,Okay
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge6,6,Okay
+Brammer,RSA,17,280.4,5,5331D,2.2,39.6,Judge7,6,Okay
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge1,5.5,Okay
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge2,5.5,Okay
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge3,5.5,Okay
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge4,6,Too High
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge5,5.5,Okay
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge6,5.5,Okay
+Brammer,RSA,17,280.4,6,5333D,2.6,42.9,Judge7,6,Too High
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge1,4,Okay
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge2,4.5,Too High
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge3,4.5,Too High
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge4,4,Okay
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge5,4,Okay
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge6,4,Okay
+Brammer,RSA,17,280.4,7,105B,2.6,31.2,Judge7,4,Okay
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge1,4,Okay
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge2,4,Okay
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge3,3.5,Too Low
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge4,4,Okay
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge5,4,Okay
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge6,4.5,Too High
+Brammer,RSA,17,280.4,8,403B,2.4,28.8,Judge7,4,Okay
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge1,4.5,Okay
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge2,4.5,Okay
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge3,4.5,Okay
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge4,4.5,Okay
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge5,5,Too High
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge6,5,Too High
+Brammer,RSA,17,280.4,9,303B,2.4,32.4,Judge7,4.5,Okay
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge1,4,Okay
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge2,4,Okay
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge3,4,Okay
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge4,4.5,Too High
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge5,3.5,Too Low
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge6,4.5,Too High
+Koprulu,TUR,17,277.15,1,201B,1.6,19.2,Judge7,4,Okay
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge1,5.5,Okay
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge2,5.5,Okay
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge3,5.5,Okay
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge4,4.5,Too Low
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge5,5,Too Low
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge6,5.5,Okay
+Koprulu,TUR,17,277.15,2,301B,1.7,28.05,Judge7,6,Too High
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge1,5.5,Okay
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge2,5,Okay
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge3,5,Okay
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge4,5,Okay
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge5,5,Okay
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge6,5.5,Okay
+Koprulu,TUR,17,277.15,3,401B,1.5,23.25,Judge7,5.5,Okay
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge1,6.5,Too High
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge2,6,Okay
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge3,6,Okay
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge4,6,Okay
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge5,6,Okay
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge6,6,Okay
+Koprulu,TUR,17,277.15,4,103B,1.7,30.6,Judge7,6,Okay
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge1,5.5,Okay
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge2,5.5,Okay
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge3,5.5,Okay
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge4,5.5,Okay
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge5,5.5,Okay
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge6,5,Too Low
+Koprulu,TUR,17,277.15,5,5132D,2.2,36.3,Judge7,6,Too High
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge1,4.5,Too Low
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge2,5.5,Okay
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge3,5.5,Okay
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge4,4.5,Too Low
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge5,5,Okay
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge6,5.5,Okay
+Koprulu,TUR,17,277.15,6,5233D,2.5,40,Judge7,6,Too High
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge1,5,Too Low
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge2,5.5,Okay
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge3,5.5,Okay
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge4,5.5,Okay
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge5,6,Too High
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge6,5.5,Okay
+Koprulu,TUR,17,277.15,7,403B,2.4,39.6,Judge7,6,Too High
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge1,5.5,Okay
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge2,5,Too Low
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge3,5.5,Okay
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge4,5.5,Okay
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge5,5.5,Okay
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge6,5.5,Okay
+Koprulu,TUR,17,277.15,8,105B,2.6,42.9,Judge7,5,Too Low
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge1,2.5,Okay
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge2,2.5,Okay
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge3,2.5,Okay
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge4,3,Too High
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge5,2.5,Okay
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge6,3,Too High
+Koprulu,TUR,17,277.15,9,203B,2.3,17.25,Judge7,2,Too Low
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge1,6,Okay
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge2,6,Okay
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge3,6,Okay
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge4,6,Okay
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge5,6,Okay
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge6,6,Okay
+Squire,NZL,17,275.8,1,103B,1.7,30.6,Judge7,5,Too Low
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge1,6,Okay
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge2,6,Okay
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge3,6,Okay
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge4,6,Okay
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge5,6,Okay
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge6,7,Too High
+Squire,NZL,17,275.8,2,201B,1.6,28.8,Judge7,6,Okay
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge1,5.5,Too High
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge2,5,Okay
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge3,5,Okay
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge4,5,Okay
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge5,5,Okay
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge6,5.5,Too High
+Squire,NZL,17,275.8,3,301B,1.7,25.5,Judge7,5,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge1,6.5,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge2,6.5,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge3,6.5,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge4,6,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge5,6,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge6,6,Okay
+Squire,NZL,17,275.8,4,401B,1.5,28.5,Judge7,6.5,Okay
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge1,5.5,Okay
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge2,5.5,Okay
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge3,5,Okay
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge4,5,Okay
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge5,5,Okay
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge6,6,Too High
+Squire,NZL,17,275.8,5,5132D,2.2,34.1,Judge7,5,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge1,6,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge2,6,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge3,5.5,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge4,5.5,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge5,6,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge6,6,Okay
+Squire,NZL,17,275.8,6,403B,2.4,42,Judge7,5.5,Okay
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge1,3,Too Low
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge2,4.5,Too High
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge3,3.5,Okay
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge4,3.5,Okay
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge5,3.5,Okay
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge6,3.5,Okay
+Squire,NZL,17,275.8,7,303B,2.4,25.2,Judge7,3.5,Okay
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge1,5,Too Low
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge2,5.5,Okay
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge3,5.5,Okay
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge4,5.5,Okay
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge5,5.5,Okay
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge6,5.5,Okay
+Squire,NZL,17,275.8,8,105B,2.6,42.9,Judge7,5,Too Low
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge1,3,Too High
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge2,2.5,Okay
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge3,2,Okay
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge4,2,Okay
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge5,3.5,Too High
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge6,2,Okay
+Squire,NZL,17,275.8,9,5134D,2.6,18.2,Judge7,2.5,Okay
+Han,KOR,16,273.85,1,401B,1.5,27,Judge1,6,Okay
+Han,KOR,16,273.85,1,401B,1.5,27,Judge2,6.5,Too High
+Han,KOR,16,273.85,1,401B,1.5,27,Judge3,6,Okay
+Han,KOR,16,273.85,1,401B,1.5,27,Judge4,6,Okay
+Han,KOR,16,273.85,1,401B,1.5,27,Judge5,5.5,Too Low
+Han,KOR,16,273.85,1,401B,1.5,27,Judge6,6,Okay
+Han,KOR,16,273.85,1,401B,1.5,27,Judge7,6.5,Too High
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge1,5.5,Okay
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge2,5.5,Okay
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge3,5.5,Okay
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge4,5.5,Okay
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge5,5.5,Okay
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge6,5.5,Okay
+Han,KOR,16,273.85,2,201B,1.6,26.4,Judge7,5.5,Okay
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge1,6,Okay
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge2,6.5,Okay
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge3,6.5,Okay
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge4,6,Okay
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge5,6,Okay
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge6,5.5,Too Low
+Han,KOR,16,273.85,3,301B,1.7,31.45,Judge7,6.5,Okay
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge1,6,Too High
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge2,5.5,Okay
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge3,5.5,Okay
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge4,5.5,Okay
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge5,5,Too Low
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge6,5.5,Okay
+Han,KOR,16,273.85,4,103B,1.7,28.05,Judge7,6,Too High
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge1,4.5,Okay
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge2,4.5,Okay
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge3,4,Too Low
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge4,4.5,Okay
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge5,4,Too Low
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge6,5,Too High
+Han,KOR,16,273.85,5,5132D,2.2,29.7,Judge7,4.5,Okay
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge1,5,Okay
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge2,5,Okay
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge3,4.5,Okay
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge4,4.5,Okay
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge5,4,Too Low
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge6,4.5,Okay
+Han,KOR,16,273.85,6,105B,2.6,36.4,Judge7,5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge1,4.5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge2,5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge3,4.5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge4,4.5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge5,5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge6,5,Okay
+Han,KOR,16,273.85,7,303B,2.4,33.6,Judge7,4.5,Okay
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge1,4.5,Too High
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge2,4,Okay
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge3,3.5,Okay
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge4,3.5,Okay
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge5,3.5,Okay
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge6,4,Okay
+Han,KOR,16,273.85,8,203B,2.3,26.45,Judge7,4,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge1,4.5,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge2,5,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge3,4.5,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge4,5,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge5,4.5,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge6,5,Okay
+Han,KOR,16,273.85,9,403B,2.4,34.8,Judge7,5,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge1,6,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge2,6,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge3,6,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge4,6,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge5,6,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge6,6,Okay
+Reis,BRA,18,272.5,1,103B,1.7,30.6,Judge7,6,Okay
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge1,4.5,Too Low
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge2,5.5,Too High
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge3,6,Too High
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge4,4.5,Too Low
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge5,5,Okay
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge6,5,Okay
+Reis,BRA,18,272.5,2,301B,1.7,25.5,Judge7,5,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge1,6,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge2,5.5,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge3,5.5,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge4,5.5,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge5,6,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge6,6,Okay
+Reis,BRA,18,272.5,3,401B,1.5,25.5,Judge7,5,Too Low
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge1,4.5,Okay
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge2,5,Okay
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge3,4.5,Okay
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge4,5,Okay
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge5,4.5,Okay
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge6,5.5,Too High
+Reis,BRA,18,272.5,4,201B,1.6,22.4,Judge7,4.5,Okay
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge1,5,Okay
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge2,5,Okay
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge3,5,Okay
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge4,4.5,Too Low
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge5,5,Okay
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge6,5.5,Too High
+Reis,BRA,18,272.5,5,5132D,2.2,33,Judge7,5,Okay
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge1,5,Too High
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge2,3.5,Too Low
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge3,4.5,Too High
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge4,4,Okay
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge5,4,Okay
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge6,3.5,Too Low
+Reis,BRA,18,272.5,6,105B,2.6,31.2,Judge7,4,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge1,4.5,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge2,5,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge3,4.5,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge4,4.5,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge5,5,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge6,5,Okay
+Reis,BRA,18,272.5,7,303B,2.4,34.8,Judge7,5,Okay
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge1,4,Okay
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge2,5,Too High
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge3,5,Too High
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge4,4.5,Okay
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge5,4,Okay
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge6,4,Okay
+Reis,BRA,18,272.5,8,203B,2.3,29.9,Judge7,4.5,Okay
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge1,5.5,Okay
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge2,5.5,Okay
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge3,5,Too Low
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge4,5.5,Okay
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge5,5.5,Okay
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge6,5.5,Okay
+Reis,BRA,18,272.5,9,403B,2.4,39.6,Judge7,5.5,Okay
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge1,6,Okay
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge2,5,Too Low
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge3,6,Okay
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge4,6.5,Too High
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge5,6,Okay
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge6,5.5,Too Low
+Valeisaite,LTU,17,270,1,103B,1.7,30.6,Judge7,6,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge1,6.5,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge2,6.5,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge3,6.5,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge4,6.5,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge5,6.5,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge6,6.5,Okay
+Valeisaite,LTU,17,270,2,401B,1.5,29.25,Judge7,6,Too Low
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge1,5.5,Okay
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge2,5,Okay
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge3,5.5,Okay
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge4,5,Okay
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge5,5.5,Okay
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge6,5,Okay
+Valeisaite,LTU,17,270,3,201B,1.6,24.8,Judge7,5,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge1,4,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge2,4,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge3,3.5,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge4,4,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge5,3.5,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge6,4,Okay
+Valeisaite,LTU,17,270,4,303C,2.1,24.15,Judge7,3.5,Okay
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge1,5,Okay
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge2,6,Too High
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge3,5.5,Okay
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge4,5.5,Okay
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge5,5.5,Okay
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge6,5,Okay
+Valeisaite,LTU,17,270,5,5231D,2.1,33.6,Judge7,5,Okay
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge1,2.5,Okay
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge2,2.5,Okay
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge3,2.5,Okay
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge4,2,Too Low
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge5,2.5,Okay
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge6,2.5,Okay
+Valeisaite,LTU,17,270,6,105C,2.4,18,Judge7,3,Too High
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge1,6.5,Okay
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge2,6.5,Okay
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge3,6.5,Okay
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge4,6.5,Okay
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge5,6,Too Low
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge6,6,Too Low
+Valeisaite,LTU,17,270,7,403B,2.4,46.8,Judge7,6.5,Okay
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge1,4,Okay
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge2,4,Okay
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge3,4,Okay
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge4,4,Okay
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge5,4.5,Too High
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge6,4,Okay
+Valeisaite,LTU,17,270,8,203B,2.3,27.6,Judge7,4.5,Too High
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge1,5,Okay
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge2,5.5,Okay
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge3,5,Okay
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge4,5.5,Okay
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge5,5.5,Okay
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge6,5.5,Okay
+Valeisaite,LTU,17,270,9,5132D,2.2,35.2,Judge7,5,Okay
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge1,5,Okay
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge2,5,Okay
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge3,5,Okay
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge4,5,Okay
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge5,5,Okay
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge6,5.5,Too High
+Drake,PHI,18,269.95,1,401A,1.8,27,Judge7,5.5,Too High
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge1,5.5,Okay
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge2,5,Okay
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge3,5.5,Okay
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge4,5,Okay
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge5,5,Okay
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge6,5.5,Okay
+Drake,PHI,18,269.95,2,103B,1.7,27.2,Judge7,6,Too High
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge1,5,Okay
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge2,5,Okay
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge3,5,Okay
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge4,5,Okay
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge5,4.5,Too Low
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge6,5,Okay
+Drake,PHI,18,269.95,3,201B,1.6,24,Judge7,5.5,Too High
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge1,4,Okay
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge2,4.5,Okay
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge3,4,Okay
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge4,4.5,Okay
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge5,3.5,Too Low
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge6,4.5,Okay
+Drake,PHI,18,269.95,4,301B,1.7,22.1,Judge7,4.5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge1,5.5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge2,5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge3,5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge4,5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge5,5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge6,5.5,Okay
+Drake,PHI,18,269.95,5,5132D,2.2,34.1,Judge7,5.5,Okay
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge1,5,Too Low
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge2,5,Too Low
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge3,5.5,Okay
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge4,5.5,Okay
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge5,5.5,Okay
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge6,5.5,Okay
+Drake,PHI,18,269.95,6,403B,2.4,39.6,Judge7,5.5,Okay
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge1,4.5,Okay
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge2,4,Too Low
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge3,5,Too High
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge4,4.5,Okay
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge5,4.5,Okay
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge6,4.5,Okay
+Drake,PHI,18,269.95,7,203B,2.3,31.05,Judge7,5,Too High
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge1,4.5,Okay
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge2,4.5,Okay
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge3,4,Too Low
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge4,4.5,Okay
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge5,4.5,Okay
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge6,5,Too High
+Drake,PHI,18,269.95,8,303B,2.4,32.4,Judge7,4,Too Low
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge1,4.5,Okay
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge2,4,Okay
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge3,4,Okay
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge4,4,Okay
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge5,5,Too High
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge6,4.5,Okay
+Drake,PHI,18,269.95,9,105B,2.6,32.5,Judge7,4,Okay
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge1,5,Okay
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge2,5,Okay
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge3,5,Okay
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge4,5.5,Too High
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge5,5,Okay
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge6,5,Okay
+Erzincan,TUR,16,263.5,1,201B,1.6,24,Judge7,5.5,Too High
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge1,5,Okay
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge2,5,Okay
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge3,5,Okay
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge4,5.5,Okay
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge5,5.5,Okay
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge6,5.5,Okay
+Erzincan,TUR,16,263.5,2,301B,1.7,27.2,Judge7,5.5,Okay
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge1,6,Okay
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge2,6,Okay
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge3,6.5,Too High
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge4,6,Okay
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge5,5.5,Too Low
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge6,6,Okay
+Erzincan,TUR,16,263.5,3,401B,1.5,27,Judge7,6,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge1,5.5,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge2,5.5,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge3,5.5,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge4,5.5,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge5,5.5,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge6,5.5,Okay
+Erzincan,TUR,16,263.5,4,103B,1.7,28.05,Judge7,5.5,Okay
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge1,5,Okay
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge2,5,Okay
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge3,5.5,Too High
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge4,4.5,Too Low
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge5,4.5,Too Low
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge6,6,Too High
+Erzincan,TUR,16,263.5,5,5132D,2.2,33,Judge7,5,Okay
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge1,5,Okay
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge2,5,Okay
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge3,4.5,Too Low
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge4,5,Okay
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge5,5,Okay
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge6,5,Okay
+Erzincan,TUR,16,263.5,6,105C,2.4,36,Judge7,5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge1,5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge2,5.5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge3,5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge4,5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge5,5.5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge6,5,Okay
+Erzincan,TUR,16,263.5,7,403B,2.4,37.2,Judge7,5.5,Okay
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge1,5,Okay
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge2,4.5,Okay
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge3,5.5,Too High
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge4,5,Okay
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge5,4.5,Okay
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge6,5,Okay
+Erzincan,TUR,16,263.5,8,203C,2,29,Judge7,4.5,Okay
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge1,3.5,Okay
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge2,3.5,Okay
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge3,3.5,Okay
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge4,3,Too Low
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge5,3.5,Okay
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge6,3.5,Okay
+Erzincan,TUR,16,263.5,9,303C,2.1,22.05,Judge7,3,Too Low
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge1,2.5,Okay
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge2,3,Okay
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge3,2,Too Low
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge4,2.5,Okay
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge5,3.5,Too High
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge6,3,Okay
+Sekino,JPN,18,251.45,1,101B,1.3,10.4,Judge7,2,Too Low
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge1,5,Okay
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge2,5.5,Okay
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge3,5,Okay
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge4,5.5,Okay
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge5,5,Okay
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge6,5.5,Okay
+Sekino,JPN,18,251.45,2,201B,1.6,25.6,Judge7,5.5,Okay
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge1,5,Too Low
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge2,5.5,Okay
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge3,6,Okay
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge4,6,Okay
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge5,5,Too Low
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge6,5.5,Okay
+Sekino,JPN,18,251.45,3,301B,1.7,28.9,Judge7,6,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge1,6,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge2,6,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge3,5.5,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge4,5.5,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge5,5.5,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge6,6,Okay
+Sekino,JPN,18,251.45,4,401A,1.8,31.5,Judge7,6,Okay
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge1,6,Okay
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge2,6,Okay
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge3,6,Okay
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge4,6,Okay
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge5,5.5,Too Low
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge6,5,Too Low
+Sekino,JPN,18,251.45,5,5132D,2.2,39.6,Judge7,6,Okay
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge1,5.5,Okay
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge2,5,Okay
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge3,4.5,Too Low
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge4,5,Okay
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge5,5,Okay
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge6,5.5,Okay
+Sekino,JPN,18,251.45,6,105B,2.6,40.3,Judge7,5.5,Okay
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge1,3.5,Okay
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge2,4.5,Too High
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge3,3.5,Okay
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge4,3.5,Okay
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge5,3.5,Okay
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge6,4,Too High
+Sekino,JPN,18,251.45,7,203B,2.3,24.15,Judge7,3.5,Okay
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge1,3,Too High
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge2,2.5,Okay
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge3,2.5,Okay
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge4,3,Too High
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge5,2,Too Low
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge6,2.5,Okay
+Sekino,JPN,18,251.45,8,303B,2.4,18,Judge7,2,Too Low
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge1,5,Okay
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge2,5,Okay
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge3,4.5,Too Low
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge4,5,Okay
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge5,5,Okay
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge6,4,Too Low
+Sekino,JPN,18,251.45,9,403C,2.2,33,Judge7,5,Okay
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge1,6,Okay
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge2,6,Okay
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge3,5.5,Okay
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge4,5.5,Okay
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge5,6.5,Too High
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge6,6.5,Too High
+Camelo,BRA,16,247.6,1,401B,1.5,26.25,Judge7,5,Too Low
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge1,4.5,Too Low
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge2,5.5,Too High
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge3,5,Okay
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge4,5,Okay
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge5,5,Okay
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge6,5.5,Too High
+Camelo,BRA,16,247.6,2,201B,1.6,24,Judge7,5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge1,5.5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge2,5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge3,5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge4,5.5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge5,5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge6,5.5,Okay
+Camelo,BRA,16,247.6,3,5231D,2.1,33.6,Judge7,5.5,Okay
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge1,2.5,Okay
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge2,2,Okay
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge3,2,Okay
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge4,2.5,Okay
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge5,1,Too Low
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge6,2.5,Okay
+Camelo,BRA,16,247.6,4,301B,1.7,11.05,Judge7,2,Okay
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge1,6,Okay
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge2,6.5,Too High
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge3,6,Okay
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge4,6,Okay
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge5,5,Too Low
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge6,5.5,Too Low
+Camelo,BRA,16,247.6,5,103B,1.7,30.6,Judge7,6,Okay
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge1,4.5,Too High
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge2,4,Okay
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge3,4,Okay
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge4,3,Too Low
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge5,4,Okay
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge6,4.5,Too High
+Camelo,BRA,16,247.6,6,105B,2.6,31.2,Judge7,4,Okay
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge1,2.5,Too Low
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge2,3,Okay
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge3,3,Okay
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge4,3,Okay
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge5,3,Okay
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge6,3,Okay
+Camelo,BRA,16,247.6,7,303B,2.4,21.6,Judge7,2.5,Too Low
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge1,5,Okay
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge2,4.5,Too Low
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge3,5,Okay
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge4,5,Okay
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge5,5,Okay
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge6,5,Okay
+Camelo,BRA,16,247.6,8,203B,2.3,34.5,Judge7,5,Okay
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge1,4,Too Low
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge2,5,Okay
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge3,5,Okay
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge4,4,Too Low
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge5,5,Okay
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge6,5.5,Too High
+Camelo,BRA,16,247.6,9,403B,2.4,34.8,Judge7,4.5,Okay
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge1,5.5,Okay
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge2,6,Too High
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge3,5,Too Low
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge4,6,Too High
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge5,5.5,Okay
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge6,5.5,Okay
+Lim,SGP,16,241.2,1,401B,1.5,24.75,Judge7,5.5,Okay
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge1,4.5,Okay
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge2,4,Too Low
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge3,4,Too Low
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge4,4.5,Okay
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge5,5,Too High
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge6,5,Too High
+Lim,SGP,16,241.2,2,103B,1.7,22.95,Judge7,4.5,Okay
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge1,4.5,Too Low
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge2,4.5,Too Low
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge3,5,Okay
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge4,5,Okay
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge5,5,Okay
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge6,5.5,Too High
+Lim,SGP,16,241.2,3,201B,1.6,24,Judge7,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge1,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge2,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge3,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge4,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge5,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge6,5,Okay
+Lim,SGP,16,241.2,4,301B,1.7,25.5,Judge7,4.5,Too Low
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge1,4.5,Okay
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge2,4.5,Okay
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge3,4.5,Okay
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge4,4.5,Okay
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge5,4,Okay
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge6,4,Okay
+Lim,SGP,16,241.2,5,5132D,2.2,28.6,Judge7,4,Okay
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge1,4.5,Okay
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge2,5,Too High
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge3,4.5,Okay
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge4,4,Too Low
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge5,4.5,Okay
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge6,4,Too Low
+Lim,SGP,16,241.2,6,403C,2.2,29.7,Judge7,4.5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge1,4.5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge2,5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge3,4.5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge4,4.5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge5,5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge6,4.5,Okay
+Lim,SGP,16,241.2,7,105C,2.4,33.6,Judge7,5,Okay
+Lim,SGP,16,241.2,8,203C,2,30,Judge1,5,Okay
+Lim,SGP,16,241.2,8,203C,2,30,Judge2,5,Okay
+Lim,SGP,16,241.2,8,203C,2,30,Judge3,4,Too Low
+Lim,SGP,16,241.2,8,203C,2,30,Judge4,4.5,Too Low
+Lim,SGP,16,241.2,8,203C,2,30,Judge5,5,Okay
+Lim,SGP,16,241.2,8,203C,2,30,Judge6,5,Okay
+Lim,SGP,16,241.2,8,203C,2,30,Judge7,5,Okay
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge1,5,Too High
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge2,4,Okay
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge3,4,Okay
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge4,4.5,Okay
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge5,4.5,Okay
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge6,4.5,Okay
+Lim,SGP,16,241.2,9,5221D,1.7,22.1,Judge7,4,Okay
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge1,5.5,Too High
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge2,4.5,Too Low
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge3,5,Okay
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge4,5,Okay
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge5,5,Okay
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge6,5,Okay
+Medkova,CZE,18,231.25,1,5231D,2.1,31.5,Judge7,5,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge1,4.5,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge2,4,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge3,4.5,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge4,4,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge5,4,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge6,4.5,Okay
+Medkova,CZE,18,231.25,2,103B,1.7,22.1,Judge7,4.5,Okay
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge1,6,Okay
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge2,7,Too High
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge3,6,Okay
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge4,6,Okay
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge5,5.5,Too Low
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge6,6.5,Too High
+Medkova,CZE,18,231.25,3,401B,1.5,27,Judge7,5.5,Too Low
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge1,5,Too Low
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge2,6,Okay
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge3,5.5,Okay
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge4,6,Okay
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge5,5,Too Low
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge6,6,Okay
+Medkova,CZE,18,231.25,4,201B,1.6,27.2,Judge7,5.5,Okay
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge1,4.5,Okay
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge2,4,Okay
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge3,4.5,Okay
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge4,4,Okay
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge5,4,Okay
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge6,5,Too High
+Medkova,CZE,18,231.25,5,301B,1.7,21.25,Judge7,4,Okay
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge1,4,Okay
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge2,4,Okay
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge3,4.5,Too High
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge4,4,Okay
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge5,4,Okay
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge6,4,Okay
+Medkova,CZE,18,231.25,6,403B,2.4,28.8,Judge7,4,Okay
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge1,4.5,Okay
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge2,5,Too High
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge3,4.5,Okay
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge4,4.5,Okay
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge5,4.5,Okay
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge6,4,Too Low
+Medkova,CZE,18,231.25,7,303C,2.1,28.35,Judge7,4.5,Okay
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge1,2.5,Too High
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge2,2,Okay
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge3,2,Okay
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge4,2.5,Too High
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge5,1.5,Okay
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge6,1.5,Okay
+Medkova,CZE,18,231.25,8,203B,2.3,12.65,Judge7,1.5,Okay
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge1,4.5,Okay
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge2,4.5,Okay
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge3,4.5,Okay
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge4,4.5,Okay
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge5,4.5,Okay
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge6,5.5,Too High
+Medkova,CZE,18,231.25,9,105C,2.4,32.4,Judge7,5,Too High
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge1,4.5,Okay
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge2,4.5,Okay
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge3,5,Too High
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge4,5,Too High
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge5,4.5,Okay
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge6,4.5,Okay
+Liaw,SGP,16,230.55,1,401B,1.5,20.25,Judge7,4.5,Okay
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge1,4,Okay
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge2,3,Too Low
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge3,4,Okay
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge4,4,Okay
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge5,4.5,Too High
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge6,4,Okay
+Liaw,SGP,16,230.55,2,103B,1.7,20.4,Judge7,4,Okay
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge1,5,Okay
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge2,5,Okay
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge3,5.5,Too High
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge4,5,Okay
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge5,5,Okay
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge6,5.5,Too High
+Liaw,SGP,16,230.55,3,201B,1.6,24,Judge7,5,Okay
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge1,5.5,Okay
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge2,5.5,Okay
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge3,5.5,Okay
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge4,5.5,Okay
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge5,5.5,Okay
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge6,6,Too High
+Liaw,SGP,16,230.55,4,301B,1.7,28.05,Judge7,5.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge1,3.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge2,3.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge3,4.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge4,3.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge5,4.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge6,4.5,Okay
+Liaw,SGP,16,230.55,5,5231D,2.1,25.2,Judge7,4,Okay
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge1,4,Too Low
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge2,5,Okay
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge3,5,Okay
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge4,5,Okay
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge5,5,Okay
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge6,5.5,Too High
+Liaw,SGP,16,230.55,6,403C,2.2,33,Judge7,5,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge1,4,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge2,4,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge3,4,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge4,4,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge5,4,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge6,4,Okay
+Liaw,SGP,16,230.55,7,203C,2,24,Judge7,4,Okay
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge1,5,Okay
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge2,5,Okay
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge3,4.5,Too Low
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge4,5,Okay
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge5,5,Okay
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge6,5,Okay
+Liaw,SGP,16,230.55,8,303C,2.1,31.5,Judge7,5,Okay
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge1,4,Too High
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge2,4,Too High
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge3,3.5,Okay
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge4,3.5,Okay
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge5,3.5,Okay
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge6,3,Too Low
+Liaw,SGP,16,230.55,9,5223D,2.3,24.15,Judge7,3.5,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge1,5.5,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge2,6,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge3,5.5,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge4,5.5,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge5,5.5,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge6,6,Okay
+Yoon,KOR,17,226.2,1,103B,1.7,28.9,Judge7,6,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge1,5,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge2,5.5,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge3,5,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge4,5,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge5,5,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge6,5.5,Okay
+Yoon,KOR,17,226.2,2,401B,1.5,23.25,Judge7,5.5,Okay
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge1,4.5,Okay
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge2,3.5,Too Low
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge3,4.5,Okay
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge4,5,Too High
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge5,4.5,Okay
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge6,4.5,Okay
+Yoon,KOR,17,226.2,3,201B,1.6,21.6,Judge7,4.5,Okay
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge1,4,Too High
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge2,3.5,Okay
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge3,3,Too Low
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge4,3,Too Low
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge5,3.5,Okay
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge6,5,Too High
+Yoon,KOR,17,226.2,4,301B,1.7,17.85,Judge7,3.5,Okay
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge1,4,Okay
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge2,3.5,Okay
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge3,3.5,Okay
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge4,3.5,Okay
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge5,3,Too Low
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge6,5,Too High
+Yoon,KOR,17,226.2,5,5132D,2.2,24.2,Judge7,4,Okay
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge1,4,Okay
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge2,4,Okay
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge3,4,Okay
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge4,4,Okay
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge5,4.5,Too High
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge6,3.5,Too Low
+Yoon,KOR,17,226.2,6,105C,2.4,28.8,Judge7,3.5,Too Low
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge1,4.5,Okay
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge2,4,Too Low
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge3,4.5,Okay
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge4,4.5,Okay
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge5,4.5,Okay
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge6,3.5,Too Low
+Yoon,KOR,17,226.2,7,403B,2.4,32.4,Judge7,4.5,Okay
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge1,4,Okay
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge2,4,Okay
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge3,4,Okay
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge4,3.5,Too Low
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge5,4,Okay
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge6,4,Okay
+Yoon,KOR,17,226.2,8,203B,2.3,27.6,Judge7,4,Okay
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge1,3,Okay
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge2,2.5,Too Low
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge3,3,Okay
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge4,2.5,Too Low
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge5,3,Okay
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge6,3.5,Too High
+Yoon,KOR,17,226.2,9,303B,2.4,21.6,Judge7,3.5,Too High
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge1,3.5,Okay
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge2,4,Okay
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge3,3,Too Low
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge4,4,Okay
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge5,4,Okay
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge6,3.5,Okay
+Lee,TPE,18,157.5,1,401C,1.4,16.1,Judge7,4,Okay
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge1,3.5,Too Low
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge2,4,Okay
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge3,3.5,Too Low
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge4,4,Okay
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge5,4.5,Too High
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge6,4,Okay
+Lee,TPE,18,157.5,2,201C,1.5,18,Judge7,4,Okay
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge1,4,Okay
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge2,4,Okay
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge3,3.5,Too Low
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge4,3,Too Low
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge5,4,Okay
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge6,4,Okay
+Lee,TPE,18,157.5,3,101A,1.4,16.8,Judge7,4,Okay
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge1,4,Okay
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge2,4,Okay
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge3,3.5,Too Low
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge4,4,Okay
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge5,4,Okay
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge6,4,Okay
+Lee,TPE,18,157.5,4,301C,1.6,19.2,Judge7,3.5,Too Low
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge1,5,Too High
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge2,4.5,Okay
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge3,3.5,Too Low
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge4,4,Too Low
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge5,5,Too High
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge6,4.5,Okay
+Lee,TPE,18,157.5,5,5211A,1.8,24.3,Judge7,4.5,Okay
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge1,2.5,Okay
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge2,2,Too Low
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge3,2.5,Okay
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge4,2.5,Okay
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge5,2.5,Okay
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge6,2.5,Okay
+Lee,TPE,18,157.5,6,403C,2.2,16.5,Judge7,2,Too Low
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge1,3.5,Okay
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge2,3,Okay
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge3,1.5,Too Low
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge4,3,Okay
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge5,3.5,Okay
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge6,3.5,Okay
+Lee,TPE,18,157.5,7,202A,1.7,17,Judge7,3.5,Okay
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge1,4.5,Okay
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge2,4,Okay
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge3,4.5,Okay
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge4,4,Okay
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge5,4.5,Okay
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge6,3,Too Low
+Lee,TPE,18,157.5,8,103C,1.6,20,Judge7,4,Okay
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge1,2.5,Okay
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge2,2.5,Okay
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge3,1.5,Okay
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge4,2.5,Okay
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge5,2,Okay
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge6,1,Too Low
+Lee,TPE,18,157.5,9,302C,1.6,9.6,Judge7,1.5,Okay

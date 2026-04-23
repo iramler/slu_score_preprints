@@ -7,11 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Emma Deering">
+<meta name="author" content="Ivan Ramler">
 <meta name="author" content="Robin Lock">
-<meta name="dcterms.date" content="2024-04-15">
+<meta name="dcterms.date" content="2026-04-21">
 <meta name="description" content="Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.">
 
-<title>FINA World Junior Championships 2022 Diving Data – SLU SCORE Module Preprint Repository</title>
+<title>Detecting Judge Bias in Competitive Diving Using Statistical Analysis – SLU SCORE Module Preprint Repository</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -147,7 +148,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../diving/index.html">Diving</a></li><li class="breadcrumb-item"><a href="../../diving/world_junior_diving/index.html">FINA World Junior Championships 2022 Diving Data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../diving/index.html">Diving</a></li><li class="breadcrumb-item"><a href="../../diving/world_junior_diving/index.html">Detecting Judge Bias in Competitive Diving Using Statistical Analysis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -573,7 +574,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../diving/world_junior_diving/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">FINA World Junior Championships 2022 Diving Data</span></a>
+ <span class="menu-text">Detecting Judge Bias in Competitive Diving Using Statistical Analysis</span></a>
   </div>
 </li>
       </ul>
@@ -988,10 +989,12 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
+  <li><a href="#introduction-to-diving" id="toc-introduction-to-diving" class="nav-link active" data-scroll-target="#introduction-to-diving">Introduction to Diving</a></li>
+  <li><a href="#module" id="toc-module" class="nav-link" data-scroll-target="#module">Module</a>
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
   </ul></li>
   </ul>
@@ -1000,12 +1003,13 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../diving/index.html">Diving</a></li><li class="breadcrumb-item"><a href="../../diving/world_junior_diving/index.html">FINA World Junior Championships 2022 Diving Data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../diving/index.html">Diving</a></li><li class="breadcrumb-item"><a href="../../diving/world_junior_diving/index.html">Detecting Judge Bias in Competitive Diving Using Statistical Analysis</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">FINA World Junior Championships 2022 Diving Data</h1>
+<h1 class="title">Detecting Judge Bias in Competitive Diving Using Statistical Analysis</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">ANOVA</div>
-    <div class="quarto-category">post hoc comparisons</div>
+    <div class="quarto-category">Chi-square Test for Assocations</div>
+    <div class="quarto-category">Type I Error</div>
+    <div class="quarto-category">Type II Error</div>
   </div>
   </div>
 
@@ -1028,7 +1032,15 @@ cookieconsent.run({
           </p>
       </div>
     <div class="quarto-title-meta-contents">
-    <p class="author">Robin Lock <a href="mailto:rlock@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Robin Lock </p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -1043,7 +1055,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2024</p>
+      <p class="date">April 21, 2026</p>
     </div>
   </div>
   
@@ -1055,16 +1067,37 @@ cookieconsent.run({
 </header>
 
 
+<section id="introduction-to-diving" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-diving">Introduction to Diving</h2>
+<p>If you are unfamiliar with diving, please watch this video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=bJcOsEuT0QY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
 <section id="module" class="level2">
 <h2 class="anchored" data-anchor-id="module">Module</h2>
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>The FINA Junior World Diving Championships is a elite dive meet where top divers around the world under the age of 18 compete. Each diver completed 9 dives, all of which contributed to their overall score. Each dive is scored by 7 judges. Each judge gives a score individually on a scale of 1-10 at half-point increments based on execution of the dive. 10 represents perfect execution, while 0 represents failed execution. The two lowest and the two highest scores of the judges are voided, and the other three are added together. The sum of the three judges is then multiplied by the difficulty of the attempted dive. The product represent the points earned for that dive. The overall score is calculated by adding together the points earned on each dives.</p>
-<p>In this worksheet, we will determine if there are statistical differences in mean total points scored between 16, 17, and 18-year old divers. Understanding how total score differs between different aged divers may tell us something about the importance of age, experince, and skill level in scoring points in diving.</p>
-<p><a href="Diving_Video_Topics.docx">Preliminary video ideas</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>In this worksheet, we will determine if one judge is biased compared to the others by determining if one judge’s score was voided more often than others. Students will do this using the Chi-square test for Independence. Through this activity students will be able to criticially analyze the real-world implications of statistical decisions and understand how Type I and Type II errors can occur in hypothesis testing.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This could serve as an in class activity and should take roughly a half an hour to complete. Questions can also be pulled from this activity to serve as shorter examples.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1073,19 +1106,19 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>By the end of this activity, you will be able to:</p>
 <ol type="1">
-<li><p>Conduct and interpret a difference in means hypothesis test.</p></li>
-<li><p>Conduct and interpret a difference in means ANOVA test.</p></li>
-<li><p>Understand how mean can differ between groups.</p></li>
+<li><p>Conduct a Chi-squared Test of Independence.</p></li>
+<li><p>Define and describe type I and type II error in context.</p></li>
+<li><p>Understand type I and type II error real-world implications.</p></li>
 </ol>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1094,13 +1127,12 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Technology requirement: The activity handout provides summary statistics so that no statistical software is required. However, the activity could be modified to ask students to conduct hypothesis tests through a statistical software, produce that information from the raw dataset, and/or extend the activity to investigate other variables available in the data.</p>
+<p>Students are expected to have:</p>
 <ol type="1">
-<li><p>Hypothesis Tests: Knowledge of hypothesis tests are vital to this activity. Familiarity with hypothesizes, test statistics, degrees of freedom, and p-values are important for the completion of this worksheet.</p></li>
-<li><p>ANOVA: Understanding and familiarity with the concept of ANOVA tests are important in order to further analyze the data through pairwise comparisons.</p></li>
-<li><p>Familiarity with basic statistical analysis techniques and terms, specifically mean, categorical variables, and quantitative variables, are important conceptual concepts needed in the aiding in this activity.</p></li>
+<li><p>Familiarity with basic statistical analysis techniques, such as the basics of a hypothesis test, including p-values, test statistics, and hypotheses.</p></li>
+<li><p>Understanding of the types of error.</p></li>
 </ol>
 </div>
 </div>
@@ -1109,16 +1141,7 @@ cookieconsent.run({
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <p>The data set contains 360 rows and 15 columns. Each row represents a completed dive from a diver in the preliminary results of women (aged 16-18) 1m springboard from the 2022 FINA World Junior Championships. Each diver completed 9 dives, so there is 9 rows per diver.</p>
-<p>Download data: <a href="divingdata.csv">divingdata.csv</a></p>
-<details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 83%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Variable</th>
@@ -1128,80 +1151,63 @@ cookieconsent.run({
 <tbody>
 <tr class="odd">
 <td>LastName</td>
-<td>The last name of the diver</td>
+<td>Last name of the athlete</td>
 </tr>
 <tr class="even">
 <td>Country</td>
-<td>The country the diver was competing for</td>
+<td>Athlete’s home country</td>
 </tr>
 <tr class="odd">
 <td>Age</td>
-<td>The age of the diver</td>
+<td>Athlete’s Age</td>
 </tr>
 <tr class="even">
 <td>TotalPoints</td>
-<td>The overall points the diver had earned at the end of the meet</td>
+<td>Total points scored at the meet</td>
 </tr>
 <tr class="odd">
 <td>DiveNum</td>
-<td>The order in which the dives were performed</td>
+<td>Order of athlete’s dive, 1-9</td>
 </tr>
 <tr class="even">
 <td>DiveName</td>
-<td>The coded name of the dive</td>
+<td>Name of dive executed</td>
 </tr>
 <tr class="odd">
 <td>Difficulty</td>
-<td>The difficulty of the dive</td>
+<td>Difficulty of the dive</td>
 </tr>
 <tr class="even">
-<td>Judge1</td>
-<td>The score that judge 1 awarded the dive</td>
-</tr>
-<tr class="odd">
-<td>Judge2</td>
-<td>The score that judge 2 awarded the dive</td>
-</tr>
-<tr class="even">
-<td>Judge3</td>
-<td>The score that judge 3 awarded the dive</td>
-</tr>
-<tr class="odd">
-<td>Judge4</td>
-<td>The score that judge 4 awarded the dive</td>
-</tr>
-<tr class="even">
-<td>Judge5</td>
-<td>The score that judge 5 awarded the dive</td>
-</tr>
-<tr class="odd">
-<td>Judge6</td>
-<td>The score that judge 6 awarded the dive</td>
-</tr>
-<tr class="even">
-<td>Judge7</td>
-<td>The score that judge 7 awarded the dive</td>
-</tr>
-<tr class="odd">
 <td>Points</td>
-<td>Overall points the individual dive earned</td>
+<td>Points scored on the dive</td>
+</tr>
+<tr class="odd">
+<td>Judge</td>
+<td>Judge Identification</td>
+</tr>
+<tr class="even">
+<td>Points_Awarded</td>
+<td>Number of points the judge scored</td>
+</tr>
+<tr class="odd">
+<td>Judge_Result</td>
+<td>If judges score was too low, too high, or okay</td>
 </tr>
 </tbody>
 </table>
-</details>
-<section id="data-source" class="level4">
-<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p>World Aquatics. (2022). FINA World Junior Diving Championships 2022. <a href="https://www.worldaquatics.com/competitions/2951/fina-world-junior-diving-championships-2022/results?event=6d65f6db-1e71-4bca-b1c3-7facf12f500f&amp;unit=preliminary" class="uri">https://www.worldaquatics.com/competitions/2951/fina-world-junior-diving-championships-2022/results?event=6d65f6db-1e71-4bca-b1c3-7facf12f500f&amp;unit=preliminary</a></p>
+<p>The data sets can be accessed here:</p>
+<p><a href="FemaleFINADivingChampionships.csv">FemaleFINADivingChampionships.csv</a></p>
 </section>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
+<p>World Aquatics. (2022). FINA World Junior Diving Championships 2022. https://www.worldaquatics.com/competitions/2951/fina-world-junior-diving-championships-2022/results?event=6d65f6db-1e71-4bca-b1c3-7facf12f500f&amp;unit=preliminary</p>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="WS_Diving_TwoSample_Tests.docx">Class handout - Two-sample Tests</a> - Comparisons with two-sample tests for means</p>
-<p><a href="WS_Diving_ANOVA_No_Data.docx">Class handout - ANOVA - No data</a> (summary given - does not require a datafile)</p>
-<p><a href="WS_Diving_ANOVA_Needs_Data.docx">Class handout - ANOVA - Needs Data</a> (requires the datafile)</p>
-<p><a href="WS_Diving_TwoSample_Tests_Key.docx">Class handout - Two-sample Tests - Key</a></p>
+<p><a href="DivingWorksheet.docx">Class Worksheet</a></p>
+<p><a href="DivingWorksheetKey.docx">Class Worksheet Key</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1210,9 +1216,9 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>To Be Written …</p>
+<p>In this module, you have learned how to conduct a chi-square test for independence. You have learned how statistical decisions can relate to type I and type II errors. These errors can have real-world implications that are important to consider when working with statistics.</p>
 </div>
 </div>
 </div>
