@@ -1,0 +1,176 @@
+---
+title: "Data Exploration"
+author: "Emma Deering"
+format: html
+---
+
+```{r}
+library(readr)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+
+divingdata <- read_csv("divingdata.csv")
+```
+
+```{r}
+# exploratory plot to see how difficulty effects points scored on single dive
+
+ggplot(data = divingdata, aes(x = Difficulty, y = Points)) +
+  geom_point() + 
+  theme_bw() + 
+  geom_smooth()
+
+```
+
+```{r}
+# divide by top scores and not
+
+topscorers <- divingdata |> group_by(LastName) |> mutate(Top = case_when(
+      TotalPoints >= 360 ~ 1,
+      TotalPoints < 360 ~ 0))
+
+# color by best divers
+
+ggplot(data = topscorers, aes(x = Difficulty, y = Points, colour = factor(Top))) +
+  geom_point() + 
+  theme_bw()
+
+```
+
+
+```{r}
+# compare by difficulty
+
+difficulty <- divingdata |> mutate(difficulty_group = case_when(
+  Difficulty >= 2.5 ~ "Hard", 
+  Difficulty >= 2.0 & Difficulty < 2.5 ~ "Medium", 
+  Difficulty < 2.0 ~ "Easy"
+))
+
+ggplot(data = difficulty, aes(x = Difficulty, y = Points, colour = difficulty_group)) +
+  geom_point() + 
+  theme_bw()
+
+boxplot(Points ~ difficulty_group, data = difficulty)
+
+```
+
+```{r}
+ggplot(data = difficulty, aes(x = Difficulty, y = Points, colour = difficulty_group)) +
+  geom_point() + 
+  facet_wrap(~ DivNum)
+  theme_bw()
+```
+
+
+```{r}
+# compare judges
+
+diving_long <- divingdata |> pivot_longer(
+    cols = c(Judge1, Judge2, Judge3, Judge4, Judge5, Judge6, Judge7),
+    names_to = "Judge",
+    values_to = "Point_Awarded")
+
+boxplot(Point_Awarded ~ Judge, data = diving_long)
+
+# judge 7 looks slightly higher median
+# judge 2 looks like it may have a longer tail, gives more high scores. 
+# judge 4 looks like longer low tail, gives more lower scores
+
+# do a test to see if judge 7 is different than the rest?
+
+diving_long |> group_by(Judge) |> summarise(avg = mean(Point_Awarded))
+
+diving_long |> group_by(Judge) |> summarise(avg = median(Point_Awarded)) # median is different
+
+
+# Does one judge's score not get included more often then others?
+# Introduce idea of trim mean to introduce how scoring is done
+# By hand example or R function (trim mean or mean with trim option)
+# mean(  ,trim = 1/7)
+
+# Are there judges that this happens more often to?
+# Evaluate biases in judges 
+```
+
+```{r}
+diving_long <- divingdata |> pivot_longer(
+    cols = c(Judge1, Judge2, Judge3, Judge4, Judge5, Judge6, Judge7),
+    names_to = "Judge",
+    values_to = "Point_Awarded") |>
+  group_by(LastName, DiveNum) |> 
+  mutate(order = rank(Point_Awarded, ties.method = "random"), 
+         Scores_Kept = ifelse(
+           order <= 2 | order >= 6,
+           0, 1
+         )) |> 
+  select(-9, -10)
+
+diving_long
+
+judges <- diving_long |> 
+  group_by(Judge) |>
+  summarise (times_counted = sum(Scores_Kept), total_dives = n())
+
+judges
+
+chisq.test(judges$times_counted, p=rep(1/7, 7))
+
+# get a new p-value for every time you run it, so may not be the best method 
+# for dealing with ties
+
+```
+
+
+## next time 
+
+```{r}
+average_rank <- divingdata |> pivot_longer(
+    cols = c(Judge1, Judge2, Judge3, Judge4, Judge5, Judge6, Judge7),
+    names_to = "Judge",
+    values_to = "Point_Awarded") |>
+  group_by(LastName, DiveNum) |> 
+  mutate(order = rank(Point_Awarded, ties.method = "average"), 
+         Scores_Kept = between(order, 2.51, 5.49), 
+         weight_given = Scores_Kept*(3/sum(Scores_Kept))
+           )|>
+  
+  select(-9, -10) 
+
+average_rank
+```
+
+```{r}
+Judgescores <- average_rank |> mutate( Judge_Result = case_when(order < 2 ~ "Too Low", 
+                                    order > 6 ~ "Too High", 
+                                    between(order, 2.01, 5.99) ~ "Okay", 
+                                    TRUE ~ as.character(order))) |>
+  group_by(LastName, DiveNum, Judge_Result) |>
+  mutate(distinct_scores = n()) |> 
+  ungroup() |>
+  mutate(Judge_Result_2 = case_when(
+    Judge_Result == "2" & distinct_scores == 1 ~ "Too Low", 
+    Judge_Result == "6" & distinct_scores == 1 ~ "Too High",
+    Judge_Result == "2" & distinct_scores > 1 ~ "Okay",
+    Judge_Result == "6" & distinct_scores > 1 ~ "Okay",
+    TRUE ~ Judge_Result))
+```
+
+```{r}
+write_csv(Judgescores, file = "FemaleFINADivingChampionships.csv")
+```
+
+```{r}
+library(tidyverse)
+ws <- Judgescores |> group_by(Judge, Judge_Result_2) |> summarise(n = n())
+
+ws |> ungroup() |> group_by(Judge) |> summarise
+```
+
+```{r}
+chisq.test(table(Judgescores$Judge, Judgescores$Judge_Result_2))
+```
+
+
+Want to use ties method that does not randomly choose one, but rather 
