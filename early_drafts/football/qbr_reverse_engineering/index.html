@@ -8,10 +8,10 @@
 
 <meta name="author" content="Amara McGowan">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2026-03-16">
-<meta name="description" content="TBD">
+<meta name="dcterms.date" content="2026-04-22">
+<meta name="description" content="Guide to VS Code and R, Python, and Julia…">
 
-<title>Reverse Engineering ESPN’s Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python – SLU SCORE Module Preprint Repository</title>
+<title>Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python – SLU SCORE Module Preprint Repository</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -182,7 +182,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Reverse Engineering ESPN’s Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -331,7 +331,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../early_drafts/football/qbr_reverse_engineering/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Reverse Engineering ESPN’s Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python</span></a>
+ <span class="menu-text">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</span></a>
   </div>
 </li>
       </ul>
@@ -1026,8 +1026,8 @@ cookieconsent.run({
   <li><a href="#welcome-video" id="toc-welcome-video" class="nav-link active" data-scroll-target="#welcome-video">Welcome Video</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#quantile-regression" id="toc-quantile-regression" class="nav-link" data-scroll-target="#quantile-regression">Quantile Regression</a></li>
-  <li><a href="#getting-started-in-julia-r-or-python" id="toc-getting-started-in-julia-r-or-python" class="nav-link" data-scroll-target="#getting-started-in-julia-r-or-python">Getting Started in Julia, R, or Python</a></li>
+  <li><a href="#visual-studio-code-vs-code" id="toc-visual-studio-code-vs-code" class="nav-link" data-scroll-target="#visual-studio-code-vs-code">Visual Studio Code (VS Code)</a></li>
+  <li><a href="#pick-a-programming-language" id="toc-pick-a-programming-language" class="nav-link" data-scroll-target="#pick-a-programming-language">Pick a Programming Language</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -1035,17 +1035,22 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Reverse Engineering ESPN’s Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Reverse Engineering ESPN’s Total Quarterback Rating Formula with Quantile Regression in Julia, R, and Python</h1>
+<h1 class="title">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</h1>
   <div class="quarto-categories">
+    <div class="quarto-category">Stepwise Regression</div>
     <div class="quarto-category">Quantile Regression</div>
+    <div class="quarto-category">VS Code</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Julia</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    TBD
+    Guide to VS Code and R, Python, and Julia…
   </div>
 </div>
 
@@ -1077,7 +1082,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 16, 2026</p>
+      <p class="date">April 22, 2026</p>
     </div>
   </div>
   
@@ -1098,8 +1103,8 @@ cookieconsent.run({
 </section>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>The National Football League (NFL) has 14 official positions: 7 offensive, 5 defensive, and 2 special teams positions. One of the offensive positions is called Quarterback (QB), and their role is to lead their team on the field. ESPN streams NFL games and provides a lot of data on NFL players, including their Total Quarterback Rating (QBR), a 0-100 score measuring a quarterback’s contribution to winning. Higher scores indicate better performance.</p>
-<p>In this module, you will learn how to reverse engineer the Total Quarterback Rating using data from the 2025 NFL Regular season. To reverse enginner QBR, we will use Quantile Regression and you will have the choice of learning it in Julia, R, Python, or multiple languages.</p>
+<p>The National Football League (NFL) has 14 official positions for players: 7 offensive, 5 defensive, and 2 special teams positions. One of the offensive positions is called Quarterback (QB), and their role is to lead their team on the field. ESPN streams NFL games and provides a lot of data on NFL players, including their Total Quarterback Rating (QBR), a 0-100 score measuring a quarterback’s contribution to winning. Higher scores indicate better performance.</p>
+<p>In this module, you will learn how to model Total Quarterback Rating using only game-level data from the 2025 NFL Regular season. To predict QBR, we will use stepwise regression and you will have the choice of learning it in Julia, R, or Python. After using stepwise, we will use quantile regression to see for which quantile of quarterbacks we can most accurately predict QBR given the best model we found with stepwise regression.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1112,7 +1117,12 @@ cookieconsent.run({
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>TODO: By the end of this tutorial, you will be able to:</p>
+<p>By the end of this tutorial, you will be able to:</p>
+<ol type="1">
+<li><p>Perform stepwise regression in Julia, R, or Python.</p></li>
+<li><p>Perform quantile regression in Julia, R, or Python.</p></li>
+<li><p>Understand how to interpret the results of stepwise and quantile regression.</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -1128,7 +1138,7 @@ cookieconsent.run({
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>TODO: This could be suitable of an out of class activity or one that spans one or more class periods.</p>
+<p>This could be suitable of an out of class activity or one that spans one or more class periods.</p>
 </div>
 </div>
 </div>
@@ -1146,7 +1156,7 @@ cookieconsent.run({
 <div class="callout-body-container callout-body">
 <p><strong>Technology Requirement:</strong></p>
 <p>This activity is designed to be completed in <code>Julia</code>, <code>R</code>, or <code>Python</code> using Google Colab, RStudio, or VS Code.</p>
-<p>No previous experience with Quantile Regression is required, but some experience with regression and familiarity with one of the programming languages is recommended.</p>
+<p>No previous experience with regression is required, but some familiarity with one of the programming languages is recommended.</p>
 </div>
 </div>
 </div>
@@ -1237,26 +1247,68 @@ cookieconsent.run({
 The data was all scraped from <a href="https://www.espn.com/nfl/">https://www.espn.com/nfl/</a> using the R package <code>nflreadr</code>. The uncleaned data included weekly Total QBR, player statistics, and game schedules for the 2025 NFL Regular season. After cleaning, the final dataset includes only quarterbacks and each row represents a game played in the regular season.
 </details>
 </section>
-<section id="quantile-regression" class="level1">
-<h1>Quantile Regression</h1>
-<p>Quantile Regression is a statistical method that estimates conditional quantiles of the response variable (qbr, in our case).</p>
+<section id="visual-studio-code-vs-code" class="level1">
+<h1>Visual Studio Code (VS Code)</h1>
 </section>
-<section id="getting-started-in-julia-r-or-python" class="level1">
-<h1>Getting Started in Julia, R, or Python</h1>
+<section id="pick-a-programming-language" class="level1">
+<h1>Pick a Programming Language</h1>
+<p>The module is available in Julia, R, or Python. You can switch between modules using the tabs below based on which programming language you would like to use for this module.</p>
+<p>Here is a little bit about each language to help you make your decision:</p>
+<div class="callout callout-style-simple callout-important no-icon callout-titled" title="WARNING">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>WARNING
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not install any of the languages yet using the links below if you do not already have them, there are downloading guides provided for each language within its respective tab further in the module.</p>
+</div>
+</div>
+<p>Learn more about R: <a href="https://www.coursera.org/articles/what-is-r-programming">here</a></p>
+<p>Learn more about Python: <a href="https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python">here</a></p>
+<p>Learn more about Julia: <a href="https://julialang.org/">here</a></p>
+<!-- OR keep consistent... (https://www.coursera.org/articles/julia-programming-language) -->
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Julia</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Python</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Julia</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Package: QuantReg.jl</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Julia code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="getting-started-in-r" class="level1">
+<h1>Getting started in R</h1>
+<p>To start programming in R, I recommend downloading RStudio. To do so, you can follow this guide here: <a href="https://rstudio-education.github.io/hopr/starting.html">Guide to Installing R and RStudio</a>.</p>
+<p>If you already have another platform downloaded that you would like to use, that will also work, but there will be some language specific to the RStudio platform within this module.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>install.packages("quantreg")</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>library(quantreg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="using-quantile-regression" class="level1">
+<h1>Using Quantile Regression</h1>
+</section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>install.packages("quantreg")</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>library(quantreg)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="getting-started-in-python" class="level1">
+<h1>Getting started in Python</h1>
+<p>To start programming in Python, I recommend downloading Visual Studio Code (VS Code). To do so, you can follow this guide here: <a href="https://code.visualstudio.com/docs/python/python-tutorial#_install-a-python-interpreter">Guide to Installing Python and VS Code</a>.</p>
+<p>If you already have another platform downloaded that you would like to use, that will also work, but there will be some language specific to the VS Code platform within this module.</p>
+<p>Package: statsmodels</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Python code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="using-quantile-regression-1" class="level1">
+<h1>Using Quantile Regression</h1>
+</section>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Package: statsmodels</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Python code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="getting-started-in-julia" class="level1">
+<h1>Getting started in Julia</h1>
+<p>To start programming in Julia, I recommend downloading Visual Studio Code (VS Code). To do so, you can follow this guide here: <a href="https://code.visualstudio.com/docs/languages/julia">Guide to Installing Julia and VS Code</a>.</p>
+<p>If you already have another platform downloaded that you would like to use, that will also work, but there will be some language specific to the VS Code platform within this module.</p>
+<p>Package: QuantReg.jl</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Julia code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="using-quantile-regression-2" class="level1">
+<h1>Using Quantile Regression</h1>
+</section>
 </div>
 </div>
 </div>
@@ -1264,6 +1316,7 @@ The data was all scraped from <a href="https://www.espn.com/nfl/">https://www.es
 <section id="references" class="level1">
 <h1>References</h1>
 <p>Ho T, Carl S (2026). nflreadr: Download ‘nflverse’ Data. R package version 1.5.0.9002, https://nflreadr.nflverse.com.</p>
+<p>Thumbnail image from <a href="https://simpsonstappedout.fandom.com/wiki/Football_Nelson" class="uri">https://simpsonstappedout.fandom.com/wiki/Football_Nelson</a></p>
 
 
 </section>
