@@ -11,7 +11,7 @@
 <meta name="dcterms.date" content="2026-04-22">
 <meta name="description" content="Guide to VS Code and R, Python, and Julia…">
 
-<title>Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python – SLU SCORE Module Preprint Repository</title>
+<title>Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in R, Python, and Julia – SLU SCORE Module Preprint Repository</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -182,7 +182,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in R, Python, and Julia</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -331,7 +331,7 @@ cookieconsent.run({
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../early_drafts/football/qbr_reverse_engineering/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</span></a>
+ <span class="menu-text">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in R, Python, and Julia</span></a>
   </div>
 </li>
       </ul>
@@ -1026,7 +1026,6 @@ cookieconsent.run({
   <li><a href="#welcome-video" id="toc-welcome-video" class="nav-link active" data-scroll-target="#welcome-video">Welcome Video</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#visual-studio-code-vs-code" id="toc-visual-studio-code-vs-code" class="nav-link" data-scroll-target="#visual-studio-code-vs-code">Visual Studio Code (VS Code)</a></li>
   <li><a href="#pick-a-programming-language" id="toc-pick-a-programming-language" class="nav-link" data-scroll-target="#pick-a-programming-language">Pick a Programming Language</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -1035,9 +1034,9 @@ cookieconsent.run({
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Football</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/football/qbr_reverse_engineering/index.html">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in R, Python, and Julia</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in Julia, R, and Python</h1>
+<h1 class="title">Modeling ESPN’s Total Quarterback Rating with Game-Level Data With Quantile and Stepwise Regression in R, Python, and Julia</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Stepwise Regression</div>
     <div class="quarto-category">Quantile Regression</div>
@@ -1246,9 +1245,7 @@ cookieconsent.run({
 </summary>
 The data was all scraped from <a href="https://www.espn.com/nfl/">https://www.espn.com/nfl/</a> using the R package <code>nflreadr</code>. The uncleaned data included weekly Total QBR, player statistics, and game schedules for the 2025 NFL Regular season. After cleaning, the final dataset includes only quarterbacks and each row represents a game played in the regular season.
 </details>
-</section>
-<section id="visual-studio-code-vs-code" class="level1">
-<h1>Visual Studio Code (VS Code)</h1>
+<!-- # Visual Studio Code (VS Code) -->
 </section>
 <section id="pick-a-programming-language" class="level1">
 <h1>Pick a Programming Language</h1>
@@ -1316,7 +1313,7 @@ The data was all scraped from <a href="https://www.espn.com/nfl/">https://www.es
 <section id="references" class="level1">
 <h1>References</h1>
 <p>Ho T, Carl S (2026). nflreadr: Download ‘nflverse’ Data. R package version 1.5.0.9002, https://nflreadr.nflverse.com.</p>
-<p>Thumbnail image from <a href="https://simpsonstappedout.fandom.com/wiki/Football_Nelson" class="uri">https://simpsonstappedout.fandom.com/wiki/Football_Nelson</a></p>
+<p>Thumbnail photo from <a href="https://simpsonstappedout.fandom.com/wiki/Football_Nelson" class="uri">https://simpsonstappedout.fandom.com/wiki/Football_Nelson</a></p>
 
 
 </section>
