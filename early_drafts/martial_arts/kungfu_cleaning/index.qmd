@@ -4,6 +4,10 @@ subtitle: "Method for scraping raw data from pdf document into usable table form
 author:
   - name: "Elena Cortina Pino"
     url: https://www.linkedin.com/in/elenacortina
+    affiliation: 
+      - id: slu
+        name: St. Lawrence University
+date: "May 4, 2026"
 description: "This module goes through the process of scraping and cleaning raw data from the International Wushu Federation Result Books from the World Kung Fu Championships available online from the 7th edition through the 10th edition."
 lightbox: true
 format: 

@@ -4,6 +4,10 @@ subtitle: "Exploratory data analysis of the age groups and Kung Fu forms"
 author:
   - name: "Elena Cortina Pino"
     url: https://www.linkedin.com/in/elenacortina
+    affiliation: 
+      - id: slu
+        name: St. Lawrence University
+date: "April 20, 2026"
 description: "This module goes through the process of creating a heat map to visualize the relationship in scoring across Kung Fu forms and age groups for competitive Kung Fu data."
 lightbox: true
 format: 

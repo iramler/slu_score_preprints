@@ -2,7 +2,7 @@
 title: "Exploring Differences in Women's World Cup Giant Slalom Run Times"
 author: 
   - name: Emilia Agostinelli
-    url: 
+    url: https://www.linkedin.com/in/emilia-agostinelli
     affiliation: 
       - id: slu
         name: St. Lawrence University
