@@ -2,6 +2,7 @@
 title: "NBA Wingspan & Performance"
 author:
   - name: Cooper Olney
+    url: www.linkedin.com/in/cooper-olney-373916310
     affiliation:
       - id: slu
         name: St. Lawrence University
