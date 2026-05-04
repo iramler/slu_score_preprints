@@ -17,6 +17,7 @@ categories:
   - Summary Statistics
   - Data Visualization
   - Outliers
+image: 07F1-miami-final-tfpl-superJumbo.webp
 ---
 
 ## Module
@@ -108,3 +109,8 @@ Download data used: [miami2023_data.csv](miami2023_data.csv)
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 In conclusion, the analysis of lap time histograms in F1 races have provided valuable insights into the variation of lap times across a single Grand Prix. One notable finding from this worksheet is the highlighting the effect of outliers (like laps with pit stops) has on the overall spread of the data. The sheet finds that by removing outliers, students are able to better see the consistency of lap times on a histogram, and predict how descriptive statistics (like mean and median), would be affected by the removal.
 :::
+
+
+## References:
+
+Thumbnail photo: Segar, Mike, _Verstappen Wins Miami in Formula 1’s Latest Red Bull Runaway_ Reuters. _The New York Times_ 7 May 2023. <https://www.nytimes.com/2023/05/07/sports/autoracing/miami-grand-prix-results.html>
