@@ -52,6 +52,8 @@ By the end of this activity, students should:
 2.  Identify potential outliers in a numerical variable using numerical methods such as the "1.5 IQR Rule".
 
 3.  Explore the effect outliers have on the data/summary statistics.
+
+4 (Optional) Be able to compare and contrast distributions to further understand histograms, outliers, and their impacts on race results.
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
