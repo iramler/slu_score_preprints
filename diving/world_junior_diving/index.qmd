@@ -2,7 +2,7 @@
 title: "Detecting Judge Bias in Competitive Diving Using Statistical Analysis"
 author: 
   - name: Emma Deering
-    url: 
+    url: https://www.linkedin.com/in/emma-deering-0a003024b/
     affiliation: 
       - id: slu
         name: St. Lawrence University

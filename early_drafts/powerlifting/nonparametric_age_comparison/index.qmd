@@ -3,6 +3,7 @@ title: "Female Powerlifting: Performing Kruskal-Wallis and Dunn's Test Analyses 
 author:
   - name: "Keelin Joyce"
     email: kjoyc22@stlawu.edu
+    url: https://www.linkedin.com/in/keelinjoyce/
     affiliation:
       - id: slu
         name: St. Lawrence University
