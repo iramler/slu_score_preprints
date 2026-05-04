@@ -2,6 +2,7 @@
 title: "Rowing: Estimating the proportion of athletes meeting their goal"
 author:
   - name: Keelin Joyce
+    url: https://www.linkedin.com/in/keelinjoyce/
     affiliation:
       - id: slu
         name: St. Lawrence University
