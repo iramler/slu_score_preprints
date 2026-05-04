@@ -2,6 +2,7 @@
 title: "Pickleball: Estimating the proportion of dependable DUPR ratings"
 author:
   - name: Faith Rhinehart
+    url: www.linkedin.com/in/faith-rhinehart-13b727346
     affiliation:
       - id: slu
         name: St. Lawrence University
