@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Elena Cortina Pino">
-<meta name="dcterms.date" content="2026-04-01">
 <meta name="description" content="This module goes through the process of scraping and cleaning raw data from the International Wushu Federation Result Books from the World Kung Fu Championships available online from the 7th edition through the 10th edition.">
 
 <title>World Kung Fu Championship - Data Scraping, Cleaning and Visualizing – SLU SCORE Module Preprint Repository</title>
@@ -25,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -109,7 +143,7 @@ cookieconsent.run({
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -974,20 +1008,23 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#result-books-download" id="toc-result-books-download" class="nav-link" data-scroll-target="#result-books-download">Result Books Download</a></li>
-  <li><a href="#cleaning-columns-in-excel-after-scraping-the-pdf-into-excel-or-csv" id="toc-cleaning-columns-in-excel-after-scraping-the-pdf-into-excel-or-csv" class="nav-link" data-scroll-target="#cleaning-columns-in-excel-after-scraping-the-pdf-into-excel-or-csv">Cleaning Columns in Excel after scraping the pdf into excel or csv</a></li>
+  <li><a href="#scraping" id="toc-scraping" class="nav-link" data-scroll-target="#scraping">Scraping</a></li>
+  <li><a href="#cleaning-data" id="toc-cleaning-data" class="nav-link" data-scroll-target="#cleaning-data">Cleaning Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../early_drafts/rowing/index.html">Early Drafts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/martial_arts/kungfu_cleaning/index.html">Martial Arts</a></li><li class="breadcrumb-item"><a href="../../../early_drafts/martial_arts/kungfu_cleaning/index.html">World Kung Fu Championship - Data Scraping, Cleaning and Visualizing</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">World Kung Fu Championship - Data Scraping, Cleaning and Visualizing</h1>
+<p class="subtitle lead">Method for scraping raw data from pdf document into usable table form csv document with Excel, R code, Regex and Notepad++</p>
   <div class="quarto-categories">
     <div class="quarto-category">Data scraping</div>
     <div class="quarto-category">Data cleaning</div>
+    <div class="quarto-category">Data imputation</div>
     <div class="quarto-category">Regex</div>
     <div class="quarto-category">dplyr</div>
     <div class="quarto-category">Notepad++</div>
@@ -1010,12 +1047,6 @@ cookieconsent.run({
           </div>
   </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -1054,16 +1085,22 @@ cookieconsent.run({
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<ol type="1">
-<li>Students will gain experience and insight into processes of scraping complex, raw sports data and cleaning it to construct a data set that is in usable form ready for data analysis and visualization.</li>
-<li>Students will learn about using regular expressions within R code</li>
-</ol>
+<ul>
+<li>Learn about the process of scraping data from a pdf file.</li>
+<li>Learn a method to parse the data into a format usable for data analysis.</li>
+<li>Learn processes for data cleaning.</li>
+<li>Learn about dealing with missing data cases through data imputation.</li>
+<li>Use web resources efficiently to clean and format data for analysis and exploration.</li>
+</ul>
 </div>
 </div>
 </div>
-<section id="data-by-years" class="level4">
-<h4 class="anchored" data-anchor-id="data-by-years">Data by years:</h4>
-<p><strong>7th</strong><br>
+<section id="data" class="level4">
+<h4 class="anchored" data-anchor-id="data">Data:</h4>
+<p>The data for this specific module come from the Result Books of the World Kung Fu Championships (WKFC) as they are readily available online on the <a href="https://www.iwuf.org/en/competition-results/index.html">International Wushu Federation’s website</a>. On this website and for this competition in particular, public users have access to the result books from the 7th edition of the championship (2017) until the most recent, 10th edition (2025) championship.<br>
+<br>
+The format of the result books is generally similar although not the same. Below we identify their distinguishing features:<br>
+<strong>7th</strong><br>
 </p>
 <p><a href="https://www.iwuf.org/wp-content/uploads/2018/12/7th-World-Kungfu-Championships-Regulations.pdf">7th World Kungfu Championships, 2017</a></p>
 <p>The 7th edition of the competition divided age categories in only 5 groups, as opposed to 6 categories like in the following years’ result books.<br>
@@ -1078,11 +1115,18 @@ cookieconsent.run({
 <a href="https://xhimg.iwuf.org/xhimg/soft/251113/2025-10th-World-Kungfu-Championships-Results-Book.pdf">10th World Kungfu Championships, 2025</a></p>
 </section>
 </section>
-<section id="result-books-download" class="level2">
-<h2 class="anchored" data-anchor-id="result-books-download">Result Books Download</h2>
-<p>We first downloaded the result books from the International Wushu Federation’s website. These documents include tables on each page which contain information on the following variables:</p>
+<section id="scraping" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="scraping">Scraping</h2>
+<p>Data scraping is the activity of taking information from a website or computer screen and putting it into an ordered document on a computer<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Cambridge Dictionary. “Data Scraping.” <span class="citation" data-cites="CambridgeWords">@CambridgeWords</span>, 12 Feb.&nbsp;2025, dictionary.cambridge.org/us/ dictionary/english/data-scraping.</p></div></div><p>The process of <em>scraping data</em> can look very different depending on the format the data is originally being sourced from, the ideal end result or format of the scraping process, and the chosen scraping method. Most understandably, it can be natural to assume that the <em>source</em> and <em>goal</em> will dictate the <em>method</em>, however this is a flexible process and preference is welcome.</p>
+<p>Since the <em>source</em> in this case is a <code>pdf</code> file, and the <em>goal</em> a <code>csv</code> file, the scraping <em>method</em> was via Adobe Acrobat Pro. This program has excellent reading functionalities that allow field detection for text export.</p>
+<p>Once the desired information fields from the tables in the result book are selected for scraping, the program iteratively goes through each page selecting the chosen fields and exporting the information into columns of a table of a <code>csv</code> spreadsheet.</p>
+<p>The same general process was repeated for each one of the four result books from 7th to 10th edition.<br>
+</p>
 <section id="variables" class="level5">
 <h5 class="anchored" data-anchor-id="variables">Variables</h5>
+<p>The following information is included in the tables of each result book and was identified as variables for each athlete in the competition.<br>
+</p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
@@ -1138,88 +1182,165 @@ cookieconsent.run({
 <br>
 </p>
 <p>Sample preview of the tables that compose the result books for each year of the competition available online and used for this module.</p>
-<pre class="{css}"><code>.scroll-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  width: 100%;
-  border: 1px solid #ccc; /* Optional: adds a border */
-}
-
-.scroll-container img {
-  display: inline-block;
-  height: 200px; /* Set height, width scales automatically */
-  margin: 2px;
-}
-</code></pre>
-<div class="scroll-container">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="&quot;images/result_table_year_7.png&quot;" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Sample Result Table (7th WKFC)"><img src="&quot;images/result_table_year_7.png&quot;" class="img-fluid figure-img" alt="Sample Result Table (7th WKFC)"></a></p>
+<p><a href="result_table_year_7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Sample Result Table (7th WKFC)"><img src="result_table_year_7.png" class="img-fluid figure-img" style="width:50.0%" alt="Sample Result Table (7th WKFC)"></a></p>
 <figcaption>Sample Result Table (7th WKFC)</figcaption>
 </figure>
 </div>
-</div>
-<div class="scroll-container">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="&quot;result_table_year_10-.png&quot;" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Sample Result Table (10th WKFC)"><img src="&quot;result_table_year_10-.png&quot;" class="img-fluid figure-img" alt="Sample Result Table (10th WKFC)"></a></p>
+<p><a href="result_table_year_10-.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Sample Result Table (10th WKFC)"><img src="result_table_year_10-.png" class="img-fluid figure-img" style="width:50.0%" alt="Sample Result Table (10th WKFC)"></a></p>
 <figcaption>Sample Result Table (10th WKFC)</figcaption>
 </figure>
 </div>
-</div>
 </section>
 </section>
-<section id="cleaning-columns-in-excel-after-scraping-the-pdf-into-excel-or-csv" class="level2">
-<h2 class="anchored" data-anchor-id="cleaning-columns-in-excel-after-scraping-the-pdf-into-excel-or-csv">Cleaning Columns in Excel after scraping the pdf into excel or csv</h2>
-<section id="excel" class="level4">
-<h4 class="anchored" data-anchor-id="excel">Excel</h4>
-</section>
+<section id="cleaning-data" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="cleaning-data">Cleaning Data</h2>
+<p>The process of cleaning data involves a fundamental understanding of the nature fo the variables and what they are meant to represent, in order to avoid overwriting or editing important information that modifies the integrity of the data.<br>
+<br>
+Afterwards, it is imperative to have a goal presentation for the data. This is a very nuanced process that changes drastically depending on the type of data, the method used to clean it and of course the goal.</p>
 <section id="notepad" class="level4">
 <h4 class="anchored" data-anchor-id="notepad">Notepad++</h4>
-<p>This app has a lot of helpful functionalities that helped us clean this data quickly without having to start another file on R or Excel and to keep the structure of the data integral.</p>
-<p>In multiple iterations of the cleanup process, and simply because this deals with so many strings I basically got inventive and resourceful so I used what I was more inclined to use and knew would solve the issue faster… Some people wouldn’t like this….</p>
-<p>We’re in Excel, then copy the entire column ,paste it into Notepad++, clean up what needs to be cleaned up quickly, and move the column back to the excel exactly where it was without loosing observations or messing with the order.</p>
-<p>Some of the Notepad++ functionalities that came in extra helpful (more than they would have been in Excel) are: 1. Line operations 2. Blank operations 3. Find and replace all occurrences of a string or characters.</p>
-<p>We recognize that these are all possible from within R or Excel…. But because these are strings, it makes sense to be tactful and resourceful in the tools we use to work on cleaning the (broader) string.</p>
-<p>For example: in Notepad++ we can Ctrl + Alt and select down the same line of text down to the last line and simultaneously edit from that position of the line in all lines at the same time. That can’t be done in Excel.</p>
-<p>Using find and replace in Excel is troublesome for a few reasons, the main one being that it’s not always quite accurate. From the Excel toolkit , we used the filtering and the sorting to be able to identify <code>NA</code> observations in Missing scores, to filter forms into alphabetical order to identify duplicate forms that were registered in the result book with different ways to say the same thing.. and to clear some columns while we were at it, such as the bib number, the group events and the Rank.</p>
+<p>Notepad++ was used as a supplementary tool for intermediate text preprocessing, particularly in stages where bulk string manipulation was more efficiently handled outside of R or Excel. The goal was not to replace these environments, but to streamline operations that are cumbersome when working within cell-based or syntax-constrained systems.</p>
+<p>The workflow involved temporarily exporting individual columns from Excel into Notepad++, performing targeted text transformations, and reinserting the cleaned output back into Excel while preserving the original row order. This approach ensured that no observations were lost or misaligned during the process.</p>
+<p>Notepad++ proved especially useful for operations that require direct manipulation of raw text, including:</p>
+<ul>
+<li>Line operations (e.g., removing or duplicating specific rows)</li>
+<li>Blank/whitespace management (e.g., deleting empty lines or trimming irregular spacing)</li>
+<li>Global find-and-replace with extended search modes (including regex support)</li>
+</ul>
+<p>A key advantage of Notepad++ is its support for column-mode (multi-cursor) editing, which allows simultaneous modification across multiple lines at the same character position. This functionality enables efficient correction of systematic formatting issues that would be difficult to address in Excel, where edits are typically confined to individual cells.</p>
+<p>It is important to note that many of these transformations are technically achievable in R or Excel. However, Excel lacks native support for regular expressions and multi-line text editing, and while R provides powerful string-processing capabilities, it may be less efficient for rapid, exploratory cleanup of visibly inconsistent text. In this context, Notepad++ serves as a practical intermediary for quick, low-overhead preprocessing.</p>
+<p>Within Excel, its strengths were leveraged for complementary tasks such as filtering, sorting, and basic data validation. For instance, filtering was used to identify missing values (NAs), while sorting facilitated the detection of duplicate or inconsistently labeled entries.</p>
+<p>The work on Notepad++ was then completed using RStudio.</p>
 </section>
 <section id="rstudio" class="level4">
 <h4 class="anchored" data-anchor-id="rstudio">RStudio</h4>
-<p>Within the RStudio portion of the process we utilize a significant amount of reg-ex knowledge. There is a vast selection of good AI-backed regex libraries online that provide what we would describe as “english to regex” translations.</p>
-<p>We can say it in a few different ways, also navigating the limitations R has to interpret <code>\s</code> and <code>\S</code>.</p>
-<p><strong>Example</strong></p>
-<p><strong><em>“International Women’s Group C Traditional Chen Style Taijiquan”</em></strong></p>
-<p>We need to separate this information, which currently appears all together as a single string in a cell after the data was scraped, into 3 different columns:<br>
-1. The sex of the athlete<br>
-2. The Age group they compete in<br>
-3. The Kung Fu form they compete in<br>
-</p>
-<p>There are many good approaches to go about successfully and efficiently completing this task. We can list a few: (evaluating all possible approaches before start redacting up code is a good habit to get into. Think of this process as an algorithm. There can be many algorithms that are equally useful in a situation, though one of them might be discerningly more efficient…)</p>
+<p>The data cleaning process in RStudio relied primarily on structured string parsing using regular expressions (regex). Given that the raw data consisted of concatenated textual fields, a pattern-based extraction approach was more appropriate than positional or delimiter-based splitting. Regex enables the identification and extraction of semantically meaningful components within strings, making it particularly well-suited for this task.</p>
+<p>A key principle guiding this process was to avoid reliance on character position or incidental formatting (e.g., capitalization or spacing), and instead leverage consistent structural markers embedded in the data.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Example">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Consider the string:</p>
+<p>“International Women’s Group C Traditional Chen Style Taijiquan”</p>
+<p>This information appears as a single string following data scraping and must be separated into three variables:</p>
+<ul>
+<li>The sex of the athlete</li>
+<li>The age group of the athlete</li>
+<li>The Kung Fu form</li>
+</ul>
+<p>There are multiple valid approaches to this problem. Evaluating alternative strategies before implementation is a useful practice, as different methods may vary in efficiency.</p>
+</div>
+</div>
+</div>
+<p>Rather than extracting these components iteratively or positionally, we exploit the inherent structure of the string. Specifically:</p>
 <ol type="1">
-<li><p>We can first select the <code>W</code> in <code>Women's</code> to fetch the sex of the player. Consider the nature of the data as it changes across rows. That<code>W</code> can also be an <code>M</code>. That <code>W</code>/<code>M</code> is sufficient information to check that box. That step leaves us with <code>W</code> or <code>M</code> in a column and everything else in another column (starting after the <code>W</code> we just took away). Let’s name the sex column <code>Sex</code> and the resting can have any name… Let’s choose <code>Working</code> since we have some more splitting to do.<br>
-<br>
-Then, we can get the age group (which goes from <code>A-F</code>) by selecting the first capital letter after the second space. That leaves us with another new column. Lets name it <code>Group</code> the rest can be <code>Form</code>.<br>
-<br>
-These iterations leave us with a few spaces to delete here and there. The approach we’ve takes is to be very clear about the information we keep and decide to remove, so it might seem longer than one might originally conceive the task to be…<br>
-<br>
-<br>
-</p></li>
-<li><p>Using the <code>separate</code> function from the <code>tidyr</code> package, our strategy changes. Here we can use the structure of the string as an advantage to separate it into three columns:</p></li>
-<li><p>1 Use the middle element of the string as the separating element that the function <code>separate</code> requires. In this case, we can use the <code>Group</code> as the separator between our information of the <code>sex</code> and the <code>form</code>. This then becomes an easier cleanup once we have all three parts on their own columns.<br>
-2.2 Once separated, we still have to cleanup the inevitable spaces, extra words and, if present, punctuation.<br>
-</p></li>
-<li><p>? Come up with another inventive way to separate the string as an exercise…</p></li>
+<li>The sex is encoded as either “Women’s” or “Men’s”</li>
+<li>The age group is explicitly labeled as “Group X”, where X ∈ {A, B, C, D, E, F}</li>
+<li>The form corresponds to all text following the group label</li>
 </ol>
+<p>This structure allows us to define a single regex pattern with capture groups that extract all variables simultaneously.</p>
+<p>A suitable pattern is:</p>
+<ol type="i">
+<li>(Women’s|Men’s) → captures the sex</li>
+<li>Group ([A-F]) → captures the group letter</li>
+<li>Group [A-F] (.*) → captures the remaining text as the form</li>
+</ol>
+<p>Using functions such as <code>extract()</code> from the <code>tidyr</code> package or <code>separate_wider_regex()</code>, we can implement this in a single step, ensuring both efficiency and reproducibility.</p>
+<p>This approach has several advantages:</p>
+<ul>
+<li>Robustness: It relies on semantic labels rather than positional assumptions</li>
+<li>Scalability: It generalizes well to larger datasets with consistent structure</li>
+<li>Clarity: The extraction logic is transparent and directly interpretable</li>
+</ul>
+<p>Following extraction, minor post-processing steps (e.g., trimming whitespace or standardizing labels) can be applied to finalize the dataset.</p>
+<div class="callout--note" data-collapse="true" title="Methodological note" data-appearance="minimal">
+<p>While alternative approaches such as iterative substring removal or delimiter-based splitting may yield correct results in specific cases, they are generally less robust and harder to justify in a formal data processing pipeline.</p>
+<p>Regex-based extraction provides a more principled and reproducible solution, particularly when working with semi-structured textual data.</p>
+</div>
 </section>
-<section id="regular-expressions" class="level4">
+<section id="regular-expressions" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="regular-expressions">Regular expressions</h4>
-<p>this link</p>
-<p>https://www.subiregex.com</p>
+<p>A regular expression (<em>regex</em> for short) is a special text string for describing a search pattern.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> These expressions are very useful to identify a specific pattern in text. An example of regular expression used to clean up some of the strings in the WKFC data is:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Regular-Expressions.info - Regex Tutorial, Examples and Reference - Regexp Patterns. Www.regular-Expressions.info, www.regular-expressions.info.</p></div></div><div class="fullwidth">
+<p>^.*(?=.$)</p>
+</div>
+<p>This expression reads as <strong>“everything from the start of the string up to (but not including) the final character”</strong>, and it appears in the following code to remove all the information before the group-identifying letter A through D (exclusive to the 7th championship).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: Annotations</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>sevenyear <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"7kf.csv"</span>) <span class="co"># reading the scraped data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>sevenyearworking <span class="ot">&lt;-</span> sevenyear <span class="sc">|&gt;</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_regex</span>(Form, <span class="fu">c</span>(<span class="at">Delete =</span> <span class="st">"^[^MW]*"</span>, <span class="at">Form =</span> <span class="st">".*"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Everything up to but not including the first "M" or "W" in the string</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># gets grouped for deletion in a "Delete" column.</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># The rest of the string gets sent to column "Form" for more edits.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span> (<span class="sc">-</span>Delete) <span class="sc">|&gt;</span> <span class="co"># Eliminating "Delete" column</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_regex</span>(Form, <span class="fu">c</span>(<span class="at">Sex =</span> <span class="st">"^[^G]*"</span>, <span class="at">Form =</span> <span class="st">".*"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Everything up to but not including the first "G" (Men or Women),</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># gets placed in column "Sex"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Everything else in the string stays in column "Form" for more edits.</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_regex</span>(Form, <span class="fu">c</span>(<span class="at">Group =</span> <span class="st">"^[^A-Z]*[A-Z][^A-Z]*[A-Z]"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                               <span class="at">Form =</span> <span class="st">".*"</span>), <span class="at">too_few =</span> <span class="st">"align_start"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Everything up to but not including the second uppercase letter </span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># (including any characters before, between, and around them) </span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># goes to column "Group". This column includes more information to be erased.</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># The remainder of the string goes to column "Form" for more editing.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>(Form) <span class="sc">|&gt;</span> <span class="co"># Remove missing cases in the "Form" column.</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_regex</span>(Sex, <span class="fu">c</span>(<span class="at">Sex =</span> <span class="st">"^."</span>, <span class="at">Delete =</span> <span class="st">".*"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># From the "Sex" column made before,"we keep only the first character.</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Everything else in the "Sex" column goes to "Delete" for elimination.</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span> (<span class="sc">-</span>Delete) <span class="sc">|&gt;</span> <span class="co"># Removing "-ens" and "omen's" from the "Sex" column.</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate_wider_regex</span>(Group, <span class="fu">c</span>(<span class="at">Delete =</span> <span class="st">"^.*(?=.$)"</span>, <span class="at">Group =</span> <span class="st">".$"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Everything except the last character gets sent to "Delete" for elimination.</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Column "Group" will include only the last character of the string.</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span> (<span class="sc">-</span>Delete)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The argument <code>too_few = "align_start"</code> ensures that if a string doesn’t match enough parts to fill both outputs, the available text is aligned from the beginning rather than causing an error.</p>
+</div><div class="">
+<p>The regular expression in the code to produce this module was generated using the online tool <a href="https://www.subiregex.com">SubiRegex</a>, an free English to Regex converter created by <a href="https://github.com/legendkong">Jonathan Kong Boon Lieng</a> in 2023.</p>
+</div></div>
+</section>
+</section>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
+<p>This module does not include specific materials of handouts to support the content. The result books are available for reference in the <a href="#data">Data section</a>. The usable <code>csv</code> files from each data-cleaning process are listed below in chronological order:</p>
+<ul>
+<li><p><strong>7th</strong>: <a href="kungfu_7.csv">7th World Kungfu Championships, 2017 Clean Data set</a></p></li>
+<li><p><strong>8th</strong>: <a href="kungfu_8.csv">8th World Kungfu Championships, 2019 Clean Data set</a></p></li>
+<li><p><strong>9th</strong>: <a href="kungfu_9.csv">9th World Kungfu Championships, 2023 Clean Data set</a></p></li>
+<li><p><strong>10th</strong>: <a href="kungfu_10.csv">10th World Kungfu Championships, 2025 Clean Data set</a></p></li>
+</ul>
 
 
 </section>
-</section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
