@@ -474,62 +474,67 @@
     ]
   },
   {
-    "objectID": "early_drafts/rowing/index.html",
-    "href": "early_drafts/rowing/index.html",
+    "objectID": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html",
+    "href": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html",
     "title": "Rowing: Estimating the proportion of athletes meeting their goal",
     "section": "",
     "text": "If you are unfamiliar with the sport of rowing, and specifically erging, please watch this video from the University of Virginia’s winter training season:",
     "crumbs": [
       "Home",
       "Early Drafts",
+      "Rowing",
       "Rowing: Estimating the proportion of athletes meeting their goal"
     ]
   },
   {
-    "objectID": "early_drafts/rowing/index.html#introduction-to-erging",
-    "href": "early_drafts/rowing/index.html#introduction-to-erging",
+    "objectID": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#introduction-to-erging",
+    "href": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#introduction-to-erging",
     "title": "Rowing: Estimating the proportion of athletes meeting their goal",
     "section": "",
     "text": "If you are unfamiliar with the sport of rowing, and specifically erging, please watch this video from the University of Virginia’s winter training season:",
     "crumbs": [
       "Home",
       "Early Drafts",
+      "Rowing",
       "Rowing: Estimating the proportion of athletes meeting their goal"
     ]
   },
   {
-    "objectID": "early_drafts/rowing/index.html#introduction",
-    "href": "early_drafts/rowing/index.html#introduction",
+    "objectID": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#introduction",
+    "href": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#introduction",
     "title": "Rowing: Estimating the proportion of athletes meeting their goal",
     "section": "Introduction",
     "text": "Introduction\nWhile collegiate rowing is a two season sport having both a fall (August-November) and spring (March-May) season, practicing during the winter is proven to be difficult as most climates force rowers indoors for the season. The most common practice during the winter training period in rowing is the ergometer, commonly called an erg. The erg mimics the stroke that rowers take in the boat and instantly displays performance metrics to the rower. These metrics can be assessed to show a rower where their fitness is at during a time where they cannot practice on the water. Ergs are used for both fitness training and assessment purposes.\nDuring the period of winter training, athletes focus on strength training, building speed, and improving their stroke before they can get back on the water in early spring. The main measure of their progress is shown in their performance during test pieces\nThere are 111 observations of completed pieces. We will focus on the Goal and Split variables to assess the proportion of athletes that are surpassing their goal. There are other variables in this dataset that are not necessary for this module. Erg data was collected from a Div-III collegiate rowing team and their test piece results were compiled into a dataset. These data were approved by the Institutional Research Board from the author’s institution to be publicly released.\n\n\n\n\n\n\nNoteActivity Length\n\n\n\n\n\nThis could serve as an in class activity and should take roughly an hour to complete.\n\n\n\n\n\n\n\n\n\nNoteLearning Objectives\n\n\n\n\n\nStudents will gain experience performing single proportion confidence intervals.\n\n\n\n\n\n\n\n\n\nNoteMethods\n\n\n\n\n\nStudents are expected to have been exposed to the concept confidence intervals for a single proportion, although this is intended to be used as an earlier example for the topic.",
     "crumbs": [
       "Home",
       "Early Drafts",
+      "Rowing",
       "Rowing: Estimating the proportion of athletes meeting their goal"
     ]
   },
   {
-    "objectID": "early_drafts/rowing/index.html#data",
-    "href": "early_drafts/rowing/index.html#data",
+    "objectID": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#data",
+    "href": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#data",
     "title": "Rowing: Estimating the proportion of athletes meeting their goal",
     "section": "Data",
     "text": "Data\nThis module used the rowing data from the SCORE Data Repository\nHowever, the data is summarized in the provided worksheet and students do not need direct access to the data.",
     "crumbs": [
       "Home",
       "Early Drafts",
+      "Rowing",
       "Rowing: Estimating the proportion of athletes meeting their goal"
     ]
   },
   {
-    "objectID": "early_drafts/rowing/index.html#materials",
-    "href": "early_drafts/rowing/index.html#materials",
+    "objectID": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#materials",
+    "href": "early_drafts/rowing/div3_rowing_goals_single_prop/index.html#materials",
     "title": "Rowing: Estimating the proportion of athletes meeting their goal",
     "section": "Materials",
     "text": "Materials\n\nThere are no technology requirements for this module\nClass handout\nClass handout - with solutions\n\n\n\n\n\n\n\nNoteConclusion\n\n\n\n\n\nStudents should gain an increased understanding of constructing and interpreting single-proportion confidence intervals.",
     "crumbs": [
       "Home",
       "Early Drafts",
+      "Rowing",
       "Rowing: Estimating the proportion of athletes meeting their goal"
     ]
   },
@@ -889,7 +894,7 @@
     "href": "early_drafts/esports/clashroyale_networks/index.html#try-it-yourself",
     "title": "Clash Royale Card Synergy: A Network Analysis Tutorial",
     "section": "2.6 Try it yourself",
-    "text": "2.6 Try it yourself\nEither choose 16 cards yourself or choose to use the randomizer code\n\n\nCode\nall_cards &lt;- unique(cr_season3_5000decks$card)\n\nrandom_16 &lt;- sample(all_cards, 16)\n\nrandom_16\n\n\n [1] \"Bomber\"           \"Rocket\"           \"Ice Spirit\"       \"Barbarians\"      \n [5] \"Guards\"           \"Mirror\"           \"Three Musketeers\" \"Goblin Hut\"      \n [9] \"Night Witch\"      \"P.E.K.K.A\"        \"Princess\"         \"Fisherman\"       \n[13] \"Royal Giant\"      \"Hog Rider\"        \"Bandit\"           \"Earthquake\"      \n\n\nThis bit of code allows for a random sample of any 16 cards within the dataset\n\n\nCode\npair_data_random &lt;- pair_data |&gt;\n  filter(card1 %in% random_16, card2 %in% random_16)\n  \nnetwork_random &lt;- graph_from_data_frame(pair_data_random, directed = FALSE)\n  \nplot(network_random,\n       layout = layout_with_fr(network_random),\n       vertex.size = 8,\n       vertex.label.cex = 0.8,\n       edge.width = E(network_random)$winrate * 8)",
+    "text": "2.6 Try it yourself\nEither choose 16 cards yourself or choose to use the randomizer code\n\n\nCode\nall_cards &lt;- unique(cr_season3_5000decks$card)\n\nrandom_16 &lt;- sample(all_cards, 16)\n\nrandom_16\n\n\n [1] \"Tombstone\"        \"Barbarian Barrel\" \"Goblin Giant\"     \"Goblin Barrel\"   \n [5] \"Freeze\"           \"Elite Barbarians\" \"Tesla\"            \"Poison\"          \n [9] \"Baby Dragon\"      \"Lightning\"        \"Three Musketeers\" \"Electro Dragon\"  \n[13] \"Graveyard\"        \"Mortar\"           \"Furnace\"          \"Fireball\"        \n\n\nThis bit of code allows for a random sample of any 16 cards within the dataset\n\n\nCode\npair_data_random &lt;- pair_data |&gt;\n  filter(card1 %in% random_16, card2 %in% random_16)\n  \nnetwork_random &lt;- graph_from_data_frame(pair_data_random, directed = FALSE)\n  \nplot(network_random,\n       layout = layout_with_fr(network_random),\n       vertex.size = 8,\n       vertex.label.cex = 0.8,\n       edge.width = E(network_random)$winrate * 8)",
     "crumbs": [
       "Home",
       "Early Drafts",
