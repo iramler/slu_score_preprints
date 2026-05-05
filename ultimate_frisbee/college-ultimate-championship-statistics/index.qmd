@@ -2,6 +2,7 @@
 title: "2024 College Ultimate Championship Statistics"
 author:
   - name: Gavin Cassidy
+    url: https://gacass48.github.io/
     affiliation:
       - id: slu
         name: St. Lawrence University

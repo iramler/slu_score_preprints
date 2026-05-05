@@ -2,7 +2,7 @@
 title: "Sampling Distributions: Shai Gilgeous-Alexander 2024-25 Points"
 author:
   - name: Cooper Olney
-    url: www.linkedin.com/in/cooper-olney-373916310
+    url: https://www.linkedin.com/in/cooper-olney-373916310
     affiliation:
       - id: slu
         name: St. Lawrence University

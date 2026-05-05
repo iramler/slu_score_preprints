@@ -2,7 +2,7 @@
 title: "Investigating The Difference in Olympic Figure Skating Scores Throughout the Years"
 author:
   - name: Faith Rhinehart
-    url: www.linkedin.com/in/faith-rhinehart-13b727346
+    url: https://www.linkedin.com/in/faith-rhinehart-13b727346
     affiliation:
       - id: slu
         name: St. Lawrence University

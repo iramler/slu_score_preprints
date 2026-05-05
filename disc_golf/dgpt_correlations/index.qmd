@@ -3,6 +3,7 @@ title: "Disc Golf Pro Tour - Driving or Putting?"
 description: What is more correlated with success on the Disc Golf Pro Tour, Driving or Putting?
 author:
   - name: Gavin Cassidy
+    url: https://gacass48.github.io/
     affiliation:
       - id: slu
         name: St. Lawrence University

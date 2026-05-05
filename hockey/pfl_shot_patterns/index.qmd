@@ -2,6 +2,7 @@
 title: "PHF Hockey Analytics: Shot Patterns and Goaltending Performance"
 author:
   - name: Lala Sefale
+    url: https://www.linkedin.com/in/matlala-lala-sefale-91435035a/
     affiliation:
       - id: slu
         name: St. Lawrence University
