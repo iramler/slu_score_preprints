@@ -1,0 +1,10 @@
+{
+  "listing": "/basketball/index.html",
+  "items": [
+    "/basketball/nba_wingspans_and_performance/index.html",
+    "/basketball/nba_sga_sampling_distributions/index.html",
+    "/basketball/nba_draft_anova_intermediate/index.html",
+    "/basketball/nba_draft_anova_intro/index.html",
+    "/basketball/wnba_data_quality/index.html"
+  ]
+}
