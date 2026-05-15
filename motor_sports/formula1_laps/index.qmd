@@ -25,16 +25,14 @@ image: 07F1-miami-final-tfpl-superJumbo.webp
 Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
 ::: {.callout-note collapse="true" title="New to F1 Racing? Check out this video" appearance="minimal"}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Q-jjZMMxbZs?si=h2TwCz-DTvr64HNC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SSdsncLXLYs?si=ajv4Ire3M9mlmbtN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
 
 ### Introduction
 
 Formula 1 (F1) racing is the highest class of single-seater auto racing sanctioned by the Fédération Internationale de l'Automobile (FIA). Each season features a series of races, known as Grand Prix, which are held in a variety of countries and on different types of circuits. Each circuit has its own characteristics that make the race unique, including the overall track layout, location, corners, weather conditions, and opportunities for overtaking. Each season, teams and drivers compete for the World Constructors' Championship and the World Drivers' Championship, respectively. For more information about the sport, visit F1's Wikipedia page [here](https://en.wikipedia.org/wiki/Formula_One){target="_blank"} or the official Formula 1 website [here](https://www.formula1.com/){target="_blank"}.
 
-In this activity, students analyze lap-time data for Max Verstappen in the 2023 Miami Grand Prix. Verstappen started the race in ninth position but won after moving through the field. The race was unusually clean: all 20 cars that started were classified as finishers, and there were no major interruptions such as safety cars or red flags. This makes the race useful for studying lap times because one common source of unusually slow laps — crashes or race stoppages — did not occur.
+In this activity, students analyze lap-time data for Max Verstappen in the [2023 Miami Grand Prix](https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix){target="\"_blank"} Verstappen started the race in ninth position but won after moving through the field. The race was unusually clean: all 20 cars that started the race finished it, and there were no major interruptions such as safety cars or red flags. (At the time of the race, it was only the 11th time in F1's history where all cars that started the race crossed the finish line.) This makes the race useful for studying lap times because one common source of unusually slow laps - crashes or race stoppages - did not occur.
 
 Although a driver's lap times are usually similar from lap to lap, they are not identical. Lap times can be affected by fuel load, tire wear, traffic, overtaking, pit stops, and changes in race conditions. One important feature of Verstappen's race strategy was his pit stop. Most drivers in this race made only one pit stop, and Verstappen's stop occurred late in the race to change tires. A pit stop can create an unusually slow lap because the driver must slow down to enter pit lane, follow the pit-lane speed limit, stop for the tire change, and then accelerate back onto the track. Depending on where the pit lane crosses the start/finish line, this time loss may appear on the lap when the driver enters pit lane, the following lap, or both. Other unusual laps may occur near the beginning of the race, when cars are closer together and drivers are fighting for position.
 
@@ -65,13 +63,13 @@ This activity is a reinforcement module that assumes students have already been 
 
 2. Describing distributions using shape, center, spread, and unusual observations.
 
-3. Numerical summaries, including the mean, median, quartiles, interquartile range, standard deviation, minimum, and maximum.
+3. Numerical summaries, such as the mean, median, quartiles, interquartile range, standard deviation, minimum, and maximum.
 
 4. Outliers and the 1.5 × IQR rule for identifying potential outliers. (Note that the activity can be modified to use z-scores for outlier detection.)
 
 5. Scatterplots or time-order plots for displaying the relationship between two quantitative variables.
 
-Technology requirement: The activity handout provides the histogram, summary statistics, lap-time plot, and race-track map, so no statistical software is required. However, the activity could be easily modified to ask students to produce some or all of these displays from the raw dataset.
+**Technology requirement:** The activity handout provides the histogram, summary statistics, lap-time plot, and race-track map, so no statistical software is required. However, the activity could be easily modified to ask students to produce some or all of these displays from the raw dataset.
 :::
 
 ### Data
