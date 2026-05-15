@@ -69,7 +69,11 @@ This activity is a reinforcement module that assumes students have already been 
 
 5. Scatterplots or time-order plots for displaying the relationship between two quantitative variables.
 
-**Technology requirement:** The activity handout provides the histogram, summary statistics, lap-time plot, and race-track map, so no statistical software is required. However, the activity could be easily modified to ask students to produce some or all of these displays from the raw dataset.
+**Technology requirement:** 
+
+- One version of the activity handout provides the histogram, summary statistics, lap-time plot, and race-track map, so no statistical software is required. 
+
+- A second set of handouts is also made available where students need to produce the plots and summary statistics from the raw dataset.
 :::
 
 ### Data
@@ -100,9 +104,19 @@ Download data used: [verstappen_2023_miami.csv](verstappen_2023_miami.csv)
 
 ### Materials
 
+**No Tech Required Version**
+
 [Class handout](Miami2023Worksheet.docx)
 
 [Class handout with sample solutions](Miami2023WorksheetKey.docx)
+
+**Statistical Software Required Version**
+
+[Class handout - Tech Required](Miami2023Worksheet-Tech_Needed.docx)
+
+[Class handout with sample solutions - Tech Required](Miami2023WorksheetKey-Tech_Needed.docx)
+
+
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 This activity illustrates how different statistical displays can answer different questions about the same variable. The histogram helps students describe the overall distribution of Verstappen's lap times and identify unusually slow laps. However, the histogram does not show when those laps occurred. By adding lap number, students can connect the unusual lap times to meaningful moments in the race, such as the first lap and Verstappen's pit stop. This reinforces the idea that identifying outliers is only the first step; interpreting them often requires additional variables and subject-matter context.
