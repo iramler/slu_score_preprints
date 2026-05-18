@@ -14,7 +14,7 @@ author:
     affiliation:
       - ref: slu
   
-date: April 21, 2026
+date: May 18, 2026
 description: "Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships."
 editor: 
   canonical: true
@@ -38,34 +38,49 @@ If you are unfamiliar with diving, please watch this video:
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
+
 ### Introduction
 
-The FINA Junior World Diving Championships is a elite dive meet where top divers around the world under the age of 18 compete. Each diver completed 9 dives, all of which contributed to their overall score. Each dive is scored by 7 judges. Each judge gives a score individually on a scale of 1-10 at half-point increments based on execution of the dive. 10 represents perfect execution, while 0 represents failed execution. The two lowest and the two highest scores of the judges are voided, and the other three are added together. The sum of the three judges is then multiplied by the difficulty of the attempted dive. The product represent the points earned for that dive. The overall score is calculated by adding together the points earned on each dives.
+The [World Aquatics (FINA) Junior World Diving Championships](https://en.wikipedia.org/wiki/World_Aquatics_Junior_Diving_Championships){target="_blank"}  is an elite diving meet where top divers from around the world, ages 16 to 18, compete. Each diver completes 9 dives, all of which contribute to their overall score. Each judge gives a score individually on a scale of 1-10 at half-point increments based on execution of the dive. 10 represents perfect execution, while 0 represents failed execution. To reduce the influence of unusually high or unusually low scores, the two lowest and two highest judges' scores are discarded. The remaining scores are averaged and then multiplied by the degree of difficulty to determine the diver's score for that dive.
 
-In this worksheet, we will determine if one judge is biased compared to the others by determining if one judge's score was voided more often than others. Students will do this using the Chi-square test for Independence. Through this activity students will be able to criticially analyze the real-world implications of statistical decisions and understand how Type I and Type II errors can occur in hypothesis testing.
+
+In this activity, students analyze results from the preliminary round of the women's 16-18 1m springboard event at the 2022 FINA World Junior Championships. Each judge's score is classified into one of three categories: `Okay`, `Too Low`, or `Too High`. A score is classified as `Okay` if it was kept, `Too Low` if it was one of the discarded low scores, and `Too High` if it was one of the discarded high scores.
+
+
+We are interested in determining if there is evidence of an association between judge and score result. More specifically, the larger question is whether any judge appears to score differently from the others in a way that could suggest possible judging bias. Statistically, we begin by asking whether there is an association between judge and score result. If judge and score result are associated, we can then examine which judge or judges contributed most to that association and discuss what that pattern might imply.
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This could serve as an in class activity and should take roughly a half an hour to complete. Questions can also be pulled from this activity to serve as shorter examples.
+This could serve as an in class activity and should take roughly 30-45 minutes to complete. Questions can also be pulled from this activity to serve as shorter examples.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
-By the end of this activity, you will be able to:
+By the end of this activity, students should be able to:
 
-1.  Conduct a Chi-squared Test of Independence. 
+1. Identify the variables in a two-way table and describe the categories of a categorical response variable.
 
-2.  Define and describe type I and type II error in context. 
+2. Conduct and interpret a chi-square test for association between two categorical variables.
 
-3.  Understand type I and type II error real-world implications.
+3. Interpret a p-value and statistical decision in the context of possible judging bias.
+
+4. Define Type I and Type II errors in context.
+
+5. Discuss the real-world implications of Type I and Type II errors.
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+This activity is designed as a reinforcement module. Students are expected to have been introduced to:
 
-Students are expected to have:
+1. Two-way tables for summarizing the relationship between two categorical variables.
 
-1.  Familiarity with basic statistical analysis techniques, such as the basics of a hypothesis test, including p-values, test statistics, and hypotheses. 
+2. The basic structure of a hypothesis test, including null and alternative hypotheses, test statistics, p-values, and statistical conclusions.
 
-2.  Understanding of the types of error. 
+3. Chi-square tests for association or independence.
+
+4. Type I and Type II errors in hypothesis testing.
+
+**Technology Requirement:** The handout assumes that students will have access to statistical software capable of recreating a two-way table and obtaining chi-square test output from the raw data.
 :::
+
 
 ### Data
 
@@ -89,6 +104,8 @@ The data sets can be accessed here:
 
 [FemaleFINADivingChampionships.csv](FemaleFINADivingChampionships.csv)
 
+_Note that the activity only uses two of the available variables: Judge and Judge_Result. The addtional variables are provided for extensions and modifications._
+
 ### Data Source
 
 World Aquatics. (2022). FINA World Junior Diving Championships 2022. https://www.worldaquatics.com/competitions/2951/fina-world-junior-diving-championships-2022/results?event=6d65f6db-1e71-4bca-b1c3-7facf12f500f&unit=preliminary
@@ -97,8 +114,8 @@ World Aquatics. (2022). FINA World Junior Diving Championships 2022. https://www
 
 [Class Worksheet](DivingWorksheet.docx)
 
-[Class Worksheet Key](DivingWorksheetKey.docx)
+[Class Worksheet Key](DivingWorksheet-Key.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-In this module, you have learned how to conduct a chi-square test for independence. You have learned how statistical decisions can relate to type I and type II errors. These errors can have real-world implications that are important to consider when working with statistics. 
+In this module, you practiced conducting a chi-square test for association. You have learned how statistical decisions can relate to type I and type II errors. These errors can have real-world implications that are important to consider when working with statistics. 
 :::
