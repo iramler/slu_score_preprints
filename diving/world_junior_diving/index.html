@@ -9,7 +9,7 @@
 <meta name="author" content="Emma Deering">
 <meta name="author" content="Ivan Ramler">
 <meta name="author" content="Robin Lock">
-<meta name="dcterms.date" content="2026-04-21">
+<meta name="dcterms.date" content="2026-05-18">
 <meta name="description" content="Preliminary diving results of womens 16-18 1m springboard from the 2022 FINA World Junior Championships.">
 
 <title>Detecting Judge Bias in Competitive Diving Using Statistical Analysis – SLU SCORE Module Preprint Repository</title>
@@ -1049,7 +1049,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 21, 2026</p>
+      <p class="date">May 18, 2026</p>
     </div>
   </div>
   
@@ -1072,8 +1072,9 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The FINA Junior World Diving Championships is a elite dive meet where top divers around the world under the age of 18 compete. Each diver completed 9 dives, all of which contributed to their overall score. Each dive is scored by 7 judges. Each judge gives a score individually on a scale of 1-10 at half-point increments based on execution of the dive. 10 represents perfect execution, while 0 represents failed execution. The two lowest and the two highest scores of the judges are voided, and the other three are added together. The sum of the three judges is then multiplied by the difficulty of the attempted dive. The product represent the points earned for that dive. The overall score is calculated by adding together the points earned on each dives.</p>
-<p>In this worksheet, we will determine if one judge is biased compared to the others by determining if one judge’s score was voided more often than others. Students will do this using the Chi-square test for Independence. Through this activity students will be able to criticially analyze the real-world implications of statistical decisions and understand how Type I and Type II errors can occur in hypothesis testing.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/World_Aquatics_Junior_Diving_Championships" target="_blank">World Aquatics (FINA) Junior World Diving Championships</a> is an elite diving meet where top divers from around the world, ages 16 to 18, compete. Each diver completes 9 dives, all of which contribute to their overall score. Each judge gives a score individually on a scale of 1-10 at half-point increments based on execution of the dive. 10 represents perfect execution, while 0 represents failed execution. To reduce the influence of unusually high or unusually low scores, the two lowest and two highest judges’ scores are discarded. The remaining scores are averaged and then multiplied by the degree of difficulty to determine the diver’s score for that dive.</p>
+<p>In this activity, students analyze results from the preliminary round of the women’s 16-18 1m springboard event at the 2022 FINA World Junior Championships. Each judge’s score is classified into one of three categories: <code>Okay</code>, <code>Too Low</code>, or <code>Too High</code>. A score is classified as <code>Okay</code> if it was kept, <code>Too Low</code> if it was one of the discarded low scores, and <code>Too High</code> if it was one of the discarded high scores.</p>
+<p>We are interested in determining if there is evidence of an association between judge and score result. More specifically, the larger question is whether any judge appears to score differently from the others in a way that could suggest possible judging bias. Statistically, we begin by asking whether there is an association between judge and score result. If judge and score result are associated, we can then examine which judge or judges contributed most to that association and discuss what that pattern might imply.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1086,7 +1087,7 @@ cookieconsent.run({
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This could serve as an in class activity and should take roughly a half an hour to complete. Questions can also be pulled from this activity to serve as shorter examples.</p>
+<p>This could serve as an in class activity and should take roughly 30-45 minutes to complete. Questions can also be pulled from this activity to serve as shorter examples.</p>
 </div>
 </div>
 </div>
@@ -1102,11 +1103,13 @@ cookieconsent.run({
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
+<p>By the end of this activity, students should be able to:</p>
 <ol type="1">
-<li><p>Conduct a Chi-squared Test of Independence.</p></li>
-<li><p>Define and describe type I and type II error in context.</p></li>
-<li><p>Understand type I and type II error real-world implications.</p></li>
+<li><p>Identify the variables in a two-way table and describe the categories of a categorical response variable.</p></li>
+<li><p>Conduct and interpret a chi-square test for association between two categorical variables.</p></li>
+<li><p>Interpret a p-value and statistical decision in the context of possible judging bias.</p></li>
+<li><p>Define Type I and Type II errors in context.</p></li>
+<li><p>Discuss the real-world implications of Type I and Type II errors.</p></li>
 </ol>
 </div>
 </div>
@@ -1123,11 +1126,14 @@ cookieconsent.run({
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Students are expected to have:</p>
+<p>This activity is designed as a reinforcement module. Students are expected to have been introduced to:</p>
 <ol type="1">
-<li><p>Familiarity with basic statistical analysis techniques, such as the basics of a hypothesis test, including p-values, test statistics, and hypotheses.</p></li>
-<li><p>Understanding of the types of error.</p></li>
+<li><p>Two-way tables for summarizing the relationship between two categorical variables.</p></li>
+<li><p>The basic structure of a hypothesis test, including null and alternative hypotheses, test statistics, p-values, and statistical conclusions.</p></li>
+<li><p>Chi-square tests for association or independence.</p></li>
+<li><p>Type I and Type II errors in hypothesis testing.</p></li>
 </ol>
+<p><strong>Technology Requirement:</strong> The handout assumes that students will have access to statistical software capable of recreating a two-way table and obtaining chi-square test output from the raw data.</p>
 </div>
 </div>
 </div>
@@ -1191,6 +1197,7 @@ cookieconsent.run({
 </table>
 <p>The data sets can be accessed here:</p>
 <p><a href="FemaleFINADivingChampionships.csv">FemaleFINADivingChampionships.csv</a></p>
+<p><em>Note that the activity only uses two of the available variables: Judge and Judge_Result. The addtional variables are provided for extensions and modifications.</em></p>
 </section>
 <section id="data-source" class="level3">
 <h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
@@ -1199,7 +1206,7 @@ cookieconsent.run({
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
 <p><a href="DivingWorksheet.docx">Class Worksheet</a></p>
-<p><a href="DivingWorksheetKey.docx">Class Worksheet Key</a></p>
+<p><a href="DivingWorksheet-Key.docx">Class Worksheet Key</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1212,7 +1219,7 @@ cookieconsent.run({
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In this module, you have learned how to conduct a chi-square test for independence. You have learned how statistical decisions can relate to type I and type II errors. These errors can have real-world implications that are important to consider when working with statistics.</p>
+<p>In this module, you practiced conducting a chi-square test for association. You have learned how statistical decisions can relate to type I and type II errors. These errors can have real-world implications that are important to consider when working with statistics.</p>
 </div>
 </div>
 </div>
