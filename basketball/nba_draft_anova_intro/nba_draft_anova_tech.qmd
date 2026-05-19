@@ -1,0 +1,101 @@
+---
+title: "Analysis of Variance Using the NBA Draft"
+format:
+  html:
+    embed-resources: true
+    toc: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Introduction
+
+Each year, the National Basketball Association (NBA) holds a draft, where prospective basketball players are able to be chosen to join one of the 30 professional teams across the United States and Canada.
+
+In order to be eligible for the draft, a player must be at least 19 years old and out of high school for at least one year. Prior to 2006, this rule was not in effect, and players could be drafted during or right out of high school.
+
+The draft is comprised of 60 players and takes place over two rounds of 30 selections. Teams pick players in an order based on performance from the previous season, with teams that performed poorly getting earlier picks in order to create a seemingly more level playing field. It is important to note that there were not always 30 players selected in each round; the number made its way up to 30 as more teams were added into the NBA.
+
+The data you will be using comes from the dataset `nba_draft.csv` and focuses on players who were selected in the first round of the NBA Draft between 1990 and 2021. For each player, the dataset includes a range of career statistics from their time in the NBA. Some players' careers are still ongoing, but in this activity we will focus on the average number of minutes they have played per game.
+
+Analyzing minutes per game is useful because it measures how much playing time a player earned during their NBA career, which is one indicator of a player's role and value to a team. However, minutes per game is not a perfect measure of player quality because playing time can also be influenced by team expectations, injuries, roster needs, coaching decisions, and the opportunity given to high draft picks.
+
+In this activity, we will investigate whether NBA players selected earlier in the first round tend to have different average career minutes per game than players selected later in the first round. To do this, we will compare three groups of first-round picks: picks 1--10, picks 11--20, and picks 21--30.
+
+## Setup
+
+The code below loads the packages used in this activity and reads in the data.
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+nba_draft <- read_csv("nba_draft.csv")
+
+```
+
+## Visualizing the Distributions
+
+- Create overlaying density plots that show the distribution of minutes per game for each group. Add dashed vertical lines representing the group means. 
+
+```{r}
+
+```
+
+
+- Now create side-by-side boxplots that show the distribution of minutes per game for each group.
+
+```{r}
+
+```
+
+
+
+## Questions
+
+### 1. Visual comparison
+
+Based on the density plot and side-by-side boxplots, what do you notice about the distributions of minutes per game for the three draft-pick groups? What conclusions can you draw from a first glance at the two data visualizations? Are there any concerns?
+
+
+### 2. Conditions for one-way ANOVA
+
+Suppose someone suggests using a one-way ANOVA to compare average minutes per game across the three draft-pick groups. Do the conditions for one-way ANOVA appear reasonable for these data? Explain your answer by discussing both the data source and the graphical displays.
+
+
+### 3. Hypotheses
+
+Regardless of your answer to the previous question, write the null and alternative hypotheses for testing whether average career minutes per game differs among the three draft-pick groups. Use standard notation and also interpret each hypothesis in context.
+
+### 4. ANOVA output
+
+Use R to conduct the one-way ANOVA for comparing mean career minutes per game across the three draft-pick groups.
+
+```{r}
+
+```
+
+
+### 5. ANOVA conclusion
+
+Based on the ANOVA table, is there statistically significant evidence that mean career minutes per game differs among the three draft-pick groups? Explain your conclusion in context.
+
+
+### 6. Comparing the group means
+
+Between which groups would we be most likely to see a statistically significant difference? Between which groups would we be least likely to see a statistically significant difference in minutes played? Provide evidence.
+
+
+
+### 7. Interpreting minutes per game
+
+Minutes per game is useful, but it is not a perfect measure of player quality. Explain one reason why players selected earlier in the draft might have higher career minutes per game even if draft position does not perfectly measure player ability.
+
+
+### 8. Improving the analysis
+
+The draft-pick groups used in this activity, picks 1--10, 11--20, and 21--30, were chosen by the analyst. While this may be one reasonable way to divide the first round, it is not the only option. Propose one different way to group the players or one different variable to analyze if you wanted to better understand the relationship between draft position and NBA career success. Explain why your choice might change or improve the analysis.
+

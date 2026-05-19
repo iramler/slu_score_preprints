@@ -8,7 +8,8 @@
 
 <meta name="author" content="Vivian Johnson">
 <meta name="author" content="Robin Lock">
-<meta name="dcterms.date" content="2024-07-01">
+<meta name="author" content="Ivan Ramler">
+<meta name="dcterms.date" content="2026-05-19">
 <meta name="description" content="This module uses NBA draft data to test for differences in average minutes played across early, mid, and late first-round picks using ANOVA and visualizations.">
 
 <title>Do NBA Draft Picks Matter? Exploring Player Minutes with ANOVA – SLU SCORE Module Preprint Repository</title>
@@ -1000,9 +1001,6 @@ cookieconsent.run({
   <div class="quarto-categories">
     <div class="quarto-category">ANOVA</div>
     <div class="quarto-category">Hypothesis Testing</div>
-    <div class="quarto-category">Confidence Intervals</div>
-    <div class="quarto-category">Summary Statistics</div>
-    <div class="quarto-category">Data Visualization</div>
   </div>
   </div>
 
@@ -1032,6 +1030,14 @@ cookieconsent.run({
             St.&nbsp;Lawrence University
           </p>
       </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ivan Ramler <a href="mailto:iramler@stlawu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            St.&nbsp;Lawrence University
+          </p>
+      </div>
   </div>
 
 <div class="quarto-title-meta">
@@ -1040,7 +1046,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 1, 2024</p>
+      <p class="date">May 19, 2026</p>
     </div>
   </div>
   
@@ -1057,26 +1063,101 @@ cookieconsent.run({
 <p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<section id="the-nba-draft" class="level4">
-<h4 class="anchored" data-anchor-id="the-nba-draft">The NBA Draft</h4>
-<p>Each year, the National Basketball Association (NBA) holds a <a href="https://www.bbc.co.uk/newsround/65997816" target="_blank">draft</a>, where prospective basketball players are able to be chosen to join one of the 30 professional teams across the United States and Canada.</p>
-<p>In order to be eligible for the draft, a player must be at least 19 years old and out of high school for at least one year. Prior to 2006, this rule was not in effect, and players could be drafted during/right out of high school.</p>
-<p>The draft is comprised of 60 players and takes place over two rounds of 30 selections. Teams pick players in an order based on performance from the previous season, with teams that performed poorly getting earlier picks in order to create a seemingly more level playing field. It’s important to note that there weren’t always 30 players selected in each round, the number made its way up to 30 as more teams were added into the NBA.</p>
-</section>
-<section id="playing-basketball" class="level4">
-<h4 class="anchored" data-anchor-id="playing-basketball">Playing Basketball</h4>
-<p>The goal in basketball is to score as many points as possible by throwing the ball through the other team’s hoop.</p>
-<p>In the middle of <a href="https://en.wikipedia.org/wiki/Basketball_court" target="_blank">the court</a> there is a half-court line that divides the two sides. On both sides, surrounding the hoops, there is an arch called the three-point line. Within the three-point line stands the free-throw line, where a player would shoot from should there be a foul called.</p>
-<p><strong>Scoring</strong></p>
-<p>Players can shoot towards the hoop from any point on the court. A different number of points is awarded based on where the player is standing when they release the ball. The three shots are explained below.</p>
-<ul>
-<li>Field Goal: Worth 2 points, scored by shooting within the three point line</li>
-<li>Three Pointer: Worth 3 points, scored by shooting outside the three point line.</li>
-<li>Free Throw: Worth one point, taken from the free throw line after a foul.</li>
-</ul>
-<p>A rebound is when a player from the team that is on defense obtains the ball after the other team takes a shot attempt at the hoop. At the end of the game, which is played in four twelve-minute quarters, the team with the most points wins.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<p>Each year, the National Basketball Association (NBA) holds a draft, where prospective basketball players are able to be chosen to join one of the 30 professional teams across the United States and Canada.</p>
+<p>The draft is comprised of 60 players and takes place over two rounds of 30 selections. Teams pick players in an order based on performance from the previous season, with teams that performed poorly getting earlier picks in order to create a seemingly more level playing field. It is important to note that there were not always 30 players selected in each round; the number made its way up to 30 as more teams were added into the NBA.</p>
+<p>This activity focuses on players selected in the first round of the NBA Draft between 1990 and 2021. Students compare three groups of first-round picks: picks 1–10, picks 11–20, and picks 21–30. The response variable is average career minutes played per game.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Optional: Additional NBA Draft Background">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Optional: Additional NBA Draft Background
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="4 Minute Videofrom 2018 explaining the draft">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>4 Minute Videofrom 2018 explaining the draft
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dWMedbrGDYU?si=oPlUYpwebx5tiIBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+</div>
+</div>
+<p>The NBA Draft is designed to help distribute new talent across the league. Teams that miss the playoffs or finish with weaker records generally have access to earlier picks, although the first several picks are determined through the NBA Draft Lottery. Teams can also trade draft picks, so the team making a selection may not be the team that originally earned that pick.</p>
+<p>Draft position matters because earlier picks are often viewed as higher-value prospects. Teams invest substantial resources in scouting, selecting, signing, and developing these players. As a result, high draft picks may receive more opportunities to play, especially early in their careers.</p>
+<p>In order to be eligible for the draft, a player must be at least 19 years old and out of high school for at least one year. Prior to 2006, this rule was not in effect, and players could be drafted during or right out of high school.</p>
+</div>
+</div>
+</div>
+<p>The main research question is:</p>
+<blockquote class="blockquote">
+<p>Is there evidence that average career minutes per game differs among NBA players selected with picks 1–10, picks 11–20, and picks 21–30 in the first round of the draft?</p>
+</blockquote>
+<p>Students use graphical summaries and one-way ANOVA to compare average career minutes per game across the three draft-pick groups. They also consider whether the ANOVA conditions are reasonable and how choices such as the response variable and draft-pick grouping affect the conclusions that can be drawn.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Optional: Why focus on first-round picks?">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Optional: Why focus on first-round picks?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This activity focuses on first-round picks because they are more directly comparable than all drafted players. First-round picks are typically expected to have a stronger chance of making an NBA roster and receiving playing time. Later picks, especially second-round picks, may have less guaranteed opportunity and more varied career paths.</p>
+<p>Even within the first round, however, draft position can matter. A player selected near the top of the first round is often treated very differently from a player selected near the end of the first round.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning no-icon callout-titled" title="Optional: Minutes per game is not the same as player quality">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Optional: Minutes per game is not the same as player quality
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Minutes per game is useful because it measures how much playing time a player earned during their NBA career. Players who receive more minutes are generally players coaches trust to contribute.</p>
+<p>However, minutes per game is not a perfect measure of player quality. Playing time can also be influenced by injuries, roster depth, team strategy, coaching decisions, and team expectations. High draft picks may receive more opportunities because teams invested more in them or want to give them time to develop.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Activity Length
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This could serve as an in class activity and should take roughly 15-30 minutes to complete (depending on the use of software).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1085,19 +1166,19 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>By the end of this activity, you will:</p>
+<p>By the end of this activity, students should be able to:</p>
 <ol type="1">
-<li><p>Further understand the different components of a one-way ANOVA test and how to solve for them.</p></li>
-<li><p>Be able to explain the significance of the F-statistic and the implications it has on the result of the ANOVA test</p></li>
-<li><p>Become proficient in ability to interpret the results of an ANOVA test in context and apply it to real world examples.</p></li>
+<li><p>Use graphical summaries to compare the distribution of a quantitative variable across multiple groups.</p></li>
+<li><p>Assess whether the conditions for a one-way ANOVA are reasonable in context.</p></li>
+<li><p>Conduct and interpret ANOVA results in context while recognizing the limitations of the response variable and grouping choices.</p></li>
 </ol>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1106,14 +1187,14 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Students should have prior knowledge of conducting one-way analysis of variance tests and the implications. Students should be able to explain the different components of an ANOVA table as well as familiarity with the formulas necessary to complete the table.</p>
+<p>As a reinforcement module, students should have prior knowledge of conducting one-way analysis of variance tests and the implications. Students should be able to explain the different components of an ANOVA table as well as familiarity with the formulas necessary to complete the table or with using software to obtain the needed output.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Technology Requirements">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1122,17 +1203,20 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>No explicit technology is necessary, although a calculator is recommended.</p>
+<p>There are two version of the handout:</p>
+<ul>
+<li><p>In one version, no explicit technology is necessary other than a calculator.</p></li>
+<li><p>The other is based on using R, but can be modified to use any statistical software capable of running one-way ANOVA.</p></li>
+</ul>
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The <code>nba_draft</code> data set includes data from players that were selected in the NBA drafts between the years 1990-2021. Each row represents a different player and statistics from their respective careers in the NBA, some of which are still ongoing.</p>
+<p>The <code>nba_draft</code> data set includes players selected in the NBA Draft between 1990 and 2021. Each row represents one drafted player and includes information about the player’s draft position, team, and NBA career statistics. Some players’ careers were still ongoing when the data were collected.</p>
 <details>
 <summary>
 <b>Variable Descriptions</b>
@@ -1151,55 +1235,55 @@ cookieconsent.run({
 <tbody>
 <tr class="odd">
 <td>draft_pick</td>
-<td>The pick number a player was selected in the NBA draft</td>
+<td>Overall pick number at which the player was selected in the NBA Draft</td>
 </tr>
 <tr class="even">
 <td>team</td>
-<td>The NBA team that drafted the player</td>
+<td>NBA team that drafted the player</td>
 </tr>
 <tr class="odd">
 <td>player_name</td>
-<td>The name of the player selected</td>
+<td>Name of the player selected</td>
 </tr>
 <tr class="even">
 <td>college</td>
-<td>The college the player attended (NA for those drafted out of high school, G-League team for international prospects)</td>
+<td>College the player attended; may be <code>NA</code> for players drafted from high school, international leagues, or other paths</td>
 </tr>
 <tr class="odd">
 <td>years_played</td>
-<td>Number of years spent in the NBA</td>
+<td>Number of years the player spent in the NBA</td>
 </tr>
 <tr class="even">
 <td>games_played</td>
-<td>Games played in the NBA</td>
+<td>Number of games the player played in the NBA</td>
 </tr>
 <tr class="odd">
 <td>total_mins_played</td>
-<td>Total minutes played in the NBA</td>
+<td>Total minutes the player played in the NBA</td>
 </tr>
 <tr class="even">
 <td>total_pts</td>
-<td>Total points scored in the NBA</td>
+<td>Total points the player scored in the NBA</td>
 </tr>
 <tr class="odd">
 <td>total_rebounds</td>
-<td>Total rebounds grabbed in the NBA</td>
+<td>Total rebounds the player recorded in the NBA</td>
 </tr>
 <tr class="even">
 <td>total_assists</td>
-<td>Total assists recorded in the NBA</td>
+<td>Total assists the player recorded in the NBA</td>
 </tr>
 <tr class="odd">
 <td>fg_percent</td>
-<td>The percent of field goal shots made by the player in the NBA</td>
+<td>Field goal percentage during the player’s NBA career</td>
 </tr>
 <tr class="even">
 <td>three_pt_percent</td>
-<td>The percent of three-point shots made by the player in the NBA</td>
+<td>Three-point field goal percentage during the player’s NBA career</td>
 </tr>
 <tr class="odd">
 <td>ft_percent</td>
-<td>The percent of free throws made by the player in the NBA</td>
+<td>Free throw percentage during the player’s NBA career</td>
 </tr>
 <tr class="even">
 <td>draft_year</td>
@@ -1207,27 +1291,31 @@ cookieconsent.run({
 </tr>
 <tr class="odd">
 <td>mins_per_game</td>
-<td>Average number of minutes played per game for career in the NBA</td>
+<td>Average number of minutes played per game during the player’s NBA career</td>
 </tr>
 <tr class="even">
 <td>pts_per_game</td>
-<td>Average number of points scored per game for career in the NBA</td>
+<td>Average number of points scored per game during the player’s NBA career</td>
 </tr>
 <tr class="odd">
 <td>rebounds_per_game</td>
-<td>Average number of rebounds per game for career in the NBA</td>
+<td>Average number of rebounds per game during the player’s NBA career</td>
 </tr>
 <tr class="even">
 <td>assists_per_game</td>
-<td>Average number of assists per game for career in the NBA</td>
+<td>Average number of assists per game during the player’s NBA career</td>
 </tr>
 <tr class="odd">
 <td>round_picked</td>
-<td>Indicates the round the player was selected (either round 1 or round 2)</td>
+<td>Round in which the player was selected; this module focuses on first-round picks</td>
 </tr>
 <tr class="even">
 <td>pick_in_round</td>
-<td>Indicates the order in which players were selected in that round</td>
+<td>Pick number within the round in which the player was selected</td>
+</tr>
+<tr class="odd">
+<td>draft_pick_group</td>
+<td>First-round draft-pick group used in this activity: picks 1–10, picks 11–20, or picks 21–30</td>
 </tr>
 </tbody>
 </table>
@@ -1235,15 +1323,26 @@ cookieconsent.run({
 <p>Download <a href="nba_draft.csv" target="_blank">nba_draft.csv</a></p>
 <section id="data-source" class="level4">
 <h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p>This data is sourced from <a href="https://www.kaggle.com/datasets/benwieland/nba-draft-data" target="_blank">Kaggle</a>, and contains statistics from players selected in the NBA draft, as well as further on in their careers.</p>
+<p>The data are sourced from <a href="https://www.kaggle.com/datasets/benwieland/nba-draft-data" target="_blank">Kaggle</a> and include draft information and NBA career statistics for drafted players.</p>
 </section>
 </section>
 <section id="materials" class="level3">
 <h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><a href="nba_draft_worksheet_word.docx">Class handout</a></p>
-<p><a href="nba_draft_worksheet_word_SOLUTIONS.docx">Class handout - with solutions</a></p>
+<section id="by-hand-worksheet" class="level4">
+<h4 class="anchored" data-anchor-id="by-hand-worksheet">“By-hand” worksheet</h4>
+<ul>
+<li><a href="nba_draft_worksheet_word.docx">Class handout</a></li>
+<li><a href="nba_draft_worksheet_word_SOLUTIONS.docx">Class handout with solutions</a></li>
+</ul>
+</section>
+<section id="rquarto-worksheet" class="level4">
+<h4 class="anchored" data-anchor-id="rquarto-worksheet">R/Quarto worksheet</h4>
+<ul>
+<li><a href="nba_draft_anova_tech.qmd">R/Quarto handout</a></li>
+<li><a href="nba_draft_anova_tech_SOLUTIONS.html">HTML rendered R/Quarto handout with expandable solutions</a></li>
+</ul>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1252,14 +1351,15 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Upon conclusion of this module, students will discover that there does seem to be a significant difference between the average number of minutes played based on which group a player was selected in the NBA draft. This learning module offers a valuable opportunity to explore each component of a one-way ANOVA test and how they affect the overall result.</p>
+<p>Upon conclusion of this module, students will discover that there is strong evidence of a difference in average minutes per game based on which group a player was selected in the first round of the NBA draft. This learning module offers a valuable opportunity to explore the components of a one-way ANOVA test and interpret the results in context. Students will also consider why minutes per game is a useful but imperfect measure of player success, and choices, such as grouping picks into 1–10, 11–20, and 21–30, can affect the interpretation of the analysis.</p>
 </div>
 </div>
 </div>
 
 
+</section>
 </section>
 </section>
 

@@ -2,6 +2,7 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
+      "/basketball/nba_draft_anova_intro/index.html",
       "/diving/world_junior_diving/index.html",
       "/motor_sports/formula1_laps/index.html",
       "/early_drafts/martial_arts/kungfu_cleaning/index.html",
@@ -37,7 +38,6 @@
       "/gymnastics/NCAA-womens-gymnastics-bootstrap/index.html",
       "/volleyball/volleyball_timeouts_single_prop/index.html",
       "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
       "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
       "/disc_golf/dgpt_correlations/index.html",
@@ -122,6 +122,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/basketball/nba_draft_anova_intro/index.html",
       "/diving/world_junior_diving/index.html",
       "/motor_sports/formula1_laps/index.html",
       "/early_drafts/martial_arts/kungfu_cleaning/index.html",
@@ -157,7 +158,6 @@
       "/gymnastics/NCAA-womens-gymnastics-bootstrap/index.html",
       "/volleyball/volleyball_timeouts_single_prop/index.html",
       "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
       "/ultimate_frisbee/college-ultimate-championship-statistics/index.html",
       "/racquet_sports/atp_win_percentages_format_and_surface/index.html",
       "/disc_golf/dgpt_correlations/index.html",
@@ -189,10 +189,10 @@
   {
     "listing": "/basketball/index.html",
     "items": [
+      "/basketball/nba_draft_anova_intro/index.html",
       "/basketball/nba_wingspans_and_performance/index.html",
       "/basketball/nba_sga_sampling_distributions/index.html",
       "/basketball/nba_draft_anova_intermediate/index.html",
-      "/basketball/nba_draft_anova_intro/index.html",
       "/basketball/wnba_data_quality/index.html"
     ]
   },
