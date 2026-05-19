@@ -39,6 +39,8 @@ sidebar:
         href: rowing/index.html
       - text: "Running"
         href: running/index.html
+      - text: "Site Libs"
+        href: site_libs/index.html
       - text: "Skating"
         href: skating/index.html
       - text: "Skiing"
