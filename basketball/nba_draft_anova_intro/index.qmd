@@ -22,7 +22,7 @@ editor:
 categories:
   - ANOVA
   - Hypothesis Testing
-image: nba_top_pick.jpg
+image: nba_top_picks.jpg
 ---
 
 ## Module
