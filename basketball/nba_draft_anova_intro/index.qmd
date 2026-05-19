@@ -22,6 +22,7 @@ editor:
 categories:
   - ANOVA
   - Hypothesis Testing
+image: nba_top_pick.jpg
 ---
 
 ## Module
@@ -158,3 +159,9 @@ The data are sourced from [Kaggle](https://www.kaggle.com/datasets/benwieland/nb
 Upon conclusion of this module, students will discover that there is strong evidence of a difference in average minutes per game based on which group a player was selected in the first round of the NBA draft. This learning module offers a valuable opportunity to explore the components of a one-way ANOVA test and interpret the results in context. Students will also consider why minutes per game is a useful but imperfect measure of player success, and choices, such as grouping picks into 1--10, 11--20, and 21--30, can affect the interpretation of the analysis.
 :::
 
+
+### Acknowledgements
+
+Thumbnail Image credits:
+
+- Bitar, E. (2022, May 19). *The last 40 No. 1 overall picks in the NBA Draft: LeBron James, Shaquille O’Neal and Tim Duncan represent this list*. Fadeaway World. <https://fadeawayworld.net/the-last-40-no-1-overall-picks-in-the-nba-draft-lebron-james-shaquille-oneal-and-tim-duncan-represent-this-list>
