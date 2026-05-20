@@ -77,7 +77,7 @@ However, minutes per game is not a perfect measure of player quality. Playing ti
 :::
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This could serve as an in class activity and should take roughly 15-30 minutes to complete (depending on the use of software).
+This could serve as an in class activity and should take roughly 30-45 minutes to complete (depending on the use of software).
 :::
 
 
