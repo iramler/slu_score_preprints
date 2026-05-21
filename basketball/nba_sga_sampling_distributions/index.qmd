@@ -26,7 +26,8 @@ categories:
   - Sampling Distributions
   - Simulation
   - Central Limit Theorem
-
+software:
+  - Statkey
 ---
 <!--
 ![Source: https://www.bbc.com/sport/basketball/articles/c62n3gj5kpvo](sga_mvp_finals.jpg.webp)
