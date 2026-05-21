@@ -20,6 +20,8 @@ categories:
   - Data Visualization
   - Data Wrangling
   - Joining / Merging
+software:
+  - R
 ---
 
 ## Module

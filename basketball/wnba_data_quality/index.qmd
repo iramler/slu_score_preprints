@@ -18,6 +18,8 @@ categories:
   - Data Wrangling
   - Missing Data
   - Frequency Tables
+software:
+  - R
 ---
 
 ## Module

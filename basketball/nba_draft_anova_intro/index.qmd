@@ -22,6 +22,8 @@ editor:
 categories:
   - ANOVA
   - Hypothesis Testing
+  - Python
+
 image: nba_top_picks.jpg
 ---
 
@@ -75,7 +77,7 @@ However, minutes per game is not a perfect measure of player quality. Playing ti
 :::
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This could serve as an in class activity and should take roughly 15-30 minutes to complete (depending on the use of software).
+This could serve as an in class activity and should take roughly 30-45 minutes to complete (depending on the use of software).
 :::
 
 
@@ -95,11 +97,12 @@ As a reinforcement module, students should have prior knowledge of conducting on
 :::
 
 ::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
-There are two version of the handout:
+There are three version of the handout:
 
 - In one version, no explicit technology is necessary other than a calculator.
 
-- The other is based on using R, but can be modified to use any statistical software capable of running one-way ANOVA.
+- Other two use R and Python respecitively to visualize the data and produce the ANOVA output.
+
 :::
 
 ### Data
@@ -152,8 +155,13 @@ The data are sourced from [Kaggle](https://www.kaggle.com/datasets/benwieland/nb
 
 #### R/Quarto worksheet
 
-- [R/Quarto handout](nba_draft_anova_tech.qmd)
-- [HTML rendered R/Quarto handout with expandable solutions](nba_draft_anova_tech_SOLUTIONS.html)
+- [R/Quarto handout](nba_draft_anova_tech_R.qmd)
+- [HTML rendered R/Quarto handout with expandable solutions](nba_draft_anova_tech_SOLUTIONS_R.html)
+
+#### Python notebook worksheet
+
+- [Python notebook handout](nba_draft_anova_tech_python.ipynb)
+- [Python notebook - solutions](nba_draft_anova_tech_SOLUTIONS_python.ipynb)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Upon conclusion of this module, students will discover that there is strong evidence of a difference in average minutes per game based on which group a player was selected in the first round of the NBA draft. This learning module offers a valuable opportunity to explore the components of a one-way ANOVA test and interpret the results in context. Students will also consider why minutes per game is a useful but imperfect measure of player success, and choices, such as grouping picks into 1--10, 11--20, and 21--30, can affect the interpretation of the analysis.
