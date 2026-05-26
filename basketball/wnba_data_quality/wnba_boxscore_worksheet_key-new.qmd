@@ -3,9 +3,9 @@ title: "WNBA Team Data Worksheet"
 format: html
 ---
 
-All data came from the `Weehoop` package which can be viewed at <https://CRAN.R-project.org/package=wehoop>. 
+All data came from the `Wehoop` package which can be viewed at <https://CRAN.R-project.org/package=wehoop>. 
 
-# Exercises
+
 
 The `wnba_data` data set consists of these 9 variables: game_id, season, season_type, game_date, team_id, team_display_name, team_winner, opponent_team_id, team_home_away.
 
@@ -13,13 +13,16 @@ Eight teams make the playoffs each year in the WNBA. Our goal is to create a two
 
 That is, we want to fill in this table:
 
-#### Mid-season Top 8
+# Mid-season Top 8 Table
 
 |                 | TRUE | FALSE |
 |-----------------|------|-------|
 | Made Playoffs   |      |       |
 | Missed Playoffs |      |       |
 
+where the columns represent that a team was in the top 8 (in terms of win percentage) on July 15 of each year and the rows represent that the team made the WNBA playoffs.
+
+# Investigating Data Quality
 
 1.	Load in the `wnba_data` data set.  
 
@@ -32,10 +35,11 @@ wnba_data <- read_csv("wnba_data.csv")
 2.	What do you notice about the team IDs in this data set? Do they all belong to a valid team or are some not needed? (Hint: Might need to use the `distinct()` function). 
 
 ```{r}
-wnba_data %>% 
-  select(team_id, team_display_name) %>% 
-  distinct() %>% 
-  arrange(team_id)
+wnba_data |> 
+  select(team_id, team_display_name) |>
+  distinct() |>
+  arrange(team_id) |>
+  View()
 ```
 
 _The IDs above 20 are not necessary because they don't represent teams playing in the regular season._
@@ -43,24 +47,25 @@ _The IDs above 20 are not necessary because they don't represent teams playing i
 3.	Filter out the IDs we won’t be using. 
 
 ```{r}
-wnba <- wnba_data %>% filter(team_id <= 20)
+wnba <- wnba_data |> filter(team_id <= 20)
 ```
 
 4.	Now, let's make sure each team ID is associated with the correct team name. Use a `select()` statement with both 	`team_id` and `team_name` and then use the `distinct()` function. Which team IDs are repeated? What might this mean?
 
 ```{r}
-wnba %>%
-  select(team_id, team_display_name) %>% 
-  distinct() %>% 
-  arrange(team_id)
+wnba |>
+  select(team_id, team_display_name) |>
+  distinct() |> 
+  arrange(team_id) |>
+  View()
 ```
 
-_This means that the three names with ID 3 and the three names with ID 17 are the same teams who switched their name between seasons._
+_This means that the three names with ID 3 and the three names with ID 17 are the same teams who switched their name or location between seasons._
 
 5.	For the IDs you found, rename the teams so that the same IDs all have the most recent team name. You can create a new variable called `team_name`. 
 
 ```{r}
-wnba <- wnba %>% 
+wnba <- wnba |>
   mutate(team_name = 
            case_when(
              team_id == 3 ~ 'Dallas Wings',
@@ -73,16 +78,17 @@ wnba <- wnba %>%
 6.	Now that our team names are correct, we can look at games played. Create a new data set called `reg_season` that only has data for regular season games (season_type == 2) and one called `playoffs` that only has data for playoff games (season_type == 3). 
 
 ```{r}
-reg_season <- wnba %>% filter(season_type == 2)
-playoffs <- wnba %>% filter(season_type == 3)
+reg_season <- wnba |> filter(season_type == 2)
+playoffs <- wnba |> filter(season_type == 3)
 ```
 
 7.	To calculate win percentage at the mid-way point, we need to know how many games are played in a season. Use the `tally()` function to count the number of games played by each team within each season. What do you notice? 
 
 ```{r}
-reg_season %>% 
-  group_by(season, team_id) %>% 
-  tally()
+reg_season |>
+  group_by(season, team_id) |>
+  tally() |>
+  View()
 ```
 
 _The number of games played is inconsistent._
@@ -91,49 +97,123 @@ _The number of games played is inconsistent._
 
 _Not every team has the same number of games recorded for each season._
 
-9.	Let’s look into the 2008 season. There are 4 teams that played 33 games instead of 34. Find out who these teams are and Google their season statistics. Did they actually only play 33 games? Why is this a problem? 
+9.	Let's look into the 2008 season. There are 4 teams that played 33 games instead of 34. Find out who these teams are and Google their season statistics. Did they actually only play 33 games? Why is this a problem? 
 
 ```{r}
-reg_season %>% 
-  filter(season == 2008) %>% 
-  group_by(team_id) %>% 
+reg_season |>
+  filter(season == 2008) |>
+  group_by(team_id) |>
   tally()
 ```
 
 _No. They all played 34 games. This is a problem because our analysis will not be accurate if there is missing data. _
 
-10.	The data was scraped from the ESPN website. Go to <https://www.espn.com/wnba/team/schedule/_/name/atl/season/2008> and click on the first two scores recorded in the 'RESULT' Section. What is different about the pages these links take you to? How might this be causing the problem? 
+10.	The data collected via the `Wehoop` package was scraped from the ESPN website. Go to <https://www.espn.com/wnba/team/schedule/_/name/atl/season/2008> (the Atlanta Dream 2008 schedule) and click on the first two scores recorded in the 'RESULT' Section. What is different about the pages these links take you to? How might this be causing the problem? 
 
 _The second game of the season played on 05/23 does not have any team box score data, unlike the other games. This, along with other missing game data, likely caused issues when scraping the data from the webpage. _
 
 11.	What are some ways we could solve this problem if we still wanted to create the table originally indicated? Choose a way and make a table with your new data. 
 
+
+
 _This code just provides some starting points for answering this open-ended question. Instructors are welcome to use the code chunks to help guide students through the process, or leave it as a challenge for students._
 
+_For example, we could look up the games and fill in the missing data by adding rows to the dataset or we could remove the seasons with missing data from the data set._
 
--   We could look up the games and fill in the missing data by adding rows to the dataset.
--   We could remove the seasons with missing data from the data set.
+
+# Subsetting Seasons
+
+Regardless of your choice in the previous question, suppose we decide to remove the seasons with missing data from our analysis.
+
+12. Discuss the potential pros and cons of doing this.
+
+_Answers will vary._
+
+_Example Pros: Is a fairly simple method to apply. If there aren't too many seasons with missing data, then it likely won't impact the analysis much._
+
+_Example Cons: Since this information is available online, we could take the time to find it. e.g., basketball-reference.com could be used as an alternative site._
+
+The first step for this is to identify which seasons are inconsistent with the number of games played between all teams. To do so,
+
+13. Use the `group_by()` and other functions to create a data frame (or tibble) that counts the number of games played by each team in each season.
 
 ```{r}
-# Need to check which seasons are inconsistent with the number of games played between all teams
-tallied <- reg_season %>% 
-  group_by(season, team_id) %>% 
+tallied <- reg_season |>
+  group_by(season, team_id) |>
   tally()
+```
 
-tallied %>% group_by(n) 
+14. Next, we want to keep the seasons where all teams play the same number of games. We'll counting the number of distinct values in the number of games played at teams within each season. To do so, explore how the `n_distinct()` function could be used to extract this information.
 
-# Helpful way to view results by season
+```{r}
+tallied |>
+  group_by(season) |>
+  summarise(n_uniq = n_distinct(n))
+```
+
+Here is another helpful way to view results by season.
+```{r}
 table(tallied$n, tallied$season)
 ```
 
+
+15. If done correctly, you should have noticed that the seasons with exactly 1 distinct value for the number of games played are those that we should keep. Create a new dataframe (tibble) that stores these seasons. (Note in the next step we will use the seasons we identify here to subset our larger dataset.)
+
 ```{r}
-# filter out seasons where number of games played is not consistent between all teams
-# keep seasons 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020
-filtered <- reg_season %>% 
-  filter(
-    season %in% c(2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)
-    )
+seasons_to_keep <-
+  tallied |>
+    group_by(season) |>
+    summarise(n_uniq = n_distinct(n)) |>
+    filter(n_uniq == 1)
 ```
+
+16. Now use `semi_join()` to subset the regular season games to include only those we intended to keep.
+
+```{r}
+reg_season_subset <- 
+  semi_join(
+    x = reg_season,
+    y = seasons_to_keep,
+    by = "season")
+```
+
+17. Do a similar thing for the playoffs data.
+
+```{r}
+playoffs_subset <- 
+  semi_join(
+    x = playoffs,
+    y = seasons_to_keep,
+    by = "season")
+```
+
+# Determining Mid Season Top 8
+
+Recall that our goal is to fill in this table:
+
+**Mid-season Top 8 Table**
+
+|                 | TRUE | FALSE |
+|-----------------|------|-------|
+| Made Playoffs   |      |       |
+| Missed Playoffs |      |       |
+
+where the columns represent that a team was in the top 8 (in terms of win percentage) on July 15 of each year and the rows represent that the team made the WNBA playoffs.
+
+The next step is to determine which teams were in the top 8 on July 15.
+
+18. Start by subsetting the regular season dataset (that contains only the seasons we plan to analyze) to contain games played before July 15. Tip: Use the `month()` and `day()` functions from the `lubridate` package to help.
+
+```{r}
+reg_season_subset |>
+  filter(month(game_date) <= 7 & day(game_date) < 15) |>
+  tally()
+```
+
+
+------------
+
+
 
 ```{r}
 # total wins
