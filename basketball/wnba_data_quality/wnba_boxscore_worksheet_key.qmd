@@ -3,9 +3,9 @@ title: "WNBA Team Data Worksheet"
 format: html
 ---
 
-All data came from the Weehoop package which can be viewed at https://CRAN.R-project.org/package=wehoop. 
+All data came from the `Weehoop` package which can be viewed at <https://CRAN.R-project.org/package=wehoop>. 
 
-Exercises
+# Exercises
 
 The `wnba_data` data set consists of these 9 variables: game_id, season, season_type, game_date, team_id, team_display_name, team_winner, opponent_team_id, team_home_away.
 
