@@ -5,7 +5,7 @@ format: html
 
 All data came from the `Wehoop` package which can be viewed at <https://CRAN.R-project.org/package=wehoop>.
 
-The `wnba_data` data set consists of these 9 variables: game_id, season, season_type, game_date, team_id, team_display_name, team_winner, opponent_team_id, team_home_away.
+The `wnba_data` data set consists of these 9 variables: `game_id`, `season`, `season_type`, `game_date`, `team_id`, `team_display_name`, `team_winner`, `opponent_team_id`, `team_home_away`.
 
 Eight teams make the playoffs each year in the WNBA. Our goal is to create a two-way table for looking at how often a team in the top 8 (in terms of wins) at the half-way point of the season makes the playoffs. (i.e., is a top 8 team at the end of the season) For simplicity, we will define a teams mid-season record as their win percentage on July 15 of each year. (This roughly corresponds to the mid point of the WNBA season.)
 
@@ -13,10 +13,10 @@ That is, we want to fill in this table:
 
 # Mid-season Top 8 Table
 
-|                 | TRUE | FALSE |
-|-----------------|------|-------|
-| Made Playoffs   |      |       |
-| Missed Playoffs |      |       |
+|                 | Top 8 at Mid | Not Top 8 at Mid |
+|-----------------|--------------|------------------|
+| Made Playoffs   |              |                  |
+| Missed Playoffs |              |                  |
 
 where the columns represent that a team was in the top 8 (in terms of win percentage) on July 15 of each year and the rows represent that the team made the WNBA playoffs.
 
@@ -184,10 +184,10 @@ Recall that our goal is to fill in this table:
 
 **Mid-season Top 8 Table**
 
-|                 | TRUE | FALSE |
-|-----------------|------|-------|
-| Made Playoffs   |      |       |
-| Missed Playoffs |      |       |
+|                 | Top 8 at Mid | Not Top 8 at Mid |
+|-----------------|--------------|------------------|
+| Made Playoffs   |              |                  |
+| Missed Playoffs |              |                  |
 
 where the columns represent that a team was in the top 8 (in terms of win percentage) on July 15 of each year and the rows represent that the team made the WNBA playoffs.
 
@@ -215,7 +215,9 @@ first_half_top8 <-
   first_half_winpct |>
     group_by(season) |>
     mutate(ranking = rank(desc(winpct), ties.method = "min")) |>
-    mutate(top8 = if_else(ranking <= 8, TRUE, FALSE))
+    mutate(top8 = if_else(ranking <= 8,
+                          "Top 8 at Mid", "Not Top 8 at Mid")
+           )
 ```
 
 20. Next, we need to determine which teams made the playoffs each year. This can be done by keeping only the distinct `team_id` values within each season for the playoff dataset (that was based on the seasons of interest). Additionally, create a new variable called `playoffs` that will indicate if the team made the playoffs. (Note: For these teams this variable will always be "Made Playoffs".)
@@ -265,7 +267,20 @@ ggplot(data = first_half,
 
 25. What proportion of the top 8 teams from the mid point of the season make the playoffs?
 
+```{r}
+60/72
+
+# 83.3%
+```
+
 26. What are the odds that a top 8 team at the point of the season make the playoffs?
+
+```{r}
+(60/72) / (1 - 60/72)
+
+# i.e., 5:1 odds
+```
+
 
 # Critiquing the Analysis
 
@@ -283,11 +298,9 @@ ggplot(data = first_half,
 
 *Some example would be to (i) determine the date for each team within a season reach half of their games, (ii) find the total number of games played in the WNBA for a season and then determine the date that corresponds to having played half of them.*
 
-29. While the WNBA has consistently had the top 8 teams (at the end of the regular season) make the playoffs, why might it not be ideal to lump teams into a "Top 8 or not" grouping like we did?
 
-*One could easily hypothesis that the top couple of teams on July 15 are more likely to make the playoffs than the 7th or 8th ranked team at that time. Perhaps it would have been better to group teams into three categories. e.g., elite, mediocre, and lower tier*
 
-30. Like many professional sports at the time, the WNBA modified their schedule during the COVID-19 pandemic, playing in ["The Wubble"](https://en.wikipedia.org/wiki/Wubble). Investigate the impact this had on our analysis. For example, consider the following:
+29. Like many professional sports at the time, the WNBA modified their schedule during the COVID-19 pandemic, playing in ["The Wubble"](https://en.wikipedia.org/wiki/Wubble). Investigate the impact this had on our analysis. For example, consider the following:
 
 -   Was the 2020 season one of the seasons we intended to keep?
 -   How many games did the typical team play by the July 15 cutoff we used as the season mid-point? Was the 2020 season abnormal?
@@ -309,15 +322,26 @@ reg_season_first_half |>
 # Notice that 2020 is not included...because the season didn't start unitl July 25
 ```
 
-31. (Optional) If you are familiar with logistic regression, model the probability of a team making the playoffs based on their win percentage on July 15. Provide a meaningful interpretation of the slope coefficient for the model.
+
+30. The WNBA often pauses its schedule for the summer Olympucs so that its players can join their national team. Using the 2024 Olympics as an example, what type of impact would this have on our analysis? (Note that we are not analyzing 2024 WNBA data, so this is an exercise in understanding what type of impact it might have.)
+
+
+*In 2024 the leagued paused from July 18 to August 14. It did a similar thing in 2016. Given the July 15 cutoff, it wouldn't actually impact our analysis. However, it does provide more reason to improve our style of defining season midpoint in the event that the Olympic schedule break stradles July 15.*
+
+31. While the WNBA has consistently had the top 8 teams (at the end of the regular season) make the playoffs, why might it not be ideal to lump teams into a "Top 8 or not" grouping like we did?
+
+*One could easily hypothesis that the top couple of teams on July 15 are more likely to make the playoffs than the 7th or 8th ranked team at that time. Perhaps it would have been better to group teams into three categories. e.g., elite, mediocre, and lower tier*
+
+32. (Optional) If you are familiar with logistic regression, model the probability of a team making the playoffs based on their win percentage on July 15. Provide a meaningful interpretation of the slope coefficient for the model.
 
 ```{r}
 logit_mod <-
   first_half |>
     mutate(playoffsInd = if_else(playoffs == "Made Playoffs", 
                                 TRUE, FALSE)) |>
-    glm(playoffsInd ~ winpct  ,data = _ , family = binomial) |> 
-    summary()
+    glm(playoffsInd ~ winpct  ,data = _ , family = binomial)
+
+summary(logit_mod)
 ```
 
-*For a 10 percentage point increase in win percentage (on July 15), the predicted odds of making the playoffs is multiplied by approximately 3.*
+*For a 10 percentage point (0.1) increase in win percentage (as of July 15 each season), the predicted odds of making the playoffs increases by a (multiplicative) factor of approximately 3.*
