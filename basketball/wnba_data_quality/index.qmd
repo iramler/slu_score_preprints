@@ -21,6 +21,7 @@ categories:
 software:
   - R
   - Python
+image: WNBA_Barnstar.png
 ---
 
 ## Module
@@ -154,4 +155,8 @@ After identifying these data quality issues, we considered several possible ways
 
 After choosing a data-cleaning strategy, we used the cleaned data to create a two-way table comparing whether teams were ranked in the top eight at midseason with whether they ultimately made the playoffs. This analysis illustrates how data cleaning decisions can directly affect the conclusions we draw from sports data.
 :::
+
+### Acknowledgements
+
+Thumbnail image: “WNBA Barnstar.png” by Mungo Kitsch, licensed under CC BY-SA 4.0 via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WNBA_Barnstar.png){target="_blank"}. The image incorporates a WNBA logo element; use does not imply endorsement by the WNBA. 
 
