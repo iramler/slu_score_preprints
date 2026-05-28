@@ -1,0 +1,346 @@
+---
+title: "WNBA Team Data Worksheet"
+format: html
+---
+
+All data came from the `Wehoop` package which can be viewed at <https://CRAN.R-project.org/package=wehoop>.
+
+The `wnba_data` data set consists of these 9 variables: `game_id`, `season`, `season_type`, `game_date`, `team_id`, `team_display_name`, `team_winner`, `opponent_team_id`, `team_home_away`. Note that we will not use all of these variables for this activity.
+
+Eight teams make the playoffs each year in the WNBA. Our goal is to create a two-way table for looking at how often a team in the top 8 (in terms of win percentage) at the half-way point of the season makes the playoffs. (i.e., is a top 8 team at the end of the season) For simplicity, we will define a team's mid-season record as their win percentage on July 15 of each year. This roughly corresponds to the mid point of the WNBA season.
+
+That is, we want to fill in this table:
+
+# Mid-season Top 8 Table
+
+|                 | Top 8 at Mid | Not Top 8 at Mid |
+|-----------------|--------------|------------------|
+| Made Playoffs   |              |                  |
+| Missed Playoffs |              |                  |
+
+where the columns represent that a team was in the top 8 (in terms of win percentage) on July 15 of each year and the rows represent that the team made the WNBA playoffs.
+
+# Investigating Data Quality
+
+1.  Load in the `wnba_data` data set.
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(ggplot2)
+
+wnba_data <- read_csv("wnba_data.csv")
+```
+
+2.  What do you notice about the team IDs in this data set? Do they all belong to a valid team or are some not needed? (Hint: Might need to use the `distinct()` function).
+
+```{r}
+wnba_data |> 
+  select(team_id, team_display_name) |>
+  distinct() |>
+  arrange(team_id) |>
+  View()
+```
+
+*The IDs above 20 are not necessary because they don't represent teams playing in the regular season.*
+
+3.  Filter out the IDs we won’t be using.
+
+```{r}
+wnba <- wnba_data |> filter(team_id <= 20)
+```
+
+4.  Now, let's make sure each team ID is associated with the correct team name. Use a `select()` statement with both `team_id` and `team_display_name` and then use the `distinct()` function. Which team IDs are repeated? What might this mean?
+
+```{r}
+wnba |>
+  select(team_id, team_display_name) |>
+  distinct() |> 
+  arrange(team_id) |>
+  View()
+```
+
+*This means that the three names with ID 3 and the three names with ID 17 are the same teams who switched their name or location between seasons.*
+
+5.  For the IDs you found, rename the teams so that the same IDs all have the most recent team name. You can create a new variable called `team_name`.
+
+```{r}
+wnba <- wnba |>
+  mutate(team_name = 
+           case_when(
+             team_id == 3 ~ 'Dallas Wings',
+             team_id == 17 ~ 'Las Vegas Aces',
+             .default = team_display_name
+             )
+    ) 
+```
+
+6.  Now that our team names are correct, we can look at games played. Create a new data set called `reg_season` that only has data for regular season games (season_type == 2) and one called `playoffs` that only has data for playoff games (season_type == 3).
+
+```{r}
+reg_season <- wnba |> filter(season_type == 2)
+playoffs <- wnba |> filter(season_type == 3)
+```
+
+7.  To calculate win percentage at the mid-way point, we need to know how many games are played in a season. Use the `tally()` function to count the number of games played by each team within each season. What do you notice?
+
+```{r}
+reg_season |>
+  group_by(season, team_id) |>
+  tally() |>
+  View()
+```
+
+*The number of games played is inconsistent.*
+
+8.  Do some Google searching on how many games were played by WNBA teams during these seasons. You might find that the number of regular season games has fluctuated since 2020, but there is still a problem. Can you tell what it is?
+
+*Not every team has the same number of games recorded for each season.*
+
+9.  Let's look into the 2008 season. There are 4 teams that played 33 games instead of 34. Find out who these teams are and Google their season statistics. Did they actually only play 33 games? Why is this a problem?
+
+```{r}
+reg_season |>
+  filter(season == 2008) |>
+  group_by(team_id) |>
+  tally()
+```
+
+*No. They all played 34 games. This is a problem because our analysis will not be accurate if there is missing data.*
+
+10. The data collected via the `Wehoop` package was scraped from the ESPN website. Go to <https://www.espn.com/wnba/team/schedule/_/name/atl/season/2008> (the Atlanta Dream 2008 schedule) and click on the first two scores recorded in the 'RESULT' section. What is different about the pages these links take you to? How might this be causing the problem?
+
+*The second game of the season played on 05/23 does not have any team box score data, unlike the other games. This, along with other missing game data, likely caused issues when scraping the data from the webpage.*
+
+11. What are some ways we could solve this problem if we still wanted to create the table originally indicated? 
+
+*This code just provides some starting points for answering this open-ended question. Instructors are welcome to use the code chunks to help guide students through the process, or leave it as a challenge for students.*
+
+*For example, we could look up the games and fill in the missing data by adding rows to the dataset or we could remove the seasons with missing data from the data set.*
+
+# Subsetting Seasons
+
+Regardless of your choice in the previous question, suppose we decide to remove the seasons with missing data from our analysis.
+
+The first step for this is to identify which seasons are inconsistent with the number of games played between all teams. To do so,
+
+12. Use the `group_by()` and other functions to create a data frame (or tibble) that counts the number of games played by each team in each season.
+
+```{r}
+tallied <- reg_season |>
+  group_by(season, team_id) |>
+  tally()
+```
+
+13. Next, we want to keep the seasons where all teams have the same number of games recorded. We'll count the number of distinct values in the number of games played by teams within each season. To do so, explore how the `n_distinct()` function could be used to extract this information.
+
+```{r}
+tallied |>
+  group_by(season) |>
+  summarise(n_uniq = n_distinct(n))
+```
+
+Here is another helpful way to view results by season.
+
+```{r}
+table(tallied$n, tallied$season)
+```
+
+14. If done correctly, you should have noticed that the seasons with exactly 1 distinct value for the number of games played are those that we should keep. Create a new dataframe (tibble) that stores these seasons. (Note in the next step we will use the seasons we identify here to subset our larger dataset.)
+
+```{r}
+seasons_to_keep <-
+  tallied |>
+    group_by(season) |>
+    summarise(n_uniq = n_distinct(n)) |>
+    filter(n_uniq == 1)
+```
+
+15. Now use `semi_join()` to subset the regular season games to include only those we intended to keep.
+
+```{r}
+reg_season_subset <- 
+  semi_join(
+    x = reg_season,
+    y = seasons_to_keep,
+    by = "season")
+```
+
+16. Do a similar thing for the playoffs data.
+
+```{r}
+playoffs_subset <- 
+  semi_join(
+    x = playoffs,
+    y = seasons_to_keep,
+    by = "season")
+```
+
+# Determining Mid Season Top 8
+
+Recall that our goal is to fill in this table:
+
+**Mid-season Top 8 Table**
+
+|                 | Top 8 at Mid | Not Top 8 at Mid |
+|-----------------|--------------|------------------|
+| Made Playoffs   |              |                  |
+| Missed Playoffs |              |                  |
+
+where the columns represent that a team was in the top 8 (in terms of win percentage) on July 15 of each year and the rows represent that the team made the WNBA playoffs.
+
+The next step is to determine which teams were in the top 8 on July 15.
+
+17. Start by subsetting the regular season dataset (that contains only the seasons we plan to analyze) to contain games played on or before July 15. Tip: Use the `month()` and `day()` functions from the `lubridate` package to help.
+
+```{r}
+reg_season_first_half <- reg_season_subset |>
+  filter( ( month(game_date) <= 6 ) |  (month(game_date) == 7 & day(game_date) <= 15 ) )
+```
+
+18. Now calculate the win percentage (or proportion) for each team within each season.
+
+```{r}
+first_half_winpct <- reg_season_first_half |>
+  group_by(season, team_id) |>
+  summarize(winpct = mean(team_winner))
+```
+
+19. Given the win percentages, now create a new variable indicating whether or not the team was in the top 8 on July 15. Tip: Investigate the `rank()` function (or the `dplyr` equivalents) and think critically about how to handle ties.
+
+```{r}
+first_half_top8 <- 
+  first_half_winpct |>
+    group_by(season) |>
+    mutate(ranking = rank(desc(winpct), ties.method = "min")) |>
+    mutate(top8 = if_else(ranking <= 8,
+                          "Top 8 at Mid", "Not Top 8 at Mid")
+           )
+```
+
+20. Next, we need to determine which teams made the playoffs each year. This can be done by keeping only the distinct `team_id` values within each season for the playoff dataset (that was based on the seasons of interest). Additionally, create a new variable called `playoffs` that will indicate if the team made the playoffs. (Note: For these teams this variable will always be "Made Playoffs".)
+
+```{r}
+playoff_teams <- 
+  playoffs_subset |>
+    distinct(season, team_id) |>
+    mutate(playoffs = "Made Playoffs")
+```
+
+21. Now join this new playoff team ID dataset to the dataset that has the top 8 indicator variable.
+
+```{r}
+first_half <-
+  left_join(x = first_half_top8, 
+          y = playoff_teams,
+          by = c("season","team_id")
+          )
+```
+
+22. Investigate this dataset using the data viewer. What do you notice about the `playoffs` variable? Fix the appropriate rows by changing them to "Missed Playoffs".
+
+```{r}
+first_half <- 
+  first_half |> 
+    mutate(playoffs = replace_na(playoffs, "Missed Playoffs") )
+```
+
+23. Finally, make the table!
+
+```{r}
+table(first_half$playoffs, first_half$top8)
+```
+
+# Analyzing the Data
+
+24. Make a display that shows the breakdown of whether or not a team makes the playoffs based on whether they were a top 8 team at July 15 or not.
+
+```{r}
+ggplot(data = first_half, 
+       aes(fill = playoffs, x = top8)) +
+  geom_bar(position = "fill")
+```
+
+25. What proportion of the top 8 teams from the mid point of the season make the playoffs?
+
+```{r}
+63/72
+
+# 87.5%
+```
+
+26. What are the odds that a top 8 team at the mid point of the season make the playoffs?
+
+```{r}
+(63/72) / (1 - 63/72)
+
+# i.e., 7:1 odds
+```
+
+
+# Critiquing the Analysis
+
+27. During this activity, we removed the seasons that had inconsistencies with the number of games teams played. Discuss the potential pros and cons of doing this.
+
+*Answers will vary.*
+
+*Example Pros: Is a fairly simple method to apply. If there aren't too many seasons with missing data, then it likely won't impact the analysis much.*
+
+*Example Cons: Since this information is available online, we could take the time to find it. e.g., basketball-reference.com could be used as an alternative site.*
+
+28. We also chose July 15 as the cutoff for the middle of the season. While simple to apply, discuss a potentially better method to find the first half of the WNBA season.
+
+*Answers will vary.*
+
+*Some examples would be to (i) determine the date for each team within a season reaches half of their games, (ii) find the total number of games played in the WNBA for a season and then determine the date that corresponds to having played half of them.*
+
+
+
+29. Like many professional sports at the time, the WNBA modified their schedule during the COVID-19 pandemic, playing in ["The Wubble"](https://en.wikipedia.org/wiki/Wubble). Investigate the impact this had on our analysis. For example, consider the following:
+
+-   Was the 2020 season one of the seasons we intended to keep? (Tip: Check this by returning to the portion of code that determined which seasons have the teams all playing the same number of game.)
+-   How many games did the typical team play by the July 15 cutoff we used as the season mid-point? Was the 2020 season abnormal?
+
+*Answers might vary, but here are a few key points*
+
+```{r}
+# Checking which seasons are intended to be included
+View(seasons_to_keep)
+# Yes, it was one of the season we intended to keep
+```
+
+```{r}
+reg_season_first_half |>
+  group_by(season) |>
+  count(team_id) |>
+  summarize(mean(n))
+
+# Notice that 2020 is not included...because the season didn't start until July 25
+```
+
+
+30. The WNBA often pauses its schedule for the summer Olympics so that its players can join their national team. Using the 2024 Olympics as an example, what type of impact would this have on our analysis? (Note that we are not analyzing 2024 WNBA data, so this is an exercise in understanding what type of impact it might have.)
+
+
+*In 2024 the league paused from July 18 to August 14. It did a similar thing in 2016. Given the July 15 cutoff, it wouldn't actually impact our analysis. However, it does provide more reason to improve our style of defining season midpoint in the event that the Olympic schedule break straddles July 15.*
+
+31. While the WNBA has consistently had the top 8 teams (at the end of the regular season) make the playoffs, why might it not be ideal to lump teams into a "Top 8 or not" grouping like we did?
+
+*One could easily hypothesize that the top couple of teams on July 15 are more likely to make the playoffs than the 7th or 8th ranked team at that time. Perhaps it would have been better to group teams into three categories. e.g., elite, mediocre, and lower tier*
+
+32. (Optional) If you are familiar with logistic regression, model the probability of a team making the playoffs based on the team's win percentage on July 15. Provide a meaningful interpretation of the slope coefficient for the model.
+
+```{r}
+logit_data <-
+  first_half |>
+  mutate(playoffsInd = if_else(playoffs == "Made Playoffs", TRUE, FALSE))
+
+logit_mod <-
+  glm(playoffsInd ~ winpct, data = logit_data, family = binomial)
+
+summary(logit_mod)
+```
+
+*For a 10 percentage point (0.1) increase in win percentage (as of July 15 each season), the predicted odds of making the playoffs increases by a (multiplicative) factor of approximately 3.42.*
