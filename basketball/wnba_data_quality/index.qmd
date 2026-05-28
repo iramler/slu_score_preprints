@@ -38,6 +38,8 @@ The Women's National Basketball Association (WNBA) is a professional basketball 
 
 Throughout its history, the WNBA has been a pioneering force in women's sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, typically consisting of 12 or 13 teams. As of 2026, the league consists of 15 teams with plans to expand further. The table below shows the size of the league since its inception.
 
+<details>
+
 <summary><b> WNBA expansion and contraction</b></summary>
 
 | Season(s)   | No. of teams |
@@ -69,9 +71,6 @@ The video below provides a brief overview of the WNBA league structure and playo
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/L7xwOsGFga8?si=NzZkTZcUk4kEGZ3m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
-
-<details>
-
 
 :::
 
