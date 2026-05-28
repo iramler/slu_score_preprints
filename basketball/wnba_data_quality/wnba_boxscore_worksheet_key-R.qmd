@@ -114,7 +114,7 @@ reg_season |>
 
 *The second game of the season played on 05/23 does not have any team box score data, unlike the other games. This, along with other missing game data, likely caused issues when scraping the data from the webpage.*
 
-11. What are some ways we could solve this problem if we still wanted to create the table originally indicated? Choose a way and make a table with your new data.
+11. What are some ways we could solve this problem if we still wanted to create the table originally indicated? 
 
 *This code just provides some starting points for answering this open-ended question. Instructors are welcome to use the code chunks to help guide students through the process, or leave it as a challenge for students.*
 

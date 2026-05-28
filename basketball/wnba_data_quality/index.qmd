@@ -1,6 +1,6 @@
 ---
-title: "What Can Box Scores Tell Us? Exploring WNBA Player Stats"
-date: "2024-05-15"
+title: "Can Midseason Records Predict WNBA Playoff Teams?"
+date: "2026-05-27"
 author:
   - name: Kristen Varin
     affiliation:
@@ -10,16 +10,17 @@ author:
     email: iramler@stlawu.edu
     affiliation:
       - ref: slu
-description: "Explore WNBA box score data to compare positional differences in player performance using summary statistics and visualizations."
+description: "Clean WNBA team-game data and investigate whether teams ranked in the top eight midway through the season tend to make the playoffs."
 
 editor: 
   canonical: true
 categories:
-  - Data Wrangling
+  - Data Cleaning
   - Missing Data
   - Frequency Tables
 software:
   - R
+  - Python
 ---
 
 ## Module
@@ -28,14 +29,13 @@ Please note that these material have not yet completed the required pedagogical 
 
 ### Introduction
 
-The WNBA worksheet will introduce the idea of predicting playoff teams from their record earlier in the season. Most of the time, it is expected that teams with better records halfway through the season will have a higher chance of making it to the playoffs, but is this always the case? How do you know that the data you are using is a valid way of predicting this? By completing this worksheet, you will be guided through various data cleaning steps and will be able to answer these questions.
+The WNBA worksheet introduces the idea of using team records from earlier in the season to predict which teams will make the playoffs. Most of the time, we would expect teams with better records halfway through the season to have a higher chance of making the playoffs, but is this always the case? Just as importantly, how do we know whether the data we are using are complete and reliable enough for this analysis? By completing this worksheet, you will work through several data cleaning steps involving WNBA team-game data and then use the cleaned data to investigate the relationship between midseason performance and playoff outcomes.
+
 
 ::: {.callout-note collapse="true" title="Background on the WNBA" appearance="minimal"}
 The Women's National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women's basketball at the professional level. The league's inaugural season began in 1997 with eight teams.
 
-Throughout its history, the WNBA has been a pioneering force in women's sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, as of 2024, consists of 12 teams.
-
-<details>
+Throughout its history, the WNBA has been a pioneering force in women's sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, typically consisting of 12 or 13 teams. As of 2026, the league consists of 15 teams with plans to expand further. The table below shows the size of the league since its inception.
 
 <summary><b> WNBA expansion and contraction</b></summary>
 
@@ -53,27 +53,52 @@ Throughout its history, the WNBA has been a pioneering force in women's sports, 
 | 2009        | 13           |
 | 2010–2024   | 12           |
 | 2025        | 13           |
-| 2026–future | 14           |
+| 2026        | 15           |
 
 </details>
 
 The WNBA's playoff structure typically features the top eight teams from the regular season standings advancing to the postseason. The playoffs are organized into single-elimination rounds, culminating in the WNBA Finals, where the last two teams standing compete in a best-of-five series to determine the league champion.
 
 Beyond its competitive play, the WNBA has been a leader in promoting social justice initiatives and advocating for equality both on and off the court. It continues to grow in popularity and influence, contributing significantly to the growth of women's basketball worldwide.
+
+For additonal background about the WNBA, please watch the following video:
+
+::: {.callout-note collapse="true" title="WNBA Format Video" appearance="minimal"}
+The video below provides a brief overview of the WNBA league structure and playoff format.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L7xwOsGFga8?si=NzZkTZcUk4kEGZ3m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
+
+<details>
+
+
+:::
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+Depending on the background of the student, this activity is designed for approximately **50–75 minutes** of class time or as an outside of class activity.
+:::
+
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, you will be able to:
 
 -   Use various `dplyr`, `tidyr`, and `lubridate` package functions to clean a data set for further use.
 
--   Learn the process of cleaning data, recognizing any problems within the data, and determining whether the data can be used for the given analysis problem.
+-   Identify data quality issues, such as inconsistent team names and missing game records.
 
--   Understand why missing data presents a problem for analysis and brainstorm ways to troubleshoot this problem.
+-   Explain how missing or incomplete data can affect an analysis.
+
+-   Create and interpret a two-way table that use custom built variables.
 :::
 
+
+
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
-Technology requirement: The activity handout requires knowledge of Quarto and the following tidyverse packages: `dplyr`, `tidyr`, `lubridate`. The activity will allow students to use these packages together to complete a more complex task.
+Technology requirement: 
+
+- `R` version: The activity handout requires knowledge of Quarto and the following tidyverse packages: `dplyr`, `tidyr`, `lubridate`, and `ggplot`.
+
+- `Python` version: The activity handout requires knowledge of Jupyter notebooks and the following packages: `pandas`, `numpy`, `plotnine`, and `statsmodels`.
 :::
 
 ### Data
@@ -106,16 +131,27 @@ Gilani S, Hutchinson G (2022). *wehoop: Access Women's Basketball Play by Play D
 
 ### Materials
 
-We offer worksheets (and their solutions) in Quarto (using R) format.
+We offer worksheets (and their solutions) in Quarto (using `R`) and Jupyter Notebook (using `python`) formats.
 
-[Class handout - Quarto](wnba_boxscore_worksheet.qmd)
+**R versions**
 
-[Class handout - Quarto - with solutions](wnba_boxscore_worksheet_key.qmd)
+[Class handout - Quarto](wnba_boxscore_worksheet-R.qmd)
+
+[Class handout - Quarto - with solutions](wnba_boxscore_worksheet_key-R.qmd)
+
+
+**Python versions**
+
+[Class handout - Quarto](wnba_boxscore_worksheet-Python.ipynb)
+
+[Class handout - Quarto - with solutions](wnba_boxscore_worksheet_key-Python.ipynb)
+
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
-Exploration of the WNBA data revealed that there are missing values for games throughout the 2003-2022 seasons. We found this by tallying the number of games played by each team within each season and noticing that the number of games played was inconsistent between teams. We then used the internet to find an example of a missing game within the dataset.
+Exploration of the WNBA data revealed that some seasons had incomplete (i.e., were missing) game records. We identified this issue by tallying the number of games recorded for each team within each season and noticing that the totals were occassionally inconsistent across teams.
 
-Reflecting on the challenges that missing values presented us, we came up with a few solutions to continue our analysis. Some of these include: filtering the data for seasons that have no missing data or using the internet to manually fill in data. While neither of these methods are perfect and present other challenges, they are valid ways to deal with missing values.
+After identifying these data quality issues, we considered several possible ways to continue the analysis. For example, we could remove seasons with incomplete records, manually fill in missing games using outside sources, or use a different data source. Each approach involves tradeoffs between simplicity, accuracy, and the amount of additional work required.
 
-Once dealing with the seasons with imperfect data, students can continue the analysis to find a two way table depicting mid season record, playoff prediction, season record and whether a team made playoffs.
+After choosing a data-cleaning strategy, we used the cleaned data to create a two-way table comparing whether teams were ranked in the top eight at midseason with whether they ultimately made the playoffs. This analysis illustrates how data cleaning decisions can directly affect the conclusions we draw from sports data.
 :::
+
