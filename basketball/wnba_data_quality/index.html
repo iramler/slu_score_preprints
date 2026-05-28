@@ -985,6 +985,9 @@ cookieconsent.run({
   <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1055,7 +1058,7 @@ cookieconsent.run({
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <p>The WNBA worksheet introduces the idea of using team records from earlier in the season to predict which teams will make the playoffs. Most of the time, we would expect teams with better records halfway through the season to have a higher chance of making the playoffs, but is this always the case? Just as importantly, how do we know whether the data we are using are complete and reliable enough for this analysis? By completing this worksheet, you will work through several data cleaning steps involving WNBA team-game data and then use the cleaned data to investigate the relationship between midseason performance and playoff outcomes.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Background on the WNBA">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1064,10 +1067,11 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The Women’s National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women’s basketball at the professional level. The league’s inaugural season began in 1997 with eight teams.</p>
 <p>Throughout its history, the WNBA has been a pioneering force in women’s sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, typically consisting of 12 or 13 teams. As of 2026, the league consists of 15 teams with plans to expand further. The table below shows the size of the league since its inception.</p>
+<details>
 <summary>
 <b> WNBA expansion and contraction</b>
 </summary>
@@ -1133,7 +1137,7 @@ cookieconsent.run({
 </tr>
 </tbody>
 </table>
-
+</details>
 <p>The WNBA’s playoff structure typically features the top eight teams from the regular season standings advancing to the postseason. The playoffs are organized into single-elimination rounds, culminating in the WNBA Finals, where the last two teams standing compete in a best-of-five series to determine the league champion.</p>
 <p>Beyond its competitive play, the WNBA has been a leader in promoting social justice initiatives and advocating for equality both on and off the court. It continues to grow in popularity and influence, contributing significantly to the growth of women’s basketball worldwide.</p>
 <p>For additonal background about the WNBA, please watch the following video:</p>
@@ -1155,10 +1159,11 @@ cookieconsent.run({
 </div>
 </div>
 </div>
-<details>
-<p>:::</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1167,14 +1172,14 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Depending on the background of the student, this activity is designed for approximately <strong>50–75 minutes</strong> of class time or as an outside of class activity.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1183,7 +1188,7 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>By the end of this activity, you will be able to:</p>
 <ul>
@@ -1196,7 +1201,7 @@ cookieconsent.run({
 </div>
 </div>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1205,7 +1210,7 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Technology requirement:</p>
 <ul>
@@ -1215,6 +1220,7 @@ cookieconsent.run({
 </div>
 </div>
 </div>
+</section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <p>The <code>wnba_data</code> data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows:</p>
@@ -1289,7 +1295,7 @@ cookieconsent.run({
 <p><a href="wnba_boxscore_worksheet-Python.ipynb">Class handout - Quarto</a></p>
 <p><a href="wnba_boxscore_worksheet_key-Python.ipynb">Class handout - Quarto - with solutions</a></p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1298,7 +1304,7 @@ cookieconsent.run({
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Exploration of the WNBA data revealed that some seasons had incomplete (i.e., were missing) game records. We identified this issue by tallying the number of games recorded for each team within each season and noticing that the totals were occassionally inconsistent across teams.</p>
 <p>After identifying these data quality issues, we considered several possible ways to continue the analysis. For example, we could remove seasons with incomplete records, manually fill in missing games using outside sources, or use a different data source. Each approach involves tradeoffs between simplicity, accuracy, and the amount of additional work required.</p>
@@ -1312,10 +1318,6 @@ cookieconsent.run({
 <p>Thumbnail image: “WNBA Barnstar.png” by Mungo Kitsch, licensed under CC BY-SA 4.0 via <a href="https://commons.wikimedia.org/wiki/File:WNBA_Barnstar.png" target="_blank">Wikimedia Commons</a>. The image incorporates a WNBA logo element; use does not imply endorsement by the WNBA.</p>
 
 
-</section>
-</details></div>
-</div>
-</div>
 </section>
 </section>
 
