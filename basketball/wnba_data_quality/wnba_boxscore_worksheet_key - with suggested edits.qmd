@@ -3,9 +3,9 @@ title: "WNBA Team Data Worksheet"
 format: html
 ---
 
-All data came from the `Weehoop` package which can be viewed at <https://CRAN.R-project.org/package=wehoop>. 
+All data came from the Weehoop package which can be viewed at https://CRAN.R-project.org/package=wehoop. 
 
-# Exercises
+Exercises
 
 The `wnba_data` data set consists of these 9 variables: game_id, season, season_type, game_date, team_id, team_display_name, team_winner, opponent_team_id, team_home_away.
 
@@ -35,7 +35,8 @@ wnba_data <- read_csv("wnba_data.csv")
 wnba_data %>% 
   select(team_id, team_display_name) %>% 
   distinct() %>% 
-  arrange(team_id)
+  arrange(team_id) |> 
+  as.data.frame()
 ```
 
 _The IDs above 20 are not necessary because they don't represent teams playing in the regular season._
@@ -74,7 +75,7 @@ wnba <- wnba %>%
 
 ```{r}
 reg_season <- wnba %>% filter(season_type == 2)
-playoffs <- wnba %>% filter(season_type == 3)
+playoffs   <- wnba %>% filter(season_type == 3)
 ```
 
 7.	To calculate win percentage at the mid-way point, we need to know how many games are played in a season. Use the `tally()` function to count the number of games played by each team within each season. What do you notice? 
@@ -82,7 +83,7 @@ playoffs <- wnba %>% filter(season_type == 3)
 ```{r}
 reg_season %>% 
   group_by(season, team_id) %>% 
-  tally()
+  tally() 
 ```
 
 _The number of games played is inconsistent._
@@ -131,13 +132,14 @@ table(tallied$n, tallied$season)
 # keep seasons 2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020
 filtered <- reg_season %>% 
   filter(
-    season %in% c(2007, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020)
+    season %in% c(2007, 2009, 2010, 2013, 2014, 
+    2015, 2016, 2017, 2018, 2019, 2020)
     )
 ```
 
 ```{r}
 # total wins
-team_wins <- wnba_data %>% 
+team_wins <- reg_season %>% 
   group_by(team_id, season) %>% 
   summarise(total_wins = sum(team_winner == TRUE, na.rm = TRUE), 
          total_losses = sum(team_winner == FALSE, na.rm = TRUE), 
@@ -149,7 +151,7 @@ team_wins
 
 ```{r}
 # filter for mid season mark (July 15)
-half_wins <- wnba_data %>%  
+half_wins <- reg_season %>%  
   filter((month(game_date) == 5 & day(game_date) >= 19) | 
            (month(game_date) == 6) |
            (month(game_date) == 7 & day(game_date) < 15)) %>% 
@@ -164,19 +166,45 @@ half_wins
 ```
 
 ```{r}
-# Join datasets to create win data
-wnba_win_data <- full_join(team_wins, half_wins, by = c("team_id", "season")) %>% 
- full_join(playoffs, by = c("team_id", "season")) %>% arrange(season)
-wnba_win_data
+# # Join datasets to create win data
+# wnba_win_data <- full_join(
+#   team_wins, half_wins,
+#   by = c("team_id", "season")) %>% 
+#  full_join(playoffs, by = c("team_id", "season")) %>% 
+#  arrange(season) %>%
+#  as.data.frame()
+
+# wnba_win_data
 ```
 
 ```{r}
 # where playoff value is NA, change this value to FALSE
+# wnba_win_data <- wnba_win_data %>% 
+#   mutate(playoff = ifelse(season_type == 3, TRUE, FALSE)) %>%
+#   mutate(playoff = ifelse(is.na(playoff), FALSE, playoff)) %>% 
+#   distinct()
+# wnba_win_data
+
+## find the teams each season that exist in the playoff data
+playoff.teams = playoffs |> 
+    select(season, team_id, season_type) |> 
+    distinct()
+playoff.teams
+
+## join team_wins and half_wins
+## also add a column to indicate whether that team made the playoffs
+wnba_win_data = full_join(
+  team_wins, half_wins,
+  by = c("team_id", "season")) %>% 
+ left_join(playoff.teams, by = c("team_id", "season")) %>% 
+ arrange(season) %>%
+ as.data.frame()
+
 wnba_win_data <- wnba_win_data %>% 
-  mutate(playoff = ifelse(season_type == 3, TRUE, FALSE)) %>%
-  mutate(playoff = ifelse(is.na(playoff), FALSE, playoff)) %>% 
-  distinct()
-wnba_win_data
+  mutate(playoff = ifelse(season_type == 3, 'Make Playoffs', 'Missed Playoffs')) %>%
+  mutate(playoff = ifelse(is.na(playoff), 'Missed Playoffs', playoff))
+
+
 ```
 
 ```{r}
@@ -184,7 +212,7 @@ wnba_win_data
 wnba_win_data <- wnba_win_data %>% 
   mutate(total_win_percent = round(total_wins*100 / total_games, 2), 
                 half_win_percent = round(half_wins*100 / half_games, 2))
-wnba_win_data
+wnba_win_data %>% head()
 ```
 
 ```{r}
@@ -199,23 +227,25 @@ wnba_win_data
 
 ```{r}
 # Create a variable that is a Yes if the team is in the top 8 rankings at the end of the season
-wnba_win_data <- wnba_win_data %>% 
-  mutate(final_top8 = ifelse(final_rank <= 8, "Made Playoffs", "Missed Playoffs"))
+# wnba_win_data <- wnba_win_data %>% 
+#   mutate(final_top8 = ifelse(final_rank <= 8, "Made Playoffs", "Missed Playoffs"))
 ```
 
 ```{r}
 # Do the same but for mid season
 wnba_win_data <- wnba_win_data %>% 
-  mutate(half_top8 = ifelse(half_rank <= 8, "TRUE", FALSE))
+  mutate(half_top8 = ifelse(half_rank <= 8, "Top8atMid", "NotTop8atMid"))
 ```
 
 ```{r}
 # will want to clean up column names 
 # if not manually recreating table
-
-wnba_win_data %>%
+final.table = wnba_win_data %>%
   group_by(half_top8) %>%
-  count(final_top8) %>% 
+  count(playoff) %>% 
   pivot_wider(names_from = half_top8, values_from=n)
+
+final.table 
+sum(final.table[,2:3])
 ```
 
