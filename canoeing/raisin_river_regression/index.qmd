@@ -94,7 +94,9 @@ The data are compiled from the [Paddlestats Website](https://paddlestats.net/rac
 
 -   [Solutions to Worksheet (R/Quarto Version)](raisin_river_module_SOLUTIONS.qmd)
 
--   [Solutions to Worksheet (Word)](raisin_river_module_SOLUTIONS.docx)
+-   [Solutions to Worksheet (R version as html with expandable solutions)](raisin_river_module_SOLUTIONS.html)
+
+-   [Solutions to Worksheet - generic (Word)](raisin_river_module_SOLUTIONS.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Upon conclusion of this module, students will have an understanding of how to detect outliers in their data set, the influence these observations can have, and how to remove them if appropriate.
