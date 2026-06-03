@@ -1,6 +1,13 @@
 ---
 title: "The Impact of Outliers: The Raisin River Canoe Race"
-format: html
+format: 
+    html:  
+        embed-resources: true
+        toc: true
+execute:
+  echo: true
+  warning: false
+  message: false
 ---
 
 Downriver racing is a sport where competitors take their watercraft (usually a canoe, kayak, or stand-up paddle board) down a race course in competition with other paddlers, sometimes navigating rapids, in an attempt to get the fastest time either overall or in their class (classes are split up by boat and paddler type). The Raisin River Canoe race has been running for over 50 years on the Raisin River in Eastern Ontario. The usual race course is 30 km ( about 18.6 miles) and contains rapids that fluctuate in difficulty with the water level.
@@ -19,28 +26,21 @@ The dataset **rasin_riverDNF.csv** contains contains information on three variab
 | prop_DNF | Proportion of boats that did not finish (DNF) the race    |
 | flow     | Flow measurement (indicative of water level) in ft\^3/sec |
 
-Here is some code to access the dataset.
 
-```{r}
-library(tidyverse)
-library(broom)
-
-RR_dnf_data <- read_csv("raisin_river_DNF.csv")
-```
 
 ### Explore the relationship between flow rate and proportion of DNFs
 
-#### 1. Create a scatterplot that shows flow rate as a predictor for proportion of DNF.
+#### 1. Create a scatterplot with regression line that shows flow rate as a predictor for proportion of DNF.
 
 #### 2. Assess the fitted model
 
 ##### a) Interpret the value of the slope coefficient of flow in context.
 
-##### b) What does the p-value for that coefficient indicate about the relationship between flow rate and proportion of DNF.
+##### b) What does the p-value for that coefficient indicate about the relationship between flow rate and proportion of DNF?
 
 ##### c) Comment on the appropriateness of the model.
 
-### Investigate Influential Observations
+### Investigate unusual/influential observations
 
 #### 3. Identify any observations that have unusual leverage, standardized residuals, or influence.
 

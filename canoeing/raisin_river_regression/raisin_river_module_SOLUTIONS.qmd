@@ -3,12 +3,16 @@ title: "The Impact of Outliers: The Raisin River Canoe Race | SOLUTIONS"
 format:  
     html:  
         embed-resources: true
+        toc: true
     pdf:  default
+execute:
+  echo: true
+  warning: false
+  message: false
 ---
-
-```{r message = FALSE, warning = FALSE}
+Read the **raisin_river_DNF.csv** dataset
+```{r}
 library(tidyverse)
-library(broom)
 
 RR_dnf_data <- read_csv("raisin_river_DNF.csv")
 ```
@@ -16,6 +20,8 @@ RR_dnf_data <- read_csv("raisin_river_DNF.csv")
 ### Explore the relationship between flow rate and proportion of DNFs
 
 #### 1. Create a scatterplot with regression line that shows flow rate as a predictor for proportion of DNF.
+
+::: {.callout-note collapse="true" title="1 . Solution"}
 
 ```{r}
 ggplot(RR_dnf_data, aes(x = flow, y = prop_DNF)) +
@@ -26,65 +32,62 @@ ggplot(RR_dnf_data, aes(x = flow, y = prop_DNF)) +
        title = "Using flow rate to predict DNF proportion")
 ```
 
+:::
+
 #### 2. Assess the fitted model.
 
-##### a) a. Interpret the value of the slope coefficient of flow in context.
+##### a) Interpret the value of the slope coefficient of flow in context.
 
+::: {.callout-note collapse="true" title="2a. Solution"}
+Fit the model to predict proportion DNF using flow
 ```{r}
 dnf_mod <- lm(prop_DNF ~ flow, RR_dnf_data)
 summary(dnf_mod)
 ```
 
-For every 1000 ft\^3/sec increase in flow, we can expect a 0.00706 decrease in the proportion of DNFs.
+INTERPRETATION: For every 1000 ft\^3/sec increase in flow, we can expect a 0.00706 decrease in the proportion of DNFs.
+:::
 
-##### b) b. What does the p-value for that coefficient indicate about the relationship between flow rate and proportion of DNF?
+##### b) What does the p-value for that coefficient indicate about the relationship between flow rate and proportion of DNF?
 
-The p-value for the flow coefficient is 0.836, which means there is no convincing evidence for flow being a useful predictor of proportion DNF in the model made using this dataset.
+::: {.callout-note collapse="true" title="2b. Solution"}
+The p-value for the flow coefficient is 0.836, which means there is no convincing evidence for flow being a useful predictor of proportion DNF in the linear model made using this dataset.
+:::
 
 ##### c) Comment on the appropriateness of the model
 
-Based on the scatterplot and the model summary, a linear model does not appear to be appropriate. There is one observation with a very high flow rate influencing the model too much for it to make sense.
+::: {.callout-note collapse="true" title="2c. Solution"}
+Based on the scatterplot and the model summary, a linear model does not appear to be appropriate. There is one observation with a very high flow rate and low DNF influencing the model too much for it to make sense.
+:::
 
-### Investigate unusua/influential Observations
+### Investigate unusual/influential Observations
 
 #### 3. Identify any observations that have unusual leverage, standardized residuals, or influence.
 
+::: {.callout-note collapse="true" title="3 . Solution (leverage)"}
 leverage: 
 ```{r}
 sort(hatvalues(dnf_mod),decreasing=TRUE)
 ```
+For the sample size of 8, a mildly unusual leverage is beyond 4/8=0.5 and more extreme leverage would be beyond 6/8=0.75.  Case 3 (2017) appears to have a very high leverage (0.83). 
+:::
+
+::: {.callout-note collapse="true" title="3 . Solution (standardized residual)"}
 standardized residuals:
 ```{r}
 sort(rstandard(dnf_mod),decreasing=TRUE)
 ```
-None of the standardized residuals are beyond $\pm 2$.
+None of the standardized residuals are beyond $\pm 2$, so there are no extreme standardized residuals - although the -1.99923 value for Case 3 (2017) is very close!
+:::
 
+::: {.callout-note collapse="true" title="3 . Solution (influence)"}
 Cook's D:
 ```{r}
 sort(cooks.distance(dnf_mod),decreasing=TRUE)
 ```
 
-Case 4 (2017) has a Cook's D value (1.25) which is beyond the threshold of 1, indicating that this point has an unusually large influence on the regression fit. 
-
-##### a) Do any observations have unusual leverage? standardized residual? influence?
-
-```{r}
-dnf_resid |> filter(.hat > 2*(2/8))
-```
-
-2017 has leverage greater than 2/8 (8 = n), making it unusual.
-
-```{r}
-dnf_resid |> filter( abs(.std.resid) >= 2)
-```
-
-All observations have standardized residuals with absolute value less than 2. There are no observations with unusual standardized residuals.
-
-```{r}
-dnf_resid |> filter(.cooksd > 1) ## 2017 is highly influential
-```
-
-2017 has a cook's distance of 10 (much greater than 1), making it highly influential.
+Case 3 (2017) has a Cook's D value (10.0) which is way beyond the threshold of 1, indicating that this point has an unusually large influence on the regression fit.
+:::
 
 ### Consider the outlier
 
@@ -94,11 +97,15 @@ Your analysis from #3 should show that the 2017 race with a flow rate of 2649 ft
 
 #### 4. Remove the influential (2017) observation from the data set.
 
+::: {.callout-note collapse="true" title="4 . Solution (remove outier)"}
 ```{r}
 RR_dnf_data2 <- RR_dnf_data |> filter(year != 2017)
 ```
+:::
 
 ##### a) Draw a new scatterplot and show the revised line of best fit. How does this plot compare to the earlier fit?
+
+::: {.callout-note collapse="true" title="4a. Solution"}
 
 ```{r}
 ggplot(RR_dnf_data2, aes(x = flow, y = prop_DNF)) +
@@ -109,23 +116,30 @@ ggplot(RR_dnf_data2, aes(x = flow, y = prop_DNF)) +
        title = "Using flow rate to predict DNF proportion")
 ```
 
-With the 2017 data point omitted, we see a positive association between the flow rate and proportion of DNF.
+With the 2017 data point omitted, we see a positive association between the flow rate and proportion of DNF. There was a slight negative slope in the original plot. 
+:::
 
 ##### b) Give a revised interpretation for the fitted slope (in context) and discuss the effectiveness of flow as a predictor for proportion DNF in the absence of the 2017 outlier.
+
+::: {.callout-note collapse="true" title="4b. Solution"}
 
 ```{r}
 dnf_mod <- lm(prop_DNF ~ flow, RR_dnf_data2)
 summary(dnf_mod)
 ```
 
-For every 100 ft\^3/sec increase in flow, we expect about a 0.0128 increase in the proportion of DNFs.  The p-value for testing this slope (0.0431) is less that 0.05, so we have mildly convincing evidence that a faster flow rate is associated with a higher proportion of boats not finishing the race. 
+INTERPRETATION: For every 100 ft\^3/sec increase in flow, we expect about a 0.0128 increase in the proportion of DNFs.  The p-value for testing this slope (0.0431) is less that 0.05, so we have mildly convincing evidence that a faster flow rate is associated with a higher proportion of boats not finishing the race. 
 
+:::
 
 ##### c) If the flow level is 1100 ft\^3/sec and there are 200 competitors about how many DNFs can we expect?
 
+::: {.callout-note collapse="true" title="4c. Solution"}
+
 ```{r}
--0.001343 + (0.0001279*1100)
-200 * 0.139347
+-0.001338 + (0.0001279*1100)
+200 * 0.139352
 ```
 
-If flow level is 1100 ft\^3/sec and there are 200 competitors, we can expect about 27 DNFs.
+If flow rate is 1100 ft\^3/sec and there are 200 competitors, we can expect about 28 DNFs.
+:::

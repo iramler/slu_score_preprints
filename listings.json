@@ -2,6 +2,7 @@
   {
     "listing": "/by-statsds-topic.html",
     "items": [
+      "/canoeing/raisin_river_regression/index.html",
       "/basketball/wnba_data_quality/index.html",
       "/basketball/nba_draft_anova_intro/index.html",
       "/diving/world_junior_diving/index.html",
@@ -30,7 +31,6 @@
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
-      "/canoeing/raisin_river_regression/index.html",
       "/rowing/olympic_rowing_datawrangling/index.html",
       "/rowing/olympic_rowing_introstat/index.html",
       "/fitness_and_training/powerlifting_polyreg/index.html",
@@ -122,6 +122,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/canoeing/raisin_river_regression/index.html",
       "/basketball/wnba_data_quality/index.html",
       "/basketball/nba_draft_anova_intro/index.html",
       "/diving/world_junior_diving/index.html",
@@ -150,7 +151,6 @@
       "/skating/ice_skating_olympics_men_2008-2022/index.html",
       "/canoeing/canoe_racing_clinton_distributions/index.html",
       "/canoeing/canoe_racing_clinton/index.html",
-      "/canoeing/raisin_river_regression/index.html",
       "/rowing/olympic_rowing_datawrangling/index.html",
       "/rowing/olympic_rowing_introstat/index.html",
       "/fitness_and_training/powerlifting_polyreg/index.html",
@@ -199,9 +199,9 @@
   {
     "listing": "/canoeing/index.html",
     "items": [
+      "/canoeing/raisin_river_regression/index.html",
       "/canoeing/canoe_racing_clinton_distributions/index.html",
-      "/canoeing/canoe_racing_clinton/index.html",
-      "/canoeing/raisin_river_regression/index.html"
+      "/canoeing/canoe_racing_clinton/index.html"
     ]
   },
   {
