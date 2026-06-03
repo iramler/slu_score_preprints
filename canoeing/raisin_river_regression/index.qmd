@@ -13,7 +13,7 @@ author:
 format: 
       html:
           embed-resources: false
-date: "June 11, 2025"
+date: "June 3, 2026"
 description: "Investigate how water flow relates to race dropout rates in the Raisin River Race by fitting a linear regression model."
 editor: 
   canonical: true
@@ -45,15 +45,15 @@ For those interested in learning more about canoe racing, watch this informative
 </iframe>
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
-This could serve as an in class activity and should take roughly a half an hour to complete.
+This could serve as an in class activity and should take between 30 and 45 minutes to complete.
 :::
 
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, students will:
 
-1.  Increase ability to find and investigate outliers in a dataset.
+1.  Increase ability to find and investigate outliers and unusual points in a dataset using leverage, standardized residuals, and Cook's D.
 
-2.  Be able remove influential observations from a dataset.
+2.  Be able remove influential observations from a dataset and rerun an analysis to see how resutls are affected.
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
@@ -61,7 +61,7 @@ Students should have knowledge of how to fit linear regression models and famili
 :::
 
 ::: {.callout-note collapse="true" title="Technology Requirements" appearance="minimal"}
-Students will need to use R or other stat software like Minitab.
+Students will need to use R or other statistics software like Minitab.
 :::
 
 ## Data
@@ -77,8 +77,8 @@ The `raisin_river_DNF.csv` data set includes data from Paddlestats and the Raisi
 | Variable | Description                         |
 |----------|-------------------------------------|
 | year     | Year of Raisin River Race           |
-| prop_DNF | The ratio of DNFs at the race.      |
-| flow     | The flow of the water for that year |
+| prop_DNF | Proportion of boats that did not finish (DNF) the race.      |
+| flow     | Flow of the water (indicative of water level) in ft\^3/sec |
 
 </details>
 
@@ -90,11 +90,11 @@ The data are compiled from the [Paddlestats Website](https://paddlestats.net/rac
 
 -   [Module Worksheet (R Version)](raisin_river_module_worksheet.qmd)
 
--   [Module Worksheet (Other Software Version)](RaisinRiver_Module_Worksheet.docx)
+-   [Module Worksheet (Generic software Version)](raisin_river_module_Worksheet.docx)
 
 -   [Solutions to Worksheet (R/Quarto Version)](raisin_river_module_SOLUTIONS.qmd)
 
--   [Solutions to Worksheet (PDF)](raisin_river_module_SOLUTIONS.pdf)
+-   [Solutions to Worksheet (Word)](raisin_river_module_SOLUTIONS.docx)
 
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Upon conclusion of this module, students will have an understanding of how to detect outliers in their data set, the influence these observations can have, and how to remove them if appropriate.
