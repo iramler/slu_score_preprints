@@ -90,7 +90,7 @@ The data are compiled from the [Paddlestats Website](https://paddlestats.net/rac
 
 -   [Module Worksheet (R Version)](raisin_river_module_worksheet.qmd)
 
--   [Module Worksheet (Generic software Version)](raisin_river_module_Worksheet.docx)
+-   [Module Worksheet (Generic software Version)](raisin_river_module_worksheet.docx)
 
 -   [Solutions to Worksheet (R/Quarto Version)](raisin_river_module_SOLUTIONS.qmd)
 
