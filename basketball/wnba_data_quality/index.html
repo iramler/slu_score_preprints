@@ -977,20 +977,8 @@ cookieconsent.run({
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1051,275 +1039,156 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The WNBA worksheet introduces the idea of using team records from earlier in the season to predict which teams will make the playoffs. Most of the time, we would expect teams with better records halfway through the season to have a higher chance of making the playoffs, but is this always the case? Just as importantly, how do we know whether the data we are using are complete and reliable enough for this analysis? By completing this worksheet, you will work through several data cleaning steps involving WNBA team-game data and then use the cleaned data to investigate the relationship between midseason performance and playoff outcomes.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Background on the WNBA">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Background on the WNBA
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The Women’s National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women’s basketball at the professional level. The league’s inaugural season began in 1997 with eight teams.</p>
-<p>Throughout its history, the WNBA has been a pioneering force in women’s sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, typically consisting of 12 or 13 teams. As of 2026, the league consists of 15 teams with plans to expand further. The table below shows the size of the league since its inception.</p>
-<details>
-<summary>
-<b> WNBA expansion and contraction</b>
-</summary>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Season(s)</th>
-<th>No.&nbsp;of teams</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1997</td>
-<td>8</td>
-</tr>
-<tr class="even">
-<td>1998</td>
-<td>10</td>
-</tr>
-<tr class="odd">
-<td>1999</td>
-<td>12</td>
-</tr>
-<tr class="even">
-<td>2000–2002</td>
-<td>16</td>
-</tr>
-<tr class="odd">
-<td>2003</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>2004–2005</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2006</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>2007</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2008</td>
-<td>14</td>
-</tr>
-<tr class="even">
-<td>2009</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2010–2024</td>
-<td>12</td>
-</tr>
-<tr class="even">
-<td>2025</td>
-<td>13</td>
-</tr>
-<tr class="odd">
-<td>2026</td>
-<td>15</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>The WNBA’s playoff structure typically features the top eight teams from the regular season standings advancing to the postseason. The playoffs are organized into single-elimination rounds, culminating in the WNBA Finals, where the last two teams standing compete in a best-of-five series to determine the league champion.</p>
-<p>Beyond its competitive play, the WNBA has been a leader in promoting social justice initiatives and advocating for equality both on and off the court. It continues to grow in popularity and influence, contributing significantly to the growth of women’s basketball worldwide.</p>
-<p>For additonal background about the WNBA, please watch the following video:</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="WNBA Format Video">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>WNBA Format Video
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The video below provides a brief overview of the WNBA league structure and playoff format.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L7xwOsGFga8?si=NzZkTZcUk4kEGZ3m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity Length
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Depending on the background of the student, this activity is designed for approximately <strong>50–75 minutes</strong> of class time or as an outside of class activity.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of this activity, you will be able to:</p>
-<ul>
-<li><p>Use various <code>dplyr</code>, <code>tidyr</code>, and <code>lubridate</code> package functions to clean a data set for further use.</p></li>
-<li><p>Identify data quality issues, such as inconsistent team names and missing game records.</p></li>
-<li><p>Explain how missing or incomplete data can affect an analysis.</p></li>
-<li><p>Create and interpret a two-way table that use custom built variables.</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Technology requirement:</p>
-<ul>
-<li><p><code>R</code> version: The activity handout requires knowledge of Quarto and the following tidyverse packages: <code>dplyr</code>, <code>tidyr</code>, <code>lubridate</code>, and <code>ggplot</code>.</p></li>
-<li><p><code>Python</code> version: The activity handout requires knowledge of Jupyter notebooks and the following packages: <code>pandas</code>, <code>numpy</code>, <code>plotnine</code>, and <code>statsmodels</code>.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The <code>wnba_data</code> data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows:</p>
-<details>
-<summary>
-<b> Data: Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 76%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Variable</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>game_id</td>
-<td>game id number</td>
-</tr>
-<tr class="even">
-<td>season</td>
-<td>season number</td>
-</tr>
-<tr class="odd">
-<td>season_type</td>
-<td>binary predictor; 2 if regular season game; 3 if playoff game</td>
-</tr>
-<tr class="even">
-<td>game_date</td>
-<td>date of the game</td>
-</tr>
-<tr class="odd">
-<td>team_id</td>
-<td>team id number</td>
-</tr>
-<tr class="even">
-<td>team_display_name</td>
-<td>full team name (name and city)</td>
-</tr>
-<tr class="odd">
-<td>team_winner</td>
-<td>Boolean; True if the team won the game</td>
-</tr>
-<tr class="even">
-<td>opponent_team_id</td>
-<td>id number of the opponent</td>
-</tr>
-<tr class="odd">
-<td>team_home_away</td>
-<td>Where the game was played; either “home” or “away”</td>
-</tr>
-</tbody>
-</table>
-</details>
-<p>Download data: <a href="wnba_data.csv">wnba_data.csv</a></p>
-<section id="data-source" class="level4">
-<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p>Gilani S, Hutchinson G (2022). <em>wehoop: Access Women’s Basketball Play by Play Data</em>. R package version 1.5.0, <a href="https://CRAN.R-project.org/package=wehoop" class="uri">https://CRAN.R-project.org/package=wehoop</a>.</p>
-</section>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p>We offer worksheets (and their solutions) in Quarto (using <code>R</code>) and Jupyter Notebook (using <code>python</code>) formats.</p>
-<p><strong>R versions</strong></p>
-<p><a href="wnba_boxscore_worksheet-R.qmd">Class handout - Quarto</a></p>
-<p><a href="wnba_boxscore_worksheet_key-R.qmd">Class handout - Quarto - with solutions</a></p>
-<p><strong>Python versions</strong></p>
-<p><a href="wnba_boxscore_worksheet-Python.ipynb">Class handout - Quarto</a></p>
-<p><a href="wnba_boxscore_worksheet_key-Python.ipynb">Class handout - Quarto - with solutions</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Exploration of the WNBA data revealed that some seasons had incomplete (i.e., were missing) game records. We identified this issue by tallying the number of games recorded for each team within each season and noticing that the totals were occassionally inconsistent across teams.</p>
-<p>After identifying these data quality issues, we considered several possible ways to continue the analysis. For example, we could remove seasons with incomplete records, manually fill in missing games using outside sources, or use a different data source. Each approach involves tradeoffs between simplicity, accuracy, and the amount of additional work required.</p>
-<p>After choosing a data-cleaning strategy, we used the cleaned data to create a two-way table comparing whether teams were ranked in the top eight at midseason with whether they ultimately made the playoffs. This analysis illustrates how data cleaning decisions can directly affect the conclusions we draw from sports data.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
-<p>Thumbnail image: “WNBA Barnstar.png” by Mungo Kitsch, licensed under CC BY-SA 4.0 via <a href="https://commons.wikimedia.org/wiki/File:WNBA_Barnstar.png" target="_blank">Wikimedia Commons</a>. The image incorporates a WNBA logo element; use does not imply endorsement by the WNBA.</p>
+<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
+<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/basketball/wnba_data_quality/" target="_blank">https://modules.scorenetwork.org/basketball/wnba_data_quality/</a></p>
+<!--
+
+## Module
+
+Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+
+### Introduction
+
+The WNBA worksheet introduces the idea of using team records from earlier in the season to predict which teams will make the playoffs. Most of the time, we would expect teams with better records halfway through the season to have a higher chance of making the playoffs, but is this always the case? Just as importantly, how do we know whether the data we are using are complete and reliable enough for this analysis? By completing this worksheet, you will work through several data cleaning steps involving WNBA team-game data and then use the cleaned data to investigate the relationship between midseason performance and playoff outcomes.
 
 
-</section>
-</section>
+::: {.callout-note collapse="true" title="Background on the WNBA" appearance="minimal"}
+The Women's National Basketball Association (WNBA) is a professional basketball league in the United States that was founded in 1996. It was established by the NBA as a counterpart to promote women's basketball at the professional level. The league's inaugural season began in 1997 with eight teams.
+
+Throughout its history, the WNBA has been a pioneering force in women's sports, providing a platform for talented athletes to showcase their skills and inspire fans globally. The league has expanded and contracted over the years and, typically consisting of 12 or 13 teams. As of 2026, the league consists of 15 teams with plans to expand further. The table below shows the size of the league since its inception.
+
+<details>
+
+<summary><b> WNBA expansion and contraction</b></summary>
+
+| Season(s)   | No. of teams |
+|-------------|--------------|
+| 1997        | 8            |
+| 1998        | 10           |
+| 1999        | 12           |
+| 2000–2002   | 16           |
+| 2003        | 14           |
+| 2004–2005   | 13           |
+| 2006        | 14           |
+| 2007        | 13           |
+| 2008        | 14           |
+| 2009        | 13           |
+| 2010–2024   | 12           |
+| 2025        | 13           |
+| 2026        | 15           |
+
+</details>
+
+The WNBA's playoff structure typically features the top eight teams from the regular season standings advancing to the postseason. The playoffs are organized into single-elimination rounds, culminating in the WNBA Finals, where the last two teams standing compete in a best-of-five series to determine the league champion.
+
+Beyond its competitive play, the WNBA has been a leader in promoting social justice initiatives and advocating for equality both on and off the court. It continues to grow in popularity and influence, contributing significantly to the growth of women's basketball worldwide.
+
+For additonal background about the WNBA, please watch the following video:
+
+::: {.callout-note collapse="true" title="WNBA Format Video" appearance="minimal"}
+The video below provides a brief overview of the WNBA league structure and playoff format.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L7xwOsGFga8?si=NzZkTZcUk4kEGZ3m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+:::
+
+:::
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+Depending on the background of the student, this activity is designed for approximately **50–75 minutes** of class time or as an outside of class activity.
+:::
+
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, you will be able to:
+
+-   Use various `dplyr`, `tidyr`, and `lubridate` package functions to clean a data set for further use.
+
+-   Identify data quality issues, such as inconsistent team names and missing game records.
+
+-   Explain how missing or incomplete data can affect an analysis.
+
+-   Create and interpret a two-way table that use custom built variables.
+:::
+
+
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+Technology requirement: 
+
+- `R` version: The activity handout requires knowledge of Quarto and the following tidyverse packages: `dplyr`, `tidyr`, `lubridate`, and `ggplot`.
+
+- `Python` version: The activity handout requires knowledge of Jupyter notebooks and the following packages: `pandas`, `numpy`, `plotnine`, and `statsmodels`.
+:::
+
+### Data
+
+The `wnba_data` data set contains 8920 rows and 9 columns. Each row represents a game played by a WNBA team in one of the 2003 to 2022 regular seasons. Thus, each game is associated with two rows: one for each team. The columns are as follows:
+
+<details>
+
+<summary><b> Data: Variable Descriptions</b></summary>
+
+| **Variable**      | **Description**                                               |
+|-------------------|---------------------------------------------------------------|
+| game_id           | game id number                                                |
+| season            | season number                                                 |
+| season_type       | binary predictor; 2 if regular season game; 3 if playoff game |
+| game_date         | date of the game                                              |
+| team_id           | team id number                                                |
+| team_display_name | full team name (name and city)                                |
+| team_winner       | Boolean; True if the team won the game                        |
+| opponent_team_id  | id number of the opponent                                     |
+| team_home_away    | Where the game was played; either "home" or "away"            |
+
+</details>
+
+Download data: [wnba_data.csv](wnba_data.csv)
+
+#### Data Source
+
+Gilani S, Hutchinson G (2022). *wehoop: Access Women's Basketball Play by Play Data*. R package version 1.5.0, <https://CRAN.R-project.org/package=wehoop>.
+
+### Materials
+
+We offer worksheets (and their solutions) in Quarto (using `R`) and Jupyter Notebook (using `python`) formats.
+
+**R versions**
+
+[Class handout - Quarto](wnba_boxscore_worksheet-R.qmd)
+
+[Class handout - Quarto - with solutions](wnba_boxscore_worksheet_key-R.qmd)
+
+
+**Python versions**
+
+[Class handout - Quarto](wnba_boxscore_worksheet-Python.ipynb)
+
+[Class handout - Quarto - with solutions](wnba_boxscore_worksheet_key-Python.ipynb)
+
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+Exploration of the WNBA data revealed that some seasons had incomplete (i.e., were missing) game records. We identified this issue by tallying the number of games recorded for each team within each season and noticing that the totals were occassionally inconsistent across teams.
+
+After identifying these data quality issues, we considered several possible ways to continue the analysis. For example, we could remove seasons with incomplete records, manually fill in missing games using outside sources, or use a different data source. Each approach involves tradeoffs between simplicity, accuracy, and the amount of additional work required.
+
+After choosing a data-cleaning strategy, we used the cleaned data to create a two-way table comparing whether teams were ranked in the top eight at midseason with whether they ultimately made the playoffs. This analysis illustrates how data cleaning decisions can directly affect the conclusions we draw from sports data.
+:::
+
+### Acknowledgements
+
+Thumbnail image: “WNBA Barnstar.png” by Mungo Kitsch, licensed under CC BY-SA 4.0 via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WNBA_Barnstar.png){target="_blank"}. The image incorporates a WNBA logo element; use does not imply endorsement by the WNBA. 
+
+## How to Cite
+
+To cite this  cited as:If you use this module in your work, please cite it as follows:
+
+Varin, K., & Ramler, I. (2026, May 29). Can Midseason Records Predict WNBA Playoff Teams?. "The SCORE Network." <https://doi.org/10.17605/OSF.IO/F4BXG>
+
+You can include this citation directly in your references or bibliography.
+
+-->
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
