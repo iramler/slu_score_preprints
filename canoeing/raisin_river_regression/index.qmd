@@ -9,7 +9,7 @@ author:
     email: rlock@stlawu.edu
     affiliation:
       - ref: slu
-
+resources: raisin_river_module_SOLUTIONS.pdf
 format: 
       html:
           embed-resources: false

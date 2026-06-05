@@ -24,6 +24,13 @@ software:
 image: WNBA_Barnstar.png
 ---
 
+
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/basketball/wnba_data_quality/](https://modules.scorenetwork.org/basketball/wnba_data_quality/){target="_blank"}
+
+<!--
+
 ## Module
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
@@ -159,3 +166,12 @@ After choosing a data-cleaning strategy, we used the cleaned data to create a tw
 
 Thumbnail image: “WNBA Barnstar.png” by Mungo Kitsch, licensed under CC BY-SA 4.0 via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WNBA_Barnstar.png){target="_blank"}. The image incorporates a WNBA logo element; use does not imply endorsement by the WNBA. 
 
+## How to Cite
+
+To cite this  cited as:If you use this module in your work, please cite it as follows:
+
+Varin, K., & Ramler, I. (2026, May 29). Can Midseason Records Predict WNBA Playoff Teams?. "The SCORE Network." <https://doi.org/10.17605/OSF.IO/F4BXG>
+
+You can include this citation directly in your references or bibliography.
+
+-->
