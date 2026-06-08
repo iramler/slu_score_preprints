@@ -8,7 +8,7 @@
 
 <meta name="author" content="Norah Kuduk">
 <meta name="author" content="Ivan Ramler">
-<meta name="dcterms.date" content="2026-05-14">
+<meta name="dcterms.date" content="2026-06-08">
 <meta name="description" content="Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix">
 
 <title>Analyzing Lap Times for the 2023 F1 Miami Grand Prix – SLU SCORE Module Preprint Repository</title>
@@ -982,13 +982,7 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module" id="toc-module" class="nav-link active" data-scroll-target="#module">Module</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -1039,7 +1033,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 14, 2026</p>
+      <p class="date">June 8, 2026</p>
     </div>
   </div>
   
@@ -1051,184 +1045,121 @@ cookieconsent.run({
 </header>
 
 
-<section id="module" class="level2">
-<h2 class="anchored" data-anchor-id="module">Module</h2>
-<p>Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="New to F1 Racing? Check out this video">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>New to F1 Racing? Check out this video
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SSdsncLXLYs?si=ajv4Ire3M9mlmbtN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-</div>
-</div>
-</div>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>Formula 1 (F1) racing is the highest class of single-seater auto racing sanctioned by the Fédération Internationale de l’Automobile (FIA). Each season features a series of races, known as Grand Prix, which are held in a variety of countries and on different types of circuits. Each circuit has its own characteristics that make the race unique, including the overall track layout, location, corners, weather conditions, and opportunities for overtaking. Each season, teams and drivers compete for the World Constructors’ Championship and the World Drivers’ Championship, respectively. For more information about the sport, visit F1’s Wikipedia page <a href="https://en.wikipedia.org/wiki/Formula_One" target="_blank">here</a> or the official Formula 1 website <a href="https://www.formula1.com/" target="_blank">here</a>.</p>
-<p>In this activity, students analyze lap-time data for Max Verstappen in the <a href="https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix" target="&quot;_blank">2023 Miami Grand Prix</a> Verstappen started the race in ninth position but won after moving through the field. The race was unusually clean: all 20 cars that started the race finished it, and there were no major interruptions such as safety cars or red flags. (At the time of the race, it was only the 11th time in F1’s history where all cars that started the race crossed the finish line.) This makes the race useful for studying lap times because one common source of unusually slow laps - crashes or race stoppages - did not occur.</p>
-<p>Although a driver’s lap times are usually similar from lap to lap, they are not identical. Lap times can be affected by fuel load, tire wear, traffic, overtaking, pit stops, and changes in race conditions. One important feature of Verstappen’s race strategy was his pit stop. Most drivers in this race made only one pit stop, and Verstappen’s stop occurred late in the race to change tires. A pit stop can create an unusually slow lap because the driver must slow down to enter pit lane, follow the pit-lane speed limit, stop for the tire change, and then accelerate back onto the track. Depending on where the pit lane crosses the start/finish line, this time loss may appear on the lap when the driver enters pit lane, the following lap, or both. Other unusual laps may occur near the beginning of the race, when cars are closer together and drivers are fighting for position.</p>
-<p>In this worksheet, students first analyze Verstappen’s lap times as a single quantitative variable using a histogram, summary statistics, and the 1.5 × IQR rule for identifying potential outliers. They then incorporate lap number to investigate when the unusual lap times occurred and use race context to explain why those laps were slower than the rest.</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Activity Length">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Activity Length
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This activity can serve as an in-class activity and should take roughly 30-45 minutes to complete.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Learning Objectives">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Learning Objectives
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>By the end of this activity, students should be able to:</p>
-<ol type="1">
-<li><p>Identify the observational units in a lap-level racing dataset.</p></li>
-<li><p>Describe the shape, center, spread, and unusual observations in a distribution using a histogram.</p></li>
-<li><p>Use summary statistics and the 1.5 × IQR rule to identify potential outliers in a quantitative variable.</p></li>
-<li><p>Explain how adding a time-order variable, such as lap number, can provide context that is not visible in a histogram.</p></li>
-<li><p>Use subject-matter context to interpret unusual observations in real data.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Methods">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This activity is a reinforcement module that assumes students have already been introduced to the following topics:</p>
-<ol type="1">
-<li><p>Histograms as graphical displays of quantitative variables.</p></li>
-<li><p>Describing distributions using shape, center, spread, and unusual observations.</p></li>
-<li><p>Numerical summaries, such as the mean, median, quartiles, interquartile range, standard deviation, minimum, and maximum.</p></li>
-<li><p>Outliers and the 1.5 × IQR rule for identifying potential outliers. (Note that the activity can be modified to use z-scores for outlier detection.)</p></li>
-<li><p>Scatterplots or time-order plots for displaying the relationship between two quantitative variables.</p></li>
-</ol>
-<p><strong>Technology requirement:</strong></p>
-<ul>
-<li><p>One version of the activity handout provides the histogram, summary statistics, lap-time plot, and race-track map, so no statistical software is required.</p></li>
-<li><p>A second set of handouts is also made available where students need to produce the plots and summary statistics from the raw dataset.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p>The data set contains 57 rows and 7 columns. Each row represents a single lap by Max Verstappen who competed in the 2023 F1 Miami Grand Prix. This data is a subset of the file <a href="https://data.scorenetwork.org/motor_sports/f1_miami_grand_prix_2023.html" target="_blank">miami2023_data.csv</a> from the <a href="https://data.scorenetwork.org/" target="_blank">SCORE Network Data Repository</a>.</p>
-<p>Download data used: <a href="verstappen_2023_miami.csv">verstappen_2023_miami.csv</a></p>
+<p>This module is now fully published and available on the SCORE Network Module Repository.</p>
+<p>Click the following link to access the materials (opens a new tab): <a href="https://modules.scorenetwork.org/motor_sports/formula1_laps/" target="_blank">https://modules.scorenetwork.org/motor_sports/formula1_laps//</a></p>
+<!--
+
+## Module
+
+::: {.callout-note collapse="true" title="New to F1 Racing? Check out this video" appearance="minimal"}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SSdsncLXLYs?si=ajv4Ire3M9mlmbtN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+:::
+
+### Introduction
+
+Formula 1 (F1) racing is the highest class of single-seater auto racing sanctioned by the Fédération Internationale de l'Automobile (FIA). Each season features a series of races, known as Grand Prix, which are held in a variety of countries and on different types of circuits. Each circuit has its own characteristics that make the race unique, including the overall track layout, location, corners, weather conditions, and opportunities for overtaking. Each season, teams and drivers compete for the World Constructors' Championship and the World Drivers' Championship, respectively. For more information about the sport, visit F1's Wikipedia page [here](https://en.wikipedia.org/wiki/Formula_One){target="_blank"} or the official Formula 1 website [here](https://www.formula1.com/){target="_blank"}.
+
+In this activity, students analyze lap-time data for Max Verstappen in the [2023 Miami Grand Prix](https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix){target="\"_blank"} Verstappen started the race in ninth position but won after moving through the field. The race was unusually clean: all 20 cars that started the race finished it, and there were no major interruptions such as safety cars or red flags. (At the time of the race, it was only the 11th time in F1's history where all cars that started the race crossed the finish line.) This makes the race useful for studying lap times because one common source of unusually slow laps - crashes or race stoppages - did not occur.
+
+Although a driver's lap times are usually similar from lap to lap, they are not identical. Lap times can be affected by fuel load, tire wear, traffic, overtaking, pit stops, and changes in race conditions. One important feature of Verstappen's race strategy was his pit stop. Most drivers in this race made only one pit stop, and Verstappen's stop occurred late in the race to change tires. A pit stop can create an unusually slow lap because the driver must slow down to enter pit lane, follow the pit-lane speed limit, stop for the tire change, and then accelerate back onto the track. Depending on where the pit lane crosses the start/finish line, this time loss may appear on the lap when the driver enters pit lane, the following lap, or both. Other unusual laps may occur near the beginning of the race, when cars are closer together and drivers are fighting for position.
+
+In this worksheet, students first analyze Verstappen's lap times as a single quantitative variable using a histogram, summary statistics, and the 1.5 × IQR rule for identifying potential outliers. They then incorporate lap number to investigate when the unusual lap times occurred and use race context to explain why those laps were slower than the rest.
+
+::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
+This activity can serve as an in-class activity and should take roughly 30-45 minutes to complete.
+:::
+
+::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
+By the end of this activity, students should be able to:
+
+1. Identify the observational units in a lap-level racing dataset.
+
+2. Describe the shape, center, spread, and unusual observations in a distribution using a histogram.
+
+3. Use summary statistics and the 1.5 × IQR rule to identify potential outliers in a quantitative variable.
+
+4. Explain how adding a time-order variable, such as lap number, can provide context that is not visible in a histogram.
+
+5. Use subject-matter context to interpret unusual observations in real data.
+:::
+
+::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
+This activity is a reinforcement module that assumes students have already been introduced to the following topics:
+
+1. Histograms as graphical displays of quantitative variables.
+
+2. Describing distributions using shape, center, spread, and unusual observations.
+
+3. Numerical summaries, such as the mean, median, quartiles, interquartile range, standard deviation, minimum, and maximum.
+
+4. Outliers and the 1.5 × IQR rule for identifying potential outliers. (Note that the activity can be modified to use z-scores for outlier detection.)
+
+5. Scatterplots or time-order plots for displaying the relationship between two quantitative variables.
+
+**Technology requirement:** 
+
+- One version of the activity handout provides the histogram, summary statistics, lap-time plot, and race-track map, so no statistical software is required. 
+
+- A second set of handouts is also made available where students need to produce the plots and summary statistics from the raw dataset.
+:::
+
+### Data
+
+The data set contains 57 rows and 7 columns. Each row represents a single lap by Max Verstappen who competed in the 2023 F1 Miami Grand Prix. This data is a subset of the file [miami2023_data.csv](https://data.scorenetwork.org/motor_sports/f1_miami_grand_prix_2023.html){target="_blank"} from the [SCORE Network Data Repository](https://data.scorenetwork.org/){target="_blank"}.
+
+Download data used: [verstappen_2023_miami.csv](verstappen_2023_miami.csv)
+
 <details>
-<summary>
-<b>Variable Descriptions</b>
-</summary>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>driverId</td>
-<td>Unique identifier for each driver</td>
-</tr>
-<tr class="even">
-<td>driverName</td>
-<td>The full name of the driver</td>
-</tr>
-<tr class="odd">
-<td>constructorId</td>
-<td>Unique identifier for each constructor</td>
-</tr>
-<tr class="even">
-<td>constructorName</td>
-<td>Commonly used name of each constructor</td>
-</tr>
-<tr class="odd">
-<td>lap</td>
-<td>The lap number</td>
-</tr>
-<tr class="even">
-<td>lapTime</td>
-<td>The time taken to complete the lap, in seconds</td>
-</tr>
-<tr class="odd">
-<td>lapPosition</td>
-<td>The position of the driver at the end of the lap</td>
-</tr>
-</tbody>
-</table>
+
+<summary><b>Variable Descriptions</b></summary>
+
+| Variable        | Description                                      |
+|-----------------|--------------------------------------------------|
+| driverId        | Unique identifier for each driver                |
+| driverName      | The full name of the driver                      |
+| constructorId   | Unique identifier for each constructor           |
+| constructorName | Commonly used name of each constructor           |
+| lap             | The lap number                                   |
+| lapTime         | The time taken to complete the lap, in seconds   |
+| lapPosition     | The position of the driver at the end of the lap |
+
 </details>
-<section id="data-source" class="level4">
-<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
-<p><a href="https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020" target="_blank">Formula 1 World Championship (1950 - 2023)</a></p>
-</section>
-</section>
-<section id="materials" class="level3">
-<h3 class="anchored" data-anchor-id="materials">Materials</h3>
-<p><strong>No Tech Required Version</strong></p>
-<p><a href="Miami2023Worksheet.docx">Class handout</a></p>
-<p><a href="Miami2023WorksheetKey.docx">Class handout with sample solutions</a></p>
-<p><strong>Statistical Software Required Version</strong></p>
-<p><a href="Miami2023Worksheet-Tech_Needed.docx">Class handout - Tech Required</a></p>
-<p><a href="Miami2023WorksheetKey-Tech_Needed.docx">Class handout with sample solutions - Tech Required</a></p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled" title="Conclusion">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Conclusion
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>This activity illustrates how different statistical displays can answer different questions about the same variable. The histogram helps students describe the overall distribution of Verstappen’s lap times and identify unusually slow laps. However, the histogram does not show when those laps occurred. By adding lap number, students can connect the unusual lap times to meaningful moments in the race, such as the first lap and Verstappen’s pit stop. This reinforces the idea that identifying outliers is only the first step; interpreting them often requires additional variables and subject-matter context.</p>
-</div>
-</div>
-</div>
-</section>
-</section>
+
+#### Data Source
+
+[Formula 1 World Championship (1950 - 2023)](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020){target="_blank"}
+
+### Materials
+
+**No Tech Required Version**
+
+[Class handout](Miami2023Worksheet.docx)
+
+[Class handout with sample solutions](Miami2023WorksheetKey.docx)
+
+**Statistical Software Required Version**
+
+[Class handout - Tech Required](Miami2023Worksheet-Tech_Needed.docx)
+
+[Class handout with sample solutions - Tech Required](Miami2023WorksheetKey-Tech_Needed.docx)
+
+
+
+::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
+This activity illustrates how different statistical displays can answer different questions about the same variable. The histogram helps students describe the overall distribution of Verstappen's lap times and identify unusually slow laps. However, the histogram does not show when those laps occurred. By adding lap number, students can connect the unusual lap times to meaningful moments in the race, such as the first lap and Verstappen's pit stop. This reinforces the idea that identifying outliers is only the first step; interpreting them often requires additional variables and subject-matter context.
+:::
+
+-->
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li><p>Thumbnail photo: Segar, Mike. <em>Verstappen Wins Miami in Formula 1’s Latest Red Bull Runaway</em>. Reuters. <em>The New York Times</em>, 7 May 2023. <a href="https://www.nytimes.com/2023/05/07/sports/autoracing/miami-grand-prix-results.html" class="uri">https://www.nytimes.com/2023/05/07/sports/autoracing/miami-grand-prix-results.html</a></p></li>
-<li><p>Track Map: By <a href="//commons.wikimedia.org/w/index.php?title=User:GabrielStella&amp;action=edit&amp;redlink=1" class="new" title="User:GabrielStella (page does not exist)">GabrielStella</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=103863916">Link</a></p></li>
+<li>Thumbnail photo: Segar, Mike. <em>Verstappen Wins Miami in Formula 1’s Latest Red Bull Runaway</em>. Reuters. <em>The New York Times</em>, 7 May 2023. <a href="https://www.nytimes.com/2023/05/07/sports/autoracing/miami-grand-prix-results.html" class="uri">https://www.nytimes.com/2023/05/07/sports/autoracing/miami-grand-prix-results.html</a></li>
 </ul>
+<!--
+
+- Track Map: By GabrielStella - [Own work]{.int-own-work lang="en"}, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=103863916">Link</a>
+
+-->
 
 
 </section>
