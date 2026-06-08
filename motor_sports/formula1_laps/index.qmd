@@ -1,6 +1,6 @@
 ---
 title: "Analyzing Lap Times for the 2023 F1 Miami Grand Prix"
-date: May 14, 2026
+date: June 8, 2026
 description: Investigating lap time statistics for Max Verstappen during the 2023 F1 Miami Grand Prix
 author:
   - name: Norah Kuduk
@@ -20,9 +20,14 @@ categories:
 image: 07F1-miami-final-tfpl-superJumbo.webp
 ---
 
-## Module
 
-Please note that these materials have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+This module is now fully published and available on the SCORE Network Module Repository.
+
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/motor_sports/formula1_laps//](https://modules.scorenetwork.org/motor_sports/formula1_laps/){target="_blank"}
+
+<!--
+
+## Module
 
 ::: {.callout-note collapse="true" title="New to F1 Racing? Check out this video" appearance="minimal"}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SSdsncLXLYs?si=ajv4Ire3M9mlmbtN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -122,8 +127,14 @@ Download data used: [verstappen_2023_miami.csv](verstappen_2023_miami.csv)
 This activity illustrates how different statistical displays can answer different questions about the same variable. The histogram helps students describe the overall distribution of Verstappen's lap times and identify unusually slow laps. However, the histogram does not show when those laps occurred. By adding lap number, students can connect the unusual lap times to meaningful moments in the race, such as the first lap and Verstappen's pit stop. This reinforces the idea that identifying outliers is only the first step; interpreting them often requires additional variables and subject-matter context.
 :::
 
+-->
+
 ## References
 
 - Thumbnail photo: Segar, Mike. *Verstappen Wins Miami in Formula 1's Latest Red Bull Runaway*. Reuters. *The New York Times*, 7 May 2023. <https://www.nytimes.com/2023/05/07/sports/autoracing/miami-grand-prix-results.html>
 
-- Track Map: By <a href="//commons.wikimedia.org/w/index.php?title=User:GabrielStella&amp;action=edit&amp;redlink=1" class="new" title="User:GabrielStella (page does not exist)">GabrielStella</a> - [Own work]{.int-own-work lang="en"}, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=103863916">Link</a>
+<!--
+
+- Track Map: By GabrielStella - [Own work]{.int-own-work lang="en"}, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=103863916">Link</a>
+
+-->
