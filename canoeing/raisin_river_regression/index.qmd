@@ -53,7 +53,7 @@ By the end of this activity, students will:
 
 1.  Increase ability to find and investigate outliers and unusual points in a dataset using leverage, standardized residuals, and Cook's D.
 
-2.  Be able remove influential observations from a dataset and rerun an analysis to see how resutls are affected.
+2.  Practice removing an influential observation from a dataset and seeing how results are affected.
 :::
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
