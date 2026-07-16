@@ -31,24 +31,37 @@ image: nba_top_picks.jpg
 
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
+::: {.callout-note collapse="true" title="Facilitation notes" appearance="minimal"}
+- This module is suitable for an introductory or intermediate statistics course that covers one-wat ANOVA.
+
+- As a reinforcement module, students should have prior knowledge of conducting one-way analysis of variance tests and the implications.
+
+  - Students should be able to explain the different components of an ANOVA table as well as familiarity with the formulas necessary to complete the table or with using software to obtain the needed output.
+
+- This could serve as an in class activity and should take roughly 30-45 minutes to complete (depending on the use of software).
+
+- There are three versions of the handout available in @sec-materials:
+
+  - In one version, no explicit technology is necessary other than a calculator.
+
+  - The other two use eithero R or Python to visualize the data and produce the ANOVA output.
+
+- Students should be provided with the data file (.csv) provided in @sec-data and one of the handouts (software choice determines which handot to use).
+:::
+
 ### Introduction
 
 Each year, the National Basketball Association (NBA) holds a draft, where prospective basketball players are able to be chosen to join one of the 30 professional teams across the United States and Canada.
 
-
-
 The draft is comprised of 60 players and takes place over two rounds of 30 selections. Teams pick players in an order based on performance from the previous season, with teams that performed poorly getting earlier picks in order to create a seemingly more level playing field. It is important to note that there were not always 30 players selected in each round; the number made its way up to 30 as more teams were added into the NBA.
-
 
 This activity focuses on players selected in the first round of the NBA Draft between 1990 and 2021. Students compare three groups of first-round picks: picks 1--10, picks 11--20, and picks 21--30. The response variable is average career minutes played per game.
 
-::: {.callout-note collapse="true" title="Optional: Additional NBA Draft Background" appearance="minimal"}
-
-
+:::: {.callout-note collapse="true" title="Optional: Additional NBA Draft Background" appearance="minimal"}
 ::: {.callout-note collapse="true" title="4 Minute Videofrom 2018 explaining the draft" appearance="minimal"}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dWMedbrGDYU?si=oPlUYpwebx5tiIBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dWMedbrGDYU?si=oPlUYpwebx5tiIBZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+</iframe>
 :::
 
 The NBA Draft is designed to help distribute new talent across the league. Teams that miss the playoffs or finish with weaker records generally have access to earlier picks, although the first several picks are determined through the NBA Draft Lottery. Teams can also trade draft picks, so the team making a selection may not be the team that originally earned that pick.
@@ -56,7 +69,7 @@ The NBA Draft is designed to help distribute new talent across the league. Teams
 Draft position matters because earlier picks are often viewed as higher-value prospects. Teams invest substantial resources in scouting, selecting, signing, and developing these players. As a result, high draft picks may receive more opportunities to play, especially early in their careers.
 
 In order to be eligible for the draft, a player must be at least 19 years old and out of high school for at least one year. Prior to 2006, this rule was not in effect, and players could be drafted during or right out of high school.
-:::
+::::
 
 The main research question is:
 
@@ -80,17 +93,15 @@ However, minutes per game is not a perfect measure of player quality. Playing ti
 This could serve as an in class activity and should take roughly 30-45 minutes to complete (depending on the use of software).
 :::
 
-
 ::: {.callout-note collapse="true" title="Learning Objectives" appearance="minimal"}
 By the end of this activity, students should be able to:
 
-1. Use graphical summaries to compare the distribution of a quantitative variable across multiple groups.
+1.  Use graphical summaries to compare the distribution of a quantitative variable across multiple groups.
 
-2. Assess whether the conditions for a one-way ANOVA are reasonable in context.
+2.  Assess whether the conditions for a one-way ANOVA are reasonable in context.
 
-3. Conduct and interpret ANOVA results in context while recognizing the limitations of the response variable and grouping choices.
+3.  Conduct and interpret ANOVA results in context while recognizing the limitations of the response variable and grouping choices.
 :::
-
 
 ::: {.callout-note collapse="true" title="Methods" appearance="minimal"}
 As a reinforcement module, students should have prior knowledge of conducting one-way analysis of variance tests and the implications. Students should be able to explain the different components of an ANOVA table as well as familiarity with the formulas necessary to complete the table or with using software to obtain the needed output.
@@ -101,11 +112,10 @@ There are three version of the handout:
 
 - In one version, no explicit technology is necessary other than a calculator.
 
-- Other two use R and Python respecitively to visualize the data and produce the ANOVA output.
-
+- Other two use R and Python respectively to visualize the data and produce the ANOVA output.
 :::
 
-### Data
+### Data {#sec-data}
 
 The `nba_draft` data set includes players selected in the NBA Draft between 1990 and 2021. Each row represents one drafted player and includes information about the player's draft position, team, and NBA career statistics. Some players' careers were still ongoing when the data were collected.
 
@@ -113,29 +123,29 @@ The `nba_draft` data set includes players selected in the NBA Draft between 1990
 
 <summary><b>Variable Descriptions</b></summary>
 
-| Variable          | Description                                                                                                          |
-|-------------------|----------------------------------------------------------------------------------------------------------------------|
-| draft_pick        | Overall pick number at which the player was selected in the NBA Draft                                                |
-| team              | NBA team that drafted the player                                                                                     |
-| player_name       | Name of the player selected                                                                                          |
-| college           | College the player attended; may be `NA` for players drafted from high school, international leagues, or other paths |
-| years_played      | Number of years the player spent in the NBA                                                                          |
-| games_played      | Number of games the player played in the NBA                                                                         |
-| total_mins_played | Total minutes the player played in the NBA                                                                           |
-| total_pts         | Total points the player scored in the NBA                                                                            |
-| total_rebounds    | Total rebounds the player recorded in the NBA                                                                        |
-| total_assists     | Total assists the player recorded in the NBA                                                                         |
-| fg_percent        | Field goal percentage during the player's NBA career                                                                 |
-| three_pt_percent  | Three-point field goal percentage during the player's NBA career                                                     |
-| ft_percent        | Free throw percentage during the player's NBA career                                                                 |
-| draft_year        | Year the player was drafted                                                                                          |
-| mins_per_game     | Average number of minutes played per game during the player's NBA career                                             |
-| pts_per_game      | Average number of points scored per game during the player's NBA career                                              |
-| rebounds_per_game | Average number of rebounds per game during the player's NBA career                                                   |
-| assists_per_game  | Average number of assists per game during the player's NBA career                                                    |
-| round_picked      | Round in which the player was selected; this module focuses on first-round picks                                     |
-| pick_in_round     | Pick number within the round in which the player was selected                                                        |
-| draft_pick_group  | First-round draft-pick group used in this activity: picks 1--10, picks 11--20, or picks 21--30                       |
+| Variable | Description |
+|----|----|
+| draft_pick | Overall pick number at which the player was selected in the NBA Draft |
+| team | NBA team that drafted the player |
+| player_name | Name of the player selected |
+| college | College the player attended; may be `NA` for players drafted from high school, international leagues, or other paths |
+| years_played | Number of years the player spent in the NBA |
+| games_played | Number of games the player played in the NBA |
+| total_mins_played | Total minutes the player played in the NBA |
+| total_pts | Total points the player scored in the NBA |
+| total_rebounds | Total rebounds the player recorded in the NBA |
+| total_assists | Total assists the player recorded in the NBA |
+| fg_percent | Field goal percentage during the player's NBA career |
+| three_pt_percent | Three-point field goal percentage during the player's NBA career |
+| ft_percent | Free throw percentage during the player's NBA career |
+| draft_year | Year the player was drafted |
+| mins_per_game | Average number of minutes played per game during the player's NBA career |
+| pts_per_game | Average number of points scored per game during the player's NBA career |
+| rebounds_per_game | Average number of rebounds per game during the player's NBA career |
+| assists_per_game | Average number of assists per game during the player's NBA career |
+| round_picked | Round in which the player was selected; this module focuses on first-round picks |
+| pick_in_round | Pick number within the round in which the player was selected |
+| draft_pick_group | First-round draft-pick group used in this activity: picks 1--10, picks 11--20, or picks 21--30 |
 
 </details>
 
@@ -145,8 +155,7 @@ Download [nba_draft.csv](nba_draft.csv){target="_blank"}
 
 The data are sourced from [Kaggle](https://www.kaggle.com/datasets/benwieland/nba-draft-data){target="_blank"} and include draft information and NBA career statistics for drafted players.
 
-
-### Materials
+### Materials {#sec-materials}
 
 #### "By-hand" worksheet
 
@@ -166,7 +175,6 @@ The data are sourced from [Kaggle](https://www.kaggle.com/datasets/benwieland/nb
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Upon conclusion of this module, students will discover that there is strong evidence of a difference in average minutes per game based on which group a player was selected in the first round of the NBA draft. This learning module offers a valuable opportunity to explore the components of a one-way ANOVA test and interpret the results in context. Students will also consider why minutes per game is a useful but imperfect measure of player success, and choices, such as grouping picks into 1--10, 11--20, and 21--30, can affect the interpretation of the analysis.
 :::
-
 
 ### Acknowledgements
 
