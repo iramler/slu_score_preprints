@@ -32,7 +32,7 @@ image: nba_top_picks.jpg
 Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
 
 ::: {.callout-note collapse="true" title="Facilitation notes" appearance="minimal"}
-- This module is suitable for an introductory or intermediate statistics course that covers one-wat ANOVA.
+- This module is suitable for an introductory or intermediate statistics course that covers one-way ANOVA.
 
 - As a reinforcement module, students should have prior knowledge of conducting one-way analysis of variance tests and the implications.
 
@@ -44,9 +44,9 @@ Please note that these material have not yet completed the required pedagogical 
 
   - In one version, no explicit technology is necessary other than a calculator.
 
-  - The other two use eithero R or Python to visualize the data and produce the ANOVA output.
+  - The other two use either R or Python to visualize the data and produce the ANOVA output.
 
-- Students should be provided with the data file (.csv) provided in @sec-data and one of the handouts (software choice determines which handot to use).
+- Students should be provided with the data file (.csv) provided in @sec-data and one of the handouts (software choice determines which handout to use).
 :::
 
 ### Introduction
@@ -112,7 +112,7 @@ There are three version of the handout:
 
 - In one version, no explicit technology is necessary other than a calculator.
 
-- Other two use R and Python respectively to visualize the data and produce the ANOVA output.
+- The other two use R and Python respectively to visualize the data and produce the ANOVA output.
 :::
 
 ### Data {#sec-data}
