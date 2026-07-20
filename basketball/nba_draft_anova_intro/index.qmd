@@ -27,9 +27,14 @@ categories:
 image: nba_top_picks.jpg
 ---
 
-## Module
+This module is now fully published and available on the SCORE Network Module Repository.
 
-Please note that these material have not yet completed the required pedagogical and industry peer-reviews to become a published module on the SCORE Network. However, instructors are still welcome to use these materials if they are so inclined.
+Click the following link to access the materials (opens a new tab): [https://modules.scorenetwork.org/basketball/nba_draft_anova_basic/](https://modules.scorenetwork.org/basketball/nba_draft_anova_basic/){target="_blank"}
+
+```{=html}
+<!--
+
+## Module
 
 ::: {.callout-note collapse="true" title="Facilitation notes" appearance="minimal"}
 - This module is suitable for an introductory or intermediate statistics course that covers one-way ANOVA.
@@ -175,6 +180,9 @@ The data are sourced from [Kaggle](https://www.kaggle.com/datasets/benwieland/nb
 ::: {.callout-note collapse="true" title="Conclusion" appearance="minimal"}
 Upon conclusion of this module, students will discover that there is strong evidence of a difference in average minutes per game based on which group a player was selected in the first round of the NBA draft. This learning module offers a valuable opportunity to explore the components of a one-way ANOVA test and interpret the results in context. Students will also consider why minutes per game is a useful but imperfect measure of player success, and choices, such as grouping picks into 1--10, 11--20, and 21--30, can affect the interpretation of the analysis.
 :::
+
+-->
+```
 
 ### Acknowledgements
 
