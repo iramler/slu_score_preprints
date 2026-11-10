@@ -7,12 +7,16 @@ author:
     affiliation:
       - id: slu
         name: St. Lawrence University
+  - name: "Courtney Kerley"
+    email: ckerl23@stlawu.edu
+    affiliation:
+      - ref: slu
   - name: "Ivan Ramler"
     email: iramler@stlawu.edu
     affiliation:
       - ref: slu
 
-date: March 25, 2026
+date: November 06, 2026
 description: This module explores results from powerlifting competitions, comparing ranks between age groups.
 categories: 
   - non-parametric analysis
@@ -36,6 +40,8 @@ For those interested in how some events in powerlifting competitions look, pleas
 In powerlifting competitions, athletes compete in three compound events to lift as much weight as possible. [Bench press](https://www.youtube.com/shorts/hWbUlkb5Ms4?feature=share){target="_blank"} is done with athletes laying flat on their back and lowering the bar to their chest and lifting back up, targeting upper body (specifically chest, triceps, and shoulders). [Deadlifts](https://www.youtube.com/shorts/ZaTM37cfiDs?feature=share){target="_blank"} are a full body lift in which athletes lift a bar from the ground to hip level (targets glutes, hamstrings, and back). [Squats](https://www.youtube.com/shorts/PPmvh7gBTi0){target="_blank"} are done with a barbell on their back, just below the shoulders, and hinging until the hips are lower than the top of the knee (targeting quads, glutes, hamstrings, and core).
 
 This module analyzes results from powerlifting competitions. Results are found at [OpenPowerlifting](https://www.openpowerlifting.org){target="_blank"}, a project aimed at collecting powerlifting data over time. Performances are ranked by how much weight is lifted and athletes are sorted into age classes. You will compare the rankings achieved by athletes across age classes and distinguish any differences between classes.
+
+Note: There are click to reveal code arrows throughout this activity. This can be helpful to check your work. as you owrk through the activity. WIt is recom
 
 ::: {.callout-note collapse="true" title="Activity Length" appearance="minimal"}
 This activity would likely be suitable for an in-class example that lasts roughly 60 minutes. 
@@ -153,9 +159,12 @@ Find the sum of the ranks for each group.
 
 Use test in R to calculate the Kruskal-Wallis H statistic.
 
-If the p-value is less than 0.05, reject the null indicating at least one group differs slightly.
+If the p-value is sufficiently small, there is evidence to reject the null hypothesis indicating that at least one group differs slightly.
 
-If the null is rejected, use Dunn's test (multiple comparison test) to find which groups specifically differ.
+If the null hypothesis is rejected, use Dunn’s test (multiple comparison test) to find which groups specifically differ.
+
+
+
 
 ### Forming a Hypothesis
 
@@ -165,6 +174,8 @@ $H_0:$ there is no difference in the median of powerlifting weight between age g
 
 $H_a:$ at least one group differs from another
 
+Discussion Question: Why should we compare medians between different age groups? 
+
 ### Organizing the Data
 
 To run the Kruskal-Wallis test, the data gets ranked from 1-n before being grouped by level, in this case `AgeClass`.
@@ -172,6 +183,13 @@ To run the Kruskal-Wallis test, the data gets ranked from 1-n before being group
 We want to rank the data before it is grouped so the overall rankings and where they land can be compared between groups.
 
 Using dplyr functions `mutate`, `filter`, and `select`, arrange the data appropriately and rank it before grouping by `AgeClass`:
+
+What do you notice about the order of age classes displayed?
+<details>
+
+<summary><b>Hidden solution</b></summary>
+5-12 is in the wrong spot. Recode it to 05-12. 
+</details>
 
 <details>
 
@@ -207,13 +225,13 @@ ggplot(data = female_bench_ranked, aes(x = AgeClass, y = Bench)) +
   theme_minimal()
 ```
 
-The boxplot shows that the general trend of the data increases to a peak and steadily decreases after that.
+
 
 ### Running the Test
+Note: To install packages use the function install. Your code will look like this: install.packages("kruskal.test")
 
-Run the test using the `kruskal.test()` function:
+Run the Kruskal-Wallis test as follows:
 
-Using the standard alpha value of 0.05, if the p-value is larger than that there is no reason to reject the null hypothesis but any smaller value would indicate a difference in medians between each `AgeClass` and we would have reason to reject the null.
 
 ```{r}
 #| echo: true
@@ -235,7 +253,7 @@ female_bench_results
 ```
 </details>
 
-Using an alpha value of 0.5, the p-value is much smaller indicating that our results are statistically discernible, or significant, and we can claim that there is a statistical difference between at least two groups.
+The p-value is much smaller indicating that our results are statistically discernible, or significant, and we can claim that there is a statistical difference between the medians of at least two groups.
 
 Because the Kruskal-Wallis test only determines *if* there is a discernible difference between groups, we need to use a post-hoc test to determine *which* groups are statistically discernible from each other. The most appropriate post-hoc test following a Kruskal-Wallis test is the Dunn's Test.
 
@@ -290,15 +308,33 @@ dunn_results_df <- as.data.frame(female_bench_dunn$P.adjusted, female_bench_dunn
   separate(comparison, into = c("group1", "group2"), sep = " - ") |>
   rename("p_value" = `female_bench_dunn$P.adjusted`)
 
+```
+</details>
+
+<details>
+
+<summary><b>Click to reveal code</b></summary>
+```{r}
 dunn_results_log <- dunn_results_df |>
   mutate(log_p = -log10(p_value))
+```
+</details>
 
+
+<details>
+
+<summary><b>Click to reveal code</b></summary>
+
+```{r}
 ggplot(dunn_results_log, aes(x = group1, y = group2, fill = log_p)) +
   geom_tile(colour = "black", linewidth = 0.5) +
   scale_fill_gradient(low = "forestgreen", high = "white") +
   theme_minimal()
 ```
+
+
 </details>
+
 
 ```{r}
 #| echo: false
@@ -317,13 +353,15 @@ logplot <- ggplot(dunn_results_log, aes(x = group1, y = group2, fill = log_p)) +
   labs(title = "-log10 p-values of Dunn's Test Results by Age Class", x = "Age Class", y = "Age Class", fill = "-log10 p-values") +
   theme_minimal()
 
+logplot
+
 ```
 
 The -log10 p-value heatmap shows us how many zeros are following the decimal point indicating that the darker green values are less statistically discernible as there are less zeros. The lighter values are more statistically discernible as they are smaller p-values with many zeros following the decimal point. 
 
 It is still difficult to conceptualize the differences of these p-values with this visual.
 
-Using an alpha value of 0.05, construct another heatmap indicating which values are discernible or not.
+Alternatively, pick a significance level of alpha 0.05, construct another heatmap indicating which values are discernible or not.
 
 ```{r}
 dunn_results_df$sig <- if_else(dunn_results_df$p_value <= 0.05,1,0)
@@ -335,12 +373,12 @@ dunnplot <- ggplot(dunn_results_df, aes(x = group1, y = group2, fill = factor(si
   labs(title = "Significant p-values of Dunn's Test Results by Age Class", x = "Age Class", y = "Age Class", fill = "Significance") +
   theme_minimal()
 
-ggsave("dunnplot.png", dunnplot)
+dunnplot
 ```
 
 These results are much easier to conceptualize: either significant or not significant.
 
-The results in green show there is not a statistical discernibility between the two groups. The white groups are recognized as different from each other.
+The results in red show there is not a statistical discernibility between the two groups. The white groups are recognized as different from each other.
 
 As both of these show, there is the same general trend in discernibility that we saw earlier with the boxplots.
 

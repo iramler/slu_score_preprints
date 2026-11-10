@@ -1,0 +1,49 @@
+---
+title: "powerlifting_questions"
+format: html
+---
+
+Box Plot:
+
+
+Q: Are there any potential outliers in bench press? 
+A: Yes, teen categories, 40s, 50s, 70s, etc. 
+
+
+Q: What is the general trend of the data shown in the boxplot?
+A: The boxplot shows that the general trend of the data increases to a peak and steadily decreases after that.
+
+
+Q: What do you notice about the age class age categories? 
+A: The age groupings aren't consistent. Some span 2 years and some span 10 years. 
+
+
+Q: Do older or younger lifters show a wider range of strength? 
+A: Pretty similar between the two, the 60-64 age category has the widest range. 
+
+
+Q: Why does it make sense that the age groups are inconsistent?
+A: The ranges represent similar/ stable physical conditioning. 
+
+
+Q: What is a negative reason for using age class? 
+A: There are a lot of categories, this can affect who goes to nationals and it may be easier for some compared to others depending on if their age has a smaller pool of contestants. 
+
+
+
+
+Further Use:
+
+How might this be useful for people who powerlift non-competitively? 
+
+
+What are the differences or similarities between female squatting, deadlifting, and powerlifting?
+
+
+How does the male powerlifting results compare to the female powerlifting results? Do they follow the same trend? 
+
+
+What are other variables that we could look at that impacts powerlifting? 
+
+
+
